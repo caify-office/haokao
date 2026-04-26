@@ -1,0 +1,313 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.TenantService.Application</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.TenantService.Application.Services.App.TenantAppService">
+            <summary>
+            租户App端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.TenantService.Application.Services.App.TenantAppService.#ctor(HaoKao.TenantService.Application.Services.Management.ITenantService,HaoKao.TenantService.Domain.Repositories.ITenantRepository,Girvs.Cache.Caching.IStaticCacheManager)">
+            <summary>
+            租户App端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.TenantService.Application.Services.App.TenantAppService.Get">
+            <summary>
+            获取租户列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.TenantService.Application.Services.App.TenantAppService.GetCurrent">
+            <summary>
+            获取当前租户详情
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.TenantService.Application.Services.Management.TenantService.GetAsync(System.Guid)">
+            <summary>
+            根据Id获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.TenantService.Application.Services.Management.TenantService.GetAsync(HaoKao.TenantService.Application.ViewModels.TenantQueryViewModel)">
+            <summary>
+            获取列表
+            </summary>
+            <param name="queryModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.TenantService.Application.Services.Management.TenantService.CreateAsync(HaoKao.TenantService.Application.ViewModels.CreateTenantViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.TenantService.Application.Services.Management.TenantService.UpdateAsync(HaoKao.TenantService.Application.ViewModels.UpdateTenantViewModel)">
+            <summary>
+            系统管理员修改
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.TenantService.Application.Services.Management.TenantService.SetPaymentConfigAsync(HaoKao.TenantService.Application.ViewModels.SetPaymentConfigViewModel)">
+            <summary>
+            系统管理员设置收款账户
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.TenantService.Application.Services.Management.TenantService.EnableDisabledAsync(HaoKao.TenantService.Application.ViewModels.EnableDisabledTenantViewModel)">
+            <summary>
+            启用/禁用
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.TenantService.Application.Services.Management.TenantService.ExistByNo(System.String)">
+            <summary>
+            检查租户代码是否存在
+            </summary>
+            <param name="no"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.TenantService.Application.Services.Web.TenantWebService">
+            <summary>
+            租户web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.TenantService.Application.Services.Web.TenantWebService.#ctor(HaoKao.TenantService.Application.Services.App.ITenantAppService)">
+            <summary>
+            租户web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.TenantService.Application.Services.Web.TenantWebService.Get">
+            <summary>
+            获取租户列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.TenantService.Application.Services.Web.TenantWebService.GetCurrent">
+            <summary>
+            获取当前租户详情
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.TenantService.Application.Services.WeChat.TenantWeChatService">
+            <summary>
+            租户WeChat端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.TenantService.Application.Services.WeChat.TenantWeChatService.#ctor(HaoKao.TenantService.Application.Services.App.ITenantAppService)">
+            <summary>
+            租户WeChat端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.TenantService.Application.Services.WeChat.TenantWeChatService.Get">
+            <summary>
+            获取租户列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.TenantService.Application.Services.WeChat.TenantWeChatService.GetCurrent">
+            <summary>
+            获取当前租户详情
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.TenantService.Application.ViewModels.CreateTenantViewModel">
+            <summary>
+            添加视图模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.CreateTenantViewModel.OtherId">
+            <summary>
+            其它名称ID，一般主要是数据字典中的Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.CreateTenantViewModel.OtherName">
+            <summary>
+            其它名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.CreateTenantViewModel.TenantName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.CreateTenantViewModel.TenantNo">
+            <summary>
+            代码
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.CreateTenantViewModel.AdminUserAcount">
+            <summary>
+            管理员账户
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.CreateTenantViewModel.AdminUserName">
+            <summary>
+            管理员姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.CreateTenantViewModel.AdminPhone">
+            <summary>
+            管理员手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.CreateTenantViewModel.AdminPassWord">
+            <summary>
+            管理员密码
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.CreateTenantViewModel.SystemModule">
+            <summary>
+            所包含的功能模块
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.CreateTenantViewModel.AnnualExamTime">
+            <summary>
+            年度考试时间
+            </summary>
+        </member>
+        <member name="T:HaoKao.TenantService.Application.ViewModels.SetPaymentConfigViewModel">
+            <summary>
+            添加考试视图模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.SetPaymentConfigViewModel.Id">
+            <summary>
+            考试ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.SetPaymentConfigViewModel.PaymentConfigs">
+            <summary>
+            收款配置
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.TenantQueryViewModel.TenantName">
+            <summary>
+            租户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.TenantQueryViewModel.TenantNo">
+            <summary>
+            租户代码
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.TenantQueryViewModel.StartState">
+            <summary>
+            租户启用状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.TenantQueryViewModel.OtherId">
+            <summary>
+            其它名称ID，一般主要是数据字典中的Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.TenantQueryListViewModel.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.TenantQueryListViewModel.OtherId">
+            <summary>
+            其它名称ID，一般主要是数据字典中的Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.TenantQueryListViewModel.OtherName">
+            <summary>
+            其它名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.TenantQueryListViewModel.TenantName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.TenantQueryListViewModel.TenantNo">
+            <summary>
+            代码
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.TenantQueryListViewModel.SystemModule">
+            <summary>
+            功能模块集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.TenantQueryListViewModel.AnnualExamTime">
+            <summary>
+            年度租户时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.TenantQueryListViewModel.ReleaseState">
+            <summary>
+            发布状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.TenantQueryListViewModel.StartState">
+            <summary>
+            启用状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.TenantQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.TenantQueryListViewModel.Instructions">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.TenantQueryListViewModel.AdminUserAcount">
+            <summary>
+            管理员账户
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.TenantQueryListViewModel.AdminUserName">
+            <summary>
+            管理员姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.TenantQueryListViewModel.AdminPhone">
+            <summary>
+            管理员手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.TenantQueryListViewModel.PaymentConfigs">
+            <summary>
+            收款配置
+            </summary>
+        </member>
+        <member name="T:HaoKao.TenantService.Application.ViewModels.UpdateTenantViewModel">
+            <summary>
+            添加租户视图模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.UpdateTenantViewModel.Id">
+            <summary>
+            租户ID
+            </summary>
+        </member>
+        <member name="T:HaoKao.TenantService.Application.ViewModels.EnableDisabledTenantViewModel">
+            <summary>
+            启用/禁用视图模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.EnableDisabledTenantViewModel.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Application.ViewModels.EnableDisabledTenantViewModel.StartState">
+            <summary>
+            启用/禁用状态
+            </summary>
+        </member>
+    </members>
+</doc>

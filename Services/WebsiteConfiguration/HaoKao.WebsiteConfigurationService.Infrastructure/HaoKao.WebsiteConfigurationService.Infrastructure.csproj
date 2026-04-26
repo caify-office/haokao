@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Girvs.EntityFrameworkCore" Version="9.0.5.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\HaoKao.WebsiteConfigurationService.Domain\HaoKao.WebsiteConfigurationService.Domain.csproj"/>
+    </ItemGroup>
+
+</Project>

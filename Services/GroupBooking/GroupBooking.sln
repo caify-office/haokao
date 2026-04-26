@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.GroupBookingService.WebApi", "HaoKao.GroupBookingService.WebApi\HaoKao.GroupBookingService.WebApi.csproj", "{A67E3A95-01B0-4468-863A-32EABED7110A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.GroupBookingService.Domain", "HaoKao.GroupBookingService.Domain\HaoKao.GroupBookingService.Domain.csproj", "{BAC62B3D-6A64-4C6C-86F1-2C992AC5DA05}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.GroupBookingService.Infrastructure", "HaoKao.GroupBookingService.Infrastructure\HaoKao.GroupBookingService.Infrastructure.csproj", "{BB127D55-B629-417F-A9F0-F8B77D741820}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.GroupBookingService.Application", "HaoKao.GroupBookingService.Application\HaoKao.GroupBookingService.Application.csproj", "{F86CBBA0-91C7-4F15-AB50-E1B2DF8425C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A67E3A95-01B0-4468-863A-32EABED7110A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A67E3A95-01B0-4468-863A-32EABED7110A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A67E3A95-01B0-4468-863A-32EABED7110A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A67E3A95-01B0-4468-863A-32EABED7110A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAC62B3D-6A64-4C6C-86F1-2C992AC5DA05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAC62B3D-6A64-4C6C-86F1-2C992AC5DA05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAC62B3D-6A64-4C6C-86F1-2C992AC5DA05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAC62B3D-6A64-4C6C-86F1-2C992AC5DA05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB127D55-B629-417F-A9F0-F8B77D741820}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB127D55-B629-417F-A9F0-F8B77D741820}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB127D55-B629-417F-A9F0-F8B77D741820}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB127D55-B629-417F-A9F0-F8B77D741820}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F86CBBA0-91C7-4F15-AB50-E1B2DF8425C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F86CBBA0-91C7-4F15-AB50-E1B2DF8425C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F86CBBA0-91C7-4F15-AB50-E1B2DF8425C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F86CBBA0-91C7-4F15-AB50-E1B2DF8425C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89D6A15D-9BB1-4433-B13F-B22E4093AD1A}
+	EndGlobalSection
+EndGlobal

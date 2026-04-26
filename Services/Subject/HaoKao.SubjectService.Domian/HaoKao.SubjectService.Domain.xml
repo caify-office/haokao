@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.SubjectService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.SubjectService.Domain.SubjectModule.Subject">
+            <summary>
+            科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Domain.SubjectModule.Subject.TrialSubjectId">
+            <summary>
+            命审题科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Domain.SubjectModule.Subject.Name">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Domain.SubjectModule.Subject.IsCommon">
+            <summary>
+            普通科目/专业科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Domain.SubjectModule.Subject.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Domain.SubjectModule.Subject.IsShow">
+            <summary>
+            是否显示
+            </summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Domain.SubjectModule.Subject.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Domain.SubjectModule.Subject.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.SubjectService.Domain.SubjectModule.SubjectTypeEnum">
+            <summary>
+            科目类型
+            </summary>
+        </member>
+        <member name="F:HaoKao.SubjectService.Domain.SubjectModule.SubjectTypeEnum.Common">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:HaoKao.SubjectService.Domain.SubjectModule.SubjectTypeEnum.Subject">
+            <summary>
+            未发布
+            </summary>
+        </member>
+        <member name="T:HaoKao.SubjectService.Domain.SubjectModule.CreateSubjectCommand">
+            <summary>
+            创建科目命令
+            </summary>
+            <param name="Name">名称</param>
+            <param name="IsCommon">是否是专业科目</param>
+            <param name="Sort">排序</param>
+            <param name="IsShow"></param>
+        </member>
+        <member name="M:HaoKao.SubjectService.Domain.SubjectModule.CreateSubjectCommand.#ctor(System.String,HaoKao.SubjectService.Domain.SubjectModule.SubjectTypeEnum,System.Int32,System.Boolean)">
+            <summary>
+            创建科目命令
+            </summary>
+            <param name="Name">名称</param>
+            <param name="IsCommon">是否是专业科目</param>
+            <param name="Sort">排序</param>
+            <param name="IsShow"></param>
+        </member>
+        <member name="P:HaoKao.SubjectService.Domain.SubjectModule.CreateSubjectCommand.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Domain.SubjectModule.CreateSubjectCommand.IsCommon">
+            <summary>是否是专业科目</summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Domain.SubjectModule.CreateSubjectCommand.Sort">
+            <summary>排序</summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Domain.SubjectModule.CreateSubjectCommand.IsShow">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.SubjectService.Domain.SubjectModule.UpdateSubjectCommand">
+            <summary>
+            更新科目命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Name">科目名称</param>
+            <param name="IsCommon">普通科目/专业科目</param>
+            <param name="Sort">排序</param>
+            <param name="IsShow">是否显示</param>
+        </member>
+        <member name="M:HaoKao.SubjectService.Domain.SubjectModule.UpdateSubjectCommand.#ctor(System.Guid,System.String,HaoKao.SubjectService.Domain.SubjectModule.SubjectTypeEnum,System.Int32,System.Boolean)">
+            <summary>
+            更新科目命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Name">科目名称</param>
+            <param name="IsCommon">普通科目/专业科目</param>
+            <param name="Sort">排序</param>
+            <param name="IsShow">是否显示</param>
+        </member>
+        <member name="P:HaoKao.SubjectService.Domain.SubjectModule.UpdateSubjectCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Domain.SubjectModule.UpdateSubjectCommand.Name">
+            <summary>科目名称</summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Domain.SubjectModule.UpdateSubjectCommand.IsCommon">
+            <summary>普通科目/专业科目</summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Domain.SubjectModule.UpdateSubjectCommand.Sort">
+            <summary>排序</summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Domain.SubjectModule.UpdateSubjectCommand.IsShow">
+            <summary>是否显示</summary>
+        </member>
+        <member name="T:HaoKao.SubjectService.Domain.SubjectModule.DeleteSubjectCommand">
+            <summary>
+            删除科目命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.SubjectService.Domain.SubjectModule.DeleteSubjectCommand.#ctor(System.Guid)">
+            <summary>
+            删除科目命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.SubjectService.Domain.SubjectModule.DeleteSubjectCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Domain.SubjectModule.SubjectQuery.Name">
+            <summary>
+            课程名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Domain.SubjectModule.SubjectQuery.IsCommon">
+            <summary>
+            是否专业课程
+            </summary>
+        </member>
+    </members>
+</doc>

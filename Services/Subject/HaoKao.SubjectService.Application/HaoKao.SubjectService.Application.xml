@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.SubjectService.Application</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.SubjectService.Application.Interfaces.ISubjectService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Interfaces.ISubjectService.Get(HaoKao.SubjectService.Application.ViewModels.SubjectQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Interfaces.ISubjectService.GetSubjectList">
+            <summary>
+            读取科目列表,不带分页
+            </summary>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Interfaces.ISubjectService.Create(HaoKao.SubjectService.Application.ViewModels.CreateSubjectViewModel)">
+            <summary>
+            创建科目
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Interfaces.ISubjectService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定科目
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Interfaces.ISubjectService.Update(System.Guid,HaoKao.SubjectService.Application.ViewModels.UpdateSubjectViewModel)">
+            <summary>
+            根据主键更新指定科目
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Interfaces.ISubjectWebService.Get">
+            <summary>
+            根据查询获取列表，不分页
+            </summary>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Interfaces.ISubjectWebService.GetListByTenantId(System.Guid)">
+            <summary>
+            按租户Id获取科目列表
+            </summary>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Interfaces.ISubjectWebService.GetCommonSubjectList">
+            <summary>
+            获取公共科目列表
+            </summary>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Interfaces.ISubjectWeChatService.Get">
+            <summary>
+            根据查询获取列表，不分页
+            </summary>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Interfaces.ISubjectWeChatService.GetListByTenantId(System.Guid)">
+            <summary>
+            按租户Id获取科目列表
+            </summary>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Interfaces.ISubjectWeChatService.GetCommonSubjectList">
+            <summary>
+            获取公共科目列表
+            </summary>
+        </member>
+        <member name="T:HaoKao.SubjectService.Application.Services.SubjectService">
+            <summary>
+            科目接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Services.SubjectService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.SubjectService.Domain.SubjectModule.ISubjectRepository)">
+            <summary>
+            科目接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Services.SubjectService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Services.SubjectService.Get(HaoKao.SubjectService.Application.ViewModels.SubjectQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Services.SubjectService.GetSubjectList">
+            <summary>
+            读取科目列表,不带分页
+            </summary>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Services.SubjectService.Create(HaoKao.SubjectService.Application.ViewModels.CreateSubjectViewModel)">
+            <summary>
+            创建科目
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Services.SubjectService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定科目
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Services.SubjectService.Update(System.Guid,HaoKao.SubjectService.Application.ViewModels.UpdateSubjectViewModel)">
+            <summary>
+            根据主键更新指定科目
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.SubjectService.Application.Services.SubjectWebService">
+            <summary>
+            科目接口服务---web
+            </summary>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Services.SubjectWebService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,HaoKao.SubjectService.Domain.SubjectModule.ISubjectRepository)">
+            <summary>
+            科目接口服务---web
+            </summary>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Services.SubjectWebService.Get">
+            <summary>
+            读取科目列表,不带分页
+            </summary>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Services.SubjectWebService.GetListByTenantId(System.Guid)">
+            <summary>
+            按租户Id获取科目列表
+            </summary>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Services.SubjectWebService.GetCommonSubjectList">
+            <summary>
+            获取公共科目列表
+            </summary>
+        </member>
+        <member name="T:HaoKao.SubjectService.Application.Services.SubjectWeChatService">
+            <summary>
+            科目接口服务---WeChat
+            </summary>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Services.SubjectWeChatService.#ctor(HaoKao.SubjectService.Application.Interfaces.ISubjectWebService)">
+            <summary>
+            科目接口服务---WeChat
+            </summary>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Services.SubjectWeChatService.Get">
+            <summary>
+            读取科目列表,不带分页
+            </summary>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Services.SubjectWeChatService.GetListByTenantId(System.Guid)">
+            <summary>
+            按租户Id获取科目列表
+            </summary>
+        </member>
+        <member name="M:HaoKao.SubjectService.Application.Services.SubjectWeChatService.GetCommonSubjectList">
+            <summary>
+            获取公共科目列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Application.ViewModels.SubjectQueryViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Application.ViewModels.SubjectQueryViewModel.IsCommon">
+             <summary>
+            是否专业课
+             </summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Application.ViewModels.BrowseSubjectViewModel.Id">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Application.ViewModels.BrowseSubjectViewModel.Name">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Application.ViewModels.BrowseSubjectViewModel.IsCommon">
+            <summary>
+            普通科目/专业科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Application.ViewModels.BrowseSubjectViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Application.ViewModels.BrowseSubjectViewModel.IsShow">
+            <summary>
+            是否显示
+            </summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Application.ViewModels.BrowseSubjectViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Application.ViewModels.CreateSubjectViewModel.Name">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Application.ViewModels.CreateSubjectViewModel.IsCommon">
+            <summary>
+            普通科目/专业科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Application.ViewModels.CreateSubjectViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.SubjectService.Application.ViewModels.CreateSubjectViewModel.IsShow">
+            <summary>
+            是否显示
+            </summary>
+        </member>
+    </members>
+</doc>

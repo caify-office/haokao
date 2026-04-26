@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.LecturerService.Application</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.LecturerService.Application.Interfaces.ILecturerService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Interfaces.ILecturerService.Get(HaoKao.LecturerService.Application.ViewModels.LecturerQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Interfaces.ILecturerService.GetByIds(System.Guid[])">
+            <summary>
+            根据主键数组获取讲师列表
+            </summary>
+            <param name="ids">主键</param>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Interfaces.ILecturerService.Create(HaoKao.LecturerService.Application.ViewModels.CreateLecturerViewModel)">
+            <summary>
+            创建讲师
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Interfaces.ILecturerService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定讲师
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Interfaces.ILecturerService.Update(HaoKao.LecturerService.Application.ViewModels.UpdateLecturerViewModel)">
+            <summary>
+            根据主键更新指定讲师
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Interfaces.ILecturerWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Interfaces.ILecturerWebService.GetByIds(System.Guid[])">
+            <summary>
+            根据主键数组获取讲师列表
+            </summary>
+            <param name="ids">主键</param>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Interfaces.ILecturerWebService.Get(HaoKao.LecturerService.Application.ViewModels.LecturerQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Interfaces.ILecturerWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Interfaces.ILecturerWeChatService.GetByIds(System.Guid[])">
+            <summary>
+            根据主键数组获取讲师列表
+            </summary>
+            <param name="ids">主键</param>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Interfaces.ILecturerWeChatService.Get(HaoKao.LecturerService.Application.ViewModels.LecturerQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="T:HaoKao.LecturerService.Application.Services.LecturerService">
+            <summary>
+            讲师接口服务-管理端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Services.LecturerService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.LecturerService.Domain.Repositories.ILecturerRepository)">
+            <summary>
+            讲师接口服务-管理端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Services.LecturerService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Services.LecturerService.Get(HaoKao.LecturerService.Application.ViewModels.LecturerQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Services.LecturerService.GetByIds(System.Guid[])">
+            <summary>
+            根据主键数组获取讲师列表
+            </summary>
+            <param name="ids">主键</param>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Services.LecturerService.Create(HaoKao.LecturerService.Application.ViewModels.CreateLecturerViewModel)">
+            <summary>
+            创建讲师
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Services.LecturerService.Update(HaoKao.LecturerService.Application.ViewModels.UpdateLecturerViewModel)">
+            <summary>
+            根据主键更新指定讲师
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Services.LecturerService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定讲师
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="T:HaoKao.LecturerService.Application.Services.LecturerWebService">
+            <summary>
+            讲师接口服务-Web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Services.LecturerWebService.#ctor(HaoKao.LecturerService.Application.Interfaces.ILecturerService)">
+            <summary>
+            讲师接口服务-Web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Services.LecturerWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Services.LecturerWebService.GetByIds(System.Guid[])">
+            <summary>
+            根据主键数组获取讲师列表
+            </summary>
+            <param name="ids">主键</param>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Services.LecturerWebService.Get(HaoKao.LecturerService.Application.ViewModels.LecturerQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="T:HaoKao.LecturerService.Application.Services.LecturerWeChatService">
+            <summary>
+            讲师接口服务-WeChat端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Services.LecturerWeChatService.#ctor(HaoKao.LecturerService.Application.Interfaces.ILecturerWebService)">
+            <summary>
+            讲师接口服务-WeChat端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Services.LecturerWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Services.LecturerWeChatService.GetByIds(System.Guid[])">
+            <summary>
+            根据主键数组获取讲师列表
+            </summary>
+            <param name="ids">主键</param>
+        </member>
+        <member name="M:HaoKao.LecturerService.Application.Services.LecturerWeChatService.Get(HaoKao.LecturerService.Application.ViewModels.LecturerQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="P:HaoKao.LecturerService.Application.ViewModels.BrowseLecturerViewModel.Name">
+            <summary>
+            教师姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Application.ViewModels.BrowseLecturerViewModel.SubjectIds">
+            <summary>
+            科目Id数组
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Application.ViewModels.BrowseLecturerViewModel.SubjectNames">
+            <summary>
+            科目名称数组
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Application.ViewModels.BrowseLecturerViewModel.Desc">
+            <summary>
+            简介
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Application.ViewModels.BrowseLecturerViewModel.CourseIntroduction">
+            <summary>
+            课程介绍
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Application.ViewModels.BrowseLecturerViewModel.HeadPortraitUrl">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Application.ViewModels.BrowseLecturerViewModel.PhotoUrl">
+            <summary>
+            形象照
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Application.ViewModels.BrowseLecturerViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Application.ViewModels.BrowseLecturerViewModel.ProductPackageIds">
+            <summary>
+            关联的产品包id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Application.ViewModels.BrowseLecturerViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Application.ViewModels.CreateLecturerViewModel.Name">
+            <summary>
+            教师姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Application.ViewModels.CreateLecturerViewModel.SubjectIds">
+            <summary>
+            科目Id数组
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Application.ViewModels.CreateLecturerViewModel.SubjectNames">
+            <summary>
+            科目名称数组
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Application.ViewModels.CreateLecturerViewModel.Desc">
+            <summary>
+            简介
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Application.ViewModels.CreateLecturerViewModel.CourseIntroduction">
+            <summary>
+            课程介绍
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Application.ViewModels.CreateLecturerViewModel.HeadPortraitUrl">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Application.ViewModels.CreateLecturerViewModel.PhotoUrl">
+            <summary>
+            形象照
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Application.ViewModels.CreateLecturerViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Application.ViewModels.CreateLecturerViewModel.ProductPackageIds">
+            <summary>
+            关联的产品包id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Application.ViewModels.LecturerQueryViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Application.ViewModels.LecturerQueryViewModel.SubjectId">
+            <summary>
+            所属科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Application.ViewModels.LecturerQueryViewModel.Desc">
+            <summary>
+            简介
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Application.ViewModels.LecturerQueryViewModel.CourseIntroduction">
+            <summary>
+            课程介绍
+            </summary>
+        </member>
+    </members>
+</doc>

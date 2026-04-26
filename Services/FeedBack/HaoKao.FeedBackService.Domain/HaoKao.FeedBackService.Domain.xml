@@ -1,0 +1,582 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.FeedBackService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.FeedBackService.Domain.Commands.FeedBack.CreateFeedBackCommand">
+            <summary>
+            创建命令
+            </summary>
+            <param name="Type">反馈类型</param>
+            <param name="SourceType">反馈来源</param>
+            <param name="Status">状态</param>
+            <param name="Contract">联系人</param>
+            <param name="Description">描述</param>
+            <param name="FileUrls">图片</param>
+            <param name="ParentId">父id</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Domain.Commands.FeedBack.CreateFeedBackCommand.#ctor(HaoKao.FeedBackService.Domain.Enumerations.TypeEnum,HaoKao.FeedBackService.Domain.Enumerations.SourceTypeEnum,HaoKao.FeedBackService.Domain.Enumerations.StatusEnum,System.String,System.String,System.String,System.Nullable{System.Guid})">
+            <summary>
+            创建命令
+            </summary>
+            <param name="Type">反馈类型</param>
+            <param name="SourceType">反馈来源</param>
+            <param name="Status">状态</param>
+            <param name="Contract">联系人</param>
+            <param name="Description">描述</param>
+            <param name="FileUrls">图片</param>
+            <param name="ParentId">父id</param>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.FeedBack.CreateFeedBackCommand.Type">
+            <summary>反馈类型</summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.FeedBack.CreateFeedBackCommand.SourceType">
+            <summary>反馈来源</summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.FeedBack.CreateFeedBackCommand.Status">
+            <summary>状态</summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.FeedBack.CreateFeedBackCommand.Contract">
+            <summary>联系人</summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.FeedBack.CreateFeedBackCommand.Description">
+            <summary>描述</summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.FeedBack.CreateFeedBackCommand.FileUrls">
+            <summary>图片</summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.FeedBack.CreateFeedBackCommand.ParentId">
+            <summary>父id</summary>
+        </member>
+        <member name="T:HaoKao.FeedBackService.Domain.Commands.FeedBack.DeleteFeedBackCommand">
+            <summary>
+            删除命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Domain.Commands.FeedBack.DeleteFeedBackCommand.#ctor(System.Guid)">
+            <summary>
+            删除命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.FeedBack.DeleteFeedBackCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.FeedBackService.Domain.Commands.FeedBack.UpdateFeedBackCommand">
+            <summary>
+            更新命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Status">状态</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Domain.Commands.FeedBack.UpdateFeedBackCommand.#ctor(System.Guid,HaoKao.FeedBackService.Domain.Enumerations.StatusEnum)">
+            <summary>
+            更新命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Status">状态</param>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.FeedBack.UpdateFeedBackCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.FeedBack.UpdateFeedBackCommand.Status">
+            <summary>状态</summary>
+        </member>
+        <member name="T:HaoKao.FeedBackService.Domain.Commands.FeedBackReply.CreateFeedBackReplyCommand">
+            <summary>
+            创建答疑回复命令
+            </summary>
+            <param name="ReplyContent">答疑回复内容</param>
+            <param name="ReplyUserName">回复人用户名</param>
+            <param name="FeedBackId">关联的题目id</param>
+            <param name="FileUrl">上传的文件地址</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Domain.Commands.FeedBackReply.CreateFeedBackReplyCommand.#ctor(System.String,System.String,System.Guid,System.String)">
+            <summary>
+            创建答疑回复命令
+            </summary>
+            <param name="ReplyContent">答疑回复内容</param>
+            <param name="ReplyUserName">回复人用户名</param>
+            <param name="FeedBackId">关联的题目id</param>
+            <param name="FileUrl">上传的文件地址</param>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.FeedBackReply.CreateFeedBackReplyCommand.ReplyContent">
+            <summary>答疑回复内容</summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.FeedBackReply.CreateFeedBackReplyCommand.ReplyUserName">
+            <summary>回复人用户名</summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.FeedBackReply.CreateFeedBackReplyCommand.FeedBackId">
+            <summary>关联的题目id</summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.FeedBackReply.CreateFeedBackReplyCommand.FileUrl">
+            <summary>上传的文件地址</summary>
+        </member>
+        <member name="T:HaoKao.FeedBackService.Domain.Commands.FeedBackReply.DeleteFeedBackReplyCommand">
+            <summary>
+            删除答疑回复命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Domain.Commands.FeedBackReply.DeleteFeedBackReplyCommand.#ctor(System.Guid)">
+            <summary>
+            删除答疑回复命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.FeedBackReply.DeleteFeedBackReplyCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.FeedBackService.Domain.Commands.FeedBackReply.UpdateFeedBackReplyCommand">
+            <summary>
+            更新答疑回复命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="ReplyContent">答疑回复内容</param>
+            <param name="ReplyUserName">回复人用户名</param>
+            <param name="FeedBackId">关联的题目id</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Domain.Commands.FeedBackReply.UpdateFeedBackReplyCommand.#ctor(System.Guid,System.String,System.String,System.Guid)">
+            <summary>
+            更新答疑回复命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="ReplyContent">答疑回复内容</param>
+            <param name="ReplyUserName">回复人用户名</param>
+            <param name="FeedBackId">关联的题目id</param>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.FeedBackReply.UpdateFeedBackReplyCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.FeedBackReply.UpdateFeedBackReplyCommand.ReplyContent">
+            <summary>答疑回复内容</summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.FeedBackReply.UpdateFeedBackReplyCommand.ReplyUserName">
+            <summary>回复人用户名</summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.FeedBackReply.UpdateFeedBackReplyCommand.FeedBackId">
+            <summary>关联的题目id</summary>
+        </member>
+        <member name="T:HaoKao.FeedBackService.Domain.Commands.Suggestion.CloseSuggestionCommand">
+            <summary>
+            将意见反馈变更为完结命令
+            </summary>
+            <param name="Id"></param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Domain.Commands.Suggestion.CloseSuggestionCommand.#ctor(System.Guid)">
+            <summary>
+            将意见反馈变更为完结命令
+            </summary>
+            <param name="Id"></param>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.Suggestion.CloseSuggestionCommand.Id">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.Suggestion.CreateSuggestionCommand.SuggestionType">
+            <summary>
+            反馈类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.Suggestion.CreateSuggestionCommand.SuggestionFrom">
+            <summary>
+            反馈来源
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.Suggestion.CreateSuggestionCommand.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.Suggestion.CreateSuggestionCommand.Description">
+            <summary>
+            问题描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.Suggestion.CreateSuggestionCommand.Screenshots">
+            <summary>
+            相关截图
+            </summary>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Domain.Commands.Suggestion.CreateSuggestionCommand.AddFluentValidationRule``1(FluentValidation.AbstractValidator{``0})">
+            <summary>
+            Fluent validation
+            </summary>
+            <param name="validator"></param>
+            <typeparam name="TCommand"></typeparam>
+        </member>
+        <member name="T:HaoKao.FeedBackService.Domain.Commands.Suggestion.ReplySuggestionCommand">
+            <summary>
+            回复意见反馈命令
+            </summary>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Domain.Commands.Suggestion.ReplySuggestionCommand.#ctor">
+            <summary>
+            回复意见反馈命令
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.Suggestion.ReplySuggestionCommand.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.Suggestion.ReplySuggestionCommand.ReplyContent">
+            <summary>
+            回复内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Commands.Suggestion.ReplySuggestionCommand.ReplyScreenshots">
+            <summary>
+            回复截图
+            </summary>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Domain.Commands.Suggestion.ReplySuggestionCommand.AddFluentValidationRule``1(FluentValidation.AbstractValidator{``0})">
+            <summary>
+            Fluent validation
+            </summary>
+            <param name="validator"></param>
+            <typeparam name="TCommand"></typeparam>
+        </member>
+        <member name="T:HaoKao.FeedBackService.Domain.Enumerations.SourceTypeEnum">
+            <summary>
+            反馈来源
+            </summary>
+        </member>
+        <member name="F:HaoKao.FeedBackService.Domain.Enumerations.SourceTypeEnum.Web">
+            <summary>
+            Web
+            </summary>
+        </member>
+        <member name="F:HaoKao.FeedBackService.Domain.Enumerations.SourceTypeEnum.App">
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="F:HaoKao.FeedBackService.Domain.Enumerations.SourceTypeEnum.WeChat">
+            <summary>
+            小程序
+            </summary>
+        </member>
+        <member name="T:HaoKao.FeedBackService.Domain.Enumerations.StatusEnum">
+            <summary>
+            处理状态--已提交、已回复、已完结
+            </summary>
+        </member>
+        <member name="F:HaoKao.FeedBackService.Domain.Enumerations.StatusEnum.Submit">
+            <summary>
+            已提交
+            </summary>
+        </member>
+        <member name="F:HaoKao.FeedBackService.Domain.Enumerations.StatusEnum.NoHandle">
+            <summary>
+            已回复
+            </summary>
+        </member>
+        <member name="F:HaoKao.FeedBackService.Domain.Enumerations.StatusEnum.Finished">
+            <summary>
+            已完结
+            </summary>
+        </member>
+        <member name="T:HaoKao.FeedBackService.Domain.Enumerations.TypeEnum">
+            <summary>
+            反馈类型
+            </summary>
+        </member>
+        <member name="F:HaoKao.FeedBackService.Domain.Enumerations.TypeEnum.Suggest">
+            <summary>
+            意见发馈
+            </summary>
+        </member>
+        <member name="F:HaoKao.FeedBackService.Domain.Enumerations.TypeEnum.Complaint">
+            <summary>
+            投诉
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.FeedBack.Type">
+            <summary>
+            反馈类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.FeedBack.SourceType">
+            <summary>
+            反馈来源
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.FeedBack.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.FeedBack.Contract">
+            <summary>
+            联系方式
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.FeedBack.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.FeedBack.FileUrls">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.FeedBack.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.FeedBack.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.FeedBack.FeedBackReplies">
+             <summary>
+            回复列表
+             </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.FeedBack.ChildQuestion">
+             <summary>
+            追问
+             </summary>
+        </member>
+        <member name="T:HaoKao.FeedBackService.Domain.Models.FeedBackReply">
+            <summary>
+            答疑回复
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.FeedBackReply.ReplyContent">
+            <summary>
+            答疑回复内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.FeedBackReply.ReplyUserName">
+            <summary>
+            回复人用户名
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.FeedBackReply.FeedBackId">
+            <summary>
+            关联的题目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.FeedBackReply.FileUrl">
+            <summary>
+            上传的文件地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.FeedBackReply.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.FeedBackReply.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="T:HaoKao.FeedBackService.Domain.Models.Suggestion">
+            <summary>
+            意见反馈
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.Suggestion.SuggestionType">
+            <summary>
+            反馈类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.Suggestion.SuggestionFrom">
+            <summary>
+            反馈来源
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.Suggestion.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.Suggestion.Description">
+            <summary>
+            问题描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.Suggestion.Screenshots">
+            <summary>
+            相关截图
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.Suggestion.CreatorId">
+            <summary>
+            反馈人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.Suggestion.CreatorName">
+            <summary>
+            反馈人名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.Suggestion.CreateTime">
+            <summary>
+            反馈时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.Suggestion.ReplyState">
+            <summary>
+            处理状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.Suggestion.ReplyUserId">
+            <summary>
+            处理人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.Suggestion.ReplyUserName">
+            <summary>
+            处理人名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.Suggestion.ReplyTime">
+            <summary>
+            回复时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.Suggestion.ReplyContent">
+            <summary>
+            回复内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.Suggestion.ReplyScreenshots">
+            <summary>
+            回复截图
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Models.Suggestion.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="F:HaoKao.FeedBackService.Domain.Models.SuggestionType.Complaint">
+            <summary>
+            投诉
+            </summary>
+        </member>
+        <member name="F:HaoKao.FeedBackService.Domain.Models.SuggestionType.Feedback">
+            <summary>
+            反馈
+            </summary>
+        </member>
+        <member name="F:HaoKao.FeedBackService.Domain.Models.ReplyState.NotReply">
+            <summary>
+            未回复
+            </summary>
+        </member>
+        <member name="F:HaoKao.FeedBackService.Domain.Models.ReplyState.Replied">
+            <summary>
+            已回复
+            </summary>
+        </member>
+        <member name="F:HaoKao.FeedBackService.Domain.Models.ReplyState.Closed">
+            <summary>
+            已结束
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Queries.EntityQuery.FeedBackQuery.Type">
+            <summary>
+            反馈类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Queries.EntityQuery.FeedBackQuery.SourceType">
+            <summary>
+            来源
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Queries.EntityQuery.FeedBackQuery.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Queries.EntityQuery.FeedBackQuery.StartTime">
+            <summary>
+            反馈开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Queries.EntityQuery.FeedBackQuery.EndTime">
+            <summary>
+            反馈结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Queries.EntityQuery.FeedBackQuery.HanldUserName">
+            <summary>
+            处理人
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Queries.EntityQuery.FeedBackQuery.FeedBackUserName">
+            <summary>
+            处理人
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Queries.EntityQuery.FeedBackQuery.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Queries.EntityQuery.SuggestionQuery.SuggestionType">
+            <summary>
+            反馈类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Queries.EntityQuery.SuggestionQuery.SuggestionFrom">
+            <summary>
+            反馈来源
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Queries.EntityQuery.SuggestionQuery.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Queries.EntityQuery.SuggestionQuery.CreatorName">
+            <summary>
+            反馈人名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Queries.EntityQuery.SuggestionQuery.StartCreateTime">
+            <summary>
+            开始反馈时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Queries.EntityQuery.SuggestionQuery.EndCreateTime">
+            <summary>
+            结束反馈时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Queries.EntityQuery.SuggestionQuery.ReplyState">
+            <summary>
+            处理状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Queries.EntityQuery.SuggestionQuery.ReplyUserName">
+            <summary>
+            处理人名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Queries.EntityQuery.SuggestionQuery.StartReplyTime">
+            <summary>
+            开始回复时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Queries.EntityQuery.SuggestionQuery.EndReplyTime">
+            <summary>
+            结束回复时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Domain.Queries.EntityQuery.SuggestionQuery.CreatorId">
+            <summary>
+            反馈人Id
+            </summary>
+        </member>
+    </members>
+</doc>

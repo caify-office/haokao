@@ -1,0 +1,523 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.CampaignService.Application</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.CampaignService.Application.Profiles.GiftBagProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.Profiles.GiftBagProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.CampaignService.Application.Services.Management.GiftBagReceiveLogService">
+            <summary>
+            礼包领取记录-管理端接口
+            </summary>
+            <param name="cacheManager"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Management.GiftBagReceiveLogService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,HaoKao.CampaignService.Domain.Repositories.IGiftBagReceiveLogRepository)">
+            <summary>
+            礼包领取记录-管理端接口
+            </summary>
+            <param name="cacheManager"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Management.GiftBagReceiveLogService.Get(HaoKao.CampaignService.Application.ViewModels.GiftBagReceiveLog.QueryGiftBagReceiveLogViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CampaignService.Application.Services.Management.GiftBagService">
+            <summary>
+            活动管理-管理端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Management.GiftBagService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},AutoMapper.IMapper,HaoKao.CampaignService.Domain.Repositories.IGiftBagRepository)">
+            <summary>
+            活动管理-管理端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Management.GiftBagService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Management.GiftBagService.Get(HaoKao.CampaignService.Application.ViewModels.GiftBag.QueryGiftBagViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Management.GiftBagService.GetReceiveRules(System.Collections.Generic.IEnumerable{HaoKao.CampaignService.Domain.ReceiveRules.IReceiveRule})">
+            <summary>
+            获取礼包领取规则
+            </summary>
+            <param name="rules">规则</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Management.GiftBagService.Create(HaoKao.CampaignService.Application.ViewModels.GiftBag.CreateGiftBagViewModel)">
+            <summary>
+            创建礼品包
+            </summary>
+            <param name="model">新增模型</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Management.GiftBagService.Delete(System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            删除礼品包
+            </summary>
+            <param name="ids">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Management.GiftBagService.Update(HaoKao.CampaignService.Application.ViewModels.GiftBag.UpdateGiftBagViewModel)">
+            <summary>
+            根据主键更新礼品包
+            </summary>
+            <param name="model">更新模型</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Management.GiftBagService.Publish(HaoKao.CampaignService.Application.ViewModels.GiftBag.UpdateGiftBagPublishedViewModel)">
+            <summary>
+            修改发布状态
+            </summary>
+            <param name="model">更新模型</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Management.IGiftBagReceiveLogService.Get(HaoKao.CampaignService.Application.ViewModels.GiftBagReceiveLog.QueryGiftBagReceiveLogViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Management.IGiftBagService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Management.IGiftBagService.Get(HaoKao.CampaignService.Application.ViewModels.GiftBag.QueryGiftBagViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Management.IGiftBagService.GetReceiveRules(System.Collections.Generic.IEnumerable{HaoKao.CampaignService.Domain.ReceiveRules.IReceiveRule})">
+            <summary>
+            获取礼包领取规则
+            </summary>
+            <param name="rules">规则</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Management.IGiftBagService.Create(HaoKao.CampaignService.Application.ViewModels.GiftBag.CreateGiftBagViewModel)">
+            <summary>
+            创建礼品包
+            </summary>
+            <param name="model">新增模型</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Management.IGiftBagService.Delete(System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            删除礼品包
+            </summary>
+            <param name="ids">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Management.IGiftBagService.Update(HaoKao.CampaignService.Application.ViewModels.GiftBag.UpdateGiftBagViewModel)">
+            <summary>
+            根据主键更新礼品包
+            </summary>
+            <param name="model">更新模型</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Management.IGiftBagService.Publish(HaoKao.CampaignService.Application.ViewModels.GiftBag.UpdateGiftBagPublishedViewModel)">
+            <summary>
+            修改发布状态
+            </summary>
+            <param name="model">更新模型</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CampaignService.Application.Services.Web.GiftBagWebService">
+            <summary>
+            活动管理-PC端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Web.GiftBagWebService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,Girvs.EventBus.IEventBus,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.CampaignService.Domain.Repositories.IGiftBagRepository,System.Collections.Generic.IEnumerable{HaoKao.CampaignService.Domain.ReceiveRules.IReceiveRule})">
+            <summary>
+            活动管理-PC端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Web.GiftBagWebService.Get(System.Guid)">
+            <summary>
+            按Id获取礼包
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Web.GiftBagWebService.Get(System.DateTime)">
+            <summary>
+            获取用户可领取的礼包列表
+            </summary>
+            <param name="registrationTime"></param>
+            <returns>礼包配置的图片</returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Web.GiftBagWebService.Receive(System.Guid,HaoKao.CampaignService.Application.ViewModels.GiftBag.ReceiveGiftBagViewModel)">
+            <summary>
+            领取礼包
+            </summary>
+            <param name="id">礼包Id</param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Web.GiftBagWebService.GetGiftBagImageSetViewModel(HaoKao.CampaignService.Domain.Enums.ReceivePlatform,System.DateTime)">
+            <summary>
+            获取礼包图片
+            </summary>
+            <param name="receivePlatform"></param>
+            <param name="registrationTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Web.GiftBagWebService.GetFromCache(System.Guid)">
+            <summary>
+            从缓存中获取礼包列表
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Web.IGiftBagWebService.Get(System.Guid)">
+            <summary>
+            按Id获取礼包
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Web.IGiftBagWebService.Get(System.DateTime)">
+            <summary>
+            获取用户可领取的礼包列表
+            </summary>
+            <param name="registrationTime"></param>
+            <returns>礼包配置的图片</returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Web.IGiftBagWebService.Receive(System.Guid,HaoKao.CampaignService.Application.ViewModels.GiftBag.ReceiveGiftBagViewModel)">
+            <summary>
+            领取礼包
+            </summary>
+            <param name="id">礼包Id</param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Web.IGiftBagWebService.GetGiftBagImageSetViewModel(HaoKao.CampaignService.Domain.Enums.ReceivePlatform,System.DateTime)">
+            <summary>
+            获取礼包图片
+            </summary>
+            <param name="receivePlatform"></param>
+            <param name="registrationTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Web.IGiftBagWebService.GetFromCache(System.Guid)">
+            <summary>
+            从缓存中获取礼包列表
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.Web.IGiftBagWebService.SetPlatform(HaoKao.CampaignService.Domain.Enums.ReceivePlatform)">
+            <summary>
+            设置领取平台
+            </summary>
+            <param name="platform"></param>
+        </member>
+        <member name="T:HaoKao.CampaignService.Application.Services.WeChat.GiftBagWeChatService">
+            <summary>
+            活动管理-微信端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.WeChat.GiftBagWeChatService.#ctor(HaoKao.CampaignService.Application.Services.Web.IGiftBagWebService)">
+            <summary>
+            活动管理-微信端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.WeChat.GiftBagWeChatService.Get(System.Guid)">
+            <summary>
+            按Id获取礼包
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.WeChat.GiftBagWeChatService.Get(System.DateTime)">
+            <summary>
+            获取用户可领取的礼包列表
+            </summary>
+            <param name="registrationTime"></param>
+            <returns>礼包配置的图片</returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.WeChat.GiftBagWeChatService.Receive(System.Guid,HaoKao.CampaignService.Application.ViewModels.GiftBag.ReceiveGiftBagViewModel)">
+            <summary>
+            领取礼包
+            </summary>
+            <param name="id">礼包Id</param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.WeChat.IGiftBagWeChatService.Get(System.Guid)">
+            <summary>
+            按Id获取礼包
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.WeChat.IGiftBagWeChatService.Get(System.DateTime)">
+            <summary>
+            获取用户可领取的礼包列表
+            </summary>
+            <param name="registrationTime"></param>
+            <returns>礼包配置的图片</returns>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.Services.WeChat.IGiftBagWeChatService.Receive(System.Guid,HaoKao.CampaignService.Application.ViewModels.GiftBag.ReceiveGiftBagViewModel)">
+            <summary>
+            领取礼包
+            </summary>
+            <param name="id">礼包Id</param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.BrowseGiftBagViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.BrowseGiftBagViewModel.CampaignName">
+            <summary>
+            活动名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.BrowseGiftBagViewModel.GiftType">
+            <summary>
+            礼包类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.BrowseGiftBagViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.BrowseGiftBagViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.BrowseGiftBagViewModel.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.BrowseGiftBagViewModel.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.BrowseGiftBagViewModel.IsPublished">
+            <summary>
+            是否发布
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.BrowseGiftBagViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.BrowseGiftBagViewModel.ReceiveCount">
+            <summary>
+            领取人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.BrowseGiftBagViewModel.WebSiteImageSet">
+            <summary>
+            PC网站图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.BrowseGiftBagViewModel.WeChatMiniProgramImageSet">
+            <summary>
+            微信小程序图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.BrowseGiftBagViewModel.ReceiveRules">
+            <summary>
+            领取规则
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.CreateGiftBagViewModel.CampaignName">
+            <summary>
+            活动名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.CreateGiftBagViewModel.GiftType">
+            <summary>
+            礼包类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.CreateGiftBagViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.CreateGiftBagViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.CreateGiftBagViewModel.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.CreateGiftBagViewModel.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.CreateGiftBagViewModel.IsPublished">
+            <summary>
+            是否发布
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.CreateGiftBagViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.CreateGiftBagViewModel.WebSiteImageSet">
+            <summary>
+            PC网站图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.CreateGiftBagViewModel.WeChatMiniProgramImageSet">
+            <summary>
+            微信小程序图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.CreateGiftBagViewModel.ReceiveRules">
+            <summary>
+            礼品包领取记录
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.QueryGiftBagViewModel.CampaignName">
+            <summary>
+            活动名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.QueryGiftBagViewModel.GiftType">
+            <summary>
+            礼包类型
+            </summary>
+        </member>
+        <member name="T:HaoKao.CampaignService.Application.ViewModels.GiftBag.GetGiftBagImageSetViewModel">
+            <summary>
+            获取可领取的礼包图片
+            </summary>
+            <param name="Id">礼包Id</param>
+            <param name="ImageSet">礼包图片</param>
+            <param name="Receivable">是否可以领取</param>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.ViewModels.GiftBag.GetGiftBagImageSetViewModel.#ctor(System.Guid,HaoKao.CampaignService.Domain.Entities.GiftBagImageSet,System.Boolean)">
+            <summary>
+            获取可领取的礼包图片
+            </summary>
+            <param name="Id">礼包Id</param>
+            <param name="ImageSet">礼包图片</param>
+            <param name="Receivable">是否可以领取</param>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.GetGiftBagImageSetViewModel.Id">
+            <summary>礼包Id</summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.GetGiftBagImageSetViewModel.ImageSet">
+            <summary>礼包图片</summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.GetGiftBagImageSetViewModel.Receivable">
+            <summary>是否可以领取</summary>
+        </member>
+        <member name="T:HaoKao.CampaignService.Application.ViewModels.GiftBag.ReceiveGiftBagViewModel">
+            <summary>
+            领取礼包参数
+            </summary>
+            <param name="UserName">用户昵称</param>
+            <param name="RegistrationTime">注册时间</param>
+        </member>
+        <member name="M:HaoKao.CampaignService.Application.ViewModels.GiftBag.ReceiveGiftBagViewModel.#ctor(System.String,System.DateTime)">
+            <summary>
+            领取礼包参数
+            </summary>
+            <param name="UserName">用户昵称</param>
+            <param name="RegistrationTime">注册时间</param>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.ReceiveGiftBagViewModel.UserName">
+            <summary>用户昵称</summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.ReceiveGiftBagViewModel.RegistrationTime">
+            <summary>注册时间</summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.UpdateGiftBagViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.UpdateGiftBagPublishedViewModel.Ids">
+            <summary>
+            Ids
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBag.UpdateGiftBagPublishedViewModel.IsPublished">
+            <summary>
+            是否发布
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBagReceiveLog.QueryGiftBagReceiveLogViewModel.ReceiverName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBagReceiveLog.QueryGiftBagReceiveLogViewModel.StartTime">
+            <summary>
+            领取时间-开始
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBagReceiveLog.QueryGiftBagReceiveLogViewModel.EndTime">
+            <summary>
+            领取时间-结束
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBagReceiveLog.BrowseGiftBagReceiveLogViewModel.ReceiverId">
+            <summary>
+            领取人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBagReceiveLog.BrowseGiftBagReceiveLogViewModel.ReceiverName">
+            <summary>
+            领取人名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBagReceiveLog.BrowseGiftBagReceiveLogViewModel.ReceiveTime">
+            <summary>
+            领取时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Application.ViewModels.GiftBagReceiveLog.BrowseGiftBagReceiveLogViewModel.RegistrationTime">
+            <summary>
+            注册时间
+            </summary>
+        </member>
+    </members>
+</doc>

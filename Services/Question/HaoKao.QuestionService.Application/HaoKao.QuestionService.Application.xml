@@ -1,0 +1,2496 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.QuestionService.Application</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.QuestionService.Application.DailyQuestionModule.Interfaces.IDailyQuestionAppService.GetCurrentDailyQuestion(System.Guid,System.DateTime)">
+            <summary>
+            根据科目Id获取每日一题
+            </summary>
+            <param name="subjectId"></param>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.DailyQuestionModule.Interfaces.IDailyQuestionService.Get(System.Guid,System.DateTime)">
+            <summary>
+            根据科目Id 获取每日一题
+            </summary>
+            <param name="subjectId"></param>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.DailyQuestionModule.Interfaces.IDailyQuestionWebService.Get(System.Guid,System.DateTime)">
+            <summary>
+            根据科目Id 获取每日一题
+            </summary>
+            <param name="subjectId"></param>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.DailyQuestionModule.Interfaces.IDailyQuestionWeChatService.Get(System.Guid,System.DateTime)">
+            <summary>
+            根据科目Id获取每日一题
+            </summary>
+            <param name="subjectId"></param>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.DailyQuestionModule.Services.DailyQuestionAppService">
+            <summary>
+            App 端服务接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.DailyQuestionModule.Services.DailyQuestionAppService.#ctor(HaoKao.QuestionService.Application.DailyQuestionModule.Interfaces.IDailyQuestionService)">
+            <summary>
+            App 端服务接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.DailyQuestionModule.Services.DailyQuestionAppService.GetCurrentDailyQuestion(System.Guid,System.DateTime)">
+            <inheritdoc />
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.DailyQuestionModule.Services.DailyQuestionService">
+            <summary>
+            管理端服务，每日一题服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.DailyQuestionModule.Services.DailyQuestionService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,HaoKao.QuestionService.Domain.QuestionModule.IQuestionRepository,HaoKao.QuestionService.Domain.DailyQuestionModule.IDailyQuestionRepository,Girvs.Driven.Bus.IMediatorHandler,Girvs.Cache.Caching.ILocker,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification})">
+            <summary>
+            管理端服务，每日一题服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.DailyQuestionModule.Services.DailyQuestionService.Get(System.Guid,System.DateTime)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.DailyQuestionModule.Services.DailyQuestionWebService.Get(System.Guid,System.DateTime)">
+            <inheritdoc />
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.DailyQuestionModule.Services.DailyQuestionWeChatService">
+            <summary>
+            每日一题服务--小程序
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.DailyQuestionModule.Services.DailyQuestionWeChatService.#ctor(HaoKao.QuestionService.Application.DailyQuestionModule.Interfaces.IDailyQuestionService)">
+            <summary>
+            每日一题服务--小程序
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.DailyQuestionModule.Services.DailyQuestionWeChatService.Get(System.Guid,System.DateTime)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Interfaces.IQuestionCollectionAppService.GetCollectionQuestionTypeCount(System.Guid)">
+            <summary>
+            获取当前用户试题收藏分类统计
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Interfaces.IQuestionCollectionAppService.Get(HaoKao.QuestionService.Application.QuestionCollectionModule.ViewModels.QueryQuestionCollectionViewModel)">
+            <summary>
+            获取收藏的试题列表，带分页、带条件查询
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Interfaces.IQuestionCollectionAppService.IsCollected(System.Guid)">
+            <summary>
+            是否收藏
+            </summary>
+            <param name="questionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Interfaces.IQuestionCollectionAppService.CollectionQuestion(System.Guid)">
+            <summary>
+            创建试题收藏
+            </summary>
+            <param name="questionId">试题Id</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Interfaces.IQuestionCollectionAppService.UnCollectionQuestion(System.Guid)">
+            <summary>
+            根据试题Id删除指定试题收藏
+            </summary>
+            <param name="questionId">试题Id</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Interfaces.IQuestionCollectionService.Get(System.Guid)">
+            <summary>
+            获取当前用户试题收藏分类统计
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Interfaces.IQuestionCollectionService.Get(HaoKao.QuestionService.Application.QuestionCollectionModule.ViewModels.QueryQuestionCollectionViewModel)">
+            <summary>
+            获取收藏的试题列表，带分页、带条件查询
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Interfaces.IQuestionCollectionService.Any(System.Guid)">
+            <summary>
+            是否收藏
+            </summary>
+            <param name="questionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Interfaces.IQuestionCollectionService.Create(System.Guid)">
+            <summary>
+            创建试题收藏
+            </summary>
+            <param name="questionId">试题Id</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Interfaces.IQuestionCollectionService.Delete(System.Guid)">
+            <summary>
+            根据试题Id删除指定试题收藏
+            </summary>
+            <param name="questionId">试题Id</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Interfaces.IQuestionCollectionWebService.Get(System.Guid)">
+            <summary>
+            获取当前用户试题收藏分类统计
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Interfaces.IQuestionCollectionWebService.Get(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            根据科目和题型获取收藏的试题
+            </summary>
+            <param name="subjectId"></param>
+            <param name="typeId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Interfaces.IQuestionCollectionWebService.Create(System.Guid)">
+            <summary>
+            收藏试题
+            </summary>
+            <param name="questionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Interfaces.IQuestionCollectionWebService.Delete(System.Guid)">
+            <summary>
+            取消收藏试题
+            </summary>
+            <param name="questionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Interfaces.IQuestionCollectionWebService.SetIsCollected(System.Collections.Generic.IReadOnlyCollection{HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionAppViewModel})">
+            <summary>
+            试题列表添加是否收藏状态
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Interfaces.IQuestionCollectionWeChatService.Get(System.Guid)">
+            <summary>
+            获取当前用户试题收藏分类统计
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Interfaces.IQuestionCollectionWeChatService.Get(HaoKao.QuestionService.Application.QuestionCollectionModule.ViewModels.QueryQuestionCollectionViewModel)">
+            <summary>
+            获取收藏的试题列表，带分页、带条件查询
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Interfaces.IQuestionCollectionWeChatService.IsCollected(System.Guid)">
+            <summary>
+            是否收藏
+            </summary>
+            <param name="questionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Interfaces.IQuestionCollectionWeChatService.Create(System.Guid)">
+            <summary>
+            创建试题收藏
+            </summary>
+            <param name="questionId">试题Id</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Interfaces.IQuestionCollectionWeChatService.Delete(System.Guid)">
+            <summary>
+            根据试题Id删除指定试题收藏
+            </summary>
+            <param name="questionId">试题Id</param>
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.QuestionCollectionModule.Services.QuestionCollectionAppService">
+            <summary>
+            试题收藏相关服务 --App端
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Services.QuestionCollectionAppService.#ctor(HaoKao.QuestionService.Application.QuestionCollectionModule.Interfaces.IQuestionCollectionService)">
+            <summary>
+            试题收藏相关服务 --App端
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Services.QuestionCollectionAppService.Get(HaoKao.QuestionService.Application.QuestionCollectionModule.ViewModels.QueryQuestionCollectionViewModel)">
+            <summary>
+            获取收藏的试题列表，带分页、带条件查询
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Services.QuestionCollectionAppService.GetCollectionQuestionTypeCount(System.Guid)">
+            <summary>
+            获取当前用户试题收藏分类统计
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Services.QuestionCollectionAppService.IsCollected(System.Guid)">
+            <summary>
+            是否收藏
+            </summary>
+            <param name="questionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Services.QuestionCollectionAppService.CollectionQuestion(System.Guid)">
+            <summary>
+            收藏试题
+            </summary>
+            <param name="questionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Services.QuestionCollectionAppService.UnCollectionQuestion(System.Guid)">
+            <summary>
+            取消收藏试题
+            </summary>
+            <param name="questionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Services.QuestionCollectionService.Get(System.Guid)">
+            <summary>
+            获取当前用户试题收藏分类统计
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Services.QuestionCollectionService.Get(HaoKao.QuestionService.Application.QuestionCollectionModule.ViewModels.QueryQuestionCollectionViewModel)">
+            <summary>
+            获取收藏的试题列表，带分页、带条件查询
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Services.QuestionCollectionService.Any(System.Guid)">
+            <summary>
+            是否收藏
+            </summary>
+            <param name="questionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Services.QuestionCollectionService.Create(System.Guid)">
+            <summary>
+            创建试题收藏
+            </summary>
+            <param name="questionId">试题Id</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Services.QuestionCollectionService.Delete(System.Guid)">
+            <summary>
+            根据试题Id删除指定试题收藏
+            </summary>
+            <param name="questionId">试题Id</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Services.QuestionCollectionWebService.Get(System.Guid)">
+            <summary>
+            获取当前用户试题收藏分类统计
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Services.QuestionCollectionWebService.Get(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            根据科目和题型获取收藏的试题
+            </summary>
+            <param name="subjectId"></param>
+            <param name="typeId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Services.QuestionCollectionWebService.Create(System.Guid)">
+            <summary>
+            收藏试题
+            </summary>
+            <param name="questionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Services.QuestionCollectionWebService.Delete(System.Guid)">
+            <summary>
+            取消收藏试题
+            </summary>
+            <param name="questionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Services.QuestionCollectionWebService.SetIsCollected(System.Collections.Generic.IReadOnlyCollection{HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionAppViewModel})">
+            <summary>
+            试题列表添加是否收藏状态
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.QuestionCollectionModule.Services.QuestionCollectionWeChatService">
+            <summary>
+            试题收藏相关服务--小程序
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Services.QuestionCollectionWeChatService.#ctor(HaoKao.QuestionService.Application.QuestionCollectionModule.Interfaces.IQuestionCollectionService)">
+            <summary>
+            试题收藏相关服务--小程序
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Services.QuestionCollectionWeChatService.Get(HaoKao.QuestionService.Application.QuestionCollectionModule.ViewModels.QueryQuestionCollectionViewModel)">
+            <summary>
+            获取收藏的试题列表，带分页、带条件查询
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Services.QuestionCollectionWeChatService.Get(System.Guid)">
+            <summary>
+            获取当前用户试题收藏分类统计
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Services.QuestionCollectionWeChatService.IsCollected(System.Guid)">
+            <summary>
+            是否收藏
+            </summary>
+            <param name="questionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Services.QuestionCollectionWeChatService.Create(System.Guid)">
+            <summary>
+            收藏试题
+            </summary>
+            <param name="questionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionCollectionModule.Services.QuestionCollectionWeChatService.Delete(System.Guid)">
+            <summary>
+            取消收藏试题
+            </summary>
+            <param name="questionId"></param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionCollectionModule.ViewModels.QueryQuestionCollectionViewModel.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionCollectionModule.ViewModels.QueryQuestionCollectionViewModel.QuestionTypeId">
+            <summary>
+            试题类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionCollectionModule.ViewModels.QueryQuestionCollectionListViewModel.QuestionId">
+            <summary>
+            题目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionCollectionModule.ViewModels.QueryQuestionCollectionListViewModel.CreatorId">
+            <summary>
+            创建者Id，用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionCollectionModule.ViewModels.QueryQuestionCollectionListViewModel.CreateTime">
+            <summary>
+            收藏时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionCollectionModule.ViewModels.QueryQuestionCollectionListViewModel.Question">
+            <summary>
+            收藏的试题对象
+            </summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.QuestionHandlers.AnswerArea.AnswerAreaBase">
+            <summary>
+            答题区域
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionHandlers.AnswerArea.AnswerAreaBase.Id">
+            <summary>
+            Id值
+            </summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.QuestionHandlers.AnswerArea.ChoiceQuestionOption">
+            <summary>
+            选择题选项
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionHandlers.AnswerArea.ChoiceQuestionOption.OptionContent">
+            <summary>
+            选项文本
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionHandlers.AnswerArea.ChoiceQuestionOption.IsAnswer">
+            <summary>
+            是否为答案
+            </summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.QuestionHandlers.AnswerArea.FillInOption">
+            <summary>
+            填空题项
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionHandlers.AnswerArea.FillInOption.AnswerContent">
+            <summary>
+            参考答案
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionHandlers.AnswerArea.ShortAnswerQuestionOption.AnswerContent">
+            <summary>
+            参考答案
+            </summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.QuestionHandlers.AnswerArea.UserAnswerContent">
+            <summary>
+            考生答题内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionHandlers.AnswerArea.UserAnswerContent.Id">
+            <summary>
+            对应选项或填空相关联的Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionHandlers.AnswerArea.UserAnswerContent.Content">
+            <summary>
+            作答内容
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionHandlers.IScocingable.HandleScoring(System.Collections.Generic.Dictionary{HaoKao.Common.Enums.ScoringRuleType,System.Decimal},HaoKao.QuestionService.Application.QuestionHandlers.AnswerArea.UserAnswerContent[])">
+            <summary>
+            开始判分
+            </summary>
+            <param name="userAnswers">作答回容</param>
+            <param name="scoringRules">当前试题的评分规则</param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionHandlers.IQuestion.QuestionTypeId">
+            <summary>
+            题型Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionHandlers.IQuestion.QuestionTypeName">
+            <summary>
+            题型名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionHandlers.IQuestion.Code">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionHandlers.IQuestion.ScoringRules">
+            <summary>
+            评分规则
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionHandlers.IQuestion.SetQuestionOption(System.String)">
+            <summary>
+            试题选项赋值
+            </summary>
+            <param name="optionsJsonStr"></param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionHandlers.IQuestion.HandleScoring(System.Collections.Generic.Dictionary{HaoKao.Common.Enums.ScoringRuleType,System.Decimal},HaoKao.QuestionService.Application.QuestionHandlers.AnswerArea.UserAnswerContent[])">
+            <summary>
+            开始判分
+            </summary>
+            <param name="userAnswers">作答回容</param>
+            <param name="scoringRules">当前试题的评分规则</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.QuestionHandlers.IQuestion`1">
+            <summary>
+            试题接口
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionHandlers.IQuestion`1.Option">
+            <summary>
+            定义答题区
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionHandlers.IQuestion`1.IncludeAnalysis">
+            <summary>
+            是否包含解析
+            </summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.QuestionHandlers.ScoringResult">
+            <summary>
+            判分结果
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionHandlers.ScoringResult.ScoringType">
+            <summary>
+            答题情况
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionHandlers.ScoringResult.Score">
+            <summary>
+            得分
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionAppService.Get(System.Guid)">
+            <summary>
+            根据主键获取题目和收藏状态
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionAppService.GetSubjectQuestionCount(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySubjectQuestionCountViewModel)">
+            <summary>
+            查询科目下试题总数
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionAppService.GetChaperCategorieQuestionCount(System.Guid,System.Guid)">
+            <summary>
+            按试题章节和试题分类查询试题数量
+            </summary>
+            <param name="chapterId"></param>
+            <param name="questionCategoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionAppService.GetChapterList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryChapterViewModel)">
+            <summary>
+            根据科目和分类获取章节列表和题目数量
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionAppService.GetSectionList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySectionViewModel)">
+            <summary>
+            根据章节和分类获取小节列表和题目数量
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionAppService.GetKnowledgePointList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryKnowledgePointViewModel)">
+            <summary>
+            根据小节和分类获取知识点列表和题目数量
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionAppService.GetChapterQuestionIdGroup(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryChapterQuestionViewModel)">
+            <summary>
+            获取章节试题Id, 并根据题型进行分组
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionAppService.GetSectionQuestionIdGroup(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySectionQuestionViewModel)">
+            <summary>
+            获取小节试题Id, 并根据题型进行分组
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionAppService.GetKnowledgePointQuestionIdGroup(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryKnowledgePointQuestionViewModel)">
+            <summary>
+            获取知识点试题Id, 并根据题型进行分组
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionAppService.GetPaperQuestionIdGroup(System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            获取试卷试题Id, 并根据题型进行分组
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionAppService.GetSpecialPromotionQuestionIdGroup(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySpecialPromotionQuestionViewModel)">
+            <summary>
+            按科目和能力抽取专项提升的试题Id, 并根据题型进行分组
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionAppService.GroupByQuestionType(System.Collections.Generic.IReadOnlyList{HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryQuestionListAppViewModel})">
+            <summary>
+            按题型对题目进行分组
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionAppService.GroupByQuestionType(System.Collections.Generic.IReadOnlyList{HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionAppViewModel})">
+            <summary>
+            按题型对题目进行分组
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionAppService.GetQuestionListByIds(System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            根据Ids获取试题列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionAppService.GetChapterQuestionList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryChapterQuestionViewModel)">
+            <summary>
+            获取章节下的所有试题
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionAppService.GetSectionQuestionList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySectionQuestionViewModel)">
+            <summary>
+            获取小节下的所有试题
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionAppService.GetKnowledgePointQuestionList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryKnowledgePointQuestionViewModel)">
+            <summary>
+            获取知识点下的所有试题
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionAppService.GetSpecialPromotionQuestionIds(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySpecialPromotionQuestionViewModel)">
+            <summary>
+            按科目和能力抽取专项提升的试题Ids
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionAppService.ExistsFreeQuestion(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            章节下是否存在免费试题
+            </summary>
+            <param name="subjectId"></param>
+            <param name="chapterId"></param>
+            <param name="categoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionAppService.SubmitUserAnswers(HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswersViewModel)">
+            <summary>
+            用户提交作答
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionService.Get(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryQuestionViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="viewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionService.GetQuestionListForPaper(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="viewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionService.GetPaperQuestionList(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            用于获取试卷题目列表
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionService.GetPaperSubQuestionList(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            根据 案例分析题id集合 获取下面所有小题题干和id
+            </summary>
+            <param name="parentIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionService.GetQuestionOptions(System.Guid)">
+            <summary>
+            根据试题Id获取试题选项
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionService.GetChaperCategorieQuestionCount(System.Guid,System.Guid)">
+            <summary>
+            按试题章节和试题分类查询试题数量
+            </summary>
+            <param name="chapterId"></param>
+            <param name="questionCategoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionService.Create(HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel)">
+            <summary>
+            创建试题实体
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionService.Delete(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            根据主键删除指定试题实体
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionService.Update(HaoKao.QuestionService.Application.QuestionModule.ViewModels.UpdateQuestionViewModel)">
+            <summary>
+            根据主键更新指定试题实体
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">更新模型</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionService.SetFreeState(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            设为免费专区
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionService.CancelFreeState(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            取消免费专区
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionService.EnableQuestion(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionService.DisableQuestion(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            禁用
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionService.UpdateSort(System.Guid,System.Int32)">
+            <summary>
+            修改排序
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionService.GetQuestionCount(System.Guid)">
+            <summary>
+            根据科目获取试题的数量
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionService.GetChapterList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryChapterViewModel,System.Guid)">
+            <summary>
+            根据科目和分类获取章节列表和题目数量(包含节)
+            </summary>
+            <param name="input"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionTypeService.GetQuestionTypeList">
+            <summary>
+            获取题型列表
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionTypeService.GetQuestionTypeConfig(System.Guid)">
+            <summary>
+            获取题型配置
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionTypeService.GetQuestionTypeInfoList">
+            <summary>
+            获取题型信息列表
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionWebService.GetChapterList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryChapterViewModel)">
+            <summary>
+            根据科目和分类获取章节列表和题目数量
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionWebService.GetSectionList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySectionViewModel)">
+            <summary>
+            根据章节和分类获取小节列表和题目数量
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionWebService.GetKnowledgePointList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryKnowledgePointViewModel)">
+            <summary>
+            根据小节和分类获取知识点列表和题目数量
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionWebService.GetChapterQuestionList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryChapterQuestionViewModel)">
+            <summary>
+            根据章节Id获取试题列表(包含节)
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionWebService.GetSectionQuestionList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySectionQuestionViewModel)">
+            <summary>
+            根据小节Id获取试题列表(包含知识点)
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionWebService.GetKnowledgePointQuestionList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryKnowledgePointQuestionViewModel)">
+            <summary>
+            根据知识点Id获取试题列表(包含小节)
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionWebService.GetPaperQuestionList(System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            根据试题Ids获取试卷的题目列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionWebService.GetSpecialPromotionQuestionList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySpecialPromotionQuestionViewModel)">
+            <summary>
+            按科目和能力抽取专项提升的试题
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionWebService.ExistsFreeQuestion(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            章节下是否存在免费试题
+            </summary>
+            <param name="subjectId"></param>
+            <param name="chapterId"></param>
+            <param name="categoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionWebService.SubmitUserAnswers(HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswersViewModel)">
+            <summary>
+            用户提交作答
+            </summary>
+            <param name="vm"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取题目和收藏状态
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionWeChatService.GetSubjectQuestionCount(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySubjectQuestionCountViewModel)">
+            <summary>
+            查询科目下试题总数
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionWeChatService.GetChapterList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryChapterViewModel)">
+            <summary>
+            根据科目和分类获取章节列表和题目数量
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionWeChatService.GetSectionList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySectionViewModel)">
+            <summary>
+            根据章节和分类获取小节列表和题目数量
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionWeChatService.GetKnowledgePointList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryKnowledgePointViewModel)">
+            <summary>
+            根据小节和分类获取知识点列表和题目数量
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionWeChatService.GetChapterQuestionIdGroup(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryChapterQuestionViewModel)">
+            <summary>
+            获取章节试题Id, 并根据题型进行分组
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionWeChatService.GetSectionQuestionIdGroup(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySectionQuestionViewModel)">
+            <summary>
+            获取小节试题Id, 并根据题型进行分组
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionWeChatService.GetKnowledgePointQuestionIdGroup(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryKnowledgePointQuestionViewModel)">
+            <summary>
+            获取知识点试题Id, 并根据题型进行分组
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionWeChatService.GetPaperQuestionIdGroup(System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            获取试卷试题Id, 并根据题型进行分组
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionWeChatService.GetSpecialPromotionQuestionIdGroup(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySpecialPromotionQuestionViewModel)">
+            <summary>
+            按科目和能力抽取专项提升的试题Id, 并根据题型进行分组
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionWeChatService.ExistsFreeQuestion(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            章节下是否存在免费试题
+            </summary>
+            <param name="subjectId"></param>
+            <param name="chapterId"></param>
+            <param name="categoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionWeChatService.SubmitUserAnswers(HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswersViewModel)">
+            <summary>
+            用户提交作答
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService">
+            <summary>
+            试题App接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,Girvs.EventBus.IEventBus,AutoMapper.IMapper,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionService,HaoKao.QuestionService.Domain.QuestionModule.IQuestionRepository,HaoKao.QuestionService.Domain.QuestionCollectionModule.IQuestionCollectionRepository)">
+            <summary>
+            试题App接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.Get(System.Guid)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.GetSubjectQuestionCount(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySubjectQuestionCountViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.GetChaperCategorieQuestionCount(System.Guid,System.Guid)">
+            <summary>
+            按试题章节和试题分类查询试题数量
+            </summary>
+            <param name="chapterId"></param>
+            <param name="questionCategoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.GetChapterList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryChapterViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.GetSectionList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySectionViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.GetKnowledgePointList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryKnowledgePointViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.GetChapterQuestionIdGroup(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryChapterQuestionViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.GetSectionQuestionIdGroup(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySectionQuestionViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.GetKnowledgePointQuestionIdGroup(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryKnowledgePointQuestionViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.GetPaperQuestionIdGroup(System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.GetSpecialPromotionQuestionIdGroup(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySpecialPromotionQuestionViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.ExistsFreeQuestion(System.Guid,System.Guid,System.Guid)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.GroupByQuestionType(System.Collections.Generic.IReadOnlyList{HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryQuestionListAppViewModel})">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.GroupByQuestionType(System.Collections.Generic.IReadOnlyList{HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionAppViewModel})">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.GetQuestionListByIds(System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.GetChapterQuestionList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryChapterQuestionViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.GetSectionQuestionList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySectionQuestionViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.GetKnowledgePointQuestionList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryKnowledgePointQuestionViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.GetSpecialPromotionQuestionIds(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySpecialPromotionQuestionViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.SubmitUserAnswers(HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswersViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.ScoringUserAnswerQuestions(HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswersViewModel)">
+            <summary>
+            判题
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.PublishWrongAnswerRecord(System.Collections.Generic.IEnumerable{HaoKao.QuestionService.Application.QuestionModule.ViewModels.UserAnswerQuestionModel})">
+            <summary>
+            发布错题事件
+            </summary>
+            <param name="questions"></param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.PublishCleanQuestionWrong(System.Collections.Generic.IEnumerable{HaoKao.QuestionService.Application.QuestionModule.ViewModels.UserAnswerQuestionModel})">
+            <summary>
+            消灭错题
+            </summary>
+            <param name="questions"></param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionAppService.PublishAnswerRecord(HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswersViewModel,System.Collections.Generic.IEnumerable{HaoKao.QuestionService.Application.QuestionModule.ViewModels.UserAnswerQuestionModel})">
+            <summary>
+            发布答题记录事件
+            </summary>
+            <param name="vm"></param>
+            <param name="questions"></param>
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionService">
+            <summary>
+            试题实体接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.QuestionService.Domain.QuestionModule.IQuestionRepository,AutoMapper.IMapper)">
+            <summary>
+            试题实体接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionService.Get(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryQuestionViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="viewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionService.GetQuestionListForPaper(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperViewModel)">
+            <summary>
+            根据查询获取列表，用于分页(用于试卷引入试题的列表)
+            </summary>
+            <param name="viewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionService.GetPaperQuestionList(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            用于获取试卷题目列表
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionService.GetPaperSubQuestionList(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            根据 案例分析题id集合 获取下面所有小题题干和id
+            </summary>
+            <param name="parentIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionService.GetQuestionOptions(System.Guid)">
+            <summary>
+            根据试题Id获取试题选项
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionService.GetChaperCategorieQuestionCount(System.Guid,System.Guid)">
+            <summary>
+            按试题章节和试题分类查询试题数量
+            </summary>
+            <param name="chapterId"></param>
+            <param name="questionCategoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionService.Create(HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel)">
+            <summary>
+            创建试题实体
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionService.Delete(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            根据主键删除指定试题实体
+            </summary>
+            <param name="ids">主键</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionService.Update(HaoKao.QuestionService.Application.QuestionModule.ViewModels.UpdateQuestionViewModel)">
+            <summary>
+            根据主键更新指定试题实体
+            </summary>
+            <param name="model">更新模型</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionService.SetFreeState(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            设为免费专区
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionService.CancelFreeState(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            取消免费专区
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionService.UpdateFreeState(System.Collections.Generic.IEnumerable{System.Guid},HaoKao.QuestionService.Domain.QuestionModule.FreeState)">
+            <summary>
+            修改免费专区状态
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionService.EnableQuestion(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionService.DisableQuestion(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            禁用
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionService.UpdateEnableState(System.Collections.Generic.IEnumerable{System.Guid},HaoKao.QuestionService.Domain.QuestionModule.EnableState)">
+            <summary>
+            修改启用状态
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionService.UpdateSort(System.Guid,System.Int32)">
+            <summary>
+            修改排序
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionService.GetQuestionCount(System.Guid)">
+            <summary>
+            根据科目获取试题的数量
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionService.GetChapterList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryChapterViewModel,System.Guid)">
+            <summary>
+            根据科目和分类获取章节列表和题目数量(包含节)
+            </summary>
+            <param name="input"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionTypeService">
+            <summary>
+            题型服务接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionTypeService.GetQuestionTypeList">
+            <summary>
+            获取题型列表
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionTypeService.GetQuestionTypeConfig(System.Guid)">
+            <summary>
+            获取题型配置
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionTypeService.GetQuestionTypeInfoList">
+            <summary>
+            获取题型信息列表
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionWebService.GetChapterList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryChapterViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionWebService.GetSectionList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySectionViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionWebService.GetKnowledgePointList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryKnowledgePointViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionWebService.GetChapterQuestionList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryChapterQuestionViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionWebService.GetSectionQuestionList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySectionQuestionViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionWebService.GetKnowledgePointQuestionList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryKnowledgePointQuestionViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionWebService.GetPaperQuestionList(System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionWebService.GetSpecialPromotionQuestionList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySpecialPromotionQuestionViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionWebService.ExistsFreeQuestion(System.Guid,System.Guid,System.Guid)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionWebService.SubmitUserAnswers(HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswersViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionWeChatService">
+            <summary>
+            试题相关服务--小程序
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionWeChatService.#ctor(HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionAppService)">
+            <summary>
+            试题相关服务--小程序
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionWeChatService.Get(System.Guid)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionWeChatService.GetSubjectQuestionCount(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySubjectQuestionCountViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionWeChatService.GetChapterList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryChapterViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionWeChatService.GetSectionList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySectionViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionWeChatService.GetKnowledgePointList(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryKnowledgePointViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionWeChatService.GetChapterQuestionIdGroup(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryChapterQuestionViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionWeChatService.GetSectionQuestionIdGroup(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySectionQuestionViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionWeChatService.GetKnowledgePointQuestionIdGroup(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryKnowledgePointQuestionViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionWeChatService.GetPaperQuestionIdGroup(System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionWeChatService.GetSpecialPromotionQuestionIdGroup(HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySpecialPromotionQuestionViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionWeChatService.ExistsFreeQuestion(System.Guid,System.Guid,System.Guid)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionModule.Services.QuestionWeChatService.SubmitUserAnswers(HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswersViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel.SubjectName">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel.ChapterId">
+            <summary>
+            章节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel.ChapterName">
+            <summary>
+            章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel.SectionId">
+            <summary>
+            小节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel.SectionName">
+            <summary>
+            小节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel.KnowledgePointId">
+            <summary>
+            知识点Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel.KnowledgePointName">
+            <summary>
+            知识点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel.QuestionCategoryId">
+            <summary>
+            试题分类Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel.QuestionCategoryName">
+            <summary>
+            试题分类名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel.QuestionTypeId">
+            <summary>
+            试题类型Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel.QuestionTypeName">
+            <summary>
+            试题类型名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel.QuestionText">
+            <summary>
+            试题内容 (题干)
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel.QuestionTitle">
+            <summary>
+            试题标题 (管理端使用)
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel.TextAnalysis">
+            <summary>
+            文字解析
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel.MediaAnalysis">
+            <summary>
+            音视频解析
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel.AbilityIds">
+            <summary>
+            能力维度Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel.FreeState">
+            <summary>
+            是否免费
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel.EnableState">
+            <summary>
+            启用状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel.SubjectTagId">
+            <summary>
+            科目标签Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel.PaperTagId">
+            <summary>
+            试卷标签Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel.ParentId">
+            <summary>
+            父题目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.CreateQuestionViewModel.QuestionOptions">
+            <summary>
+            试题选项
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.UpdateQuestionViewModel.Id">
+            <summary>
+            试题Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BaseQueryChapterListViewModel.QuestionCategoryId">
+            <summary>
+            类别Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BaseQueryChapterListViewModel.FreeState">
+            <summary>
+            是否免费
+            </summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowsePaperViewModel">
+            <summary>
+            试卷查看试题
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowsePaperViewModel.Id">
+            <summary>
+            试题Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowsePaperViewModel.ParentId">
+            <summary>
+            父题目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowsePaperViewModel.QuestionTypeId">
+            <summary>
+            题型Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowsePaperViewModel.QuestionText">
+            <summary>
+            试题内容 (题干)
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowsePaperViewModel.QuestionCount">
+            <summary>
+            试题数量
+            </summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperViewModel">
+            <summary>
+            试卷引入试题查询
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperViewModel.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperViewModel.ChapterId">
+            <summary>
+            章节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperViewModel.SectionId">
+            <summary>
+            小节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperViewModel.KnowledgePointId">
+            <summary>
+            知识点Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperViewModel.QuestionTypeId">
+            <summary>
+            试题类型Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperViewModel.QuestionCategoryId">
+            <summary>
+            试题分类
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperViewModel.AbilityId">
+            <summary>
+            能力维度
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperViewModel.QuestionTitle">
+            <summary>
+            题干
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperViewModel.KnowledgePointName">
+            <summary>
+            知识点
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperViewModel.SubjectTagId">
+            <summary>
+            科目标签Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperViewModel.PaperTagId">
+            <summary>
+            试卷标签Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperListViewModel">
+            <summary>
+            试卷引入试题结果
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperListViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperListViewModel.ChapterId">
+            <summary>
+            章节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperListViewModel.ChapterName">
+            <summary>
+            章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperListViewModel.SectionId">
+            <summary>
+            小节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperListViewModel.SectionName">
+            <summary>
+            小节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperListViewModel.KnowledgePointId">
+            <summary>
+            知识点Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperListViewModel.KnowledgePointName">
+            <summary>
+            知识点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperListViewModel.QuestionCategoryId">
+            <summary>
+            试题分类Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperListViewModel.QuestionCategoryName">
+            <summary>
+            试题分类名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperListViewModel.QuestionTypeId">
+            <summary>
+            试题类型Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperListViewModel.QuestionText">
+            <summary>
+            试题内容 (题干)
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperListViewModel.AbilityIds">
+            <summary>
+            能力维度Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryPaperListViewModel.QuestionOptions">
+            <summary>
+            试题选项
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionAppViewModel.IsCollected">
+            <summary>
+            是否已收藏
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionAppViewModel.CollectionTime">
+            <summary>
+            收藏时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySpecialPromotionQuestionViewModel.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySpecialPromotionQuestionViewModel.Ability">
+            <summary>
+            能力维度
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySpecialPromotionQuestionViewModel.Count">
+            <summary>
+            需要抽取的题目数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QuerySpecialPromotionQuestionViewModel.Trial">
+            <summary>
+            是否试用
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryQuestionViewModel.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryQuestionViewModel.ChapterId">
+            <summary>
+            章节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryQuestionViewModel.SectionId">
+            <summary>
+            小节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryQuestionViewModel.KnowledgePointId">
+            <summary>
+            知识点Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryQuestionViewModel.QuestionTitle">
+            <summary>
+            试题标题 (管理端使用)
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryQuestionViewModel.QuestionTypeId">
+            <summary>
+            试题类型Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryQuestionViewModel.QuestionCategoryId">
+            <summary>
+            试题分类
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryQuestionViewModel.EnableState">
+            <summary>
+            启用状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryQuestionViewModel.FreeState">
+            <summary>
+            免费专区
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryQuestionViewModel.SubjectTagId">
+            <summary>
+            科目标签Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryQuestionViewModel.PaperTagId">
+            <summary>
+            试卷标签Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryQuestionViewModel.ParentId">
+            <summary>
+            父Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.QueryQuestionViewModel.HasVideo">
+            <summary>
+            是否有解析视频
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.Id">
+            <summary>
+            试题Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.SubjectName">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.ChapterId">
+            <summary>
+            章节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.ChapterName">
+            <summary>
+            章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.SectionId">
+            <summary>
+            小节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.SectionName">
+            <summary>
+            小节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.KnowledgePointId">
+            <summary>
+            知识点Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.KnowledgePointName">
+            <summary>
+            知识点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.QuestionCategoryId">
+            <summary>
+            试题分类Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.QuestionCategoryName">
+            <summary>
+            试题分类名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.QuestionTypeId">
+            <summary>
+            试题类型Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.QuestionTypeName">
+            <summary>
+            试题类型名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.QuestionText">
+            <summary>
+            试题内容 (题干)
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.QuestionTitle">
+            <summary>
+            试题标题 (管理端使用)
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.TextAnalysis">
+            <summary>
+            文字解析
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.MediaAnalysis">
+            <summary>
+            试题音视频解析
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.FreeState">
+            <summary>
+            是否免费
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.EnableState">
+            <summary>
+            启用状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.QuestionCount">
+            <summary>
+            试题数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.AbilityIds">
+            <summary>
+            能力维度Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.QuestionOptions">
+            <summary>
+            试题选项
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.SubjectTagId">
+            <summary>
+            科目标签Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.PaperTagId">
+            <summary>
+            试卷标签Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.ParentId">
+            <summary>
+            父题目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.CreatorId">
+            <summary>
+            创建者Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.BrowseQuestionViewModel.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswerReturnViewModel">
+            <summary>
+            提交作答后返回的数据
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswerReturnViewModel.RecordIdentifierName">
+            <summary>
+            标识符名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswerReturnViewModel.ElapsedTime">
+            <summary>
+            耗时
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswerReturnViewModel.UserScore">
+            <summary>
+            用户得分
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswerReturnViewModel.PassingScore">
+            <summary>
+            及格分数
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswerReturnViewModel.TotalScore">
+            <summary>
+            试题总分
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswerReturnViewModel.QuestionCount">
+            <summary>
+            总题数
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswerReturnViewModel.LackCount">
+            <summary>
+            少选数
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswerReturnViewModel.CorrectCount">
+            <summary>
+            正确数
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswerReturnViewModel.RecordQuestions">
+            <summary>
+            试题作答记录
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitQuestionViewModel.QuestionId">
+            <summary>
+            试题Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitQuestionViewModel.ParentId">
+            <summary>
+            试题父Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitQuestionViewModel.UserScore">
+            <summary>
+            用户得分
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitQuestionViewModel.JudgeResult">
+            <summary>
+            判题结果
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitQuestionViewModel.WhetherMark">
+            <summary>
+            是否标记
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitQuestionViewModel.QuestionTypeId">
+             <summary>
+            题型Id
+             </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitQuestionViewModel.QuestionOptions">
+            <summary>
+            用户作答
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitQuestionOptionViewModel.OptionId">
+            <summary>
+            选项Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitQuestionOptionViewModel.OptionContent">
+            <summary>
+            回答内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswersViewModel.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswersViewModel.CategoryId">
+            <summary>
+            分类Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswersViewModel.PaperId">
+            <summary>
+            试卷Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswersViewModel.ProductId">
+            <summary>
+            智辅产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswersViewModel.RecordIdentifierName">
+            <summary>
+            标识符名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswersViewModel.ExamFrequency">
+            <summary>
+            考试频率
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswersViewModel.AnswerType">
+            <summary>
+            答题类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswersViewModel.ElapsedTime">
+            <summary>
+            耗时
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswersViewModel.PassingScore">
+            <summary>
+            及格分数
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswersViewModel.TotalScore">
+            <summary>
+            总分
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswersViewModel.QuestionCount">
+            <summary>
+            总题数
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswersViewModel.AnswerCount">
+            <summary>
+            作答数
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswersViewModel.CorrectCount">
+            <summary>
+            正确数
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswersViewModel.CreateTime">
+            <summary>
+            作答时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.SubmitAnswersViewModel.QuestionGroups">
+            <summary>
+            用户作答题目
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.UserAnswerQuestionGroupModel.QuestionTypeId">
+            <summary>
+            题型Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.UserAnswerQuestionGroupModel.UserAnswerQuestions">
+            <summary>
+            用户回答的题目
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.UserAnswerQuestionGroupModel.ScoringRules">
+            <summary>
+            判题规则
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.UserAnswerQuestionGroupModel.Score">
+            <summary>
+            得分
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.UserAnswerQuestionGroupModel.CorrectTotal">
+            <summary>
+            答对统计
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.UserAnswerQuestionModel.ChapterId">
+            <summary>
+            章节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.UserAnswerQuestionModel.SectionId">
+            <summary>
+            小节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.UserAnswerQuestionModel.KnowledgePointId">
+            <summary>
+            知识点Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.UserAnswerQuestionModel.QuestionTypeId">
+            <summary>
+            题型Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.UserAnswerQuestionModel.QuestionId">
+            <summary>
+            试题Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.UserAnswerQuestionModel.ParentId">
+            <summary>
+            试题父Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.UserAnswerQuestionModel.UserAnswer">
+            <summary>
+            用户作答
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.UserAnswerQuestionModel.ScoringRules">
+            <summary>
+            判题规则
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.UserAnswerQuestionModel.ScoringResult">
+            <summary>
+            得分情况
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionModule.ViewModels.UserAnswerQuestionModel.WhetherMark">
+            <summary>
+            是否标记
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Interfaces.IQuestionWrongAppService.GetChapterList(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryChapterViewModel)">
+            <summary>
+            根据科目和分类获取章节列表和题目数量
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Interfaces.IQuestionWrongAppService.GetChapterQuestionIdGroup(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryChapterQuestionViewModel)">
+            <summary>
+            获取章节试题Id, 并根据题型进行分组
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Interfaces.IQuestionWrongAppService.Any(System.Guid)">
+            <summary>
+            根据科目判断用户是否存在未消灭的错题
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Interfaces.IQuestionWrongAppService.GetTodayTask(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryTodayTaskViewModel)">
+            <summary>
+            今日任务抽题
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Interfaces.IQuestionWrongAppService.GetMakingPaper(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryMakingPaperViewModel)">
+            <summary>
+            根据科目查询错题组卷列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Interfaces.IQuestionWrongService.GetChapterList(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryChapterViewModel)">
+            <summary>
+            根据科目获取章节列表和错题数量
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Interfaces.IQuestionWrongService.GetChapterQuestionList(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryChapterQuestionViewModel)">
+            <summary>
+            获取章节下的所有试题
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Interfaces.IQuestionWrongService.Any(System.Guid)">
+            <summary>
+            根据科目判断用户是否存在未消灭的错题
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Interfaces.IQuestionWrongService.GetTodayTaskQuestionIds(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryTodayTaskViewModel)">
+            <summary>
+            根据科目获取今日任务的试题Ids
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Interfaces.IQuestionWrongService.GetQuestionWrongCount(System.Guid,System.Guid)">
+            <summary>
+            获取错题数量
+            </summary>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Interfaces.IQuestionWrongWebService.GetChapterList(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryChapterViewModel)">
+            <summary>
+            根据科目和分类获取章节列表和题目数量
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Interfaces.IQuestionWrongWebService.GetChapterQuestionList(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryChapterQuestionViewModel)">
+            <summary>
+            根据章节Id获取试题列表(包含节)
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Interfaces.IQuestionWrongWebService.Any(System.Guid)">
+            <summary>
+            根据科目判断用户是否存在未消灭的错题
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Interfaces.IQuestionWrongWebService.GetTodayTask(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryTodayTaskViewModel)">
+            <summary>
+            今日任务抽题
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Interfaces.IQuestionWrongWeChatService.GetChapterList(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryChapterViewModel)">
+            <summary>
+            根据科目和分类获取章节列表和题目数量
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Interfaces.IQuestionWrongWeChatService.GetChapterQuestionIdGroup(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryChapterQuestionViewModel)">
+            <summary>
+            获取章节试题Id, 并根据题型进行分组
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Interfaces.IQuestionWrongWeChatService.Any(System.Guid)">
+            <summary>
+            根据科目判断用户是否存在未消灭的错题
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Interfaces.IQuestionWrongWeChatService.GetTodayTask(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryTodayTaskViewModel)">
+            <summary>
+            今日任务抽题
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Interfaces.IQuestionWrongWeChatService.GetMakingPaper(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryMakingPaperViewModel)">
+            <summary>
+            根据科目查询错题组卷列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.QuestionWrongModule.Services.QuestionWrongAppService">
+            <summary>
+            错题集服务--App端
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Services.QuestionWrongAppService.#ctor(AutoMapper.IMapper,HaoKao.QuestionService.Domain.QuestionWrongModule.IQuestionWrongRepository,HaoKao.QuestionService.Application.QuestionWrongModule.Interfaces.IQuestionWrongService,HaoKao.QuestionService.Application.QuestionModule.Interfaces.IQuestionAppService)">
+            <summary>
+            错题集服务--App端
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Services.QuestionWrongAppService.GetChapterList(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryChapterViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Services.QuestionWrongAppService.GetChapterQuestionIdGroup(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryChapterQuestionViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Services.QuestionWrongAppService.Any(System.Guid)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Services.QuestionWrongAppService.GetTodayTask(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryTodayTaskViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Services.QuestionWrongAppService.GetMakingPaper(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryMakingPaperViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Services.QuestionWrongService.GetChapterList(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryChapterViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Services.QuestionWrongService.GetChapterQuestionList(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryChapterQuestionViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Services.QuestionWrongService.Any(System.Guid)">
+            <summary>
+            根据科目判断用户是否存在未消灭的错题
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Services.QuestionWrongService.GetTodayTaskQuestionIds(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryTodayTaskViewModel)">
+            <summary>
+            根据科目查询今日任务的试题Ids
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Services.QuestionWrongService.GetQuestionWrongCount(System.Guid,System.Guid)">
+            <summary>
+            获取错题数量
+            </summary>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Services.QuestionWrongWebService.GetChapterList(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryChapterViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Services.QuestionWrongWebService.GetChapterQuestionList(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryChapterQuestionViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Services.QuestionWrongWebService.Any(System.Guid)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Services.QuestionWrongWebService.GetTodayTask(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryTodayTaskViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.QuestionWrongModule.Services.QuestionWrongWeChatService">
+            <summary>
+            错题相关服务--小程序
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Services.QuestionWrongWeChatService.#ctor(HaoKao.QuestionService.Application.QuestionWrongModule.Interfaces.IQuestionWrongAppService)">
+            <summary>
+            错题相关服务--小程序
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Services.QuestionWrongWeChatService.GetChapterList(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryChapterViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Services.QuestionWrongWeChatService.GetChapterQuestionIdGroup(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryChapterQuestionViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Services.QuestionWrongWeChatService.Any(System.Guid)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Services.QuestionWrongWeChatService.GetTodayTask(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryTodayTaskViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongModule.Services.QuestionWrongWeChatService.GetMakingPaper(HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryMakingPaperViewModel)">
+            <inheritdoc />
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryMakingPaperViewModel.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryMakingPaperViewModel.IsActive">
+            <summary>
+            是否激活状态的错题, true 待消灭, false 被消灭
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryMakingPaperViewModel.QuestionTypeIds">
+            <summary>
+            题型Id集合
+            </summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.MakingPaperViewModel">
+            <summary>
+            错题组卷列表返回视图
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.MakingPaperViewModel.QuestionId">
+            <summary>
+            题目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.MakingPaperViewModel.ParentId">
+            <summary>
+            父Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.MakingPaperViewModel.ParentQuestionTypeId">
+            <summary>
+            父题型Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.MakingPaperViewModel.CreateTime">
+            <summary>
+            收藏时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.MakingPaperViewModel.Question">
+            <summary>
+            收藏的试题对象
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryTodayTaskViewModel.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionWrongModule.ViewModels.QueryTodayTaskViewModel.Count">
+            <summary>
+            每日任务题量
+            </summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.QuestionWrongPaperModule.IQuestionWrongPaperWeChatService">
+            <summary>
+            错题组卷微信服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongPaperModule.IQuestionWrongPaperWeChatService.Get(System.Guid)">
+            <summary>
+            获取错题组卷
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongPaperModule.IQuestionWrongPaperWeChatService.Get(HaoKao.QuestionService.Application.QuestionWrongPaperModule.QueryQuestionWrongPaperViewModel)">
+            <summary>
+            获取错题组卷列表
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongPaperModule.IQuestionWrongPaperWeChatService.Create(HaoKao.QuestionService.Application.QuestionWrongPaperModule.CreateQuestionWrongPaperViewModel)">
+            <summary>
+            创建错题组卷
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionWrongPaperModule.QueryQuestionWrongPaperViewModel.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionWrongPaperModule.QueryQuestionWrongPaperViewModel.CreateDateRange">
+            <summary>
+            组卷时间范围
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionWrongPaperModule.QueryQuestionWrongPaperViewModel.CreatorId">
+            <summary>
+            创建者Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionWrongPaperModule.BrowseQuestionWrongPaperViewModel.Id">
+            <summary>
+            试卷Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionWrongPaperModule.BrowseQuestionWrongPaperViewModel.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionWrongPaperModule.BrowseQuestionWrongPaperViewModel.PaperName">
+            <summary>
+            试卷名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionWrongPaperModule.BrowseQuestionWrongPaperViewModel.DownloadUrl">
+            <summary>
+            试卷下载地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionWrongPaperModule.BrowseQuestionWrongPaperViewModel.QuestionCount">
+            <summary>
+            试题数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionWrongPaperModule.BrowseQuestionWrongPaperViewModel.CreatorId">
+            <summary>
+            创建者Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionWrongPaperModule.BrowseQuestionWrongPaperViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.QuestionWrongPaperModule.CreateQuestionWrongPaperViewModel">
+            <summary>
+            创建错题组卷视图模型
+            </summary>
+            <param name="SubjectId">科目Id</param>
+            <param name="PaperName">试卷名称</param>
+            <param name="DownloadUrl">下载链接</param>
+            <param name="QuestionCount">题目数量</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongPaperModule.CreateQuestionWrongPaperViewModel.#ctor(System.Guid,System.String,System.Uri,System.Int32)">
+            <summary>
+            创建错题组卷视图模型
+            </summary>
+            <param name="SubjectId">科目Id</param>
+            <param name="PaperName">试卷名称</param>
+            <param name="DownloadUrl">下载链接</param>
+            <param name="QuestionCount">题目数量</param>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionWrongPaperModule.CreateQuestionWrongPaperViewModel.SubjectId">
+            <summary>科目Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionWrongPaperModule.CreateQuestionWrongPaperViewModel.PaperName">
+            <summary>试卷名称</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionWrongPaperModule.CreateQuestionWrongPaperViewModel.DownloadUrl">
+            <summary>下载链接</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Application.QuestionWrongPaperModule.CreateQuestionWrongPaperViewModel.QuestionCount">
+            <summary>题目数量</summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Application.QuestionWrongPaperModule.QuestionWrongPaperWeChatService">
+            <summary>
+            错题组卷微信服务
+            </summary>
+            <param name="cacheManager"></param>
+            <param name="bus"></param>
+            <param name="notifications"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongPaperModule.QuestionWrongPaperWeChatService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.QuestionService.Domain.QuestionWrongPaperMoudle.IQuestionWrongPaperRepository)">
+            <summary>
+            错题组卷微信服务
+            </summary>
+            <param name="cacheManager"></param>
+            <param name="bus"></param>
+            <param name="notifications"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongPaperModule.QuestionWrongPaperWeChatService.Get(System.Guid)">
+            <summary>
+            获取错题组卷
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongPaperModule.QuestionWrongPaperWeChatService.Get(HaoKao.QuestionService.Application.QuestionWrongPaperModule.QueryQuestionWrongPaperViewModel)">
+            <summary>
+            获取错题组卷列表
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongPaperModule.QuestionWrongPaperWeChatService.Create(HaoKao.QuestionService.Application.QuestionWrongPaperModule.CreateQuestionWrongPaperViewModel)">
+            <summary>
+            创建错题组卷
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongPaperModule.QuestionWrongPaperWeChatService.HoldData(System.Object)">
+            <summary>
+            暂存错题组卷的数据
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongPaperModule.QuestionWrongPaperWeChatService.DropData(System.Guid)">
+            <summary>
+            获取暂存的错题组卷数据
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Application.QuestionWrongPaperModule.QuestionWrongPaperWeChatService.Html2Pdf(System.String,WkHtmlToPdfDotNet.Contracts.IConverter)">
+            <summary>
+            html转pdf
+            </summary>
+            <param name="html"></param>
+            <param name="converter"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

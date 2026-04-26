@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.DataDictionaryService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.BatchCreateDictionariesCommand">
+            <summary>
+            批量创建数据字典值
+            </summary>
+            <param name="DictionariesDataCommandModels">数据字典值集合</param>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.BatchCreateDictionariesCommand.#ctor(System.Collections.Generic.IList{HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.DictionariesDataCommandModel})">
+            <summary>
+            批量创建数据字典值
+            </summary>
+            <param name="DictionariesDataCommandModels">数据字典值集合</param>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.BatchCreateDictionariesCommand.DictionariesDataCommandModels">
+            <summary>数据字典值集合</summary>
+        </member>
+        <member name="T:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.CreateDictionariesCommand">
+            <summary>
+            创建数据字典值
+            </summary>
+            <param name="Sort">排序</param>
+            <param name="Code">分组编码</param>
+            <param name="Name">值名称</param>
+            <param name="Pid">父节点id</param>
+            <param name="PName">父节点名称</param>
+            <param name="State">状态</param>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.CreateDictionariesCommand.#ctor(System.Int32,System.String,System.String,System.Nullable{System.Guid},System.String,System.Boolean)">
+            <summary>
+            创建数据字典值
+            </summary>
+            <param name="Sort">排序</param>
+            <param name="Code">分组编码</param>
+            <param name="Name">值名称</param>
+            <param name="Pid">父节点id</param>
+            <param name="PName">父节点名称</param>
+            <param name="State">状态</param>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.CreateDictionariesCommand.Sort">
+            <summary>排序</summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.CreateDictionariesCommand.Code">
+            <summary>分组编码</summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.CreateDictionariesCommand.Name">
+            <summary>值名称</summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.CreateDictionariesCommand.Pid">
+            <summary>父节点id</summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.CreateDictionariesCommand.PName">
+            <summary>父节点名称</summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.CreateDictionariesCommand.State">
+            <summary>状态</summary>
+        </member>
+        <member name="T:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.DeleteDictionariesCommand">
+            <summary>
+            删除数据字典值
+            </summary>
+            <param name="Ids">数据字典Id集合</param>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.DeleteDictionariesCommand.#ctor(System.Guid[])">
+            <summary>
+            删除数据字典值
+            </summary>
+            <param name="Ids">数据字典Id集合</param>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.DeleteDictionariesCommand.Ids">
+            <summary>数据字典Id集合</summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.DictionariesDataCommandModel.Index">
+            <summary>
+            行号
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.DictionariesDataCommandModel.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.DictionariesDataCommandModel.Name">
+            <summary>
+            值名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.DictionariesDataCommandModel.PCode">
+            <summary>
+            父节点编码
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.DictionariesDataCommandModel.PName">
+            <summary>
+            父节点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.DictionariesDataCommandModel.State">
+            <summary>
+            状态:0为未启动 1为启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.DictionariesDataCommandModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.UpdateDictionariesCommand">
+            <summary>
+            更新数据字典值
+            </summary>
+            <param name="Id">数据字典Id</param>
+            <param name="Sort">排序</param>
+            <param name="Code">分组编码</param>
+            <param name="Name">值名称</param>
+            <param name="Pid">父节点id</param>
+            <param name="PName">父节点名称</param>
+            <param name="State">状态</param>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.UpdateDictionariesCommand.#ctor(System.Guid,System.Int32,System.String,System.String,System.Nullable{System.Guid},System.String,System.Boolean)">
+            <summary>
+            更新数据字典值
+            </summary>
+            <param name="Id">数据字典Id</param>
+            <param name="Sort">排序</param>
+            <param name="Code">分组编码</param>
+            <param name="Name">值名称</param>
+            <param name="Pid">父节点id</param>
+            <param name="PName">父节点名称</param>
+            <param name="State">状态</param>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.UpdateDictionariesCommand.Id">
+            <summary>数据字典Id</summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.UpdateDictionariesCommand.Sort">
+            <summary>排序</summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.UpdateDictionariesCommand.Code">
+            <summary>分组编码</summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.UpdateDictionariesCommand.Name">
+            <summary>值名称</summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.UpdateDictionariesCommand.Pid">
+            <summary>父节点id</summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.UpdateDictionariesCommand.PName">
+            <summary>父节点名称</summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.UpdateDictionariesCommand.State">
+            <summary>状态</summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Entities.Dictionaries.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Entities.Dictionaries.Code">
+            <summary>
+            分组编码
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Entities.Dictionaries.Name">
+            <summary>
+            值名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Entities.Dictionaries.Pid">
+            <summary>
+            父节点Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Entities.Dictionaries.PName">
+            <summary>
+            父节点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Entities.Dictionaries.Path">
+            <summary>
+            节点全路径
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Entities.Dictionaries.State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Entities.Dictionaries.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Entities.Dictionaries.Children">
+            <summary>
+            子节点集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Extensions.DictionariesCacheKeyExtensions.EntityTypeName">
+            <summary>
+            获取缓存键中使用的实体类型名称
+            </summary>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Domain.Extensions.PinYinExtension.PinYinFirst(System.String)">
+            <summary>
+            汉字转化为拼音首字母
+            </summary>
+            <param name="str">汉字</param>
+            <returns>首字母</returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Domain.Extensions.PinYinExtension.IsEn(System.String)">
+            <summary>
+            判断字符串是否是英文
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Domain.Extensions.PinYinExtension.IsInt(System.String)">
+            <summary>
+            判断字符串是否是数字
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Domain.Queries.DictionariesQuery.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Domain.Repositories.IDictionariesRepository.GetDictionariesTreeByQueryAsync(System.Nullable{System.Guid},System.String)">
+            <summary>
+            获取直接子字典
+            </summary>
+            <param name="id"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Domain.Repositories.IDictionariesRepository.GetAllAsync(System.Guid)">
+            <summary>
+            获取自身和所有子字典
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Domain.Repositories.IDictionariesRepository.GetDictionariesCategoryListByQueryAsync(System.String,System.String[])">
+            <summary>
+            查询字典分类
+            </summary>
+            <param name="query">名称或者编码</param>
+            <param name="fields"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Domain.Repositories.IDictionariesRepository.GetByIncludeChildrenIdAsync(System.Guid)">
+            <summary>
+            通过id查询字典树
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Domain.Repositories.IDictionariesRepository.GetByIncludeChildrenIdsAsync(System.Guid[])">
+            <summary>
+            通过id查询字典树(子字典带过滤租户逻辑)
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Domain.Repositories.IDictionariesRepository.GetNoTenantIdWhereAsync(System.Linq.Expressions.Expression{System.Func{HaoKao.DataDictionaryService.Domain.Entities.Dictionaries,System.Boolean}},System.String[])">
+            <summary>
+            忽略租户id的过滤，在整个数据库范围内找到符合条件的数据
+            </summary>
+            <param name="predicate"></param>
+            <param name="fields"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

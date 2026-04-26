@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.LecturerService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.LecturerService.Domain.Commands.CreateLecturerCommand">
+            <summary>
+            创建讲师命令
+            </summary>
+            <param name="Name">教师姓名</param>
+            <param name="SubjectIds">科目Id数组</param>
+            <param name="SubjectNames">科目名称数组</param>
+            <param name="Desc">简介</param>
+            <param name="CourseIntroduction">课程介绍</param>
+            <param name="HeadPortraitUrl">头像</param>
+            <param name="PhotoUrl">形象照</param>
+            <param name="Sort">排序</param>
+            <param name="ProductPackageIds"></param>
+        </member>
+        <member name="M:HaoKao.LecturerService.Domain.Commands.CreateLecturerCommand.#ctor(System.String,System.Collections.Generic.List{System.Guid},System.Collections.Generic.List{System.String},System.String,System.String,System.String,System.String,System.Int32,System.Collections.Generic.List{System.Guid})">
+            <summary>
+            创建讲师命令
+            </summary>
+            <param name="Name">教师姓名</param>
+            <param name="SubjectIds">科目Id数组</param>
+            <param name="SubjectNames">科目名称数组</param>
+            <param name="Desc">简介</param>
+            <param name="CourseIntroduction">课程介绍</param>
+            <param name="HeadPortraitUrl">头像</param>
+            <param name="PhotoUrl">形象照</param>
+            <param name="Sort">排序</param>
+            <param name="ProductPackageIds"></param>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Commands.CreateLecturerCommand.Name">
+            <summary>教师姓名</summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Commands.CreateLecturerCommand.SubjectIds">
+            <summary>科目Id数组</summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Commands.CreateLecturerCommand.SubjectNames">
+            <summary>科目名称数组</summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Commands.CreateLecturerCommand.Desc">
+            <summary>简介</summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Commands.CreateLecturerCommand.CourseIntroduction">
+            <summary>课程介绍</summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Commands.CreateLecturerCommand.HeadPortraitUrl">
+            <summary>头像</summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Commands.CreateLecturerCommand.PhotoUrl">
+            <summary>形象照</summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Commands.CreateLecturerCommand.Sort">
+            <summary>排序</summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Commands.CreateLecturerCommand.ProductPackageIds">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.LecturerService.Domain.Commands.UpdateLecturerCommand">
+            <summary>
+            更新讲师命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Name">教师姓名</param>
+            <param name="SubjectIds">科目Id数组</param>
+            <param name="SubjectNames">科目名称数组</param>
+            <param name="Desc">简介</param>
+            <param name="CourseIntroduction">课程介绍</param>
+            <param name="HeadPortraitUrl">头像</param>
+            <param name="PhotoUrl">形象照</param>
+            <param name="Sort">排序</param>
+            <param name="ProductPackageIds"></param>
+        </member>
+        <member name="M:HaoKao.LecturerService.Domain.Commands.UpdateLecturerCommand.#ctor(System.Guid,System.String,System.Collections.Generic.List{System.Guid},System.Collections.Generic.List{System.String},System.String,System.String,System.String,System.String,System.Int32,System.Collections.Generic.List{System.Guid})">
+            <summary>
+            更新讲师命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Name">教师姓名</param>
+            <param name="SubjectIds">科目Id数组</param>
+            <param name="SubjectNames">科目名称数组</param>
+            <param name="Desc">简介</param>
+            <param name="CourseIntroduction">课程介绍</param>
+            <param name="HeadPortraitUrl">头像</param>
+            <param name="PhotoUrl">形象照</param>
+            <param name="Sort">排序</param>
+            <param name="ProductPackageIds"></param>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Commands.UpdateLecturerCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Commands.UpdateLecturerCommand.Name">
+            <summary>教师姓名</summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Commands.UpdateLecturerCommand.SubjectIds">
+            <summary>科目Id数组</summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Commands.UpdateLecturerCommand.SubjectNames">
+            <summary>科目名称数组</summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Commands.UpdateLecturerCommand.Desc">
+            <summary>简介</summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Commands.UpdateLecturerCommand.CourseIntroduction">
+            <summary>课程介绍</summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Commands.UpdateLecturerCommand.HeadPortraitUrl">
+            <summary>头像</summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Commands.UpdateLecturerCommand.PhotoUrl">
+            <summary>形象照</summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Commands.UpdateLecturerCommand.Sort">
+            <summary>排序</summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Commands.UpdateLecturerCommand.ProductPackageIds">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.LecturerService.Domain.Commands.DeleteLecturerCommand">
+            <summary>
+            删除讲师命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.LecturerService.Domain.Commands.DeleteLecturerCommand.#ctor(System.Guid)">
+            <summary>
+            删除讲师命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Commands.DeleteLecturerCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.LecturerService.Domain.Commands.LecturerCommandHandler">
+            <summary>
+            讲师命令处理器
+            </summary>
+        </member>
+        <member name="M:HaoKao.LecturerService.Domain.Commands.LecturerCommandHandler.#ctor(Girvs.BusinessBasis.UoW.IUnitOfWork{HaoKao.LecturerService.Domain.Entities.Lecturer},HaoKao.LecturerService.Domain.Repositories.ILecturerRepository,Girvs.Driven.Bus.IMediatorHandler,AutoMapper.IMapper)">
+            <summary>
+            讲师命令处理器
+            </summary>
+        </member>
+        <member name="T:HaoKao.LecturerService.Domain.Entities.Lecturer">
+            <summary>
+            讲师
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Entities.Lecturer.Name">
+            <summary>
+            教师姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Entities.Lecturer.SubjectIds">
+            <summary>
+            科目Id数组
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Entities.Lecturer.SubjectNames">
+            <summary>
+            科目名称数组
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Entities.Lecturer.Desc">
+            <summary>
+            简介
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Entities.Lecturer.CourseIntroduction">
+            <summary>
+            课程介绍(前端已废弃不再使用该字段)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Entities.Lecturer.HeadPortraitUrl">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Entities.Lecturer.PhotoUrl">
+            <summary>
+            形象照
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Entities.Lecturer.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Entities.Lecturer.ProductPackageIds">
+            <summary>
+            关联的产品包id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Entities.Lecturer.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Entities.Lecturer.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Entities.Lecturer.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.LecturerService.Domain.Profiles.LecturerProfile">
+            <summary>
+            文书模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.LecturerService.Domain.Profiles.LecturerProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Profiles.LecturerProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Queries.LecturerQuery.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Queries.LecturerQuery.SubjectId">
+            <summary>
+            所属科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.LecturerService.Domain.Queries.LecturerQuery.Desc">
+            <summary>
+            简介
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,735 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.GroupBookingService.Application</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.GroupBookingService.Application.Profiles.GroupDataProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Profiles.GroupDataProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.Profiles.GroupDataProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.GroupBookingService.Application.Services.App.GroupSituationAppService">
+            <summary>
+            拼团接口服务-App
+            </summary>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.App.GroupSituationAppService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.GroupBookingService.Domain.Repositories.IGroupSituationRepository,HaoKao.GroupBookingService.Domain.Repositories.IGroupDataRepository,HaoKao.GroupBookingService.Application.Services.Management.IGroupDataService,HaoKao.GroupBookingService.Application.Services.WeChat.IGroupSituationWeChatService)">
+            <summary>
+            拼团接口服务-App
+            </summary>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.App.GroupSituationAppService.Create(HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.CreateGroupSituationViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.App.GroupSituationAppService.JoinGroup(HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupMemberJoinViewModel)">
+            <summary>
+            加入拼团
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.App.GroupSituationAppService.GetIncludeAllByIdAsync(System.Guid)">
+            <summary>
+            获取数据-拼团详细情况
+            </summary>
+            <param name="groupSituationId">拼团Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.App.GroupSituationAppService.GetGroupInformation(System.Guid[],System.Nullable{System.Int32})">
+            <summary>
+            获取数据-用户拼团资料情况列表
+            </summary>
+            <param name="subjectIds">科目Id</param>
+            <param name="takeCount">获取数量</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.App.GroupSituationAppService.GetMyGroupInformation">
+            <summary>
+            获取数据-个人中心-我的资料
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.App.GroupSituationAppService.GetGroupDataById(System.Guid)">
+            <summary>
+            通过资料id获取资料信息
+            </summary>
+            <param name="groupDataId">资料Id</param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.App.IGroupSituationAppService.Create(HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.CreateGroupSituationViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.App.IGroupSituationAppService.JoinGroup(HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupMemberJoinViewModel)">
+            <summary>
+            加入拼团
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.App.IGroupSituationAppService.GetIncludeAllByIdAsync(System.Guid)">
+            <summary>
+            获取数据-拼团详细情况
+            </summary>
+            <param name="groupSituationId">拼团Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.App.IGroupSituationAppService.GetGroupInformation(System.Guid[],System.Nullable{System.Int32})">
+            <summary>
+            获取数据-用户拼团资料情况列表
+            </summary>
+            <param name="subjectIds">科目Id</param>
+            <param name="takeCount">获取数量</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.App.IGroupSituationAppService.GetGroupDataById(System.Guid)">
+            <summary>
+            通过资料id获取资料信息
+            </summary>
+            <param name="groupDataId">资料Id</param>
+        </member>
+        <member name="T:HaoKao.GroupBookingService.Application.Services.Management.GroupDataService">
+            <summary>
+            管理端拼团资料接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.Management.GroupDataService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.GroupBookingService.Domain.Repositories.IGroupDataRepository)">
+            <summary>
+            管理端拼团资料接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.Management.GroupDataService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.Management.GroupDataService.Get(HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.Management.GroupDataService.Create(HaoKao.GroupBookingService.Application.ViewModels.GroupData.CreateGroupDataViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.Management.GroupDataService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.Management.GroupDataService.Update(System.Guid,HaoKao.GroupBookingService.Application.ViewModels.GroupData.UpdateGroupDataViewModel)">
+            <summary>
+            根据主键更新指定
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.GroupBookingService.Application.Services.Management.GroupSituationService">
+            <summary>
+            接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.Management.GroupSituationService.#ctor(HaoKao.GroupBookingService.Domain.Repositories.IGroupSituationRepository,Girvs.Cache.Caching.IStaticCacheManager)">
+            <summary>
+            接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.Management.GroupSituationService.Get(HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupSituationQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.Management.GroupSituationService.GetGroupSituationAndMember(HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.SituationMemberQueryViewModel)">
+            <summary>
+            查询拼团成功信息，分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.Management.GroupSituationService.GetUserGroupDataById(System.Guid)">
+            <summary>
+            通过用户Id获取已拼团成功数据
+            </summary>
+            <param name="UserId">用户Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.Management.IGroupDataService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.Management.IGroupDataService.Get(HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.Management.IGroupDataService.Create(HaoKao.GroupBookingService.Application.ViewModels.GroupData.CreateGroupDataViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.Management.IGroupDataService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.Management.IGroupDataService.Update(System.Guid,HaoKao.GroupBookingService.Application.ViewModels.GroupData.UpdateGroupDataViewModel)">
+            <summary>
+            根据主键更新指定
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.GroupBookingService.Application.Services.Web.GroupDataWebService">
+            <summary>
+            拼团资料接口服务-web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.Web.GroupDataWebService.#ctor(HaoKao.GroupBookingService.Application.Services.Management.IGroupDataService)">
+            <summary>
+            拼团资料接口服务-web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.Web.GroupDataWebService.Get(HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.Web.IGroupDataWebService.Get(HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="T:HaoKao.GroupBookingService.Application.Services.WeChat.GroupSituationWeChatService">
+            <summary>
+            拼团接口服务-WeChat
+            </summary>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.WeChat.GroupSituationWeChatService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.GroupBookingService.Domain.Repositories.IGroupSituationRepository,HaoKao.GroupBookingService.Domain.Repositories.IGroupDataRepository,AutoMapper.IMapper)">
+            <summary>
+            拼团接口服务-WeChat
+            </summary>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.WeChat.GroupSituationWeChatService.Create(HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.CreateGroupSituationViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.WeChat.GroupSituationWeChatService.JoinGroup(HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupMemberJoinViewModel)">
+            <summary>
+            加入拼团
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.WeChat.GroupSituationWeChatService.GetIncludeAllByIdAsync(System.Guid)">
+            <summary>
+            获取数据-拼团详细情况
+            </summary>
+            <param name="groupSituationId">拼团Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.WeChat.GroupSituationWeChatService.GetGroupInformation(System.Guid[],System.Nullable{System.Int32})">
+            <summary>
+            获取数据-用户拼团资料情况列表
+            </summary>
+            <param name="subjectIds">科目Id</param>
+            <param name="takeCount">获取数量</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.WeChat.GroupSituationWeChatService.GetContentById(System.Guid)">
+            <summary>
+            通过资料id获取资料信息
+            </summary>
+            <param name="contentId">资料Id</param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.WeChat.IGroupSituationWeChatService.Create(HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.CreateGroupSituationViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Application.Services.WeChat.IGroupSituationWeChatService.GetGroupInformation(System.Guid[],System.Nullable{System.Int32})">
+            <summary>
+            获取数据-用户拼团资料情况列表
+            </summary>
+            <param name="subjectIds">科目Id</param>
+            <param name="takeCount">获取数量</param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.BrowseGroupDataViewModel.DataName">
+            <summary>
+            团名
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.BrowseGroupDataViewModel.SuitableSubjects">
+            <summary>
+            适用科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.BrowseGroupDataViewModel.PeopleNumber">
+            <summary>
+            成团人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.BrowseGroupDataViewModel.LimitTime">
+            <summary>
+            限制时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.BrowseGroupDataViewModel.Document">
+            <summary>
+            拼团资料
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.BrowseGroupDataViewModel.State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.CreateGroupDataViewModel.DataName">
+            <summary>
+            资料名
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.CreateGroupDataViewModel.SuitableSubjects">
+            <summary>
+            适用科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.CreateGroupDataViewModel.PeopleNumber">
+            <summary>
+            成团人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.CreateGroupDataViewModel.BasePeopleNumber">
+            <summary>
+            基础拼团成功人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.CreateGroupDataViewModel.LimitTime">
+            <summary>
+            限制时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.CreateGroupDataViewModel.Document">
+            <summary>
+            拼团资料
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.CreateGroupDataViewModel.State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataQueryViewModel.DataName">
+            <summary>
+            资料名
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataQueryViewModel.SubjectId">
+            <summary>
+            适用科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataQueryListViewModel.Id">
+            <summary>
+            拼团资料Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataQueryListViewModel.DataName">
+            <summary>
+            团名
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataQueryListViewModel.SuitableSubjects">
+            <summary>
+            适用科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataQueryListViewModel.PeopleNumber">
+            <summary>
+            成团人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataQueryListViewModel.BasePeopleNumber">
+            <summary>
+            基础拼团成功人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataQueryListViewModel.LimitTime">
+            <summary>
+            限制时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataQueryListViewModel.Document">
+            <summary>
+            拼团资料
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataQueryListViewModel.State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataMobileQueryViewModel.Id">
+            <summary>
+            拼团资料Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataMobileQueryViewModel.DataName">
+            <summary>
+            资料名
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataMobileQueryViewModel.MemberCount">
+            <summary>
+            拼团总人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataMobileQueryViewModel.Status">
+            <summary>
+            用户拼团状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataMobileQueryViewModel.GroupSituationId">
+            <summary>
+            拼团情况Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataListMobileViewModel.Id">
+            <summary>
+            拼团资料Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataListMobileViewModel.DataName">
+            <summary>
+            资料名
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataListMobileViewModel.MemberCount">
+            <summary>
+            拼团总人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataListMobileViewModel.Status">
+            <summary>
+            用户拼团状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataListMobileViewModel.GroupSituationId">
+            <summary>
+            拼团情况Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataListMobileViewModel.SuccessCount">
+            <summary>
+            拼团成功 团数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataListMobileViewModel.PeopleNumber">
+            <summary>
+            成团人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataListMobileViewModel.SuccessGroupSituationId">
+            <summary>
+            拼团成功 团Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataListMobileViewModel.InGroupSituationId">
+            <summary>
+            拼团中 团Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupDataListMobileViewModel.FaildGroupSituationId">
+            <summary>
+            拼团失败 团Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupStatus">
+            <summary>
+            拼团状态枚举
+            </summary>
+        </member>
+        <member name="F:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupStatus.WaitGroup">
+            <summary>
+            待拼团
+            </summary>
+        </member>
+        <member name="F:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupStatus.InGroup">
+            <summary>
+            拼团中
+            </summary>
+        </member>
+        <member name="F:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupStatus.SuccessGroup">
+            <summary>
+            拼团成功
+            </summary>
+        </member>
+        <member name="F:HaoKao.GroupBookingService.Application.ViewModels.GroupData.GroupStatus.FaildGroup">
+            <summary>
+            拼团失败
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.UpdateGroupDataViewModel.DataName">
+            <summary>
+            资料名
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.UpdateGroupDataViewModel.SuitableSubjects">
+            <summary>
+            适用科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.UpdateGroupDataViewModel.PeopleNumber">
+            <summary>
+            成团人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.UpdateGroupDataViewModel.BasePeopleNumber">
+            <summary>
+            基础拼团成功人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.UpdateGroupDataViewModel.LimitTime">
+            <summary>
+            限制时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.UpdateGroupDataViewModel.Document">
+            <summary>
+            拼团资料
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupData.UpdateGroupDataViewModel.State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="T:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupMemberJoinViewModel">
+            <summary>
+            加入拼团
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupMemberJoinViewModel.GroupDataId">
+            <summary>
+            拼团资料Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupMemberJoinViewModel.GroupSituationId">
+            <summary>
+            拼团Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupMemberJoinViewModel.Name">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupMemberJoinViewModel.ImageUrl">
+            <summary>
+            用户头像Url
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.CreateGroupSituationViewModel.GroupDataId">
+            <summary>
+            拼团资料Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.CreateGroupSituationViewModel.DataName">
+            <summary>
+            资料名
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.CreateGroupSituationViewModel.SuitableSubjects">
+            <summary>
+            适用科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.CreateGroupSituationViewModel.PeopleNumber">
+            <summary>
+            成团人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.CreateGroupSituationViewModel.LimitTime">
+            <summary>
+            限制时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.CreateGroupSituationViewModel.Document">
+            <summary>
+            拼团资料
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.CreateGroupSituationViewModel.Name">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.CreateGroupSituationViewModel.ImageUrl">
+            <summary>
+            用户头像Url
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupSituationQueryViewModel.DataName">
+            <summary>
+            资料名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupSituationQueryViewModel.GroupDataId">
+            <summary>
+            拼团资料Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupSituationQueryViewModel.SubjectId">
+            <summary>
+            适用科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupSituationQueryViewModel.Name">
+            <summary>
+            团长/成员昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupSituationQueryViewModel.Status">
+            <summary>
+            拼团状态(1:成功  2:失败  3:拼团中)
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupSituationQueryViewModel.PeopleSuccessCount">
+            <summary>
+            当前资料成功拼团人数总计(输入正确拼团资料Id和拼团状态为1，由后台统计返回)
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupSituationQueryListViewModel.Id">
+            <summary>
+            拼团情况Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupSituationQueryListViewModel.GroupDataId">
+            <summary>
+            拼团资料Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupSituationQueryListViewModel.DataName">
+            <summary>
+            资料名
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupSituationQueryListViewModel.SuitableSubjects">
+            <summary>
+            适用科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupSituationQueryListViewModel.PeopleNumber">
+            <summary>
+            成团人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupSituationQueryListViewModel.LimitTime">
+            <summary>
+            限制时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupSituationQueryListViewModel.Document">
+            <summary>
+            拼团资料
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupSituationQueryListViewModel.SuccessTime">
+            <summary>
+            拼团成功时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupSituationQueryListViewModel.CreateTime">
+            <summary>
+            开团时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.GroupSituationQueryListViewModel.StatusStr">
+            <summary>
+            状态描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.QueryGroupMemberViewModel.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.QueryGroupMemberViewModel.Name">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.QueryGroupMemberViewModel.ImageUrl">
+            <summary>
+            用户头像Url
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.QueryGroupMemberViewModel.IsLeader">
+            <summary>
+            是否团长
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.SituationMemberQueryViewModel.GroupDataId">
+            <summary>
+            拼团资料Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.SituationMemberQueryListViewModel.SuccessTime">
+            <summary>
+            拼团成功时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.SituationMemberQueryListViewModel.CreateTime">
+            <summary>
+            开团时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.SituationMemberQueryListViewModel.PeopleNumber">
+            <summary>
+            成团人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.QuerySituationMemberViewModel.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.QuerySituationMemberViewModel.Name">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Application.ViewModels.GroupSituation.QuerySituationMemberViewModel.IsLeader">
+            <summary>
+            是否团长
+            </summary>
+        </member>
+    </members>
+</doc>

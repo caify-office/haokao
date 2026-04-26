@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.AuditLogService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.AuditLogService.Domain.Commands.CreateAuditLogCommand">
+            <summary>
+            创建审计日志
+            </summary>
+            <param name="ServiceModuleName">服务模块名称</param>
+            <param name="Message">消息</param>
+            <param name="MessageContent">具体消息内容</param>
+            <param name="CreatorId">创建者Id</param>
+            <param name="CreatorName">创建者名称</param>
+            <param name="AddressIp">Ip地址来源</param>
+            <param name="SourceType">消息来源</param>
+        </member>
+        <member name="M:HaoKao.AuditLogService.Domain.Commands.CreateAuditLogCommand.#ctor(System.String,System.String,System.String,System.Guid,System.String,System.String,HaoKao.AuditLogService.Domain.Enumerations.SourceType)">
+            <summary>
+            创建审计日志
+            </summary>
+            <param name="ServiceModuleName">服务模块名称</param>
+            <param name="Message">消息</param>
+            <param name="MessageContent">具体消息内容</param>
+            <param name="CreatorId">创建者Id</param>
+            <param name="CreatorName">创建者名称</param>
+            <param name="AddressIp">Ip地址来源</param>
+            <param name="SourceType">消息来源</param>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Domain.Commands.CreateAuditLogCommand.ServiceModuleName">
+            <summary>服务模块名称</summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Domain.Commands.CreateAuditLogCommand.Message">
+            <summary>消息</summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Domain.Commands.CreateAuditLogCommand.MessageContent">
+            <summary>具体消息内容</summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Domain.Commands.CreateAuditLogCommand.CreatorId">
+            <summary>创建者Id</summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Domain.Commands.CreateAuditLogCommand.CreatorName">
+            <summary>创建者名称</summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Domain.Commands.CreateAuditLogCommand.AddressIp">
+            <summary>Ip地址来源</summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Domain.Commands.CreateAuditLogCommand.SourceType">
+            <summary>消息来源</summary>
+        </member>
+        <member name="F:HaoKao.AuditLogService.Domain.Enumerations.SourceType.Server">
+            <summary>
+            服务端
+            </summary>
+        </member>
+        <member name="F:HaoKao.AuditLogService.Domain.Enumerations.SourceType.Register">
+            <summary>
+            考生端
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Domain.Models.AuditLog.ServiceModuleName">
+            <summary>
+            服务模块名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Domain.Models.AuditLog.Message">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Domain.Models.AuditLog.MessageContent">
+            <summary>
+            具体消息内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Domain.Models.AuditLog.AddressIp">
+            <summary>
+            Ip地址来源
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Domain.Models.AuditLog.SourceType">
+            <summary>
+            消息来源
+            </summary>
+        </member>
+    </members>
+</doc>

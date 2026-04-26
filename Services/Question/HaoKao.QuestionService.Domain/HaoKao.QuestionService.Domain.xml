@@ -1,0 +1,1247 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.QuestionService.Domain</name>
+    </assembly>
+    <members>
+        <member name="P:HaoKao.QuestionService.Domain.CacheExtensions.GenericCacheManager.ById">
+            <summary>
+            通过租户标识符获取缓存实体的键
+            </summary>
+            <remarks>
+            {0} : entity id
+            </remarks>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.CacheExtensions.GenericCacheManager.Prefix">
+            <summary>
+            通过租户标识符获取缓存实体的键
+            </summary>
+            <remarks>
+            {0} : entity id
+            </remarks>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.CacheExtensions.GenericCacheManager.ListPrefix">
+            <summary>
+            通过租户标识符获取缓存实体的键
+            </summary>
+            <remarks>
+            {0} : entity id
+            </remarks>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.CacheExtensions.GenericCacheManager.ListOther">
+            <summary>
+            通过租户标识符获取缓存实体的键
+            </summary>
+            <remarks>
+            {0} : entity id
+            </remarks>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.CacheExtensions.GenericCacheManager.ListQuery">
+            <summary>
+            通过租户标识符获取缓存实体的键
+            </summary>
+            <remarks>
+            {0} : entity id
+            </remarks>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.CacheExtensions.GenericCacheManager.BuideCustomize(System.String)">
+            <summary>
+            创建自定义的缓存键
+            </summary>
+            <param name="key">自定义缓存键</param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.CacheExtensions.QuestionCollectionCacheManager.ById">
+            <summary>
+            通过租户标识符获取缓存实体的键
+            </summary>
+            <remarks>
+            {0} : entity id
+            </remarks>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.CacheExtensions.QuestionCollectionCacheManager.Prefix">
+            <summary>
+            通过租户标识符获取缓存实体的键
+            </summary>
+            <remarks>
+            {0} : entity id
+            </remarks>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.CacheExtensions.QuestionCollectionCacheManager.ListPrefix">
+            <summary>
+            通过租户标识符获取缓存实体的键
+            </summary>
+            <remarks>
+            {0} : entity id
+            </remarks>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.CacheExtensions.QuestionCollectionCacheManager.ListOther">
+            <summary>
+            通过租户标识符获取缓存实体的键
+            </summary>
+            <remarks>
+            {0} : entity id
+            </remarks>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.CacheExtensions.QuestionCollectionCacheManager.ListQuery">
+            <summary>
+            通过租户标识符获取缓存实体的键
+            </summary>
+            <remarks>
+            {0} : entity id
+            </remarks>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.CacheExtensions.QuestionCollectionCacheManager.BuideCustomize(System.String)">
+            <summary>
+            创建自定义的缓存键
+            </summary>
+            <param name="key">自定义缓存键</param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.CacheExtensions.QuestionWrongCacheManager.ById">
+            <summary>
+            通过租户标识符获取缓存实体的键
+            </summary>
+            <remarks>
+            {0} : entity id
+            </remarks>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.CacheExtensions.QuestionWrongCacheManager.Prefix">
+            <summary>
+            通过租户标识符获取缓存实体的键
+            </summary>
+            <remarks>
+            {0} : entity id
+            </remarks>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.CacheExtensions.QuestionWrongCacheManager.ListPrefix">
+            <summary>
+            通过租户标识符获取缓存实体的键
+            </summary>
+            <remarks>
+            {0} : entity id
+            </remarks>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.CacheExtensions.QuestionWrongCacheManager.ListOther">
+            <summary>
+            通过租户标识符获取缓存实体的键
+            </summary>
+            <remarks>
+            {0} : entity id
+            </remarks>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.CacheExtensions.QuestionWrongCacheManager.ListQuery">
+            <summary>
+            通过租户标识符获取缓存实体的键
+            </summary>
+            <remarks>
+            {0} : entity id
+            </remarks>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.CacheExtensions.QuestionWrongCacheManager.BuideCustomize(System.String)">
+            <summary>
+            创建自定义的缓存键
+            </summary>
+            <param name="key">自定义缓存键</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.QuestionService.Domain.DailyQuestionModule.DailyQuestion">
+            <summary>
+            每日一题
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.DailyQuestionModule.DailyQuestion.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.DailyQuestionModule.DailyQuestion.QuestionId">
+            <summary>
+            试题Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.DailyQuestionModule.DailyQuestion.CreateDate">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.DailyQuestionModule.DailyQuestion.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Domain.DailyQuestionModule.CreateDailyQuestionCommand">
+            <summary>
+            创建每日一题
+            </summary>
+            <param name="SubjectId">科目Id</param>
+            <param name="QuestionId">试题Id</param>
+            <param name="CreateTime">创建时间</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.DailyQuestionModule.CreateDailyQuestionCommand.#ctor(System.Guid,System.Guid,System.DateTime)">
+            <summary>
+            创建每日一题
+            </summary>
+            <param name="SubjectId">科目Id</param>
+            <param name="QuestionId">试题Id</param>
+            <param name="CreateTime">创建时间</param>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.DailyQuestionModule.CreateDailyQuestionCommand.SubjectId">
+            <summary>科目Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.DailyQuestionModule.CreateDailyQuestionCommand.QuestionId">
+            <summary>试题Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.DailyQuestionModule.CreateDailyQuestionCommand.CreateTime">
+            <summary>创建时间</summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Domain.QuestionCollectionModule.QuestionCollection">
+            <summary>
+            试题收藏
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionCollectionModule.QuestionCollection.QuestionId">
+            <summary>
+            试题Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionCollectionModule.QuestionCollection.CreatorId">
+            <summary>
+            创建者Id，用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionCollectionModule.QuestionCollection.CreateTime">
+            <summary>
+            收藏时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionCollectionModule.QuestionCollection.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionCollectionModule.QuestionCollection.Question">
+            <summary>
+            试题对象
+            </summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Domain.QuestionCollectionModule.CreateQuestionCollectionCommand">
+            <summary>
+            收藏试题
+            </summary>
+            <param name="QuestionId">试题Id</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionCollectionModule.CreateQuestionCollectionCommand.#ctor(System.Guid)">
+            <summary>
+            收藏试题
+            </summary>
+            <param name="QuestionId">试题Id</param>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionCollectionModule.CreateQuestionCollectionCommand.QuestionId">
+            <summary>试题Id</summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Domain.QuestionCollectionModule.DeleteQuestionCollectionCommand">
+            <summary>
+            取消收藏试题
+            </summary>
+            <param name="QuestionId">试题Id</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionCollectionModule.DeleteQuestionCollectionCommand.#ctor(System.Guid)">
+            <summary>
+            取消收藏试题
+            </summary>
+            <param name="QuestionId">试题Id</param>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionCollectionModule.DeleteQuestionCollectionCommand.QuestionId">
+            <summary>试题Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionCollectionModule.QuestionCollectionQuery.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionCollectionModule.QuestionCollectionQuery.QuestionTypeId">
+            <summary>
+            试题类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionCollectionModule.QuestionCollectionQuery.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionModule.IQuestionRepository.GetSubjectQuestionCount(System.Guid,System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            按科目和分类查询试题数量
+            </summary>
+            <param name="subjectId"></param>
+            <param name="categories"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionModule.IQuestionRepository.GetChaperCategorieQuestionCount(System.Guid,System.Guid)">
+            <summary>
+            按试题章节和试题分类查询试题数量
+            </summary>
+            <param name="chaperId"></param>
+            <param name="questionCategoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionModule.IQuestionRepository.ExtractDailyQuestionBySubjectId(System.Guid,System.Guid[])">
+            <summary>
+            根据科目代码抽取每日一题
+            </summary>
+            <param name="subjectId">科目Id</param>
+            <param name="questionTypeIds">题型列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionModule.IQuestionRepository.GetQuestionListByIds(System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            根据Ids获取试题列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionModule.IQuestionRepository.GetChapterList(System.Guid,System.Guid,System.Nullable{HaoKao.QuestionService.Domain.QuestionModule.FreeState})">
+            <summary>
+            按科目查询题库章节列表和题目数量
+            </summary>
+            <param name="subjectId">科目Id</param>
+            <param name="categoryId">分类Id</param>
+            <param name="freeState">是否免费</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionModule.IQuestionRepository.GetSectionList(System.Guid,System.Guid,System.Nullable{HaoKao.QuestionService.Domain.QuestionModule.FreeState})">
+            <summary>
+            按章节查询题库小节列表和题目数量
+            </summary>
+            <param name="chapterId">章节Id</param>
+            <param name="categoryId">分类Id</param>
+            <param name="freeState">是否免费</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionModule.IQuestionRepository.GetKnowledgePointList(System.Guid,System.Guid,System.Nullable{HaoKao.QuestionService.Domain.QuestionModule.FreeState})">
+            <summary>
+            按小节查询题库知识点列表和题目数量
+            </summary>
+            <param name="sectionId">小节Id</param>
+            <param name="categoryId">分类Id</param>
+            <param name="freeState">是否免费</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionModule.IQuestionRepository.GetChapterQuestions(System.Guid,System.Guid,System.Nullable{HaoKao.QuestionService.Domain.QuestionModule.FreeState})">
+            <summary>
+            获取章节下的所有试题
+            </summary>
+            <param name="chapterId">章节Id</param>
+            <param name="categoryId">分类Id</param>
+            <param name="freeState">是否免费</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionModule.IQuestionRepository.GetSectionQuestions(System.Guid,System.Guid,System.Nullable{HaoKao.QuestionService.Domain.QuestionModule.FreeState})">
+            <summary>
+            获取小节下的所有试题
+            </summary>
+            <param name="sectionId">小节Id</param>
+            <param name="categoryId">分类Id</param>
+            <param name="freeState">是否免费</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionModule.IQuestionRepository.GetKnowledgePointQuestions(System.Guid,System.Guid,System.Nullable{HaoKao.QuestionService.Domain.QuestionModule.FreeState})">
+            <summary>
+            获取知识点下的所有试题
+            </summary>
+            <param name="knowledgePointId">知识点Id</param>
+            <param name="categoryId">分类Id</param>
+            <param name="freeState">是否免费</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionModule.IQuestionRepository.GetSpecialPromotionQuestionIds(System.Guid,System.String,System.Int32,System.Boolean)">
+            <summary>
+            按科目和能力抽取专项提升的试题Ids
+            </summary>
+            <param name="subjectId">科目Id</param>
+            <param name="ability">能力维度</param>
+            <param name="count">数量</param>
+            <param name="trial">试用</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionModule.IQuestionRepository.GetListUnionChildren(System.Linq.IQueryable{HaoKao.QuestionService.Domain.QuestionModule.Question})">
+            <summary>
+            查询子题目返回合并结果集
+            </summary>
+            <param name="linq"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.QuestionService.Domain.QuestionModule.Question">
+            <summary>
+            试题
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.SubjectName">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.ChapterId">
+            <summary>
+            章节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.ChapterName">
+            <summary>
+            章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.SectionId">
+            <summary>
+            小节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.SectionName">
+            <summary>
+            小节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.KnowledgePointId">
+            <summary>
+            知识点Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.KnowledgePointName">
+            <summary>
+            知识点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.QuestionCategoryId">
+            <summary>
+            试题分类Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.QuestionCategoryName">
+            <summary>
+            试题分类名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.QuestionTypeId">
+            <summary>
+            试题类型Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.QuestionTypeName">
+            <summary>
+            试题类型名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.QuestionText">
+            <summary>
+            试题内容 (题干)
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.QuestionTitle">
+            <summary>
+            试题标题 (管理端使用)
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.TextAnalysis">
+            <summary>
+            文字解析
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.MediaAnalysis">
+            <summary>
+            试题音视频解析
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.FreeState">
+            <summary>
+            是否免费
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.EnableState">
+            <summary>
+            启用状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.QuestionCount">
+            <summary>
+            试题数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.AbilityIds">
+            <summary>
+            能力维度Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.QuestionOptions">
+            <summary>
+            试题选项
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.SubjectTagId">
+            <summary>
+            科目标签Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.PaperTagId">
+            <summary>
+            试卷标签Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.ParentId">
+            <summary>
+            父题目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.CreatorId">
+            <summary>
+            创建者Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.Question.TrialQuestionId">
+            <summary>
+            命审题Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand">
+            <summary>
+            创建试题实体命令
+            </summary>
+            <param name="SubjectId">科目Id</param>
+            <param name="SubjectName">科目名称</param>
+            <param name="ChapterId">章节Id</param>
+            <param name="ChapterName">章节名称</param>
+            <param name="SectionId">小节Id</param>
+            <param name="SectionName">小节名称</param>
+            <param name="KnowledgePointId">知识点Id</param>
+            <param name="KnowledgePointName">知识点名称</param>
+            <param name="QuestionCategoryId">试题分类Id</param>
+            <param name="QuestionCategoryName">试题分类名称</param>
+            <param name="QuestionTypeId">试题类型Id</param>
+            <param name="QuestionTypeName">试题类型名称</param>
+            <param name="QuestionText">试题内容 (题干)</param>
+            <param name="QuestionTitle">试题标题 (管理端使用)</param>
+            <param name="TextAnalysis">文字解析</param>
+            <param name="MediaAnalysis">音视频解析</param>
+            <param name="AbilityIds">能力维度Id</param>
+            <param name="FreeState">免费分区</param>
+            <param name="EnableState">启用状态</param>
+            <param name="SubjectTagId">科目标签Id</param>
+            <param name="PaperTagId">试卷标签Id</param>
+            <param name="ParentId">父题目Id</param>
+            <param name="QuestionOptions">试题选项</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand.#ctor(System.Guid,System.String,System.Guid,System.String,System.Guid,System.String,System.Guid,System.String,System.Guid,System.String,System.Guid,System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Guid},System.Nullable{HaoKao.QuestionService.Domain.QuestionModule.FreeState},HaoKao.QuestionService.Domain.QuestionModule.EnableState,System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{System.Guid},System.Object)">
+            <summary>
+            创建试题实体命令
+            </summary>
+            <param name="SubjectId">科目Id</param>
+            <param name="SubjectName">科目名称</param>
+            <param name="ChapterId">章节Id</param>
+            <param name="ChapterName">章节名称</param>
+            <param name="SectionId">小节Id</param>
+            <param name="SectionName">小节名称</param>
+            <param name="KnowledgePointId">知识点Id</param>
+            <param name="KnowledgePointName">知识点名称</param>
+            <param name="QuestionCategoryId">试题分类Id</param>
+            <param name="QuestionCategoryName">试题分类名称</param>
+            <param name="QuestionTypeId">试题类型Id</param>
+            <param name="QuestionTypeName">试题类型名称</param>
+            <param name="QuestionText">试题内容 (题干)</param>
+            <param name="QuestionTitle">试题标题 (管理端使用)</param>
+            <param name="TextAnalysis">文字解析</param>
+            <param name="MediaAnalysis">音视频解析</param>
+            <param name="AbilityIds">能力维度Id</param>
+            <param name="FreeState">免费分区</param>
+            <param name="EnableState">启用状态</param>
+            <param name="SubjectTagId">科目标签Id</param>
+            <param name="PaperTagId">试卷标签Id</param>
+            <param name="ParentId">父题目Id</param>
+            <param name="QuestionOptions">试题选项</param>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand.SubjectId">
+            <summary>科目Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand.SubjectName">
+            <summary>科目名称</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand.ChapterId">
+            <summary>章节Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand.ChapterName">
+            <summary>章节名称</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand.SectionId">
+            <summary>小节Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand.SectionName">
+            <summary>小节名称</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand.KnowledgePointId">
+            <summary>知识点Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand.KnowledgePointName">
+            <summary>知识点名称</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand.QuestionCategoryId">
+            <summary>试题分类Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand.QuestionCategoryName">
+            <summary>试题分类名称</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand.QuestionTypeId">
+            <summary>试题类型Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand.QuestionTypeName">
+            <summary>试题类型名称</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand.QuestionText">
+            <summary>试题内容 (题干)</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand.QuestionTitle">
+            <summary>试题标题 (管理端使用)</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand.TextAnalysis">
+            <summary>文字解析</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand.MediaAnalysis">
+            <summary>音视频解析</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand.AbilityIds">
+            <summary>能力维度Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand.FreeState">
+            <summary>免费分区</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand.EnableState">
+            <summary>启用状态</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand.SubjectTagId">
+            <summary>科目标签Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand.PaperTagId">
+            <summary>试卷标签Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand.ParentId">
+            <summary>父题目Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.CreateQuestionCommand.QuestionOptions">
+            <summary>试题选项</summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand">
+            <summary>
+            更新试题实体命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="SubjectId">科目Id</param>
+            <param name="SubjectName">科目名称</param>
+            <param name="ChapterId">章节Id</param>
+            <param name="ChapterName">章节名称</param>
+            <param name="SectionId">小节Id</param>
+            <param name="SectionName">小节名称</param>
+            <param name="KnowledgePointId">知识点Id</param>
+            <param name="KnowledgePointName">知识点名称</param>
+            <param name="QuestionCategoryId">试题分类Id</param>
+            <param name="QuestionCategoryName">试题分类名称</param>
+            <param name="QuestionTypeId">试题类型Id</param>
+            <param name="QuestionTypeName">试题类型名称</param>
+            <param name="QuestionText">试题内容 (题干)</param>
+            <param name="QuestionTitle">试题标题 (管理端使用)</param>
+            <param name="TextAnalysis">文字解析</param>
+            <param name="MediaAnalysis">音视频解析</param>
+            <param name="AbilityIds">能力维度Id</param>
+            <param name="FreeState">免费分区</param>
+            <param name="EnableState">启用状态</param>
+            <param name="SubjectTagId">科目标签Id</param>
+            <param name="PaperTagId">试卷标签Id</param>
+            <param name="ParentId">父题目Id</param>
+            <param name="QuestionOptions">试题选项</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.#ctor(System.Guid,System.Guid,System.String,System.Guid,System.String,System.Guid,System.String,System.Guid,System.String,System.Guid,System.String,System.Guid,System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Guid},System.Nullable{HaoKao.QuestionService.Domain.QuestionModule.FreeState},HaoKao.QuestionService.Domain.QuestionModule.EnableState,System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{System.Guid},System.Object)">
+            <summary>
+            更新试题实体命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="SubjectId">科目Id</param>
+            <param name="SubjectName">科目名称</param>
+            <param name="ChapterId">章节Id</param>
+            <param name="ChapterName">章节名称</param>
+            <param name="SectionId">小节Id</param>
+            <param name="SectionName">小节名称</param>
+            <param name="KnowledgePointId">知识点Id</param>
+            <param name="KnowledgePointName">知识点名称</param>
+            <param name="QuestionCategoryId">试题分类Id</param>
+            <param name="QuestionCategoryName">试题分类名称</param>
+            <param name="QuestionTypeId">试题类型Id</param>
+            <param name="QuestionTypeName">试题类型名称</param>
+            <param name="QuestionText">试题内容 (题干)</param>
+            <param name="QuestionTitle">试题标题 (管理端使用)</param>
+            <param name="TextAnalysis">文字解析</param>
+            <param name="MediaAnalysis">音视频解析</param>
+            <param name="AbilityIds">能力维度Id</param>
+            <param name="FreeState">免费分区</param>
+            <param name="EnableState">启用状态</param>
+            <param name="SubjectTagId">科目标签Id</param>
+            <param name="PaperTagId">试卷标签Id</param>
+            <param name="ParentId">父题目Id</param>
+            <param name="QuestionOptions">试题选项</param>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.SubjectId">
+            <summary>科目Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.SubjectName">
+            <summary>科目名称</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.ChapterId">
+            <summary>章节Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.ChapterName">
+            <summary>章节名称</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.SectionId">
+            <summary>小节Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.SectionName">
+            <summary>小节名称</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.KnowledgePointId">
+            <summary>知识点Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.KnowledgePointName">
+            <summary>知识点名称</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.QuestionCategoryId">
+            <summary>试题分类Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.QuestionCategoryName">
+            <summary>试题分类名称</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.QuestionTypeId">
+            <summary>试题类型Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.QuestionTypeName">
+            <summary>试题类型名称</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.QuestionText">
+            <summary>试题内容 (题干)</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.QuestionTitle">
+            <summary>试题标题 (管理端使用)</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.TextAnalysis">
+            <summary>文字解析</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.MediaAnalysis">
+            <summary>音视频解析</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.AbilityIds">
+            <summary>能力维度Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.FreeState">
+            <summary>免费分区</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.EnableState">
+            <summary>启用状态</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.SubjectTagId">
+            <summary>科目标签Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.PaperTagId">
+            <summary>试卷标签Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.ParentId">
+            <summary>父题目Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateQuestionCommand.QuestionOptions">
+            <summary>试题选项</summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Domain.QuestionModule.DeleteQuestionCommand">
+            <summary>
+            批量删除试题实体
+            </summary>
+            <param name="Ids"></param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionModule.DeleteQuestionCommand.#ctor(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            批量删除试题实体
+            </summary>
+            <param name="Ids"></param>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.DeleteQuestionCommand.Ids">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Domain.QuestionModule.UpdateSortCommand">
+            <summary>
+            修改试题排序
+            </summary>
+            <param name="Id">试题Id</param>
+            <param name="Sort">排序</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionModule.UpdateSortCommand.#ctor(System.Guid,System.Int32)">
+            <summary>
+            修改试题排序
+            </summary>
+            <param name="Id">试题Id</param>
+            <param name="Sort">排序</param>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateSortCommand.Id">
+            <summary>试题Id</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateSortCommand.Sort">
+            <summary>排序</summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Domain.QuestionModule.UpdateFreeStateCommand">
+            <summary>
+            批量修改免费专区
+            </summary>
+            <param name="Ids">试题Ids</param>
+            <param name="FreeState">是否免费</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionModule.UpdateFreeStateCommand.#ctor(System.Collections.Generic.IEnumerable{System.Guid},HaoKao.QuestionService.Domain.QuestionModule.FreeState)">
+            <summary>
+            批量修改免费专区
+            </summary>
+            <param name="Ids">试题Ids</param>
+            <param name="FreeState">是否免费</param>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateFreeStateCommand.Ids">
+            <summary>试题Ids</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateFreeStateCommand.FreeState">
+            <summary>是否免费</summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Domain.QuestionModule.UpdateEnableStateCommand">
+            <summary>
+            批量修改启用状态
+            </summary>
+            <param name="Ids">试题Ids</param>
+            <param name="EnableState">是否启用</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionModule.UpdateEnableStateCommand.#ctor(System.Collections.Generic.IEnumerable{System.Guid},HaoKao.QuestionService.Domain.QuestionModule.EnableState)">
+            <summary>
+            批量修改启用状态
+            </summary>
+            <param name="Ids">试题Ids</param>
+            <param name="EnableState">是否启用</param>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateEnableStateCommand.Ids">
+            <summary>试题Ids</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UpdateEnableStateCommand.EnableState">
+            <summary>是否启用</summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Domain.QuestionModule.EnableState">
+            <summary>
+            试题启用状态
+            </summary>
+        </member>
+        <member name="F:HaoKao.QuestionService.Domain.QuestionModule.EnableState.Disable">
+            <summary>
+            禁用
+            </summary>
+        </member>
+        <member name="F:HaoKao.QuestionService.Domain.QuestionModule.EnableState.Enable">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Domain.QuestionModule.FreeState">
+            <summary>
+            试题免费状态
+            </summary>
+        </member>
+        <member name="F:HaoKao.QuestionService.Domain.QuestionModule.FreeState.No">
+            <summary>
+            否
+            </summary>
+        </member>
+        <member name="F:HaoKao.QuestionService.Domain.QuestionModule.FreeState.Yes">
+            <summary>
+            是
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionModule.QuestionMapperProfile.#ctor">
+            <summary>
+            配置构造函数，用来创建关系映射
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.QuestionQuery.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.QuestionQuery.ChapterId">
+            <summary>
+            章节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.QuestionQuery.SectionId">
+            <summary>
+            小节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.QuestionQuery.KnowledgePointId">
+            <summary>
+            知识点Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.QuestionQuery.QuestionTitle">
+            <summary>
+            试题标题 (管理端使用)
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.QuestionQuery.QuestionTypeId">
+            <summary>
+            试题类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.QuestionQuery.QuestionCategoryId">
+            <summary>
+            试题分类
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.QuestionQuery.EnableState">
+            <summary>
+            启用状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.QuestionQuery.FreeState">
+            <summary>
+            免费专区
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.QuestionQuery.ParentId">
+            <summary>
+            父Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.QuestionQuery.AbilityId">
+            <summary>
+            能力维度
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.QuestionQuery.KnowledgePointName">
+            <summary>
+            知识点
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.QuestionQuery.QuestionIds">
+            <summary>
+            试题Id集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.QuestionQuery.ChapterNodeIds">
+            <summary>
+            章节Id集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.QuestionQuery.SubjectTagId">
+            <summary>
+            科目标签Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.QuestionQuery.PaperTagId">
+            <summary>
+            试卷标签Id
+            </summary>
+        </member>
+        <member name="F:HaoKao.QuestionService.Domain.QuestionModule.QuestionType.SingleChoice">
+            <summary>
+            单选
+            </summary>
+        </member>
+        <member name="F:HaoKao.QuestionService.Domain.QuestionModule.QuestionType.MultiChoice">
+            <summary>
+            多选
+            </summary>
+        </member>
+        <member name="F:HaoKao.QuestionService.Domain.QuestionModule.QuestionType.Undetermined">
+            <summary>
+            不定项
+            </summary>
+        </member>
+        <member name="F:HaoKao.QuestionService.Domain.QuestionModule.QuestionType.Judgment">
+            <summary>
+            判断
+            </summary>
+        </member>
+        <member name="F:HaoKao.QuestionService.Domain.QuestionModule.QuestionType.FillIn">
+            <summary>
+            填空
+            </summary>
+        </member>
+        <member name="F:HaoKao.QuestionService.Domain.QuestionModule.QuestionType.CaseAnalysis">
+            <summary>
+            案例分析
+            </summary>
+        </member>
+        <member name="F:HaoKao.QuestionService.Domain.QuestionModule.QuestionType.ShortAnswer">
+            <summary>
+            问答
+            </summary>
+        </member>
+        <member name="F:HaoKao.QuestionService.Domain.QuestionModule.QuestionType.All">
+            <summary>
+            所有题型
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UnionQuestion.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UnionQuestion.ChapterNodeId">
+            <summary>
+            章节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UnionQuestion.QuestionCategoryId">
+            <summary>
+            试题分类Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UnionQuestion.QuestionTypeId">
+            <summary>
+            试题类型Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UnionQuestion.ParentId">
+            <summary>
+            父题目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionModule.UnionQuestion.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionWrongModule.IQuestionWrongRepository.GetChapterList(System.Guid,System.Guid,System.Boolean)">
+            <summary>
+            获取章节列表和错题数量
+            </summary>
+            <param name="userId"></param>
+            <param name="subjectId"></param>
+            <param name="isActive"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionWrongModule.IQuestionWrongRepository.GetChapterQuestionList(System.Guid,System.Guid,System.Boolean)">
+            <summary>
+            获取章节下的错题列表
+            </summary>
+            <param name="userId"></param>
+            <param name="chapterId"></param>
+            <param name="isActive"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionWrongModule.IQuestionWrongRepository.GetTodayTaskQuestionIds(System.Guid,System.Int32)">
+            <summary>
+            获取今日任务的试题Id集合
+            </summary>
+            <param name="subjectId"></param>
+            <param name="extraction"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.QuestionService.Domain.QuestionWrongModule.QuestionWrong">
+            <summary>
+            错题集
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongModule.QuestionWrong.QuestionId">
+            <summary>
+            试题Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongModule.QuestionWrong.QuestionTypeId">
+            <summary>
+            试题类型Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongModule.QuestionWrong.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongModule.QuestionWrong.ParentQuestionId">
+            <summary>
+            父试题Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongModule.QuestionWrong.ParentQuestionTypeId">
+            <summary>
+            父试题类型Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongModule.QuestionWrong.IsActive">
+            <summary>
+            是否激活状态的错题, true 待消灭, false 被消灭
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongModule.QuestionWrong.CreatorId">
+            <summary>
+            创建者，对应的用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongModule.QuestionWrong.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongModule.QuestionWrong.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongModule.QuestionWrong.Question">
+            <summary>
+            试题对象
+            </summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Domain.QuestionWrongModule.CleanQuestionWrongCommand">
+            <summary>
+            消灭错题
+            </summary>
+            <param name="QuestionIds">试题Ids</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionWrongModule.CleanQuestionWrongCommand.#ctor(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            消灭错题
+            </summary>
+            <param name="QuestionIds">试题Ids</param>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongModule.CleanQuestionWrongCommand.QuestionIds">
+            <summary>试题Ids</summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Domain.QuestionWrongModule.CreateQuestionWrongCommand">
+            <summary>
+            添加错题集
+            </summary>
+            <param name="QuestionIds">试题Ids</param>
+        </member>
+        <member name="M:HaoKao.QuestionService.Domain.QuestionWrongModule.CreateQuestionWrongCommand.#ctor(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            添加错题集
+            </summary>
+            <param name="QuestionIds">试题Ids</param>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongModule.CreateQuestionWrongCommand.QuestionIds">
+            <summary>试题Ids</summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongModule.QuestionWrongQuery.QuestionTypeId">
+            <summary>
+            试题类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongModule.QuestionWrongQuery.ChapterNodeId">
+            <summary>
+            章节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongModule.QuestionWrongQuery.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongModule.QuestionWrongQuery.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongModule.QuestionWrongQuery.QuestionTypeIds">
+            <summary>
+            试题类型Id集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongModule.QuestionWrongQuery.QuestionTypeIdsCacheKey">
+            <summary>
+            试题类型Id集合缓存Key
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongModule.QuestionWrongQuery.IsActive">
+            <summary>
+            是否激活状态的错题, true 待消灭, false 被消灭
+            </summary>
+        </member>
+        <member name="T:HaoKao.QuestionService.Domain.QuestionWrongPaperMoudle.QuestionWrongPaper">
+            <summary>
+            错题组卷实体类
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongPaperMoudle.QuestionWrongPaper.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongPaperMoudle.QuestionWrongPaper.PaperName">
+            <summary>
+            试卷名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongPaperMoudle.QuestionWrongPaper.DownloadUrl">
+            <summary>
+            试卷下载地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongPaperMoudle.QuestionWrongPaper.QuestionCount">
+            <summary>
+            试题数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongPaperMoudle.QuestionWrongPaper.CreatorId">
+            <summary>
+            创建者Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongPaperMoudle.QuestionWrongPaper.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongPaperMoudle.QuestionWrongPaper.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongPaperMoudle.QuestionWrongPaperQuery.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongPaperMoudle.QuestionWrongPaperQuery.CreatorId">
+            <summary>
+            创建者Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionService.Domain.QuestionWrongPaperMoudle.QuestionWrongPaperQuery.CreateDateRange">
+            <summary>
+            组卷时间范围
+            </summary>
+        </member>
+    </members>
+</doc>

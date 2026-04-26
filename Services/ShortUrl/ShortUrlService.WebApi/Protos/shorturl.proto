@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "google/api/annotations.proto";
+
+option csharp_namespace = "ShortUrlService.WebApi.Grpc";
+
+package shorturl;
+
+// The ShortUrl service definition.
+service ShortUrlGrpcService {
+  rpc Generate (GenerateRequest) returns (GenerateReply){
+    option (google.api.http) = {
+      post: "/grpc/ShortUrlService/Generate",
+      body: "*"
+    };
+  }
+}
+
+message GenerateRequest {
+  string origin_url = 1;
+  int32 access_limit = 2;
+  google.protobuf.Timestamp expired_time = 3;
+  string app_code = 4;
+  string app_secret = 5;
+}
+
+message GenerateReply {
+  string short_key = 1;
+  string short_url = 2;
+  string qr_code_base64 = 3;
+}

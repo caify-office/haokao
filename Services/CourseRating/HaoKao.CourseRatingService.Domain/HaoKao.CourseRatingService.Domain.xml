@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.CourseRatingService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.CourseRatingService.Domain.Commands.CreateCourseRatingCommand">
+            <summary>
+            创建课程评价命令
+            </summary>
+            <param name="CourseId">课程Id</param>
+            <param name="CourseName">课程名称</param>
+            <param name="Comment">评价内容</param>
+            <param name="Rating">评价级别</param>
+            <param name="NickName">昵称</param>
+            <param name="Avatar">头像</param>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Domain.Commands.CreateCourseRatingCommand.#ctor(System.Guid,System.String,System.String,System.Int32,System.String,System.String)">
+            <summary>
+            创建课程评价命令
+            </summary>
+            <param name="CourseId">课程Id</param>
+            <param name="CourseName">课程名称</param>
+            <param name="Comment">评价内容</param>
+            <param name="Rating">评价级别</param>
+            <param name="NickName">昵称</param>
+            <param name="Avatar">头像</param>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Commands.CreateCourseRatingCommand.CourseId">
+            <summary>课程Id</summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Commands.CreateCourseRatingCommand.CourseName">
+            <summary>课程名称</summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Commands.CreateCourseRatingCommand.Comment">
+            <summary>评价内容</summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Commands.CreateCourseRatingCommand.Rating">
+            <summary>评价级别</summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Commands.CreateCourseRatingCommand.NickName">
+            <summary>昵称</summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Commands.CreateCourseRatingCommand.Avatar">
+            <summary>头像</summary>
+        </member>
+        <member name="T:HaoKao.CourseRatingService.Domain.Commands.AuditCourseRatingCommand">
+            <summary>
+            审核课程评价
+            </summary>
+            <param name="Id">主键</param>
+            <param name="AuditState">审核状态</param>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Domain.Commands.AuditCourseRatingCommand.#ctor(System.Guid,HaoKao.CourseRatingService.Domain.Enums.AuditState)">
+            <summary>
+            审核课程评价
+            </summary>
+            <param name="Id">主键</param>
+            <param name="AuditState">审核状态</param>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Commands.AuditCourseRatingCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Commands.AuditCourseRatingCommand.AuditState">
+            <summary>审核状态</summary>
+        </member>
+        <member name="T:HaoKao.CourseRatingService.Domain.Commands.StickyCourseRatingCommand">
+            <summary>
+            置顶课程评价
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Sticky">是否置顶</param>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Domain.Commands.StickyCourseRatingCommand.#ctor(System.Guid,System.Boolean)">
+            <summary>
+            置顶课程评价
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Sticky">是否置顶</param>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Commands.StickyCourseRatingCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Commands.StickyCourseRatingCommand.Sticky">
+            <summary>是否置顶</summary>
+        </member>
+        <member name="T:HaoKao.CourseRatingService.Domain.Commands.DeleteCourseRatingCommand">
+            <summary>
+            删除课程评价命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Domain.Commands.DeleteCourseRatingCommand.#ctor(System.Guid)">
+            <summary>
+            删除课程评价命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Commands.DeleteCourseRatingCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.CourseRatingService.Domain.Entities.CourseRating">
+            <summary>
+            课程评价
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Entities.CourseRating.CourseId">
+            <summary>
+            课程Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Entities.CourseRating.CourseName">
+            <summary>
+            课程名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Entities.CourseRating.Comment">
+            <summary>
+            评价内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Entities.CourseRating.Rating">
+            <summary>
+            评价级别
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Entities.CourseRating.AuditState">
+            <summary>
+            审核状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Entities.CourseRating.CreateTime">
+            <summary>
+            评价时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Entities.CourseRating.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Entities.CourseRating.CreatorId">
+            <summary>
+            评价人
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Entities.CourseRating.Sticky">
+            <summary>
+            是否置顶
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Entities.CourseRating.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Entities.CourseRating.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Entities.CourseRating.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="F:HaoKao.CourseRatingService.Domain.Enums.AuditState.InAudit">
+            <summary>
+            待审核
+            </summary>
+        </member>
+        <member name="F:HaoKao.CourseRatingService.Domain.Enums.AuditState.Pass">
+            <summary>
+            审核通过
+            </summary>
+        </member>
+        <member name="F:HaoKao.CourseRatingService.Domain.Enums.AuditState.NotPass">
+            <summary>
+            审核不通过
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Queries.CourseRatingQuery.CourseId">
+            <summary>
+            课程Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Queries.CourseRatingQuery.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Queries.CourseRatingQuery.CourseName">
+            <summary>
+            课程名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Queries.CourseRatingQuery.StartTime">
+            <summary>
+            评价开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Queries.CourseRatingQuery.EndTime">
+            <summary>
+            评价结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Queries.CourseRatingQuery.Rating">
+            <summary>
+            评价级别
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Domain.Queries.CourseRatingQuery.AuditState">
+            <summary>
+            审核状态
+            </summary>
+        </member>
+    </members>
+</doc>

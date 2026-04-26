@@ -1,0 +1,1046 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.BasicService.Application</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.AccountService.GetTenants(System.String)">
+            <summary>
+            通过登陆名称，获取相关的考试列表
+            </summary>
+            <param name="account"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.AccountService.UserLoginStepOne(HaoKao.BasicService.Application.ViewModels.User.UserLoginStepOneViewModel)">
+            <summary>
+            登陆第一步验证，用户名和密码
+            </summary>
+            <param name="model">登陆模型</param>
+            <returns>返回手机号码后4位</returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.AccountService.UserLoginStepSecond(HaoKao.BasicService.Application.ViewModels.User.UserLoginSecondStepViewModel)">
+            <summary>
+            登陆第二步验证，用户名和密码
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.AccountService.ChangeTenant(HaoKao.BasicService.Application.ViewModels.User.ChangeExamViewModel)">
+            <summary>
+            考试管理员登录进去后输入目标考试管理员账号和密码信息获取对应考试新的token
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.AccountService.SendChangePhoneCode(HaoKao.BasicService.Application.ViewModels.Account.SendChangePhoneCodeViewModel)">
+            <summary>
+            更换绑定手机号码发送验证码
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.AccountService.ChangePhoneCode(HaoKao.BasicService.Application.ViewModels.Account.ChangePhoneCodeViewModel)">
+            <summary>
+            更换手机号码
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="F:HaoKao.BasicService.Application.Services.Management.AccountService._PhoneCodeExpiredTime">
+            <summary>
+            设置过期时间为30分钟
+            </summary>
+        </member>
+        <member name="F:HaoKao.BasicService.Application.Services.Management.AccountService._RepeatSendingLimitTime">
+            <summary>
+            设置重复发送限制时间为120秒
+            </summary>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.AccountService.CheckPhoneCode(HaoKao.Common.Events.NotificationMessage.EventNotificationMessageType,System.String,System.String)">
+            <summary>
+            较验验证码
+            </summary>
+            <param name="messageType"></param>
+            <param name="phone"></param>
+            <param name="code"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.AccountService.SendPhoneCode(HaoKao.BasicService.Application.ViewModels.PhoneCode.SendPhoneCodeViewModel)">
+            <summary>
+            发送验证码
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.AuthorizationService.GetFunctionOperateList">
+            <summary>
+            获取需要授权的功能列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.AuthorizationService.GetDataRuleList">
+            <summary>
+            获取需要授权的数据规则列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.AuthorizationService.InitAuthorization">
+            <summary>
+            初始化本模块的权限值
+            </summary>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IAccountService.GetTenants(System.String)">
+            <summary>
+            通过登陆名称，获取相关的考试列表
+            </summary>
+            <param name="account"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IAccountService.UserLoginStepOne(HaoKao.BasicService.Application.ViewModels.User.UserLoginStepOneViewModel)">
+            <summary>
+            登陆第一步验证，用户名和密码
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IAccountService.SendPhoneCode(HaoKao.BasicService.Application.ViewModels.PhoneCode.SendPhoneCodeViewModel)">
+            <summary>
+            发送验证码
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IAccountService.UserLoginStepSecond(HaoKao.BasicService.Application.ViewModels.User.UserLoginSecondStepViewModel)">
+            <summary>
+            登陆第二步验证，用户名和密码
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IAccountService.ChangeTenant(HaoKao.BasicService.Application.ViewModels.User.ChangeExamViewModel)">
+            <summary>
+            考试管理员登录进去后输入目标考试管理员账号和密码信息获取对应考试新的token
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IAccountService.SendChangePhoneCode(HaoKao.BasicService.Application.ViewModels.Account.SendChangePhoneCodeViewModel)">
+            <summary>
+            更换绑定手机号码发送验证码
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IAccountService.ChangePhoneCode(HaoKao.BasicService.Application.ViewModels.Account.ChangePhoneCodeViewModel)">
+            <summary>
+            更换手机号码
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IAuthorizationService.GetFunctionOperateList">
+            <summary>
+            获取需要授权的功能列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IAuthorizationService.GetDataRuleList">
+            <summary>
+            获取需要授权的数据规则列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IAuthorizationService.InitAuthorization">
+            <summary>
+            初始化本模块的权限值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IRandomVerificationCodeService.GetRandomVerificationCode(System.String)">
+            <summary>
+            获取随机码图片
+            </summary>
+            <param name="randomMark"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IRandomVerificationCodeService.GetRandomVerification(System.String)">
+            <summary>
+            获取随机码图片和较验Md5密文
+            </summary>
+            <param name="randomMark"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IRandomVerificationCodeService.VerificationCode(System.String,System.String)">
+            <summary>
+            校验验证码
+            </summary>
+            <param name="randomMark"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IRoleAppService.GetAsync(System.Guid)">
+            <summary>
+            根据Id获取角色
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IRoleAppService.CreateAsync(HaoKao.BasicService.Application.ViewModels.Role.RoleEditViewModel)">
+            <summary>
+            创建角色
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IRoleAppService.UpdateAsync(System.Guid,HaoKao.BasicService.Application.ViewModels.Role.RoleEditViewModel)">
+            <summary>
+            更新角色
+            </summary>
+            <param name="id"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IRoleAppService.DeleteAsync(System.Guid)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IRoleAppService.GetAsync">
+            <summary>
+            获取角色列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IRoleAppService.AddRoleUser(System.Guid,HaoKao.BasicService.Application.ViewModels.Role.EditRoleUserViewModel)">
+            <summary>
+            添加角色用户
+            </summary>
+            <param name="roleId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IRoleAppService.DeleteRoleUser(System.Guid,HaoKao.BasicService.Application.ViewModels.Role.EditRoleUserViewModel)">
+            <summary>
+            删除角色用户
+            </summary>
+            <param name="roleId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IRoleAppService.GetRoleUsers(System.Guid)">
+            <summary>
+            获取角色下指定的用户集合
+            </summary>
+            <param name="roleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IRoleAppService.GetRolePermission(System.Guid)">
+            <summary>
+            获取指定角色的权限
+            </summary>
+            <param name="roleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IRoleAppService.SaveRolePermission(System.Guid,System.Collections.Generic.List{Girvs.AuthorizePermission.AuthorizePermissionModel})">
+            <summary>
+            保存指定角色的权限
+            </summary>
+            <param name="roleId"></param>
+            <param name="models"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IUserAppService.GetAsync(System.Guid)">
+            <summary>
+            根据Id获取用户
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IUserAppService.CreateAsync(HaoKao.BasicService.Application.ViewModels.User.UserEditViewModel)">
+            <summary>
+            创建用户
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IUserAppService.UpdateAsync(System.Guid,HaoKao.BasicService.Application.ViewModels.User.UserEditViewModel)">
+            <summary>
+            更新用户
+            </summary>
+            <param name="id"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IUserAppService.DeleteAsync(System.Guid)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IUserAppService.GetAsync(HaoKao.BasicService.Application.ViewModels.User.UserQueryViewModel)">
+            <summary>
+            根据查询条件获取用户
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IUserAppService.AddUserRole(System.Guid,HaoKao.BasicService.Application.ViewModels.User.EditUserRoleViewModel)">
+            <summary>
+            添加用户角色操作
+            </summary>
+            <param name="userId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IUserAppService.DeleteUserRole(System.Guid,HaoKao.BasicService.Application.ViewModels.User.EditUserRoleViewModel)">
+            <summary>
+            删除用户角色操作
+            </summary>
+            <param name="userId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IUserAppService.Enable(System.Guid)">
+            <summary>
+            启用用户
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IUserAppService.Disable(System.Guid)">
+            <summary>
+            禁用用户
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IUserAppService.ChangeUserPassword(System.Guid,HaoKao.BasicService.Application.ViewModels.User.ChangeUserPassworkViewModel)">
+            <summary>
+            修改用户密码
+            </summary>
+            <param name="userId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IUserAppService.UserEditPassword(HaoKao.BasicService.Application.ViewModels.User.UserEditPasswordViewModel)">
+            <summary>
+            用户自行修改密码
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IUserAppService.GetUserRoles(System.Guid)">
+            <summary>
+            获取用户所包含的角色
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IUserAppService.ExistAccount(System.String,System.Guid)">
+            <summary>
+            判断登陆名称是否已存在
+            </summary>
+            <param name="account"></param>
+            <param name="tenantId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IUserAppService.GetCurrentUserAuthorization">
+            <summary>
+            获取当前用户的权限、包含功能菜单以及数据权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IUserAppService.GetCurrentUserAuthorization(System.Guid)">
+            <summary>
+            获取指定用户的权限
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IUserAppService.GetUserDataRule(System.Guid)">
+            <summary>
+            获取指定用户的数据权限
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.IUserAppService.SaveUserDataRule(System.Guid,System.Collections.Generic.List{HaoKao.BasicService.Application.ViewModels.User.SaveUserDataRuleViewModel})">
+            <summary>
+            保存指定用户的数据权限
+            </summary>
+            <param name="userId"></param>
+            <param name="models"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.RandomVerificationCodeService.GetRandomVerificationCode(System.String)">
+            <summary>
+            获取随机码图片
+            </summary>
+            <param name="randomMark"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.RandomVerificationCodeService.GetRandomVerification(System.String)">
+            <summary>
+            获取随机码图片和较验Md5密文
+            </summary>
+            <param name="randomMark"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.RandomVerificationCodeService.VerificationCode(System.String,System.String)">
+            <summary>
+            校验验证码
+            </summary>
+            <param name="randomMark"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.RoleAppService.GetAsync(System.Guid)">
+            <summary>
+            根据Id获取角色
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.RoleAppService.CreateAsync(HaoKao.BasicService.Application.ViewModels.Role.RoleEditViewModel)">
+            <summary>
+            创建角色
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.RoleAppService.UpdateAsync(System.Guid,HaoKao.BasicService.Application.ViewModels.Role.RoleEditViewModel)">
+            <summary>
+            更新角色
+            </summary>
+            <param name="id"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.RoleAppService.DeleteAsync(System.Guid)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.RoleAppService.GetAsync">
+            <summary>
+            获取角色列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.RoleAppService.AddRoleUser(System.Guid,HaoKao.BasicService.Application.ViewModels.Role.EditRoleUserViewModel)">
+            <summary>
+            添加角色用户
+            </summary>
+            <param name="roleId"></param>
+            <param name="model"></param>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.RoleAppService.DeleteRoleUser(System.Guid,HaoKao.BasicService.Application.ViewModels.Role.EditRoleUserViewModel)">
+            <summary>
+            删除角色用户
+            </summary>
+            <param name="roleId"></param>
+            <param name="model"></param>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.RoleAppService.GetRoleUsers(System.Guid)">
+            <summary>
+            获取角色下指定的用户集合
+            </summary>
+            <param name="roleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.RoleAppService.GetRolePermission(System.Guid)">
+            <summary>
+            获取指定角色的功能菜单操作权限
+            </summary>
+            <param name="roleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.RoleAppService.SaveRolePermission(System.Guid,System.Collections.Generic.List{Girvs.AuthorizePermission.AuthorizePermissionModel})">
+            <summary>
+            保存指定角色的权限
+            </summary>
+            <param name="roleId"></param>
+            <param name="models"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.UserAppService.GetAsync(System.Guid)">
+            <summary>
+            根据Id获取用户
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.UserAppService.CreateAsync(HaoKao.BasicService.Application.ViewModels.User.UserEditViewModel)">
+            <summary>
+            创建用户
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.UserAppService.UpdateAsync(System.Guid,HaoKao.BasicService.Application.ViewModels.User.UserEditViewModel)">
+            <summary>
+            更新用户
+            </summary>
+            <param name="id"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.UserAppService.DeleteAsync(System.Guid)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.UserAppService.GetAsync(HaoKao.BasicService.Application.ViewModels.User.UserQueryViewModel)">
+            <summary>
+            根据查询条件获取用户
+            </summary>
+            <param name="queryModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.UserAppService.GetCurrentUserAuthorization(System.Guid)">
+            <summary>
+            获取指定用户的权限
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.UserAppService.AddUserRole(System.Guid,HaoKao.BasicService.Application.ViewModels.User.EditUserRoleViewModel)">
+            <summary>
+            添加用户角色操作
+            </summary>
+            <param name="userId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.UserAppService.DeleteUserRole(System.Guid,HaoKao.BasicService.Application.ViewModels.User.EditUserRoleViewModel)">
+            <summary>
+            删除用户角色操作
+            </summary>
+            <param name="userId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.UserAppService.Enable(System.Guid)">
+            <summary>
+            启用用户
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.UserAppService.Disable(System.Guid)">
+            <summary>
+            禁用用户
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.UserAppService.ChangeUserPassword(System.Guid,HaoKao.BasicService.Application.ViewModels.User.ChangeUserPassworkViewModel)">
+            <summary>
+            修改用户密码
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.UserAppService.UserEditPassword(HaoKao.BasicService.Application.ViewModels.User.UserEditPasswordViewModel)">
+            <summary>
+            用户自行修改密码
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.UserAppService.GetUserRoles(System.Guid)">
+            <summary>
+            获取用户所包含的角色
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.UserAppService.ExistAccount(System.String,System.Guid)">
+            <summary>
+            判断登陆名称是否已存在
+            </summary>
+            <param name="account"></param>
+            <param name="tenantId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.UserAppService.GetCurrentUserAuthorization">
+            <summary>
+            获取当前用户的权限、包含功能菜单以及数据权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.UserAppService.GetUserDataRule(System.Guid)">
+            <summary>
+            获取指定用户的数据权限
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Application.Services.Management.UserAppService.SaveUserDataRule(System.Guid,System.Collections.Generic.List{HaoKao.BasicService.Application.ViewModels.User.SaveUserDataRuleViewModel})">
+            <summary>
+            保存指定用户的数据权限
+            </summary>
+            <param name="userId"></param>
+            <param name="models"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.BasicService.Application.ValidateCodeHelper">
+            <summary>
+            Summary description for ValidateCode.
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.Account.ChangePhoneCodeViewModel.OldPhone">
+            <summary>
+            原手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.Account.ChangePhoneCodeViewModel.OldPhoneCode">
+            <summary>
+            原手机号码验证码
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.Account.ChangePhoneCodeViewModel.NewPhone">
+            <summary>
+            新手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.Account.ChangePhoneCodeViewModel.NewPhoneCode">
+            <summary>
+            新手机号码验证码
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.Account.SendChangePhoneCodeViewModel.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.Account.SendChangePhoneCodeViewModel.RandomMark">
+            <summary>
+            获取验证码的随机标识
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.Account.SendChangePhoneCodeViewModel.RandomVerificationCode">
+            <summary>
+            随机验证码
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.PhoneCode.SendPhoneCodeViewModel.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.PhoneCode.SendPhoneCodeViewModel.PhoneSecurityCode">
+            <summary>
+            手机号码安全码
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.PhoneCode.SendPhoneCodeViewModel.RandomMark">
+            <summary>
+            获取验证码的随机标识
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.PhoneCode.SendPhoneCodeViewModel.RandomVerificationCode">
+            <summary>
+            随机验证码
+            </summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Application.ViewModels.Role.EditRoleUserViewModel">
+            <summary>
+            角色用户操作模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.Role.EditRoleUserViewModel.UserIds">
+            <summary>
+            用户ID列表
+            </summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Application.ViewModels.User.ChangeExamViewModel">
+            <summary>
+            考试中切换考试时，用户名密码直接登录使用
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.ChangeExamViewModel.UserAccount">
+            <summary>
+            登陆名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.ChangeExamViewModel.TenantId">
+            <summary>
+            登陆的考试
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.ChangeExamViewModel.Password">
+            <summary>
+            登陆密码
+            </summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Application.ViewModels.User.ChangeUserPassworkViewModel">
+            <summary>
+            修改用户登陆密码模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.ChangeUserPassworkViewModel.NewPassword">
+            <summary>
+            用户新的登陆密码
+            </summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Application.ViewModels.User.EditUserRoleViewModel">
+            <summary>
+            用户角色操作模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.EditUserRoleViewModel.RoleIds">
+            <summary>
+            角色Id列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.SaveUserDataRuleViewModel.EntityDesc">
+            <summary>
+            实体说明
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.SaveUserDataRuleViewModel.EntityTypeName">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.SaveUserDataRuleViewModel.UserType">
+            <summary>
+            用户类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.SaveUserDataRuleViewModel.FieldName">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.SaveUserDataRuleViewModel.FieldDesc">
+            <summary>
+            字段的说明
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.SaveUserDataRuleViewModel.FieldType">
+            <summary>
+            字段类型（预留）
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.SaveUserDataRuleViewModel.FieldValue">
+            <summary>
+            字段赋值
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.SaveUserDataRuleViewModel.FieldValueText">
+            <summary>
+            字段值文本
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.SaveUserDataRuleViewModel.ExpressionType">
+            <summary>
+            表达式运算符
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.TenantEntityViewModel.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.TenantEntityViewModel.TenantName">
+            <summary>
+            租户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserChangOldPhoneViewModel.Code">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Application.ViewModels.User.UserDataRuleListViewModel">
+            <summary>
+            数据规则授权模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserDataRuleListViewModel.EntityDesc">
+            <summary>
+            实体说明
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserDataRuleListViewModel.EntityTypeName">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserDataRuleListViewModel.DataRuleListFieldViewModels">
+            <summary>
+            实体需要相关授权的字段列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserDataRuleListFieldViewModel.FieldName">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserDataRuleListFieldViewModel.FieldDesc">
+            <summary>
+            字段的说明
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserDataRuleListFieldViewModel.FieldType">
+            <summary>
+            字段类型（预留）
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserDataRuleListFieldViewModel.FieldValue">
+            <summary>
+            字段赋值
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserDataRuleListFieldViewModel.FieldValueText">
+            <summary>
+            字段赋值文本
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserDataRuleListFieldViewModel.ExpressionType">
+            <summary>
+            表达式运算符
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserDetailViewModel.Id">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserDetailViewModel.UserAccount">
+            <summary>
+            用户登陆名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserDetailViewModel.UserPassword">
+            <summary>
+            用户登陆密码
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserDetailViewModel.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserDetailViewModel.ContactNumber">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserDetailViewModel.State">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserDetailViewModel.UserType">
+            <summary>
+            用户类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserDetailViewModel.OtherId">
+            <summary>
+            绑定其它相关服务的关键标识Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserDetailViewModel.UserRoles">
+            <summary>
+            用户角色
+            </summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Application.ViewModels.User.UserEditPasswordViewModel">
+            <summary>
+            用户修改登陆密码模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserEditPasswordViewModel.NewPassword">
+            <summary>
+            新的用户密码
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserEditPasswordViewModel.OldPassword">
+            <summary>
+            旧的用户密码
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserEditViewModel.Id">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserEditViewModel.UserAccount">
+            <summary>
+            用户登陆账号
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserEditViewModel.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserEditViewModel.State">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserEditViewModel.ContactNumber">
+            <summary>
+            联系电话   
+            非必填
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserEditViewModel.UserPassword">
+            <summary>
+            用户登陆密码
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserEditViewModel.UserType">
+            <summary>
+            用户类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserLoginDetailViewModel.UserAccount">
+            <summary>
+            用户登陆名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserLoginDetailViewModel.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserLoginDetailViewModel.UserType">
+            <summary>
+            用户类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserLoginDetailViewModel.UserRoles">
+            <summary>
+            用户角色
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserLoginDetailViewModel.ContactNumber">
+            <summary>
+            用户手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserLoginDetailViewModel.Token">
+            <summary>
+            token
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserLoginDetailViewModel.ExpiresHours">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserLoginDetailViewModel.EnforceChangePassword">
+            <summary>
+            强制执行修改密码
+            </summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Application.ViewModels.User.UserLoginStepOneViewModel">
+            <summary>
+            登陆第一步验证
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserLoginStepOneViewModel.UserAccount">
+            <summary>
+            登陆名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserLoginStepOneViewModel.TenantId">
+            <summary>
+            登陆的考试
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserLoginStepOneViewModel.Password">
+            <summary>
+            登陆密码
+            </summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Application.ViewModels.User.UserLoginStepOneReturnViewModel">
+            <summary>
+            第一步验证完后返回结果
+            </summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Application.ViewModels.User.UserLoginSecondStepViewModel">
+            <summary>
+            用户登陆第二步验证
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserLoginSecondStepViewModel.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserLoginSecondStepViewModel.PhoneCode">
+            <summary>
+            手机验证码
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserQueryViewModel.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserQueryViewModel.UserAccount">
+            <summary>
+            用户登陆名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserQueryViewModel.DataState">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserQueryListViewModel.UserAccount">
+            <summary>
+            用户登陆名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserQueryListViewModel.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserQueryListViewModel.ContactNumber">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserQueryListViewModel.State">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserQueryListViewModel.UserType">
+            <summary>
+            用户类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Application.ViewModels.User.UserQueryListViewModel.CreatorName">
+            <summary>
+            创建人
+            </summary>
+        </member>
+    </members>
+</doc>

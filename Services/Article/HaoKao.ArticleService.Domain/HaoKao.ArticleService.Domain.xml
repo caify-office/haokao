@@ -1,0 +1,330 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.ArticleService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.ArticleService.Domain.Commands.Article.CreateArticleCommand">
+            <summary>
+            创建文章命令
+            </summary>
+            <param name="Title">标题</param>
+            <param name="Column">所属栏目</param>
+            <param name="Category">所属类别</param>
+            <param name="IsTopping">是否置顶</param>
+            <param name="Sort">排序</param>
+            <param name="IsDisplayedOnHomepage">是否首页展示</param>
+            <param name="IsPublish">是否发布</param>
+            <param name="PreviewUrl">预览图</param>
+            <param name="Content">内容</param>
+            <param name="IsExternalURL">是否外部链接</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Domain.Commands.Article.CreateArticleCommand.#ctor(System.String,System.Guid,System.Guid,System.Boolean,System.Int32,System.Boolean,System.Boolean,System.String,System.String,System.Boolean)">
+            <summary>
+            创建文章命令
+            </summary>
+            <param name="Title">标题</param>
+            <param name="Column">所属栏目</param>
+            <param name="Category">所属类别</param>
+            <param name="IsTopping">是否置顶</param>
+            <param name="Sort">排序</param>
+            <param name="IsDisplayedOnHomepage">是否首页展示</param>
+            <param name="IsPublish">是否发布</param>
+            <param name="PreviewUrl">预览图</param>
+            <param name="Content">内容</param>
+            <param name="IsExternalURL">是否外部链接</param>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.Article.CreateArticleCommand.Title">
+            <summary>标题</summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.Article.CreateArticleCommand.Column">
+            <summary>所属栏目</summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.Article.CreateArticleCommand.Category">
+            <summary>所属类别</summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.Article.CreateArticleCommand.IsTopping">
+            <summary>是否置顶</summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.Article.CreateArticleCommand.Sort">
+            <summary>排序</summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.Article.CreateArticleCommand.IsDisplayedOnHomepage">
+            <summary>是否首页展示</summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.Article.CreateArticleCommand.IsPublish">
+            <summary>是否发布</summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.Article.CreateArticleCommand.PreviewUrl">
+            <summary>预览图</summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.Article.CreateArticleCommand.Content">
+            <summary>内容</summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.Article.CreateArticleCommand.IsExternalURL">
+            <summary>是否外部链接</summary>
+        </member>
+        <member name="T:HaoKao.ArticleService.Domain.Commands.Article.DeleteArticleCommand">
+            <summary>
+            删除文章命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Domain.Commands.Article.DeleteArticleCommand.#ctor(System.Guid)">
+            <summary>
+            删除文章命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.Article.DeleteArticleCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.ArticleService.Domain.Commands.Article.SetArticleIsToppingCommand">
+            <summary>
+            设置是否置顶
+            </summary>
+            <param name="Id">主键</param>
+            <param name="IsTopping">是否置顶</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Domain.Commands.Article.SetArticleIsToppingCommand.#ctor(System.Guid,System.Boolean)">
+            <summary>
+            设置是否置顶
+            </summary>
+            <param name="Id">主键</param>
+            <param name="IsTopping">是否置顶</param>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.Article.SetArticleIsToppingCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.Article.SetArticleIsToppingCommand.IsTopping">
+            <summary>是否置顶</summary>
+        </member>
+        <member name="T:HaoKao.ArticleService.Domain.Commands.Article.UpdateArticleCommand">
+            <summary>
+            更新文章命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Title">标题</param>
+            <param name="Column">所属栏目</param>
+            <param name="Category">所属类别</param>
+            <param name="IsTopping">是否置顶</param>
+            <param name="Sort">排序</param>
+            <param name="IsDisplayedOnHomepage">是否首页展示</param>
+            <param name="IsPublish">是否发布</param>
+            <param name="PreviewUrl">预览图</param>
+            <param name="Content">内容</param>
+            <param name="IsExternalURL">是否是外部链接</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Domain.Commands.Article.UpdateArticleCommand.#ctor(System.Guid,System.String,System.Guid,System.Guid,System.Boolean,System.Int32,System.Boolean,System.Boolean,System.String,System.String,System.Boolean)">
+            <summary>
+            更新文章命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Title">标题</param>
+            <param name="Column">所属栏目</param>
+            <param name="Category">所属类别</param>
+            <param name="IsTopping">是否置顶</param>
+            <param name="Sort">排序</param>
+            <param name="IsDisplayedOnHomepage">是否首页展示</param>
+            <param name="IsPublish">是否发布</param>
+            <param name="PreviewUrl">预览图</param>
+            <param name="Content">内容</param>
+            <param name="IsExternalURL">是否是外部链接</param>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.Article.UpdateArticleCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.Article.UpdateArticleCommand.Title">
+            <summary>标题</summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.Article.UpdateArticleCommand.Column">
+            <summary>所属栏目</summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.Article.UpdateArticleCommand.Category">
+            <summary>所属类别</summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.Article.UpdateArticleCommand.IsTopping">
+            <summary>是否置顶</summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.Article.UpdateArticleCommand.Sort">
+            <summary>排序</summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.Article.UpdateArticleCommand.IsDisplayedOnHomepage">
+            <summary>是否首页展示</summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.Article.UpdateArticleCommand.IsPublish">
+            <summary>是否发布</summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.Article.UpdateArticleCommand.PreviewUrl">
+            <summary>预览图</summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.Article.UpdateArticleCommand.Content">
+            <summary>内容</summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.Article.UpdateArticleCommand.IsExternalURL">
+            <summary>是否是外部链接</summary>
+        </member>
+        <member name="T:HaoKao.ArticleService.Domain.Commands.ArticleBrowseRecord.CreateArticleBrowseRecordCommand">
+            <summary>
+            创建文章浏览记录命令
+            </summary>
+            <param name="ClientUniqueId"></param>
+            <param name="ArticleId">文章Id</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Domain.Commands.ArticleBrowseRecord.CreateArticleBrowseRecordCommand.#ctor(System.Guid,System.Guid)">
+            <summary>
+            创建文章浏览记录命令
+            </summary>
+            <param name="ClientUniqueId"></param>
+            <param name="ArticleId">文章Id</param>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.ArticleBrowseRecord.CreateArticleBrowseRecordCommand.ClientUniqueId">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Commands.ArticleBrowseRecord.CreateArticleBrowseRecordCommand.ArticleId">
+            <summary>文章Id</summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Extensions.ArticleCacheManager.EntityTypeName">
+            <summary>
+            获取缓存键中使用的实体类型名称
+            </summary>
+        </member>
+        <member name="T:HaoKao.ArticleService.Domain.Models.Article">
+            <summary>
+            文章
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Models.Article.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Models.Article.Column">
+            <summary>
+            所属栏目(字典Id)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Models.Article.Category">
+            <summary>
+            所属类别(字典Id)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Models.Article.IsTopping">
+            <summary>
+            是否置顶
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Models.Article.Sort">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Models.Article.IsDisplayedOnHomepage">
+            <summary>
+            是否首页展示
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Models.Article.IsPublish">
+            <summary>
+            是否发布
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Models.Article.PreviewUrl">
+            <summary>
+            预览图
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Models.Article.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Models.Article.IsExternalURL">
+            <summary>
+            是否外部链接
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Models.Article.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Models.Article.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Models.Article.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.ArticleService.Domain.Models.ArticleBrowseRecord">
+            <summary>
+            文章浏览记录
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Models.ArticleBrowseRecord.ArticleId">
+            <summary>
+            文章Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Models.ArticleBrowseRecord.ClientUniqueId">
+            <summary>
+            客户端唯一识别号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Models.ArticleBrowseRecord.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Models.ArticleBrowseRecord.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Queries.ArticleQuery.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Queries.ArticleQuery.Column">
+            <summary>
+            所属栏目(字典Id)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Queries.ArticleQuery.Category">
+            <summary>
+            所属类别
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Queries.ArticleQuery.IsDisplayedOnHomepage">
+            <summary>
+            是否首页展示
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Queries.ArticleQuery.IsPublish">
+            <summary>
+            是否发布
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Domain.Queries.ArticleQuery.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="M:HaoKao.ArticleService.Domain.Repositories.IArticleBrowseRecordRepository.GetViewCount(System.Guid[])">
+            <summary>
+            获取文章浏览量
+            </summary>
+            <param name="articleIds">文章Ids</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Domain.Repositories.IArticleRepository.GetThisWeekHotArticle">
+            <summary>
+            获取本周热门文章
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

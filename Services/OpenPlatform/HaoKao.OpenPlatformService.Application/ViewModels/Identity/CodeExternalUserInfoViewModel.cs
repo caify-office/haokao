@@ -1,0 +1,3 @@
+namespace HaoKao.OpenPlatformService.Application.ViewModels.Identity;
+
+public class CodeExternalUserInfoViewModel;

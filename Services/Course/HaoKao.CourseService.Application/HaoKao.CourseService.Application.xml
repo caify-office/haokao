@@ -1,0 +1,2719 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.CourseService.Application</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Interfaces.ICourseChapterService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Interfaces.ICourseChapterService.Get(HaoKao.CourseService.Application.Modules.CourseChapterModule.ViewModels.QueryCourseChapterViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Interfaces.ICourseChapterService.GetTreeByQueryAsync(System.Nullable{System.Guid},System.Nullable{System.Guid})">
+            <summary>
+            获取数据-章节树列表
+            </summary>
+            <param name="id">展开的节点</param>
+            <param name="courseId">课程id</param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Interfaces.ICourseChapterService.GetAllAsync(System.Guid)" -->
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Interfaces.ICourseChapterService.Create(HaoKao.CourseService.Application.Modules.CourseChapterModule.ViewModels.CreateCourseChapterViewModel)">
+            <summary>
+            创建课程章节
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Interfaces.ICourseChapterService.BatchCreate(System.Collections.Generic.List{HaoKao.CourseService.Application.Modules.CourseChapterModule.ViewModels.CreateCourseChapterViewModel})">
+            <summary>
+            批量创建课程章节
+            </summary>
+            <param name="models"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Interfaces.ICourseChapterService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定课程章节
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Interfaces.ICourseChapterService.BatchDelete(System.Guid)">
+            <summary>
+            清空目录
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Interfaces.ICourseChapterService.Update(System.Guid,HaoKao.CourseService.Application.Modules.CourseChapterModule.ViewModels.UpdateCourseChapterViewModel)">
+            <summary>
+            根据主键更新指定课程章节
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Interfaces.ICourseChapterWebService.GetAllAsync(System.Guid)">
+            <summary>
+            按照课程id获取所有课程章节
+            </summary>
+            <param name="courseId">课程id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Interfaces.ICourseChapterWeChatService.GetTreeByQueryAsync(System.Nullable{System.Guid})">
+            <summary>
+            获取数据-章节树视频列表,这里需要将视频兼容进去
+            </summary>
+            <param name="courseId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Interfaces.ICourseChapterWeChatService.GetTreeAsync(System.Nullable{System.Guid},System.Nullable{System.Guid})">
+            <summary>
+            获取数据-章节树列表根据课程id获取章节树不兼容视频
+            </summary>
+            <param name="id"></param>
+            <param name="courseId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Interfaces.ICourseChapterWeChatService.GetAllAsync(System.Guid)">
+            <summary>
+            按照课程id获取所有课程章节
+            </summary>
+            <param name="courseId">课程id</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Modules.CourseChapterModule.Services.CourseChapterService">
+            <summary>
+            课程章节接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Services.CourseChapterService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.CourseService.Domain.CourseChapterModule.ICourseChapterRepository)">
+            <summary>
+            课程章节接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Services.CourseChapterService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Services.CourseChapterService.Get(HaoKao.CourseService.Application.Modules.CourseChapterModule.ViewModels.QueryCourseChapterViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Services.CourseChapterService.GetTreeByQueryAsync(System.Nullable{System.Guid},System.Nullable{System.Guid})">
+            <summary>
+            获取数据-章节树列表
+            </summary>
+            <param name="id">展开的节点</param>
+            <param name="courseId">课程id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Services.CourseChapterService.GetAllAsync(System.Guid)">
+            <summary>
+            按照课程id获取所有课程章节
+            </summary>
+            <param name="courseId">课程id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Services.CourseChapterService.Create(HaoKao.CourseService.Application.Modules.CourseChapterModule.ViewModels.CreateCourseChapterViewModel)">
+            <summary>
+            创建课程章节
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Services.CourseChapterService.BatchCreate(System.Collections.Generic.List{HaoKao.CourseService.Application.Modules.CourseChapterModule.ViewModels.CreateCourseChapterViewModel})">
+            <summary>
+            批量创建课程章节
+            </summary>
+            <param name="models"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Services.CourseChapterService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定课程章节
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Services.CourseChapterService.BatchDelete(System.Guid)">
+            <summary>
+            清空目录
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Services.CourseChapterService.Update(System.Guid,HaoKao.CourseService.Application.Modules.CourseChapterModule.ViewModels.UpdateCourseChapterViewModel)">
+            <summary>
+            根据主键更新指定课程章节
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Modules.CourseChapterModule.Services.CourseChapterWebService">
+            <summary>
+            课程章节接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Services.CourseChapterWebService.#ctor(HaoKao.CourseService.Domain.CourseChapterModule.ICourseChapterRepository,HaoKao.CourseService.Application.Modules.CourseChapterModule.Interfaces.ICourseChapterService)">
+            <summary>
+            课程章节接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Services.CourseChapterWebService.GetTreeByQueryAsync(System.Nullable{System.Guid})">
+            <summary>
+            获取数据-章节树视频列表,这里需要将视频兼容进去
+            </summary>
+            <param name="courseId">课程id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Services.CourseChapterWebService.GetTreeAsync(System.Nullable{System.Guid},System.Nullable{System.Guid})">
+            <summary>
+            获取数据-章节树列表根据课程id获取章节树不兼容视频
+            </summary>
+            <param name="id">展开的节点</param>
+            <param name="courseId">课程id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Services.CourseChapterWebService.GetAllAsync(System.Guid)">
+            <summary>
+            按照课程id获取所有课程章节
+            </summary>
+            <param name="courseId">课程id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Services.CourseChapterWebService.IsExistTry(System.Guid[])">
+            <summary>
+            判断这些课程下是否有试听视频
+            </summary>
+            <param name="courseIds"></param>
+            <returns></returns>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Modules.CourseChapterModule.Services.CourseChapterWeChatService">
+            <summary>
+            课程章节接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Services.CourseChapterWeChatService.#ctor(HaoKao.CourseService.Application.Modules.CourseChapterModule.Interfaces.ICourseChapterWebService)">
+            <summary>
+            课程章节接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Services.CourseChapterWeChatService.GetTreeByQueryAsync(System.Nullable{System.Guid})">
+            <summary>
+            获取数据-章节树视频列表,这里需要将视频兼容进去
+            </summary>
+            <param name="courseId">课程id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Services.CourseChapterWeChatService.GetTreeAsync(System.Nullable{System.Guid},System.Nullable{System.Guid})">
+            <summary>
+            获取数据-章节树列表根据课程id获取章节树不兼容视频
+            </summary>
+            <param name="id">展开的节点</param>
+            <param name="courseId">课程id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Services.CourseChapterWeChatService.GetAllAsync(System.Guid)">
+            <summary>
+            按照课程id获取所有课程章节
+            </summary>
+            <param name="courseId">课程id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseChapterModule.Services.CourseChapterWeChatService.IsExistTry(System.Guid[])">
+            <summary>
+            判断这些课程下是否有试听视频
+            </summary>
+            <param name="courseIds"></param>
+            <returns></returns>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseChapterModule.ViewModels.BrowseCourseChapterViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseChapterModule.ViewModels.BrowseCourseChapterViewModel.ParentId">
+            <summary>
+            父id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseChapterModule.ViewModels.BrowseCourseChapterViewModel.CourseId">
+            <summary>
+            关联的课程id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseChapterModule.ViewModels.CreateCourseChapterViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseChapterModule.ViewModels.CreateCourseChapterViewModel.ParentId">
+            <summary>
+            父id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseChapterModule.ViewModels.CreateCourseChapterViewModel.CourseId">
+            <summary>
+            关联的课程id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseChapterModule.ViewModels.CreateCourseChapterViewModel.IsLeaf">
+            <summary>
+            是否叶子节点
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseChapterModule.ViewModels.CreateCourseChapterViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseChapterModule.ViewModels.CourseChapterQueryListViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseChapterModule.ViewModels.CourseChapterQueryListViewModel.ParentId">
+            <summary>
+            父id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseChapterModule.ViewModels.CourseChapterQueryListViewModel.CourseId">
+            <summary>
+            关联的课程id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseChapterModule.ViewModels.UpdateCourseChapterViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Interfaces.ICourseMaterialsService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Interfaces.ICourseMaterialsService.Get(HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.QueryCourseMaterialsViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Interfaces.ICourseMaterialsService.Create(HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.CreateCourseMaterialsViewModel)">
+            <summary>
+            创建课程讲义
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Interfaces.ICourseMaterialsService.Save(HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.SaveCourseMaterialsViewModel)">
+            <summary>
+            保存课程讲义（智辅学习专用）
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Interfaces.ICourseMaterialsService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定课程讲义
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Interfaces.ICourseMaterialsService.Update(System.Guid,HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.SetCourseMaterialsSortViewModel)">
+            <summary>
+            根据主键更新指定课程讲义
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Interfaces.ICourseMaterialsWebService.Get(HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.QueryCourseMaterialsViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Interfaces.ICourseMaterialsWebService.DownLoadMaterials(System.Guid)">
+            <summary>
+            下载讲义（阶段学习传课程章节Id，智辅课程学习传课程Id）
+            </summary>
+            <param name="CourseId">（阶段学习传课程章节Id，智辅课程学习传课程Id）</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Interfaces.ICourseMaterialsWeChatService.Get(HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.QueryCourseMaterialsViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Interfaces.ICourseMaterialsWeChatService.DownLoadMaterials(System.Guid)">
+            <summary>
+            下载讲义（阶段学习传课程章节Id，智辅课程学习传课程Id）
+            </summary>
+            <param name="CourseId">（阶段学习传课程章节Id，智辅课程学习传课程Id）</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Services.CourseMaterialsService">
+            <summary>
+            课程讲义接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Services.CourseMaterialsService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.CourseService.Domain.CourseMaterialsModule.ICourseMaterialsRepository,AutoMapper.IMapper)">
+            <summary>
+            课程讲义接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Services.CourseMaterialsService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Services.CourseMaterialsService.Get(HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.QueryCourseMaterialsViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Services.CourseMaterialsService.Create(HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.CreateCourseMaterialsViewModel)">
+            <summary>
+            创建课程讲义
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Services.CourseMaterialsService.Save(HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.SaveCourseMaterialsViewModel)">
+            <summary>
+            保存课程讲义（智辅学习专用）
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Services.CourseMaterialsService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定课程讲义
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Services.CourseMaterialsService.Update(System.Guid,HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.SetCourseMaterialsSortViewModel)">
+            <summary>
+            根据主键更新指定课程讲义
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Services.CourseMaterialsWebService">
+            <summary>
+            课程讲义接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Services.CourseMaterialsWebService.#ctor(HaoKao.CourseService.Domain.CourseMaterialsModule.ICourseMaterialsRepository,HaoKao.CourseService.Domain.CourseChapterModule.ICourseChapterRepository)">
+            <summary>
+            课程讲义接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Services.CourseMaterialsWebService.Get(HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.QueryCourseMaterialsViewModel)">
+            <summary>
+            根据查询获取列表，用于分页(读取课程下所有的讲义)
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Services.CourseMaterialsWebService.DownLoadMaterials(System.Guid)">
+             <summary>
+            下载讲义（阶段学习传课程章节Id，智辅课程学习传课程Id）
+             </summary>
+             <param name="CourseId">（阶段学习传课程章节Id，智辅课程学习传课程Id）</param>
+             <returns></returns>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Services.CourseMaterialsWeChatService">
+            <summary>
+            课程讲义接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Services.CourseMaterialsWeChatService.#ctor(HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Interfaces.ICourseMaterialsWebService)">
+            <summary>
+            课程讲义接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Services.CourseMaterialsWeChatService.Get(HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.QueryCourseMaterialsViewModel)">
+            <summary>
+            根据查询获取列表，用于分页(读取课程下所有的讲义)
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.Services.CourseMaterialsWeChatService.DownLoadMaterials(System.Guid)">
+             <summary>
+            下载讲义（阶段学习传课程章节Id，智辅课程学习传课程Id）
+             </summary>
+             <param name="CourseId">（阶段学习传课程章节Id，智辅课程学习传课程Id）</param>
+             <returns></returns>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.BrowseCourseMaterialsViewModel.CourseChapterId">
+            <summary>
+            关联的课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.BrowseCourseMaterialsViewModel.KnowledgePointId">
+            <summary>
+            关联的知识点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.BrowseCourseMaterialsViewModel.Name">
+            <summary>
+            讲义名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.BrowseCourseMaterialsViewModel.FileUrl">
+            <summary>
+            讲义地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.BrowseCourseMaterialsViewModel.Sort">
+            <summary>
+            排序,处理上移下移,做成一个自增强的方式
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.BrowseCourseMaterialsViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.CreateCourseMaterialsViewModel.CourseChapterId">
+            <summary>
+            关联的课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.CreateCourseMaterialsViewModel.KnowledgePointId">
+            <summary>
+            关联的知识点id（智辅课程专用）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.CreateCourseMaterialsViewModel.Name">
+            <summary>
+            讲义名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.CreateCourseMaterialsViewModel.FileUrl">
+            <summary>
+            讲义地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.QueryCourseMaterialsViewModel.KnowledgePointId">
+            <summary>
+            关联的知识点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.QueryCourseMaterialsViewModel.CourseChapterId">
+            <summary>
+            关联的课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.QueryCourseMaterialsViewModel.CourseId">
+            <summary>
+            课程id（阶段学习专用）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.SetCourseMaterialsSortViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseMaterialsModule.ViewModels.SetCourseMaterialsSortViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Interfaces.ICourseService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Interfaces.ICourseService.Get(HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.QueryCourseViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Interfaces.ICourseService.Create(HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.CreateCourseViewModel)">
+            <summary>
+            创建课程
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Interfaces.ICourseService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定课程
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Interfaces.ICourseService.Update(HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.UpdateCourseViewModel)">
+            <summary>
+            根据主键更新指定课程
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Interfaces.ICourseService.UpdateCourseMaterialsPackageUrl(HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.UpdateCourseMaterialsPackageUrlViewModel)">
+            <summary>
+            根据主键更新指定课程讲义包
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Interfaces.ICourseService.MergeChaperAndVideo">
+            <summary>
+            合并课程章节表和视频表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Interfaces.ICourseWebService.Get(HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.QueryCourseViewModel)">
+            <summary>
+            课程列表
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Interfaces.ICourseWebService.GetTeacherIds(HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.QueryCourseViewModel)">
+            <summary>
+            读取讲师集合
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Interfaces.ICourseWebService.GetCourseInfos(System.String)">
+            <summary>
+            根据课程ids集合批量读取课程集合信息
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Interfaces.ICourseWebService.GetCourseInfo(System.Guid)">
+            <summary>
+            读取课程详情信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Interfaces.ICourseWeChatService.Get(HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.QueryCourseViewModel)">
+            <summary>
+            读取课程集合
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Interfaces.ICourseWeChatService.GetTeacherIds(HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.QueryCourseViewModel)">
+            <summary>
+            读取讲师集合
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Interfaces.ICourseWeChatService.GetCourseInfos(System.String)">
+            <summary>
+            根据课程ids集合批量读取课程集合
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Interfaces.ICourseWeChatService.GetCourseInfo(System.Guid)">
+            <summary>
+            读取课程详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseService">
+            <summary>
+            课程接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.CourseService.Domain.CourseModule.ICourseRepository)">
+            <summary>
+            课程接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseService.Get(HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.QueryCourseViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseService.GetTeacherIds(HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.QueryCourseViewModel)">
+            <summary>
+            根据课程ids集合拿到课程下面的所有的讲师ids(去重)
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseService.Create(HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.CreateCourseViewModel)">
+            <summary>
+            创建课程
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定课程
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseService.Update(HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.UpdateCourseViewModel)">
+            <summary>
+            根据主键更新指定课程
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseService.UpdateCourseMaterialsPackageUrl(HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.UpdateCourseMaterialsPackageUrlViewModel)">
+            <summary>
+            根据主键更新指定课程讲义包
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseService.SetUpState(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            上架(支持批量)
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseService.SetDownState(System.Collections.Generic.IEnumerable{System.Guid})">
+             <summary>
+            下架(支持批量)
+             </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseService.MergeChaperAndVideo">
+            <summary>
+            合并课程章节表和视频表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseService.UpdateGroundingState(System.Collections.Generic.IEnumerable{System.Guid},System.Boolean)">
+            <summary>
+            处理上下架
+            </summary>
+            <param name="ids"></param>
+            <param name="state"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseWebService">
+            <summary>
+            课程服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseWebService.#ctor(HaoKao.CourseService.Application.Modules.CourseModule.Interfaces.ICourseService,HaoKao.CourseService.Domain.CourseModule.ICourseRepository)">
+            <summary>
+            课程服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseWebService.Get(HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.QueryCourseViewModel)">
+            <summary>
+            根据查询获取列表
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseWebService.GetCourseInfo(System.Guid)">
+            <summary>
+            读取课程详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseWebService.GetCourseInfos(System.String)">
+            <summary>
+            批量读取课程详情
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseWebService.GetTeacherIds(HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.QueryCourseViewModel)">
+            <summary>
+            根据课程ids集合拿到课程下面的所有的讲师ids(去重)
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseWeChatService">
+            <summary>
+            课程服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseWeChatService.#ctor(HaoKao.CourseService.Application.Modules.CourseModule.Interfaces.ICourseWebService)">
+            <summary>
+            课程服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseWeChatService.Get(HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.QueryCourseViewModel)">
+            <summary>
+            根据查询获取列表
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseWeChatService.GetCourseInfo(System.Guid)">
+            <summary>
+            读取课程详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseWeChatService.GetCourseInfos(System.String)">
+            <summary>
+            批量读取课程详情
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseModule.Services.CourseWeChatService.GetTeacherIds(HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.QueryCourseViewModel)">
+            <summary>
+            根据课程ids集合拿到课程下面的所有的讲师ids(去重)
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.BrowseCourseViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.BrowseCourseViewModel.Name">
+            <summary>
+            课程名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.BrowseCourseViewModel.TeacherJson">
+            <summary>
+            主讲老师集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.BrowseCourseViewModel.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.BrowseCourseViewModel.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.BrowseCourseViewModel.SubjectName">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.BrowseCourseViewModel.UpdateTimeDesc">
+            <summary>
+            预计更新时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.BrowseCourseViewModel.CourseMaterialsPackageName">
+            <summary>
+            上传课程讲义包名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.BrowseCourseViewModel.CourseMaterialsPackageUrl">
+            <summary>
+            上传课程讲义包Url
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.BrowseCourseViewModel.State">
+            <summary>
+            上架状态 false-下架 true-上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.BrowseCourseViewModel.CourseType">
+            <summary>
+            课程类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.BrowseCourseViewModel.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.CreateCourseViewModel.Name">
+            <summary>
+            课程名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.CreateCourseViewModel.TeacherJson">
+            <summary>
+            主讲老师TeacherJson
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.CreateCourseViewModel.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.CreateCourseViewModel.SubjectId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.CreateCourseViewModel.SubjectName">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.CreateCourseViewModel.UpdateTimeDesc">
+            <summary>
+            预计更新时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.CreateCourseViewModel.State">
+            <summary>
+            上架状态 false-下架 true-上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.CreateCourseViewModel.CourseType">
+            <summary>
+            课程类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.QueryCourseViewModel.CourseName">
+            <summary>
+            课程名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.QueryCourseViewModel.SubjectId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.QueryCourseViewModel.State">
+            <summary>
+            上下架  true---上架  false-下架
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.QueryCourseViewModel.CourseIds">
+            <summary>
+            课程ids
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.QueryCourseViewModel.CourseType">
+            <summary>
+            课程类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.UpdateCourseMaterialsPackageUrlViewModel.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.UpdateCourseMaterialsPackageUrlViewModel.CourseMaterialsPackageName">
+            <summary>
+            上传课程讲义包名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.UpdateCourseMaterialsPackageUrlViewModel.CourseMaterialsPackageUrl">
+            <summary>
+            课程讲义包url
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.UpdateCourseViewModel.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.UpdateCourseViewModel.Name">
+            <summary>
+            课程名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.UpdateCourseViewModel.TeacherJson">
+            <summary>
+            主讲老师TeacherJson集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.UpdateCourseViewModel.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.UpdateCourseViewModel.SubjectId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.UpdateCourseViewModel.SubjectName">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.UpdateCourseViewModel.State">
+            <summary>
+            上架状态 false-下架 true-上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseModule.ViewModels.UpdateCourseViewModel.UpdateTimeDesc">
+            <summary>
+            预计更新时间
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Interfaces.ICoursePracticeService.Get(System.Guid)">
+            <summary>
+            根据课程章节id获取指定
+            </summary>
+            <param name="courseChapterId">课程章节id</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Interfaces.ICoursePracticeService.GetChapterPractice(System.Guid,System.Guid)">
+            <summary>
+            根据课程id和章节id获取指定章节练习(智辅课程专用)
+            </summary>
+            <param name="courseId">课程id</param>
+            <param name="courseChapterId">Id</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Interfaces.ICoursePracticeService.Get(HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.QueryCoursePracticeViewModel)">
+            <summary>
+            列表查询
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Interfaces.ICoursePracticeService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定课后练习
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Interfaces.ICoursePracticeService.Save(HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.SaveCoursePracticeViewModel)">
+            <summary>
+            根据主键更新指定课后练习
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Interfaces.ICoursePracticeService.SaveAssistantCoursePractice(HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.SaveAssistantCoursePracticeViewModel)">
+            <summary>
+            保存智辅课程练习（智辅课程专用）
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Interfaces.ICoursePracticeWebService.Get(System.Guid)">
+            <summary>
+            根据课程章节id获取指定
+            </summary>
+            <param name="courseChapterId">课程章节id</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Interfaces.ICoursePracticeWebService.Get(HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.QueryCoursePracticeViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Interfaces.ICoursePracticeWebService.GetChapterPractice(System.Guid,System.Guid)">
+            <summary>
+            根据课程id和章节id获取指定章节练习(智辅课程专用)
+            </summary>
+            <param name="courseId">课程id</param>
+            <param name="courseChapterId">Id</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Interfaces.ICoursePracticeWebService.GetPracticeInfoByKnowledgePointId(System.Guid,System.Collections.Generic.List{System.Guid})">
+            <summary>
+            通过知识点Id获取关联知识点对应的课后练习
+            </summary>
+            <param name="courseId">课程id</param>
+            <param name="knowledgePointIds">知识点id数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Interfaces.ICoursePracticeWebService.GetExamFrequencyQuestionCount(System.Guid)">
+            <summary>
+            获取指定课程的考试频度对应的数量
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Interfaces.ICoursePracticeWeChatService.Get(System.Guid)">
+            <summary>
+            根据课程章节id获取指定
+            </summary>
+            <param name="courseChapterId">课程章节id</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Interfaces.ICoursePracticeWeChatService.GetChapterPractice(System.Guid,System.Guid)">
+            <summary>
+            根据课程id和章节id获取指定章节练习(智辅课程专用)
+            </summary>
+            <param name="courseId">课程id</param>
+            <param name="courseChapterId">Id</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Interfaces.ICoursePracticeWeChatService.GetPracticeInfoByKnowledgePointId(System.Guid,System.Collections.Generic.List{System.Guid})">
+            <summary>
+            通过知识点Id获取关联知识点对应的课后练习
+            </summary>
+            <param name="courseId">课程id</param>
+            <param name="knowledgePointIds">知识点id数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Interfaces.ICoursePracticeWeChatService.GetExamFrequencyQuestionCount(System.Guid)">
+            <summary>
+            获取指定课程的考试频度对应的数量
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Services.CoursePracticeService">
+            <summary>
+            课后练习接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Services.CoursePracticeService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.CourseService.Domain.CoursePracticeModule.ICoursePracticeRepository,AutoMapper.IMapper)">
+            <summary>
+            课后练习接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Services.CoursePracticeService.Get(System.Guid)">
+            <summary>
+            根据课程章节id获取指定
+            </summary>
+            <param name="courseChapterId">课程章节id</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Services.CoursePracticeService.GetChapterPractice(System.Guid,System.Guid)">
+            <summary>
+            根据课程id和章节id获取指定章节练习(智辅课程专用)
+            </summary>
+            <param name="courseId">课程id</param>
+            <param name="courseChapterId">Id</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Services.CoursePracticeService.Update(HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.UpdateCoursePracticeViewModel)">
+            <summary>
+            根据主键更新指定课后练习
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Services.CoursePracticeService.Create(HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.CreateCoursePracticeViewModel)">
+            <summary>
+            创建课后练习
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Services.CoursePracticeService.SaveAssistantCoursePractice(HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.SaveAssistantCoursePracticeViewModel)">
+            <summary>
+            保存智辅课程练习（智辅课程专用）
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Services.CoursePracticeService.Get(HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.QueryCoursePracticeViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Services.CoursePracticeService.Save(HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.SaveCoursePracticeViewModel)">
+            <summary>
+            保存课后练习
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Services.CoursePracticeService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定课后练习
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Services.CoursePracticeWebService">
+            <summary>
+            课后练习接口服务-web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Services.CoursePracticeWebService.#ctor(HaoKao.CourseService.Application.Modules.CoursePracticeModule.Interfaces.ICoursePracticeService,HaoKao.CourseService.Domain.CoursePracticeModule.ICoursePracticeRepository,Girvs.Cache.Caching.IStaticCacheManager)">
+            <summary>
+            课后练习接口服务-web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Services.CoursePracticeWebService.Get(System.Guid)">
+            <summary>
+            根据课程章节id获取指定
+            </summary>
+            <param name="courseChapterId">课程章节id</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Services.CoursePracticeWebService.Get(HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.QueryCoursePracticeViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Services.CoursePracticeWebService.GetChapterPractice(System.Guid,System.Guid)">
+            <summary>
+            根据课程id和章节id获取指定章节练习(智辅课程专用)
+            </summary>
+            <param name="courseId">课程id</param>
+            <param name="courseChapterId">Id</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Services.CoursePracticeWebService.GetPracticeInfoByKnowledgePointId(System.Guid,System.Collections.Generic.List{System.Guid})">
+            <summary>
+            通过知识点Id获取关联知识点对应的课后练习
+            </summary>
+            <param name="courseId">课程id</param>
+            <param name="knowledgePointIds">知识点id数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Services.CoursePracticeWebService.GetExamFrequencyQuestionCount(System.Guid)">
+            <summary>
+            获取指定课程的考试频度对应的数量
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Services.CoursePracticeWeChatService">
+            <summary>
+            课后练习接口服务-小程序端
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Services.CoursePracticeWeChatService.#ctor(HaoKao.CourseService.Application.Modules.CoursePracticeModule.Interfaces.ICoursePracticeWebService)">
+            <summary>
+            课后练习接口服务-小程序端
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Services.CoursePracticeWeChatService.Get(System.Guid)">
+            <summary>
+            根据课程章节id获取指定
+            </summary>
+            <param name="courseChapterId">课程章节id</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Services.CoursePracticeWeChatService.Get(HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.QueryCoursePracticeViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Services.CoursePracticeWeChatService.GetChapterPractice(System.Guid,System.Guid)">
+            <summary>
+            根据课程id和章节id获取指定章节练习(智辅课程专用)
+            </summary>
+            <param name="courseId">课程id</param>
+            <param name="courseChapterId">Id</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Services.CoursePracticeWeChatService.GetPracticeInfoByKnowledgePointId(System.Guid,System.Collections.Generic.List{System.Guid})">
+            <summary>
+            通过知识点Id获取关联知识点对应的课后练习
+            </summary>
+            <param name="courseId">课程id</param>
+            <param name="knowledgePointIds">知识点id数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CoursePracticeModule.Services.CoursePracticeWeChatService.GetExamFrequencyQuestionCount(System.Guid)">
+            <summary>
+            获取指定课程的考试频度对应的数量
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.BrowseCoursePracticeViewModel.SubjectId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.BrowseCoursePracticeViewModel.CourseId">
+            <summary>
+            课程id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.BrowseCoursePracticeViewModel.CourseChapterId">
+            <summary>
+            关联的课程章节id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.BrowseCoursePracticeViewModel.CourseChapterName">
+            <summary>
+             关联的课程章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.BrowseCoursePracticeViewModel.KnowledgePointId">
+            <summary>
+            关联的知识点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.BrowseCoursePracticeViewModel.ChapterNodeId">
+            <summary>
+            关联的试题章节id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.BrowseCoursePracticeViewModel.ChapterNodeName">
+            <summary>
+            关联的试题章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.BrowseCoursePracticeViewModel.QuestionCategoryId">
+            <summary>
+            关联的试题分类Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.BrowseCoursePracticeViewModel.QuestionCategoryName">
+            <summary>
+            关联的试题分类名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.BrowseCoursePracticeViewModel.QuestionConfig">
+            <summary>
+            试题配置(智辅学习课程，添加课后练习使用)
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.BrowseCoursePracticeViewModel.QuestionCount">
+            <summary>
+            试题数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.ExamFrequencyQuestionCountViewModel.High">
+            <summary>
+            高频知识点统计
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.ExamFrequencyQuestionCountViewModel.Medium">
+            <summary>
+            中频知识点统计
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.ExamFrequencyQuestionCountViewModel.Low">
+            <summary>
+            低频知识点统计
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.CreateCoursePracticeViewModel.SubjectId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.CreateCoursePracticeViewModel.CourseChapterId">
+            <summary>
+            关联的课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.CreateCoursePracticeViewModel.CourseChapterName">
+            <summary>
+            关联的课程章节名称（阶段学习为课程章节名称,智慧辅助学习为课程名称）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.CreateCoursePracticeViewModel.ChapterNodeId">
+            <summary>
+            关联的试题章节id（阶段课程专用）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.CreateCoursePracticeViewModel.ChapterNodeName">
+            <summary>
+            关联的试题章节名称（阶段课程专用）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.CreateCoursePracticeViewModel.QuestionCategoryId">
+            <summary>
+            关联的试题分类Id（阶段课程专用）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.CreateCoursePracticeViewModel.QuestionCategoryName">
+            <summary>
+            关联的试题分类名称（阶段课程专用）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.SaveCoursePracticeViewModel.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.QueryCoursePracticeViewModel.KnowledgePointId">
+            <summary>
+            关联的知识点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.QueryCoursePracticeViewModel.CourseChapterId">
+            <summary>
+            关联的课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.SaveAssistantCoursePracticeViewModel.SubjectId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.SaveAssistantCoursePracticeViewModel.CourseId">
+            <summary>
+            课程id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.SaveAssistantCoursePracticeViewModel.PracticeType">
+            <summary>
+            练习类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.SaveAssistantCoursePracticeViewModel.CourseChapterId">
+            <summary>
+            关联的课程章节id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.SaveAssistantCoursePracticeViewModel.CourseChapterName">
+            <summary>
+            关联的课程章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.SaveAssistantCoursePracticeViewModel.KnowledgePointId">
+            <summary>
+            关联的知识点id（智辅课程专用）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.SaveAssistantCoursePracticeViewModel.ExamFrequency">
+            <summary>
+            考试频率
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.SaveAssistantCoursePracticeViewModel.ChapterNodeId">
+            <summary>
+            关联的试题章节id（阶段课程专用）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.SaveAssistantCoursePracticeViewModel.ChapterNodeName">
+            <summary>
+            关联的试题章节名称（阶段课程专用）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.SaveAssistantCoursePracticeViewModel.QuestionCategoryId">
+            <summary>
+            关联的试题分类Id（阶段课程专用）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.SaveAssistantCoursePracticeViewModel.QuestionCategoryName">
+            <summary>
+            关联的试题分类名称（阶段课程专用）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.SaveAssistantCoursePracticeViewModel.QuestionConfig">
+            <summary>
+            试题配置(智辅学习课程专用)
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CoursePracticeModule.ViewModels.SaveAssistantCoursePracticeViewModel.QuestionCount">
+            <summary>
+            试题数量(智辅学习课程专用)
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoService.Get(HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.QueryCourseVideoViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoService.GetUpdateCourseVideoList(System.String)">
+            <summary>
+            读取课程下面的更新资料接口
+            </summary>
+            <param name="courseIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoService.GetUpdateAssistantCourseVideoList(System.String)">
+            <summary>
+            读取课程下面的更新资料接口(智辅课程专用)
+            </summary>
+            <param name="courseIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoService.GetVideoIdsByCourseIds(System.String)">
+            <summary>
+            根据课程ids拿到多个课程下面所有的
+            </summary>
+            <param name="courseIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoService.QueryKnowledgePointConfigInfo(HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.QueryKnowledgePointConfigInfoViewModel)">
+            <summary>
+            补充智辅课程知识点信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoService.Save(HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.SaveCourseVideoViewModel)">
+            <summary>
+            创建课程视频
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定课程视频
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoService.Update(System.Guid,HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.UpdateCourseVideoViewModel)">
+            <summary>
+            根据主键更新指定课程视频
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoService.UpdateSort(HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.UpdateSortModel)">
+            <summary>
+            修改排序
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoService.UpdateKnowledgePoint(HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.UpdateKnowledgePointModel)">
+            <summary>
+            修改知识点
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoWebService.GetCourseVideoList(HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.QueryCourseVideoViewModel)">
+            <summary>
+            读取课程下面的视频集合
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoWebService.Get(HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.QueryCourseVideoViewModel)">
+            <summary>
+            读取课程视频详情
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoWebService.GetVideoIdsByCourseIds(System.String)">
+            <summary>
+            根据课程ids读取视频ids集合
+            </summary>
+            <param name="CourseIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoWebService.GetUpdateAssistantCourseVideoList(System.String)">
+            <summary>
+            读取课程下面的更新资料接口(智辅课程专用)
+            </summary>
+            <param name="courseIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoWebService.GetVideoInfo(HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.QueryByIds)">
+            <summary>
+            批量读取视频信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoWebService.GetUpdateCourseVideoList(System.String)">
+            <summary>
+            读取课程下面的更新资料接口
+            </summary>
+            <param name="CourseIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoWebService.GetVideoInfoByKnowledgePointId(System.Nullable{System.Guid},System.Collections.Generic.List{System.Guid})">
+            <summary>
+            通过知识点Id获取关联知识点对应的学习视频
+            </summary>
+            <param name="CourseChapterId">课程id</param>
+            <param name="knowledgePointIds">知识点id数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoWeChatService.GetCourseVideoList(HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.QueryCourseVideoViewModel)">
+            <summary>
+            根据查询获取列表，用于分页(读取课程下面所有的课程视频id)
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoWeChatService.GetUpdateCourseVideoList(System.String)">
+            <summary>
+            读取课程下面的更新资料接口
+            </summary>
+            <param name="CourseIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoWeChatService.GetUpdateAssistantCourseVideoList(System.String)">
+            <summary>
+            读取课程下面的更新资料接口(智辅课程专用)
+            </summary>
+            <param name="courseIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoWeChatService.Get(HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.QueryCourseVideoViewModel)">
+            <summary>
+            根据章节id拉取章节下面的视频
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoWeChatService.GetVideoInfoByKnowledgePointId(System.Nullable{System.Guid},System.Collections.Generic.List{System.Guid})">
+            <summary>
+            通过知识点Id获取关联知识点对应的学习视频
+            </summary>
+            <param name="CourseChapterId">课程id</param>
+            <param name="knowledgePointIds">知识点id数组</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoService">
+            <summary>
+            课程视频接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.CourseService.Domain.CourseVideoModule.ICourseVideoRepository,HaoKao.CourseService.Domain.CoursePracticeModule.ICoursePracticeRepository,HaoKao.CourseService.Domain.CourseMaterialsModule.ICourseMaterialsRepository,HaoKao.CourseService.Domain.CourseChapterModule.ICourseChapterRepository,HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Interfaces.ICourseVideoNoteWebService,HaoKao.CourseService.Application.Modules.VideoStorageModule.Interfaces.IVideoStorageService,Microsoft.Extensions.Logging.ILogger{HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoService})">
+            <summary>
+            课程视频接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoService.Get(HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.QueryCourseVideoViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoService.GetUpdateCourseVideoList(System.String)">
+            <summary>
+            读取课程下面的更新资料接口
+            </summary>
+            <param name="courseIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoService.GetUpdateAssistantCourseVideoList(System.String)">
+            <summary>
+            读取课程下面的更新资料接口(智辅课程专用)
+            </summary>
+            <param name="courseIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoService.GetVideoIdsByCourseIds(System.String)">
+            <summary>
+            根据课程ids拿到多个课程下面所有的
+            </summary>
+            <param name="courseIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoService.QueryKnowledgePointConfigInfo(HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.QueryKnowledgePointConfigInfoViewModel)">
+            <summary>
+            补充智辅课程知识点信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoService.Save(HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.SaveCourseVideoViewModel)">
+            <summary>
+            保存课程视频（智辅课程专用）
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoService.BatchCreate(System.Collections.Generic.List{HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.SaveCourseVideoViewModel})">
+            <summary>
+            批量添加视频
+            </summary>
+            <param name="models"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定课程视频
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoService.Update(System.Guid,HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.UpdateCourseVideoViewModel)">
+            <summary>
+            根据主键更新指定课程视频
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoService.UpdateKnowledgePoint(HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.UpdateKnowledgePointModel)">
+            <summary>
+            设置知识点(单个)
+            </summary>
+            <param name="rquest"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoService.UpdateSort(HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.UpdateSortModel)">
+            <summary>
+            设置排序(单个)
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoService.SetTry(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            设置试听(支持批量)
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoService.CancelTry(System.Collections.Generic.IEnumerable{System.Guid})">
+             <summary>
+            取消试听(支持批量)
+             </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoService.BatchUpdateName(HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.BatchUpdateNameViewModel)">
+            <summary>
+            批量修改前缀(支持批量)
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoService.UpdateIsTry(System.Collections.Generic.IEnumerable{System.Guid},System.Boolean)">
+            <summary>
+            设置取消试听
+            </summary>
+            <param name="ids"></param>
+            <param name="state"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoService.UpdateVideoInfo(System.IServiceProvider)">
+            <summary>
+            更新所有租户下视频标签和视频分类
+            </summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoWebService">
+            <summary>
+            课程视频接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoWebService.#ctor(HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoService,HaoKao.CourseService.Domain.CourseVideoModule.ICourseVideoRepository,HaoKao.CourseService.Domain.CourseChapterModule.ICourseChapterRepository)">
+            <summary>
+            课程视频接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoWebService.GetCourseVideoList(HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.QueryCourseVideoViewModel)">
+            <summary>
+            根据查询获取列表，用于分页(读取课程下面所有的课程视频id)
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoWebService.GetUpdateCourseVideoList(System.String)">
+            <summary>
+            读取课程下面的更新资料接口
+            </summary>
+            <param name="courseIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoWebService.GetUpdateAssistantCourseVideoList(System.String)">
+            <summary>
+            读取课程下面的更新资料接口(智辅课程专用)
+            </summary>
+            <param name="courseIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoWebService.GetVideoIdsByCourseIds(System.String)">
+            <summary>
+            根据课程ids拿到多个课程下面所有的课程视频信息
+            </summary>
+            <param name="courseIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoWebService.Get(HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.QueryCourseVideoViewModel)">
+            <summary>
+            根据章节id拉取章节下面的视频
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoWebService.GetVideoInfo(HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.QueryByIds)">
+            <summary>
+            读取视频详情(批量拉取)
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoWebService.GetVideoInfoByKnowledgePointId(System.Nullable{System.Guid},System.Collections.Generic.List{System.Guid})">
+            <summary>
+            通过知识点Id获取关联知识点对应的学习视频
+            </summary>
+            <param name="CourseChapterId"></param>
+            <param name="knowledgePointIds">知识点id数组</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoWeChatService">
+            <summary>
+            课程视频接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoWeChatService.#ctor(HaoKao.CourseService.Application.Modules.CourseVideoModule.Interfaces.ICourseVideoWebService)">
+            <summary>
+            课程视频接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoWeChatService.GetCourseVideoList(HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.QueryCourseVideoViewModel)">
+            <summary>
+            根据查询获取列表，用于分页(读取课程下面所有的课程视频id)
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoWeChatService.GetUpdateCourseVideoList(System.String)">
+            <summary>
+            读取课程下面的更新资料接口
+            </summary>
+            <param name="CourseIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoWeChatService.GetUpdateAssistantCourseVideoList(System.String)">
+            <summary>
+            读取课程下面的更新资料接口(智辅课程专用)
+            </summary>
+            <param name="courseIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoWeChatService.GetVideoIdsByCourseIds(System.String)">
+            <summary>
+            根据课程ids拿到多个课程下面所有的
+            </summary>
+            <param name="CourseIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoWeChatService.Get(HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.QueryCourseVideoViewModel)">
+            <summary>
+            根据章节id拉取章节下面的视频
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoWeChatService.GetVideoInfo(HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.QueryByIds)">
+            <summary>
+            读取视频详情(批量拉取)
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoModule.Services.CourseVideoWeChatService.GetVideoInfoByKnowledgePointId(System.Nullable{System.Guid},System.Collections.Generic.List{System.Guid})">
+            <summary>
+            通过知识点Id获取关联知识点对应的学习视频
+            </summary>
+            <param name="CourseChapterId">课程id</param>
+            <param name="knowledgePointIds">知识点id数组</param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.BrowseCourseVideoViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.BrowseCourseVideoViewModel.CourseChapterId">
+            <summary>
+            关联的课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.BrowseCourseVideoViewModel.KnowledgePointId">
+            <summary>
+            关联的知识点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.BrowseCourseVideoViewModel.KnowledgePointIds">
+            <summary>
+            关联的知识点id(阶段学习保存多个知识点id拼接数组使用)
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.BrowseCourseVideoViewModel.Suffix">
+            <summary>
+            后缀
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.BrowseCourseVideoViewModel.Duration">
+            <summary>
+            时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.BrowseCourseVideoViewModel.IsTry">
+            <summary>
+            是否试听  ture--试听 false --不可试听
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.BrowseCourseVideoViewModel.VideoName">
+            <summary>
+            视频名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.BrowseCourseVideoViewModel.SourceName">
+            <summary>
+            视频源名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.BrowseCourseVideoViewModel.VideoUrl">
+            <summary>
+            播放url-冗余
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.BrowseCourseVideoViewModel.VideoId">
+            <summary>
+            视频id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.BrowseCourseVideoViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.BrowseCourseVideoViewModel.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.BrowseCourseVideoViewModel.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.BrowseCourseVideoViewModel.CateId">
+            <summary>
+            视频分类id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.BrowseCourseVideoViewModel.CateName">
+            <summary>
+            视频分类名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.BrowseCourseVideoViewModel.Tags">
+            <summary>
+            视频标签
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.QueryCourseVideoViewModel.KnowledgePointId">
+            <summary>
+            关联的知识点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.QueryCourseVideoViewModel.CourseChapterId">
+            <summary>
+            关联的课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.QueryCourseVideoViewModel.CourseId">
+            <summary>
+            课程id（阶段学习专用）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.CourseVideoQueryListViewModel.CourseChapterName">
+            <summary>
+            章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.CourseVideoQueryListViewModel.CourseChapterSort">
+            <summary>
+            章节排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.CourseVideoQueryListViewModel.QzName">
+            <summary>
+            前缀name
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.CourseVideoQueryListViewModel.CreateTime">
+            <summary>
+            上传时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.CourseVideoQueryListViewModel.IsNew">
+            <summary>
+            是否最新的
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.SaveCourseVideoViewModel.CourseChapterId">
+            <summary>
+            关联的课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.SaveCourseVideoViewModel.KnowledgePointId">
+            <summary>
+            关联的知识点id(智慧辅助课程专用)
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.SaveCourseVideoViewModel.Suffix">
+            <summary>
+            后缀
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.SaveCourseVideoViewModel.Duration">
+            <summary>
+            时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.SaveCourseVideoViewModel.IsTry">
+            <summary>
+            是否试听  ture--试听 false --不可试听
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.SaveCourseVideoViewModel.VideoName">
+            <summary>
+            视频名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.SaveCourseVideoViewModel.SourceName">
+            <summary>
+            视频源名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.SaveCourseVideoViewModel.VideoUrl">
+            <summary>
+            播放url-冗余
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.SaveCourseVideoViewModel.VideoId">
+            <summary>
+            视频id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.SaveCourseVideoViewModel.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.SaveCourseVideoViewModel.CateId">
+            <summary>
+            视频分类id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.SaveCourseVideoViewModel.CateName">
+            <summary>
+            视频分类名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.SaveCourseVideoViewModel.Tags">
+            <summary>
+            视频标签
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoModule.ViewModels.UpdateCourseVideoViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Interfaces.ICourseVideoNoteWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Interfaces.ICourseVideoNoteWebService.Get(HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.ViewModels.QueryCourseVideoNoteViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Interfaces.ICourseVideoNoteWebService.Create(HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.ViewModels.CreateCourseVideoNoteViewModel)">
+            <summary>
+            创建课程视频笔记
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Interfaces.ICourseVideoNoteWebService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定课程视频笔记
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Interfaces.ICourseVideoNoteWebService.DeleteBatch(System.String)">
+            <summary>
+            根据视频id删除对应的所有笔记
+            </summary>
+            <param name="videoId">视频id</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Interfaces.ICourseVideoNoteWebService.Update(HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.ViewModels.UpdateCourseVideoNoteViewModel)">
+            <summary>
+            根据主键更新指定课程视频笔记
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Interfaces.ICourseVideoNoteWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Interfaces.ICourseVideoNoteWeChatService.Get(HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.ViewModels.QueryCourseVideoNoteViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Interfaces.ICourseVideoNoteWeChatService.Create(HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.ViewModels.CreateCourseVideoNoteViewModel)">
+            <summary>
+            创建课程视频笔记
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Interfaces.ICourseVideoNoteWeChatService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定课程视频笔记
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Interfaces.ICourseVideoNoteWeChatService.Update(HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.ViewModels.UpdateCourseVideoNoteViewModel)">
+            <summary>
+            根据主键更新指定课程视频笔记
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Services.CourseVideoNoteWebService">
+            <summary>
+            课程视频笔记接口服务-web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Services.CourseVideoNoteWebService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.CourseService.Domain.CourseVideoNoteModule.ICourseVideoNoteRepository)">
+            <summary>
+            课程视频笔记接口服务-web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Services.CourseVideoNoteWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Services.CourseVideoNoteWebService.Get(HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.ViewModels.QueryCourseVideoNoteViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Services.CourseVideoNoteWebService.Create(HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.ViewModels.CreateCourseVideoNoteViewModel)">
+            <summary>
+            创建课程视频笔记
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Services.CourseVideoNoteWebService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定课程视频笔记
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Services.CourseVideoNoteWebService.DeleteBatch(System.String)">
+            <summary>
+            根据视频id删除对应的所有笔记
+            </summary>
+            <param name="videoId">视频id</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Services.CourseVideoNoteWebService.Update(HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.ViewModels.UpdateCourseVideoNoteViewModel)">
+            <summary>
+            根据主键更新指定课程视频笔记
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Services.CourseVideoNoteWeChatService">
+            <summary>
+            课程视频笔记接口服务-小程序端
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Services.CourseVideoNoteWeChatService.#ctor(HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Interfaces.ICourseVideoNoteWebService)">
+            <summary>
+            课程视频笔记接口服务-小程序端
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Services.CourseVideoNoteWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Services.CourseVideoNoteWeChatService.Get(HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.ViewModels.QueryCourseVideoNoteViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Services.CourseVideoNoteWeChatService.Create(HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.ViewModels.CreateCourseVideoNoteViewModel)">
+            <summary>
+            创建课程视频笔记
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Services.CourseVideoNoteWeChatService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定课程视频笔记
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.Services.CourseVideoNoteWeChatService.Update(HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.ViewModels.UpdateCourseVideoNoteViewModel)">
+            <summary>
+            根据主键更新指定课程视频笔记
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.ViewModels.BrowseCourseVideoNoteViewModel.VideoId">
+            <summary>
+            视频id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.ViewModels.BrowseCourseVideoNoteViewModel.TimeNode">
+            <summary>
+            视频时间节点
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.ViewModels.BrowseCourseVideoNoteViewModel.CourseVideoNoteType">
+            <summary>
+            笔记类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.ViewModels.BrowseCourseVideoNoteViewModel.NoteContent">
+            <summary>
+            笔记内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.ViewModels.BrowseCourseVideoNoteViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.ViewModels.BrowseCourseVideoNoteViewModel.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.ViewModels.CreateCourseVideoNoteViewModel.VideoId">
+            <summary>
+            视频id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.ViewModels.CreateCourseVideoNoteViewModel.TimeNode">
+            <summary>
+            视频时间节点
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.ViewModels.CreateCourseVideoNoteViewModel.CourseVideoNoteType">
+            <summary>
+            笔记类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.ViewModels.CreateCourseVideoNoteViewModel.NoteContent">
+            <summary>
+            笔记内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.ViewModels.QueryCourseVideoNoteViewModel.VideoId">
+            <summary>
+            视频id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.CourseVideoNoteModule.ViewModels.UpdateCourseVideoNoteViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Interfaces.IStsStorageWeChatService.AssumeRole">
+            <summary>
+            获取STS凭证
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Interfaces.IVideoStorageService.Get">
+            <summary>
+            根据主键获取指定
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Interfaces.IVideoStorageService.Update(HaoKao.CourseService.Application.Modules.VideoStorageModule.ViewModels.UpdateVideoStorageViewModel)">
+            <summary>
+            根据主键更新指定
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Interfaces.IVideoStorageService.GetHandlers">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Interfaces.IVideoStorageService.SearchVideo">
+            <summary>
+            获取搜索结果
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Interfaces.IVideoStorageService.GetVideoInfo(System.String)">
+            <summary>
+            获取视频信息
+            </summary>
+            <param name="videoId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Interfaces.IVideoStorageService.GetCurrentVideoStorage">
+            <summary>
+            获取当前租户的视频存储
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Interfaces.IVideoStorageService.GetVideoStorageHandlers">
+            <summary>
+            获取视频存储处理器列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Interfaces.IVideoStorageService.GetVideoStorageHandler">
+            <summary>
+            获取视频存储处理器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Interfaces.IVideoStorageWebService.GetHandlers">
+            <summary>
+            获取所有的视频存储处理器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Interfaces.IVideoStorageWebService.GetVideoAuth(System.String)">
+            <summary>
+             读取权限
+            </summary>
+            <param name="videoId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Interfaces.IVideoStorageWeChatService.GetHandlers">
+            <summary>
+            获取所有的视频存储处理器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Interfaces.IVideoStorageWeChatService.GetVideoPlayInfo(System.String)">
+            <summary>
+            根据videoid读取视频的url
+            </summary>
+            <param name="videoId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Modules.VideoStorageModule.Services.StsStorageWeChatService">
+            <summary>
+            获取云存储临时访问凭证STS相关接口 - 微信小程序
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Services.StsStorageWeChatService.#ctor(HaoKao.CourseService.Application.Modules.VideoStorageModule.Interfaces.IVideoStorageService)">
+            <summary>
+            获取云存储临时访问凭证STS相关接口 - 微信小程序
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Services.StsStorageWeChatService.AssumeRole">
+            <summary>
+            获取STS凭证
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Modules.VideoStorageModule.Services.VideoStorageService">
+            <summary>
+            存储器配置保存
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Services.VideoStorageService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.CourseService.Domain.VideoStorageModule.IVideoStorageRepository)">
+            <summary>
+            存储器配置保存
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Services.VideoStorageService.Get">
+            <summary>
+            根据主键获取指定
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Services.VideoStorageService.Update(HaoKao.CourseService.Application.Modules.VideoStorageModule.ViewModels.UpdateVideoStorageViewModel)">
+            <summary>
+            根据主键更新指定
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Services.VideoStorageService.GetHandlers">
+            <summary>
+            获取所有的视频存储处理器
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Services.VideoStorageService.SearchVideo">
+            <summary>
+            根据当前的配置搜索视频列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Services.VideoStorageService.GetVideoInfo(System.String)">
+            <summary>
+            获取视频信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Services.VideoStorageService.GetVideoAuth(System.String)">
+            <summary>
+            根据当前视频id读取阿里视频加密视频播放密钥
+            </summary>
+            <param name="videoId">视频id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Services.VideoStorageService.GetCategories">
+            <summary>
+            根据当前的配置获取分类列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Modules.VideoStorageModule.Services.VideoStorageWebService">
+            <summary>
+            存储器配置保存
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Services.VideoStorageWebService.#ctor(HaoKao.CourseService.Application.Modules.VideoStorageModule.Interfaces.IVideoStorageService)">
+            <summary>
+            存储器配置保存
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Services.VideoStorageWebService.GetHandlers">
+            <summary>
+            获取所有的视频存储处理器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Services.VideoStorageWebService.GetVideoAuth(System.String)">
+            <summary>
+            根据当前视频id读取阿里视频加密视频播放密钥
+            </summary>
+            <param name="VideoId">视频id</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Modules.VideoStorageModule.Services.VideoStorageWeChatService">
+            <summary>
+            存储器配置保存
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Services.VideoStorageWeChatService.#ctor(HaoKao.CourseService.Application.Modules.VideoStorageModule.Interfaces.IVideoStorageService)">
+            <summary>
+            存储器配置保存
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Modules.VideoStorageModule.Services.VideoStorageWeChatService.GetHandlers">
+            <summary>
+            获取所有的视频存储处理器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.VideoStorageModule.ViewModels.BrowseVideoStorageViewModel.VideoStorageHandlerId">
+            <summary>
+            视频存储器ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.VideoStorageModule.ViewModels.BrowseVideoStorageViewModel.VideoStorageHandlerName">
+            <summary>
+            视频存储器名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.VideoStorageModule.ViewModels.BrowseVideoStorageViewModel.ConfigParameter">
+            <summary>
+            相关的配置参数
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.VideoStorageModule.ViewModels.UpdateVideoStorageViewModel.VideoStorageHandlerId">
+            <summary>
+            视频存储器ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.VideoStorageModule.ViewModels.UpdateVideoStorageViewModel.VideoStorageHandlerName">
+            <summary>
+            视频存储器名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.VideoStorageModule.ViewModels.UpdateVideoStorageViewModel.ConfigParameter">
+            <summary>
+            相关的配置参数
+            </summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Modules.VideoStorageModule.ViewModels.VideoStorageHandlerViewModel">
+            <summary>
+            视频存储处理器模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.VideoStorageModule.ViewModels.VideoStorageHandlerViewModel.StorageHandlerId">
+            <summary>
+            存储处理Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.VideoStorageModule.ViewModels.VideoStorageHandlerViewModel.StorageHandlerName">
+            <summary>
+            存储处理名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.VideoStorageModule.ViewModels.VideoStorageHandlerViewModel.StorageConfig">
+            <summary>
+            存储处理配置
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.VideoStorageModule.ViewModels.VideoModel.RequestId">
+            <summary>
+            请求ID。
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.VideoStorageModule.ViewModels.VideoModel.PlayAuth">
+            <summary>
+            视频播放凭证
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.VideoStorageModule.ViewModels.VideoModel.Title">
+            <summary>
+            视频标题
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.VideoStorageModule.ViewModels.VideoModel.VideoId">
+            <summary>
+            视频ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.VideoStorageModule.ViewModels.VideoModel.CoverURL">
+            <summary>
+            视频封面
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.VideoStorageModule.ViewModels.VideoModel.Duration">
+            <summary>
+            视频时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.VideoStorageModule.ViewModels.VideoModel.Status">
+            <summary>
+            视频状态
+            Uploading	上传中	视频的初始状态，表示正在上传。
+            UploadFail	上传失败	由于是断点续传，无法确定上传是否失败，故暂不会出现此值。
+            UploadSucc	上传完成	-
+            Transcoding	转码中	-
+            TranscodeFail	转码失败	转码失败，一般是原片有问题，可在事件通知的 转码完成消息 得到ErrorMessage失败信息，或提交工单联系我们。
+            Checking	审核中	在 视频点播控制台 > 全局设置 > 审核设置 开启了 先审后发，转码成功后视频状态会变成审核中，此时视频只能在控制台播放。
+            Blocked	屏蔽	在审核时屏蔽视频。
+            Normal	正常	视频可正常播放。
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.VideoStorageModule.ViewModels.VideoInfoModel.Title">
+            <summary>
+            视频标题
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.VideoStorageModule.ViewModels.VideoInfoModel.CateId">
+            <summary>
+            视频分类id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.VideoStorageModule.ViewModels.VideoInfoModel.CateName">
+            <summary>
+            视频分类名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.VideoStorageModule.ViewModels.VideoInfoModel.Tags">
+            <summary>
+            视频标签
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Modules.VideoStorageModule.ViewModels.VideoInfoModel.VideoId">
+            <summary>
+            视频ID
+            </summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Profiles.CourseChapterProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Profiles.CourseChapterProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Profiles.CourseChapterProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Profiles.CourseMaterialsProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Profiles.CourseMaterialsProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Profiles.CourseMaterialsProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Profiles.CoursePracticeProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Profiles.CoursePracticeProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Profiles.CoursePracticeProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Profiles.CourseProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Profiles.CourseProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Profiles.CourseProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Profiles.CourseVideoProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Profiles.CourseVideoProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Profiles.CourseVideoProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Storages.AliyunStorage.AliyunStorageHandler.ConvertToLocalTime(AlibabaCloud.SDK.Vod20170321.Models.SearchMediaResponse)">
+            <summary>
+            接口返回的是零区时间，需要转为本地时间
+            </summary>
+            <param name="searchMediaResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Storages.AliyunStorage.Models.SearchModel">
+            <summary>
+            查询模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Storages.AliyunStorage.Models.SearchModel.SearchType">
+            <summary>
+            查询类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Storages.AliyunStorage.Models.SearchModel.Fields">
+            <summary>
+            查询字段
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Storages.AliyunStorage.Models.SearchModel.Match">
+            <summary>
+            查询条件
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Storages.AliyunStorage.Models.SearchModel.SortBy">
+            <summary>
+            查询结果排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Storages.AliyunStorage.Models.SearchModel.PageNo">
+            <summary>
+            查询当前页
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Storages.AliyunStorage.Models.SearchModel.PageSize">
+            <summary>
+            查询当前页大小
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Storages.IStorageHandler.HandlerId">
+            <summary>
+            存储器Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Application.Storages.IStorageHandler.HandlerName">
+            <summary>
+            存储器名称
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Storages.IStorageHandler.SetConfig(System.String)">
+            <summary>
+            设置配置
+            </summary>
+            <param name="jsonConfig"></param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Storages.IStorageHandler.SearchStorage(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+            搜索内容
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Storages.IStorageHandler.GetVideoAuth(System.String)">
+            <summary>
+            根据videoId读取播放密钥
+            </summary>
+            <param name="videoId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Storages.IStorageHandler.GetVideoInfo(System.String)">
+            <summary>
+            获取视频信息
+            </summary>
+            <param name="videoId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Storages.IStorageHandler.GetVideoPlayInfo(System.String)">
+            <summary>
+            读取视频的url
+            </summary>
+            <param name="videoId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Storages.IStorageHandler.GetCategories">
+            <summary>
+            获取视频分类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Storages.IStorageHandler.AssumeRole">
+            <summary>
+            获取STS凭证
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CourseService.Application.Storages.StorageHandler`2">
+            <summary>
+            存储器处理基类
+            </summary>
+            <typeparam name="TConfig"></typeparam>
+            <typeparam name="TRequestModel"></typeparam>
+        </member>
+        <member name="M:HaoKao.CourseService.Application.Storages.StorageHandler`2.DynamicBindingModel(`1)">
+            <summary>
+            动态绑定请求的数据模型
+            </summary>
+            <param name="model"></param>
+        </member>
+    </members>
+</doc>

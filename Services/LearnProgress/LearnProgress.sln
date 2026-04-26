@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.LearnProgressService.WebApi", "HaoKao.LearnProgressService.WebApi\HaoKao.LearnProgressService.WebApi.csproj", "{68846029-98A2-4FB9-B9F2-1B47268FAB59}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.LearnProgressService.Domain", "HaoKao.LearnProgressService.Domain\HaoKao.LearnProgressService.Domain.csproj", "{12A91DFF-C11E-4288-A6AE-48B8E0035470}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.LearnProgressService.Infrastructure", "HaoKao.LearnProgressService.Infrastructure\HaoKao.LearnProgressService.Infrastructure.csproj", "{DF3D0A30-C972-4E12-BBC3-157774542E2E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.LearnProgressService.Application", "HaoKao.LearnProgressService.Application\HaoKao.LearnProgressService.Application.csproj", "{F5236EC3-853C-4530-AC42-272D68F13686}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68846029-98A2-4FB9-B9F2-1B47268FAB59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68846029-98A2-4FB9-B9F2-1B47268FAB59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68846029-98A2-4FB9-B9F2-1B47268FAB59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68846029-98A2-4FB9-B9F2-1B47268FAB59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12A91DFF-C11E-4288-A6AE-48B8E0035470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12A91DFF-C11E-4288-A6AE-48B8E0035470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12A91DFF-C11E-4288-A6AE-48B8E0035470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12A91DFF-C11E-4288-A6AE-48B8E0035470}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF3D0A30-C972-4E12-BBC3-157774542E2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF3D0A30-C972-4E12-BBC3-157774542E2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF3D0A30-C972-4E12-BBC3-157774542E2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF3D0A30-C972-4E12-BBC3-157774542E2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5236EC3-853C-4530-AC42-272D68F13686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5236EC3-853C-4530-AC42-272D68F13686}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5236EC3-853C-4530-AC42-272D68F13686}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5236EC3-853C-4530-AC42-272D68F13686}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FAFEB6F5-B22D-4AFA-B2CF-2078378CFA93}
+	EndGlobalSection
+EndGlobal

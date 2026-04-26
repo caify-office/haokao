@@ -1,0 +1,1317 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.CouponService.Domain</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.CouponService.Domain.CommandHandlers.UserCouponCommandHandler.Handle(HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateCancelLockedCommand,System.Threading.CancellationToken)">
+            <summary>
+            订单过期/取消订单根据订单id更新锁定状态
+            </summary>
+            <param name="request"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.CommandHandlers.UserCouponCommandHandler.Handle(HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateIsLockedNewCommand,System.Threading.CancellationToken)">
+            <summary>
+            添加订单更新这边的订单id和锁定状态根据用户id和优惠券ids集合
+            </summary>
+            <param name="request"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.CommandHandlers.UserCouponCommandHandler.Handle(HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateIsUseCommand,System.Threading.CancellationToken)">
+            <summary>
+            支付成功回调根据订单id更新使用,支付时间,金额等信息
+            </summary>
+            <param name="request"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CouponService.Domain.Commands.Coupon.CreateCouponCommand">
+            <summary>
+            创建命令
+            </summary>
+            <param name="EndDate">有效期-开始时间</param>
+            <param name="BeginDate">有效期-结束时间</param>
+            <param name="CouponCode">优惠券卡号</param>
+            <param name="CouponName">优惠券名称</param>
+            <param name="CouponDesc">优惠券说明</param>
+            <param name="PersonName">助教名称</param>
+            <param name="CouponType">优惠券类型 1-抵用券 2-折扣券</param>
+            <param name="ProductIds">适用产品</param>
+            <param name="ProductPackageId">产品包id</param>
+            <param name="ProductName">适用产品</param>
+            <param name="Amount">金额</param>
+            <param name="IsOnlyName">是否实名优惠券 true-实名优惠券 false--非实名优惠券即活动优惠券</param>
+            <param name="Hour">小时</param>
+            <param name="TimeType">时间选择类型</param>
+            <param name="Scope">适用范围类型</param>
+            <param name="ThresholdAmount">适用范围类型</param> 
+            <param name="PersonUserId">助教userid</param>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Commands.Coupon.CreateCouponCommand.#ctor(System.DateTime,System.DateTime,System.String,System.String,System.String,System.String,HaoKao.CouponService.Domain.Enumerations.CouponTypeEnum,System.Collections.Generic.List{System.Guid},System.Guid,System.String,System.Decimal,System.Boolean,System.Int32,HaoKao.CouponService.Domain.Enumerations.TimeTypeEnum,HaoKao.CouponService.Domain.Enumerations.ScopeEnum,System.Decimal,System.Guid)">
+            <summary>
+            创建命令
+            </summary>
+            <param name="EndDate">有效期-开始时间</param>
+            <param name="BeginDate">有效期-结束时间</param>
+            <param name="CouponCode">优惠券卡号</param>
+            <param name="CouponName">优惠券名称</param>
+            <param name="CouponDesc">优惠券说明</param>
+            <param name="PersonName">助教名称</param>
+            <param name="CouponType">优惠券类型 1-抵用券 2-折扣券</param>
+            <param name="ProductIds">适用产品</param>
+            <param name="ProductPackageId">产品包id</param>
+            <param name="ProductName">适用产品</param>
+            <param name="Amount">金额</param>
+            <param name="IsOnlyName">是否实名优惠券 true-实名优惠券 false--非实名优惠券即活动优惠券</param>
+            <param name="Hour">小时</param>
+            <param name="TimeType">时间选择类型</param>
+            <param name="Scope">适用范围类型</param>
+            <param name="ThresholdAmount">适用范围类型</param> 
+            <param name="PersonUserId">助教userid</param>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.CreateCouponCommand.EndDate">
+            <summary>有效期-开始时间</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.CreateCouponCommand.BeginDate">
+            <summary>有效期-结束时间</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.CreateCouponCommand.CouponCode">
+            <summary>优惠券卡号</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.CreateCouponCommand.CouponName">
+            <summary>优惠券名称</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.CreateCouponCommand.CouponDesc">
+            <summary>优惠券说明</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.CreateCouponCommand.PersonName">
+            <summary>助教名称</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.CreateCouponCommand.CouponType">
+            <summary>优惠券类型 1-抵用券 2-折扣券</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.CreateCouponCommand.ProductIds">
+            <summary>适用产品</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.CreateCouponCommand.ProductPackageId">
+            <summary>产品包id</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.CreateCouponCommand.ProductName">
+            <summary>适用产品</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.CreateCouponCommand.Amount">
+            <summary>金额</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.CreateCouponCommand.IsOnlyName">
+            <summary>是否实名优惠券 true-实名优惠券 false--非实名优惠券即活动优惠券</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.CreateCouponCommand.Hour">
+            <summary>小时</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.CreateCouponCommand.TimeType">
+            <summary>时间选择类型</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.CreateCouponCommand.Scope">
+            <summary>适用范围类型</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.CreateCouponCommand.ThresholdAmount">
+            <summary>适用范围类型</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.CreateCouponCommand.PersonUserId">
+            <summary>助教userid</summary>
+        </member>
+        <member name="T:HaoKao.CouponService.Domain.Commands.Coupon.DeleteCouponCommand">
+            <summary>
+            删除命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Commands.Coupon.DeleteCouponCommand.#ctor(System.Guid)">
+            <summary>
+            删除命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.DeleteCouponCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.CouponService.Domain.Commands.Coupon.UpdateCouponCommand">
+            <summary>
+            更新命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="EndDate">有效期-开始时间</param>
+            <param name="BeginDate">有效期-结束时间</param>
+            <param name="CouponCode">优惠券卡号</param>
+            <param name="CouponName">优惠券名称</param>
+            <param name="CouponDesc">优惠券说明</param>
+            <param name="PersonName">助教名称</param>
+            <param name="CouponType">优惠券类型 1-抵用券 2-折扣券</param>
+            <param name="ProductIds">适用产品:通过产品包-课程逐级筛选，支持多选和反选。不选产品时，该租户下全场产品通用选择产品集合</param>
+            <param name="ProductName">产品包id</param>
+            <param name="ProductPackageId">产品名称</param>
+            <param name="Amount">金额</param>
+            <param name="IsOnlyName">是否实名优惠券 true-实名优惠券 false--非实名优惠券即活动优惠券</param>
+            <param name="Hour">小时</param>
+            <param name="TimeType">时间选择类型</param>
+            <param name="Scope">使用范围</param>
+            <param name="ThresholdAmount">使用范围</param>
+            <param name="PersonUserId">助教userid</param>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Commands.Coupon.UpdateCouponCommand.#ctor(System.Guid,System.DateTime,System.DateTime,System.String,System.String,System.String,System.String,HaoKao.CouponService.Domain.Enumerations.CouponTypeEnum,System.Collections.Generic.List{System.Guid},System.Guid,System.String,System.Decimal,System.Boolean,System.Int32,HaoKao.CouponService.Domain.Enumerations.TimeTypeEnum,HaoKao.CouponService.Domain.Enumerations.ScopeEnum,System.Decimal,System.Guid)">
+            <summary>
+            更新命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="EndDate">有效期-开始时间</param>
+            <param name="BeginDate">有效期-结束时间</param>
+            <param name="CouponCode">优惠券卡号</param>
+            <param name="CouponName">优惠券名称</param>
+            <param name="CouponDesc">优惠券说明</param>
+            <param name="PersonName">助教名称</param>
+            <param name="CouponType">优惠券类型 1-抵用券 2-折扣券</param>
+            <param name="ProductIds">适用产品:通过产品包-课程逐级筛选，支持多选和反选。不选产品时，该租户下全场产品通用选择产品集合</param>
+            <param name="ProductName">产品包id</param>
+            <param name="ProductPackageId">产品名称</param>
+            <param name="Amount">金额</param>
+            <param name="IsOnlyName">是否实名优惠券 true-实名优惠券 false--非实名优惠券即活动优惠券</param>
+            <param name="Hour">小时</param>
+            <param name="TimeType">时间选择类型</param>
+            <param name="Scope">使用范围</param>
+            <param name="ThresholdAmount">使用范围</param>
+            <param name="PersonUserId">助教userid</param>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.UpdateCouponCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.UpdateCouponCommand.EndDate">
+            <summary>有效期-开始时间</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.UpdateCouponCommand.BeginDate">
+            <summary>有效期-结束时间</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.UpdateCouponCommand.CouponCode">
+            <summary>优惠券卡号</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.UpdateCouponCommand.CouponName">
+            <summary>优惠券名称</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.UpdateCouponCommand.CouponDesc">
+            <summary>优惠券说明</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.UpdateCouponCommand.PersonName">
+            <summary>助教名称</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.UpdateCouponCommand.CouponType">
+            <summary>优惠券类型 1-抵用券 2-折扣券</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.UpdateCouponCommand.ProductIds">
+            <summary>适用产品:通过产品包-课程逐级筛选，支持多选和反选。不选产品时，该租户下全场产品通用选择产品集合</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.UpdateCouponCommand.ProductPackageId">
+            <summary>产品名称</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.UpdateCouponCommand.ProductName">
+            <summary>产品包id</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.UpdateCouponCommand.Amount">
+            <summary>金额</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.UpdateCouponCommand.IsOnlyName">
+            <summary>是否实名优惠券 true-实名优惠券 false--非实名优惠券即活动优惠券</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.UpdateCouponCommand.Hour">
+            <summary>小时</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.UpdateCouponCommand.TimeType">
+            <summary>时间选择类型</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.UpdateCouponCommand.Scope">
+            <summary>使用范围</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.UpdateCouponCommand.ThresholdAmount">
+            <summary>使用范围</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.Coupon.UpdateCouponCommand.PersonUserId">
+            <summary>助教userid</summary>
+        </member>
+        <member name="T:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateRecieveCountCommand">
+            <summary>
+            更新领取人数
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateRecieveCountCommand.#ctor(System.Guid)">
+            <summary>
+            更新领取人数
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateRecieveCountCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.CouponService.Domain.Commands.UserCoupon.CreateUserCouponCommand">
+            <summary>
+            创建命令
+            </summary>
+            <param name="CouponId">优惠券id</param>
+            <param name="IsUse">是否使用 0-未使用 1-已使用</param>
+            <param name="OrderNo">订单编号</param>
+            <param name="OrderId">订单id</param>
+            <param name="FactAmount">实际支付金额</param>
+            <param name="NickName">昵称</param>
+            <param name="ProductName">产品名称</param>
+            <param name="TelPhone">手机号码</param>
+            <param name="Remark">备注</param>
+            <param name="ChannelType"></param>
+            <param name="OpenId"></param>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Commands.UserCoupon.CreateUserCouponCommand.#ctor(System.String,System.Boolean,System.String,System.Guid,System.Decimal,System.String,System.String,System.String,System.String,HaoKao.CouponService.Domain.Enumerations.ChannelType,System.String)">
+            <summary>
+            创建命令
+            </summary>
+            <param name="CouponId">优惠券id</param>
+            <param name="IsUse">是否使用 0-未使用 1-已使用</param>
+            <param name="OrderNo">订单编号</param>
+            <param name="OrderId">订单id</param>
+            <param name="FactAmount">实际支付金额</param>
+            <param name="NickName">昵称</param>
+            <param name="ProductName">产品名称</param>
+            <param name="TelPhone">手机号码</param>
+            <param name="Remark">备注</param>
+            <param name="ChannelType"></param>
+            <param name="OpenId"></param>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.CreateUserCouponCommand.CouponId">
+            <summary>优惠券id</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.CreateUserCouponCommand.IsUse">
+            <summary>是否使用 0-未使用 1-已使用</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.CreateUserCouponCommand.OrderNo">
+            <summary>订单编号</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.CreateUserCouponCommand.OrderId">
+            <summary>订单id</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.CreateUserCouponCommand.FactAmount">
+            <summary>实际支付金额</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.CreateUserCouponCommand.NickName">
+            <summary>昵称</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.CreateUserCouponCommand.ProductName">
+            <summary>产品名称</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.CreateUserCouponCommand.TelPhone">
+            <summary>手机号码</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.CreateUserCouponCommand.Remark">
+            <summary>备注</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.CreateUserCouponCommand.ChannelType">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.CreateUserCouponCommand.OpenId">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.CouponService.Domain.Commands.UserCoupon.CreateUserCouponEventCommand">
+            <summary>
+            用户领取优惠券命令
+            </summary>
+            <param name="CouponId">优惠券id</param>
+            <param name="NickName">昵称</param>
+            <param name="ChannelType"></param>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Commands.UserCoupon.CreateUserCouponEventCommand.#ctor(System.Guid,System.String,HaoKao.CouponService.Domain.Enumerations.ChannelType)">
+            <summary>
+            用户领取优惠券命令
+            </summary>
+            <param name="CouponId">优惠券id</param>
+            <param name="NickName">昵称</param>
+            <param name="ChannelType"></param>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.CreateUserCouponEventCommand.CouponId">
+            <summary>优惠券id</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.CreateUserCouponEventCommand.NickName">
+            <summary>昵称</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.CreateUserCouponEventCommand.ChannelType">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.CouponService.Domain.Commands.UserCoupon.DeleteUserCouponCommand">
+            <summary>
+            删除命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Commands.UserCoupon.DeleteUserCouponCommand.#ctor(System.Guid)">
+            <summary>
+            删除命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.DeleteUserCouponCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateCancelLockedCommand">
+            <summary>
+            更新是否解锁
+            </summary>
+            <param name="OrderId"></param>
+            <param name="IsLocked"></param>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateCancelLockedCommand.#ctor(System.Guid,System.Boolean)">
+            <summary>
+            更新是否解锁
+            </summary>
+            <param name="OrderId"></param>
+            <param name="IsLocked"></param>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateCancelLockedCommand.OrderId">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateCancelLockedCommand.IsLocked">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateIsLockedNewCommand">
+            <summary>
+            下订单锁定
+            </summary>
+            <param name="CouponIds">优惠券集合ids</param>
+            <param name="OrderId">订单id</param>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateIsLockedNewCommand.#ctor(System.String,System.Guid)">
+            <summary>
+            下订单锁定
+            </summary>
+            <param name="CouponIds">优惠券集合ids</param>
+            <param name="OrderId">订单id</param>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateIsLockedNewCommand.CouponIds">
+            <summary>优惠券集合ids</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateIsLockedNewCommand.OrderId">
+            <summary>订单id</summary>
+        </member>
+        <member name="T:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateIsUseCommand">
+            <summary>
+            更新是否已使用
+            </summary>
+            <param name="Id"></param>
+            <param name="OrderNumber"></param>
+            <param name="ProductName"></param>
+            <param name="ProductId"></param>
+            <param name="Amount"></param>
+            <param name="FactAmount"></param>
+            <param name="PayTime"></param>
+            <param name="ProductContent"></param>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateIsUseCommand.#ctor(System.Guid,System.String,System.String,System.Guid,System.Decimal,System.Decimal,System.DateTime,System.String)">
+            <summary>
+            更新是否已使用
+            </summary>
+            <param name="Id"></param>
+            <param name="OrderNumber"></param>
+            <param name="ProductName"></param>
+            <param name="ProductId"></param>
+            <param name="Amount"></param>
+            <param name="FactAmount"></param>
+            <param name="PayTime"></param>
+            <param name="ProductContent"></param>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateIsUseCommand.Id">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateIsUseCommand.OrderNumber">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateIsUseCommand.ProductName">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateIsUseCommand.ProductId">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateIsUseCommand.Amount">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateIsUseCommand.FactAmount">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateIsUseCommand.PayTime">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateIsUseCommand.ProductContent">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateUserCouponCommand">
+            <summary>
+            更新命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="IsUse">是否使用 0-未使用 1-已使用</param>
+            <param name="OrderNo">订单编号</param>
+            <param name="OrderId">订单id</param>
+            <param name="ProductName">产品名称</param>
+            <param name="Amount">产品名称</param>
+            <param name="PayTime">产品名称</param>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateUserCouponCommand.#ctor(System.Guid,System.Boolean,System.String,System.Guid,System.String,System.Decimal,System.DateTime)">
+            <summary>
+            更新命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="IsUse">是否使用 0-未使用 1-已使用</param>
+            <param name="OrderNo">订单编号</param>
+            <param name="OrderId">订单id</param>
+            <param name="ProductName">产品名称</param>
+            <param name="Amount">产品名称</param>
+            <param name="PayTime">产品名称</param>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateUserCouponCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateUserCouponCommand.IsUse">
+            <summary>是否使用 0-未使用 1-已使用</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateUserCouponCommand.OrderNo">
+            <summary>订单编号</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateUserCouponCommand.OrderId">
+            <summary>订单id</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateUserCouponCommand.ProductName">
+            <summary>产品名称</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateUserCouponCommand.Amount">
+            <summary>产品名称</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCoupon.UpdateUserCouponCommand.PayTime">
+            <summary>产品名称</summary>
+        </member>
+        <member name="T:HaoKao.CouponService.Domain.Commands.MarketingPersonnel.CreateMarketingPersonnelCommand">
+            <summary>
+            创建命令
+            </summary>
+            <param name="Name">姓名</param>
+            <param name="TelPhone">手机号码</param>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Commands.MarketingPersonnel.CreateMarketingPersonnelCommand.#ctor(System.String,System.String)">
+            <summary>
+            创建命令
+            </summary>
+            <param name="Name">姓名</param>
+            <param name="TelPhone">手机号码</param>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.MarketingPersonnel.CreateMarketingPersonnelCommand.Name">
+            <summary>姓名</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.MarketingPersonnel.CreateMarketingPersonnelCommand.TelPhone">
+            <summary>手机号码</summary>
+        </member>
+        <member name="T:HaoKao.CouponService.Domain.Commands.MarketingPersonnel.DeleteMarketingPersonnelCommand">
+            <summary>
+            删除命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Commands.MarketingPersonnel.DeleteMarketingPersonnelCommand.#ctor(System.Guid)">
+            <summary>
+            删除命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.MarketingPersonnel.DeleteMarketingPersonnelCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.CouponService.Domain.Commands.MarketingPersonnel.UpdateMarketingPersonnelCommand">
+            <summary>
+            更新命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Name">姓名</param>
+            <param name="TelPhone">手机号码</param>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Commands.MarketingPersonnel.UpdateMarketingPersonnelCommand.#ctor(System.Guid,System.String,System.String)">
+            <summary>
+            更新命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Name">姓名</param>
+            <param name="TelPhone">手机号码</param>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.MarketingPersonnel.UpdateMarketingPersonnelCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.MarketingPersonnel.UpdateMarketingPersonnelCommand.Name">
+            <summary>姓名</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.MarketingPersonnel.UpdateMarketingPersonnelCommand.TelPhone">
+            <summary>手机号码</summary>
+        </member>
+        <member name="T:HaoKao.CouponService.Domain.Commands.UserCouponPerformance.CreateUserCouponPerformanceCommand">
+            <summary>
+            创建命令
+            </summary>
+            <param name="Id"></param>
+            <param name="OrderNo">订单编号</param>
+            <param name="OrderId">订单id</param>
+            <param name="TelPhone">手机号码--冗余</param>
+            <param name="NickName">昵称--冗余</param>
+            <param name="ProductName">产品名称--冗余</param>
+            <param name="FactAmount">实际支付金额--冗余</param>
+            <param name="Amount">产品原价--冗余</param>
+            <param name="PayTime">支付时间--冗余</param>
+            <param name="Remark">备注--后台手动添加的默认手动添加</param>
+            <param name="PersonName">销售人员名称</param>
+            <param name="PersonUserId">备注--后台手动添加的默认手动添加</param>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Commands.UserCouponPerformance.CreateUserCouponPerformanceCommand.#ctor(System.Guid,System.String,System.Guid,System.String,System.String,System.String,System.Decimal,System.Decimal,System.DateTime,System.String,System.String,System.Guid)">
+            <summary>
+            创建命令
+            </summary>
+            <param name="Id"></param>
+            <param name="OrderNo">订单编号</param>
+            <param name="OrderId">订单id</param>
+            <param name="TelPhone">手机号码--冗余</param>
+            <param name="NickName">昵称--冗余</param>
+            <param name="ProductName">产品名称--冗余</param>
+            <param name="FactAmount">实际支付金额--冗余</param>
+            <param name="Amount">产品原价--冗余</param>
+            <param name="PayTime">支付时间--冗余</param>
+            <param name="Remark">备注--后台手动添加的默认手动添加</param>
+            <param name="PersonName">销售人员名称</param>
+            <param name="PersonUserId">备注--后台手动添加的默认手动添加</param>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCouponPerformance.CreateUserCouponPerformanceCommand.Id">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCouponPerformance.CreateUserCouponPerformanceCommand.OrderNo">
+            <summary>订单编号</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCouponPerformance.CreateUserCouponPerformanceCommand.OrderId">
+            <summary>订单id</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCouponPerformance.CreateUserCouponPerformanceCommand.TelPhone">
+            <summary>手机号码--冗余</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCouponPerformance.CreateUserCouponPerformanceCommand.NickName">
+            <summary>昵称--冗余</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCouponPerformance.CreateUserCouponPerformanceCommand.ProductName">
+            <summary>产品名称--冗余</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCouponPerformance.CreateUserCouponPerformanceCommand.FactAmount">
+            <summary>实际支付金额--冗余</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCouponPerformance.CreateUserCouponPerformanceCommand.Amount">
+            <summary>产品原价--冗余</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCouponPerformance.CreateUserCouponPerformanceCommand.PayTime">
+            <summary>支付时间--冗余</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCouponPerformance.CreateUserCouponPerformanceCommand.Remark">
+            <summary>备注--后台手动添加的默认手动添加</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCouponPerformance.CreateUserCouponPerformanceCommand.PersonName">
+            <summary>销售人员名称</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCouponPerformance.CreateUserCouponPerformanceCommand.PersonUserId">
+            <summary>备注--后台手动添加的默认手动添加</summary>
+        </member>
+        <member name="T:HaoKao.CouponService.Domain.Commands.UserCouponPerformance.DeleteUserCouponPerformanceCommand">
+            <summary>
+            删除命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Commands.UserCouponPerformance.DeleteUserCouponPerformanceCommand.#ctor(System.Guid)">
+            <summary>
+            删除命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCouponPerformance.DeleteUserCouponPerformanceCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.CouponService.Domain.Commands.UserCouponPerformance.UpdateUserCouponPerformanceCommand">
+            <summary>
+            更新命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="PersonName">助教实名名称</param>
+            <param name="PersonUserId">营销助教userid</param>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Commands.UserCouponPerformance.UpdateUserCouponPerformanceCommand.#ctor(System.Guid,System.String,System.Guid)">
+            <summary>
+            更新命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="PersonName">助教实名名称</param>
+            <param name="PersonUserId">营销助教userid</param>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCouponPerformance.UpdateUserCouponPerformanceCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCouponPerformance.UpdateUserCouponPerformanceCommand.PersonName">
+            <summary>助教实名名称</summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Commands.UserCouponPerformance.UpdateUserCouponPerformanceCommand.PersonUserId">
+            <summary>营销助教userid</summary>
+        </member>
+        <member name="F:HaoKao.CouponService.Domain.Enumerations.ChannelType.WebSite">
+            <summary>
+            pc
+            </summary>
+        </member>
+        <member name="F:HaoKao.CouponService.Domain.Enumerations.ChannelType.WeChat">
+            <summary>
+            微信小程序
+            </summary>
+        </member>
+        <member name="T:HaoKao.CouponService.Domain.Enumerations.CouponTypeEnum">
+            <summary>
+            优惠券类型
+            </summary>
+        </member>
+        <member name="F:HaoKao.CouponService.Domain.Enumerations.CouponTypeEnum.DeductionVoucher">
+            <summary>
+            抵用券
+            </summary>
+        </member>
+        <member name="F:HaoKao.CouponService.Domain.Enumerations.CouponTypeEnum.DisCount">
+            <summary>
+            折扣券
+            </summary>
+        </member>
+        <member name="F:HaoKao.CouponService.Domain.Enumerations.CouponTypeEnum.SmCoupon">
+            <summary>
+            实名券
+            </summary>
+        </member>
+        <member name="F:HaoKao.CouponService.Domain.Enumerations.ProductType.QuestionBlank">
+            <summary>
+            题库
+            </summary>
+        </member>
+        <member name="F:HaoKao.CouponService.Domain.Enumerations.ProductType.Course">
+            <summary>
+            课程
+            </summary>
+        </member>
+        <member name="F:HaoKao.CouponService.Domain.Enumerations.ProductType.Material">
+            <summary>
+            资料
+            </summary>
+        </member>
+        <member name="F:HaoKao.CouponService.Domain.Enumerations.ProductType.Live">
+            <summary>
+            直播
+            </summary>
+        </member>
+        <member name="T:HaoKao.CouponService.Domain.Enumerations.ScopeEnum">
+            <summary>
+            使用范围
+            </summary>
+        </member>
+        <member name="F:HaoKao.CouponService.Domain.Enumerations.ScopeEnum.All">
+            <summary>
+            全部
+            </summary>
+        </member>
+        <member name="F:HaoKao.CouponService.Domain.Enumerations.ScopeEnum.QuestionBank">
+            <summary>
+            题库
+            </summary>
+        </member>
+        <member name="F:HaoKao.CouponService.Domain.Enumerations.ScopeEnum.Course">
+            <summary>
+            课程
+            </summary>
+        </member>
+        <member name="F:HaoKao.CouponService.Domain.Enumerations.ScopeEnum.custom">
+            <summary>
+            自定义 选择产品包ids
+            </summary>
+        </member>
+        <member name="T:HaoKao.CouponService.Domain.Enumerations.TimeTypeEnum">
+            <summary>
+            有效期类型
+            </summary>
+        </member>
+        <member name="F:HaoKao.CouponService.Domain.Enumerations.TimeTypeEnum.Date">
+            <summary>
+            按日期
+            </summary>
+        </member>
+        <member name="F:HaoKao.CouponService.Domain.Enumerations.TimeTypeEnum.Hour">
+            <summary>
+            按小时
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.Coupon.CouponCode">
+            <summary>
+            优惠券卡号
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.Coupon.CouponName">
+            <summary>
+            优惠券名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.Coupon.CouponDesc">
+            <summary>
+            优惠券说明
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.Coupon.CouponType">
+            <summary>
+            优惠券类型 1-抵用券 2-折扣券
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.Coupon.Scope">
+            <summary>
+            适用范围
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.Coupon.ProductIds">
+            <summary>
+            适用产品集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.Coupon.ProductPackageId">
+            <summary>
+            产品包id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.Coupon.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.Coupon.Amount">
+            <summary>
+            金额/折扣--合并一个字段  折扣85折显示0.85
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.Coupon.ThresholdAmount">
+            <summary>
+            门槛金额
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.Coupon.IsOnlyName">
+            <summary>
+            是否实名优惠券 true-实名优惠券 false--非实名优惠券即活动优惠券
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.Coupon.PersonName">
+            <summary>
+            助教实名名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.Coupon.PersonUserId">
+            <summary>
+            营销助教userid
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.Coupon.TimeType">
+            <summary>
+            1-按日期 2-按小时
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.Coupon.Hour">
+            <summary>
+            按小时
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.Coupon.EndDate">
+            <summary>
+            有效期-开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.Coupon.BeginDate">
+            <summary>
+             有效期-结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.Coupon.UserCoupons">
+            <summary>
+            对应的优惠券使用记录
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.Coupon.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.Coupon.TenantId">
+            <summary>
+            租户id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.Coupon.CreatorId">
+            <summary>
+            创建userid
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.MarketingPersonnel.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.MarketingPersonnel.TelPhone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.MarketingPersonnel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.MarketingPersonnel.TenantId">
+            <summary>
+            租户id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.MarketingPersonnel.CreatorId">
+            <summary>
+            创建人id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCoupon.OrderNo">
+            <summary>
+            订单编号
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCoupon.OrderId">
+            <summary>
+            订单id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCoupon.TelPhone">
+            <summary>
+            手机号码--冗余
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCoupon.NickName">
+             <summary>
+            昵称--冗余
+             </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCoupon.ProductName">
+             <summary>
+            产品名称--冗余
+             </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCoupon.FactAmount">
+             <summary>
+            实际支付金额--冗余
+             </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCoupon.Amount">
+             <summary>
+            产品原价--冗余
+             </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCoupon.PayTime">
+             <summary>
+            支付时间--冗余
+             </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCoupon.Remark">
+             <summary>
+            备注--后台手动添加的默认手动添加
+             </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCoupon.CouponId">
+            <summary>
+            优惠券id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCoupon.IsUse">
+            <summary>
+            是否使用 0-未使用 1-已使用
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCoupon.IsLock">
+            <summary>
+            是否锁定
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCoupon.ChannelType">
+            <summary>
+            渠道类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCoupon.Notified">
+            <summary>
+            是否已通知
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCoupon.OpenId">
+            <summary>
+            微信用户的OpenId
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCoupon.CreatorId">
+             <summary>
+            优惠券关联使用的userId
+             </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCoupon.CreatorName">
+            <summary>
+            优惠券关联使用的userName
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCoupon.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCoupon.BeginTime">
+            <summary>
+            开始时间（可为创建时间，可为优惠卷有效期开始时间）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCoupon.EndTime">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCoupon.TenantId">
+            <summary>
+            租户
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCouponPerformance.OrderNo">
+            <summary>
+            订单编号
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCouponPerformance.OrderId">
+            <summary>
+            订单id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCouponPerformance.TelPhone">
+            <summary>
+            手机号码--冗余
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCouponPerformance.NickName">
+             <summary>
+            昵称--冗余
+             </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCouponPerformance.ProductName">
+             <summary>
+            产品名称--冗余
+             </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCouponPerformance.FactAmount">
+             <summary>
+            实际支付金额--冗余
+             </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCouponPerformance.Amount">
+             <summary>
+            产品原价--冗余
+             </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCouponPerformance.PayTime">
+             <summary>
+            支付时间--冗余
+             </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCouponPerformance.Remark">
+             <summary>
+            备注--后台手动添加的默认手动添加
+             </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCouponPerformance.PersonName">
+            <summary>
+            助教实名名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCouponPerformance.PersonUserId">
+            <summary>
+            营销助教userid
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCouponPerformance.CreatorId">
+             <summary>
+            优惠券关联使用的userId
+             </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCouponPerformance.CreatorName">
+            <summary>
+            优惠券关联使用的userName
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCouponPerformance.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Models.UserCouponPerformance.TenantId">
+            <summary>
+            租户
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.CouponQuery.CouponCode">
+            <summary>
+            优惠券code
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.CouponQuery.CouponName">
+            <summary>
+            优惠券名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.CouponQuery.OrderUserName">
+            <summary>
+            下单用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.CouponQuery.CouponType">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.CouponQuery.ExcludeIds">
+            <summary>
+            过滤id数组
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.CouponQuery.IsFilterSmCoupon">
+            <summary>
+            是否过滤实名优惠卷
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.CouponQuery.IsExpired">
+            <summary>
+            是否过期
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.MarketingPersonnelQuery.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.MarketingPersonnelQuery.TelPhone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.PurchaseProductContent.ContentId">
+            <summary>
+            内容Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.PurchaseProductContent.ContentName">
+            <summary>
+            内容名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.PurchaseProductContent.ContentAmount">
+            <summary>
+            原价
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.PurchaseProductContent.DiscountAmount">
+            <summary>
+            优惠价
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.PurchaseProductContent.ActualAmount">
+            <summary>
+            成交价格
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.PurchaseProductContent.AppleInPurchaseProductId">
+            <summary>
+            苹果内购产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.PurchaseProductContent.ExpiryTime">
+            <summary>
+            到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.PurchaseProductContent.Coupons">
+            <summary>
+            优惠券集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.CouponViewModel.Id">
+            <summary>
+            优惠券id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.CouponViewModel.CouponName">
+            <summary>
+            优惠券名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.CouponViewModel.CouponType">
+            <summary>
+            优惠券类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.CouponViewModel.Amount">
+            <summary>
+            折扣/金额
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.CouponViewModel.AmountEncryption">
+            <summary>
+            金额加密
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.UserCouponPerformanceQuery.OrderNo">
+            <summary>
+            订单编号
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.UserCouponPerformanceQuery.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.UserCouponPerformanceQuery.PersonName">
+            <summary>
+            销售人员名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.UserCouponPerformanceQuery.StartTime">
+            <summary>
+            支付开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.UserCouponPerformanceQuery.EndTime">
+            <summary>
+            支付结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.UserCouponPerformanceQuery.Amount">
+            <summary>
+            金额
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.UserCouponPerformanceQuery.FactAmount">
+             <summary>
+            实际支付金额--冗余
+             </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.UserCouponPerformanceQuery.Resource">
+            <summary>
+            来源
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.UserCouponQuery.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.UserCouponQuery.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.UserCouponQuery.UserId">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.UserCouponQuery.CouponId">
+            <summary>
+            优惠券id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.UserCouponQuery.IsUse">
+            <summary>
+            是否使用
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.UserCouponQuery.IsLock">
+            <summary>
+            是否锁定
+            </summary>
+        </member>
+        <member name="P:HaoKao.CouponService.Domain.Queries.UserCouponQuery.IsFilterExpired">
+            <summary>
+            是否需要过滤过期优惠卷
+            </summary>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Repositories.IUserCouponPerformanceRepository.GetSalesPerformanceStat(System.String,System.String,System.Int32,System.Int32,System.Guid[])">
+            <summary>
+            销售人员统计
+            </summary>
+            <param name="startTime"></param>
+            <param name="endTime"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="tenantIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Repositories.IUserCouponRepository.GetUserCouponList(HaoKao.CouponService.Domain.Enumerations.ProductType)">
+            <summary>
+            查询当前时间可用优惠券(下单选择使用)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Repositories.IUserCouponRepository.GetUserCouponByOrderId(System.Guid)">
+            <summary>
+            根据订单id找到对应的优惠券id
+            </summary>
+            <param name="orderId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Repositories.IUserCouponRepository.GetUserCouponByOrderIdAndProductId(System.Guid,System.String)">
+            <summary>
+            后台查询订单详情使用
+            </summary>
+            <param name="orderId"></param>
+            <param name="productId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Repositories.IUserCouponRepository.GetUserCouponListForBatch">
+             <summary>
+            生成业绩(批量更新使用)
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Repositories.IUserCouponRepository.GetUserCouponListForOrderLock(System.String)">
+            <summary>
+            下订单锁定过滤使用
+            </summary>
+            <param name="couponIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Repositories.IUserCouponRepository.GetUserCouponCountForOrderLock(System.String)">
+            <summary>
+            提交订单时候验证优惠券有没有被锁定（主要是用于处理同时提交订单的并发验证方式）
+            </summary>
+            <param name="couponIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Repositories.IUserCouponRepository.QueryAllExpiredUserCoupon">
+            <summary>
+            查询所有过期前2小时的数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CouponService.Domain.Repositories.IUserCouponRepository.UpdateNotified(System.Guid,System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            按租户更新预约为已通知状态
+            </summary>
+            <param name="tenantId"></param>
+            <param name="ids"></param>
+        </member>
+    </members>
+</doc>

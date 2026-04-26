@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.ErrorCorrectingService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.ErrorCorrectingService.Domain.Commands.ErrorCorrecting.CreateErrorCorrectingCommand">
+            <summary>
+            创建本题纠错命令
+            </summary>
+            <param name="QuestionId">问题id</param>
+            <param name="UserId">用户id</param>
+            <param name="Description">描述</param>
+            <param name="QuestionTypes">问题类型</param>
+            <param name="subjectid">科目id</param>
+            <param name="subjectname">科目名称</param>
+            <param name="questiontypeid">题目类型id</param>
+            <param name="questiontypename">题目类型名称</param>
+            <param name="questiontext">题干</param>
+            <param name="nickname">昵称</param>
+            <param name="phone">手机号码</param>
+            <param name="categoryid">题库类型id</param>
+            <param name="categoryname">题库类型名称</param>
+        </member>
+        <member name="M:HaoKao.ErrorCorrectingService.Domain.Commands.ErrorCorrecting.CreateErrorCorrectingCommand.#ctor(System.Guid,System.Guid,System.String,System.String,System.Guid,System.String,System.Guid,System.String,System.String,System.String,System.String,System.Guid,System.String)">
+            <summary>
+            创建本题纠错命令
+            </summary>
+            <param name="QuestionId">问题id</param>
+            <param name="UserId">用户id</param>
+            <param name="Description">描述</param>
+            <param name="QuestionTypes">问题类型</param>
+            <param name="subjectid">科目id</param>
+            <param name="subjectname">科目名称</param>
+            <param name="questiontypeid">题目类型id</param>
+            <param name="questiontypename">题目类型名称</param>
+            <param name="questiontext">题干</param>
+            <param name="nickname">昵称</param>
+            <param name="phone">手机号码</param>
+            <param name="categoryid">题库类型id</param>
+            <param name="categoryname">题库类型名称</param>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Commands.ErrorCorrecting.CreateErrorCorrectingCommand.QuestionId">
+            <summary>问题id</summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Commands.ErrorCorrecting.CreateErrorCorrectingCommand.UserId">
+            <summary>用户id</summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Commands.ErrorCorrecting.CreateErrorCorrectingCommand.Description">
+            <summary>描述</summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Commands.ErrorCorrecting.CreateErrorCorrectingCommand.QuestionTypes">
+            <summary>问题类型</summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Commands.ErrorCorrecting.CreateErrorCorrectingCommand.subjectid">
+            <summary>科目id</summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Commands.ErrorCorrecting.CreateErrorCorrectingCommand.subjectname">
+            <summary>科目名称</summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Commands.ErrorCorrecting.CreateErrorCorrectingCommand.questiontypeid">
+            <summary>题目类型id</summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Commands.ErrorCorrecting.CreateErrorCorrectingCommand.questiontypename">
+            <summary>题目类型名称</summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Commands.ErrorCorrecting.CreateErrorCorrectingCommand.questiontext">
+            <summary>题干</summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Commands.ErrorCorrecting.CreateErrorCorrectingCommand.nickname">
+            <summary>昵称</summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Commands.ErrorCorrecting.CreateErrorCorrectingCommand.phone">
+            <summary>手机号码</summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Commands.ErrorCorrecting.CreateErrorCorrectingCommand.categoryid">
+            <summary>题库类型id</summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Commands.ErrorCorrecting.CreateErrorCorrectingCommand.categoryname">
+            <summary>题库类型名称</summary>
+        </member>
+        <member name="T:HaoKao.ErrorCorrectingService.Domain.Commands.ErrorCorrecting.DeleteErrorCorrectingCommand">
+            <summary>
+            删除题库类别命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.ErrorCorrectingService.Domain.Commands.ErrorCorrecting.DeleteErrorCorrectingCommand.#ctor(System.Guid)">
+            <summary>
+            删除题库类别命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Commands.ErrorCorrecting.DeleteErrorCorrectingCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.ErrorCorrectingService.Domain.Commands.ErrorCorrecting.UpdateErrorCorrectingCommand">
+            <summary>
+            更新本题纠错命令
+            </summary>
+            <param name="Id"></param>
+            <param name="Status"></param>
+        </member>
+        <member name="M:HaoKao.ErrorCorrectingService.Domain.Commands.ErrorCorrecting.UpdateErrorCorrectingCommand.#ctor(System.Guid,HaoKao.ErrorCorrectingService.Domain.Enumerations.StatusEnum)">
+            <summary>
+            更新本题纠错命令
+            </summary>
+            <param name="Id"></param>
+            <param name="Status"></param>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Commands.ErrorCorrecting.UpdateErrorCorrectingCommand.Id">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Commands.ErrorCorrecting.UpdateErrorCorrectingCommand.Status">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.ErrorCorrectingService.Domain.Enumerations.StatusEnum">
+            <summary>
+            纠错处理状态
+            </summary>
+        </member>
+        <member name="F:HaoKao.ErrorCorrectingService.Domain.Enumerations.StatusEnum.NoHandle">
+            <summary>
+            未处理
+            </summary>
+        </member>
+        <member name="F:HaoKao.ErrorCorrectingService.Domain.Enumerations.StatusEnum.HasHandle">
+            <summary>
+            已处理
+            </summary>
+        </member>
+        <member name="F:HaoKao.ErrorCorrectingService.Domain.Enumerations.StatusEnum.Wrong">
+            <summary>
+            未知错误
+            </summary>
+        </member>
+        <member name="T:HaoKao.ErrorCorrectingService.Domain.Models.ErrorCorrecting">
+            <summary>
+            题库类别
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Models.ErrorCorrecting.QuestionId">
+            <summary>
+            问题id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Models.ErrorCorrecting.UserId">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Models.ErrorCorrecting.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Models.ErrorCorrecting.QuestionTypes">
+            <summary>
+            问题类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Models.ErrorCorrecting.CreateTime">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Queries.ErrorCorrectingQuery.SubjectId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Queries.ErrorCorrectingQuery.CategoryId">
+            <summary>
+            分类ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Queries.ErrorCorrectingQuery.QuestionTypeId">
+            <summary>
+            类别id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Queries.ErrorCorrectingQuery.QuestionText">
+            <summary>
+            题干
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Queries.ErrorCorrectingQuery.SearchKey">
+            <summary>
+            昵称/手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Domain.Queries.ErrorCorrectingQuery.ErrorTypes">
+             <summary>
+            错误类型
+             </summary>
+        </member>
+    </members>
+</doc>

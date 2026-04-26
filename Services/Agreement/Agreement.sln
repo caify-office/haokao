@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.AgreementService.Infrastructure", "HaoKao.AgreementService.Infrastructure\HaoKao.AgreementService.Infrastructure.csproj", "{C58B4211-63F1-4348-8271-F5C08D3DF0AC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.AgreementService.Application", "HaoKao.AgreementService.Application\HaoKao.AgreementService.Application.csproj", "{D5BDE787-19FD-4023-B96E-1FE95ED8D229}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.AgreementService.WebApi", "HaoKao.AgreementService.WebApi\HaoKao.AgreementService.WebApi.csproj", "{12157A97-03FC-44A1-9E94-08537A75E3EB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.AgreementService.Domain", "HaoKao.AgreementService.Domain\HaoKao.AgreementService.Domain.csproj", "{51CAA2F6-82B3-4BCC-889E-F2CA9ACC5CC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C58B4211-63F1-4348-8271-F5C08D3DF0AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C58B4211-63F1-4348-8271-F5C08D3DF0AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C58B4211-63F1-4348-8271-F5C08D3DF0AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C58B4211-63F1-4348-8271-F5C08D3DF0AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5BDE787-19FD-4023-B96E-1FE95ED8D229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5BDE787-19FD-4023-B96E-1FE95ED8D229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5BDE787-19FD-4023-B96E-1FE95ED8D229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5BDE787-19FD-4023-B96E-1FE95ED8D229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12157A97-03FC-44A1-9E94-08537A75E3EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12157A97-03FC-44A1-9E94-08537A75E3EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12157A97-03FC-44A1-9E94-08537A75E3EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12157A97-03FC-44A1-9E94-08537A75E3EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51CAA2F6-82B3-4BCC-889E-F2CA9ACC5CC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51CAA2F6-82B3-4BCC-889E-F2CA9ACC5CC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51CAA2F6-82B3-4BCC-889E-F2CA9ACC5CC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51CAA2F6-82B3-4BCC-889E-F2CA9ACC5CC3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6BD8AA91-67A4-41F0-9DC2-6A1F43BC188F}
+	EndGlobalSection
+EndGlobal

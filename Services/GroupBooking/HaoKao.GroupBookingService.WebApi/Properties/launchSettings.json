@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "HaoKao.GroupBookingService.WebApi": {
+      "commandName": "Project",
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5197"
+    }
+  }
+}

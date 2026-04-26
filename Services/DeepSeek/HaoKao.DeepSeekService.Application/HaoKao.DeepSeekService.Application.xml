@@ -1,0 +1,518 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.DeepSeekService.Application</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.DeepSeekService.Application.Profiles.MapperProfile.#ctor">
+            <summary>
+            配置构造函数，用来创建关系映射
+            </summary>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.IDeepSeekConfigService.Get">
+            <summary>
+            按租户获取DeepSeek配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.IDeepSeekConfigService.Update(HaoKao.DeepSeekService.Domain.DeepSeekConfig)">
+            <summary>
+            保存DeepSeek配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.DeepSeekConfigService.Get">
+            <summary>
+            保存DeepSeek配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.DeepSeekConfigService.Update(HaoKao.DeepSeekService.Domain.DeepSeekConfig)">
+            <summary>
+            按租户获取DeepSeek配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.IDeepSeekWebService.CompletionAsync(HaoKao.DeepSeekService.Application.ViewModels.ChatViewModel)">
+            <summary>
+            根据输入的上下文，来让模型补全对话内容
+            </summary>
+            <param name="viewModel">包含会话Id和用户输入的请求参数</param>
+            <returns>SSE 流响应</returns>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.IDeepSeekWebService.RegenerateAsync(System.Guid)">
+            <summary>
+            重新生成上一次的回答
+            </summary>
+            <param name="sessionId">会话Id</param>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.IDeepSeekWebService.GenerateSuggestedQuestionsAsync(System.Guid)">
+            <summary>
+            根据最近的对话内容，生成三个建议性的后续问题
+            </summary>
+            <param name="sessionId">会话Id</param>
+            <returns>一个包含三个建议问题字符串的列表</returns>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.IDeepSeekWebService.GetChatHistoryAsync(System.Guid)">
+            <summary>
+            根据会话Id获取聊天历史记录
+            </summary>
+            <param name="sessionId">会话Id</param>
+            <returns>一个包含历史消息的列表（不含系统提示）</returns>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.DeepSeekWebService.CompletionAsync(HaoKao.DeepSeekService.Application.ViewModels.ChatViewModel)">
+            <summary>
+            根据输入的上下文，来让模型补全对话内容
+            </summary>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.DeepSeekWebService.RegenerateAsync(System.Guid)">
+            <summary>
+            重新生成上一次的回答
+            </summary>
+            <param name="sessionId"></param>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.DeepSeekWebService.CompletionStreamAsync(HaoKao.DeepSeekService.Application.ViewModels.ChatViewModel,System.Threading.CancellationToken)">
+            <summary>
+            生成回答
+            </summary>
+            <param name="viewModel"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.DeepSeekWebService.RegenerateStreamAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            重新生成上一次的回答
+            </summary>
+            <param name="sessionId"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.DeepSeekWebService.GenerateStreamAsync(System.Collections.Generic.List{HaoKao.DeepSeekService.Application.ViewModels.ChatMessage},Girvs.Cache.Caching.CacheKey,HaoKao.DeepSeekService.Domain.DeepSeekConfig,System.Threading.CancellationToken)">
+            <summary>
+            生成回答
+            </summary>
+            <param name="messages"></param>
+            <param name="cacheKey"></param>
+            <param name="config"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.DeepSeekWebService.GenerateSuggestedQuestionsAsync(System.Guid)">
+            <summary>
+            根据最近的对话内容，生成三个建议性的后续问题
+            </summary>
+            <param name="sessionId">会话Id</param>
+            <returns>一个包含三个建议问题字符串的列表</returns>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.DeepSeekWebService.GetChatHistoryAsync(System.Guid)">
+            <summary>
+            根据会话Id获取聊天历史记录
+            </summary>
+            <param name="sessionId">会话Id</param>
+            <returns>一个包含历史消息的列表（不含系统提示）</returns>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.IDeepSeekWeChatService.CompletionAsync(HaoKao.DeepSeekService.Application.ViewModels.ChatViewModel)">
+            <summary>
+            根据输入的上下文，来让模型补全对话内容
+            </summary>
+            <param name="viewModel">包含会话Id和用户输入的请求参数</param>
+            <returns>SSE 流响应</returns>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.IDeepSeekWeChatService.RegenerateAsync(System.Guid)">
+            <summary>
+            重新生成上一次的回答
+            </summary>
+            <param name="sessionId">会话Id</param>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.IDeepSeekWeChatService.GenerateSuggestedQuestionsAsync(System.Guid)">
+            <summary>
+            根据最近的对话内容，生成三个建议性的后续问题
+            </summary>
+            <param name="sessionId">会话Id</param>
+            <returns>一个包含三个建议问题字符串的列表</returns>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.IDeepSeekWeChatService.GetChatHistoryAsync(System.Guid)">
+            <summary>
+            根据会话Id获取聊天历史记录
+            </summary>
+            <param name="sessionId">会话Id</param>
+            <returns>一个包含历史消息的列表（不含系统提示）</returns>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.DeepSeekWeChatService.CompletionAsync(HaoKao.DeepSeekService.Application.ViewModels.ChatViewModel)">
+            <summary>
+            根据输入的上下文，来让模型补全对话内容
+            </summary>
+            <param name="viewModel">包含会话Id和用户输入的请求参数</param>
+            <returns>SSE 流响应</returns>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.DeepSeekWeChatService.RegenerateAsync(System.Guid)">
+            <summary>
+            重新生成上一次的回答
+            </summary>
+            <param name="sessionId">会话Id</param>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.DeepSeekWeChatService.GenerateSuggestedQuestionsAsync(System.Guid)">
+            <summary>
+            根据最近的对话内容，生成三个建议性的后续问题
+            </summary>
+            <param name="sessionId">会话Id</param>
+            <returns>一个包含三个建议问题字符串的列表</returns>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.DeepSeekWeChatService.GetChatHistoryAsync(System.Guid)">
+            <summary>
+            根据会话Id获取聊天历史记录
+            </summary>
+            <param name="sessionId">会话Id</param>
+            <returns>一个包含历史消息的列表（不含系统提示）</returns>
+        </member>
+        <member name="T:HaoKao.DeepSeekService.Application.Services.ISseService">
+            <summary>
+            提供处理 Server-Sent Events (SSE) 响应流的功能
+            </summary>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.ISseService.StreamResponseAsync(System.Collections.Generic.IAsyncEnumerable{HaoKao.DeepSeekService.Application.Services.StreamChunk})">
+            <summary>
+            将一个异步流作为 Server-Sent Events 进行流式传输
+            </summary>
+            <param name="stream">要发送的数据块异步流</param>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.SseService.SetupSseHeaders(Microsoft.AspNetCore.Http.HttpResponse)">
+            <summary>
+            设置 SSE 响应头
+            </summary>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.SseService.WriteSseDataAsync(Microsoft.AspNetCore.Http.HttpResponse,System.String,System.Threading.CancellationToken)">
+            <summary>
+            写入 SSE 'message' 事件
+            </summary>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.SseService.WriteSseEventAsync(Microsoft.AspNetCore.Http.HttpResponse,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            写入 SSE 自定义事件
+            </summary>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.Services.SseService.EscapeJson(System.String)">
+            <summary>
+            转义 JSON 字符串中的特殊字符
+            </summary>
+        </member>
+        <member name="T:HaoKao.DeepSeekService.Application.Services.StreamChunk">
+            <summary>
+            用于在SSE流中传输的数据块
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.Services.StreamChunk.Data">
+            <summary>
+            数据内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.Services.StreamChunk.IsEvent">
+            <summary>
+            是否为自定义事件 (如果为 false, 则默认为 'message' 事件)
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.Services.StreamChunk.EventType">
+            <summary>
+            自定义事件的类型 (仅当 IsEvent 为 true 时有效)
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.ChatMessage.Role">
+            <summary>
+            该消息的发起角色，其值为user 或 system 或 assistant。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.ChatMessage.Content">
+            <summary>
+            消息的内容。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.ChatMessage.Name">
+            <summary>
+            可以选填的参与者的名称，为模型提供信息以区分相同角色的参与者。
+            </summary>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.ViewModels.ChatMessage.FromUser(System.String)">
+            <summary>
+            创建一个用户角色的消息
+            </summary>
+            <param name="content">消息内容</param>
+            <returns>一个新的ChatMessage实例</returns>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.ViewModels.ChatMessage.FromAssistant(System.String)">
+            <summary>
+            创建一个助手角色的消息
+            </summary>
+            <param name="content">消息内容</param>
+            <returns>一个新的ChatMessage实例</returns>
+        </member>
+        <member name="M:HaoKao.DeepSeekService.Application.ViewModels.ChatMessage.FromSystem(System.String)">
+            <summary>
+            创建一个系统角色的消息
+            </summary>
+            <param name="content">消息内容</param>
+            <returns>一个新的ChatMessage实例</returns>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.ChatViewModel.ChatSessionId">
+            <summary>
+            会话Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.ChatViewModel.Prompt">
+            <summary>
+            用户输入
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.DeepSeekRequest.Model">
+            <summary>
+            Possible values: [deepseek-chat, deepseek-reasoner]
+            使用的模型的 ID。您可以使用 deepseek-chat。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.DeepSeekRequest.Messages">
+            <summary>
+            对话的消息列表。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.DeepSeekRequest.FrequencyPenalty">
+            <summary>
+            Possible values: >= -2 and 小于等于 2
+            Default value: 0
+            介于 -2.0 和 2.0 之间的数字。
+            如果该值为正，那么新 token 会根据其在已有文本中的出现频率受到相应的惩罚，降低模型重复相同内容的可能性。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.DeepSeekRequest.MaxTokens">
+            <summary>
+            Possible values: > 1
+            介于 1 到 8192 间的整数，限制一次请求中模型生成 completion 的最大 token 数。
+            输入 token 和输出 token 的总长度受模型的上下文长度的限制。
+            如未指定 max_tokens参数，默认使用 4096。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.DeepSeekRequest.PresencePenalty">
+            <summary>
+            Possible values: >= -2 and 小于等于 2
+            Default value: 0
+            介于 -2.0 和 2.0 之间的数字。
+            如果该值为正，那么新 token 会根据其是否已在已有文本中出现受到相应的惩罚，从而增加模型谈论新主题的可能性。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.DeepSeekRequest.ResponseFormat">
+            <summary>
+            一个 object，指定模型必须输出的格式。
+            设置为 { "type": "json_object" } 以启用 JSON 模式，该模式保证模型生成的消息是有效的 JSON。
+            注意: 使用 JSON 模式时，你还必须通过系统或用户消息指示模型生成 JSON。
+            否则，模型可能会生成不断的空白字符，直到生成达到令牌限制，从而导致请求长时间运行并显得“卡住”。
+            此外，如果 finish_reason="length"，这表示生成超过了 max_tokens 或对话超过了最大上下文长度，消息内容可能会被部
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.DeepSeekRequest.Stop">
+            <summary>
+            一个 string 或最多包含 16 个 string 的 list，在遇到这些词时，API 将停止生成更多的 token。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.DeepSeekRequest.Stream">
+            <summary>
+            如果设置为 True，将会以 SSE（server-sent events）的形式以流式发送消息增量。
+            消息流以 data: [DONE] 结尾。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.DeepSeekRequest.StreamOption">
+            <summary>
+            流式输出相关选项。只有在 stream 参数为 true 时，才可设置此参数。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.DeepSeekRequest.Temperature">
+            <summary>
+            Possible values: 小于等于 2
+            Default value: 1
+            采样温度，介于 0 和 2 之间。
+            更高的值，如 0.8，会使输出更随机，而更低的值，如 0.2，会使其更加集中和确定。
+            我们通常建议可以更改这个值或者更改 top_p，但不建议同时对两者进行修改。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.DeepSeekRequest.TopP">
+            <summary>
+            Possible values: 小于等于 1
+            Default value: 1
+            作为调节采样温度的替代方案，模型会考虑前 top_p 概率的 token 的结果。
+            所以 0.1 就意味着只有包括在最高 10% 概率中的 token 会被考虑。
+            我们通常建议修改这个值或者更改 temperature，但不建议同时对两者进行修改。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.DeepSeekRequest.Logprobs">
+            <summary>
+            是否返回所输出 token 的对数概率。
+            如果为 true，则在 message 的 content 中返回每个输出 token 的对数概率。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.DeepSeekRequest.TopLogprobs">
+            <summary>
+            Possible values: 小于等于 20
+            一个介于 0 到 20 之间的整数 N，指定每个输出位置返回输出概率 top N 的 token，且返回这些 token 的对数概率。
+            指定此参数时，logprobs 必须为 true。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.ResponseFormat.Type">
+            <summary>
+            Possible values: [text, json_object]
+            Default value: text
+            Must be one of text or json_object.
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.StreamOption.IncludeUsage">
+            <summary>
+            如果设置为 true，在流式消息最后的 data: [DONE] 之前将会传输一个额外的块。
+            此块上的 usage 字段显示整个请求的 token 使用统计信息，而 choices 字段将始终是一个空数组。
+            所有其他块也将包含一个 usage 字段，但其值为 null。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.DeepSeekResponse.Id">
+            <summary>
+            该对话的唯一标识符。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.DeepSeekResponse.Choices">
+            <summary>
+            模型生成的 completion 的选择列表。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.DeepSeekResponse.Created">
+            <summary>
+            创建聊天完成时的 Unix 时间戳（以秒为单位）。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.DeepSeekResponse.Model">
+            <summary>
+            生成该 completion 的模型名。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.DeepSeekResponse.SystemFingerprint">
+            <summary>
+            This fingerprint represents the backend configuration that the model runs with.
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.DeepSeekResponse.Object">
+            <summary>
+            Possible values: [chat.completion]
+            对象的类型, 其值为 chat.completion。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.DeepSeekResponse.Usage">
+            <summary>
+            该对话补全请求的用量信息。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.Choice.FinishReason">
+            <summary>
+            Possible values: [stop, length, content_filter, tool_calls, insufficient_system_resource]
+            模型停止生成 token 的原因。
+            stop：模型自然停止生成，或遇到 stop 序列中列出的字符串。
+            length ：输出长度达到了模型上下文长度限制，或达到了 max_tokens 的限制。
+            content_filter：输出内容因触发过滤策略而被过滤。
+            insufficient_system_resource：系统推理资源不足，生成被打断。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.Choice.Index">
+            <summary>
+            该 completion 在模型生成的 completion 的选择列表中的索引。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.Choice.Message">
+            <summary>
+            模型生成的 completion 消息。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.Choice.Delta">
+            <summary>
+            流式返回的一个 completion 增量。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.Choice.Logprobs">
+            <summary>
+            该 choice 的对数概率信息。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.Message.Role">
+            <summary>
+            Possible values: [assistant]
+            生成这条消息的角色。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.Message.Content">
+            <summary>
+            该 completion 的内容。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.Message.ReasoningContent">
+            <summary>
+            仅适用于 deepseek-reasoner 模型。
+            内容为 assistant 消息中在最终答案之前的推理内容。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.Logprobs.Content">
+            <summary>
+            一个包含输出 token 对数概率信息的列表。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.LogprobsContent.Token">
+            <summary>
+            输出的 token。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.LogprobsContent.Logprobs">
+            <summary>
+            该 token 的对数概率。-9999.0 代表该 token 的输出概率极小，不在 top 20 最可能输出的 token 中。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.LogprobsContent.Bytes">
+            <summary>
+            一个包含该 token UTF-8 字节表示的整数列表。
+            一般在一个 UTF-8 字符被拆分成多个 token 来表示时有用。
+            如果 token 没有对应的字节表示，则该值为 null。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.LogprobsContent.TopLogprobs">
+            <summary>
+            一个包含在该输出位置上，输出概率 top N 的 token 的列表，以及它们的对数概率。
+            在罕见情况下，返回的 token 数量可能少于请求参数中指定的 top_logprobs 值。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.Usage.CompletionTokens">
+            <summary>
+            模型 completion 产生的 token 数。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.Usage.PromptTokens">
+            <summary>
+            用户 prompt 所包含的 token 数。
+            该值等于 prompt_cache_hit_tokens + prompt_cache_miss_tokens
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.Usage.PromptCacheHitTokens">
+            <summary>
+            用户 prompt 中，命中上下文缓存的 token 数。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.Usage.PromptCacheMissTokens">
+            <summary>
+            用户 prompt 中，未命中上下文缓存的 token 数。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.Usage.TotalTokens">
+            <summary>
+            该请求中，所有 token 的数量（prompt + completion）。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.Usage.CompletionTokensDetails">
+            <summary>
+            completion tokens 的详细信息。
+            </summary>
+        </member>
+        <member name="P:HaoKao.DeepSeekService.Application.ViewModels.CompletionTokensDetails.ReasoningTokens">
+            <summary>
+            推理模型所产生的思维链 token 数量
+            </summary>
+        </member>
+    </members>
+</doc>

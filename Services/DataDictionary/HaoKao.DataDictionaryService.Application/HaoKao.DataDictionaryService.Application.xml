@@ -1,0 +1,832 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.DataDictionaryService.Application</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.App.DataDictionaryAppService.Get(System.Guid)">
+            <summary>
+            获取自身和所有子字典
+            </summary>
+            <param name="id">展开的节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.App.DataDictionaryAppService.GetTree(System.Nullable{System.Guid},System.String)">
+            <summary>
+            获取数据字典树列表
+            </summary>
+            <param name="id">展开的节点</param>
+            <param name="name">根据名称搜索</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.App.IDictionaryAppService.Get(System.Guid)">
+            <summary>
+            获取自身和所有子字典
+            </summary>
+            <param name="id">展开的节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.App.IDictionaryAppService.GetTree(System.Nullable{System.Guid},System.String)">
+            <summary>
+            获取数据字典树列表
+            </summary>
+            <param name="id">展开的节点</param>
+            <param name="name">根据名称搜索</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Management.DictionariesAppService.GetAsync(System.Guid)">
+            <summary>
+            根据Id获取数据字典
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Management.DictionariesAppService.SupplementaryChildrenDictionaryDataAsync(System.Guid,System.String)">
+            <summary>
+            根据id和名称补充树形直接子集字典数据
+            </summary>
+            <param name="id">字典id</param>
+            <param name="name">字典名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Management.DictionariesAppService.SupplementaryDictionaryName(System.String)">
+            <summary>
+            通过用户信息项保存的值中的字典id补充字典的名称
+            </summary>
+            <param name="modelJsonStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Management.DictionariesAppService.NewSupplementary(System.Collections.Generic.List{HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.NewTemplateViewModel})">
+            <summary>
+            补充字典数据
+            </summary>
+            <param name="models">json字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Management.DictionariesAppService.SupplementaryDictionaryDataAsync(System.String)">
+            <summary>
+            补充字典数据
+            </summary>
+            <param name="modelJsonStr">json字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Management.DictionariesAppService.CreateDataSource(System.Collections.Generic.List{HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeViewModel})">
+            <summary>
+            生成数据
+            </summary>
+            <param name="dictionariesTreeViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Management.DictionariesAppService.CreateAsync(HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesAddViewModel)">
+            <summary>
+            创建数据字典类型
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Management.DictionariesAppService.UpdateAsync(System.Guid,HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesEditViewModel)">
+            <summary>
+            更新数据字典类型
+            </summary>
+            <param name="id"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Management.DictionariesAppService.DeleteAsync(System.Guid[])">
+            <summary>
+            删除数据字典类型
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Management.DictionariesAppService.GetTreeByQueryAsync(System.Nullable{System.Guid},System.String)">
+            <summary>
+            获取数据字典树列表
+            </summary>
+            <param name="id">展开的节点</param>
+            <param name="name">根据名称搜索</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Management.DictionariesAppService.GetAllAsync(System.Guid)">
+            <summary>
+            获取自身和所有子字典
+            </summary>
+            <param name="id">展开的节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Management.DictionariesAppService.GetTreeByIdAsync(System.Guid)">
+            <summary>
+            通过获取字典ID获取数据字典树列表
+            </summary>
+            <param name="id">展开的节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Management.DictionariesAppService.GetTreeByIdsAsync(System.Guid[])">
+            <summary>
+            通过获取字典ID数组获取数据字典和直接子字典列表
+            </summary>
+            <param name="ids">展开的节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Management.DictionariesAppService.GetByQueryAsync(HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesQueryViewModel)">
+            <summary>
+            获取列表
+            </summary>
+            <param name="queryModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Management.DictionariesAppService.GetDictionariesFormat">
+            <summary>
+            获取字典导入格式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Management.DictionariesAppService.GetBySimpleQueryAsync(HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.SimpleDictionariesQueryViewModel)">
+            <summary>
+            导出全部字典数据
+            </summary>
+            <param name="queryModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Management.DictionariesAppService.GetCategorysByQueryAsync(System.String)">
+            <summary>
+            获取字典分类列表
+            </summary>
+            <param name="query">名称或者编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Management.DictionariesAppService.DictionariesDataBatchAdd(System.Collections.Generic.List{HaoKao.DataDictionaryService.Domain.Commands.Dictionaries.DictionariesDataCommandModel})">
+            <summary>
+            批量添加字典数据
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Management.DictionariesAppService.GetByIdsAsync(System.Collections.Generic.List{System.String})">
+            <summary>
+            根据Ids获取数据字典
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Management.IDictionariesAppService.GetTreeByIdsAsync(System.Guid[])">
+            <summary>
+            通过获取字典ID数组获取数据字典和直接子字典列表
+            </summary>
+            <param name="ids">展开的节点</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.DataDictionaryService.Application.Services.Web.ExamineeDictionariesAppService">
+            <summary>
+            字典管理 - 考生端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Web.ExamineeDictionariesAppService.#ctor(HaoKao.DataDictionaryService.Application.Services.Management.IDictionariesAppService)">
+            <summary>
+            字典管理 - 考生端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Web.ExamineeDictionariesAppService.GetAsync(System.Guid)">
+            <summary>
+            考生端 根据Id获取数据字典
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Web.ExamineeDictionariesAppService.GetTreeByQueryAsync(System.Nullable{System.Guid},System.String)">
+            <summary>
+            考生端 获取数据字典树列表
+            </summary>
+            <param name="id">展开的节点</param>
+            <param name="name">根据名称搜索</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Web.ExamineeDictionariesAppService.GetAllAsync(System.Guid)">
+            <summary>
+            获取自身和所有子字典
+            </summary>
+            <param name="id">展开的节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Web.ExamineeDictionariesAppService.SupplementaryChildrenDictionaryDataAsync(System.Guid,System.String)">
+            <summary>
+            考试端 根据id和名称补充树形直接子集字典数据
+            </summary>
+            <param name="id">字典id</param>
+            <param name="name">字典名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Web.ExamineeDictionariesAppService.SupplementaryDictionaryName(System.String)">
+            <summary>
+            考生端 通过用户信息项保存的值中的字典id补充字典的名称
+            </summary>
+            <param name="modelJsonStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Web.ExamineeDictionariesAppService.SupplementaryDictionaryDataAsync(System.String)">
+            <summary>
+            考生端 补充字典数据
+            </summary>
+            <param name="modelJsonStr">json字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Web.ExamineeDictionariesAppService.NewSupplementary(System.Collections.Generic.List{HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.NewTemplateViewModel})">
+            <summary>
+            考生端 补充字典数据
+            </summary>
+            <param name="models">json字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Web.ExamineeDictionariesAppService.GetByIdsAsync(System.Collections.Generic.List{System.String})">
+            <summary>
+            考生端 根据Id获取数据字典
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Web.ExamineeDictionariesAppService.GetTreeByIdsAsync(System.Guid[])">
+            <summary>
+            通过获取字典ID数组获取数据字典和直接子字典列表
+            </summary>
+            <param name="ids">展开的节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.Web.IExamineeDictionariesAppService.GetTreeByIdsAsync(System.Guid[])">
+            <summary>
+            通过获取字典ID数组获取数据字典和直接子字典列表
+            </summary>
+            <param name="ids">展开的节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.WeChat.DataDictionaryWeChatService.Get(System.Guid)">
+            <summary>
+            获取自身和所有子字典
+            </summary>
+            <param name="id">展开的节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.WeChat.DataDictionaryWeChatService.GetTree(System.Nullable{System.Guid},System.String)">
+            <summary>
+            获取数据字典树列表
+            </summary>
+            <param name="id">展开的节点</param>
+            <param name="name">根据名称搜索</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.WeChat.IDictionaryWeChatService.Get(System.Guid)">
+            <summary>
+            获取自身和所有子字典
+            </summary>
+            <param name="id">展开的节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataDictionaryService.Application.Services.WeChat.IDictionaryWeChatService.GetTree(System.Nullable{System.Guid},System.String)">
+            <summary>
+            获取数据字典树列表
+            </summary>
+            <param name="id">展开的节点</param>
+            <param name="name">根据名称搜索</param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.DictionariesNewSupplyViewModel.Name">
+            <summary>
+            文本
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.DictionariesNewSupplyViewModel.Id">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.DictionariesNewSupplyViewModel.IsLeaf">
+            <summary>
+            是否是子节点
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.DictionariesSupplyViewModel.Label">
+            <summary>
+            文本
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.DictionariesSupplyViewModel.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.DictionariesSupplyViewModel.IsLeaf">
+            <summary>
+            是否是子节点
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.NewTemplateViewModel.Category">
+            <summary>
+            类别
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.NewTemplateViewModel.CategoryId">
+            <summary>
+            类别Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.NewTemplateViewModel.Description">
+            <summary>
+            类别描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.NewListItem.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.NewListItem.Code">
+            <summary>
+            代码
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.NewListItem.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.NewListItem.DictionaryId">
+            <summary>
+            字典Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.NewListItem.DictionaryName">
+            <summary>
+            字典名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.NewListItem.DataSource">
+            <summary>
+            补充字典数据
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.NewListItem.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.NewListItem.TypeCode">
+            <summary>
+            类型代码
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.NewListItem.InfoType">
+            <summary>
+            信息类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.NewListItem.InfoTypeName">
+            <summary>
+            信息类型名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.NewListItem.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.NewListItem.DefaultValue">
+            <summary>
+            默认数据
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.TemplateViewModel.Category">
+            <summary>
+            类别
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.TemplateViewModel.CategoryId">
+            <summary>
+            类别Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.TemplateViewModel.Description">
+            <summary>
+            类别描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.ListItem.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.ListItem.Code">
+            <summary>
+            代码
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.ListItem.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.ListItem.DictionaryId">
+            <summary>
+            字典Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.ListItem.DictionaryName">
+            <summary>
+            字典名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.ListItem.DataSource">
+            <summary>
+            补充字典数据
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.ListItem.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.ListItem.TypeCode">
+            <summary>
+            类型代码
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.ListItem.InfoType">
+            <summary>
+            信息类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.ListItem.InfoTypeName">
+            <summary>
+            信息类型名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.ListItem.Rules">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.ListItem.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.ListItem.DefaultValue">
+            <summary>
+            默认数据
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.UserInformationListViewModel.CardId">
+            <summary>
+            身份证号
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.UserInformationListViewModel.InformationItemId">
+            <summary>
+            信息项id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.UserInformationListViewModel.Value">
+            <summary>
+            值(可能传的是 数据字典Id)
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.ClientModel.UserInformationListViewModel.Display">
+            <summary>
+            如果是Value是Guid，才需要数据字典值名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesAddViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesAddViewModel.Code">
+            <summary>
+            分组编码
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesAddViewModel.Name">
+            <summary>
+            值名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesAddViewModel.Pid">
+            <summary>
+            父节点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesAddViewModel.PName">
+            <summary>
+            父节点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesAddViewModel.State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="T:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesCategoryListViewModel">
+            <summary>
+            字典分类列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesCategoryListViewModel.Id">
+            <summary>
+            主键id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesCategoryListViewModel.Code">
+            <summary>
+            分组编码
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesCategoryListViewModel.Name">
+            <summary>
+            值名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesDetailViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesDetailViewModel.Code">
+            <summary>
+            编码分组
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesDetailViewModel.Name">
+            <summary>
+            值名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesDetailViewModel.Pid">
+            <summary>
+            父节点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesDetailViewModel.PName">
+            <summary>
+            父节点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesDetailViewModel.State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesEditViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesEditViewModel.Code">
+            <summary>
+            分组编码
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesEditViewModel.Name">
+            <summary>
+            值名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesEditViewModel.Pid">
+            <summary>
+            父节点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesEditViewModel.PName">
+            <summary>
+            父节点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesEditViewModel.State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="T:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesQueryListViewModel">
+            <summary>
+            字典列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesQueryListViewModel.Id">
+            <summary>
+            主键id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesQueryListViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesQueryListViewModel.Code">
+            <summary>
+            分组编码
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesQueryListViewModel.Name">
+            <summary>
+            值名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesQueryListViewModel.Pid">
+            <summary>
+            父节点id (吴勇飞修改20211129_1500：Pid做列表查询时不能忽略，因为前端界面修改字典时，需要拿去这个值再回传给后台)
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesQueryListViewModel.PName">
+            <summary>
+            父节点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesQueryListViewModel.State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesQueryListViewModel.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesQueryListViewModel.IsShare">
+            <summary>
+            是否共享
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesQueryListViewModel.IsPublic">
+            <summary>
+            是否系统管理员创建的公用信息
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesQueryViewModel.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesQueryViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesQueryViewModel.State">
+            <summary>
+            状态true/false
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeHaveChildrenViewModel.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeHaveChildrenViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeHaveChildrenViewModel.Code">
+            <summary>
+            编码分组
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeHaveChildrenViewModel.Name">
+            <summary>
+            值名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeHaveChildrenViewModel.Pid">
+            <summary>
+            父节点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeHaveChildrenViewModel.PName">
+            <summary>
+            父节点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeHaveChildrenViewModel.State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeHaveChildrenViewModel.Children">
+            <summary>
+            子类
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeHaveChildrenViewModel.IsLeaf">
+            <summary>
+            是否叶子节点
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeHaveChildrenViewModel.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeHaveChildrenViewModel.IsShare">
+            <summary>
+            是否共享
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeHaveChildrenViewModel.IsPublic">
+            <summary>
+            是否系统管理员创建的公用信息
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeViewModel.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeViewModel.Code">
+            <summary>
+            编码分组
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeViewModel.Name">
+            <summary>
+            值名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeViewModel.Pid">
+            <summary>
+            父节点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeViewModel.PName">
+            <summary>
+            父节点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeViewModel.State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeViewModel.Children">
+            <summary>
+            子类
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeViewModel.IsLeaf">
+            <summary>
+            是否叶子节点
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeViewModel.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeViewModel.IsShare">
+            <summary>
+            是否共享
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Dictionaries.DictionariesTreeViewModel.IsPublic">
+            <summary>
+            是否系统管理员创建的公用信息
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Import.DataDictionaryFormatViewModel.Title">
+            <summary>
+            报名序号
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Import.DataDictionaryItem.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Import.DataDictionaryItem.Name">
+            <summary>
+            值名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Import.DataDictionaryItem.PCode">
+            <summary>
+            父节点编码
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Import.DataDictionaryItem.PName">
+            <summary>
+            父节点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Import.DataDictionaryItem.State">
+            <summary>
+            状态:0为未启动 1为启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataDictionaryService.Application.ViewModels.Import.DataDictionaryItem.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1310 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.BasicService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.BasicService.Domain.Commands.Authorize.NeedAuthorizeListCommand">
+            <summary>
+            初始化服务需要授权列表
+            </summary>
+            <param name="ServicePermissionCommandModels">操作权限</param>
+            <param name="ServiceDataRuleCommandModels">数据权限</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.Authorize.NeedAuthorizeListCommand.#ctor(System.Collections.Generic.List{HaoKao.BasicService.Domain.Commands.Authorize.ServicePermissionCommandModel},System.Collections.Generic.List{HaoKao.BasicService.Domain.Commands.Authorize.ServiceDataRuleCommandModel})">
+            <summary>
+            初始化服务需要授权列表
+            </summary>
+            <param name="ServicePermissionCommandModels">操作权限</param>
+            <param name="ServiceDataRuleCommandModels">数据权限</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Authorize.NeedAuthorizeListCommand.ServicePermissionCommandModels">
+            <summary>操作权限</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Authorize.NeedAuthorizeListCommand.ServiceDataRuleCommandModels">
+            <summary>数据权限</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Authorize.ServicePermissionCommandModel.ServiceName">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Authorize.ServicePermissionCommandModel.ServiceId">
+            <summary>
+            服务Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Authorize.ServicePermissionCommandModel.Tag">
+            <summary>
+            所属标签
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Authorize.ServicePermissionCommandModel.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Authorize.ServicePermissionCommandModel.FuncModule">
+            <summary>
+            所属的子系统模块
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Authorize.ServicePermissionCommandModel.OtherParams">
+            <summary>
+            其它相关参数
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Authorize.ServicePermissionCommandModel.OperationPermissionModels">
+            <summary>
+            方法权限
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Authorize.ServicePermissionCommandModel.Permissions">
+            <summary>
+            枚举值 (这个没用上可以忽略)
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Authorize.ServiceDataRuleCommandModel.EntityDesc">
+            <summary>
+            实体说明
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Authorize.ServiceDataRuleCommandModel.EntityTypeName">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Authorize.ServiceDataRuleCommandModel.FieldName">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Authorize.ServiceDataRuleCommandModel.FieldDesc">
+            <summary>
+            字段的说明
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Authorize.ServiceDataRuleCommandModel.FieldType">
+            <summary>
+            字段类型（预留）
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Authorize.ServiceDataRuleCommandModel.FieldValue">
+            <summary>
+            字段赋值
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Authorize.ServiceDataRuleCommandModel.ExpressionType">
+            <summary>
+            表达式运算符
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Authorize.ServiceDataRuleCommandModel.UserType">
+            <summary>
+            用户类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Authorize.ServiceDataRuleCommandModel.Tag">
+            <summary>
+            所属标签
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Authorize.ServiceDataRuleCommandModel.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.BasalPermission.SavePermissionCommand">
+            <summary>
+            保存操作权限
+            </summary>
+            <param name="AppliedId">对应用户ID或角色ID</param>
+            <param name="AppliedObjectType">对应功能模块的ID</param>
+            <param name="ValidateObjectType">权限分类</param>
+            <param name="ObjectPermissions">权限数据</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.BasalPermission.SavePermissionCommand.#ctor(System.Guid,Girvs.AuthorizePermission.Enumerations.PermissionAppliedObjectType,Girvs.AuthorizePermission.Enumerations.PermissionValidateObjectType,System.Collections.Generic.IList{HaoKao.BasicService.Domain.Commands.BasalPermission.ObjectPermission})">
+            <summary>
+            保存操作权限
+            </summary>
+            <param name="AppliedId">对应用户ID或角色ID</param>
+            <param name="AppliedObjectType">对应功能模块的ID</param>
+            <param name="ValidateObjectType">权限分类</param>
+            <param name="ObjectPermissions">权限数据</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.BasalPermission.SavePermissionCommand.AppliedId">
+            <summary>对应用户ID或角色ID</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.BasalPermission.SavePermissionCommand.AppliedObjectType">
+            <summary>对应功能模块的ID</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.BasalPermission.SavePermissionCommand.ValidateObjectType">
+            <summary>权限分类</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.BasalPermission.SavePermissionCommand.ObjectPermissions">
+            <summary>权限数据</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.BasalPermission.ObjectPermission.AppliedObjectId">
+            <summary>
+            对应功能模块的ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.BasalPermission.ObjectPermission.PermissionOperation">
+            <summary>
+            权限值转换具体说明集合
+            </summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.Role.AddRoleUserCommand">
+            <summary>
+            添加角色用户
+            </summary>
+            <param name="RoleId">角色Id集合</param>
+            <param name="UserIds">用户Id集合</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.Role.AddRoleUserCommand.#ctor(System.Guid,System.Collections.Generic.IList{System.Guid})">
+            <summary>
+            添加角色用户
+            </summary>
+            <param name="RoleId">角色Id集合</param>
+            <param name="UserIds">用户Id集合</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Role.AddRoleUserCommand.RoleId">
+            <summary>角色Id集合</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Role.AddRoleUserCommand.UserIds">
+            <summary>用户Id集合</summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.Role.CreateRoleCommand">
+            <summary>
+            创建角色
+            </summary>
+            <param name="Name">角色名称</param>
+            <param name="Desc">描述</param>
+            <param name="UserIds">用户Id集合</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.Role.CreateRoleCommand.#ctor(System.String,System.String,System.Guid[])">
+            <summary>
+            创建角色
+            </summary>
+            <param name="Name">角色名称</param>
+            <param name="Desc">描述</param>
+            <param name="UserIds">用户Id集合</param>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.Role.DeleteRoleCommand">
+            <summary>
+            删除角色
+            </summary>
+            <param name="Id">角色Id</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.Role.DeleteRoleCommand.#ctor(System.Guid)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="Id">角色Id</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Role.DeleteRoleCommand.Id">
+            <summary>角色Id</summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.Role.DeleteRoleUserCommand">
+            <summary>
+            删除角色用户
+            </summary>
+            <param name="RoleId">角色Id</param>
+            <param name="UserIds">用户Id集合</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.Role.DeleteRoleUserCommand.#ctor(System.Guid,System.Collections.Generic.IList{System.Guid})">
+            <summary>
+            删除角色用户
+            </summary>
+            <param name="RoleId">角色Id</param>
+            <param name="UserIds">用户Id集合</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Role.DeleteRoleUserCommand.RoleId">
+            <summary>角色Id</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Role.DeleteRoleUserCommand.UserIds">
+            <summary>用户Id集合</summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.Role.RoleCommand">
+            <summary>
+            角色命令
+            </summary>
+            <param name="Name">角色名称</param>
+            <param name="Desc">描述</param>
+            <param name="UserIds">用户Id集合</param>
+            <param name="CommandDesc">命令描述</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.Role.RoleCommand.#ctor(System.String,System.String,System.Guid[],System.String)">
+            <summary>
+            角色命令
+            </summary>
+            <param name="Name">角色名称</param>
+            <param name="Desc">描述</param>
+            <param name="UserIds">用户Id集合</param>
+            <param name="CommandDesc">命令描述</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Role.RoleCommand.Name">
+            <summary>角色名称</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Role.RoleCommand.Desc">
+            <summary>描述</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Role.RoleCommand.UserIds">
+            <summary>用户Id集合</summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.Role.UpdateRoleCommand">
+            <summary>
+            更新角色
+            </summary>
+            <param name="Id">角色Id</param>
+            <param name="Name">角色名称</param>
+            <param name="Desc">描述</param>
+            <param name="UserIds">用户Id集合</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.Role.UpdateRoleCommand.#ctor(System.Guid,System.String,System.String,System.Guid[])">
+            <summary>
+            更新角色
+            </summary>
+            <param name="Id">角色Id</param>
+            <param name="Name">角色名称</param>
+            <param name="Desc">描述</param>
+            <param name="UserIds">用户Id集合</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Role.UpdateRoleCommand.Id">
+            <summary>角色Id</summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.Role.UpdateRoleUserCommand">
+            <summary>
+            更新角色用户
+            </summary>
+            <param name="Id">角色用户Id</param>
+            <param name="UserIds">用户Id集合</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.Role.UpdateRoleUserCommand.#ctor(System.Guid,System.Guid[])">
+            <summary>
+            更新角色用户
+            </summary>
+            <param name="Id">角色用户Id</param>
+            <param name="UserIds">用户Id集合</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Role.UpdateRoleUserCommand.Id">
+            <summary>角色用户Id</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.Role.UpdateRoleUserCommand.UserIds">
+            <summary>用户Id集合</summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.SystemSetting.UpdateSystemSettingCommand">
+            <summary>
+            修改系统基础信息
+            </summary>
+            <param name="WebSiteName">网站名称</param>
+            <param name="Introduction">站点简介</param>
+            <param name="Logo">Logo 图标地址</param>
+            <param name="HttpAddress">Http访问地址</param>
+            <param name="OrganizationalUnit">组织单位</param>
+            <param name="IcpFiling">Icp 备案号</param>
+            <param name="FilingAddress">Icp备案地址链接地址</param>
+            <param name="Copyright">版权所有</param>
+            <param name="CopyrightAddress">版权链接地址</param>
+            <param name="WeChatImage">公众号图标地址</param>
+            <param name="WeChatAppId">公众号AppId</param>
+            <param name="MiniOAddress">MiniO存储地址配置</param>
+            <param name="MiniOAppId">MiniO AppId</param>
+            <param name="MiniOAppSecret">MiniO AppSecret</param>
+            <param name="MiniOBucket">MiniO存储桶名称</param>
+            <param name="MiniOPort">MiniO端口</param>
+            <param name="MiniOUseSSl">MiniOUseSSl</param>
+            <param name="Favicon">图标</param>
+            <param name="IsForceFollow">是否强制关注公众号</param>
+            <param name="BackgroundTheme"></param>
+            <param name="AccessCount"></param>
+            <param name="OpenRegister"></param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.SystemSetting.UpdateSystemSettingCommand.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.Boolean,System.String,System.String,System.Boolean)">
+            <summary>
+            修改系统基础信息
+            </summary>
+            <param name="WebSiteName">网站名称</param>
+            <param name="Introduction">站点简介</param>
+            <param name="Logo">Logo 图标地址</param>
+            <param name="HttpAddress">Http访问地址</param>
+            <param name="OrganizationalUnit">组织单位</param>
+            <param name="IcpFiling">Icp 备案号</param>
+            <param name="FilingAddress">Icp备案地址链接地址</param>
+            <param name="Copyright">版权所有</param>
+            <param name="CopyrightAddress">版权链接地址</param>
+            <param name="WeChatImage">公众号图标地址</param>
+            <param name="WeChatAppId">公众号AppId</param>
+            <param name="MiniOAddress">MiniO存储地址配置</param>
+            <param name="MiniOAppId">MiniO AppId</param>
+            <param name="MiniOAppSecret">MiniO AppSecret</param>
+            <param name="MiniOBucket">MiniO存储桶名称</param>
+            <param name="MiniOPort">MiniO端口</param>
+            <param name="MiniOUseSSl">MiniOUseSSl</param>
+            <param name="Favicon">图标</param>
+            <param name="IsForceFollow">是否强制关注公众号</param>
+            <param name="BackgroundTheme"></param>
+            <param name="AccessCount"></param>
+            <param name="OpenRegister"></param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.SystemSetting.UpdateSystemSettingCommand.WebSiteName">
+            <summary>网站名称</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.SystemSetting.UpdateSystemSettingCommand.Introduction">
+            <summary>站点简介</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.SystemSetting.UpdateSystemSettingCommand.Logo">
+            <summary>Logo 图标地址</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.SystemSetting.UpdateSystemSettingCommand.HttpAddress">
+            <summary>Http访问地址</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.SystemSetting.UpdateSystemSettingCommand.OrganizationalUnit">
+            <summary>组织单位</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.SystemSetting.UpdateSystemSettingCommand.IcpFiling">
+            <summary>Icp 备案号</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.SystemSetting.UpdateSystemSettingCommand.FilingAddress">
+            <summary>Icp备案地址链接地址</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.SystemSetting.UpdateSystemSettingCommand.Copyright">
+            <summary>版权所有</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.SystemSetting.UpdateSystemSettingCommand.CopyrightAddress">
+            <summary>版权链接地址</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.SystemSetting.UpdateSystemSettingCommand.WeChatImage">
+            <summary>公众号图标地址</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.SystemSetting.UpdateSystemSettingCommand.WeChatAppId">
+            <summary>公众号AppId</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.SystemSetting.UpdateSystemSettingCommand.MiniOAddress">
+            <summary>MiniO存储地址配置</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.SystemSetting.UpdateSystemSettingCommand.MiniOAppId">
+            <summary>MiniO AppId</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.SystemSetting.UpdateSystemSettingCommand.MiniOAppSecret">
+            <summary>MiniO AppSecret</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.SystemSetting.UpdateSystemSettingCommand.MiniOBucket">
+            <summary>MiniO存储桶名称</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.SystemSetting.UpdateSystemSettingCommand.MiniOPort">
+            <summary>MiniO端口</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.SystemSetting.UpdateSystemSettingCommand.MiniOUseSSl">
+            <summary>MiniOUseSSl</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.SystemSetting.UpdateSystemSettingCommand.Favicon">
+            <summary>图标</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.SystemSetting.UpdateSystemSettingCommand.IsForceFollow">
+            <summary>是否强制关注公众号</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.SystemSetting.UpdateSystemSettingCommand.BackgroundTheme">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.SystemSetting.UpdateSystemSettingCommand.AccessCount">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.SystemSetting.UpdateSystemSettingCommand.OpenRegister">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.TenantAccess.CreateTenantAccessCommand">
+            <summary>
+            添加系统租户访问设置
+            </summary>
+            <param name="AccessName">当前设置的访问名称</param>
+            <param name="IsDefault">是否为默认设置</param>
+            <param name="WebSiteName">网站名称</param>
+            <param name="Introduction">站点简介</param>
+            <param name="Favicon">图站图标</param>
+            <param name="Logo">Logo 图标地址</param>
+            <param name="HttpAddress">Http访问地址</param>
+            <param name="OrganizationalUnit">组织单位</param>
+            <param name="IcpFiling">Icp 备案号</param>
+            <param name="FilingAddress">Icp备案地址链接地址</param>
+            <param name="Copyright">版权所有</param>
+            <param name="CopyrightAddress">版权链接地址</param>
+            <param name="BackgroundTheme"></param>
+            <param name="AccessCount"></param>
+            <param name="OpenRegister"></param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.TenantAccess.CreateTenantAccessCommand.#ctor(System.String,System.Boolean,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            添加系统租户访问设置
+            </summary>
+            <param name="AccessName">当前设置的访问名称</param>
+            <param name="IsDefault">是否为默认设置</param>
+            <param name="WebSiteName">网站名称</param>
+            <param name="Introduction">站点简介</param>
+            <param name="Favicon">图站图标</param>
+            <param name="Logo">Logo 图标地址</param>
+            <param name="HttpAddress">Http访问地址</param>
+            <param name="OrganizationalUnit">组织单位</param>
+            <param name="IcpFiling">Icp 备案号</param>
+            <param name="FilingAddress">Icp备案地址链接地址</param>
+            <param name="Copyright">版权所有</param>
+            <param name="CopyrightAddress">版权链接地址</param>
+            <param name="BackgroundTheme"></param>
+            <param name="AccessCount"></param>
+            <param name="OpenRegister"></param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.TenantAccess.CreateTenantAccessCommand.BackgroundTheme">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.TenantAccess.DeleteTenantAccessCommand">
+            <summary>
+            删除系统租户访问设置
+            </summary>
+            <param name="Id">租户访问设置Id</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.TenantAccess.DeleteTenantAccessCommand.#ctor(System.Guid)">
+            <summary>
+            删除系统租户访问设置
+            </summary>
+            <param name="Id">租户访问设置Id</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.TenantAccess.DeleteTenantAccessCommand.Id">
+            <summary>租户访问设置Id</summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.TenantAccess.SetDefaultTenantAccessCommand">
+            <summary>
+            设置为默认的系统租户访问设置
+            </summary>
+            <param name="Id">系统租户访问设置Id</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.TenantAccess.SetDefaultTenantAccessCommand.#ctor(System.Guid)">
+            <summary>
+            设置为默认的系统租户访问设置
+            </summary>
+            <param name="Id">系统租户访问设置Id</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.TenantAccess.SetDefaultTenantAccessCommand.Id">
+            <summary>系统租户访问设置Id</summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.TenantAccess.TenantAccessCommand">
+            <summary>
+            ϵͳ�⻧��������
+            </summary>
+            <param name="AccessName">��ǰ���õķ�������</param>
+            <param name="IsDefault">�Ƿ�ΪĬ������</param>
+            <param name="WebSiteName">��վ����</param>
+            <param name="Introduction">վ����</param>
+            <param name="Favicon">ͼվͼ��</param>
+            <param name="Logo">Logo ͼ���ַ</param>
+            <param name="HttpAddress">Http���ʵ�ַ</param>
+            <param name="OrganizationalUnit">��֯��λ</param>
+            <param name="IcpFiling">Icp ������</param>
+            <param name="FilingAddress">Icp������ַ���ӵ�ַ</param>
+            <param name="Copyright">��Ȩ����</param>
+            <param name="CopyrightAddress">��Ȩ���ӵ�ַ</param>
+            <param name="AccessCount"></param>
+            <param name="OpenRegister"></param>
+            <param name="CommandDesc">��������</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.TenantAccess.TenantAccessCommand.#ctor(System.String,System.Boolean,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String)">
+            <summary>
+            ϵͳ�⻧��������
+            </summary>
+            <param name="AccessName">��ǰ���õķ�������</param>
+            <param name="IsDefault">�Ƿ�ΪĬ������</param>
+            <param name="WebSiteName">��վ����</param>
+            <param name="Introduction">վ����</param>
+            <param name="Favicon">ͼվͼ��</param>
+            <param name="Logo">Logo ͼ���ַ</param>
+            <param name="HttpAddress">Http���ʵ�ַ</param>
+            <param name="OrganizationalUnit">��֯��λ</param>
+            <param name="IcpFiling">Icp ������</param>
+            <param name="FilingAddress">Icp������ַ���ӵ�ַ</param>
+            <param name="Copyright">��Ȩ����</param>
+            <param name="CopyrightAddress">��Ȩ���ӵ�ַ</param>
+            <param name="AccessCount"></param>
+            <param name="OpenRegister"></param>
+            <param name="CommandDesc">��������</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.TenantAccess.TenantAccessCommand.AccessName">
+            <summary>��ǰ���õķ�������</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.TenantAccess.TenantAccessCommand.IsDefault">
+            <summary>�Ƿ�ΪĬ������</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.TenantAccess.TenantAccessCommand.WebSiteName">
+            <summary>��վ����</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.TenantAccess.TenantAccessCommand.Introduction">
+            <summary>վ����</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.TenantAccess.TenantAccessCommand.Favicon">
+            <summary>ͼվͼ��</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.TenantAccess.TenantAccessCommand.Logo">
+            <summary>Logo ͼ���ַ</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.TenantAccess.TenantAccessCommand.HttpAddress">
+            <summary>Http���ʵ�ַ</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.TenantAccess.TenantAccessCommand.OrganizationalUnit">
+            <summary>��֯��λ</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.TenantAccess.TenantAccessCommand.IcpFiling">
+            <summary>Icp ������</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.TenantAccess.TenantAccessCommand.FilingAddress">
+            <summary>Icp������ַ���ӵ�ַ</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.TenantAccess.TenantAccessCommand.Copyright">
+            <summary>��Ȩ����</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.TenantAccess.TenantAccessCommand.CopyrightAddress">
+            <summary>��Ȩ���ӵ�ַ</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.TenantAccess.TenantAccessCommand.AccessCount">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.TenantAccess.TenantAccessCommand.OpenRegister">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.TenantAccess.UpdateTenantAccessCommand">
+            <summary>
+            更新系统租户访问设置
+            </summary>
+            <param name="Id">系统租户访问Id</param>
+            <param name="AccessName">当前设置的访问名称</param>
+            <param name="IsDefault">是否为默认设置</param>
+            <param name="WebSiteName">网站名称</param>
+            <param name="Introduction">站点简介</param>
+            <param name="Favicon">图站图标</param>
+            <param name="Logo">Logo 图标地址</param>
+            <param name="HttpAddress">Http访问地址</param>
+            <param name="OrganizationalUnit">组织单位</param>
+            <param name="IcpFiling">Icp 备案号</param>
+            <param name="FilingAddress">Icp备案地址链接地址</param>
+            <param name="Copyright"> 版权所有</param>
+            <param name="CopyrightAddress">版权链接地址</param>
+            <param name="BackgroundTheme"></param>
+            <param name="AccessCount"></param>
+            <param name="OpenRegister"></param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.TenantAccess.UpdateTenantAccessCommand.#ctor(System.Guid,System.String,System.Boolean,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            更新系统租户访问设置
+            </summary>
+            <param name="Id">系统租户访问Id</param>
+            <param name="AccessName">当前设置的访问名称</param>
+            <param name="IsDefault">是否为默认设置</param>
+            <param name="WebSiteName">网站名称</param>
+            <param name="Introduction">站点简介</param>
+            <param name="Favicon">图站图标</param>
+            <param name="Logo">Logo 图标地址</param>
+            <param name="HttpAddress">Http访问地址</param>
+            <param name="OrganizationalUnit">组织单位</param>
+            <param name="IcpFiling">Icp 备案号</param>
+            <param name="FilingAddress">Icp备案地址链接地址</param>
+            <param name="Copyright"> 版权所有</param>
+            <param name="CopyrightAddress">版权链接地址</param>
+            <param name="BackgroundTheme"></param>
+            <param name="AccessCount"></param>
+            <param name="OpenRegister"></param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.TenantAccess.UpdateTenantAccessCommand.Id">
+            <summary>系统租户访问Id</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.TenantAccess.UpdateTenantAccessCommand.BackgroundTheme">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.User.AddUserRoleCommand">
+            <summary>
+            添加用户角色
+            </summary>
+            <param name="UserId">用户Id</param>
+            <param name="RoleIds">角色Id集合</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.User.AddUserRoleCommand.#ctor(System.Guid,System.Collections.Generic.IList{System.Guid})">
+            <summary>
+            添加用户角色
+            </summary>
+            <param name="UserId">用户Id</param>
+            <param name="RoleIds">角色Id集合</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.AddUserRoleCommand.UserId">
+            <summary>用户Id</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.AddUserRoleCommand.RoleIds">
+            <summary>角色Id集合</summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.User.BindContactNumberCommand">
+            <summary>
+            绑定用户手机号
+            </summary>
+            <param name="Id">用户Id</param>
+            <param name="ContactNumber">手机号</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.User.BindContactNumberCommand.#ctor(System.Guid,System.String)">
+            <summary>
+            绑定用户手机号
+            </summary>
+            <param name="Id">用户Id</param>
+            <param name="ContactNumber">手机号</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.BindContactNumberCommand.Id">
+            <summary>用户Id</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.BindContactNumberCommand.ContactNumber">
+            <summary>手机号</summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.User.ChangeUserPasswordCommand">
+            <summary>
+            修改用户密码
+            </summary>
+            <param name="Id">用户Id</param>
+            <param name="NewPassword">新密码</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.User.ChangeUserPasswordCommand.#ctor(System.Guid,System.String)">
+            <summary>
+            修改用户密码
+            </summary>
+            <param name="Id">用户Id</param>
+            <param name="NewPassword">新密码</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.ChangeUserPasswordCommand.Id">
+            <summary>用户Id</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.ChangeUserPasswordCommand.NewPassword">
+            <summary>新密码</summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.User.ChangeUserStateCommand">
+            <summary>
+            更新用户状态
+            </summary>
+            <param name="Id">用户Id</param>
+            <param name="State">用户状态</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.User.ChangeUserStateCommand.#ctor(System.Guid,HaoKao.BasicService.Domain.Enumerations.DataState)">
+            <summary>
+            更新用户状态
+            </summary>
+            <param name="Id">用户Id</param>
+            <param name="State">用户状态</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.ChangeUserStateCommand.Id">
+            <summary>用户Id</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.ChangeUserStateCommand.State">
+            <summary>用户状态</summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.User.CreateUserCommand">
+            <summary>
+            创建用户
+            </summary>
+            <param name="UserAccount">用户账户</param>
+            <param name="UserPassword">用户密码</param>
+            <param name="UserName">用户名称</param>
+            <param name="ContactNumber">用户联系方式</param>
+            <param name="State">用户的状态</param>
+            <param name="UserType">用户类型</param>
+            <param name="OtherId">绑定其它相关服务的关键标识Id</param>
+            <param name="TenantId">租户Id</param>
+            <param name="TenantName">租户名称</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.User.CreateUserCommand.#ctor(System.String,System.String,System.String,System.String,HaoKao.BasicService.Domain.Enumerations.DataState,Girvs.AuthorizePermission.Enumerations.UserType,System.Guid,System.Nullable{System.Guid},System.String)">
+            <summary>
+            创建用户
+            </summary>
+            <param name="UserAccount">用户账户</param>
+            <param name="UserPassword">用户密码</param>
+            <param name="UserName">用户名称</param>
+            <param name="ContactNumber">用户联系方式</param>
+            <param name="State">用户的状态</param>
+            <param name="UserType">用户类型</param>
+            <param name="OtherId">绑定其它相关服务的关键标识Id</param>
+            <param name="TenantId">租户Id</param>
+            <param name="TenantName">租户名称</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.CreateUserCommand.State">
+            <summary>用户的状态</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.CreateUserCommand.UserType">
+            <summary>用户类型</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.CreateUserCommand.OtherId">
+            <summary>绑定其它相关服务的关键标识Id</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.CreateUserCommand.TenantId">
+            <summary>租户Id</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.CreateUserCommand.TenantName">
+            <summary>租户名称</summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.User.DeleteUserCommand">
+            <summary>
+            删除用户
+            </summary>
+            <param name="Id">用户Id</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.User.DeleteUserCommand.#ctor(System.Guid)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="Id">用户Id</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.DeleteUserCommand.Id">
+            <summary>用户Id</summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.User.DeleteUserRoleCommand">
+            <summary>
+            删除用户角色
+            </summary>
+            <param name="UserId">用户Id</param>
+            <param name="RoleIds">角色Id集合</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.User.DeleteUserRoleCommand.#ctor(System.Guid,System.Collections.Generic.IList{System.Guid})">
+            <summary>
+            删除用户角色
+            </summary>
+            <param name="UserId">用户Id</param>
+            <param name="RoleIds">角色Id集合</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.DeleteUserRoleCommand.UserId">
+            <summary>用户Id</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.DeleteUserRoleCommand.RoleIds">
+            <summary>角色Id集合</summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.User.EventCreateUserCommand">
+            <summary>
+            通过事件创建用户
+            </summary>
+            <param name="UserAccount">用户账户</param>
+            <param name="UserPassword">用户密码</param>
+            <param name="UserName">用户名称</param>
+            <param name="ContactNumber">用户联系方式</param>
+            <param name="State">用户的状态</param>
+            <param name="UserType">用户类型</param>
+            <param name="OtherId">绑定其它相关服务的关键标识Id</param>
+            <param name="TenantId">租户Id</param>
+            <param name="TenantName">租户名称</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.User.EventCreateUserCommand.#ctor(System.String,System.String,System.String,System.String,HaoKao.BasicService.Domain.Enumerations.DataState,Girvs.AuthorizePermission.Enumerations.UserType,System.Guid,System.Guid,System.String)">
+            <summary>
+            通过事件创建用户
+            </summary>
+            <param name="UserAccount">用户账户</param>
+            <param name="UserPassword">用户密码</param>
+            <param name="UserName">用户名称</param>
+            <param name="ContactNumber">用户联系方式</param>
+            <param name="State">用户的状态</param>
+            <param name="UserType">用户类型</param>
+            <param name="OtherId">绑定其它相关服务的关键标识Id</param>
+            <param name="TenantId">租户Id</param>
+            <param name="TenantName">租户名称</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.EventCreateUserCommand.State">
+            <summary>用户的状态</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.EventCreateUserCommand.UserType">
+            <summary>用户类型</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.EventCreateUserCommand.OtherId">
+            <summary>绑定其它相关服务的关键标识Id</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.EventCreateUserCommand.TenantId">
+            <summary>租户Id</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.EventCreateUserCommand.TenantName">
+            <summary>租户名称</summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.User.EventEditUserCommand">
+            <summary>
+            通过事件修改用户
+            </summary>
+            <param name="TenantId">租户Id</param>
+            <param name="TenantName">租户名称</param>
+            <param name="UserAccount">用户账户</param>
+            <param name="UserPassword">用户密码</param>
+            <param name="UserName">用户名称</param>
+            <param name="ContactNumber">用户联系方式</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.User.EventEditUserCommand.#ctor(System.Guid,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            通过事件修改用户
+            </summary>
+            <param name="TenantId">租户Id</param>
+            <param name="TenantName">租户名称</param>
+            <param name="UserAccount">用户账户</param>
+            <param name="UserPassword">用户密码</param>
+            <param name="UserName">用户名称</param>
+            <param name="ContactNumber">用户联系方式</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.EventEditUserCommand.TenantId">
+            <summary>租户Id</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.EventEditUserCommand.TenantName">
+            <summary>租户名称</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.EventEditUserCommand.UserAccount">
+            <summary>用户账户</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.EventEditUserCommand.UserPassword">
+            <summary>用户密码</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.EventEditUserCommand.UserName">
+            <summary>用户名称</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.EventEditUserCommand.ContactNumber">
+            <summary>用户联系方式</summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.User.UpdateUserCommand">
+            <summary>
+            更新用户
+            </summary>
+            <param name="Id">用户Id</param>
+            <param name="UserPassword">用户密码</param>
+            <param name="UserName">用户名称</param>
+            <param name="ContactNumber">用户联系方式</param>
+            <param name="State">用户的状态</param>
+            <param name="UserType">用户类型</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.User.UpdateUserCommand.#ctor(System.Guid,System.String,System.String,System.String,HaoKao.BasicService.Domain.Enumerations.DataState,Girvs.AuthorizePermission.Enumerations.UserType)">
+            <summary>
+            更新用户
+            </summary>
+            <param name="Id">用户Id</param>
+            <param name="UserPassword">用户密码</param>
+            <param name="UserName">用户名称</param>
+            <param name="ContactNumber">用户联系方式</param>
+            <param name="State">用户的状态</param>
+            <param name="UserType">用户类型</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.UpdateUserCommand.Id">
+            <summary>用户Id</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.UpdateUserCommand.State">
+            <summary>用户的状态</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.UpdateUserCommand.UserType">
+            <summary>用户类型</summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.User.UpdateUserRoleCommand">
+            <summary>
+            更新用户角色
+            </summary>
+            <param name="Id">用户Id</param>
+            <param name="RoleIds">角色Id集合</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.User.UpdateUserRoleCommand.#ctor(System.Guid,System.Guid[])">
+            <summary>
+            更新用户角色
+            </summary>
+            <param name="Id">用户Id</param>
+            <param name="RoleIds">角色Id集合</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.UpdateUserRoleCommand.Id">
+            <summary>用户Id</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.UpdateUserRoleCommand.RoleIds">
+            <summary>角色Id集合</summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.User.UpdateUserRuleCommand">
+            <summary>
+            更新用户的数据权限
+            </summary>
+            <param name="UserId">用户Id</param>
+            <param name="UserRules">用户权限集合</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.User.UpdateUserRuleCommand.#ctor(System.Guid,System.Collections.Generic.List{HaoKao.BasicService.Domain.Models.UserRule})">
+            <summary>
+            更新用户的数据权限
+            </summary>
+            <param name="UserId">用户Id</param>
+            <param name="UserRules">用户权限集合</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.UpdateUserRuleCommand.UserId">
+            <summary>用户Id</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.UpdateUserRuleCommand.UserRules">
+            <summary>用户权限集合</summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.User.UserCommand">
+            <summary>
+            用户命令
+            </summary>
+            <param name="UserAccount">用户账户</param>
+            <param name="UserName">用户名称</param>
+            <param name="ContactNumber">用户联系方式</param>
+            <param name="UserPassword">用户密码</param>
+            <param name="CommandDesc">命令描述</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.User.UserCommand.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            用户命令
+            </summary>
+            <param name="UserAccount">用户账户</param>
+            <param name="UserName">用户名称</param>
+            <param name="ContactNumber">用户联系方式</param>
+            <param name="UserPassword">用户密码</param>
+            <param name="CommandDesc">命令描述</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.UserCommand.UserAccount">
+            <summary>用户账户</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.UserCommand.UserName">
+            <summary>用户名称</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.UserCommand.ContactNumber">
+            <summary>用户联系方式</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.UserCommand.UserPassword">
+            <summary>用户密码</summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Commands.User.UserEditPasswordCommand">
+            <summary>
+            用户自身修改密码
+            </summary>
+            <param name="Id">用户Id</param>
+            <param name="OldPassword">旧密码</param>
+            <param name="NewPassword">新密码</param>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Commands.User.UserEditPasswordCommand.#ctor(System.Guid,System.String,System.String)">
+            <summary>
+            用户自身修改密码
+            </summary>
+            <param name="Id">用户Id</param>
+            <param name="OldPassword">旧密码</param>
+            <param name="NewPassword">新密码</param>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.UserEditPasswordCommand.Id">
+            <summary>用户Id</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.UserEditPasswordCommand.OldPassword">
+            <summary>旧密码</summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Commands.User.UserEditPasswordCommand.NewPassword">
+            <summary>新密码</summary>
+        </member>
+        <member name="F:HaoKao.BasicService.Domain.Enumerations.DataState.Enable">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="F:HaoKao.BasicService.Domain.Enumerations.DataState.Disable">
+            <summary>
+            禁用
+            </summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Enumerations.AuthorizeType">
+            <summary>
+            授权类型
+            </summary>
+        </member>
+        <member name="F:HaoKao.BasicService.Domain.Enumerations.AuthorizeType.AdminUser">
+            <summary>
+            考试管理授权
+            </summary>
+        </member>
+        <member name="F:HaoKao.BasicService.Domain.Enumerations.AuthorizeType.GeneralUser">
+            <summary>
+            机构授权
+            </summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Models.BasalPermission">
+            <summary>
+            BasalPermission 对象影射到表 'Permissions'.
+            这个其实是存储角色权限的
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.BasalPermission.AppliedId">
+            <summary>
+            对应用户ID或角色ID (现在对应是Role的Id)
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.BasalPermission.AppliedObjectId">
+            <summary>
+            对应功能模块的ID (对应ServicePermission的ServiceId)
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.BasalPermission.AppliedObjectType">
+            <summary>
+            对应授权的类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.BasalPermission.ValidateObjectId">
+            <summary>
+            权限值
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.BasalPermission.ValidateObjectType">
+            <summary>
+            权限分类，方便扩展
+            </summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Models.ServicePermission">
+            <summary>
+            系统服务可用操作权限列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.ServicePermission.ServiceName">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.ServicePermission.ServiceId">
+            <summary>
+            服务Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.ServicePermission.Tag">
+            <summary>
+            所属标签
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.ServicePermission.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.ServicePermission.FuncModule">
+            <summary>
+            所属的子系统模块
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.ServicePermission.OtherParams">
+            <summary>
+            其它相关参数
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.ServicePermission.OperationPermissions">
+            <summary>
+            方法权限
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.ServicePermission.Permissions">
+            <summary>
+            枚举值 (这个没用上可以忽略)
+            </summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Models.ServiceDataRule">
+            <summary>
+            服务可用授权列表 (目前没用上)
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.ServiceDataRule.UserType">
+            <summary>
+            用户类型（为扩展而用）
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.ServiceDataRule.EntityDesc">
+            <summary>
+            实体说明
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.ServiceDataRule.EntityTypeName">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.ServiceDataRule.FieldName">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.ServiceDataRule.FieldDesc">
+            <summary>
+            字段的说明
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.ServiceDataRule.FieldType">
+            <summary>
+            字段类型（预留）
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.ServiceDataRule.FieldValue">
+            <summary>
+            字段赋值
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.ServiceDataRule.ExpressionType">
+            <summary>
+            表达式运算符
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.ServiceDataRule.Tag">
+            <summary>
+            所属标签
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.ServiceDataRule.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.User.UserAccount">
+            <summary>
+            用户账户
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.User.UserPassword">
+            <summary>
+            用户密码
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.User.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.User.ContactNumber">
+            <summary>
+            用户联系方式
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.User.OtherId">
+            <summary>
+            绑定其它相关服务的关键标识Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.User.State">
+            <summary>
+            用户的状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.User.UserType">
+            <summary>
+            用户类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.User.AuthorizeType">
+            <summary>
+            授权类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.User.IsInitData">
+            <summary>
+            是否初始化数据
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.User.TenantId">
+            <summary>
+            租户ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.User.TenantName">
+            <summary>
+            租户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.User.RulesList">
+            <summary>
+            设置的用户规则
+            </summary>
+        </member>
+        <member name="T:HaoKao.BasicService.Domain.Models.UserRule">
+            <summary>
+            用户数据规则授权实体 (这个也没用上)
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.UserRule.UserType">
+            <summary>
+            用户类型（为扩展而用）
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.UserRule.EntityDesc">
+            <summary>
+            实体说明
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.UserRule.EntityTypeName">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.UserRule.FieldName">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.UserRule.FieldDesc">
+            <summary>
+            字段的说明
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.UserRule.FieldType">
+            <summary>
+            字段类型（预留）
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.UserRule.FieldValue">
+            <summary>
+            字段赋值
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.UserRule.FieldValueText">
+            <summary>
+            字段值文本
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Models.UserRule.ExpressionType">
+            <summary>
+            表达式运算符
+            </summary>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.PermissionHelper.MergeValidateObjectTypePermission(System.Collections.Generic.List{HaoKao.BasicService.Domain.Models.BasalPermission})">
+            <summary>
+            对权限进行合并
+            </summary>
+            <param name="ps"></param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Queries.PermissionQuery.AppliedObjectId">
+            <summary>
+            功能模块的ID
+            </summary>
+        </member>
+        <member name="F:HaoKao.BasicService.Domain.Queries.PermissionQuery.AppliedType">
+            <summary>
+            接受权限类型(用户或者角色)
+            </summary>
+        </member>
+        <member name="P:HaoKao.BasicService.Domain.Queries.PermissionQuery.AppliedId">
+            <summary>
+            用户或角色ID
+            </summary>
+        </member>
+        <member name="F:HaoKao.BasicService.Domain.Queries.PermissionQuery.ValidateObjectType">
+            <summary>
+            权限分类(比如说功能菜单,数据记录等)
+            </summary>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Repositories.IPermissionRepository.GetUserPermissionLimit(System.Guid)">
+            <summary>
+            获取用户所授权限
+            </summary>
+            <param name="userId">用户Id</param>
+            <returns>权限列表</returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Repositories.IPermissionRepository.GetRolePermissionLimit(System.Guid)">
+            <summary>
+            获取角色所授权限
+            </summary>
+            <param name="roleId">角色Id</param>
+            <returns>权限列表</returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Repositories.IPermissionRepository.GetRoleListPermissionLimit(System.Guid[])">
+            <summary>
+            获取角色列表所授权限
+            </summary>
+            <param name="roleIds">角色Ids</param>
+            <returns>权限列表</returns>
+        </member>
+        <member name="M:HaoKao.BasicService.Domain.Repositories.IPermissionRepository.UpdatePermissions(System.Collections.Generic.List{HaoKao.BasicService.Domain.Models.BasalPermission})">
+            <summary>
+            保存权限
+            </summary>
+            <param name="ps">权限集合</param>
+            <returns>是否成功</returns>
+        </member>
+    </members>
+</doc>

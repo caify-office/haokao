@@ -1,0 +1,1509 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.CourseService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.CourseService.Domain.CourseChapterModule.CourseChapter">
+            <summary>
+            课程章节
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseChapterModule.CourseChapter.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseChapterModule.CourseChapter.ParentId">
+            <summary>
+            父id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseChapterModule.CourseChapter.CourseId">
+            <summary>
+            关联的课程id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseChapterModule.CourseChapter.IsLeaf">
+            <summary>
+            是否是叶子节点
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseChapterModule.CourseChapter.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseChapterModule.CourseChapter.TenantId">
+            <summary>
+            租户id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseChapterModule.CourseChapter.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseChapterModule.CreateCourseChapterCommand">
+            <summary>
+            创建课程章节命令
+            </summary>
+            <param name="Name">名称</param>
+            <param name="ParentId">父id</param>
+            <param name="CourseId">关联的课程id</param>
+            <param name="IsLeaf">是否叶子节点</param>
+            <param name="Sort">排序</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseChapterModule.CreateCourseChapterCommand.#ctor(System.String,System.Guid,System.Guid,System.Boolean,System.Int32)">
+            <summary>
+            创建课程章节命令
+            </summary>
+            <param name="Name">名称</param>
+            <param name="ParentId">父id</param>
+            <param name="CourseId">关联的课程id</param>
+            <param name="IsLeaf">是否叶子节点</param>
+            <param name="Sort">排序</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseChapterModule.CreateCourseChapterCommand.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseChapterModule.CreateCourseChapterCommand.ParentId">
+            <summary>父id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseChapterModule.CreateCourseChapterCommand.CourseId">
+            <summary>关联的课程id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseChapterModule.CreateCourseChapterCommand.IsLeaf">
+            <summary>是否叶子节点</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseChapterModule.CreateCourseChapterCommand.Sort">
+            <summary>排序</summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseChapterModule.CreateCourseChapterBatchCommand">
+            <summary>
+            批量增加
+            </summary>
+            <param name="List">课程章节集合</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseChapterModule.CreateCourseChapterBatchCommand.#ctor(System.Collections.Generic.List{HaoKao.CourseService.Domain.CourseChapterModule.CourseChapter})">
+            <summary>
+            批量增加
+            </summary>
+            <param name="List">课程章节集合</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseChapterModule.CreateCourseChapterBatchCommand.List">
+            <summary>课程章节集合</summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseChapterModule.UpdateCourseChapterCommand">
+            <summary>
+            更新课程章节命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Name">名称</param>
+            <param name="ParentId">父id</param>
+            <param name="CourseId">关联的课程id</param>
+            <param name="IsLeaf">IsLeaf是否叶子节点</param>
+            <param name="Sort">排序</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseChapterModule.UpdateCourseChapterCommand.#ctor(System.Guid,System.String,System.Guid,System.Guid,System.Boolean,System.Int32)">
+            <summary>
+            更新课程章节命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Name">名称</param>
+            <param name="ParentId">父id</param>
+            <param name="CourseId">关联的课程id</param>
+            <param name="IsLeaf">IsLeaf是否叶子节点</param>
+            <param name="Sort">排序</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseChapterModule.UpdateCourseChapterCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseChapterModule.UpdateCourseChapterCommand.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseChapterModule.UpdateCourseChapterCommand.ParentId">
+            <summary>父id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseChapterModule.UpdateCourseChapterCommand.CourseId">
+            <summary>关联的课程id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseChapterModule.UpdateCourseChapterCommand.IsLeaf">
+            <summary>IsLeaf是否叶子节点</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseChapterModule.UpdateCourseChapterCommand.Sort">
+            <summary>排序</summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseChapterModule.DeleteCourseChapterCommand">
+            <summary>
+            删除课程章节命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseChapterModule.DeleteCourseChapterCommand.#ctor(System.Guid)">
+            <summary>
+            删除课程章节命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseChapterModule.DeleteCourseChapterCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseChapterModule.BatchDeleteCourseChapterCommand">
+            <summary>
+            批量删除课程章节
+            </summary>
+            <param name="Id">主键id</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseChapterModule.BatchDeleteCourseChapterCommand.#ctor(System.Guid)">
+            <summary>
+            批量删除课程章节
+            </summary>
+            <param name="Id">主键id</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseChapterModule.BatchDeleteCourseChapterCommand.Id">
+            <summary>主键id</summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseChapterModule.ICourseChapterRepository.ClearCourseChapter(System.Guid)">
+            <summary>
+            清空课程章节
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseChapterModule.ICourseChapterRepository.GetChapterNodeTreeByQueryAsync(System.Nullable{System.Guid},System.Nullable{System.Guid})">
+            <summary>
+            课程章节树形
+            </summary>
+            <param name="id"></param>
+            <param name="courseid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseChapterModule.ICourseChapterRepository.GetChapterVideoTreeByQueryAsync(System.Nullable{System.Guid})">
+            <summary>
+            章节视频树形列表,需要将视频也兼容进去-只保留一级
+            </summary>
+            <param name="courseid">课程id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseChapterModule.ICourseChapterRepository.IsExistTry(System.Guid[])">
+            <summary>
+            判断这些课程下是否有试听视频
+            </summary>
+            <param name="courseIds"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseMaterialsModule.CourseMaterials">
+            <summary>
+            课程讲义
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseMaterialsModule.CourseMaterials.CourseChapterId">
+            <summary>
+            关联的课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseMaterialsModule.CourseMaterials.KnowledgePointId">
+            <summary>
+            关联的知识点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseMaterialsModule.CourseMaterials.Name">
+            <summary>
+            讲义名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseMaterialsModule.CourseMaterials.FileUrl">
+            <summary>
+            讲义地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseMaterialsModule.CourseMaterials.Sort">
+            <summary>
+            排序,处理上移下移,做成一个自增强的方式
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseMaterialsModule.CourseMaterials.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseMaterialsModule.CourseMaterials.TenantId">
+            <summary>
+            租户id
+            </summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseMaterialsModule.CreateCourseMaterialsCommand">
+            <summary>
+            创建课程讲义命令
+            </summary>
+            <param name="Name">讲义名称</param>
+            <param name="FileUrl">讲义地址</param>
+            <param name="CourseChapterId">课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseMaterialsModule.CreateCourseMaterialsCommand.#ctor(System.String,System.String,System.Guid)">
+            <summary>
+            创建课程讲义命令
+            </summary>
+            <param name="Name">讲义名称</param>
+            <param name="FileUrl">讲义地址</param>
+            <param name="CourseChapterId">课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseMaterialsModule.CreateCourseMaterialsCommand.Name">
+            <summary>讲义名称</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseMaterialsModule.CreateCourseMaterialsCommand.FileUrl">
+            <summary>讲义地址</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseMaterialsModule.CreateCourseMaterialsCommand.CourseChapterId">
+            <summary>课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）</summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseMaterialsModule.SaveCourseMaterialsCommand">
+            <summary>
+            保存课程讲义命令（智辅学习使用）
+            </summary>
+            <param name="Name">讲义名称</param>
+            <param name="FileUrl">讲义地址</param>
+            <param name="CourseChapterId">课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）</param>
+            <param name="KnowledgePointId">知识点Id</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseMaterialsModule.SaveCourseMaterialsCommand.#ctor(System.String,System.String,System.Guid,System.Guid)">
+            <summary>
+            保存课程讲义命令（智辅学习使用）
+            </summary>
+            <param name="Name">讲义名称</param>
+            <param name="FileUrl">讲义地址</param>
+            <param name="CourseChapterId">课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）</param>
+            <param name="KnowledgePointId">知识点Id</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseMaterialsModule.SaveCourseMaterialsCommand.Name">
+            <summary>讲义名称</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseMaterialsModule.SaveCourseMaterialsCommand.FileUrl">
+            <summary>讲义地址</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseMaterialsModule.SaveCourseMaterialsCommand.CourseChapterId">
+            <summary>课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseMaterialsModule.SaveCourseMaterialsCommand.KnowledgePointId">
+            <summary>知识点Id</summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseMaterialsModule.SetCourseMaterialsSortCommand">
+            <summary>
+            设置课程讲义排序命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Sort">排序</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseMaterialsModule.SetCourseMaterialsSortCommand.#ctor(System.Guid,System.Int32)">
+            <summary>
+            设置课程讲义排序命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Sort">排序</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseMaterialsModule.SetCourseMaterialsSortCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseMaterialsModule.SetCourseMaterialsSortCommand.Sort">
+            <summary>排序</summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseMaterialsModule.DeleteCourseMaterialsCommand">
+            <summary>
+            删除课程讲义命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseMaterialsModule.DeleteCourseMaterialsCommand.#ctor(System.Guid)">
+            <summary>
+            删除课程讲义命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseMaterialsModule.DeleteCourseMaterialsCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseMaterialsModule.CourseMaterialsQuery.KnowledgePointId">
+            <summary>
+            关联的知识点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseMaterialsModule.CourseMaterialsQuery.CourseChapterId">
+            <summary>
+            关联的课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseMaterialsModule.ICourseMaterialsRepository.MaterialsCount(System.Guid)">
+            <summary>
+            查询课程下面的讲义数量
+            </summary>
+            <param name="courseId">课程id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseMaterialsModule.ICourseMaterialsRepository.UpdateSort(System.Guid,System.Int32,System.Guid,System.Int32)">
+            <summary>
+            更改排序
+            </summary>
+            <param name="id"></param>
+            <param name="sort"></param>
+            <param name="compareId"></param>
+            <param name="compareSort"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseMaterialsModule.ICourseMaterialsRepository.GetByQueryByChapterIdsAsync(System.Guid)">
+            <summary>
+            根据章节id查询章节下面的讲义集合
+            </summary>
+            <param name="chapterId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseModule.Course">
+            <summary>
+            课程
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.Course.Name">
+            <summary>
+            课程名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.Course.TeacherJson">
+            <summary>
+            主讲老师集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.Course.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.Course.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.Course.SubjectName">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.Course.UpdateTimeDesc">
+            <summary>
+            预计更新时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.Course.CourseMaterialsPackageName">
+            <summary>
+            上传课程讲义包名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.Course.CourseMaterialsPackageUrl">
+            <summary>
+            上传课程讲义包Url
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.Course.State">
+            <summary>
+            上架状态 false-下架 true-上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.Course.CourseType">
+            <summary>
+            课程类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.Course.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.Course.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseModule.CourseType">
+            <summary>
+            课程类型
+            </summary>
+        </member>
+        <member name="F:HaoKao.CourseService.Domain.CourseModule.CourseType.StageCourse">
+            <summary>
+            阶段课程
+            </summary>
+        </member>
+        <member name="F:HaoKao.CourseService.Domain.CourseModule.CourseType.IntelligenceCourse">
+            <summary>
+            智辅课程
+            </summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseModule.CreateCourseCommand">
+            <summary>
+            创建课程命令
+            </summary>
+            <param name="Name">课程名称</param>
+            <param name="TeacherJson">主讲老师ids集合</param>
+            <param name="Year">年份</param>
+            <param name="SubjectId">科目id</param>
+            <param name="SubjectName">科目名称</param>
+            <param name="State">上架状态 false-下架 true-上架</param>
+            <param name="CourseType">课程类型</param>
+            <param name="UpdateTimeDesc">更新时间</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseModule.CreateCourseCommand.#ctor(System.String,System.String,System.String,System.Guid,System.String,System.Boolean,HaoKao.CourseService.Domain.CourseModule.CourseType,System.String)">
+            <summary>
+            创建课程命令
+            </summary>
+            <param name="Name">课程名称</param>
+            <param name="TeacherJson">主讲老师ids集合</param>
+            <param name="Year">年份</param>
+            <param name="SubjectId">科目id</param>
+            <param name="SubjectName">科目名称</param>
+            <param name="State">上架状态 false-下架 true-上架</param>
+            <param name="CourseType">课程类型</param>
+            <param name="UpdateTimeDesc">更新时间</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.CreateCourseCommand.Name">
+            <summary>课程名称</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.CreateCourseCommand.TeacherJson">
+            <summary>主讲老师ids集合</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.CreateCourseCommand.Year">
+            <summary>年份</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.CreateCourseCommand.SubjectId">
+            <summary>科目id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.CreateCourseCommand.SubjectName">
+            <summary>科目名称</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.CreateCourseCommand.State">
+            <summary>上架状态 false-下架 true-上架</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.CreateCourseCommand.CourseType">
+            <summary>课程类型</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.CreateCourseCommand.UpdateTimeDesc">
+            <summary>更新时间</summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseModule.UpdateCourseCommand">
+            <summary>
+            更新课程命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Name">课程名称</param>
+            <param name="TeacherJson">主讲老师TeacherJson集合</param>
+            <param name="Year">年份</param>
+            <param name="SubjectId">科目id</param>
+            <param name="SubjectName">科目名称</param>
+            <param name="State">上架状态 false-下架 true-上架</param>
+            <param name="UpdateTimeDesc">预计更新时间</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseModule.UpdateCourseCommand.#ctor(System.Guid,System.String,System.String,System.String,System.Guid,System.String,System.Boolean,System.String)">
+            <summary>
+            更新课程命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Name">课程名称</param>
+            <param name="TeacherJson">主讲老师TeacherJson集合</param>
+            <param name="Year">年份</param>
+            <param name="SubjectId">科目id</param>
+            <param name="SubjectName">科目名称</param>
+            <param name="State">上架状态 false-下架 true-上架</param>
+            <param name="UpdateTimeDesc">预计更新时间</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.UpdateCourseCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.UpdateCourseCommand.Name">
+            <summary>课程名称</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.UpdateCourseCommand.TeacherJson">
+            <summary>主讲老师TeacherJson集合</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.UpdateCourseCommand.Year">
+            <summary>年份</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.UpdateCourseCommand.SubjectId">
+            <summary>科目id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.UpdateCourseCommand.SubjectName">
+            <summary>科目名称</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.UpdateCourseCommand.State">
+            <summary>上架状态 false-下架 true-上架</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.UpdateCourseCommand.UpdateTimeDesc">
+            <summary>预计更新时间</summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseModule.UpdateCourseMaterialsPackageUrlCommand">
+            <summary>
+            更新课程讲义包
+            </summary>
+            <param name="Id">主键</param>
+            <param name="CourseMaterialsPackageUrl">课程讲义包url</param>
+            <param name="CourseMaterialsPackageName">课程讲义包名称</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseModule.UpdateCourseMaterialsPackageUrlCommand.#ctor(System.Guid,System.String,System.String)">
+            <summary>
+            更新课程讲义包
+            </summary>
+            <param name="Id">主键</param>
+            <param name="CourseMaterialsPackageUrl">课程讲义包url</param>
+            <param name="CourseMaterialsPackageName">课程讲义包名称</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.UpdateCourseMaterialsPackageUrlCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.UpdateCourseMaterialsPackageUrlCommand.CourseMaterialsPackageUrl">
+            <summary>课程讲义包url</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.UpdateCourseMaterialsPackageUrlCommand.CourseMaterialsPackageName">
+            <summary>课程讲义包名称</summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseModule.UpdateGroundingStateCommand">
+            <summary>
+            上下架修改命令
+            </summary>
+            <param name="Ids"></param>
+            <param name="State"></param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseModule.UpdateGroundingStateCommand.#ctor(System.Collections.Generic.IEnumerable{System.Guid},System.Boolean)">
+            <summary>
+            上下架修改命令
+            </summary>
+            <param name="Ids"></param>
+            <param name="State"></param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.UpdateGroundingStateCommand.Ids">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.UpdateGroundingStateCommand.State">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseModule.DeleteCourseCommand">
+            <summary>
+            删除课程命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseModule.DeleteCourseCommand.#ctor(System.Guid)">
+            <summary>
+            删除课程命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.DeleteCourseCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.CourseQuery.CourseName">
+            <summary>
+            课程名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.CourseQuery.SubjectId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.CourseQuery.State">
+            <summary>
+            上下架
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.CourseQuery.CourseIds">
+            <summary>
+            课程ids
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseModule.CourseQuery.CourseType">
+            <summary>
+            课程类型
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseModule.ICourseRepository.MergeChapterAndVideoDo">
+            <summary>
+            合并课程章节和视频
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CoursePracticeQuery.KnowledgePointId">
+            <summary>
+            关联的知识点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CoursePracticeQuery.CourseChapterId">
+            <summary>
+            关联的课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）
+            </summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CoursePracticeModule.CoursePractice">
+            <summary>
+            课后练习
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CoursePractice.SubjectId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CoursePractice.CourseId">
+            <summary>
+            课程id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CoursePractice.PracticeType">
+            <summary>
+            练习类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CoursePractice.CourseChapterId">
+            <summary>
+            关联的课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CoursePractice.CourseChapterName">
+             <summary>
+             关联的课程章节名称（阶段学习为课程章节名称,智慧辅助学习为课程名称）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CoursePractice.KnowledgePointId">
+            <summary>
+            关联的知识点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CoursePractice.ExamFrequency">
+            <summary>
+            知识点考试频率
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CoursePractice.ChapterNodeId">
+            <summary>
+            关联的试题章节id（阶段学习使用）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CoursePractice.ChapterNodeName">
+             <summary>
+             关联的试题章节名称（阶段学习使用）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CoursePractice.QuestionCategoryId">
+            <summary>
+            试题分类Id（阶段学习使用）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CoursePractice.QuestionCategoryName">
+             <summary>
+             试题分类名称（阶段学习使用）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CoursePractice.QuestionConfig">
+            <summary>
+            试题配置(智辅学习课程，添加课后练习使用)
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CoursePractice.QuestionCount">
+            <summary>
+            试题数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CoursePractice.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CoursePractice.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CoursePractice.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="F:HaoKao.CourseService.Domain.CoursePracticeModule.PracticeType.StageCourse">
+            <summary>
+            阶段课程章节练习
+            </summary>
+        </member>
+        <member name="F:HaoKao.CourseService.Domain.CoursePracticeModule.PracticeType.AssistanceChapterPractice">
+            <summary>
+            智辅课程章节练习
+            </summary>
+        </member>
+        <member name="F:HaoKao.CourseService.Domain.CoursePracticeModule.PracticeType.AssistanceAfterPractice">
+            <summary>
+            智辅课程课后练习
+            </summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CoursePracticeModule.CreateCoursePracticeCommand">
+            <summary>
+            创建课后练习命令
+            </summary>
+            <param name="SubjectId">科目id</param>
+            <param name="CourseChapterId">关联的课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）</param>
+            <param name="CourseChapterName"></param>
+            <param name="ChapterNodeId">试题章节id</param>
+            <param name="ChapterNodeName">试题章节名称</param>
+            <param name="QuestionCategoryId">试题分类Id</param>
+            <param name="QuestionCategoryName">试题分类名称</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CoursePracticeModule.CreateCoursePracticeCommand.#ctor(System.Guid,System.Guid,System.String,System.Nullable{System.Guid},System.String,System.Nullable{System.Guid},System.String)">
+            <summary>
+            创建课后练习命令
+            </summary>
+            <param name="SubjectId">科目id</param>
+            <param name="CourseChapterId">关联的课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）</param>
+            <param name="CourseChapterName"></param>
+            <param name="ChapterNodeId">试题章节id</param>
+            <param name="ChapterNodeName">试题章节名称</param>
+            <param name="QuestionCategoryId">试题分类Id</param>
+            <param name="QuestionCategoryName">试题分类名称</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CreateCoursePracticeCommand.SubjectId">
+            <summary>科目id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CreateCoursePracticeCommand.CourseChapterId">
+            <summary>关联的课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CreateCoursePracticeCommand.CourseChapterName">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CreateCoursePracticeCommand.ChapterNodeId">
+            <summary>试题章节id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CreateCoursePracticeCommand.ChapterNodeName">
+            <summary>试题章节名称</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CreateCoursePracticeCommand.QuestionCategoryId">
+            <summary>试题分类Id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.CreateCoursePracticeCommand.QuestionCategoryName">
+            <summary>试题分类名称</summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CoursePracticeModule.SaveAssistantCoursePracticeCommand">
+            <summary>
+            保存智辅课程练习命令
+            </summary>
+            <param name="SubjectId">科目id</param>
+            <param name="CourseId">课程id</param>
+            <param name="PracticeType">练习类型</param>
+            <param name="CourseChapterId">关联的课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）</param>
+            <param name="KnowledgePointId">知识点Id</param>
+            <param name="ExamFrequency">考试频率</param>
+            <param name="ChapterNodeId">试题章节id</param>
+            <param name="ChapterNodeName">试题章节名称</param>
+            <param name="QuestionCategoryId">试题分类Id</param>
+            <param name="QuestionCategoryName">试题分类名称</param>
+            <param name="CourseChapterName">章节名称</param>
+            <param name="QuestionConfig">试题配置</param>
+            <param name="QuestionCount">试题数量</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CoursePracticeModule.SaveAssistantCoursePracticeCommand.#ctor(System.Guid,System.Guid,HaoKao.CourseService.Domain.CoursePracticeModule.PracticeType,System.Guid,System.Guid,HaoKao.Common.Enums.ExamFrequency,System.Nullable{System.Guid},System.String,System.Nullable{System.Guid},System.String,System.String,System.String,System.Int32)">
+            <summary>
+            保存智辅课程练习命令
+            </summary>
+            <param name="SubjectId">科目id</param>
+            <param name="CourseId">课程id</param>
+            <param name="PracticeType">练习类型</param>
+            <param name="CourseChapterId">关联的课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）</param>
+            <param name="KnowledgePointId">知识点Id</param>
+            <param name="ExamFrequency">考试频率</param>
+            <param name="ChapterNodeId">试题章节id</param>
+            <param name="ChapterNodeName">试题章节名称</param>
+            <param name="QuestionCategoryId">试题分类Id</param>
+            <param name="QuestionCategoryName">试题分类名称</param>
+            <param name="CourseChapterName">章节名称</param>
+            <param name="QuestionConfig">试题配置</param>
+            <param name="QuestionCount">试题数量</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.SaveAssistantCoursePracticeCommand.SubjectId">
+            <summary>科目id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.SaveAssistantCoursePracticeCommand.CourseId">
+            <summary>课程id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.SaveAssistantCoursePracticeCommand.PracticeType">
+            <summary>练习类型</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.SaveAssistantCoursePracticeCommand.CourseChapterId">
+            <summary>关联的课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.SaveAssistantCoursePracticeCommand.KnowledgePointId">
+            <summary>知识点Id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.SaveAssistantCoursePracticeCommand.ExamFrequency">
+            <summary>考试频率</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.SaveAssistantCoursePracticeCommand.ChapterNodeId">
+            <summary>试题章节id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.SaveAssistantCoursePracticeCommand.ChapterNodeName">
+            <summary>试题章节名称</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.SaveAssistantCoursePracticeCommand.QuestionCategoryId">
+            <summary>试题分类Id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.SaveAssistantCoursePracticeCommand.QuestionCategoryName">
+            <summary>试题分类名称</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.SaveAssistantCoursePracticeCommand.CourseChapterName">
+            <summary>章节名称</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.SaveAssistantCoursePracticeCommand.QuestionConfig">
+            <summary>试题配置</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.SaveAssistantCoursePracticeCommand.QuestionCount">
+            <summary>试题数量</summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CoursePracticeModule.UpdateCoursePracticeCommand">
+            <summary>
+            更新课后练习命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="SubjectId">科目id</param>
+            <param name="CourseChapterId">关联的课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）</param>
+            <param name="CourseChapterName"></param>
+            <param name="ChapterNodeId">试题章节id</param>
+            <param name="ChapterNodeName">试题章节名称</param>
+            <param name="QuestionCategoryId">试题分类Id</param>
+            <param name="QuestionCategoryName">试题分类名称</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CoursePracticeModule.UpdateCoursePracticeCommand.#ctor(System.Guid,System.Guid,System.Guid,System.String,System.Nullable{System.Guid},System.String,System.Nullable{System.Guid},System.String)">
+            <summary>
+            更新课后练习命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="SubjectId">科目id</param>
+            <param name="CourseChapterId">关联的课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）</param>
+            <param name="CourseChapterName"></param>
+            <param name="ChapterNodeId">试题章节id</param>
+            <param name="ChapterNodeName">试题章节名称</param>
+            <param name="QuestionCategoryId">试题分类Id</param>
+            <param name="QuestionCategoryName">试题分类名称</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.UpdateCoursePracticeCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.UpdateCoursePracticeCommand.SubjectId">
+            <summary>科目id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.UpdateCoursePracticeCommand.CourseChapterId">
+            <summary>关联的课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.UpdateCoursePracticeCommand.CourseChapterName">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.UpdateCoursePracticeCommand.ChapterNodeId">
+            <summary>试题章节id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.UpdateCoursePracticeCommand.ChapterNodeName">
+            <summary>试题章节名称</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.UpdateCoursePracticeCommand.QuestionCategoryId">
+            <summary>试题分类Id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.UpdateCoursePracticeCommand.QuestionCategoryName">
+            <summary>试题分类名称</summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CoursePracticeModule.DeleteCoursePracticeCommand">
+            <summary>
+            删除课后练习命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CoursePracticeModule.DeleteCoursePracticeCommand.#ctor(System.Guid)">
+            <summary>
+            删除课后练习命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CoursePracticeModule.DeleteCoursePracticeCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseVideoModule.CourseVideo">
+            <summary>
+            课程视频
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.CourseVideo.CourseChapterId">
+            <summary>
+            关联的课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.CourseVideo.KnowledgePointId">
+            <summary>
+            关联的知识点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.CourseVideo.KnowledgePointIds">
+            <summary>
+            关联的知识点id(阶段学习，保存多个知识点id拼接数组)
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.CourseVideo.Suffix">
+            <summary>
+            后缀
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.CourseVideo.Duration">
+            <summary>
+            时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.CourseVideo.IsTry">
+            <summary>
+            是否试听  ture--试听 false --不可试听
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.CourseVideo.VideoName">
+            <summary>
+            视频名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.CourseVideo.QzName">
+            <summary>
+            前缀name
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.CourseVideo.SourceName">
+            <summary>
+            视频源名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.CourseVideo.VideoUrl">
+            <summary>
+            播放url-冗余
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.CourseVideo.VideoId">
+            <summary>
+            视频id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.CourseVideo.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.CourseVideo.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.CourseVideo.TenantId">
+            <summary>
+            租户id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.CourseVideo.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.CourseVideo.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.CourseVideo.CateId">
+            <summary>
+            视频分类id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.CourseVideo.CateName">
+            <summary>
+            视频分类名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.CourseVideo.Tags">
+            <summary>
+            视频标签
+            </summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseVideoModule.SaveCourseVideoCommand">
+            <summary>
+            创建课程视频命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="CourseChapterId">关联的课程id</param>
+            <param name="KnowledgePointId">知识点Id</param>
+            <param name="Suffix">后缀</param>
+            <param name="Duration">时长</param>
+            <param name="VideoName">视频名称</param>
+            <param name="SourceName">视频源名称</param>
+            <param name="VideoUrl">播放url-冗余</param>
+            <param name="VideoId">视频id</param>
+            <param name="DisplayName"></param>
+            <param name="CateId">视频分类id</param>
+            <param name="CateName">视频分类名称</param>
+            <param name="Tags">视频标签</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseVideoModule.SaveCourseVideoCommand.#ctor(System.Guid,System.Guid,System.String,System.Decimal,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Int64},System.String,System.String)">
+            <summary>
+            创建课程视频命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="CourseChapterId">关联的课程id</param>
+            <param name="KnowledgePointId">知识点Id</param>
+            <param name="Suffix">后缀</param>
+            <param name="Duration">时长</param>
+            <param name="VideoName">视频名称</param>
+            <param name="SourceName">视频源名称</param>
+            <param name="VideoUrl">播放url-冗余</param>
+            <param name="VideoId">视频id</param>
+            <param name="DisplayName"></param>
+            <param name="CateId">视频分类id</param>
+            <param name="CateName">视频分类名称</param>
+            <param name="Tags">视频标签</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.SaveCourseVideoCommand.CourseChapterId">
+            <summary>关联的课程id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.SaveCourseVideoCommand.KnowledgePointId">
+            <summary>知识点Id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.SaveCourseVideoCommand.Suffix">
+            <summary>后缀</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.SaveCourseVideoCommand.Duration">
+            <summary>时长</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.SaveCourseVideoCommand.VideoName">
+            <summary>视频名称</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.SaveCourseVideoCommand.SourceName">
+            <summary>视频源名称</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.SaveCourseVideoCommand.VideoUrl">
+            <summary>播放url-冗余</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.SaveCourseVideoCommand.VideoId">
+            <summary>视频id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.SaveCourseVideoCommand.DisplayName">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.SaveCourseVideoCommand.CateId">
+            <summary>视频分类id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.SaveCourseVideoCommand.CateName">
+            <summary>视频分类名称</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.SaveCourseVideoCommand.Tags">
+            <summary>视频标签</summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseVideoModule.CreateCourseVideoBatchCommand">
+            <summary>
+            批量增加
+            </summary>
+            <param name="Models">视频对象集合</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseVideoModule.CreateCourseVideoBatchCommand.#ctor(System.Collections.Generic.List{HaoKao.CourseService.Domain.CourseVideoModule.CourseVideo})">
+            <summary>
+            批量增加
+            </summary>
+            <param name="Models">视频对象集合</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.CreateCourseVideoBatchCommand.Models">
+            <summary>视频对象集合</summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseVideoModule.UpdateCourseVideoCommand">
+            <summary>
+            更新课程视频命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Suffix">后缀</param>
+            <param name="Duration">时长</param>
+            <param name="VideoName">视频名称</param>
+            <param name="SourceName">视频源名称</param>
+            <param name="VideoUrl">播放url-冗余</param>
+            <param name="VideoId">视频id</param>
+            <param name="DisplayName">显示名称</param>
+            <param name="CateId">视频分类id</param>
+            <param name="CateName">视频分类名称</param>
+            <param name="Tags">视频标签</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseVideoModule.UpdateCourseVideoCommand.#ctor(System.Guid,System.String,System.Decimal,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Int64},System.String,System.String)">
+            <summary>
+            更新课程视频命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Suffix">后缀</param>
+            <param name="Duration">时长</param>
+            <param name="VideoName">视频名称</param>
+            <param name="SourceName">视频源名称</param>
+            <param name="VideoUrl">播放url-冗余</param>
+            <param name="VideoId">视频id</param>
+            <param name="DisplayName">显示名称</param>
+            <param name="CateId">视频分类id</param>
+            <param name="CateName">视频分类名称</param>
+            <param name="Tags">视频标签</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.UpdateCourseVideoCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.UpdateCourseVideoCommand.Suffix">
+            <summary>后缀</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.UpdateCourseVideoCommand.Duration">
+            <summary>时长</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.UpdateCourseVideoCommand.VideoName">
+            <summary>视频名称</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.UpdateCourseVideoCommand.SourceName">
+            <summary>视频源名称</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.UpdateCourseVideoCommand.VideoUrl">
+            <summary>播放url-冗余</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.UpdateCourseVideoCommand.VideoId">
+            <summary>视频id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.UpdateCourseVideoCommand.DisplayName">
+            <summary>显示名称</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.UpdateCourseVideoCommand.CateId">
+            <summary>视频分类id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.UpdateCourseVideoCommand.CateName">
+            <summary>视频分类名称</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.UpdateCourseVideoCommand.Tags">
+            <summary>视频标签</summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseVideoModule.UpdateIsTryCommand">
+            <summary>
+            试听修改
+            </summary>
+            <param name="Ids">视频ids</param>
+            <param name="State">修改试听状态</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseVideoModule.UpdateIsTryCommand.#ctor(System.Collections.Generic.IEnumerable{System.Guid},System.Boolean)">
+            <summary>
+            试听修改
+            </summary>
+            <param name="Ids">视频ids</param>
+            <param name="State">修改试听状态</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.UpdateIsTryCommand.Ids">
+            <summary>视频ids</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.UpdateIsTryCommand.State">
+            <summary>修改试听状态</summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseVideoModule.UpdateSortCommand">
+            <summary>
+            修改排序
+            </summary>
+            <param name="Id"></param>
+            <param name="Sort"></param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseVideoModule.UpdateSortCommand.#ctor(System.Guid,System.Int32)">
+            <summary>
+            修改排序
+            </summary>
+            <param name="Id"></param>
+            <param name="Sort"></param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.UpdateSortCommand.Id">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.UpdateSortCommand.Sort">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseVideoModule.UpdateKnowledgePointCommand">
+            <summary>
+            知识点修改
+            </summary>
+            <param name="Id">视频id</param>
+            <param name="KnowledgePointIds">知识点ids</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseVideoModule.UpdateKnowledgePointCommand.#ctor(System.Guid,System.String)">
+            <summary>
+            知识点修改
+            </summary>
+            <param name="Id">视频id</param>
+            <param name="KnowledgePointIds">知识点ids</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.UpdateKnowledgePointCommand.Id">
+            <summary>视频id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.UpdateKnowledgePointCommand.KnowledgePointIds">
+            <summary>知识点ids</summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseVideoModule.BatchUpdateNameCommand">
+            <summary>
+            批量修改前缀
+            </summary>
+            <param name="Ids"></param>
+            <param name="Name"></param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseVideoModule.BatchUpdateNameCommand.#ctor(System.Collections.Generic.IEnumerable{System.Guid},System.String)">
+            <summary>
+            批量修改前缀
+            </summary>
+            <param name="Ids"></param>
+            <param name="Name"></param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.BatchUpdateNameCommand.Ids">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.BatchUpdateNameCommand.Name">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseVideoModule.DeleteCourseVideoCommand">
+            <summary>
+            删除课程视频命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseVideoModule.DeleteCourseVideoCommand.#ctor(System.Guid)">
+            <summary>
+            删除课程视频命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.DeleteCourseVideoCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.CourseVideoQuery.KnowledgePointId">
+            <summary>
+            关联的知识点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoModule.CourseVideoQuery.CourseChapterId">
+            <summary>
+            课程章节id
+            </summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseVideoNoteModule.CourseVideoNote">
+            <summary>
+            课程视频笔记
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoNoteModule.CourseVideoNote.VideoId">
+            <summary>
+            视频id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoNoteModule.CourseVideoNote.TimeNode">
+            <summary>
+            视频时间节点
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoNoteModule.CourseVideoNote.CourseVideoNoteType">
+            <summary>
+            笔记类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoNoteModule.CourseVideoNote.NoteContent">
+            <summary>
+            笔记内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoNoteModule.CourseVideoNote.TenantId">
+            <summary>
+            租户id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoNoteModule.CourseVideoNote.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoNoteModule.CourseVideoNote.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoNoteModule.CourseVideoNote.CreatorId">
+            <summary>
+            创建者id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoNoteModule.CourseVideoNote.CreatorName">
+            <summary>
+            创建者名称
+            </summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseVideoNoteModule.CreateCourseVideoNoteCommand">
+            <summary>
+            创建课程视频笔记命令
+            </summary>
+            <param name="VideoId">视频id</param>
+            <param name="TimeNode">视频时间节点</param>
+            <param name="CourseVideoNoteType">笔记类型</param>
+            <param name="NoteContent">笔记内容</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseVideoNoteModule.CreateCourseVideoNoteCommand.#ctor(System.String,System.Decimal,HaoKao.CourseService.Domain.CourseVideoNoteModule.CourseVideoNoteType,System.String)">
+            <summary>
+            创建课程视频笔记命令
+            </summary>
+            <param name="VideoId">视频id</param>
+            <param name="TimeNode">视频时间节点</param>
+            <param name="CourseVideoNoteType">笔记类型</param>
+            <param name="NoteContent">笔记内容</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoNoteModule.CreateCourseVideoNoteCommand.VideoId">
+            <summary>视频id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoNoteModule.CreateCourseVideoNoteCommand.TimeNode">
+            <summary>视频时间节点</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoNoteModule.CreateCourseVideoNoteCommand.CourseVideoNoteType">
+            <summary>笔记类型</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoNoteModule.CreateCourseVideoNoteCommand.NoteContent">
+            <summary>笔记内容</summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseVideoNoteModule.UpdateCourseVideoNoteCommand">
+            <summary>
+            更新课程视频笔记命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="VideoId">视频id</param>
+            <param name="TimeNode">视频时间节点</param>
+            <param name="CourseVideoNoteType">笔记类型</param>
+            <param name="NoteContent">笔记内容</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseVideoNoteModule.UpdateCourseVideoNoteCommand.#ctor(System.Guid,System.String,System.Decimal,HaoKao.CourseService.Domain.CourseVideoNoteModule.CourseVideoNoteType,System.String)">
+            <summary>
+            更新课程视频笔记命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="VideoId">视频id</param>
+            <param name="TimeNode">视频时间节点</param>
+            <param name="CourseVideoNoteType">笔记类型</param>
+            <param name="NoteContent">笔记内容</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoNoteModule.UpdateCourseVideoNoteCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoNoteModule.UpdateCourseVideoNoteCommand.VideoId">
+            <summary>视频id</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoNoteModule.UpdateCourseVideoNoteCommand.TimeNode">
+            <summary>视频时间节点</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoNoteModule.UpdateCourseVideoNoteCommand.CourseVideoNoteType">
+            <summary>笔记类型</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoNoteModule.UpdateCourseVideoNoteCommand.NoteContent">
+            <summary>笔记内容</summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseVideoNoteModule.DeleteCourseVideoNoteCommand">
+            <summary>
+            删除课程视频笔记命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseVideoNoteModule.DeleteCourseVideoNoteCommand.#ctor(System.Guid)">
+            <summary>
+            删除课程视频笔记命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoNoteModule.DeleteCourseVideoNoteCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseVideoNoteModule.DeleteBatchCourseVideoNoteCommand">
+            <summary>
+            批量删除课程视频笔记
+            </summary>
+            <param name="VideoId">视频id</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseVideoNoteModule.DeleteBatchCourseVideoNoteCommand.#ctor(System.String)">
+            <summary>
+            批量删除课程视频笔记
+            </summary>
+            <param name="VideoId">视频id</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoNoteModule.DeleteBatchCourseVideoNoteCommand.VideoId">
+            <summary>视频id</summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseVideoNoteModule.CourseVideoNoteProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.CourseVideoNoteModule.CourseVideoNoteProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoNoteModule.CourseVideoNoteProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.CourseVideoNoteModule.CourseVideoNoteQuery.VideoId">
+            <summary>
+            视频id
+            </summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.CourseVideoNoteModule.CourseVideoNoteType">
+            <summary>
+            课程视频笔记类型
+            </summary>
+        </member>
+        <member name="F:HaoKao.CourseService.Domain.CourseVideoNoteModule.CourseVideoNoteType.VideoDifficulties">
+            <summary>
+            视频难点
+            </summary>
+        </member>
+        <member name="F:HaoKao.CourseService.Domain.CourseVideoNoteModule.CourseVideoNoteType.TextRecord">
+            <summary>
+            文本记录
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.VideoStorageModule.VideoStorage.VideoStorageHandlerId">
+            <summary>
+            视频存储器ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.VideoStorageModule.VideoStorage.VideoStorageHandlerName">
+            <summary>
+            视频存储器名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.VideoStorageModule.VideoStorage.ConfigParameter">
+            <summary>
+            相关的配置参数
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.VideoStorageModule.VideoStorage.TenantId">
+            <summary>
+            所属租户
+            </summary>
+        </member>
+        <member name="T:HaoKao.CourseService.Domain.VideoStorageModule.UpdateVideoStorageCommand">
+            <summary>
+            更新命令
+            </summary>
+            <param name="VideoStorageHandlerId">视频存储器ID</param>
+            <param name="VideoStorageHandlerName">视频存储器名称</param>
+            <param name="ConfigParameter">相关的配置参数</param>
+        </member>
+        <member name="M:HaoKao.CourseService.Domain.VideoStorageModule.UpdateVideoStorageCommand.#ctor(System.Guid,System.String,System.String)">
+            <summary>
+            更新命令
+            </summary>
+            <param name="VideoStorageHandlerId">视频存储器ID</param>
+            <param name="VideoStorageHandlerName">视频存储器名称</param>
+            <param name="ConfigParameter">相关的配置参数</param>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.VideoStorageModule.UpdateVideoStorageCommand.VideoStorageHandlerId">
+            <summary>视频存储器ID</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.VideoStorageModule.UpdateVideoStorageCommand.VideoStorageHandlerName">
+            <summary>视频存储器名称</summary>
+        </member>
+        <member name="P:HaoKao.CourseService.Domain.VideoStorageModule.UpdateVideoStorageCommand.ConfigParameter">
+            <summary>相关的配置参数</summary>
+        </member>
+    </members>
+</doc>

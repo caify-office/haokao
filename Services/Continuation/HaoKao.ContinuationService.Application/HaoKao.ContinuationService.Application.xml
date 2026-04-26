@@ -1,0 +1,1616 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.ContinuationService.Application</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationAuditModule.Interfaces.IContinuationAuditService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationAuditModule.Interfaces.IContinuationAuditService.GetEntity(System.Guid)">
+            <summary>
+            根据Id获取实体
+            </summary>
+            <param name="id">id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationAuditModule.Interfaces.IContinuationAuditService.Get(HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.QueryContinuationAuditViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="viewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationAuditModule.Interfaces.IContinuationAuditService.Create(HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.CreateContinuationAuditViewModel)">
+            <summary>
+            创建续读审核
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationAuditModule.Interfaces.IContinuationAuditService.Update(HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.UpdateContinuationAuditViewModel)">
+            <summary>
+            根据主键更新指定续读审核
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ContinuationAuditModule.Services.ContinuationAuditService">
+            <summary>
+            续读审核接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationAuditModule.Services.ContinuationAuditService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.ContinuationService.Domain.ContinuationAuditModule.IContinuationAuditRepository,AutoMapper.IMapper,HaoKao.ContinuationService.Application.ContinuationSetupModule.Interfaces.IContinuationSetupService)">
+            <summary>
+            续读审核接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationAuditModule.Services.ContinuationAuditService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationAuditModule.Services.ContinuationAuditService.GetEntity(System.Guid)">
+            <summary>
+            根据Id获取实体
+            </summary>
+            <param name="id">id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationAuditModule.Services.ContinuationAuditService.Get(HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.QueryContinuationAuditViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="viewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationAuditModule.Services.ContinuationAuditService.Create(HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.CreateContinuationAuditViewModel)">
+            <summary>
+            创建续读审核
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationAuditModule.Services.ContinuationAuditService.Update(HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.UpdateContinuationAuditViewModel)">
+            <summary>
+            根据主键更新指定续读审核
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.BrowseContinuationAuditViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.BrowseContinuationAuditViewModel.StudentName">
+            <summary>
+            学员姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.BrowseContinuationAuditViewModel.Reason">
+            <summary>
+            续读原因
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.BrowseContinuationAuditViewModel.Description">
+            <summary>
+            详细描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.BrowseContinuationAuditViewModel.Evidences">
+            <summary>
+            相关证明
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.BrowseContinuationAuditViewModel.AuditState">
+            <summary>
+            审核状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.BrowseContinuationAuditViewModel.AuditReason">
+            <summary>
+            不通过原因
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.BrowseContinuationAuditViewModel.CreatorId">
+            <summary>
+            申请人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.BrowseContinuationAuditViewModel.CreateTime">
+            <summary>
+            申请时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.BrowseContinuationAuditWebViewModel.Reason">
+            <summary>
+            续读原因
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.BrowseContinuationAuditWebViewModel.Description">
+            <summary>
+            详细描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.BrowseContinuationAuditWebViewModel.Evidences">
+            <summary>
+            相关证明
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.BrowseContinuationAuditWebViewModel.AuditState">
+            <summary>
+            审核状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.BrowseContinuationAuditWebViewModel.AuditReason">
+            <summary>
+            不通过原因
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.BrowseContinuationAuditWebViewModel.ExpiryTime">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.CreateContinuationAuditViewModel.SetupId">
+            <summary>
+            续读配置Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.CreateContinuationAuditViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.CreateContinuationAuditViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.CreateContinuationAuditViewModel.AgreementId">
+            <summary>
+            协议Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.CreateContinuationAuditViewModel.AgreementName">
+            <summary>
+            协议名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.CreateContinuationAuditViewModel.ExpiryTime">
+            <summary>
+            课程过期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.CreateContinuationAuditViewModel.StudentName">
+            <summary>
+            学员姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.CreateContinuationAuditViewModel.Reason">
+            <summary>
+            续读原因
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.CreateContinuationAuditViewModel.RestOfCount">
+            <summary>
+            剩余申请次数
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.CreateContinuationAuditViewModel.Description">
+            <summary>
+            详细描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.CreateContinuationAuditViewModel.Evidences">
+            <summary>
+            相关证明
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.CreateContinuationAuditViewModel.ProductGifts">
+            <summary>
+            产品的赠品Id集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.QueryContinuationAuditViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.QueryContinuationAuditViewModel.StudentName">
+            <summary>
+            学员姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.QueryContinuationAuditViewModel.AuditState">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.QueryContinuationAuditListViewModel.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.QueryContinuationAuditListViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.QueryContinuationAuditListViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.QueryContinuationAuditListViewModel.ExpiryTime">
+            <summary>
+            产品过期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.QueryContinuationAuditListViewModel.StudentName">
+            <summary>
+            学员姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.QueryContinuationAuditListViewModel.Reason">
+            <summary>
+            续读原因
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.QueryContinuationAuditListViewModel.AuditState">
+            <summary>
+            审核状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.QueryContinuationAuditListViewModel.AuditReason">
+            <summary>
+            不通过原因
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.QueryContinuationAuditListViewModel.CreatorId">
+            <summary>
+            申请人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.QueryContinuationAuditListViewModel.CreateTime">
+            <summary>
+            申请时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.QueryContinuationAuditListWebViewModel.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.QueryContinuationAuditListWebViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.QueryContinuationAuditListWebViewModel.AgreementId">
+            <summary>
+            协议Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.QueryContinuationAuditListWebViewModel.AuditState">
+            <summary>
+            审核状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.QueryContinuationAuditListWebViewModel.CreateTime">
+            <summary>
+            申请时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.UpdateContinuationAuditViewModel.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.UpdateContinuationAuditViewModel.AuditState">
+            <summary>
+            审核状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.UpdateContinuationAuditViewModel.AuditReason">
+            <summary>
+            不通过原因
+            </summary>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationModule.Interfaces.IContinuationWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationModule.Interfaces.IContinuationWebService.GetRequestList(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            可申请列表
+            </summary>
+            <param name="productIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationModule.Interfaces.IContinuationWebService.GetRequestRecord">
+            <summary>
+            申请记录列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationModule.Interfaces.IContinuationWebService.Create(HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.CreateContinuationAuditViewModel)">
+            <summary>
+            创建续读审核
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationModule.Interfaces.IContinuationWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationModule.Interfaces.IContinuationWeChatService.GetRequestList(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            可申请列表
+            </summary>
+            <param name="productIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationModule.Interfaces.IContinuationWeChatService.GetRequestRecord">
+            <summary>
+            申请记录列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationModule.Interfaces.IContinuationWeChatService.Create(HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.CreateContinuationAuditViewModel)">
+            <summary>
+            创建续读审核
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ContinuationModule.Services.ContinuationWebService">
+            <summary>
+            服务申请接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationModule.Services.ContinuationWebService.#ctor(HaoKao.ContinuationService.Domain.ContinuationSetupModule.IContinuationSetupRepository,HaoKao.ContinuationService.Domain.ContinuationAuditModule.IContinuationAuditRepository,HaoKao.ContinuationService.Application.ContinuationAuditModule.Interfaces.IContinuationAuditService,Girvs.Cache.Caching.IStaticCacheManager)">
+            <summary>
+            服务申请接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationModule.Services.ContinuationWebService.Get(System.Guid)">
+            <summary>
+            查看详情
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationModule.Services.ContinuationWebService.GetRequestList(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            可申请列表
+            </summary>
+            <param name="productIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationModule.Services.ContinuationWebService.GetRequestRecord">
+            <summary>
+            申请记录列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationModule.Services.ContinuationWebService.Create(HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.CreateContinuationAuditViewModel)">
+            <summary>
+            申请续读
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ContinuationModule.Services.ContinuationWeChatService">
+            <summary>
+            服务申请接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationModule.Services.ContinuationWeChatService.#ctor(HaoKao.ContinuationService.Application.ContinuationModule.Interfaces.IContinuationWebService)">
+            <summary>
+            服务申请接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationModule.Services.ContinuationWeChatService.Get(System.Guid)">
+            <summary>
+            查看详情
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationModule.Services.ContinuationWeChatService.GetRequestList(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            可申请列表
+            </summary>
+            <param name="productIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationModule.Services.ContinuationWeChatService.GetRequestRecord">
+            <summary>
+            申请记录列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationModule.Services.ContinuationWeChatService.Create(HaoKao.ContinuationService.Application.ContinuationAuditModule.ViewModels.CreateContinuationAuditViewModel)">
+            <summary>
+            申请续读
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationModule.ViewModels.ServiceRequestViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationModule.ViewModels.ServiceRequestViewModel.SetupId">
+            <summary>
+            续读配置Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationModule.ViewModels.ServiceRequestViewModel.RestOfCount">
+            <summary>
+            剩余申请次数
+            </summary>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationSetupModule.Interfaces.IContinuationSetupService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationSetupModule.Interfaces.IContinuationSetupService.Get(HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.QueryContinuationSetupViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="viewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationSetupModule.Interfaces.IContinuationSetupService.CheckProducts(HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.CheckProductsViewModel)">
+            <summary>
+            检查同一个产品是否同时出现在有交集的时间段内
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationSetupModule.Interfaces.IContinuationSetupService.Create(HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.CreateContinuationSetupViewModel)">
+            <summary>
+            创建续读配置
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationSetupModule.Interfaces.IContinuationSetupService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定续读配置
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationSetupModule.Interfaces.IContinuationSetupService.Update(System.Guid,HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.UpdateContinuationSetupViewModel)">
+            <summary>
+            根据主键更新指定续读配置
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationSetupModule.Interfaces.IContinuationSetupService.Enable(System.Guid,System.Boolean)">
+            <summary>
+            启用/禁用续读配置
+            </summary>
+            <param name="id">主键</param>
+            <param name="enable">启用/禁用</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationSetupModule.Interfaces.IContinuationSetupService.UpdateExpiryTime(System.Guid,System.DateTime)">
+            <summary>
+            设置续读后会员到期时间
+            </summary>
+            <param name="id">主键</param>
+            <param name="expiryTime">会员到期时间</param>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ContinuationSetupModule.Services.ContinuationSetupService">
+            <summary>
+            续读配置接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationSetupModule.Services.ContinuationSetupService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.ContinuationService.Domain.ContinuationSetupModule.IContinuationSetupRepository,AutoMapper.IMapper)">
+            <summary>
+            续读配置接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationSetupModule.Services.ContinuationSetupService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationSetupModule.Services.ContinuationSetupService.Get(HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.QueryContinuationSetupViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="viewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationSetupModule.Services.ContinuationSetupService.CheckProducts(HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.CheckProductsViewModel)">
+            <summary>
+            检查同一个产品是否同时出现在有交集的时间段内
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationSetupModule.Services.ContinuationSetupService.Create(HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.CreateContinuationSetupViewModel)">
+            <summary>
+            创建续读配置
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationSetupModule.Services.ContinuationSetupService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定续读配置
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationSetupModule.Services.ContinuationSetupService.Update(System.Guid,HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.UpdateContinuationSetupViewModel)">
+            <summary>
+            根据主键更新指定续读配置
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationSetupModule.Services.ContinuationSetupService.Enable(System.Guid,System.Boolean)">
+            <summary>
+            启用/禁用续读配置
+            </summary>
+            <param name="id">主键</param>
+            <param name="enable">启用/禁用</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ContinuationSetupModule.Services.ContinuationSetupService.UpdateExpiryTime(System.Guid,System.DateTime)">
+            <summary>
+            设置续读后会员到期时间
+            </summary>
+            <param name="id">主键</param>
+            <param name="expiryTime">会员到期时间</param>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.BrowseContinuationSetupViewModel.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.BrowseContinuationSetupViewModel.StartTime">
+            <summary>
+            续读申请开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.BrowseContinuationSetupViewModel.EndTime">
+            <summary>
+            续读申请结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.BrowseContinuationSetupViewModel.ExpiryTime">
+            <summary>
+            续读后的到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.BrowseContinuationSetupViewModel.Products">
+            <summary>
+            产品集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.BrowseContinuationSetupViewModel.Enable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.CheckProductsViewModel.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.CheckProductsViewModel.StartTime">
+            <summary>
+            续读申请开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.CheckProductsViewModel.EndTime">
+            <summary>
+            续读申请结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.CheckProductsViewModel.ProductIds">
+            <summary>
+            产品Id集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.CreateContinuationSetupViewModel.StartTime">
+            <summary>
+            续读申请开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.CreateContinuationSetupViewModel.EndTime">
+            <summary>
+            续读申请结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.CreateContinuationSetupViewModel.ExpiryTime">
+            <summary>
+            续读后的到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.CreateContinuationSetupViewModel.Products">
+            <summary>
+            产品集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.CreateContinuationSetupViewModel.Enable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.QueryContinuationSetupViewModel.Enable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.QueryContinuationSetupListViewModel.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.QueryContinuationSetupListViewModel.StartTime">
+            <summary>
+            续读申请开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.QueryContinuationSetupListViewModel.EndTime">
+            <summary>
+            续读申请结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.QueryContinuationSetupListViewModel.ExpiryTime">
+            <summary>
+            续读后的到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.QueryContinuationSetupListViewModel.Products">
+            <summary>
+            产品集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.QueryContinuationSetupListViewModel.ProductIds">
+            <summary>
+            产品Ids
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.QueryContinuationSetupListViewModel.Enable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.QueryContinuationSetupListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.UpdateContinuationSetupViewModel.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.UpdateContinuationSetupViewModel.StartTime">
+            <summary>
+            续读申请开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.UpdateContinuationSetupViewModel.EndTime">
+            <summary>
+            续读申请结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.UpdateContinuationSetupViewModel.ExpiryTime">
+            <summary>
+            续读后的到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.UpdateContinuationSetupViewModel.Products">
+            <summary>
+            产品集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ContinuationSetupModule.ViewModels.UpdateContinuationSetupViewModel.Enable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionModule.Interfaces.IProductExtensionWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定申请详情
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionModule.Interfaces.IProductExtensionWebService.GetRequestList(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            获取可申请列表
+            </summary>
+            <param name="productIds">产品Id集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionModule.Interfaces.IProductExtensionWebService.GetRequestRecord">
+            <summary>
+            获取申请记录列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionModule.Interfaces.IProductExtensionWebService.Create(HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.CreateProductExtensionRequestViewModel)">
+            <summary>
+            创建续读申请
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionModule.Interfaces.IProductExtensionWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定申请详情
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionModule.Interfaces.IProductExtensionWeChatService.GetRequestList(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            获取可申请列表
+            </summary>
+            <param name="productIds">产品Id集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionModule.Interfaces.IProductExtensionWeChatService.GetRequestRecord">
+            <summary>
+            获取申请记录列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionModule.Interfaces.IProductExtensionWeChatService.Create(HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.CreateProductExtensionRequestViewModel)">
+            <summary>
+            创建续读申请
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ProductExtensionModule.Services.ProductExtensionWebService">
+            <summary>
+            服务申请接口 (Web端)
+            </summary>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionModule.Services.ProductExtensionWebService.#ctor(HaoKao.ContinuationService.Domain.ProductExtensionPolicyModule.IProductExtensionPolicyRepository,HaoKao.ContinuationService.Domain.ProductExtensionRequestModule.IProductExtensionRequestRepository,HaoKao.ContinuationService.Application.ProductExtensionRequestModule.Interfaces.IProductExtensionRequestService,HaoKao.ContinuationService.Domain.ProductExtensionRequestModule.IProductExtensionDomainService,Girvs.Cache.Caching.IStaticCacheManager,AutoMapper.IMapper)">
+            <summary>
+            服务申请接口 (Web端)
+            </summary>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionModule.Services.ProductExtensionWebService.Get(System.Guid)">
+            <summary>
+            查看详情
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionModule.Services.ProductExtensionWebService.GetRequestList(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            可申请列表
+            </summary>
+            <param name="productIds">产品Id集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionModule.Services.ProductExtensionWebService.GetRequestRecord">
+            <summary>
+            申请记录列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionModule.Services.ProductExtensionWebService.Create(HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.CreateProductExtensionRequestViewModel)">
+            <summary>
+            创建续读申请
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ProductExtensionModule.Services.ProductExtensionWeChatService">
+            <summary>
+            服务申请接口 (微信端)
+            </summary>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionModule.Services.ProductExtensionWeChatService.#ctor(HaoKao.ContinuationService.Application.ProductExtensionModule.Interfaces.IProductExtensionWebService)">
+            <summary>
+            服务申请接口 (微信端)
+            </summary>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionModule.Services.ProductExtensionWeChatService.Get(System.Guid)">
+            <summary>
+            查看详情
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionModule.Services.ProductExtensionWeChatService.GetRequestList(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            可申请列表
+            </summary>
+            <param name="productIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionModule.Services.ProductExtensionWeChatService.GetRequestRecord">
+            <summary>
+            申请记录列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionModule.Services.ProductExtensionWeChatService.Create(HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.CreateProductExtensionRequestViewModel)">
+            <summary>
+            申请续读
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ProductExtensionModule.ViewModels.ProductExtensionServiceRequestViewModel">
+            <summary>
+            可申请服务视图模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionModule.ViewModels.ProductExtensionServiceRequestViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionModule.ViewModels.ProductExtensionServiceRequestViewModel.PolicyId">
+            <summary>
+            续读策略Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionModule.ViewModels.ProductExtensionServiceRequestViewModel.RestOfCount">
+            <summary>
+            剩余申请次数
+            </summary>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ProductExtensionModule.ViewModels.BrowseProductExtensionRequestWebViewModel">
+            <summary>
+            Web端浏览申请详情视图模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionModule.ViewModels.BrowseProductExtensionRequestWebViewModel.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionModule.ViewModels.BrowseProductExtensionRequestWebViewModel.ReasonId">
+            <summary>
+            申请理由Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionModule.ViewModels.BrowseProductExtensionRequestWebViewModel.Description">
+            <summary>
+            详细描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionModule.ViewModels.BrowseProductExtensionRequestWebViewModel.Evidences">
+            <summary>
+            相关证明
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionModule.ViewModels.BrowseProductExtensionRequestWebViewModel.AuditState">
+            <summary>
+            审核状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionModule.ViewModels.BrowseProductExtensionRequestWebViewModel.AuditReason">
+            <summary>
+            审核意见
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionModule.ViewModels.BrowseProductExtensionRequestWebViewModel.ExpiryTime">
+            <summary>
+            产品过期时间(如果是申请通过，可能是新的过期时间，暂用原过期时间)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionModule.ViewModels.BrowseProductExtensionRequestWebViewModel.CreateTime">
+            <summary>
+            申请时间
+            </summary>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ProductExtensionModule.ViewModels.QueryProductExtensionRequestListWebViewModel">
+            <summary>
+            Web端申请列表项视图模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionModule.ViewModels.QueryProductExtensionRequestListWebViewModel.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionModule.ViewModels.QueryProductExtensionRequestListWebViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionModule.ViewModels.QueryProductExtensionRequestListWebViewModel.AgreementId">
+            <summary>
+            协议Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionModule.ViewModels.QueryProductExtensionRequestListWebViewModel.AuditState">
+            <summary>
+            审核状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionModule.ViewModels.QueryProductExtensionRequestListWebViewModel.CreateTime">
+            <summary>
+            申请时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionModule.ViewModels.QueryProductExtensionRequestListWebViewModel.PolicyId">
+            <summary>
+            策略Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.Interfaces.IProductExtensionPolicyService">
+            <summary>
+            课程续读策略接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.Interfaces.IProductExtensionPolicyService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定策略
+            </summary>
+            <param name="id">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.Interfaces.IProductExtensionPolicyService.Get(HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.QueryProductExtensionPolicyViewModel)">
+            <summary>
+            根据查询获取策略列表，用于分页
+            </summary>
+            <param name="viewModel">查询对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.Interfaces.IProductExtensionPolicyService.Create(HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.CreateProductExtensionPolicyViewModel)">
+            <summary>
+            创建课程续读策略
+            </summary>
+            <param name="model">新增模型</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.Interfaces.IProductExtensionPolicyService.Update(HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.UpdateProductExtensionPolicyViewModel)">
+            <summary>
+            更新课程续读策略
+            </summary>
+            <param name="model">更新模型</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.Interfaces.IProductExtensionPolicyService.Delete(System.Guid)">
+            <summary>
+            删除课程续读策略
+            </summary>
+            <param name="id">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.Interfaces.IProductExtensionPolicyService.Enable(System.Guid,System.Boolean)">
+            <summary>
+            启用/禁用课程续读策略
+            </summary>
+            <param name="id">主键</param>
+            <param name="isEnable">是否启用</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.Services.ProductExtensionPolicyService">
+            <summary>
+            课程续读策略接口服务实现
+            </summary>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.Services.ProductExtensionPolicyService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.ContinuationService.Domain.ProductExtensionPolicyModule.IProductExtensionPolicyRepository,AutoMapper.IMapper)">
+            <summary>
+            课程续读策略接口服务实现
+            </summary>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.Services.ProductExtensionPolicyService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定策略
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.Services.ProductExtensionPolicyService.Get(HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.QueryProductExtensionPolicyViewModel)">
+            <summary>
+            根据查询获取策略列表，用于分页
+            </summary>
+            <param name="viewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.Services.ProductExtensionPolicyService.Create(HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.CreateProductExtensionPolicyViewModel)">
+            <summary>
+            创建课程续读策略
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.Services.ProductExtensionPolicyService.Update(HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.UpdateProductExtensionPolicyViewModel)">
+            <summary>
+            更新课程续读策略
+            </summary>
+            <param name="model">更新模型</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.Services.ProductExtensionPolicyService.Delete(System.Guid)">
+            <summary>
+            删除课程续读策略
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.Services.ProductExtensionPolicyService.Enable(System.Guid,System.Boolean)">
+            <summary>
+            启用/禁用课程续读策略
+            </summary>
+            <param name="id">主键</param>
+            <param name="isEnable">是否启用</param>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.PolicyProductViewModel">
+            <summary>
+            产品策略信息
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.PolicyProductViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.PolicyProductViewModel.AgreementId">
+            <summary>
+            协议Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.PolicyProductViewModel.MaxExtensionCount">
+            <summary>
+            允许续读的次数限制 (0表示不限)
+            </summary>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.CreateProductExtensionPolicyViewModel">
+            <summary>
+            创建课程续读策略视图模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.CreateProductExtensionPolicyViewModel.Name">
+            <summary>
+            策略名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.CreateProductExtensionPolicyViewModel.StartTime">
+            <summary>
+            申请开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.CreateProductExtensionPolicyViewModel.EndTime">
+            <summary>
+            申请结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.CreateProductExtensionPolicyViewModel.ExtensionType">
+            <summary>
+            延期类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.CreateProductExtensionPolicyViewModel.ExtensionDays">
+            <summary>
+            延长天数 (当 ExtensionType 为 Duration 时使用)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.CreateProductExtensionPolicyViewModel.ExpiryDate">
+            <summary>
+            固定的过期时间 (当 ExtensionType 为 FixedDate 时使用)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.CreateProductExtensionPolicyViewModel.Products">
+            <summary>
+            产品集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.CreateProductExtensionPolicyViewModel.IsEnable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.UpdateProductExtensionPolicyViewModel">
+            <summary>
+            更新课程续读策略视图模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.UpdateProductExtensionPolicyViewModel.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.BrowseProductExtensionPolicyViewModel">
+            <summary>
+            浏览课程续读策略视图模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.BrowseProductExtensionPolicyViewModel.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.BrowseProductExtensionPolicyViewModel.Name">
+            <summary>
+            策略名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.BrowseProductExtensionPolicyViewModel.StartTime">
+            <summary>
+            申请开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.BrowseProductExtensionPolicyViewModel.EndTime">
+            <summary>
+            申请结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.BrowseProductExtensionPolicyViewModel.ExtensionType">
+            <summary>
+            延期类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.BrowseProductExtensionPolicyViewModel.ExtensionDays">
+            <summary>
+            延长天数
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.BrowseProductExtensionPolicyViewModel.ExpiryDate">
+            <summary>
+            固定的过期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.BrowseProductExtensionPolicyViewModel.Products">
+            <summary>
+            产品集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.BrowseProductExtensionPolicyViewModel.IsEnable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.BrowseProductExtensionPolicyViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.BrowseProductExtensionPolicyViewModel.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.QueryProductExtensionPolicyViewModel">
+            <summary>
+            查询课程续读策略视图模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.QueryProductExtensionPolicyViewModel.Name">
+            <summary>
+            策略名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.QueryProductExtensionPolicyViewModel.IsEnable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.QueryProductExtensionPolicyListViewModel">
+            <summary>
+            课程续读策略列表视图模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.QueryProductExtensionPolicyListViewModel.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.QueryProductExtensionPolicyListViewModel.Name">
+            <summary>
+            策略名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.QueryProductExtensionPolicyListViewModel.StartTime">
+            <summary>
+            申请开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.QueryProductExtensionPolicyListViewModel.EndTime">
+            <summary>
+            申请结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.QueryProductExtensionPolicyListViewModel.ExtensionType">
+            <summary>
+            延期类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.QueryProductExtensionPolicyListViewModel.ExtensionDays">
+            <summary>
+            延长天数
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.QueryProductExtensionPolicyListViewModel.ExpiryDate">
+            <summary>
+            固定的过期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.QueryProductExtensionPolicyListViewModel.Products">
+            <summary>
+            产品集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.QueryProductExtensionPolicyListViewModel.IsEnable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionPolicyModule.ViewModels.QueryProductExtensionPolicyListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.Interfaces.IProductExtensionRequestService">
+            <summary>
+            课程续读申请接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.Interfaces.IProductExtensionRequestService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定申请
+            </summary>
+            <param name="id">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.Interfaces.IProductExtensionRequestService.Get(HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.QueryProductExtensionRequestViewModel)">
+            <summary>
+            根据查询获取申请列表，用于分页
+            </summary>
+            <param name="viewModel">查询对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.Interfaces.IProductExtensionRequestService.Create(HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.CreateProductExtensionRequestViewModel)">
+            <summary>
+            创建课程续读申请
+            </summary>
+            <param name="model">新增模型</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.Interfaces.IProductExtensionRequestService.Update(HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.UpdateProductExtensionRequestStateViewModel)">
+            <summary>
+            更新课程续读申请状态 (审核)
+            </summary>
+            <param name="model">更新模型</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.Services.ProductExtensionRequestService">
+            <summary>
+            课程续读申请接口服务实现
+            </summary>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.Services.ProductExtensionRequestService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.ContinuationService.Domain.ProductExtensionRequestModule.IProductExtensionRequestRepository,AutoMapper.IMapper)">
+            <summary>
+            课程续读申请接口服务实现
+            </summary>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.Services.ProductExtensionRequestService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定申请
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.Services.ProductExtensionRequestService.Get(HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.QueryProductExtensionRequestViewModel)">
+            <summary>
+            根据查询获取申请列表，用于分页
+            </summary>
+            <param name="viewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.Services.ProductExtensionRequestService.Create(HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.CreateProductExtensionRequestViewModel)">
+            <summary>
+            创建课程续读申请
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.Services.ProductExtensionRequestService.Update(HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.UpdateProductExtensionRequestStateViewModel)">
+            <summary>
+            更新课程续读申请状态 (审核)
+            </summary>
+            <param name="model">更新模型</param>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.ProductExtensionAuditLogViewModel">
+            <summary>
+            续读申请审核日志视图模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.ProductExtensionAuditLogViewModel.Id">
+            <summary>
+            实体Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.ProductExtensionAuditLogViewModel.RequestId">
+            <summary>
+            关联的申请Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.ProductExtensionAuditLogViewModel.NewState">
+            <summary>
+            变更后的状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.ProductExtensionAuditLogViewModel.Remark">
+            <summary>
+            审核意见/备注
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.ProductExtensionAuditLogViewModel.CreateTime">
+            <summary>
+            操作时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.ProductExtensionAuditLogViewModel.CreatorId">
+            <summary>
+            操作人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.ProductExtensionAuditLogViewModel.CreatorName">
+            <summary>
+            操作人名称 (冗余字段，便于历史追溯)
+            </summary>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.CreateProductExtensionRequestViewModel">
+            <summary>
+            创建课程续读申请视图模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.CreateProductExtensionRequestViewModel.PolicyId">
+            <summary>
+            策略Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.CreateProductExtensionRequestViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.CreateProductExtensionRequestViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.CreateProductExtensionRequestViewModel.AgreementId">
+            <summary>
+            协议Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.CreateProductExtensionRequestViewModel.AgreementName">
+            <summary>
+            协议名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.CreateProductExtensionRequestViewModel.ExpiryTime">
+            <summary>
+            产品过期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.CreateProductExtensionRequestViewModel.StudentName">
+            <summary>
+            学员姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.CreateProductExtensionRequestViewModel.ReasonId">
+            <summary>
+            申请理由Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.CreateProductExtensionRequestViewModel.RestOfCount">
+            <summary>
+            剩余申请次数
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.CreateProductExtensionRequestViewModel.Description">
+            <summary>
+            详细描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.CreateProductExtensionRequestViewModel.Evidences">
+            <summary>
+            相关证明
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.CreateProductExtensionRequestViewModel.ProductGifts">
+            <summary>
+            产品的赠品Id集合
+            </summary>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.UpdateProductExtensionRequestStateViewModel">
+            <summary>
+            更新课程续读申请状态视图模型 (审核)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.UpdateProductExtensionRequestStateViewModel.Id">
+            <summary>
+            申请Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.UpdateProductExtensionRequestStateViewModel.State">
+            <summary>
+            审核状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.UpdateProductExtensionRequestStateViewModel.Remark">
+            <summary>
+            审核意见/理由
+            </summary>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.BrowseProductExtensionRequestViewModel">
+            <summary>
+            浏览课程续读申请视图模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.BrowseProductExtensionRequestViewModel.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.BrowseProductExtensionRequestViewModel.PolicyId">
+            <summary>
+            策略Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.BrowseProductExtensionRequestViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.BrowseProductExtensionRequestViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.BrowseProductExtensionRequestViewModel.AgreementId">
+            <summary>
+            协议Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.BrowseProductExtensionRequestViewModel.AgreementName">
+            <summary>
+            协议名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.BrowseProductExtensionRequestViewModel.ExpiryTime">
+            <summary>
+            产品过期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.BrowseProductExtensionRequestViewModel.StudentName">
+            <summary>
+            学员姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.BrowseProductExtensionRequestViewModel.ReasonId">
+            <summary>
+            申请理由Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.BrowseProductExtensionRequestViewModel.RestOfCount">
+            <summary>
+            剩余申请次数
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.BrowseProductExtensionRequestViewModel.Description">
+            <summary>
+            详细描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.BrowseProductExtensionRequestViewModel.Evidences">
+            <summary>
+            相关证明
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.BrowseProductExtensionRequestViewModel.ProductGifts">
+            <summary>
+            产品的赠品Id集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.BrowseProductExtensionRequestViewModel.AuditState">
+            <summary>
+            当前审核状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.BrowseProductExtensionRequestViewModel.AuditReason">
+            <summary>
+            当前审核意见
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.BrowseProductExtensionRequestViewModel.AuditTime">
+            <summary>
+            最后审核时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.BrowseProductExtensionRequestViewModel.AuditOperatorName">
+            <summary>
+            最后审核人
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.BrowseProductExtensionRequestViewModel.CreateTime">
+            <summary>
+            申请时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.BrowseProductExtensionRequestViewModel.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.BrowseProductExtensionRequestViewModel.CreatorId">
+            <summary>
+            申请人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.BrowseProductExtensionRequestViewModel.AuditLogs">
+            <summary>
+            审核日志集合
+            </summary>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.QueryProductExtensionRequestViewModel">
+            <summary>
+            查询课程续读申请视图模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.QueryProductExtensionRequestViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.QueryProductExtensionRequestViewModel.StudentName">
+            <summary>
+            学员姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.QueryProductExtensionRequestViewModel.AuditState">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.QueryProductExtensionRequestViewModel.CreatorId">
+            <summary>
+            申请人Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.QueryProductExtensionRequestListViewModel">
+            <summary>
+            课程续读申请列表视图模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.QueryProductExtensionRequestListViewModel.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.QueryProductExtensionRequestListViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.QueryProductExtensionRequestListViewModel.AgreementName">
+            <summary>
+            协议名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.QueryProductExtensionRequestListViewModel.ExpiryTime">
+            <summary>
+            产品过期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.QueryProductExtensionRequestListViewModel.StudentName">
+            <summary>
+            学员姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.QueryProductExtensionRequestListViewModel.AuditState">
+            <summary>
+            当前审核状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.QueryProductExtensionRequestListViewModel.AuditReason">
+            <summary>
+            当前审核意见
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.QueryProductExtensionRequestListViewModel.CreateTime">
+            <summary>
+            申请时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ContinuationService.Application.ProductExtensionRequestModule.ViewModels.QueryProductExtensionRequestListViewModel.CreatorId">
+            <summary>
+            申请人Id
+            </summary>
+        </member>
+    </members>
+</doc>

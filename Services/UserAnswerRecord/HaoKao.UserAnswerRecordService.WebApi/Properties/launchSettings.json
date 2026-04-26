@@ -1,0 +1,19 @@
+{
+  "profiles": {
+    "HaoKao.UserAnswerRecordService.WebApi": {
+      "commandName": "Project",
+      "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:5232",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+      "environmentVariables": {},
+      "publishAllPorts": true
+    }
+  }
+}

@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.NoticeService.Application", "HaoKao.NoticeService.Application\HaoKao.NoticeService.Application.csproj", "{A7B6F45B-9891-42EB-A5B6-2A449CB44C1D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.NoticeService.Domain", "HaoKao.NoticeService.Domain\HaoKao.NoticeService.Domain.csproj", "{A16B43D4-CF05-4793-9A82-7FAF8402D5F1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.NoticeService.WebApi", "HaoKao.NoticeService.WebApi\HaoKao.NoticeService.WebApi.csproj", "{9A6259F1-762F-433A-9FE5-452A4046A5BE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.NoticeService.Infrastructure", "HaoKao.NoticeService.Infrastructure\HaoKao.NoticeService.Infrastructure.csproj", "{9278C084-770D-41DD-B5B1-3BCFE13E813C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7B6F45B-9891-42EB-A5B6-2A449CB44C1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7B6F45B-9891-42EB-A5B6-2A449CB44C1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7B6F45B-9891-42EB-A5B6-2A449CB44C1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7B6F45B-9891-42EB-A5B6-2A449CB44C1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A16B43D4-CF05-4793-9A82-7FAF8402D5F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A16B43D4-CF05-4793-9A82-7FAF8402D5F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A16B43D4-CF05-4793-9A82-7FAF8402D5F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A16B43D4-CF05-4793-9A82-7FAF8402D5F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A6259F1-762F-433A-9FE5-452A4046A5BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A6259F1-762F-433A-9FE5-452A4046A5BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A6259F1-762F-433A-9FE5-452A4046A5BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A6259F1-762F-433A-9FE5-452A4046A5BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9278C084-770D-41DD-B5B1-3BCFE13E813C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9278C084-770D-41DD-B5B1-3BCFE13E813C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9278C084-770D-41DD-B5B1-3BCFE13E813C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9278C084-770D-41DD-B5B1-3BCFE13E813C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {071570A0-003B-43E1-9C14-4D2EE17AD0F0}
+	EndGlobalSection
+EndGlobal

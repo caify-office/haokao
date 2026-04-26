@@ -1,0 +1,459 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.NotificationMessageService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.NotificationMessageService.Domain.Commands.InSiteMessageSetting.SaveInSiteMessageSettingCommand">
+            <summary>
+            修改站内消息配置
+            </summary>
+            <param name="Templates">消息模板集合</param>
+        </member>
+        <member name="M:HaoKao.NotificationMessageService.Domain.Commands.InSiteMessageSetting.SaveInSiteMessageSettingCommand.#ctor(System.Collections.Generic.List{HaoKao.NotificationMessageService.Domain.Models.MessageTemplate})">
+            <summary>
+            修改站内消息配置
+            </summary>
+            <param name="Templates">消息模板集合</param>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Commands.InSiteMessageSetting.SaveInSiteMessageSettingCommand.Templates">
+            <summary>消息模板集合</summary>
+        </member>
+        <member name="T:HaoKao.NotificationMessageService.Domain.Commands.MobileMessageSetting.SaveMobileMessageSettingCommand">
+            <summary>
+            修改手机短信配置
+            </summary>
+            <param name="MobileMessagePlatform">短信平台类型</param>
+            <param name="AppId"></param>
+            <param name="AppSecret">AppSecret</param>
+            <param name="SignList">签名列表</param>
+            <param name="DefaultSign">默认签名</param>
+            <param name="Templates">模板列表</param>
+            <param name="SmsSdkAppId">短信SDk 应用ID</param>
+        </member>
+        <member name="M:HaoKao.NotificationMessageService.Domain.Commands.MobileMessageSetting.SaveMobileMessageSettingCommand.#ctor(HaoKao.NotificationMessageService.Domain.Enumerations.MobileMessagePlatform,System.String,System.String,System.Collections.Generic.List{System.String},System.String,System.Collections.Generic.List{HaoKao.NotificationMessageService.Domain.Models.MessageTemplate},System.String)">
+            <summary>
+            修改手机短信配置
+            </summary>
+            <param name="MobileMessagePlatform">短信平台类型</param>
+            <param name="AppId"></param>
+            <param name="AppSecret">AppSecret</param>
+            <param name="SignList">签名列表</param>
+            <param name="DefaultSign">默认签名</param>
+            <param name="Templates">模板列表</param>
+            <param name="SmsSdkAppId">短信SDk 应用ID</param>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Commands.MobileMessageSetting.SaveMobileMessageSettingCommand.MobileMessagePlatform">
+            <summary>短信平台类型</summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Commands.MobileMessageSetting.SaveMobileMessageSettingCommand.AppId">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Commands.MobileMessageSetting.SaveMobileMessageSettingCommand.AppSecret">
+            <summary>AppSecret</summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Commands.MobileMessageSetting.SaveMobileMessageSettingCommand.SignList">
+            <summary>签名列表</summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Commands.MobileMessageSetting.SaveMobileMessageSettingCommand.DefaultSign">
+            <summary>默认签名</summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Commands.MobileMessageSetting.SaveMobileMessageSettingCommand.Templates">
+            <summary>模板列表</summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Commands.MobileMessageSetting.SaveMobileMessageSettingCommand.SmsSdkAppId">
+            <summary>短信SDk 应用ID</summary>
+        </member>
+        <member name="T:HaoKao.NotificationMessageService.Domain.Commands.NotificationMessage.ReadAllSiteNotificationMessageCommand">
+            <summary>
+            设置考生阅读全部站点消息
+            </summary>
+            <param name="IdCard">身份证号</param>
+        </member>
+        <member name="M:HaoKao.NotificationMessageService.Domain.Commands.NotificationMessage.ReadAllSiteNotificationMessageCommand.#ctor(System.String)">
+            <summary>
+            设置考生阅读全部站点消息
+            </summary>
+            <param name="IdCard">身份证号</param>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Commands.NotificationMessage.ReadAllSiteNotificationMessageCommand.IdCard">
+            <summary>身份证号</summary>
+        </member>
+        <member name="T:HaoKao.NotificationMessageService.Domain.Commands.NotificationMessage.ReadSiteNotificationMessageCommand">
+            <summary>
+            考生阅读指定消息
+            </summary>
+            <param name="Id">消息Id</param>
+        </member>
+        <member name="M:HaoKao.NotificationMessageService.Domain.Commands.NotificationMessage.ReadSiteNotificationMessageCommand.#ctor(System.Guid)">
+            <summary>
+            考生阅读指定消息
+            </summary>
+            <param name="Id">消息Id</param>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Commands.NotificationMessage.ReadSiteNotificationMessageCommand.Id">
+            <summary>消息Id</summary>
+        </member>
+        <member name="T:HaoKao.NotificationMessageService.Domain.Commands.NotificationMessage.SendNotificationMessageCommand">
+            <summary>
+            发送通知消息
+            </summary>
+            <param name="Title">消息标题</param>
+            <param name="ParameterContent">参数消息内容</param>
+            <param name="ReceivingChannel">接收渠道</param>
+            <param name="SendState">发送状态</param>
+            <param name="NotificationMessageType">消息类型</param>
+            <param name="MessageTemplateId">消息模板ID</param>
+            <param name="Failure">失败内容</param>
+            <param name="Receiver">接收者</param>
+            <param name="IsRead">是否阅读</param>
+            <param name="IdCard">消息所属者的身份证号码</param>
+        </member>
+        <member name="M:HaoKao.NotificationMessageService.Domain.Commands.NotificationMessage.SendNotificationMessageCommand.#ctor(System.String,System.String,HaoKao.NotificationMessageService.Domain.Enumerations.ReceivingChannel,HaoKao.NotificationMessageService.Domain.Enumerations.NotificationMessageSendState,HaoKao.Common.Events.NotificationMessage.EventNotificationMessageType,System.String,System.String,System.String,System.Boolean,System.String)">
+            <summary>
+            发送通知消息
+            </summary>
+            <param name="Title">消息标题</param>
+            <param name="ParameterContent">参数消息内容</param>
+            <param name="ReceivingChannel">接收渠道</param>
+            <param name="SendState">发送状态</param>
+            <param name="NotificationMessageType">消息类型</param>
+            <param name="MessageTemplateId">消息模板ID</param>
+            <param name="Failure">失败内容</param>
+            <param name="Receiver">接收者</param>
+            <param name="IsRead">是否阅读</param>
+            <param name="IdCard">消息所属者的身份证号码</param>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Commands.NotificationMessage.SendNotificationMessageCommand.Title">
+            <summary>消息标题</summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Commands.NotificationMessage.SendNotificationMessageCommand.ParameterContent">
+            <summary>参数消息内容</summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Commands.NotificationMessage.SendNotificationMessageCommand.ReceivingChannel">
+            <summary>接收渠道</summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Commands.NotificationMessage.SendNotificationMessageCommand.SendState">
+            <summary>发送状态</summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Commands.NotificationMessage.SendNotificationMessageCommand.NotificationMessageType">
+            <summary>消息类型</summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Commands.NotificationMessage.SendNotificationMessageCommand.MessageTemplateId">
+            <summary>消息模板ID</summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Commands.NotificationMessage.SendNotificationMessageCommand.Failure">
+            <summary>失败内容</summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Commands.NotificationMessage.SendNotificationMessageCommand.Receiver">
+            <summary>接收者</summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Commands.NotificationMessage.SendNotificationMessageCommand.IsRead">
+            <summary>是否阅读</summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Commands.NotificationMessage.SendNotificationMessageCommand.IdCard">
+            <summary>消息所属者的身份证号码</summary>
+        </member>
+        <member name="T:HaoKao.NotificationMessageService.Domain.Commands.TenantSignSetting.SaveTenantSignSettingCommand">
+            <summary>
+            修改当前考试短信签名
+            </summary>
+            <param name="Sign">短信签名</param>
+        </member>
+        <member name="M:HaoKao.NotificationMessageService.Domain.Commands.TenantSignSetting.SaveTenantSignSettingCommand.#ctor(System.String)">
+            <summary>
+            修改当前考试短信签名
+            </summary>
+            <param name="Sign">短信签名</param>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Commands.TenantSignSetting.SaveTenantSignSettingCommand.Sign">
+            <summary>短信签名</summary>
+        </member>
+        <member name="T:HaoKao.NotificationMessageService.Domain.Commands.WechatMessageSetting.SaveWechatMessageSettingCommand">
+            <summary>
+            修改微信模板消息配置
+            </summary>
+            <param name="AppId">AppId</param>
+            <param name="AppSecret">AppSecret</param>
+            <param name="Templates">消息模板集合</param>
+        </member>
+        <member name="M:HaoKao.NotificationMessageService.Domain.Commands.WechatMessageSetting.SaveWechatMessageSettingCommand.#ctor(System.String,System.String,System.Collections.Generic.List{HaoKao.NotificationMessageService.Domain.Models.MessageTemplate})">
+            <summary>
+            修改微信模板消息配置
+            </summary>
+            <param name="AppId">AppId</param>
+            <param name="AppSecret">AppSecret</param>
+            <param name="Templates">消息模板集合</param>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Commands.WechatMessageSetting.SaveWechatMessageSettingCommand.AppId">
+            <summary>AppId</summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Commands.WechatMessageSetting.SaveWechatMessageSettingCommand.AppSecret">
+            <summary>AppSecret</summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Commands.WechatMessageSetting.SaveWechatMessageSettingCommand.Templates">
+            <summary>消息模板集合</summary>
+        </member>
+        <member name="T:HaoKao.NotificationMessageService.Domain.Enumerations.MobileMessagePlatform">
+            <summary>
+            手机短信平台
+            </summary>
+        </member>
+        <member name="F:HaoKao.NotificationMessageService.Domain.Enumerations.MobileMessagePlatform.Aliyun">
+            <summary>
+            阿里云
+            </summary>
+        </member>
+        <member name="F:HaoKao.NotificationMessageService.Domain.Enumerations.MobileMessagePlatform.TencentCloud">
+            <summary>
+            腾讯云
+            </summary>
+        </member>
+        <member name="T:HaoKao.NotificationMessageService.Domain.Enumerations.NotificationMessageSendState">
+            <summary>
+            消息的发送状态
+            </summary>
+        </member>
+        <member name="F:HaoKao.NotificationMessageService.Domain.Enumerations.NotificationMessageSendState.NotSend">
+            <summary>
+            未发送
+            </summary>
+        </member>
+        <member name="F:HaoKao.NotificationMessageService.Domain.Enumerations.NotificationMessageSendState.SendSuccess">
+            <summary>
+            发送成功
+            </summary>
+        </member>
+        <member name="F:HaoKao.NotificationMessageService.Domain.Enumerations.NotificationMessageSendState.SendFail">
+            <summary>
+            发送失败
+            </summary>
+        </member>
+        <member name="F:HaoKao.NotificationMessageService.Domain.Enumerations.ReceivingChannel.WebChat">
+            <summary>
+            微信公众号接收
+            </summary>
+        </member>
+        <member name="F:HaoKao.NotificationMessageService.Domain.Enumerations.ReceivingChannel.InSite">
+            <summary>
+            站内消息
+            </summary>
+        </member>
+        <member name="F:HaoKao.NotificationMessageService.Domain.Enumerations.ReceivingChannel.Mobile">
+            <summary>
+            手机接收
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.MessageSenders.IMessageSender`2.Setting">
+            <summary>
+            消息设置, 继承自MessageSetting
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.MessageSenders.IMessageSender`2.Parameter">
+            <summary>
+            消息模板的参数
+            <example>
+            template: "Say Hi! {0}";
+            parameter: ["Alice"]
+            </example>
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.MessageSenders.IMessageSender`2.RegisteredUser">
+            <summary>
+            需要发送给的注册用户
+            </summary>
+        </member>
+        <member name="M:HaoKao.NotificationMessageService.Domain.MessageSenders.IMessageSender`2.SendAsync(HaoKao.NotificationMessageService.Domain.Models.MessageTemplate)">
+            <summary>
+            消息发送方法
+            </summary>
+            <param name="messageTemplate"></param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.MessageSetting.AppId">
+            <summary>
+            AppId
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.MessageSetting.AppSecret">
+            <summary>
+            AppSecret
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.MessageSetting.Templates">
+            <summary>
+            模板列表
+            </summary>
+        </member>
+        <member name="T:HaoKao.NotificationMessageService.Domain.Models.MobileMessageSetting">
+            <summary>
+            手机短信平台设置
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.MobileMessageSetting.MobileMessagePlatform">
+            <summary>
+            短信平台类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.MobileMessageSetting.SmsSdkAppId">
+            <summary>
+            短信SDk 应用ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.MobileMessageSetting.SignList">
+            <summary>
+            签名列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.MobileMessageSetting.DefaultSign">
+            <summary>
+            默认签名
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.NotificationMessage.Title">
+            <summary>
+            消息标题
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.NotificationMessage.ParameterContent">
+            <summary>
+            参数消息内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.NotificationMessage.CreatorName">
+            <summary>
+            消息创建者
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.NotificationMessage.TenantId">
+            <summary>
+            所属考试租户
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.NotificationMessage.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.NotificationMessage.ReceivingChannel">
+            <summary>
+            接收渠道
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.NotificationMessage.SendState">
+            <summary>
+            发送状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.NotificationMessage.NotificationMessageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.NotificationMessage.IdCard">
+            <summary>
+            消息所属者的身份证号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.NotificationMessage.MessageTemplateId">
+            <summary>
+            消息模板ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.NotificationMessage.Failure">
+            <summary>
+            失败内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.NotificationMessage.Receiver">
+            <summary>
+            接收者
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.NotificationMessage.IsRead">
+            <summary>
+            是否阅读
+            </summary>
+        </member>
+        <member name="T:HaoKao.NotificationMessageService.Domain.Models.RegisteredUser">
+            <summary>
+            注册用户
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.RegisteredUser.UserName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.RegisteredUser.CardId">
+            <summary>
+            身份证号
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.RegisteredUser.ContactNumber">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.RegisteredUser.OpenId">
+            <summary>
+            OpenId
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Models.TenantSignSetting.Sign">
+            <summary>
+            签名名称
+            </summary>
+        </member>
+        <member name="T:HaoKao.NotificationMessageService.Domain.Models.WechatMessageSetting">
+            <summary>
+            微信模板消息设置
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Queries.NotificationMessageQuery.ReceivingChannel">
+            <summary>
+            接收渠道
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Queries.NotificationMessageQuery.SendState">
+            <summary>
+            发送状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Queries.NotificationMessageQuery.NotificationMessageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Queries.NotificationMessageQuery.MessageTemplateId">
+            <summary>
+            消息模板ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Queries.NotificationMessageQuery.IdCard">
+            <summary>
+            消息所属者的身份证号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Queries.NotificationMessageQuery.Receiver">
+            <summary>
+            接收者
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Queries.NotificationMessageQuery.StartDateTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Queries.NotificationMessageQuery.EndDateTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.NotificationMessageService.Domain.Queries.NotificationMessageQuery.TenantAccessId">
+            <summary>
+            对应的考试Id
+            </summary>
+        </member>
+    </members>
+</doc>

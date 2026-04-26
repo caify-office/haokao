@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ShortUrlService.WebApi</name>
+    </assembly>
+    <members>
+        <member name="P:ShortUrlService.WebApi.Models.RegisterAppDto.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:ShortUrlService.WebApi.Models.RegisterAppDto.AppName">
+            <summary>
+            应用名称
+            </summary>
+        </member>
+        <member name="P:ShortUrlService.WebApi.Models.RegisterAppDto.AppCode">
+            <summary>
+            应用编码
+            </summary>
+        </member>
+        <member name="P:ShortUrlService.WebApi.Models.RegisterAppDto.AppSecret">
+            <summary>
+            应用密钥
+            </summary>
+        </member>
+        <member name="P:ShortUrlService.WebApi.Models.RegisterAppDto.Description">
+            <summary>
+            应用描述
+            </summary>
+        </member>
+        <member name="P:ShortUrlService.WebApi.Models.RegisterAppDto.IsEnable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:ShortUrlService.WebApi.Models.RegisterAppDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:ShortUrlService.WebApi.Models.RegisterAppDto.AppDomains">
+            <summary>
+            应用域名
+            </summary>
+        </member>
+        <member name="P:ShortUrlService.WebApi.Models.ShortUrlDto.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:ShortUrlService.WebApi.Models.ShortUrlDto.RegisterAppId">
+            <summary>
+            注册应用Id
+            </summary>
+        </member>
+        <member name="P:ShortUrlService.WebApi.Models.ShortUrlDto.ShortKey">
+            <summary>
+            短链接后缀
+            </summary>
+        </member>
+        <member name="P:ShortUrlService.WebApi.Models.ShortUrlDto.OriginUrl">
+            <summary>
+            原始链接
+            </summary>
+        </member>
+        <member name="P:ShortUrlService.WebApi.Models.ShortUrlDto.AccessLimit">
+            <summary>
+            可访问次数
+            </summary>
+        </member>
+        <member name="P:ShortUrlService.WebApi.Models.ShortUrlDto.ExpiredTime">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="P:ShortUrlService.WebApi.Models.ShortUrlDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:ShortUrlService.WebApi.Models.ShortUrlPagingResult.FullUrl">
+            <summary>
+            短链接全路径
+            </summary>
+        </member>
+        <member name="P:ShortUrlService.WebApi.Models.ShortUrlPagingResult.ConsumedCount">
+            <summary>
+            已访问次数
+            </summary>
+        </member>
+        <member name="P:ShortUrlService.WebApi.Models.ShortUrlPagingResult.RestOfCount">
+            <summary>
+            剩余访问次数
+            </summary>
+        </member>
+        <member name="P:ShortUrlService.WebApi.Models.ShortUrlPagingResult.Consumeable">
+            <summary>
+            是否可用
+            </summary>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Services.IAccessLogService.GetAsync(System.Int64,ShortUrlService.WebApi.Models.PagingRequest)">
+            <summary>
+            获取短链接的访问日志列表
+            </summary>
+            <param name="shortUrlId"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Services.AccessLogService.GetAsync(System.Int64,ShortUrlService.WebApi.Models.PagingRequest)">
+            <summary>
+            获取短链接的访问日志列表
+            </summary>
+            <param name="shortUrlId"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Services.AccessLogService.GetCharts(ShortUrlService.Domain.Charts.IShortUrlChartFactory,ShortUrlService.Domain.Charts.ChartTypeEnum)">
+            <summary>
+            获取短链接的访问统计图标
+            </summary>
+            <param name="chartFactory"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Services.IRegisterAppService.Get(System.Int64)">
+            <summary>
+            根据Id获取注册应用
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Services.IRegisterAppService.Get(ShortUrlService.WebApi.Models.PagingRequest)">
+            <summary>
+            获取注册应用列表
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Services.IRegisterAppService.CreateRegisterApp(ShortUrlService.WebApi.Models.CreateRegisterAppRequest)">
+            <summary>
+            创建注册应用并返回应用密钥
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Services.RegisterAppService.Get(System.Int64)">
+            <summary>
+            根据Id获取注册应用
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Services.RegisterAppService.Get(ShortUrlService.WebApi.Models.PagingRequest)">
+            <summary>
+            获取注册应用列表
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Services.RegisterAppService.CreateRegisterApp(ShortUrlService.WebApi.Models.CreateRegisterAppRequest)">
+            <summary>
+            创建注册应用并返回应用密钥
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Services.IShortUrlService.AccessAsync(ShortUrlService.WebApi.Models.AccessRequest)">
+            <summary>
+            访问短链
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Services.IShortUrlService.GenerateAsync(ShortUrlService.WebApi.Models.GenerateRequest)">
+            <summary>
+            生成短链
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Services.IShortUrlService.GenerateSimpleAsync(ShortUrlService.WebApi.Models.GenerateRequestSimple)">
+            <summary>
+            默认过期时间生成端链时起：1年，访问次数：100000
+            </summary>
+            <param name="requestSimple"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Services.ShortUrlService.GenerateSimpleAsync(ShortUrlService.WebApi.Models.GenerateRequestSimple)">
+            <summary>
+            默认过期时间生成端链时起：3年，访问次数：100000
+            </summary>
+            <param name="requestSimple"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Services.ShortUrlService.Get(System.Int64)">
+            <summary>
+            根据Id获取短链接
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Services.ShortUrlService.Get(ShortUrlService.WebApi.Models.ShortUrlPagingRequest)">
+            <summary>
+            获取短链接列表
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Services.ShortUrlService.Create(ShortUrlService.WebApi.Models.CreateShortUrlRequest)">
+            <summary>
+            创建短链接
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Services.ShortUrlService.Update(ShortUrlService.WebApi.Models.UpdateShortUrlRequest)">
+            <summary>
+            更新短链接
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="T:ShortUrlService.WebApi.Shorteners.Base62Shortener">
+            <summary>
+            https://www.cnblogs.com/xmlnode/p/4544302.html
+            </summary>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Shorteners.Base62Shortener.#ctor(Microsoft.Extensions.Options.IOptionsSnapshot{ShortUrlService.WebApi.Configurations.ShortUrlConfig})">
+            <summary>
+            https://www.cnblogs.com/xmlnode/p/4544302.html
+            </summary>
+        </member>
+        <member name="P:ShortUrlService.WebApi.Shorteners.Base62Shortener.ZeroLength">
+            <summary>
+            补充0的长度
+            </summary>
+        </member>
+        <member name="P:ShortUrlService.WebApi.Shorteners.Base62Shortener.MaxValue">
+            <summary>
+            Code长度位数下能达到的最大值
+            </summary>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Shorteners.Base62Shortener.Short(System.Int64)">
+            <summary>
+            【混淆加密】转短码
+            1、根据自增主键id前面补0，如：00000123
+            2、倒转32100000
+            3、把倒转后的十进制转六十二进制（乱序后）
+            </summary>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Shorteners.Base62Shortener.Restore(System.String)">
+            <summary>
+            【恢复混淆】解析短码
+            1、六十二进制转十进制，得到如：32100000
+            2、倒转00000123，得到123
+            3、根据123作为主键去数据库查询映射对象
+            </summary>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Shorteners.Base62Shortener.Encode(System.UInt64)">
+            <summary>
+            十进制 -> 62进制
+            </summary>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Shorteners.Base62Shortener.Decode(System.String)">
+            <summary>
+            62进制 -> 十进制
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Shorteners.Base62Shortener.GenerateSecret">
+            <summary>
+            生成随机的0-9a-zA-Z字符串
+            62位秘钥
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ShortUrlService.WebApi.Swagger.SwaggerAddEnumDescriptions">
+            <summary>
+             swagger enum 支持
+            </summary>
+        </member>
+        <member name="T:ShortUrlService.WebApi.Grpc.ShorturlReflection">
+            <summary>Holder for reflection information generated from Protos/shorturl.proto</summary>
+        </member>
+        <member name="P:ShortUrlService.WebApi.Grpc.ShorturlReflection.Descriptor">
+            <summary>File descriptor for Protos/shorturl.proto</summary>
+        </member>
+        <member name="F:ShortUrlService.WebApi.Grpc.GenerateRequest.OriginUrlFieldNumber">
+            <summary>Field number for the "origin_url" field.</summary>
+        </member>
+        <member name="F:ShortUrlService.WebApi.Grpc.GenerateRequest.AccessLimitFieldNumber">
+            <summary>Field number for the "access_limit" field.</summary>
+        </member>
+        <member name="F:ShortUrlService.WebApi.Grpc.GenerateRequest.ExpiredTimeFieldNumber">
+            <summary>Field number for the "expired_time" field.</summary>
+        </member>
+        <member name="F:ShortUrlService.WebApi.Grpc.GenerateRequest.AppCodeFieldNumber">
+            <summary>Field number for the "app_code" field.</summary>
+        </member>
+        <member name="F:ShortUrlService.WebApi.Grpc.GenerateRequest.AppSecretFieldNumber">
+            <summary>Field number for the "app_secret" field.</summary>
+        </member>
+        <member name="F:ShortUrlService.WebApi.Grpc.GenerateReply.ShortKeyFieldNumber">
+            <summary>Field number for the "short_key" field.</summary>
+        </member>
+        <member name="F:ShortUrlService.WebApi.Grpc.GenerateReply.ShortUrlFieldNumber">
+            <summary>Field number for the "short_url" field.</summary>
+        </member>
+        <member name="F:ShortUrlService.WebApi.Grpc.GenerateReply.QrCodeBase64FieldNumber">
+            <summary>Field number for the "qr_code_base64" field.</summary>
+        </member>
+        <member name="T:ShortUrlService.WebApi.Grpc.ShortUrlGrpcService">
+            <summary>
+            The ShortUrl service definition.
+            </summary>
+        </member>
+        <member name="P:ShortUrlService.WebApi.Grpc.ShortUrlGrpcService.Descriptor">
+            <summary>Service descriptor</summary>
+        </member>
+        <member name="T:ShortUrlService.WebApi.Grpc.ShortUrlGrpcService.ShortUrlGrpcServiceBase">
+            <summary>Base class for server-side implementations of ShortUrlGrpcService</summary>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Grpc.ShortUrlGrpcService.BindService(ShortUrlService.WebApi.Grpc.ShortUrlGrpcService.ShortUrlGrpcServiceBase)">
+            <summary>Creates service definition that can be registered with a server</summary>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+        <member name="M:ShortUrlService.WebApi.Grpc.ShortUrlGrpcService.BindService(Grpc.Core.ServiceBinderBase,ShortUrlService.WebApi.Grpc.ShortUrlGrpcService.ShortUrlGrpcServiceBase)">
+            <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
+            Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+            <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+    </members>
+</doc>

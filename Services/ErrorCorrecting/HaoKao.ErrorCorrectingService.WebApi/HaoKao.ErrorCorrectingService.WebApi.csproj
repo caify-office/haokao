@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <DockerfileContext>..\..\..</DockerfileContext>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Girvs.Swagger" Version="9.0.5.3"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\HaoKao.ErrorCorrectingService.Application\HaoKao.ErrorCorrectingService.Application.csproj"/>
+        <ProjectReference Include="..\HaoKao.ErrorCorrectingService.Infrastructure\HaoKao.ErrorCorrectingService.Infrastructure.csproj"/>
+    </ItemGroup>
+
+</Project>

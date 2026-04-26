@@ -1,0 +1,33 @@
+// Global using directives
+
+global using System;
+global using System.Collections.Generic;
+global using System.Linq;
+global using System.Security.Claims;
+global using System.Threading;
+global using System.Threading.Tasks;
+global using DotNetCore.CAP;
+global using Girvs;
+global using Girvs.AuthorizePermission;
+global using Girvs.AuthorizePermission.Enumerations;
+global using Girvs.AuthorizePermission.Services;
+global using Girvs.BusinessBasis;
+global using Girvs.BusinessBasis.Entities;
+global using Girvs.Cache.Caching;
+global using Girvs.Driven.Behaviors;
+global using Girvs.Driven.Commands;
+global using Girvs.DynamicWebApi;
+global using Girvs.EventBus;
+global using Girvs.EventBus.Extensions;
+global using Girvs.Infrastructure;
+global using Girvs.Refit;
+global using Girvs.TypeFinder;
+global using Microsoft.AspNetCore.Builder;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.AspNetCore.Routing;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Logging;
+global using Newtonsoft.Json;
+global using Panda.DynamicWebApi.Attributes;
+global using Refit;

@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.ErrorCorrectingService.Application</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.ErrorCorrectingService.Application.Service.App.ErrorCorrectingAppService">
+            <summary>
+            本题纠错接口服务-App
+            </summary>
+        </member>
+        <member name="M:HaoKao.ErrorCorrectingService.Application.Service.App.ErrorCorrectingAppService.#ctor(Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification})">
+            <summary>
+            本题纠错接口服务-App
+            </summary>
+        </member>
+        <member name="M:HaoKao.ErrorCorrectingService.Application.Service.App.ErrorCorrectingAppService.Create(HaoKao.ErrorCorrectingService.Application.ViewModels.CreateErrorCorrectingViewModel)">
+            <summary>
+            创建本题纠错    
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ErrorCorrectingService.Application.Service.App.IErrorCorrectingAppService.Create(HaoKao.ErrorCorrectingService.Application.ViewModels.CreateErrorCorrectingViewModel)">
+            <summary>
+            创建题库类别
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.ErrorCorrectingService.Application.Service.ManageMent.ErrorCorrectingService">
+            <summary>
+            本题纠错接口服务-ManageMent
+            </summary>
+        </member>
+        <member name="M:HaoKao.ErrorCorrectingService.Application.Service.ManageMent.ErrorCorrectingService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.ErrorCorrectingService.Domain.Repositories.IErrorCorrectingRepository)">
+            <summary>
+            本题纠错接口服务-ManageMent
+            </summary>
+        </member>
+        <member name="M:HaoKao.ErrorCorrectingService.Application.Service.ManageMent.ErrorCorrectingService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ErrorCorrectingService.Application.Service.ManageMent.ErrorCorrectingService.Get(HaoKao.ErrorCorrectingService.Application.ViewModels.ErrorCorrectingQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ErrorCorrectingService.Application.Service.ManageMent.ErrorCorrectingService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定本题纠错
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ErrorCorrectingService.Application.Service.ManageMent.ErrorCorrectingService.Update(System.Guid,HaoKao.ErrorCorrectingService.Application.ViewModels.UpdateErrorCorrectingViewModel)">
+            <summary>
+            根据主键更新指定本题纠错
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ErrorCorrectingService.Application.Service.ManageMent.IErrorCorrectingService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ErrorCorrectingService.Application.Service.ManageMent.IErrorCorrectingService.Get(HaoKao.ErrorCorrectingService.Application.ViewModels.ErrorCorrectingQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ErrorCorrectingService.Application.Service.ManageMent.IErrorCorrectingService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定本题纠错
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ErrorCorrectingService.Application.Service.ManageMent.IErrorCorrectingService.Update(System.Guid,HaoKao.ErrorCorrectingService.Application.ViewModels.UpdateErrorCorrectingViewModel)">
+            <summary>
+            根据主键更新指定本题纠错
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.ErrorCorrectingService.Application.Service.Web.ErrorCorrectingWebService">
+            <summary>
+            本题纠错接口服务-web
+            </summary>
+        </member>
+        <member name="M:HaoKao.ErrorCorrectingService.Application.Service.Web.ErrorCorrectingWebService.#ctor(Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification})">
+            <summary>
+            本题纠错接口服务-web
+            </summary>
+        </member>
+        <member name="M:HaoKao.ErrorCorrectingService.Application.Service.Web.ErrorCorrectingWebService.Create(HaoKao.ErrorCorrectingService.Application.ViewModels.CreateErrorCorrectingViewModel)">
+            <summary>
+            创建本题纠错    
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ErrorCorrectingService.Application.Service.Web.IErrorCorrectingWebService.Create(HaoKao.ErrorCorrectingService.Application.ViewModels.CreateErrorCorrectingViewModel)">
+            <summary>
+            创建题库类别
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.ErrorCorrectingService.Application.Service.WeChat.ErrorCorrectingWeChatService">
+            <summary>
+            本题纠错接口服务-web
+            </summary>
+        </member>
+        <member name="M:HaoKao.ErrorCorrectingService.Application.Service.WeChat.ErrorCorrectingWeChatService.#ctor(Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification})">
+            <summary>
+            本题纠错接口服务-web
+            </summary>
+        </member>
+        <member name="M:HaoKao.ErrorCorrectingService.Application.Service.WeChat.ErrorCorrectingWeChatService.Create(HaoKao.ErrorCorrectingService.Application.ViewModels.CreateErrorCorrectingViewModel)">
+            <summary>
+            创建本题纠错    
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ErrorCorrectingService.Application.Service.WeChat.IErrorCorrectingWeChatService.Create(HaoKao.ErrorCorrectingService.Application.ViewModels.CreateErrorCorrectingViewModel)">
+            <summary>
+            创建题库类别
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Application.ViewModels.BrowseErrorCorrectingViewModel.QuestionId">
+            <summary>
+            问题id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Application.ViewModels.BrowseErrorCorrectingViewModel.UserId">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Application.ViewModels.BrowseErrorCorrectingViewModel.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Application.ViewModels.BrowseErrorCorrectingViewModel.QuestionTypes">
+            <summary>
+            问题类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Application.ViewModels.CreateErrorCorrectingViewModel.QuestionId">
+            <summary>
+            问题id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Application.ViewModels.CreateErrorCorrectingViewModel.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Application.ViewModels.CreateErrorCorrectingViewModel.QuestionTypes">
+            <summary>
+            问题类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Application.ViewModels.ErrorCorrectingQueryViewModel.SubjectId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Application.ViewModels.ErrorCorrectingQueryViewModel.CategoryId">
+            <summary>
+            分类ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Application.ViewModels.ErrorCorrectingQueryViewModel.QuestionTypeId">
+            <summary>
+            类别id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Application.ViewModels.ErrorCorrectingQueryViewModel.QuestionText">
+            <summary>
+            题干
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Application.ViewModels.ErrorCorrectingQueryViewModel.SearchKey">
+            <summary>
+            昵称/手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Application.ViewModels.ErrorCorrectingQueryViewModel.ErrorTypes">
+             <summary>
+            错误类型
+             </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Application.ViewModels.ErrorCorrectingQueryListViewModel.Id">
+            <summary>
+            主键id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Application.ViewModels.ErrorCorrectingQueryListViewModel.QuestionId">
+            <summary>
+            问题id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Application.ViewModels.ErrorCorrectingQueryListViewModel.UserId">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Application.ViewModels.ErrorCorrectingQueryListViewModel.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Application.ViewModels.ErrorCorrectingQueryListViewModel.QuestionTypes">
+            <summary>
+            问题类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ErrorCorrectingService.Application.ViewModels.ErrorCorrectingQueryListViewModel.CreateTime">
+            <summary>
+            时间
+            </summary>
+        </member>
+    </members>
+</doc>

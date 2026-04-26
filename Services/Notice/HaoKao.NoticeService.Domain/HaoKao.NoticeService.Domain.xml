@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.NoticeService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.NoticeService.Domain.AutoMapper.AutoMapperConfig">
+            <summary>
+            静态全局 AutoMapper 配置文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.NoticeService.Domain.AutoMapper.CommandToEntityMappingProfile.#ctor">
+            <summary>
+            配置构造函数, 用来创建关系映射
+            </summary>
+        </member>
+        <member name="T:HaoKao.NoticeService.Domain.Commands.CreateNoticeCommand">
+            <summary>
+            创建公告命令
+            </summary>
+            <param name="Title">公告名称</param>
+            <param name="Content">公告内容</param>
+            <param name="Popup">是否弹出</param>
+            <param name="StartTime">弹出开始时间</param>
+            <param name="EndTime">弹出结束时间</param>
+            <param name="Published">是否发布</param>
+        </member>
+        <member name="M:HaoKao.NoticeService.Domain.Commands.CreateNoticeCommand.#ctor(System.String,System.String,System.Boolean,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Boolean)">
+            <summary>
+            创建公告命令
+            </summary>
+            <param name="Title">公告名称</param>
+            <param name="Content">公告内容</param>
+            <param name="Popup">是否弹出</param>
+            <param name="StartTime">弹出开始时间</param>
+            <param name="EndTime">弹出结束时间</param>
+            <param name="Published">是否发布</param>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Commands.CreateNoticeCommand.Title">
+            <summary>公告名称</summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Commands.CreateNoticeCommand.Content">
+            <summary>公告内容</summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Commands.CreateNoticeCommand.Popup">
+            <summary>是否弹出</summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Commands.CreateNoticeCommand.StartTime">
+            <summary>弹出开始时间</summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Commands.CreateNoticeCommand.EndTime">
+            <summary>弹出结束时间</summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Commands.CreateNoticeCommand.Published">
+            <summary>是否发布</summary>
+        </member>
+        <member name="T:HaoKao.NoticeService.Domain.Commands.UpdateNoticeCommand">
+            <summary>
+            更新公告命令
+            </summary>
+            <param name="Id">公告Id</param>
+            <param name="Title">公告名称</param>
+            <param name="Content">公告内容</param>
+            <param name="Popup">是否弹出</param>
+            <param name="StartTime">弹出开始时间</param>
+            <param name="EndTime">弹出结束时间</param>
+            <param name="Published">是否发布</param>
+        </member>
+        <member name="M:HaoKao.NoticeService.Domain.Commands.UpdateNoticeCommand.#ctor(System.Guid,System.String,System.String,System.Boolean,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Boolean)">
+            <summary>
+            更新公告命令
+            </summary>
+            <param name="Id">公告Id</param>
+            <param name="Title">公告名称</param>
+            <param name="Content">公告内容</param>
+            <param name="Popup">是否弹出</param>
+            <param name="StartTime">弹出开始时间</param>
+            <param name="EndTime">弹出结束时间</param>
+            <param name="Published">是否发布</param>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Commands.UpdateNoticeCommand.Id">
+            <summary>公告Id</summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Commands.UpdateNoticeCommand.Title">
+            <summary>公告名称</summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Commands.UpdateNoticeCommand.Content">
+            <summary>公告内容</summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Commands.UpdateNoticeCommand.Popup">
+            <summary>是否弹出</summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Commands.UpdateNoticeCommand.StartTime">
+            <summary>弹出开始时间</summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Commands.UpdateNoticeCommand.EndTime">
+            <summary>弹出结束时间</summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Commands.UpdateNoticeCommand.Published">
+            <summary>是否发布</summary>
+        </member>
+        <member name="T:HaoKao.NoticeService.Domain.Commands.UpdateNoticePopupCommand">
+            <summary>
+            修改公告是否弹出
+            </summary>
+            <param name="Ids">公告Ids</param>
+            <param name="Popup">是否弹出</param>
+            <param name="StartTime">弹出开始时间</param>
+            <param name="EndTime">弹出结束时间</param>
+        </member>
+        <member name="M:HaoKao.NoticeService.Domain.Commands.UpdateNoticePopupCommand.#ctor(System.Collections.Generic.List{System.Guid},System.Boolean,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            修改公告是否弹出
+            </summary>
+            <param name="Ids">公告Ids</param>
+            <param name="Popup">是否弹出</param>
+            <param name="StartTime">弹出开始时间</param>
+            <param name="EndTime">弹出结束时间</param>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Commands.UpdateNoticePopupCommand.Ids">
+            <summary>公告Ids</summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Commands.UpdateNoticePopupCommand.Popup">
+            <summary>是否弹出</summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Commands.UpdateNoticePopupCommand.StartTime">
+            <summary>弹出开始时间</summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Commands.UpdateNoticePopupCommand.EndTime">
+            <summary>弹出结束时间</summary>
+        </member>
+        <member name="T:HaoKao.NoticeService.Domain.Commands.UpdateNoticePublishedCommand">
+            <summary>
+            修改公告是否发布
+            </summary>
+            <param name="Ids">公告Ids</param>
+            <param name="Published">是否发布</param>
+        </member>
+        <member name="M:HaoKao.NoticeService.Domain.Commands.UpdateNoticePublishedCommand.#ctor(System.Collections.Generic.List{System.Guid},System.Boolean)">
+            <summary>
+            修改公告是否发布
+            </summary>
+            <param name="Ids">公告Ids</param>
+            <param name="Published">是否发布</param>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Commands.UpdateNoticePublishedCommand.Ids">
+            <summary>公告Ids</summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Commands.UpdateNoticePublishedCommand.Published">
+            <summary>是否发布</summary>
+        </member>
+        <member name="T:HaoKao.NoticeService.Domain.Commands.DeleteNoticeCommand">
+            <summary>
+            删除公告
+            </summary>
+            <param name="Ids">公告Ids</param>
+        </member>
+        <member name="M:HaoKao.NoticeService.Domain.Commands.DeleteNoticeCommand.#ctor(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            删除公告
+            </summary>
+            <param name="Ids">公告Ids</param>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Commands.DeleteNoticeCommand.Ids">
+            <summary>公告Ids</summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Models.Notice.Title">
+            <summary>
+            公告名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Models.Notice.Content">
+            <summary>
+            公告内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Models.Notice.Published">
+            <summary>
+            是否发布
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Models.Notice.Popup">
+            <summary>
+            是否弹出
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Models.Notice.StartTime">
+            <summary>
+            弹出开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Models.Notice.EndTime">
+            <summary>
+            弹出结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Models.Notice.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Models.Notice.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Models.Notice.CreatorName">
+            <summary>
+            创建人名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Models.Notice.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Queries.NoticeQuery.Title">
+            <summary>
+            公告名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Queries.NoticeQuery.Popup">
+            <summary>
+            是否弹出
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Domain.Queries.NoticeQuery.Published">
+            <summary>
+            是否发布
+            </summary>
+        </member>
+    </members>
+</doc>

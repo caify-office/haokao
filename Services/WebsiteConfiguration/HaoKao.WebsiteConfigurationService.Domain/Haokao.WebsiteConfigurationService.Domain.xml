@@ -1,0 +1,664 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.WebsiteConfigurationService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.CreateColumnCommand">
+            <summary>
+            创建栏目命令
+            </summary>
+            <param name="Id"></param>
+            <param name="DomainName">域名</param>
+            <param name="Name">名称</param>
+            <param name="Alias">别名</param>
+            <param name="EnglishName">英文名</param>
+            <param name="ParentId">父节点id</param>
+            <param name="Icon">图标</param>
+            <param name="ActiveIcon">当前图标</param>
+            <param name="IsHomePage">是否首页</param>
+            <param name="Sort">排序</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.CreateColumnCommand.#ctor(System.Guid,System.String,System.String,System.String,System.String,System.Nullable{System.Guid},System.String,System.String,System.Boolean,System.Int32)">
+            <summary>
+            创建栏目命令
+            </summary>
+            <param name="Id"></param>
+            <param name="DomainName">域名</param>
+            <param name="Name">名称</param>
+            <param name="Alias">别名</param>
+            <param name="EnglishName">英文名</param>
+            <param name="ParentId">父节点id</param>
+            <param name="Icon">图标</param>
+            <param name="ActiveIcon">当前图标</param>
+            <param name="IsHomePage">是否首页</param>
+            <param name="Sort">排序</param>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.CreateColumnCommand.Id">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.CreateColumnCommand.DomainName">
+            <summary>域名</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.CreateColumnCommand.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.CreateColumnCommand.Alias">
+            <summary>别名</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.CreateColumnCommand.EnglishName">
+            <summary>英文名</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.CreateColumnCommand.ParentId">
+            <summary>父节点id</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.CreateColumnCommand.Icon">
+            <summary>图标</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.CreateColumnCommand.ActiveIcon">
+            <summary>当前图标</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.CreateColumnCommand.IsHomePage">
+            <summary>是否首页</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.CreateColumnCommand.Sort">
+            <summary>排序</summary>
+        </member>
+        <member name="T:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.DeleteColumnCommand">
+            <summary>
+            删除栏目命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.DeleteColumnCommand.#ctor(System.Guid)">
+            <summary>
+            删除栏目命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.DeleteColumnCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.UpdateColumnCommand">
+            <summary>
+            更新栏目命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="DomainName">域名</param>
+            <param name="Name">名称</param>
+            <param name="Alias">别名</param>
+            <param name="EnglishName">英文名</param>
+            <param name="ParentId">父节点id</param>
+            <param name="Icon">图标</param>
+            <param name="ActiveIcon">当前图标</param>
+            <param name="Sort"></param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.UpdateColumnCommand.#ctor(System.Guid,System.String,System.String,System.String,System.String,System.Nullable{System.Guid},System.String,System.String,System.Int32)">
+            <summary>
+            更新栏目命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="DomainName">域名</param>
+            <param name="Name">名称</param>
+            <param name="Alias">别名</param>
+            <param name="EnglishName">英文名</param>
+            <param name="ParentId">父节点id</param>
+            <param name="Icon">图标</param>
+            <param name="ActiveIcon">当前图标</param>
+            <param name="Sort"></param>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.UpdateColumnCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.UpdateColumnCommand.DomainName">
+            <summary>域名</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.UpdateColumnCommand.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.UpdateColumnCommand.Alias">
+            <summary>别名</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.UpdateColumnCommand.EnglishName">
+            <summary>英文名</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.UpdateColumnCommand.ParentId">
+            <summary>父节点id</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.UpdateColumnCommand.Icon">
+            <summary>图标</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.UpdateColumnCommand.ActiveIcon">
+            <summary>当前图标</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.Column.UpdateColumnCommand.Sort">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.WebsiteConfigurationService.Domain.Commands.TemplateStyle.CreateTemplateStyleCommand">
+            <summary>
+            创建模板命令
+            </summary>
+            <param name="DomainName">域名</param>
+            <param name="Name">名称</param>
+            <param name="Path">路径</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Domain.Commands.TemplateStyle.CreateTemplateStyleCommand.#ctor(System.String,System.String,System.String)">
+            <summary>
+            创建模板命令
+            </summary>
+            <param name="DomainName">域名</param>
+            <param name="Name">名称</param>
+            <param name="Path">路径</param>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.TemplateStyle.CreateTemplateStyleCommand.DomainName">
+            <summary>域名</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.TemplateStyle.CreateTemplateStyleCommand.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.TemplateStyle.CreateTemplateStyleCommand.Path">
+            <summary>路径</summary>
+        </member>
+        <member name="T:HaoKao.WebsiteConfigurationService.Domain.Commands.TemplateStyle.DeleteTemplateStyleCommand">
+            <summary>
+            删除模板命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Domain.Commands.TemplateStyle.DeleteTemplateStyleCommand.#ctor(System.Guid)">
+            <summary>
+            删除模板命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.TemplateStyle.DeleteTemplateStyleCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.WebsiteConfigurationService.Domain.Commands.TemplateStyle.UpdateTemplateStyleCommand">
+            <summary>
+            更新模板命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="DomainName">域名</param>
+            <param name="Name">名称</param>
+            <param name="Path">路径</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Domain.Commands.TemplateStyle.UpdateTemplateStyleCommand.#ctor(System.Guid,System.String,System.String,System.String)">
+            <summary>
+            更新模板命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="DomainName">域名</param>
+            <param name="Name">名称</param>
+            <param name="Path">路径</param>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.TemplateStyle.UpdateTemplateStyleCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.TemplateStyle.UpdateTemplateStyleCommand.DomainName">
+            <summary>域名</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.TemplateStyle.UpdateTemplateStyleCommand.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.TemplateStyle.UpdateTemplateStyleCommand.Path">
+            <summary>路径</summary>
+        </member>
+        <member name="T:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.CreateWebsiteTemplateCommand">
+            <summary>
+            创建模板命令
+            </summary>
+            <param name="Id"></param>
+            <param name="Name">名称</param>
+            <param name="WebsiteTemplateType">模板类型</param>
+            <param name="Desc">描述</param>
+            <param name="ColumnId">所属栏目Id</param>
+            <param name="ColumnName">所属栏目名称</param>
+            <param name="IsDefault">是否默认</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.CreateWebsiteTemplateCommand.#ctor(System.Guid,System.String,HaoKao.WebsiteConfigurationService.Domain.Enumerations.WebsiteTemplateType,System.String,System.Guid,System.String,System.Boolean)">
+            <summary>
+            创建模板命令
+            </summary>
+            <param name="Id"></param>
+            <param name="Name">名称</param>
+            <param name="WebsiteTemplateType">模板类型</param>
+            <param name="Desc">描述</param>
+            <param name="ColumnId">所属栏目Id</param>
+            <param name="ColumnName">所属栏目名称</param>
+            <param name="IsDefault">是否默认</param>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.CreateWebsiteTemplateCommand.Id">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.CreateWebsiteTemplateCommand.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.CreateWebsiteTemplateCommand.WebsiteTemplateType">
+            <summary>模板类型</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.CreateWebsiteTemplateCommand.Desc">
+            <summary>描述</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.CreateWebsiteTemplateCommand.ColumnId">
+            <summary>所属栏目Id</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.CreateWebsiteTemplateCommand.ColumnName">
+            <summary>所属栏目名称</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.CreateWebsiteTemplateCommand.IsDefault">
+            <summary>是否默认</summary>
+        </member>
+        <member name="T:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.DeleteWebsiteTemplateCommand">
+            <summary>
+            删除模板命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.DeleteWebsiteTemplateCommand.#ctor(System.Guid)">
+            <summary>
+            删除模板命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.DeleteWebsiteTemplateCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.SetWebsiteTemplateContentCommand">
+            <summary>
+            设置模板内容
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Content">内容</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.SetWebsiteTemplateContentCommand.#ctor(System.Guid,System.String)">
+            <summary>
+            设置模板内容
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Content">内容</param>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.SetWebsiteTemplateContentCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.SetWebsiteTemplateContentCommand.Content">
+            <summary>内容</summary>
+        </member>
+        <member name="T:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.SetWebsiteTemplateDefaultCommand">
+            <summary>
+            设置默认
+            </summary>
+            <param name="Id"></param>
+            <param name="isDefault"></param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.SetWebsiteTemplateDefaultCommand.#ctor(System.Guid,System.Boolean)">
+            <summary>
+            设置默认
+            </summary>
+            <param name="Id"></param>
+            <param name="isDefault"></param>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.SetWebsiteTemplateDefaultCommand.Id">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.SetWebsiteTemplateDefaultCommand.isDefault">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.SetWebsiteTemplateIsEnableCommand">
+            <summary>
+            设置是否启用
+            </summary>
+            <param name="Id"></param>
+            <param name="IsEnable">是否启用</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.SetWebsiteTemplateIsEnableCommand.#ctor(System.Guid,System.Boolean)">
+            <summary>
+            设置是否启用
+            </summary>
+            <param name="Id"></param>
+            <param name="IsEnable">是否启用</param>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.SetWebsiteTemplateIsEnableCommand.Id">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.SetWebsiteTemplateIsEnableCommand.IsEnable">
+            <summary>是否启用</summary>
+        </member>
+        <member name="T:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.UpdateWebsiteTemplateCommand">
+            <summary>
+            更新模板命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Name">名称</param>
+            <param name="WebsiteTemplateType">网站模板类型</param>
+            <param name="Desc">描述</param>
+            <param name="ColumnId">所属栏目Id</param>
+            <param name="ColumnName">所属栏目名称</param>
+            <param name="IsDefault">是否默认</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.UpdateWebsiteTemplateCommand.#ctor(System.Guid,System.String,HaoKao.WebsiteConfigurationService.Domain.Enumerations.WebsiteTemplateType,System.String,System.Guid,System.String,System.Boolean)">
+            <summary>
+            更新模板命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Name">名称</param>
+            <param name="WebsiteTemplateType">网站模板类型</param>
+            <param name="Desc">描述</param>
+            <param name="ColumnId">所属栏目Id</param>
+            <param name="ColumnName">所属栏目名称</param>
+            <param name="IsDefault">是否默认</param>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.UpdateWebsiteTemplateCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.UpdateWebsiteTemplateCommand.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.UpdateWebsiteTemplateCommand.WebsiteTemplateType">
+            <summary>网站模板类型</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.UpdateWebsiteTemplateCommand.Desc">
+            <summary>描述</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.UpdateWebsiteTemplateCommand.ColumnId">
+            <summary>所属栏目Id</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.UpdateWebsiteTemplateCommand.ColumnName">
+            <summary>所属栏目名称</summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Commands.WebsiteTemplate.UpdateWebsiteTemplateCommand.IsDefault">
+            <summary>是否默认</summary>
+        </member>
+        <member name="T:HaoKao.WebsiteConfigurationService.Domain.Enumerations.WebsiteTemplateType">
+            <summary>
+            网站模板类型
+            </summary>
+        </member>
+        <member name="F:HaoKao.WebsiteConfigurationService.Domain.Enumerations.WebsiteTemplateType.HomepageTemplate">
+            <summary>
+            首页模板
+            </summary>
+        </member>
+        <member name="F:HaoKao.WebsiteConfigurationService.Domain.Enumerations.WebsiteTemplateType.ListTemplate">
+            <summary>
+             列表模板
+            </summary>
+        </member>
+        <member name="F:HaoKao.WebsiteConfigurationService.Domain.Enumerations.WebsiteTemplateType.DetailTemplate">
+            <summary>
+            详情模板
+            </summary>
+        </member>
+        <member name="T:HaoKao.WebsiteConfigurationService.Domain.Models.Column">
+            <summary>
+            栏目
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.Column.DomainName">
+            <summary>
+            域名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.Column.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.Column.Alias">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.Column.EnglishName">
+            <summary>
+            英文名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.Column.ParentId">
+            <summary>
+            父节点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.Column.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.Column.ActiveIcon">
+            <summary>
+            当前图标
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.Column.Children">
+            <summary>
+            子节点集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.Column.IsHomePage">
+            <summary>
+            是否首页
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.Column.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.Column.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.Column.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.Column.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.WebsiteConfigurationService.Domain.Models.TemplateStyle">
+            <summary>
+            模板样式
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.TemplateStyle.DomainName">
+            <summary>
+            域名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.TemplateStyle.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.TemplateStyle.Path">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.TemplateStyle.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.TemplateStyle.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.TemplateStyle.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.WebsiteConfigurationService.Domain.Models.WebsiteTemplate">
+            <summary>
+            模板
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.WebsiteTemplate.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.WebsiteTemplate.WebsiteTemplateType">
+            <summary>
+            模板类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.WebsiteTemplate.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.WebsiteTemplate.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.WebsiteTemplate.ColumnId">
+            <summary>
+            所属栏目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.WebsiteTemplate.ColumnName">
+            <summary>
+            所属栏目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.WebsiteTemplate.IsDefault">
+            <summary>
+            是否默认
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.WebsiteTemplate.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.WebsiteTemplate.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Models.WebsiteTemplate.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Queries.ColumnQuery.DomainName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Queries.ColumnQuery.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Queries.TemplateStyleQuery.DomainName">
+            <summary>
+            域名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Queries.TemplateStyleQuery.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Queries.WebsiteTemplateQuery.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Queries.WebsiteTemplateQuery.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Queries.WebsiteTemplateQuery.ColumnId">
+            <summary>
+            所属栏目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Queries.WebsiteTemplateQuery.ColumnName">
+            <summary>
+            所属栏目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Queries.WebsiteTemplateQuery.IsDefault">
+            <summary>
+            是否默认
+            </summary>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Domain.Repositories.IColumnRepository.GetTreeChildren(System.String,System.Nullable{System.Guid})">
+            <summary>
+            根据域名/父Id获取指定栏目的直接子栏目
+            </summary>
+            <param name="domainName"></param>
+            <param name="parentId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Domain.Repositories.IColumnRepository.GetChildrenColumnByDomainNameAndEnglishName(System.String,System.String)">
+            <summary>
+            获取当前域名和英文名栏目下属子栏目的信息
+            </summary>
+            <param name="domainName"></param>
+            <param name="englishName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Repositories.ColumnTreeModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Repositories.ColumnTreeModel.EnglishName">
+            <summary>
+            英文名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Repositories.ColumnTreeModel.ParentId">
+            <summary>
+            父节点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Repositories.ColumnTreeModel.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Repositories.ColumnTreeModel.ActiveIcon">
+            <summary>
+            当前图标
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Repositories.ColumnTreeModel.IsHomePage">
+            <summary>
+            是否是主页
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Domain.Repositories.ColumnTreeModel.IsLeaf">
+            <summary>
+            是否叶子节点
+            </summary>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Domain.Repositories.IWebsiteTemplateRepository.GetWebsiteTemplateByDominNameAneEnglishName(System.String,System.String)">
+            <summary>
+            获取当前域名，当且英文名下的模板
+            </summary>
+            <param name="domainName"></param>
+            <param name="englishName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Domain.Repositories.IWebsiteTemplateRepository.GetByDomainNameAsync(System.String)">
+            <summary>
+            根据域名获取符合条件得模板
+            </summary>
+            <param name="domainName"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

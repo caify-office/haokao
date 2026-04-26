@@ -1,0 +1,850 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.ChapterNodeService.Application</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeAppService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeAppService.GetBaseParentChapterNode(System.Guid)">
+            <summary>
+            根据主键获取指定父节点id
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeAppService.GetChapterNodeList(System.Guid)">
+            <summary>
+            根据查询获取列表，不带分页
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeAppService.GetChapterNodeListByParentId(System.Guid)">
+            <summary>
+            获取子章节列表,不带分页
+            </summary>
+            <param name="parentId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeAppService.GetChapterNodeKnowledgePointTree(System.Guid)">
+            <summary>
+            获取当前科目下所有章节和知识点信息
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeAppService.GetChapterDict(System.Guid)">
+            <summary>
+            按科目获取章节Id和名称的字典
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeService.GetBaseParentChapterNode(System.Guid)">
+            <summary>
+            根据主键获取指定父节点id
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeService.Get(HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.ChapterNodeQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeService.GetChapterNodeList(System.Guid)">
+            <summary>
+            获取章节列表,不带分页
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeService.GetChapterNodeListByParentId(System.Guid)">
+            <summary>
+            获取子章节列表,不带分页
+            </summary>
+            <param name="parentId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeService.GetChapterNodeKnowledgePointTree(System.Guid)">
+            <summary>
+            获取当前科目下所有章节和知识点信息
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeService.GetTreeByQueryAsync(System.Nullable{System.Guid},System.Nullable{System.Guid})">
+            <summary>
+            章节树
+            </summary>
+            <param name="subjectId"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeService.Create(HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.CreateChapterNodeViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeService.Update(System.Guid,HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.UpdateChapterNodeViewModel)">
+            <summary>
+            根据主键更新指定
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeWebService.GetBaseParentChapterNode(System.Guid)">
+            <summary>
+            根据主键获取指定父节点id
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeWebService.GetChapterNodeList(System.Guid)">
+            <summary>
+            根据查询获取列表，不带分页
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeWebService.GetChapterNodeListByParentId(System.Guid)">
+            <summary>
+            获取子章节列表,不带分页
+            </summary>
+            <param name="parentId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeWebService.GetChapterNodeKnowledgePointTree(System.Guid)">
+            <summary>
+            获取当前科目下所有章节和知识点信息
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeWebService.GetChapterDict(System.Guid)">
+            <summary>
+            按科目获取章节Id和名称的字典
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeWeChatService.GetBaseParentChapterNode(System.Guid)">
+            <summary>
+            根据主键获取指定父节点id
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeWeChatService.GetChapterNodeList(System.Guid)">
+            <summary>
+            根据查询获取列表，不带分页
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeWeChatService.GetChapterNodeListByParentId(System.Guid)">
+            <summary>
+            获取子章节列表,不带分页
+            </summary>
+            <param name="parentId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeWeChatService.GetChapterNodeKnowledgePointTree(System.Guid)">
+            <summary>
+            获取当前科目下所有章节和知识点信息
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeWeChatService.GetChapterDict(System.Guid)">
+            <summary>
+            按科目获取章节Id和名称的字典
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeAppService">
+            <summary>
+            App端章节接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeAppService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,HaoKao.ChapterNodeService.Domain.ChapterNodeModule.IChapterNodeRepository,HaoKao.ChapterNodeService.Application.ChapterNodeModule.Interfaces.IChapterNodeService)">
+            <summary>
+            App端章节接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeAppService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeAppService.GetBaseParentChapterNode(System.Guid)">
+            <summary>
+            根据主键获取指定父节点id
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeAppService.GetChapterNodeList(System.Guid)">
+            <summary>
+            获取章节列表,不带分页
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeAppService.GetChapterNodeListByParentId(System.Guid)">
+            <summary>
+            获取子章节列表,不带分页
+            </summary>
+            <param name="parentId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeAppService.GetChapterNodeKnowledgePointTree(System.Guid)">
+            <summary>
+            获取当前科目下所有章节和知识点信息
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeAppService.GetChapterDict(System.Guid)">
+            <summary>
+            按科目获取章节Id和名称的字典
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeService">
+            <summary>
+            章节管理接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.ChapterNodeService.Domain.ChapterNodeModule.IChapterNodeRepository)">
+            <summary>
+            章节管理接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeService.GetBaseParentChapterNode(System.Guid)">
+            <summary>
+            根据主键获取指定父节点id
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeService.Get(HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.ChapterNodeQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeService.GetChapterNodeList(System.Guid)">
+            <summary>
+            获取章节列表,不带分页
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeService.GetChapterNodeListByParentId(System.Guid)">
+            <summary>
+            获取子章节列表,不带分页
+            </summary>
+            <param name="parentId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeService.GetChapterNodeKnowledgePointTree(System.Guid)">
+             <summary>
+             获取当前科目下所有章节和知识点信息
+            
+             </summary>
+             <param name="subjectId"></param>
+             <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeService.GetTreeByQueryAsync(System.Nullable{System.Guid},System.Nullable{System.Guid})">
+            <summary>
+            获取数据-章节树列表
+            </summary>
+            <param name="id">展开的节点</param>
+            <param name="subjectId">根据科目搜索</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeService.Create(HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.CreateChapterNodeViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeService.Update(System.Guid,HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.UpdateChapterNodeViewModel)">
+            <summary>
+            根据主键更新指定
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeWebService.GetBaseParentChapterNode(System.Guid)">
+            <summary>
+            根据主键获取指定父节点id
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeWebService.GetChapterNodeList(System.Guid)">
+            <summary>
+            获取章节列表,不带分页
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeWebService.GetChapterNodeListByParentId(System.Guid)">
+            <summary>
+            获取子章节列表,不带分页
+            </summary>
+            <param name="parentId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeWebService.GetChapterNodeKnowledgePointTree(System.Guid)">
+            <summary>
+            获取当前科目下所有章节和知识点信息
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeWebService.GetChapterDict(System.Guid)">
+            <summary>
+            按科目获取章节Id和名称的字典
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeWeChatService.GetBaseParentChapterNode(System.Guid)">
+            <summary>
+            根据主键获取指定父节点id
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeWeChatService.GetChapterNodeList(System.Guid)">
+            <summary>
+            获取章节列表,不带分页
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeWeChatService.GetChapterNodeListByParentId(System.Guid)">
+            <summary>
+            获取子章节列表,不带分页
+            </summary>
+            <param name="parentId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeWeChatService.GetChapterNodeKnowledgePointTree(System.Guid)">
+            <summary>
+            获取当前科目下所有章节和知识点信息
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.ChapterNodeModule.Services.ChapterNodeWeChatService.GetChapterDict(System.Guid)">
+            <summary>
+            按科目获取章节Id和名称的字典
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.BrowseChapterNodeViewModel.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.BrowseChapterNodeViewModel.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.BrowseChapterNodeViewModel.Name">
+            <summary>
+            章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.BrowseChapterNodeViewModel.ParentIds">
+            <summary>
+            父级Id集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.BrowseChapterNodeViewModel.ParentId">
+            <summary>
+            父级Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.BrowseChapterNodeViewModel.Sort">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.BrowseChapterNodeViewModel.Children">
+            <summary>
+            子章节
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.BrowseChapterNodeViewModel.knowledgePoints">
+            <summary>
+            章节下知识点树
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.ChapterNodeQueryViewModel.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.ChapterNodeQueryViewModel.ParentId">
+             <summary>
+            父级Id
+             </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.ChapterNodeQueryListViewModel.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.ChapterNodeQueryListViewModel.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.ChapterNodeQueryListViewModel.Name">
+            <summary>
+            章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.ChapterNodeQueryListViewModel.ParentIds">
+            <summary>
+            父级Id集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.ChapterNodeQueryListViewModel.ParentId">
+            <summary>
+            父级Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.ChapterNodeQueryListViewModel.ParentName">
+            <summary>
+            父级名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.ChapterNodeQueryListViewModel.Sort">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.ChapterNodeQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.ChapterNodeTreeListViewModel">
+            <summary>
+            章节树返回
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.ChapterNodeTreeListViewModel.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.ChapterNodeTreeListViewModel.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.ChapterNodeTreeListViewModel.Name">
+            <summary>
+            章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.ChapterNodeTreeListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.ChapterNodeTreeListViewModel.ParentIds">
+            <summary>
+            父级Id集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.ChapterNodeTreeListViewModel.ParentId">
+            <summary>
+            父级Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.ChapterNodeTreeListViewModel.Sort">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.CreateChapterNodeViewModel.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.CreateChapterNodeViewModel.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.CreateChapterNodeViewModel.Name">
+            <summary>
+            章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.CreateChapterNodeViewModel.ParentId">
+            <summary>
+            父级Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.CreateChapterNodeViewModel.ParentName">
+            <summary>
+            父级名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels.CreateChapterNodeViewModel.Sort">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="T:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Profiles.KnowledgePointProfile">
+            <summary>
+            文书模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Profiles.KnowledgePointProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Profiles.KnowledgePointProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Services.App.IKnowledgePointAppService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Services.App.IKnowledgePointAppService.Get(HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Services.App.KnowledgePointAppService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Services.App.KnowledgePointAppService.Get(HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Services.Management.IKnowledgePointService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Services.Management.IKnowledgePointService.Get(HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Services.Management.IKnowledgePointService.Create(HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointCreateViewModel)">
+            <summary>
+            创建注册用户
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Services.Management.IKnowledgePointService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定知识点
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Services.Management.IKnowledgePointService.Update(HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointUpdateViewModel)">
+            <summary>
+            根据主键更新指定知识点
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Services.Management.KnowledgePointService">
+            <summary>
+            知识点接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Services.Management.KnowledgePointService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.ChapterNodeService.Domain.KnowledgePointModule.IKnowledgePointRepository,HaoKao.ChapterNodeService.Domain.ChapterNodeModule.IChapterNodeRepository)">
+            <summary>
+            知识点接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Services.Management.KnowledgePointService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Services.Management.KnowledgePointService.Get(HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Services.Management.KnowledgePointService.Create(HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointCreateViewModel)">
+            <summary>
+            创建知识点
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Services.Management.KnowledgePointService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定知识点
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Services.Management.KnowledgePointService.Update(HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointUpdateViewModel)">
+            <summary>
+            根据主键更新指定知识点
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Services.Web.IKnowledgePointWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Services.Web.IKnowledgePointWebService.Get(HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Services.Web.KnowledgePointWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Services.Web.KnowledgePointWebService.Get(HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Services.WeChat.IKnowledgePointWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Services.WeChat.IKnowledgePointWeChatService.Get(HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Services.WeChat.KnowledgePointWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ChapterNodeService.Application.KnowledgePointModule.Services.WeChat.KnowledgePointWeChatService.Get(HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointBrowseViewModel.Name">
+            <summary>
+            知识点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointBrowseViewModel.ChapterNodeName">
+            <summary>
+            章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointBrowseViewModel.ChapterNodeId">
+            <summary>
+            章节id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointBrowseViewModel.ExamFrequency">
+            <summary>
+            考试频率
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointBrowseViewModel.Remark">
+            <summary>
+            知识点备注
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointBrowseViewModel.Sort">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointCreateViewModel.Name">
+            <summary>
+            知识点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointCreateViewModel.SubjectName">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointCreateViewModel.ChapterNodeId">
+            <summary>
+            章节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointCreateViewModel.ChapterNodeName">
+            <summary>
+            章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointCreateViewModel.ExamFrequency">
+            <summary>
+            考试频率
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointCreateViewModel.Remark">
+            <summary>
+            知识点备注
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointCreateViewModel.Sort">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointQueryListViewModel.Name">
+            <summary>
+            知识点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointQueryListViewModel.SubjectName">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointQueryListViewModel.ChapterNodeId">
+            <summary>
+            章节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointQueryListViewModel.ChapterNodeName">
+            <summary>
+            章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointQueryListViewModel.ExamFrequency">
+            <summary>
+            考试频率
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointQueryListViewModel.Sort">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointUpdateViewModel.Name">
+            <summary>
+            知识点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointUpdateViewModel.ChapterNodeId">
+            <summary>
+            章节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointUpdateViewModel.ChapterNodeName">
+            <summary>
+            章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointUpdateViewModel.ExamFrequency">
+            <summary>
+            考试频率
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointUpdateViewModel.Remark">
+            <summary>
+            知识点备注
+            </summary>
+        </member>
+        <member name="P:HaoKao.ChapterNodeService.Application.KnowledgePointModule.ViewModels.KnowledgePointUpdateViewModel.Sort">
+            <summary>
+            排序号
+            </summary>
+        </member>
+    </members>
+</doc>

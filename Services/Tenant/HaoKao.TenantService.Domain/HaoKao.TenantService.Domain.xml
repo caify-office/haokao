@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.TenantService.Domain</name>
+    </assembly>
+    <members>
+        <member name="P:HaoKao.TenantService.Domain.Entities.Tenant.OtherId">
+            <summary>
+            其它名称ID，一般主要是数据字典中的Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Domain.Entities.Tenant.OtherName">
+            <summary>
+            其它名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Domain.Entities.Tenant.TenantName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Domain.Entities.Tenant.TenantNo">
+            <summary>
+            代码
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Domain.Entities.Tenant.SystemModule">
+            <summary>
+            功能模块集合(服务类型)
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Domain.Entities.Tenant.AnnualExamTime">
+            <summary>
+            年度考试时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Domain.Entities.Tenant.ReleaseState">
+            <summary>
+            发布状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Domain.Entities.Tenant.StartState">
+            <summary>
+            启用状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Domain.Entities.Tenant.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Domain.Entities.Tenant.Instructions">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Domain.Entities.Tenant.AdminUserAcount">
+            <summary>
+            管理员账户
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Domain.Entities.Tenant.AdminUserName">
+            <summary>
+            管理员姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Domain.Entities.Tenant.AdminPhone">
+            <summary>
+            管理员手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Domain.Entities.Tenant.PaymentConfigs">
+            <summary>
+            收款配置
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Domain.Entities.PaymentConfig.PlatformPayerScenes">
+            <summary>
+            支付场景
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Domain.Entities.PaymentConfig.PaymentMethod">
+            <summary>
+            支付方式
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Domain.Entities.PaymentConfig.PlatformPayerId">
+            <summary>
+            平台配置支付Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.TenantService.Domain.Enums.EnableState">
+            <summary>
+            租户启用状态
+            </summary>
+        </member>
+        <member name="T:HaoKao.TenantService.Domain.Enums.PaymentMethod">
+            <summary>
+            支付方式
+            </summary>
+        </member>
+        <member name="F:HaoKao.TenantService.Domain.Enums.PaymentMethod.Wechat">
+            <summary>
+            微信支付
+            </summary>
+        </member>
+        <member name="F:HaoKao.TenantService.Domain.Enums.PaymentMethod.Alipay">
+            <summary>
+            支付宝支付
+            </summary>
+        </member>
+        <member name="F:HaoKao.TenantService.Domain.Enums.PaymentMethod.AppleInPay">
+            <summary>
+            苹果内购
+            </summary>
+        </member>
+        <member name="T:HaoKao.TenantService.Domain.Enums.PlatformPayerScenes">
+            <summary>
+            支付场景
+            </summary>
+        </member>
+        <member name="F:HaoKao.TenantService.Domain.Enums.PlatformPayerScenes.App">
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="F:HaoKao.TenantService.Domain.Enums.PlatformPayerScenes.WeSite">
+            <summary>
+            网站
+            </summary>
+        </member>
+        <member name="F:HaoKao.TenantService.Domain.Enums.PlatformPayerScenes.WecahtMiniProgram">
+            <summary>
+            小程序
+            </summary>
+        </member>
+        <member name="T:HaoKao.TenantService.Domain.Enums.ReleaseState">
+            <summary>
+            租户发布状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Domain.Queries.TenantQuery.TenantName">
+            <summary>
+            租户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Domain.Queries.TenantQuery.TenantNo">
+            <summary>
+            租户代码
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Domain.Queries.TenantQuery.StartState">
+            <summary>
+            租户启用状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.TenantService.Domain.Queries.TenantQuery.OtherId">
+            <summary>
+            其它名称ID，一般主要是数据字典中的Id
+            </summary>
+        </member>
+    </members>
+</doc>

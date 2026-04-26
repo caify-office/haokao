@@ -1,0 +1,1249 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.OpenPlatformService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand">
+            <summary>
+            创建命令
+            </summary>
+            <param name="Enabled">是否启用</param>
+            <param name="ClientId">客户端标识</param>
+            <param name="ProtocolType">协议类型</param>
+            <param name="ClientSecrets">客户端密钥</param>
+            <param name="RequireClientSecret">需要客户端密钥</param>
+            <param name="ClientName">客户端名称</param>
+            <param name="Description">描述</param>
+            <param name="ClientUri">客户端 Uri</param>
+            <param name="LogoUri">微标 Uri </param>
+            <param name="RequireConsent">需要同意</param>
+            <param name="AllowRememberConsent">允许记住同意</param>
+            <param name="AlwaysIncludeUserClaimsInIdToken">始终在身份令牌中包含用户声明</param>
+            <param name="AllowedGrantTypes">允许的授权类型</param>
+            <param name="RequirePkce">需要 Pkce</param>
+            <param name="AllowPlainTextPkce">允许纯文本 Pkce</param>
+            <param name="RequireRequestObject">需要请求对象</param>
+            <param name="AllowAccessTokensViaBrowser">允许通过浏览器访问令牌</param>
+            <param name="RedirectUris">重定向 Uri</param>
+            <param name="PostLogoutRedirectUris">注销重定向 Uri </param>
+            <param name="FrontChannelLogoutUri">前端通道注销 Uri</param>
+            <param name="FrontChannelLogoutSessionRequired">需要前端通道注销会话</param>
+            <param name="BackChannelLogoutUri">后端通道退出 Uri </param>
+            <param name="BackChannelLogoutSessionRequired">需要后端通道注销会话</param>
+            <param name="AllowOfflineAccess">允许离线访问 </param>
+            <param name="AllowedScopes">允许的作用域</param>
+            <param name="IdentityTokenLifetime">身份令牌生命周期</param>
+            <param name="AllowedIdentityTokenSigningAlgorithms">允许的身份令牌签名算法</param>
+            <param name="AccessTokenLifetime">访问令牌生命周期 </param>
+            <param name="AuthorizationCodeLifetime">授权码生命周期</param>
+            <param name="ConsentLifetime">同意生命周期</param>
+            <param name="AbsoluteRefreshTokenLifetime">绝对刷新令牌生命周期</param>
+            <param name="SlidingRefreshTokenLifetime">滚动刷新令牌生命周期</param>
+            <param name="RefreshTokenUsage">刷新令牌使用情况</param>
+            <param name="UpdateAccessTokenClaimsOnRefresh">刷新时更新访问令牌声明</param>
+            <param name="RefreshTokenExpiration">刷新令牌过期</param>
+            <param name="AccessTokenType">访问令牌类型</param>
+            <param name="EnableLocalLogin">启用本地登录</param>
+            <param name="IdentityProviderRestrictions">身份提供程序限制</param>
+            <param name="IncludeJwtId">包括 Jwt 标识</param>
+            <param name="Claims">声明</param>
+            <param name="AlwaysSendClientClaims">始终发送客户端声明</param>
+            <param name="ClientClaimsPrefix">客户端声明前缀</param>
+            <param name="PairWiseSubjectSalt">配对主体盐</param>
+            <param name="AllowedCorsOrigins">允许跨域来源</param>
+            <param name="Properties">属性</param>
+            <param name="UserSsoLifetime">用户 SSO 生命周期</param>
+            <param name="UserCodeType">用户代码类型</param>
+            <param name="DeviceCodeLifetime">设备代码生命周期</param>
+            <param name="DomainProxies"></param>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.#ctor(System.Boolean,System.String,System.String,System.Collections.Generic.List{HaoKao.OpenPlatformService.Domain.Entities.AccessClientSecret},System.Boolean,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Collections.Generic.List{HaoKao.OpenPlatformService.Domain.Entities.AccessClientGrantType},System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Collections.Generic.List{HaoKao.OpenPlatformService.Domain.Entities.AccessClientRedirectUri},System.Collections.Generic.List{HaoKao.OpenPlatformService.Domain.Entities.AccessClientPostLogoutRedirectUri},System.String,System.Boolean,System.String,System.Boolean,System.Boolean,System.Collections.Generic.List{HaoKao.OpenPlatformService.Domain.Entities.AccessClientScope},System.Int32,System.Collections.Generic.List{HaoKao.OpenPlatformService.Domain.Entities.AccessClientSigningAlgorithm},System.Int32,System.Int32,System.Nullable{System.Int32},System.Int32,System.Int32,System.Int32,System.Boolean,System.Int32,System.Int32,System.Boolean,System.Collections.Generic.List{HaoKao.OpenPlatformService.Domain.Entities.AccessClientIdPRestriction},System.Boolean,System.Collections.Generic.List{HaoKao.OpenPlatformService.Domain.Entities.AccessClientClaim},System.Boolean,System.String,System.String,System.Collections.Generic.List{HaoKao.OpenPlatformService.Domain.Entities.AccessClientCorsOrigin},System.Collections.Generic.List{HaoKao.OpenPlatformService.Domain.Entities.AccessClientProperty},System.Nullable{System.Int32},System.String,System.Int32,System.Collections.Generic.List{HaoKao.OpenPlatformService.Domain.Entities.DomainProxy})">
+            <summary>
+            创建命令
+            </summary>
+            <param name="Enabled">是否启用</param>
+            <param name="ClientId">客户端标识</param>
+            <param name="ProtocolType">协议类型</param>
+            <param name="ClientSecrets">客户端密钥</param>
+            <param name="RequireClientSecret">需要客户端密钥</param>
+            <param name="ClientName">客户端名称</param>
+            <param name="Description">描述</param>
+            <param name="ClientUri">客户端 Uri</param>
+            <param name="LogoUri">微标 Uri </param>
+            <param name="RequireConsent">需要同意</param>
+            <param name="AllowRememberConsent">允许记住同意</param>
+            <param name="AlwaysIncludeUserClaimsInIdToken">始终在身份令牌中包含用户声明</param>
+            <param name="AllowedGrantTypes">允许的授权类型</param>
+            <param name="RequirePkce">需要 Pkce</param>
+            <param name="AllowPlainTextPkce">允许纯文本 Pkce</param>
+            <param name="RequireRequestObject">需要请求对象</param>
+            <param name="AllowAccessTokensViaBrowser">允许通过浏览器访问令牌</param>
+            <param name="RedirectUris">重定向 Uri</param>
+            <param name="PostLogoutRedirectUris">注销重定向 Uri </param>
+            <param name="FrontChannelLogoutUri">前端通道注销 Uri</param>
+            <param name="FrontChannelLogoutSessionRequired">需要前端通道注销会话</param>
+            <param name="BackChannelLogoutUri">后端通道退出 Uri </param>
+            <param name="BackChannelLogoutSessionRequired">需要后端通道注销会话</param>
+            <param name="AllowOfflineAccess">允许离线访问 </param>
+            <param name="AllowedScopes">允许的作用域</param>
+            <param name="IdentityTokenLifetime">身份令牌生命周期</param>
+            <param name="AllowedIdentityTokenSigningAlgorithms">允许的身份令牌签名算法</param>
+            <param name="AccessTokenLifetime">访问令牌生命周期 </param>
+            <param name="AuthorizationCodeLifetime">授权码生命周期</param>
+            <param name="ConsentLifetime">同意生命周期</param>
+            <param name="AbsoluteRefreshTokenLifetime">绝对刷新令牌生命周期</param>
+            <param name="SlidingRefreshTokenLifetime">滚动刷新令牌生命周期</param>
+            <param name="RefreshTokenUsage">刷新令牌使用情况</param>
+            <param name="UpdateAccessTokenClaimsOnRefresh">刷新时更新访问令牌声明</param>
+            <param name="RefreshTokenExpiration">刷新令牌过期</param>
+            <param name="AccessTokenType">访问令牌类型</param>
+            <param name="EnableLocalLogin">启用本地登录</param>
+            <param name="IdentityProviderRestrictions">身份提供程序限制</param>
+            <param name="IncludeJwtId">包括 Jwt 标识</param>
+            <param name="Claims">声明</param>
+            <param name="AlwaysSendClientClaims">始终发送客户端声明</param>
+            <param name="ClientClaimsPrefix">客户端声明前缀</param>
+            <param name="PairWiseSubjectSalt">配对主体盐</param>
+            <param name="AllowedCorsOrigins">允许跨域来源</param>
+            <param name="Properties">属性</param>
+            <param name="UserSsoLifetime">用户 SSO 生命周期</param>
+            <param name="UserCodeType">用户代码类型</param>
+            <param name="DeviceCodeLifetime">设备代码生命周期</param>
+            <param name="DomainProxies"></param>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.Enabled">
+            <summary>是否启用</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.ClientId">
+            <summary>客户端标识</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.ProtocolType">
+            <summary>协议类型</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.ClientSecrets">
+            <summary>客户端密钥</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.RequireClientSecret">
+            <summary>需要客户端密钥</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.ClientName">
+            <summary>客户端名称</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.Description">
+            <summary>描述</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.ClientUri">
+            <summary>客户端 Uri</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.LogoUri">
+            <summary>微标 Uri </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.RequireConsent">
+            <summary>需要同意</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.AllowRememberConsent">
+            <summary>允许记住同意</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.AlwaysIncludeUserClaimsInIdToken">
+            <summary>始终在身份令牌中包含用户声明</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.AllowedGrantTypes">
+            <summary>允许的授权类型</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.RequirePkce">
+            <summary>需要 Pkce</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.AllowPlainTextPkce">
+            <summary>允许纯文本 Pkce</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.RequireRequestObject">
+            <summary>需要请求对象</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.AllowAccessTokensViaBrowser">
+            <summary>允许通过浏览器访问令牌</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.RedirectUris">
+            <summary>重定向 Uri</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.PostLogoutRedirectUris">
+            <summary>注销重定向 Uri </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.FrontChannelLogoutUri">
+            <summary>前端通道注销 Uri</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.FrontChannelLogoutSessionRequired">
+            <summary>需要前端通道注销会话</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.BackChannelLogoutUri">
+            <summary>后端通道退出 Uri </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.BackChannelLogoutSessionRequired">
+            <summary>需要后端通道注销会话</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.AllowOfflineAccess">
+            <summary>允许离线访问 </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.AllowedScopes">
+            <summary>允许的作用域</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.IdentityTokenLifetime">
+            <summary>身份令牌生命周期</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.AllowedIdentityTokenSigningAlgorithms">
+            <summary>允许的身份令牌签名算法</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.AccessTokenLifetime">
+            <summary>访问令牌生命周期 </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.AuthorizationCodeLifetime">
+            <summary>授权码生命周期</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.ConsentLifetime">
+            <summary>同意生命周期</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.AbsoluteRefreshTokenLifetime">
+            <summary>绝对刷新令牌生命周期</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.SlidingRefreshTokenLifetime">
+            <summary>滚动刷新令牌生命周期</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.RefreshTokenUsage">
+            <summary>刷新令牌使用情况</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.UpdateAccessTokenClaimsOnRefresh">
+            <summary>刷新时更新访问令牌声明</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.RefreshTokenExpiration">
+            <summary>刷新令牌过期</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.AccessTokenType">
+            <summary>访问令牌类型</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.EnableLocalLogin">
+            <summary>启用本地登录</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.IdentityProviderRestrictions">
+            <summary>身份提供程序限制</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.IncludeJwtId">
+            <summary>包括 Jwt 标识</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.Claims">
+            <summary>声明</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.AlwaysSendClientClaims">
+            <summary>始终发送客户端声明</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.ClientClaimsPrefix">
+            <summary>客户端声明前缀</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.PairWiseSubjectSalt">
+            <summary>配对主体盐</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.AllowedCorsOrigins">
+            <summary>允许跨域来源</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.Properties">
+            <summary>属性</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.UserSsoLifetime">
+            <summary>用户 SSO 生命周期</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.UserCodeType">
+            <summary>用户代码类型</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.DeviceCodeLifetime">
+            <summary>设备代码生命周期</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.CreateAccessClientCommand.DomainProxies">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.DeleteAccessClientCommand">
+            <summary>
+            删除命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.DeleteAccessClientCommand.#ctor(System.Guid)">
+            <summary>
+            删除命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.DeleteAccessClientCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand">
+            <summary>
+            更新命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Enabled">是否启用</param>
+            <param name="ClientId">客户端标识</param>
+            <param name="ProtocolType">协议类型</param>
+            <param name="ClientSecrets">客户端密钥</param>
+            <param name="RequireClientSecret">需要客户端密钥</param>
+            <param name="ClientName">客户端名称</param>
+            <param name="Description">描述</param>
+            <param name="ClientUri">客户端 Uri</param>
+            <param name="LogoUri">微标 Uri </param>
+            <param name="RequireConsent">需要同意</param>
+            <param name="AllowRememberConsent">允许记住同意</param>
+            <param name="AlwaysIncludeUserClaimsInIdToken">始终在身份令牌中包含用户声明</param>
+            <param name="AllowedGrantTypes">允许的授权类型</param>
+            <param name="RequirePkce">需要 Pkce</param>
+            <param name="AllowPlainTextPkce">允许纯文本 Pkce</param>
+            <param name="RequireRequestObject">需要请求对象</param>
+            <param name="AllowAccessTokensViaBrowser">允许通过浏览器访问令牌</param>
+            <param name="RedirectUris">重定向 Uri</param>
+            <param name="PostLogoutRedirectUris">注销重定向 Uri </param>
+            <param name="FrontChannelLogoutUri">前端通道注销 Uri</param>
+            <param name="FrontChannelLogoutSessionRequired">需要前端通道注销会话</param>
+            <param name="BackChannelLogoutUri">后端通道退出 Uri </param>
+            <param name="BackChannelLogoutSessionRequired">需要后端通道注销会话</param>
+            <param name="AllowOfflineAccess">允许离线访问 </param>
+            <param name="AllowedScopes">允许的作用域</param>
+            <param name="IdentityTokenLifetime">身份令牌生命周期</param>
+            <param name="AllowedIdentityTokenSigningAlgorithms">允许的身份令牌签名算法</param>
+            <param name="AccessTokenLifetime">访问令牌生命周期 </param>
+            <param name="AuthorizationCodeLifetime">授权码生命周期</param>
+            <param name="ConsentLifetime">同意生命周期</param>
+            <param name="AbsoluteRefreshTokenLifetime">绝对刷新令牌生命周期</param>
+            <param name="SlidingRefreshTokenLifetime">滚动刷新令牌生命周期</param>
+            <param name="RefreshTokenUsage">刷新令牌使用情况</param>
+            <param name="UpdateAccessTokenClaimsOnRefresh">刷新时更新访问令牌声明</param>
+            <param name="RefreshTokenExpiration">刷新令牌过期</param>
+            <param name="AccessTokenType">访问令牌类型</param>
+            <param name="EnableLocalLogin">启用本地登录</param>
+            <param name="IdentityProviderRestrictions">身份提供程序限制</param>
+            <param name="IncludeJwtId">包括 Jwt 标识</param>
+            <param name="Claims">声明</param>
+            <param name="AlwaysSendClientClaims">始终发送客户端声明</param>
+            <param name="ClientClaimsPrefix">客户端声明前缀</param>
+            <param name="PairWiseSubjectSalt">配对主体盐</param>
+            <param name="AllowedCorsOrigins">允许跨域来源</param>
+            <param name="Properties">属性</param>
+            <param name="UserSsoLifetime">用户 SSO 生命周期</param>
+            <param name="UserCodeType">用户代码类型</param>
+            <param name="DeviceCodeLifetime">设备代码生命周期</param>
+            <param name="DomainProxies"></param>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.#ctor(System.Guid,System.Boolean,System.String,System.String,System.Collections.Generic.List{HaoKao.OpenPlatformService.Domain.Entities.AccessClientSecret},System.Boolean,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Collections.Generic.List{HaoKao.OpenPlatformService.Domain.Entities.AccessClientGrantType},System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Collections.Generic.List{HaoKao.OpenPlatformService.Domain.Entities.AccessClientRedirectUri},System.Collections.Generic.List{HaoKao.OpenPlatformService.Domain.Entities.AccessClientPostLogoutRedirectUri},System.String,System.Boolean,System.String,System.Boolean,System.Boolean,System.Collections.Generic.List{HaoKao.OpenPlatformService.Domain.Entities.AccessClientScope},System.Int32,System.Collections.Generic.List{HaoKao.OpenPlatformService.Domain.Entities.AccessClientSigningAlgorithm},System.Int32,System.Int32,System.Nullable{System.Int32},System.Int32,System.Int32,System.Int32,System.Boolean,System.Int32,System.Int32,System.Boolean,System.Collections.Generic.List{HaoKao.OpenPlatformService.Domain.Entities.AccessClientIdPRestriction},System.Boolean,System.Collections.Generic.List{HaoKao.OpenPlatformService.Domain.Entities.AccessClientClaim},System.Boolean,System.String,System.String,System.Collections.Generic.List{HaoKao.OpenPlatformService.Domain.Entities.AccessClientCorsOrigin},System.Collections.Generic.List{HaoKao.OpenPlatformService.Domain.Entities.AccessClientProperty},System.Nullable{System.Int32},System.String,System.Int32,System.Collections.Generic.List{HaoKao.OpenPlatformService.Domain.Entities.DomainProxy})">
+            <summary>
+            更新命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Enabled">是否启用</param>
+            <param name="ClientId">客户端标识</param>
+            <param name="ProtocolType">协议类型</param>
+            <param name="ClientSecrets">客户端密钥</param>
+            <param name="RequireClientSecret">需要客户端密钥</param>
+            <param name="ClientName">客户端名称</param>
+            <param name="Description">描述</param>
+            <param name="ClientUri">客户端 Uri</param>
+            <param name="LogoUri">微标 Uri </param>
+            <param name="RequireConsent">需要同意</param>
+            <param name="AllowRememberConsent">允许记住同意</param>
+            <param name="AlwaysIncludeUserClaimsInIdToken">始终在身份令牌中包含用户声明</param>
+            <param name="AllowedGrantTypes">允许的授权类型</param>
+            <param name="RequirePkce">需要 Pkce</param>
+            <param name="AllowPlainTextPkce">允许纯文本 Pkce</param>
+            <param name="RequireRequestObject">需要请求对象</param>
+            <param name="AllowAccessTokensViaBrowser">允许通过浏览器访问令牌</param>
+            <param name="RedirectUris">重定向 Uri</param>
+            <param name="PostLogoutRedirectUris">注销重定向 Uri </param>
+            <param name="FrontChannelLogoutUri">前端通道注销 Uri</param>
+            <param name="FrontChannelLogoutSessionRequired">需要前端通道注销会话</param>
+            <param name="BackChannelLogoutUri">后端通道退出 Uri </param>
+            <param name="BackChannelLogoutSessionRequired">需要后端通道注销会话</param>
+            <param name="AllowOfflineAccess">允许离线访问 </param>
+            <param name="AllowedScopes">允许的作用域</param>
+            <param name="IdentityTokenLifetime">身份令牌生命周期</param>
+            <param name="AllowedIdentityTokenSigningAlgorithms">允许的身份令牌签名算法</param>
+            <param name="AccessTokenLifetime">访问令牌生命周期 </param>
+            <param name="AuthorizationCodeLifetime">授权码生命周期</param>
+            <param name="ConsentLifetime">同意生命周期</param>
+            <param name="AbsoluteRefreshTokenLifetime">绝对刷新令牌生命周期</param>
+            <param name="SlidingRefreshTokenLifetime">滚动刷新令牌生命周期</param>
+            <param name="RefreshTokenUsage">刷新令牌使用情况</param>
+            <param name="UpdateAccessTokenClaimsOnRefresh">刷新时更新访问令牌声明</param>
+            <param name="RefreshTokenExpiration">刷新令牌过期</param>
+            <param name="AccessTokenType">访问令牌类型</param>
+            <param name="EnableLocalLogin">启用本地登录</param>
+            <param name="IdentityProviderRestrictions">身份提供程序限制</param>
+            <param name="IncludeJwtId">包括 Jwt 标识</param>
+            <param name="Claims">声明</param>
+            <param name="AlwaysSendClientClaims">始终发送客户端声明</param>
+            <param name="ClientClaimsPrefix">客户端声明前缀</param>
+            <param name="PairWiseSubjectSalt">配对主体盐</param>
+            <param name="AllowedCorsOrigins">允许跨域来源</param>
+            <param name="Properties">属性</param>
+            <param name="UserSsoLifetime">用户 SSO 生命周期</param>
+            <param name="UserCodeType">用户代码类型</param>
+            <param name="DeviceCodeLifetime">设备代码生命周期</param>
+            <param name="DomainProxies"></param>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.Enabled">
+            <summary>是否启用</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.ClientId">
+            <summary>客户端标识</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.ProtocolType">
+            <summary>协议类型</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.ClientSecrets">
+            <summary>客户端密钥</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.RequireClientSecret">
+            <summary>需要客户端密钥</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.ClientName">
+            <summary>客户端名称</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.Description">
+            <summary>描述</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.ClientUri">
+            <summary>客户端 Uri</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.LogoUri">
+            <summary>微标 Uri </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.RequireConsent">
+            <summary>需要同意</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.AllowRememberConsent">
+            <summary>允许记住同意</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.AlwaysIncludeUserClaimsInIdToken">
+            <summary>始终在身份令牌中包含用户声明</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.AllowedGrantTypes">
+            <summary>允许的授权类型</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.RequirePkce">
+            <summary>需要 Pkce</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.AllowPlainTextPkce">
+            <summary>允许纯文本 Pkce</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.RequireRequestObject">
+            <summary>需要请求对象</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.AllowAccessTokensViaBrowser">
+            <summary>允许通过浏览器访问令牌</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.RedirectUris">
+            <summary>重定向 Uri</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.PostLogoutRedirectUris">
+            <summary>注销重定向 Uri </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.FrontChannelLogoutUri">
+            <summary>前端通道注销 Uri</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.FrontChannelLogoutSessionRequired">
+            <summary>需要前端通道注销会话</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.BackChannelLogoutUri">
+            <summary>后端通道退出 Uri </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.BackChannelLogoutSessionRequired">
+            <summary>需要后端通道注销会话</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.AllowOfflineAccess">
+            <summary>允许离线访问 </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.AllowedScopes">
+            <summary>允许的作用域</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.IdentityTokenLifetime">
+            <summary>身份令牌生命周期</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.AllowedIdentityTokenSigningAlgorithms">
+            <summary>允许的身份令牌签名算法</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.AccessTokenLifetime">
+            <summary>访问令牌生命周期 </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.AuthorizationCodeLifetime">
+            <summary>授权码生命周期</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.ConsentLifetime">
+            <summary>同意生命周期</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.AbsoluteRefreshTokenLifetime">
+            <summary>绝对刷新令牌生命周期</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.SlidingRefreshTokenLifetime">
+            <summary>滚动刷新令牌生命周期</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.RefreshTokenUsage">
+            <summary>刷新令牌使用情况</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.UpdateAccessTokenClaimsOnRefresh">
+            <summary>刷新时更新访问令牌声明</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.RefreshTokenExpiration">
+            <summary>刷新令牌过期</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.AccessTokenType">
+            <summary>访问令牌类型</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.EnableLocalLogin">
+            <summary>启用本地登录</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.IdentityProviderRestrictions">
+            <summary>身份提供程序限制</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.IncludeJwtId">
+            <summary>包括 Jwt 标识</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.Claims">
+            <summary>声明</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.AlwaysSendClientClaims">
+            <summary>始终发送客户端声明</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.ClientClaimsPrefix">
+            <summary>客户端声明前缀</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.PairWiseSubjectSalt">
+            <summary>配对主体盐</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.AllowedCorsOrigins">
+            <summary>允许跨域来源</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.Properties">
+            <summary>属性</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.UserSsoLifetime">
+            <summary>用户 SSO 生命周期</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.UserCodeType">
+            <summary>用户代码类型</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.DeviceCodeLifetime">
+            <summary>设备代码生命周期</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.AccessClient.UpdateAccessClientCommand.DomainProxies">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Domain.Commands.RegisterUser.CreateRegisterUserCommand">
+            <summary>
+            创建注册用户命令
+            </summary>
+            <param name="Phone">手机号码</param>
+            <param name="ClientId">客户端Id</param>
+            <param name="ExternalUserCommand"></param>
+            <param name="CreatorId"></param>
+            <param name="NickName"></param>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Domain.Commands.RegisterUser.CreateRegisterUserCommand.#ctor(System.String,System.String,HaoKao.OpenPlatformService.Domain.Commands.RegisterUser.ExternalUserCommand,System.Nullable{System.Guid},System.String)">
+            <summary>
+            创建注册用户命令
+            </summary>
+            <param name="Phone">手机号码</param>
+            <param name="ClientId">客户端Id</param>
+            <param name="ExternalUserCommand"></param>
+            <param name="CreatorId"></param>
+            <param name="NickName"></param>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.RegisterUser.CreateRegisterUserCommand.Phone">
+            <summary>手机号码</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.RegisterUser.CreateRegisterUserCommand.ClientId">
+            <summary>客户端Id</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.RegisterUser.CreateRegisterUserCommand.ExternalUserCommand">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.RegisterUser.CreateRegisterUserCommand.CreatorId">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.RegisterUser.CreateRegisterUserCommand.NickName">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Domain.Commands.RegisterUser.DeleteRegisterUserCommand">
+            <summary>
+            删除注册用户命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Domain.Commands.RegisterUser.DeleteRegisterUserCommand.#ctor(System.Guid)">
+            <summary>
+            删除注册用户命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.RegisterUser.DeleteRegisterUserCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Domain.Commands.RegisterUser.UpdateRegisterUserCommand">
+            <summary>
+            更新注册用户
+            </summary>
+            <param name="Id"></param>
+            <param name="Phone">手机号码</param>
+            <param name="Password">密码</param>
+            <param name="UserGender">用户性别</param>
+            <param name="NickName">用户昵称</param>
+            <param name="UserState"></param>
+            <param name="EmailAddress">邮箱地址</param>
+            <param name="HeadImage">用户头像</param>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Domain.Commands.RegisterUser.UpdateRegisterUserCommand.#ctor(System.Guid,System.String,System.String,HaoKao.OpenPlatformService.Domain.Enumerations.UserGender,System.String,HaoKao.OpenPlatformService.Domain.Enumerations.UserState,System.String,System.String)">
+            <summary>
+            更新注册用户
+            </summary>
+            <param name="Id"></param>
+            <param name="Phone">手机号码</param>
+            <param name="Password">密码</param>
+            <param name="UserGender">用户性别</param>
+            <param name="NickName">用户昵称</param>
+            <param name="UserState"></param>
+            <param name="EmailAddress">邮箱地址</param>
+            <param name="HeadImage">用户头像</param>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.RegisterUser.UpdateRegisterUserCommand.Id">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.RegisterUser.UpdateRegisterUserCommand.Phone">
+            <summary>手机号码</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.RegisterUser.UpdateRegisterUserCommand.Password">
+            <summary>密码</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.RegisterUser.UpdateRegisterUserCommand.UserGender">
+            <summary>用户性别</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.RegisterUser.UpdateRegisterUserCommand.NickName">
+            <summary>用户昵称</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.RegisterUser.UpdateRegisterUserCommand.UserState">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.RegisterUser.UpdateRegisterUserCommand.EmailAddress">
+            <summary>邮箱地址</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Commands.RegisterUser.UpdateRegisterUserCommand.HeadImage">
+            <summary>用户头像</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.ClientId">
+            <summary>
+            客户端标识
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.ProtocolType">
+            <summary>
+            协议类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.ClientSecrets">
+            <summary>
+            客户端密钥
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.RequireClientSecret">
+            <summary>
+            需要客户端密钥
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.ClientName">
+            <summary>
+            客户端名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.ClientUri">
+            <summary>
+            客户端 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.LogoUri">
+            <summary>
+            微标 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.RequireConsent">
+            <summary>
+            需要同意
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.AllowRememberConsent">
+            <summary>
+            允许记住同意
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.AlwaysIncludeUserClaimsInIdToken">
+            <summary>
+            始终在身份令牌中包含用户声明
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.AllowedGrantTypes">
+            <summary>
+            允许的授权类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.RequirePkce">
+            <summary>
+            需要 Pkce
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.AllowPlainTextPkce">
+            <summary>
+            允许纯文本 Pkce
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.RequireRequestObject">
+            <summary>
+            需要请求对象
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.AllowAccessTokensViaBrowser">
+            <summary>
+            允许通过浏览器访问令牌
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.RedirectUris">
+            <summary>
+            重定向 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.PostLogoutRedirectUris">
+            <summary>
+            注销重定向 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.FrontChannelLogoutUri">
+            <summary>
+            前端通道注销 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.FrontChannelLogoutSessionRequired">
+            <summary>
+            需要前端通道注销会话
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.BackChannelLogoutUri">
+            <summary>
+            后端通道退出 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.BackChannelLogoutSessionRequired">
+            <summary>
+            需要后端通道注销会话
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.AllowOfflineAccess">
+            <summary>
+            允许离线访问
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.AllowedScopes">
+            <summary>
+            允许的作用域
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.IdentityTokenLifetime">
+            <summary>
+            身份令牌生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.AllowedIdentityTokenSigningAlgorithms">
+            <summary>
+            允许的身份令牌签名算法
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.AccessTokenLifetime">
+            <summary>
+            访问令牌生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.AuthorizationCodeLifetime">
+            <summary>
+            授权码生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.ConsentLifetime">
+            <summary>
+            同意生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.AbsoluteRefreshTokenLifetime">
+            <summary>
+            绝对刷新令牌生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.SlidingRefreshTokenLifetime">
+            <summary>
+            滚动刷新令牌生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.RefreshTokenUsage">
+            <summary>
+            刷新令牌使用情况
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.UpdateAccessTokenClaimsOnRefresh">
+            <summary>
+            刷新时更新访问令牌声明
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.RefreshTokenExpiration">
+            <summary>
+            刷新令牌过期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.AccessTokenType">
+            <summary>
+            访问令牌类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.EnableLocalLogin">
+            <summary>
+            启用本地登录
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.IdentityProviderRestrictions">
+            <summary>
+            身份提供程序限制
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.IncludeJwtId">
+            <summary>
+            包括 Jwt 标识
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.Claims">
+            <summary>
+            声明
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.AlwaysSendClientClaims">
+            <summary>
+            始终发送客户端声明
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.ClientClaimsPrefix">
+            <summary>
+            客户端声明前缀
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.PairWiseSubjectSalt">
+            <summary>
+            配对主体盐
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.AllowedCorsOrigins">
+            <summary>
+            允许跨域来源
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.Properties">
+            <summary>
+            属性
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.UserSsoLifetime">
+            <summary>
+            用户 SSO 生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.UserCodeType">
+            <summary>
+            用户代码类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.DeviceCodeLifetime">
+            <summary>
+            设备代码生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClient.DomainProxies">
+            <summary>
+            域名代理
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Domain.Entities.AccessClientClaim">
+            <summary>
+            声明
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClientClaim.Type">
+            <summary>
+            声明类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClientClaim.Value">
+            <summary>
+            声明值
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Domain.Entities.AccessClientCorsOrigin">
+            <summary>
+            允许跨域来源
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClientCorsOrigin.Origin">
+            <summary>
+            来源
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Domain.Entities.AccessClientGrantType">
+            <summary>
+            允许的授权类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClientGrantType.GrantType">
+            <summary>
+            授权类型
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Domain.Entities.AccessClientIdPRestriction">
+            <summary>
+            身份提供程序限制
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClientIdPRestriction.Provider">
+            <summary>
+            提供者
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Domain.Entities.AccessClientPostLogoutRedirectUri">
+            <summary>
+            注销重定向 Uri 
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClientPostLogoutRedirectUri.PostLogoutRedirectUri">
+            <summary>
+            注销重定向 Uri 
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Domain.Entities.AccessClientProperty">
+            <summary>
+            属性
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClientProperty.Key">
+            <summary>
+            键
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClientProperty.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Domain.Entities.AccessClientRedirectUri">
+            <summary>
+            重定向 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClientRedirectUri.RedirectUri">
+            <summary>
+            重定向 Uri
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Domain.Entities.AccessClientScope">
+            <summary>
+            作用域
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClientScope.Scope">
+            <summary>
+             作用域
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Domain.Entities.AccessClientSecret">
+            <summary>
+            客户端密钥
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClientSecret.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClientSecret.Value">
+            <summary>
+            密钥值 
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClientSecret.Expiration">
+            <summary>
+            到期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClientSecret.Type">
+            <summary>
+            密钥类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClientSecret.HashType">
+            <summary>
+            哈希类型
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Domain.Entities.AccessClientSigningAlgorithm">
+            <summary>
+            允许的授权类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.AccessClientSigningAlgorithm.SigningAlgorithm">
+            <summary>
+            授权类型
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Domain.Entities.DailyActiveUserLog">
+            <summary>
+            用户每日活跃记录
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.DailyActiveUserLog.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.DailyActiveUserLog.ClientId">
+            <summary>
+            活跃的客户端Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.DailyActiveUserLog.CreateDate">
+            <summary>
+            活跃的日期(yyyy-MM-dd)
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.DailyActiveUserLog.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Domain.Entities.DomainProxy">
+            <summary>
+            域名代理设置
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.DomainProxy.Domain">
+            <summary>
+            域名
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.DomainProxy.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.DomainProxy.TenantName">
+            <summary>
+            租户名称
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Domain.Entities.ExternalIdentity">
+            <summary>
+            其它平台唯一标识符
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.ExternalIdentity.Scheme">
+            <summary>
+            其它平台名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.ExternalIdentity.UniqueIdentifier">
+            <summary>
+            唯一标识符
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.ExternalIdentity.OtherInformation">
+            <summary>
+            用户其它平台相关信息
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.ExternalIdentity.RegisterUser">
+            <summary>
+            对应的用户
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Domain.Entities.RegisterUser">
+            <summary>
+            注册用户
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.RegisterUser.Account">
+            <summary>
+            用户账号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.RegisterUser.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.RegisterUser.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.RegisterUser.UserGender">
+            <summary>
+            用户性别
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.RegisterUser.NickName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.RegisterUser.UserState">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.RegisterUser.EmailAddress">
+            <summary>
+            邮箱地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.RegisterUser.HeadImage">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.RegisterUser.LastLoginIp">
+            <summary>
+            最后登录IP
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.RegisterUser.LastLoginTime">
+            <summary>
+            最后登录时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.RegisterUser.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.RegisterUser.ExternalIdentities">
+            <summary>
+            其它平台中的身份
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Entities.RegisterUser.ClientId">
+            <summary>
+            客户端Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Domain.Enumerations.UserGender">
+            <summary>
+            用户性别
+            </summary>
+        </member>
+        <member name="F:HaoKao.OpenPlatformService.Domain.Enumerations.UserGender.Unknown">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:HaoKao.OpenPlatformService.Domain.Enumerations.UserGender.Male">
+            <summary>
+            男
+            </summary>
+        </member>
+        <member name="F:HaoKao.OpenPlatformService.Domain.Enumerations.UserGender.Female">
+            <summary>
+            女
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Domain.Enumerations.UserState">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="F:HaoKao.OpenPlatformService.Domain.Enumerations.UserState.Disable">
+            <summary>
+            禁用
+            </summary>
+        </member>
+        <member name="F:HaoKao.OpenPlatformService.Domain.Enumerations.UserState.Enable">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Queries.AccessClientQuery.ClientId">
+            <summary>
+            客户端标识
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Queries.AccessClientQuery.ClientName">
+            <summary>
+            客户端名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Queries.RegisterUserQuery.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Queries.RegisterUserQuery.NickName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Queries.RegisterUserQuery.UserState">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Queries.RegisterUserQuery.StartRegisterDateTime">
+            <summary>
+            开始注册时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Domain.Queries.RegisterUserQuery.EndRegisterDateTime">
+            <summary>
+            结束注册时间
+            </summary>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Domain.Repositories.IDailyActiveUserLogRepository.QueryDailyActiveUserTrend(System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            每日活跃用户走势
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="prev"></param>
+            <param name="next"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Domain.Repositories.IRegisterUserRepository.QueryRegisteredCountAndActiveCount">
+            <summary>
+            获取总注册用户数, 今日注册用户数, 今日活跃用户数
+            </summary>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Domain.Repositories.IRegisterUserRepository.QueryDailyRegisteredUserTrend(System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            每日注册用户走势
+            </summary>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Domain.Repositories.IRegisterUserRepository.QueryRegisteredUserClientGrouping(System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            查询用户注册客户端分组数据
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

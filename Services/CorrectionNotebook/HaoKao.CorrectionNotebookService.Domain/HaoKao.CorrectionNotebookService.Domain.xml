@@ -1,0 +1,422 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.CorrectionNotebookService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.CorrectionNotebookService.Domain.Dtos.QuestionPagedListDto">
+            <summary>
+            题目分页Dto
+            </summary>
+            <param name="Count"></param>
+            <param name="Data"></param>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Domain.Dtos.QuestionPagedListDto.#ctor(System.Int32,System.Collections.Generic.IReadOnlyList{HaoKao.CorrectionNotebookService.Domain.Entities.Question})">
+            <summary>
+            题目分页Dto
+            </summary>
+            <param name="Count"></param>
+            <param name="Data"></param>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Dtos.QuestionPagedListDto.Count">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Dtos.QuestionPagedListDto.Data">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.CorrectionNotebookService.Domain.Entities.ExamLevel">
+            <summary>
+            考试级别实体类
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.ExamLevel.Name">
+            <summary>
+            考试级别名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.ExamLevel.IsBuiltIn">
+            <summary>
+            是否内置数据
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.ExamLevel.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.ExamLevel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.ExamLevel.ParentId">
+            <summary>
+            父级Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.ExamLevel.Subjects">
+            <summary>
+            科目集合
+            </summary>
+        </member>
+        <member name="T:HaoKao.CorrectionNotebookService.Domain.Entities.GenerationLog">
+            <summary>
+            题目答案和解析
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.GenerationLog.QuestionId">
+            <summary>
+            题目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.GenerationLog.Answer">
+            <summary>
+            题目答案
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.GenerationLog.Analysis">
+            <summary>
+            题目解析
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.GenerationLog.CreatorId">
+            <summary>
+            创建者Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.GenerationLog.CreatorName">
+            <summary>
+            创建者名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.GenerationLog.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:HaoKao.CorrectionNotebookService.Domain.Entities.Question">
+            <summary>
+            题目实体类
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Question.ExamLevelId">
+            <summary>
+            题目所属考试级别Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Question.SubjectId">
+            <summary>
+            题目所属科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Question.ImageUrl">
+            <summary>
+            题目图片Url
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Question.Content">
+            <summary>
+            题目内容(文本)
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Question.Answer">
+            <summary>
+            题目答案
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Question.Analysis">
+            <summary>
+            题目解析
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Question.GenerationTimes">
+            <summary>
+            生成次数
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Question.Generatable">
+            <summary>
+            是否可生成答案和解析
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Question.MasteryDegree">
+            <summary>
+            掌握程度
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Question.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Question.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Question.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Question.Tags">
+            <summary>
+            题目关联的标签
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Question.GenerationLogs">
+            <summary>
+            生成的答案和解析记录
+            </summary>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Domain.Entities.Question.MyRegex">
+            <remarks>
+            Pattern:<br/>
+            <code>答案[:：]\\s*(?&lt;answer&gt;.+?)\\s*解析[:：]\\s*(?&lt;analysis&gt;[\\s\\S]+)</code><br/>
+            Explanation:<br/>
+            <code>
+            ○ Match the string "答案".<br/>
+            ○ Match a character in the set [:\uFF1A].<br/>
+            ○ Match a whitespace character greedily any number of times.<br/>
+            ○ "answer" capture group.<br/>
+                ○ Match a character other than '\n' lazily at least once.<br/>
+            ○ Match a whitespace character atomically any number of times.<br/>
+            ○ Match the string "解析".<br/>
+            ○ Match a character in the set [:\uFF1A].<br/>
+            ○ Match a whitespace character greedily any number of times.<br/>
+            ○ "analysis" capture group.<br/>
+                ○ Match any character atomically at least once.<br/>
+            </code>
+            </remarks>
+        </member>
+        <member name="T:HaoKao.CorrectionNotebookService.Domain.Entities.QuestionTag">
+            <summary>
+            题目标签关联实体类
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.QuestionTag.QuestionId">
+            <summary>
+            题目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.QuestionTag.TagId">
+            <summary>
+            标签Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.QuestionTag.Tag">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="T:HaoKao.CorrectionNotebookService.Domain.Entities.Subject">
+            <summary>
+            科目实体类
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Subject.ExamLevelId">
+            <summary>
+            考试级别Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Subject.Name">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Subject.Icon">
+            <summary>
+            科目图标
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Subject.IsBuiltIn">
+            <summary>
+            是否内置数据
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Subject.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Subject.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Subject.QuestionCount">
+            <summary>
+            题目数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Subject.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Subject.Sorts">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Subject.Questions">
+            <summary>
+            试题集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.SubjectSort.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.SubjectSort.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.SubjectSort.Priority">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.SubjectSort.IsBuiltIn">
+            <summary>
+            是否内置数据
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Tag.Category">
+            <summary>
+            标签分类
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Tag.Name">
+            <summary>
+            标签名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Tag.IsBuiltIn">
+            <summary>
+            是否内置数据
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Tag.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.Entities.Tag.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="F:HaoKao.CorrectionNotebookService.Domain.Enums.MasteryDegree.NotMastered">
+            <summary>
+            未掌握
+            </summary>
+        </member>
+        <member name="F:HaoKao.CorrectionNotebookService.Domain.Enums.MasteryDegree.PartiallyMastered">
+            <summary>
+            部分掌握
+            </summary>
+        </member>
+        <member name="F:HaoKao.CorrectionNotebookService.Domain.Enums.MasteryDegree.Mastered">
+            <summary>
+            掌握
+            </summary>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Domain.Services.IImageDemoire.DemoireImage(System.String)">
+            <summary>
+            图像去莫尔
+            </summary>
+            <param name="imageBase64"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Domain.Services.IImageDewarp.DewarpImage(System.String)">
+            <summary>
+            图片畸变矫正
+            </summary>
+            <param name="imageBase64"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Domain.Services.IImageEnhancement.EnhanceImage(System.String)">
+            <summary>
+            图片增强
+            </summary>
+            <param name="imageBase64"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Domain.Services.IImageRecognition.RecognizeImage(System.String)">
+            <summary>
+            图像识别
+            </summary>
+            <param name="imageBase64"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CorrectionNotebookService.Domain.ValueObjects.UserQuestionCountStatistics">
+            <summary>
+            用户题目统计
+            </summary>
+            <param name="TotalCount">总题数</param>
+            <param name="MasteredCount">已掌握</param>
+            <param name="RestOfCount">剩余题数</param>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Domain.ValueObjects.UserQuestionCountStatistics.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            用户题目统计
+            </summary>
+            <param name="TotalCount">总题数</param>
+            <param name="MasteredCount">已掌握</param>
+            <param name="RestOfCount">剩余题数</param>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.ValueObjects.UserQuestionCountStatistics.TotalCount">
+            <summary>总题数</summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.ValueObjects.UserQuestionCountStatistics.MasteredCount">
+            <summary>已掌握</summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Domain.ValueObjects.UserQuestionCountStatistics.RestOfCount">
+            <summary>剩余题数</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.MyRegex_0">
+            <summary>Custom <see cref="T:System.Text.RegularExpressions.Regex"/>-derived type for the MyRegex method.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.MyRegex_0.Instance">
+            <summary>Cached, thread-safe singleton instance.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.MyRegex_0.#ctor">
+            <summary>Initializes the instance.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.MyRegex_0.RunnerFactory">
+            <summary>Provides a factory for creating <see cref="T:System.Text.RegularExpressions.RegexRunner"/> instances to be used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.MyRegex_0.RunnerFactory.CreateInstance">
+            <summary>Creates an instance of a <see cref="T:System.Text.RegularExpressions.RegexRunner"/> used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.MyRegex_0.RunnerFactory.Runner">
+            <summary>Provides the runner that contains the custom logic implementing the specified regular expression.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.MyRegex_0.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})">
+            <summary>Scan the <paramref name="inputSpan"/> starting from base.runtextstart for the next match.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.MyRegex_0.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Search <paramref name="inputSpan"/> starting from base.runtextpos for the next location a match could possibly start.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if a possible match was found; false if no more matches are possible.</returns>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.MyRegex_0.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Determine whether <paramref name="inputSpan"/> at base.runtextpos is a match for the regular expression.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if the regular expression matches at the current position; otherwise, false.</returns>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.Utilities">
+            <summary>Helper methods used by generated <see cref="T:System.Text.RegularExpressions.Regex"/>-derived implementations.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout">
+            <summary>Default timeout value set in <see cref="T:System.AppContext"/>, or <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout"/> if none was set.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_hasTimeout">
+            <summary>Whether <see cref="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout"/> is non-infinite.</summary>
+        </member>
+    </members>
+</doc>

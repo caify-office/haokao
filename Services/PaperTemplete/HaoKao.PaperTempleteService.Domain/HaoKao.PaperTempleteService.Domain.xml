@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.PaperTempleteService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.PaperTempleteService.Domain.Commands.CreatePaperTempleteCommand">
+            <summary>
+            创建命令
+            </summary>
+            <param name="TempleteName"></param>
+            <param name="Remark"></param>
+            <param name="SuitableSubjects"></param>
+        </member>
+        <member name="M:HaoKao.PaperTempleteService.Domain.Commands.CreatePaperTempleteCommand.#ctor(System.String,System.String,System.String)">
+            <summary>
+            创建命令
+            </summary>
+            <param name="TempleteName"></param>
+            <param name="Remark"></param>
+            <param name="SuitableSubjects"></param>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Domain.Commands.CreatePaperTempleteCommand.TempleteName">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Domain.Commands.CreatePaperTempleteCommand.Remark">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Domain.Commands.CreatePaperTempleteCommand.SuitableSubjects">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.PaperTempleteService.Domain.Commands.UpdatePaperTempleteCommand">
+            <summary>
+            更新命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="TempleteName"></param>
+            <param name="Remark"></param>
+            <param name="SuitableSubjects"></param>
+        </member>
+        <member name="M:HaoKao.PaperTempleteService.Domain.Commands.UpdatePaperTempleteCommand.#ctor(System.Guid,System.String,System.String,System.String)">
+            <summary>
+            更新命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="TempleteName"></param>
+            <param name="Remark"></param>
+            <param name="SuitableSubjects"></param>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Domain.Commands.UpdatePaperTempleteCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Domain.Commands.UpdatePaperTempleteCommand.TempleteName">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Domain.Commands.UpdatePaperTempleteCommand.Remark">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Domain.Commands.UpdatePaperTempleteCommand.SuitableSubjects">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.PaperTempleteService.Domain.Commands.UpdateTempleteStructCommand">
+            <summary>
+            更新试卷模板结构命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="TemplateStructDatas"></param>
+        </member>
+        <member name="M:HaoKao.PaperTempleteService.Domain.Commands.UpdateTempleteStructCommand.#ctor(System.Guid,System.String)">
+            <summary>
+            更新试卷模板结构命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="TemplateStructDatas"></param>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Domain.Commands.UpdateTempleteStructCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Domain.Commands.UpdateTempleteStructCommand.TemplateStructDatas">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.PaperTempleteService.Domain.Commands.DeletePaperTempleteCommand">
+            <summary>
+            删除命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.PaperTempleteService.Domain.Commands.DeletePaperTempleteCommand.#ctor(System.Guid)">
+            <summary>
+            删除命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Domain.Commands.DeletePaperTempleteCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Domain.Entities.PaperTemplete.TempleteName">
+            <summary>
+            试卷模板名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Domain.Entities.PaperTemplete.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Domain.Entities.PaperTemplete.SuitableSubjects">
+            <summary>
+            适用科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Domain.Entities.PaperTemplete.TempleteStructDatas">
+            <summary>
+            模板结构
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Domain.Entities.PaperTemplete.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Domain.Entities.PaperTemplete.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Domain.Entities.PaperTemplete.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+    </members>
+</doc>

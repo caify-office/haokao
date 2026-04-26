@@ -1,0 +1,386 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.SalespersonService.Application</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.SalespersonService.Application.Interfaces.IEnterpriseWeChatConfigService.Get">
+            <summary>
+            根据租户获取
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Application.Interfaces.IEnterpriseWeChatConfigService.Create(HaoKao.SalespersonService.Application.ViewModels.CreateEnterpriseWeChatConfigViewModel)">
+            <summary>
+            保存企业微信配置
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.SalespersonService.Application.Interfaces.ISalespersonService">
+            <summary>
+            销售人员管理端服务接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Application.Interfaces.ISalespersonService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Application.Interfaces.ISalespersonService.Get(HaoKao.SalespersonService.Application.ViewModels.QuerySalespersonViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="model">查询对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Application.Interfaces.ISalespersonService.Create(HaoKao.SalespersonService.Application.ViewModels.CreateSalespersonViewModel)">
+            <summary>
+            创建销售人员
+            </summary>
+            <param name="model">新增模型</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Application.Interfaces.ISalespersonService.Update(HaoKao.SalespersonService.Application.ViewModels.UpdateSalespersonViewModel)">
+            <summary>
+            根据主键更新销售人员
+            </summary>
+            <param name="model">更新模型</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Application.Interfaces.ISalespersonService.Delete(System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            删除销售人员
+            </summary>
+            <param name="ids">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Application.Profiles.EnterpriseWeChatConfigProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.Profiles.EnterpriseWeChatConfigProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Application.Profiles.SalespersonProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.Profiles.SalespersonProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.SalespersonService.Application.Services.EnterpriseWeChatConfigService">
+            <summary>
+            企业微信配置管理端服务接口
+            </summary>
+            <param name="bus"></param>
+            <param name="cacheManager"></param>
+            <param name="notifications"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Application.Services.EnterpriseWeChatConfigService.#ctor(Girvs.Driven.Bus.IMediatorHandler,Girvs.Cache.Caching.IStaticCacheManager,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.SalespersonService.Domain.Repositories.IEnterpriseWeChatConfigRepository)">
+            <summary>
+            企业微信配置管理端服务接口
+            </summary>
+            <param name="bus"></param>
+            <param name="cacheManager"></param>
+            <param name="notifications"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Application.Services.EnterpriseWeChatConfigService.Get">
+            <summary>
+            根据租户获取
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Application.Services.EnterpriseWeChatConfigService.Create(HaoKao.SalespersonService.Application.ViewModels.CreateEnterpriseWeChatConfigViewModel)">
+            <summary>
+            保存企业微信配置
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.SalespersonService.Application.Services.EnterpriseWeChatService">
+            <summary>
+            企业微信服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Application.Services.EnterpriseWeChatService.GetAccessToken(System.String,System.String)">
+            <summary>
+            获取AccessToken
+            https://developer.work.weixin.qq.com/document/path/91039
+            </summary>
+            <param name="corpid"></param>
+            <param name="corpsecret"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Application.Services.EnterpriseWeChatService.GetExternalContactList(System.String,System.String)">
+            <summary>
+            获取客户列表
+            https://developer.work.weixin.qq.com/document/path/92113
+            </summary>
+            <param name="userId"></param>
+            <param name="accessToken"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Application.Services.EnterpriseWeChatService.GetExternalContact(System.String,System.String)">
+            <summary>
+            获取客户详情
+            https://developer.work.weixin.qq.com/document/path/92114
+            </summary>
+            <param name="accessToken"></param>
+            <param name="externalUserId"></param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.Services.WeiXinBaseModel.errcode">
+            <summary>
+            出错返回码，为0表示成功，非0表示调用失败
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.Services.WeiXinBaseModel.errmsg">
+            <summary>
+            返回码提示语
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.Services.AccessTokenModel.access_token">
+            <summary>
+            获取到的凭证，最长为512字节
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.Services.AccessTokenModel.expires_in">
+            <summary>
+            凭证的有效时间（秒）
+            </summary>
+        </member>
+        <member name="T:HaoKao.SalespersonService.Application.Services.ExternalContactListModel">
+            <summary>
+            客户列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.Services.ExternalContactListModel.external_userid">
+            <summary>
+            外部联系人的userid列表
+            </summary>
+        </member>
+        <member name="T:HaoKao.SalespersonService.Application.Services.ExternalContactModel">
+            <summary>
+            客户详情
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.Services.ExternalContact.external_userid">
+            <summary>
+            外部联系人的userid
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.Services.ExternalContact.name">
+            <summary>
+            外部联系人的名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.Services.ExternalContact.type">
+            <summary>
+            外部联系人的类型，1表示该外部联系人是微信用户，2表示该外部联系人是企业微信用户
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.Services.ExternalContact.unionid">
+            <summary>
+            外部联系人在微信开放平台的唯一身份标识（微信unionid），通过此字段企业可将外部联系人与公众号/小程序用户关联起来。
+            仅当联系人类型是微信用户，且企业绑定了微信开发者ID有此字段。
+            第三方应用和代开发应用均不可获取，上游企业不可获取下游企业客户的unionid字段
+            </summary>
+        </member>
+        <member name="T:HaoKao.SalespersonService.Application.Services.SalespersonService">
+            <summary>
+            销售人员管理端服务接口
+            </summary>
+            <param name="bus"></param>
+            <param name="cacheManager"></param>
+            <param name="notifications"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Application.Services.SalespersonService.#ctor(Girvs.Driven.Bus.IMediatorHandler,Girvs.Cache.Caching.IStaticCacheManager,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.SalespersonService.Domain.Repositories.ISalespersonRepository)">
+            <summary>
+            销售人员管理端服务接口
+            </summary>
+            <param name="bus"></param>
+            <param name="cacheManager"></param>
+            <param name="notifications"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Application.Services.SalespersonService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Application.Services.SalespersonService.Get(HaoKao.SalespersonService.Application.ViewModels.QuerySalespersonViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="model">查询对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Application.Services.SalespersonService.Create(HaoKao.SalespersonService.Application.ViewModels.CreateSalespersonViewModel)">
+            <summary>
+            创建销售人员
+            </summary>
+            <param name="model">新增模型</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Application.Services.SalespersonService.Update(HaoKao.SalespersonService.Application.ViewModels.UpdateSalespersonViewModel)">
+            <summary>
+            根据主键更新销售人员
+            </summary>
+            <param name="model">更新模型</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Application.Services.SalespersonService.Delete(System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            删除销售人员
+            </summary>
+            <param name="ids">主键</param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.CreateEnterpriseWeChatConfigViewModel.CorpId">
+            <summary>
+            企业Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.CreateEnterpriseWeChatConfigViewModel.CorpName">
+            <summary>
+            企业名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.CreateEnterpriseWeChatConfigViewModel.CorpSecret">
+            <summary>
+            应用的凭证密钥
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.UpdateEnterpriseWeChatConfigViewModel.Id">
+            <summary>
+            销售人员Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.BrowseEnterpriseWeChatConfigViewModel.Id">
+            <summary>
+            企业微信配置Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.BrowseEnterpriseWeChatConfigViewModel.CorpId">
+            <summary>
+            企业Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.BrowseEnterpriseWeChatConfigViewModel.CorpName">
+            <summary>
+            企业名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.BrowseEnterpriseWeChatConfigViewModel.CorpSecret">
+            <summary>
+            应用的凭证密钥
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.CreateSalespersonViewModel.RealName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.CreateSalespersonViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.CreateSalespersonViewModel.EnterpriseWeChatUserId">
+            <summary>
+            企业微信用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.CreateSalespersonViewModel.EnterpriseWeChatUserName">
+            <summary>
+            企业微信昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.CreateSalespersonViewModel.EnterpriseWeChatConfigId">
+            <summary>
+            企业微信配置Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.UpdateSalespersonViewModel.Id">
+            <summary>
+            销售人员Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.BrowseSalespersonViewModel.Id">
+            <summary>
+            销售人员Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.BrowseSalespersonViewModel.RealName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.BrowseSalespersonViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.BrowseSalespersonViewModel.EnterpriseWeChatUserName">
+            <summary>
+            企业微信昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.BrowseSalespersonViewModel.EnterpriseWeChatUserId">
+            <summary>
+            企业微信用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.BrowseSalespersonViewModel.EnterpriseWeChatConfigId">
+            <summary>
+            企业微信配置Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.BrowseSalespersonViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.BrowseSalespersonViewModel.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.BrowseSalespersonViewModel.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.BrowseSalespersonViewModel.EnterpriseWeChatConfig">
+            <summary>
+            企业微信配置
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.QuerySalespersonViewModel.RealName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Application.ViewModels.QuerySalespersonViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+    </members>
+</doc>

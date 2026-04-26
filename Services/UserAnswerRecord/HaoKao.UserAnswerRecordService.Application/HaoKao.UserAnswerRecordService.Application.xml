@@ -1,0 +1,2178 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.UserAnswerRecordService.Application</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.UserAnswerRecordService.Application.AutoMapper.UserAnswerRecordProfile">
+            <summary>
+            作答记录映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.AutoMapper.UserAnswerRecordProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.AutoMapper.UserAnswerRecordProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Application.AutoMapper.AnswerRecordMapperProfile">
+            <summary>
+            作答记录映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.AutoMapper.AnswerRecordMapperProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.AutoMapper.AnswerRecordMapperProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Application.Helpers.PercentageHelper">
+            <summary>
+            百分比计算辅助类
+            </summary>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Helpers.PercentageHelper.CalculatePercentage(System.Int32,System.Int32)">
+            <summary>
+            计算百分比
+            </summary>
+            <param name="numerator">分子</param>
+            <param name="denominator">分母</param>
+            <returns>百分比整数值（0-100）</returns>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.AnswerRecordViewModel.QuestionCount">
+            <summary>
+            总题数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.AnswerRecordViewModel.AnswerCount">
+            <summary>
+            作答数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.AnswerRecordViewModel.CorrectCount">
+            <summary>
+            正确数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.AnswerRecordViewModel.CorrectRate">
+            <summary>
+            正确率
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.AnswerRecordViewModel.LackCount">
+            <summary>
+            少选数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.AnswerRecordViewModel.CreateTime">
+            <summary>
+            答题时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.AnswerRecordViewModel.Questions">
+            <summary>
+            作答试题
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.AnswerQuestionViewModel.RecordId">
+            <summary>
+            作答记录Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.AnswerQuestionViewModel.QuestionId">
+            <summary>
+            试题Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.AnswerQuestionViewModel.QuestionTypeId">
+            <summary>
+            试题类型Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.AnswerQuestionViewModel.JudgeResult">
+            <summary>
+            判题结果
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.AnswerQuestionViewModel.WhetherMark">
+            <summary>
+            是否标记
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.AnswerQuestionViewModel.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.AnswerQuestionViewModel.CreateTime">
+            <summary>
+            答题时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.AnswerQuestionViewModel.ParentId">
+            <summary>
+            试题父Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.AnswerQuestionViewModel.UserAnswers">
+            <summary>
+            用户作答
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.UserAnswerViewModel.Content">
+            <summary>
+            回答内容
+            </summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.ChapterAnswerRecordService">
+            <summary>
+            章节答题记录服务
+            </summary>
+            <param name="mapper"></param>
+            <param name="cacheManager"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.ChapterAnswerRecordService.#ctor(AutoMapper.IMapper,Girvs.Cache.Caching.IStaticCacheManager,HaoKao.UserAnswerRecordService.Domain.Repositories.IChapterAnswerRecordRepository)">
+            <summary>
+            章节答题记录服务
+            </summary>
+            <param name="mapper"></param>
+            <param name="cacheManager"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.ChapterAnswerRecordService.Get(System.Guid)">
+            <summary>
+            按Id获取记录(答题结果页面)
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.ChapterAnswerRecordService.GetChapterAnswerRecord(System.Guid,System.Guid)">
+            <summary>
+            获取章节记录
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="chapterId">章节Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.ChapterAnswerRecordService.GetSectionAnswerRecord(System.Guid,System.Guid)">
+            <summary>
+            获取小节记录
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="sectionId">小节Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.ChapterAnswerRecordService.GetKnowledgePointAnswerRecord(System.Guid,System.Guid)">
+            <summary>
+            获取知识点记录
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="knowledgePointId">知识点Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.ChapterAnswerRecordService.GetChapterList(System.Guid,System.Guid)">
+            <summary>
+            获取章节列表
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.ChapterAnswerRecordService.GetSectionList(System.Guid,System.Guid)">
+            <summary>
+            获取小节列表
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="chapterId">章节Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.ChapterAnswerRecordService.GetKnowledgePointList(System.Guid,System.Guid)">
+            <summary>
+            获取知识点列表
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="sectionId">小节Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.ChapterAnswerRecordService.GetChapterRecordStat(System.Guid)">
+            <summary>
+            查询题库首页章节试题统计
+            </summary>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.BaseRecordViewModel.QuestionCount">
+            <summary>
+            总题数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.BaseRecordViewModel.AnswerCount">
+            <summary>
+            作答数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.BaseRecordViewModel.CorrectCount">
+            <summary>
+            正确数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.BaseRecordViewModel.CorrectRate">
+            <summary>
+            正确率
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.BaseRecordViewModel.CreateTime">
+            <summary>
+            答题时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.ChapterRecordViewModel.ChapterId">
+            <summary>
+            章节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.SectionRecordViewModel.SectionId">
+            <summary>
+            小节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.KnowledgePointRecordViewModel.KnowledgePointId">
+            <summary>
+            知识点Id
+            </summary>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.IDataAnalysisService.GetPracticeAbilityAnalysis(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            获取做题能力分析
+            </summary>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.IDataAnalysisService.RefreshPracticeAbilityAnalysis(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            刷新做题能力分析
+            </summary>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.IDataAnalysisService.GetPracticeSituationAnalysis(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            获取练习状况分析
+            </summary>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.IDataAnalysisService.RefreshPracticeSituationAnalysis(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            刷新练习状况分析
+            </summary>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.DataAnalysisService">
+            <summary>
+            数据分析服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.DataAnalysisService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,HaoKao.UserAnswerRecordService.Application.Worker.IBackgroundTaskQueue)">
+            <summary>
+            数据分析服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.DataAnalysisService.GetPracticeAbilityAnalysis(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            获取做题能力分析
+            </summary>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.DataAnalysisService.RefreshPracticeAbilityAnalysis(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            刷新做题能力分析
+            </summary>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.DataAnalysisService.BuildPracticeAbilityAnalysisWorkStoredProcedure(HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.BuildWorkItemModel)">
+            <summary>
+            构建做题能力分析任务
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.DataAnalysisService.CalcPracticeSpeed(System.Collections.Generic.IReadOnlyCollection{HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeSpeedModel},System.Guid)">
+            <summary>
+            计算练习速度
+            </summary>
+            <param name="list"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.DataAnalysisService.GetPracticeSituationAnalysis(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            获取练习状况分析
+            </summary>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.DataAnalysisService.RefreshPracticeSituationAnalysis(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            刷新练习状况分析
+            </summary>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.DataAnalysisService.BuildPracticeSituationAnalysisWorkUsingStoredProcedure(HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.BuildWorkItemModel)">
+            <summary>
+            构建练习能力分析任务
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.DataAnalysisService.Percentage(System.Int32,System.Int32)">
+            <summary>
+            计算百分比
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.DateAnswerRecordService">
+            <summary>
+            打卡和今日任务答题记录服务
+            </summary>
+            <param name="mapper"></param>
+            <param name="cacheManager"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.DateAnswerRecordService.#ctor(AutoMapper.IMapper,Girvs.Cache.Caching.IStaticCacheManager,HaoKao.UserAnswerRecordService.Domain.Repositories.IDateAnswerRecordRepository)">
+            <summary>
+            打卡和今日任务答题记录服务
+            </summary>
+            <param name="mapper"></param>
+            <param name="cacheManager"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.DateAnswerRecordService.Get(System.Guid)">
+            <summary>
+            按Id获取记录详情
+            </summary>
+            <param name="id">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.DateAnswerRecordService.GetTodayTaskRecordId(System.Guid)">
+            <summary>
+            获取今日任务作答记录Id
+            </summary>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.DateAnswerRecordService.GetDailyRecordList(System.Guid,System.DateOnly)">
+            <summary>
+            获取每日打卡记录(月)
+            </summary>
+            <param name="subjectId">科目Id</param>
+            <param name="date">日期</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.DateAnswerRecordService.GetDailyRankingRatio(System.Guid,System.DateOnly)">
+            <summary>
+            获取每日打卡排名占比(月)
+            </summary>
+            <param name="subjectId">科目Id</param>
+            <param name="date">日期</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.DateAnswerRecordService.GetDailyUserCount(System.Guid)">
+            <summary>
+            每日一题打卡人数统计(每日00:00更新)
+            </summary>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.PaperAnswerRecordService">
+            <summary>
+            试卷答题记录服务
+            </summary>
+            <param name="mapper"></param>
+            <param name="cacheManager"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.PaperAnswerRecordService.#ctor(AutoMapper.IMapper,Girvs.Cache.Caching.IStaticCacheManager,HaoKao.UserAnswerRecordService.Domain.Repositories.IPaperAnswerRecordRepository)">
+            <summary>
+            试卷答题记录服务
+            </summary>
+            <param name="mapper"></param>
+            <param name="cacheManager"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.PaperAnswerRecordService.Get(System.Guid)">
+            <summary>
+            按Id获取记录(答题结果页面)
+            </summary>
+            <param name="id">试卷Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.PaperAnswerRecordService.GetPaperList(System.Guid,System.Guid)">
+            <summary>
+            获取试卷列表
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.PaperAnswerRecordService.GetPaperList(System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            获取试卷列表
+            </summary>
+            <param name="paperIds">试卷Ids</param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.PaperRecordViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.PaperRecordViewModel.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.PaperRecordViewModel.CategoryId">
+            <summary>
+            分类Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.PaperRecordViewModel.PaperId">
+            <summary>
+            试卷Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.PaperRecordViewModel.UserScore">
+            <summary>
+            用户得分
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.PaperRecordViewModel.PassingScore">
+            <summary>
+            及格分数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.PaperRecordViewModel.TotalScore">
+            <summary>
+            试题总分
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.PaperRecordViewModel.CorrectRate">
+            <summary>
+            正确率
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.PaperRecordViewModel.Progress">
+            <summary>
+            进度
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.PaperRecordViewModel.CreateTime">
+            <summary>
+            答题时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.PaperRecordViewModel.CompletedUserCount">
+            <summary>
+            已完成人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.PaperAnswerRecordViewModel.QuestionCount">
+            <summary>
+            总题数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.PaperAnswerRecordViewModel.AnswerCount">
+            <summary>
+            作答数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.PaperAnswerRecordViewModel.CorrectCount">
+            <summary>
+            正确数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.PaperAnswerRecordViewModel.LackCount">
+            <summary>
+            少选数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.PaperAnswerRecordViewModel.ElapsedTime">
+            <summary>
+            总耗时
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.PaperAnswerRecordViewModel.Questions">
+            <summary>
+            作答试题
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.QueryProductKnowledgeListViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.QueryProductKnowledgeListViewModel.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.QueryProductKnowledgeListViewModel.ChapterId">
+            <summary>
+            章节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.QueryProductKnowledgeListViewModel.SectionId">
+            <summary>
+            小节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.QueryProductKnowledgeListViewModel.MasteryLevel">
+            <summary>
+            掌握程度
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.QueryProductKnowledgeListViewModel.KnowledgePointIds">
+            <summary>
+            知识点Ids
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.ProductKnowledgePointRecordViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.ProductKnowledgePointRecordViewModel.KnowledgePointId">
+            <summary>
+            知识点Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.ProductKnowledgePointRecordViewModel.CorrectRate">
+            <summary>
+            正确率
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.ProductKnowledgePointRecordViewModel.MasteryLevel">
+            <summary>
+            掌握程度
+            </summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.KnowledgeMasteryStat">
+            <summary>
+            题目掌握程度统计
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.KnowledgeMasteryStat.Total">
+            <summary>
+            全部知识点数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.KnowledgeMasteryStat.Mastered">
+            <summary>
+            已掌握数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.KnowledgeMasteryStat.NeedsImprovement">
+            <summary>
+            待加强数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.KnowledgeMasteryStat.NotMastered">
+            <summary>
+            未掌握数量
+            </summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.ExamFrequencyMasteryViewModel">
+            <summary>
+            按考频统计知识点掌握情况
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.ExamFrequencyMasteryViewModel.High">
+            <summary>
+            高频知识点统计
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.ExamFrequencyMasteryViewModel.Medium">
+            <summary>
+            中频知识点统计
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.ExamFrequencyMasteryViewModel.Low">
+            <summary>
+            低频知识点统计
+            </summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.ExamFrequencyMasteryDetail">
+            <summary>
+            掌握情况统计详情
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.ExamFrequencyMasteryDetail.MasteredCount">
+            <summary>
+            已掌握的知识点数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.ExamFrequencyMasteryDetail.NotMasteredCount">
+            <summary>
+            未掌握的知识点数量 (包含待加强和未掌握)
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.QueryDateStudyDurationViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.QueryDateStudyDurationViewModel.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.QueryDateStudyDurationViewModel.StartDate">
+            <summary>
+            开始日期
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.QueryDateStudyDurationViewModel.EndDate">
+            <summary>
+            结束日期
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.DateStudyDurationViewModel.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.DateStudyDurationViewModel.Duration">
+            <summary>
+            时长 (小时)
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.SubjectAnswerStatViewModel.QuestionCount">
+            <summary>
+            总题数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.SubjectAnswerStatViewModel.AnswerCount">
+            <summary>
+            作答数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.SubjectAnswerStatViewModel.CorrectCount">
+            <summary>
+            正确数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.SubjectAnswerStatViewModel.CorrectRate">
+            <summary>
+            正确率
+            </summary>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.ProductChapterAnswerRecordService.Get(System.Guid)">
+            <summary>
+            按Id获取记录(答题结果页面)
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.ProductChapterAnswerRecordService.GetChapterRecordIds(HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.QueryChapterRecordIdsViewModel)">
+            <summary>
+            获取试卷作答记录Ids
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.ProductChapterAnswerRecordService.GetSubjectAnswerStat(System.Guid,System.Guid)">
+            <summary>
+            获取科目作答统计(做题数,正确数和总数)
+            </summary>
+            <param name="productId">产品Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.ProductKnowledgeAnswerRecordService.Get(System.Guid)">
+            <summary>
+            按Id获取记录(答题结果页面)
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.ProductKnowledgeAnswerRecordService.GetList(HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.QueryProductKnowledgeListViewModel)">
+            <summary>
+            获取产品章节知识点记录
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.ProductKnowledgeAnswerRecordService.GetKnowledgeMasteryStat(HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.QueryProductKnowledgeListViewModel)">
+            <summary>
+            获取知识点掌握情况
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.ProductKnowledgeAnswerRecordService.GetExamFrequencyMastery(System.Guid,System.Guid)">
+            <summary>
+            获取获取考试频率掌握情况
+            </summary>
+            <param name="productId">产品Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.ProductKnowledgeAnswerRecordService.GetSubjectAnswerStat(System.Guid,System.Guid)">
+            <summary>
+            获取科目作答统计(做题数,正确数和总数)
+            </summary>
+            <param name="productId">产品Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.ProductPaperAnswerRecordService.Get(System.Guid)">
+            <summary>
+            按Id获取记录(答题结果页面)
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.ProductPaperAnswerRecordService.GetPaperRecordIds(HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.QueryPaperRecordIdsViewModel)">
+            <summary>
+            获取试卷作答记录Ids
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.ProductPaperAnswerRecordService.GetSubjectAnswerStat(System.Guid,System.Guid)">
+            <summary>
+            获取科目作答统计(做题数,正确数和总数)
+            </summary>
+            <param name="productId">产品Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Interfaces.IUserAnswerRecordAppService.Get(System.Guid)">
+            <summary>
+            按Id获取记录(答题结果页面)
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Interfaces.IUserAnswerRecordAppService.Get(HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQueryViewModel)">
+            <summary>
+            根据查询条件获取指定的答题记录
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Interfaces.IUserAnswerRecordAppService.GetChapterList(HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordAppQueryModel)">
+            <summary>
+            获取章节列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Interfaces.IUserAnswerRecordAppService.GetPaperList(HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordAppQueryModel)">
+            <summary>
+            获取试卷列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Interfaces.IUserAnswerRecordAppService.GetUserLatestRecordId">
+            <summary>
+            查询用户最新的练习记录Id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Interfaces.IUserAnswerRecordAppService.GetChapterRecordStat(System.Guid)">
+            <summary>
+            查询题库首页试题统计
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Interfaces.IUserAnswerRecordAppService.GetUserPaperDetail(HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordAppQueryModel)">
+            <summary>
+            查询题库首页试卷详细情况
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Interfaces.IUserAnswerRecordAppService.GetHomePaperAnswerDetail(System.Guid[])">
+            <summary>
+            题库首页整卷测验统计接口以及首页点击进去列表查询接口
+            </summary>
+            <param name="paperIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Interfaces.IUserAnswerRecordAppService.GetPunchInRecordList(System.Guid,System.DateTime)">
+            <summary>
+            查询当月每日一题打卡记录
+            </summary>
+            <param name="subjectId"></param>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Interfaces.IUserAnswerRecordAppService.GetPunchInRankingRatio(System.Guid,System.DateTime)">
+            <summary>
+            获取打卡排名比例
+            </summary>
+            <param name="subjectId"></param>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Interfaces.IUserAnswerRecordAppService.GetJoinPunchInPeopleNumber(System.Guid)">
+            <summary>
+            每日一题打卡人数统计(每日00:00更新)
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Interfaces.IUserAnswerRecordAppService.GetTodayTaskRecordId(System.Guid)">
+            <summary>
+            查询今日任务的练习记录Id
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Interfaces.IUserAnswerRecordAppService.GetPracticeAbilityAnalysis(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            获取做题能力分析
+            </summary>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Interfaces.IUserAnswerRecordAppService.RefreshPracticeAbilityAnalysis(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            刷新做题能力分析
+            </summary>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Interfaces.IUserAnswerRecordAppService.GetPracticeSituationAnalysis(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            获取练习状况分析
+            </summary>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Interfaces.IUserAnswerRecordAppService.RefreshPracticeSituationAnalysis(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            刷新练习状况分析
+            </summary>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordAppService">
+            <summary>
+            用户答题记录服务--App
+            </summary>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordAppService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,HaoKao.UserAnswerRecordService.Domain.Repositories.IUserAnswerRecordRepository,HaoKao.UserAnswerRecordService.Application.Worker.IBackgroundTaskQueue,AutoMapper.IMapper)">
+            <summary>
+            用户答题记录服务--App
+            </summary>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordAppService.Get(System.Guid)">
+            <summary>
+            按Id获取记录(答题结果页面)
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordAppService.Get(HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQueryViewModel)">
+            <summary>
+            根据查询条件获取指定的答题记录
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordAppService.GetChapterList(HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordAppQueryModel)">
+            <summary>
+            获取章节列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordAppService.GetPaperList(HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordAppQueryModel)">
+            <summary>
+            获取试卷列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordAppService.GetUserLatestRecordId">
+            <summary>
+            查询用户最新的练习记录Id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordAppService.GetTodayTaskRecordId(System.Guid)">
+            <summary>
+            查询今日任务的练习记录Id
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordAppService.GetChapterRecordStat(System.Guid)">
+            <summary>
+            查询题库首页章节试题统计
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordAppService.GetUserPaperDetail(HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordAppQueryModel)">
+            <summary>
+            查询题库首页试卷详细情况
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordAppService.GetHomePaperAnswerDetail(System.Guid[])">
+            <summary>
+            题库首页整卷测验统计接口以及首页点击进去列表查询接口
+            </summary>
+            <param name="paperIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordAppService.GetPunchInRecordList(System.Guid,System.DateTime)">
+            <summary>
+            查询当月每日一题打卡记录
+            </summary>
+            <param name="subjectId"></param>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordAppService.GetPunchInRankingRatio(System.Guid,System.DateTime)">
+            <summary>
+            获取打卡排名比例
+            </summary>
+            <param name="subjectId"></param>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordAppService.GetJoinPunchInPeopleNumber(System.Guid)">
+            <summary>
+            每日一题打卡人数统计(每日00:00更新)
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordAppService.GetPracticeAbilityAnalysis(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            获取做题能力分析
+            </summary>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordAppService.RefreshPracticeAbilityAnalysis(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            刷新做题能力分析
+            </summary>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordAppService.BuildPracticeAbilityAnalysisWorkStoredProcedure(HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.BuildWorkItemModel)">
+            <summary>
+            构建做题能力分析任务
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordAppService.CalcPracticeSpeed(System.Collections.Generic.IReadOnlyCollection{HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeSpeedModel},System.Guid)">
+            <summary>
+            计算练习速度
+            </summary>
+            <param name="list"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordAppService.GetPracticeSituationAnalysis(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            获取练习状况分析
+            </summary>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordAppService.RefreshPracticeSituationAnalysis(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            刷新练习状况分析
+            </summary>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordAppService.Percentage(System.Int32,System.Int32)">
+            <summary>
+            计算百分比
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordService.GetChapterList(System.Guid,System.Guid)">
+            <summary>
+            获取章节列表
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordService.GetSectionList(System.Guid,System.Guid)">
+            <summary>
+            获取小节列表
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="chapterId">章节Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordService.GetKnowledgePointList(System.Guid,System.Guid)">
+            <summary>
+            获取知识点列表
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="sectionId">小节Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordService.GetPaperList(System.Guid,System.Guid)">
+            <summary>
+            获取试卷列表
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordService.GetAnsweredQuestionCount(System.Guid,System.Guid)">
+            <summary>
+            获取已答题数
+            </summary>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordService.GetPracticeAbilityAnalysis(System.Guid,System.Guid)">
+            <summary>
+            获取做题能力分析
+            </summary>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordService.RefreshPracticeAbilityAnalysis(System.Guid,System.Guid)">
+            <summary>
+            刷新做题能力分析
+            </summary>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordService.GetPracticeSituationAnalysis(System.Guid,System.Guid)">
+            <summary>
+            获取练习状况分析
+            </summary>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordService.RefreshPracticeSituationAnalysis(System.Guid,System.Guid)">
+            <summary>
+            刷新练习状况分析
+            </summary>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService">
+            <summary>
+            用户答题记录服务--Web
+            </summary>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.#ctor(HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.IChapterAnswerRecordService,HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.IPaperAnswerRecordService,HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.IDateAnswerRecordService,HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.IDataAnalysisService,HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.IProductChapterAnswerRecordService,HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.IProductPaperAnswerRecordService,HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.IProductKnowledgeAnswerRecordService,HaoKao.UserAnswerRecordService.Domain.Repositories.IElapsedTimeRecordRepository)">
+            <summary>
+            用户答题记录服务--Web
+            </summary>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.GetChapterAnswerRecord(System.Guid,System.Guid)">
+            <summary>
+            获取章节记录
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="chapterId">章节Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.GetSectionAnswerRecord(System.Guid,System.Guid)">
+            <summary>
+            获取小节记录
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="sectionId">小节Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.GetKnowledgePointAnswerRecord(System.Guid,System.Guid)">
+            <summary>
+            获取知识点记录
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="knowledgePointId">知识点Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.GetPaperRecord(System.Guid)">
+            <summary>
+            获取试卷记录
+            </summary>
+            <param name="id">id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.GetChapterList(System.Guid,System.Guid)">
+            <summary>
+            获取章节列表
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.GetSectionList(System.Guid,System.Guid)">
+            <summary>
+            获取小节列表
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="chapterId">章节Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.GetKnowledgePointList(System.Guid,System.Guid)">
+            <summary>
+            获取知识点列表
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="sectionId">小节Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.GetPaperList(System.Guid,System.Guid)">
+            <summary>
+            获取试卷列表
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.GetTodayTaskRecordId(System.Guid)">
+            <summary>
+            查询今日任务的练习记录Id
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.GetTodayTaskRecord(System.Guid)">
+            <summary>
+            获取今日任务答题记录
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.GetPracticeAbilityAnalysis(System.Guid)">
+            <summary>
+            获取做题能力分析
+            </summary>
+            <param name="subjectId"></param>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.RefreshPracticeAbilityAnalysis(System.Guid)">
+            <summary>
+            刷新做题能力分析
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.GetPracticeSituationAnalysis(System.Guid)">
+            <summary>
+            获取练习状况分析
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.RefreshPracticeSituationAnalysis(System.Guid)">
+            <summary>
+            刷新练习状况分析
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.GetProductChapterRecord(System.Guid)">
+            <summary>
+            按Id获取产品章节记录(答题结果页面)
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.GetProductChapterRecordIds(HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.QueryChapterRecordIdsViewModel)">
+            <summary>
+            获取章节作答记录Ids
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.GetProductPaperRecord(System.Guid)">
+            <summary>
+            按Id获取产品试卷记录(答题结果页面)
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.GetProductPaperRecordIds(HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.QueryPaperRecordIdsViewModel)">
+            <summary>
+            获取试卷作答记录Ids
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.GetProductKnowledgeRecord(System.Guid)">
+            <summary>
+            按Id获取产品知识点记录(答题结果页面)
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.GetProductKnowledgeList(HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.QueryProductKnowledgeListViewModel)">
+            <summary>
+            获取产品知识点记录列表
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.GetKnowledgeMasteryStat(HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.QueryProductKnowledgeListViewModel)">
+            <summary>
+            获取知识点掌握情况
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.GetExamFrequencyMastery(System.Guid,System.Guid)">
+            <summary>
+            获取获取考试频率掌握情况
+            </summary>
+            <param name="productId">产品Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.GetSubjectAnswerStat(System.Guid,System.Guid)">
+            <summary>
+            获取科目作答统计(做题数,正确数和总数)
+            </summary>
+            <param name="productId">产品Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWebService.GetDateStudyDuration(HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.QueryDateStudyDurationViewModel)">
+            <summary>
+            按日期统计做题时长
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService">
+            <summary>
+            用户答题记录服务--小程序
+            </summary>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.#ctor(HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.IChapterAnswerRecordService,HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.IPaperAnswerRecordService,HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.IDateAnswerRecordService,HaoKao.UserAnswerRecordService.Application.Modules.AnswerRecordModule.IDataAnalysisService,HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.IProductChapterAnswerRecordService,HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.IProductPaperAnswerRecordService,HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.IProductKnowledgeAnswerRecordService,HaoKao.UserAnswerRecordService.Domain.Repositories.IElapsedTimeRecordRepository)">
+            <summary>
+            用户答题记录服务--小程序
+            </summary>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetUserLatestRecordId">
+            <summary>
+            查询用户最新的练习记录Id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetChapterRecordStat(System.Guid)">
+            <summary>
+            查询题库首页章节试题统计
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetPaperList(System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            获取试卷列表
+            </summary>
+            <param name="paperIds">试卷Ids</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetChapterAnswerRecord(System.Guid,System.Guid)">
+            <summary>
+            获取章节记录
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="chapterId">章节Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetSectionAnswerRecord(System.Guid,System.Guid)">
+            <summary>
+            获取小节记录
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="sectionId">小节Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetKnowledgePointAnswerRecord(System.Guid,System.Guid)">
+            <summary>
+            获取知识点记录
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="knowledgePointId">知识点Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetPaperRecord(System.Guid)">
+            <summary>
+            获取试卷记录
+            </summary>
+            <param name="id">id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetChapterList(System.Guid,System.Guid)">
+            <summary>
+            获取章节列表
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetSectionList(System.Guid,System.Guid)">
+            <summary>
+            获取小节列表
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="chapterId">章节Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetKnowledgePointList(System.Guid,System.Guid)">
+            <summary>
+            获取知识点列表
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="sectionId">小节Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetPaperList(System.Guid,System.Guid)">
+            <summary>
+            获取试卷列表
+            </summary>
+            <param name="categoryId">类别Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetTodayTaskRecordId(System.Guid)">
+            <summary>
+            查询今日任务的练习记录Id
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetTodayTaskRecord(System.Guid)">
+            <summary>
+            获取今日任务答题记录
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetDailyRecordList(System.Guid,System.DateOnly)">
+            <summary>
+            获取每日打卡记录(月)
+            </summary>
+            <param name="subjectId">科目Id</param>
+            <param name="date">日期</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetDailyRankingRatio(System.Guid,System.DateOnly)">
+            <summary>
+            获取每日打卡排名占比(月)
+            </summary>
+            <param name="subjectId">科目Id</param>
+            <param name="date">日期</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetDailyUserCount(System.Guid)">
+            <summary>
+            每日一题打卡人数统计(每日00:00更新)
+            </summary>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetPracticeAbilityAnalysis(System.Guid)">
+            <summary>
+            获取做题能力分析
+            </summary>
+            <param name="subjectId"></param>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.RefreshPracticeAbilityAnalysis(System.Guid)">
+            <summary>
+            刷新做题能力分析
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetPracticeSituationAnalysis(System.Guid)">
+            <summary>
+            获取练习状况分析
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.RefreshPracticeSituationAnalysis(System.Guid)">
+            <summary>
+            刷新练习状况分析
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetProductChapterRecord(System.Guid)">
+            <summary>
+            按Id获取产品章节记录(答题结果页面)
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetProductChapterRecordIds(HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.QueryChapterRecordIdsViewModel)">
+            <summary>
+            获取章节作答记录Ids
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetProductPaperRecord(System.Guid)">
+            <summary>
+            按Id获取产品试卷记录(答题结果页面)
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetProductPaperRecordIds(HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.QueryPaperRecordIdsViewModel)">
+            <summary>
+            获取试卷作答记录Ids
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetProductKnowledgeRecord(System.Guid)">
+            <summary>
+            按Id获取产品知识点记录(答题结果页面)
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetProductKnowledgeList(HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.QueryProductKnowledgeListViewModel)">
+            <summary>
+            获取产品知识点记录列表
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetKnowledgeMasteryStat(HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.QueryProductKnowledgeListViewModel)">
+            <summary>
+            获取知识点掌握情况
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetExamFrequencyMastery(System.Guid,System.Guid)">
+            <summary>
+            获取获取考试频率掌握情况
+            </summary>
+            <param name="productId">产品Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetSubjectAnswerStat(System.Guid,System.Guid)">
+            <summary>
+            获取科目作答统计(做题数,正确数和总数)
+            </summary>
+            <param name="productId">产品Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Service.UserAnswerRecordWeChatService.GetDateStudyDuration(HaoKao.UserAnswerRecordService.Application.Modules.ProductRecordModule.QueryDateStudyDurationViewModel)">
+            <summary>
+            按日期统计做题时长
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.AppHomePaperAnswerViewModel.PaperId">
+            <summary>
+            试卷Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.AppHomePaperAnswerViewModel.ExamNumber">
+            <summary>
+            参与考试人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.AppHomePaperAnswerViewModel.Progress">
+            <summary>
+            当前的进度
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.AppHomePaperAnswerViewModel.CurrentScore">
+            <summary>
+            当前自己得分
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.ChapterRecordStatViewModel.AnswerCount">
+            <summary>
+            用户答题数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.ChapterRecordStatViewModel.ChapterCount">
+            <summary>
+            用户已练章节数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.ChapterRecordStatViewModel.QuestionTime">
+            <summary>
+            每题耗时
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.ChapterRecordStatViewModel.Accuracy">
+            <summary>
+            正确率
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PaperAnswerDetailQueryFieldModel.Id">
+            <summary>
+            记录Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PaperAnswerDetailQueryFieldModel.RecordIdentifier">
+            <summary>
+            试卷Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeSituationAnalysisViewModel">
+            <summary>
+            练习状况分析结果类
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeSituationAnalysisViewModel.AnswerCount">
+            <summary>
+            已答
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeSituationAnalysisViewModel.CorrectCount">
+            <summary>
+            答对
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeSituationAnalysisViewModel.WrongCount">
+            <summary>
+            错误
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeSituationAnalysisViewModel.MissedCount">
+            <summary>
+            少选
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeSituationAnalysisViewModel.TotalAnswerCount">
+            <summary>
+            总答题数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeSituationAnalysisViewModel.TotalCorrectCount">
+            <summary>
+            总答对题数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeSituationAnalysisViewModel.QuestionTypeAccuracy">
+            <summary>
+            不同题型的准确率
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeSituationAnalysisViewModel.AverageQuestionTypeAccuracy">
+            <summary>
+            同期学员不同题型的准确率
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeSituationAnalysisViewModel.MyAccuracy">
+            <summary>
+            我的准确率
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeSituationAnalysisViewModel.AverageAccuracy">
+            <summary>
+            同期学员的准确率
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeSituationAnalysisViewModel.MyAccuracyPercentileRank">
+            <summary>
+            我的准确率百分比排名
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeSituationAnalysisViewModel.MyProgress">
+            <summary>
+            我的练习进度
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeSituationAnalysisViewModel.AverageProgress">
+            <summary>
+            同期学员的练习进度
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeSituationAnalysisViewModel.RefreshTime">
+            <summary>
+            刷新时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeSituationAnalysisViewModel.Refreshable">
+            <summary>
+            是否可以刷新
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeSituationAnalysisViewModel.QuestionCount">
+            <summary>
+            试题总数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeSituationAnalysisViewModel.AverageAnswerCount">
+            <summary>
+            同期学员平均作答数
+            </summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeAbilityAnalysisViewModel">
+            <summary>
+            做题能力分析结果类
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeAbilityAnalysisViewModel.AverageAbility">
+            <summary>
+            同期学员的能力
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeAbilityAnalysisViewModel.MyAbility">
+            <summary>
+            我的能力
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeAbilityAnalysisViewModel.RefreshTime">
+            <summary>
+            刷新时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeAbilityAnalysisViewModel.Refreshable">
+            <summary>
+            是否可以刷新
+            </summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeStaticsAnalysisModel">
+            <summary>
+            练习统计分析模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeStaticsAnalysisModel.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeStaticsAnalysisModel.QuestionId">
+            <summary>
+            试题Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeStaticsAnalysisModel.QuestionTypeId">
+            <summary>
+            题型Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeStaticsAnalysisModel.ParentId">
+            <summary>
+            父题目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeStaticsAnalysisModel.JudgeResult">
+            <summary>
+            判题结果
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeStaticsAnalysisModel.CreateTime">
+            <summary>
+            作答时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeStaticsAnalysisModel.Ability">
+            <summary>
+            能力维度
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.BuildWorkItemModel.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.BuildWorkItemModel.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.BuildWorkItemModel.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.BuildWorkItemModel.RefreshCacheKey">
+            <summary>
+            刷新缓存标识
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.BuildWorkItemModel.ResultCacheKey">
+            <summary>
+            结果缓存标识
+            </summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeAbilitySpModel">
+            <summary>
+            做题能力存储过程结果模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeAbilitySpModel.Numeracy">
+            <summary>
+            计算能力(作答次数)
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeAbilitySpModel.CorrectNumeracy">
+            <summary>
+            计算能力(答对的次数)
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeAbilitySpModel.Judgment">
+            <summary>
+            判断能力(作答次数)
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeAbilitySpModel.CorrectJudgment">
+            <summary>
+            判断能力(答对的次数)
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeAbilitySpModel.Analytical">
+            <summary>
+            分析能力(作答次数)
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeAbilitySpModel.CorrectAnalytical">
+            <summary>
+            分析能力(答对的次数)
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeAbilitySpModel.Understanding">
+            <summary>
+            理解能力(作答次数)
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeAbilitySpModel.CorrectUnderstanding">
+            <summary>
+            理解能力(答对的次数)
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeAbilitySpModel.Memory">
+            <summary>
+            记忆能力(作答次数)
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeAbilitySpModel.CorrectMemory">
+            <summary>
+            记忆能力(答对的次数)
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeAbilitySpModel.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeSpeedModel">
+            <summary>
+            做题速度模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeSpeedModel.ElapsedTime">
+            <summary>
+            答题耗时
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeSpeedModel.AnswerCount">
+            <summary>
+            答题数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.PracticeSpeedModel.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordChapterListAppViewModel.Id">
+            <summary>
+            记录Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordChapterListAppViewModel.RecordIdentifier">
+            <summary>
+            章节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordChapterListAppViewModel.ElapsedTime">
+            <summary>
+            耗时
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordChapterListAppViewModel.QuestionCount">
+            <summary>
+            总题数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordChapterListAppViewModel.AnswerCount">
+            <summary>
+            作答数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordChapterListAppViewModel.CorrectCount">
+            <summary>
+            正确数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordChapterListAppViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordPaperListAppViewModel">
+            <summary>
+            答题记录-试卷列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordPaperListAppViewModel.Id">
+            <summary>
+            记录Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordPaperListAppViewModel.RecordIdentifier">
+            <summary>
+            试卷Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordPaperListAppViewModel.UserScore">
+            <summary>
+            分数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordPaperListAppViewModel.PassingScore">
+            <summary>
+            及格分数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordPaperListAppViewModel.TotalScore">
+            <summary>
+            总分
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordPaperListAppViewModel.ElapsedTime">
+            <summary>
+            耗时
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordPaperListAppViewModel.QuestionCount">
+            <summary>
+            总题数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordPaperListAppViewModel.AnswerCount">
+            <summary>
+            作答数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordPaperListAppViewModel.CorrectCount">
+            <summary>
+            正确数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordPaperListAppViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordAppQueryModel.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordAppQueryModel.QuestionCategoryId">
+            <summary>
+            试题分类Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordAppQueryModel.RecordIdentifier">
+            <summary>
+            答题标识符 章节Id，或试卷Id，每日一练和消灭错题 为Guid.Empty
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordAppQueryModel.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordAppViewModel">
+            <summary>
+            答题记录-查看结果
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordAppViewModel.RecordIdentifierName">
+            <summary>
+            标识符名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordAppViewModel.ElapsedTime">
+            <summary>
+            耗时
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordAppViewModel.UserScore">
+            <summary>
+            用户得分
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordAppViewModel.PassingScore">
+            <summary>
+            及格分数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordAppViewModel.TotalScore">
+            <summary>
+            试题总分
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordAppViewModel.QuestionCount">
+            <summary>
+            总题数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordAppViewModel.LackCount">
+            <summary>
+            少选数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordAppViewModel.CorrectCount">
+            <summary>
+            正确数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordAppViewModel.RecordQuestions">
+            <summary>
+            试题作答记录
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQuestionAppViewModel.QuestionId">
+            <summary>
+            试题Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQuestionAppViewModel.ParentId">
+            <summary>
+            试题父Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQuestionAppViewModel.UserScore">
+            <summary>
+            用户得分
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQuestionAppViewModel.JudgeResult">
+            <summary>
+            判题结果
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQuestionAppViewModel.WhetherMark">
+            <summary>
+            是否标记
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQuestionAppViewModel.QuestionTypeId">
+             <summary>
+            题型Id
+             </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQuestionAppViewModel.QuestionOptions">
+            <summary>
+            用户作答
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQuestionOptionAppViewModel.OptionId">
+            <summary>
+            选项Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQuestionOptionAppViewModel.OptionContent">
+            <summary>
+            回答内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQueryViewModel.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQueryViewModel.QuestionCategoryId">
+            <summary>
+            试题分类Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQueryViewModel.RecordIdentifier">
+            <summary>
+            答题标识符 章节Id，或试卷Id，每日一练和消灭错题 为Guid.Empty
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQueryViewModel.AnswerType">
+            <summary>
+            答题类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQueryViewModel.StartDateTime">
+            <summary>
+            答题开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQueryViewModel.EndDateTime">
+            <summary>
+            答题结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQueryViewModel.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQueryListViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQueryListViewModel.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQueryListViewModel.QuestionCategoryId">
+            <summary>
+            试题分类Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQueryListViewModel.RecordIdentifier">
+            <summary>
+            答题标识符 章节Id，或试卷Id，每日一练和消灭错题 为Guid.Empty
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQueryListViewModel.RecordIdentifierName">
+            <summary>
+            章节名称或者试卷名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQueryListViewModel.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQueryListViewModel.AnswerType">
+            <summary>
+            答题类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQueryListViewModel.UserScore">
+            <summary>
+            用户得分
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQueryListViewModel.PassingScore">
+            <summary>
+            及格分数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQueryListViewModel.TotalScore">
+            <summary>
+            试题总分
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQueryListViewModel.ElapsedTime">
+            <summary>
+            耗时
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQueryListViewModel.QuestionCount">
+            <summary>
+            总题数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQueryListViewModel.AnswerCount">
+            <summary>
+            作答数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQueryListViewModel.CorrectCount">
+            <summary>
+            正确数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.ViewModels.UserAnswerRecordQueryListViewModel.CreateTime">
+            <summary>
+            提交答题时间
+            </summary>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Worker.BackgroundTaskQueue.EnqueueAsync(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.ValueTask})">
+            <summary>
+            入队列
+            </summary>
+            <param name="workItem"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Worker.BackgroundTaskQueue.DequeueAsync(System.Threading.CancellationToken)">
+            <summary>
+            出队列
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Worker.IBackgroundTaskQueue.EnqueueAsync(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.ValueTask})">
+            <summary>
+            入队列
+            </summary>
+            <param name="workItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Application.Worker.IBackgroundTaskQueue.DequeueAsync(System.Threading.CancellationToken)">
+            <summary>
+            出队列
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

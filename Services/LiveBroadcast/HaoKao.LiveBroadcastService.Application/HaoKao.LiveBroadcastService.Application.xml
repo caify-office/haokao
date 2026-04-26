@@ -1,0 +1,3463 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.LiveBroadcastService.Application</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Hubs.ILiveChatHub.ChatMessage(HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.LiveChatMessageOutput)">
+            <summary>
+            聊天发送的消息
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Hubs.ILiveChatHub.JoinRoom(HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.LiveMessageOutput)">
+            <summary>
+            加入直播间的消息
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Hubs.ILiveChatHub.ShareLive(HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.LiveMessageOutput)">
+            <summary>
+            用户分享直播
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Hubs.ILiveChatHub.ProductOnSell(System.Guid[])">
+            <summary>
+            产品上架通知
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Hubs.ILiveChatHub.ProductDownSell(System.Guid[])">
+            <summary>
+            产品下架通知
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Hubs.ILiveChatHub.CouponPickUp(System.Guid[])">
+            <summary>
+            优惠券上架通知
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Hubs.ILiveChatHub.CouponPickDown(System.Guid[])">
+            <summary>
+            优惠券下架通知
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Hubs.ILiveChatHub.PinTopMessage(HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.PinTopMessageOutput)">
+            <summary>
+            置顶某条消息
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Hubs.ILiveChatHub.OnlineCount(System.Int32)">
+            <summary>
+            在线人数
+            </summary>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Hubs.ILiveChatHub.LiveStatusChanged(HaoKao.LiveBroadcastService.Domain.Enumerations.LiveStatus)">
+            <summary>
+            直播状态变更
+            </summary>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Hubs.ILiveChatHub.RevokeMessage(System.Guid)">
+            <summary>
+            撤回消息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Hubs.ILiveChatHub.MentionUser(System.Guid)">
+            <summary>
+            @用户
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Hubs.ILiveChatHub.Muted(HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.MutedOutput)">
+            <summary>
+            禁言
+            </summary>
+            <param name="output"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Hubs.LiveChatHub.OnConnectedAsync">
+            <summary>
+            开始连接
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Hubs.LiveChatHub.OnDisconnectedAsync(System.Exception)">
+            <summary>
+            断开连接
+            </summary>
+            <param name="exception"></param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Hubs.LiveChatHub.ChatMessage(HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.LiveMessageInput)">
+            <summary>
+            发送消息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Profiles.LiveAdministratorProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Profiles.LiveAdministratorProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.Profiles.LiveAdministratorProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Profiles.LiveAnnouncementProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Profiles.LiveAnnouncementProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.Profiles.LiveAnnouncementProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Profiles.LiveCommentProfile">
+            <summary>
+            直播评论模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Profiles.LiveCommentProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.Profiles.LiveCommentProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Profiles.LiveCouponProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Profiles.LiveCouponProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.Profiles.LiveCouponProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Profiles.LiveMessageProfile">
+            <summary>
+            直播消息模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Profiles.LiveMessageProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.Profiles.LiveMessageProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Profiles.LiveOnlineUserProfile">
+            <summary>
+            直播在线用户模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Profiles.LiveOnlineUserProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.Profiles.LiveOnlineUserProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Profiles.LivePlayBackProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Profiles.LivePlayBackProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.Profiles.LivePlayBackProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Profiles.LiveProductPackageProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Profiles.LiveProductPackageProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.Profiles.LiveProductPackageProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Profiles.LiveReservationProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Profiles.LiveVideoProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Profiles.LiveVideoProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.Profiles.LiveVideoProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Profiles.MutedUserProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Profiles.MutedUserProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.Profiles.MutedUserProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Profiles.SensitiveWordProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Profiles.SensitiveWordProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.Profiles.SensitiveWordProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveAdministratorService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveAdministratorService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveAdministrator.LiveAdministratorQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveAdministratorService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.LiveAdministrator.CreateLiveAdministratorViewModel)">
+            <summary>
+            创建直播管理员
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveAdministratorService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定直播管理员
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveAnnouncementService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveAnnouncementService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveAnnouncement.LiveAnnouncementQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveAnnouncementService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.LiveAnnouncement.CreateLiveAnnouncementViewModel)">
+            <summary>
+            创建直播公告
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveAnnouncementService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定直播公告
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveAnnouncementService.Update(HaoKao.LiveBroadcastService.Application.ViewModels.LiveAnnouncement.UpdateLiveAnnouncementViewModel)">
+            <summary>
+            根据主键更新指定直播公告
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveCommentService">
+            <summary>
+            直播评论接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveCommentService.Get(System.Guid)">
+            <summary>
+            根据直播查询评论
+            </summary>
+            <param name="liveId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveCommentService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveComment.QueryLiveCommentViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveCommentService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.LiveComment.CreateLiveCommentViewModel)">
+            <summary>
+            创建直播评论
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveCommentService.GetAverageRating(System.Guid)">
+            <summary>
+            查询综合评分
+            </summary>
+            <param name="liveId">直播Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveCouponService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveCouponService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.LiveCouponQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveCouponService.Create(System.Collections.Generic.List{HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.CreateLiveCouponViewModel})">
+            <summary>
+            创建直播优惠卷
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveCouponService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定直播优惠卷
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveCouponService.Update(System.Collections.Generic.List{HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.UpdateLiveCouponViewModel})">
+            <summary>
+            根据主键更新指定直播优惠卷
+            </summary>
+            <param name="models">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveCouponService.ShelvesUp(System.Guid[])">
+            <summary>
+            上架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveCouponService.ShelvesDown(System.Guid[])">
+            <summary>
+            下架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveMessageService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveMessageService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.QueryLiveMessageViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveMessageService.GetPinedMessage(HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.PinTopMessageRequest)">
+            <summary>
+            获取直播间置顶的消息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveMessageService.ProductOnSell(System.Guid,System.Guid[])">
+            <summary>
+            产品上架通知
+            </summary>
+            <param name="liveId"></param>
+            <param name="ids"></param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveMessageService.ProductDownSell(System.Guid,System.Guid[])">
+            <summary>
+            产品下架通知
+            </summary>
+            <param name="liveId"></param>
+            <param name="ids"></param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveMessageService.CouponPickUp(System.Guid,System.Guid[])">
+            <summary>
+            优惠券上架通知
+            </summary>
+            <param name="liveId"></param>
+            <param name="ids"></param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveMessageService.CouponPickDown(System.Guid,System.Guid[])">
+            <summary>
+            优惠券下架通知
+            </summary>
+            <param name="liveId"></param>
+            <param name="ids"></param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveMessageService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.CreateLiveMessageViewModel)">
+            <summary>
+            创建直播消息
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveMessageService.Delete(System.Guid)">
+            <summary>
+            删除直播消息
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveOnlineUserService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveOnlineUser.QueryLiveOnlineUserViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveOnlineUserService.GetUserByLiveId(System.Guid)">
+            <summary>
+            根据直播Id获取用户在线数据
+            </summary>
+            <param name="liveId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveOnlineUserService.GetOnlineTrendStat(System.Guid,System.Int32)">
+            <summary>
+            在线人数走势统计
+            </summary>
+            <param name="liveId">直播Id</param>
+            <param name="interval">时间间隔(分钟)</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveOnlineUserService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.LiveOnlineUser.CreateLiveOnlineUserViewModel)">
+            <summary>
+            创建直播在线用户
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveOnlineUserService.Update(HaoKao.LiveBroadcastService.Application.ViewModels.LiveOnlineUser.UpdateLiveOnlineUserViewModel)">
+            <summary>
+            根据主键更新指定在线用户
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILivePlayBackService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILivePlayBackService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.LivePlayBackQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILivePlayBackService.Create(System.Collections.Generic.List{HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.CreateLivePlayBackViewModel})">
+            <summary>
+            创建直播回放
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILivePlayBackService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定直播回放
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILivePlayBackService.Update(System.Collections.Generic.List{HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.UpdateLivePlayBackViewModel})">
+            <summary>
+            根据主键更新指定直播回放
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveProductPackageService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveProductPackageService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.LiveProductPackageQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveProductPackageService.Create(System.Collections.Generic.List{HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.CreateLiveProductPackageViewModel})">
+            <summary>
+            创建直播产品包
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveProductPackageService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定直播产品包
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveProductPackageService.Update(System.Collections.Generic.List{HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.UpdateLiveProductPackageViewModel})">
+            <summary>
+            根据主键更新指定直播产品包
+            </summary>
+            <param name="models">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveProductPackageService.ShelvesUp(System.Guid[])">
+            <summary>
+            上架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveProductPackageService.ShelvesDown(System.Guid[])">
+            <summary>
+            下架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveReservationService">
+            <summary>
+            直播预约服务接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveReservationService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveReservationService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveReservation.QueryLiveReservationViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveReservationService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.LiveReservation.CreateLiveReservationViewModel)">
+            <summary>
+            创建直播预约
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveVideoService.GetLiveUrlType">
+            <summary>
+            获取直播播流视频格式类型
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveVideoService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveVideoService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveVideoService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.CreateLiveVideoViewModel)">
+            <summary>
+            创建视频直播
+            </summary>
+            <param name="model">模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveVideoService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定视频直播
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveVideoService.Update(HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.UpdateLiveVideoViewModel)">
+            <summary>
+            根据主键更新指定视频直播
+            </summary>
+            <param name="model">模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ILiveVideoService.SetLiveVideoStatus(HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.SetLiveVideoStatusViewModel)">
+            <summary>
+            根据主键修改直播状态
+            </summary>
+            <param name="model">模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.IMutedUserService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.MutedUser.QueryMutedUserViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="viewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.IMutedUserService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.MutedUser.CreateMutedUserViewModel)">
+            <summary>
+            创建禁言用户
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.IMutedUserService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定禁言用户
+            </summary>
+            <param name="userId">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.IMutedUserService.IsMuted">
+            <summary>
+            是否被禁言
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ISensitiveWordService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.SensitiveWord.SensitiveWordQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ISensitiveWordService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.SensitiveWord.CreateSensitiveWordViewModel)">
+            <summary>
+            创建敏感词
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.ISensitiveWordService.Update(HaoKao.LiveBroadcastService.Application.ViewModels.SensitiveWord.UpdateSensitiveWordViewModel)">
+            <summary>
+            根据主键更新指定敏感词
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Management.LiveAdministratorService">
+            <summary>
+            直播管理员接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveAdministratorService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.LiveBroadcastService.Domain.Repositories.ILiveAdministratorRepository)">
+            <summary>
+            直播管理员接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveAdministratorService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveAdministratorService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveAdministrator.LiveAdministratorQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveAdministratorService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.LiveAdministrator.CreateLiveAdministratorViewModel)">
+            <summary>
+            创建直播管理员
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveAdministratorService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定直播管理员
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Management.LiveAnnouncementService">
+            <summary>
+            直播公告接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveAnnouncementService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.LiveBroadcastService.Domain.Repositories.ILiveAnnouncementRepository)">
+            <summary>
+            直播公告接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveAnnouncementService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveAnnouncementService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveAnnouncement.LiveAnnouncementQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveAnnouncementService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.LiveAnnouncement.CreateLiveAnnouncementViewModel)">
+            <summary>
+            创建直播公告
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveAnnouncementService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定直播公告
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveAnnouncementService.Update(HaoKao.LiveBroadcastService.Application.ViewModels.LiveAnnouncement.UpdateLiveAnnouncementViewModel)">
+            <summary>
+            根据主键更新指定直播公告
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Management.LiveCommentService">
+            <summary>
+            直播评论接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveCommentService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.LiveBroadcastService.Domain.Repositories.ILiveCommentRepository)">
+            <summary>
+            直播评论接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveCommentService.Get(System.Guid)">
+            <summary>
+            根据直播查询评论
+            </summary>
+            <param name="liveId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveCommentService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveComment.QueryLiveCommentViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveCommentService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.LiveComment.CreateLiveCommentViewModel)">
+            <summary>
+            创建直播评论
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveCommentService.GetAverageRating(System.Guid)">
+            <summary>
+            查询综合评分
+            </summary>
+            <param name="liveId">直播Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Management.LiveCouponService">
+            <summary>
+            直播优惠卷接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveCouponService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.LiveBroadcastService.Domain.Repositories.ILiveCouponRepository,HaoKao.LiveBroadcastService.Application.Services.Management.ILiveMessageService)">
+            <summary>
+            直播优惠卷接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveCouponService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveCouponService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.LiveCouponQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveCouponService.Create(System.Collections.Generic.List{HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.CreateLiveCouponViewModel})">
+            <summary>
+            创建直播优惠卷
+            </summary>
+            <param name="models">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveCouponService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定直播优惠卷
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveCouponService.Update(System.Collections.Generic.List{HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.UpdateLiveCouponViewModel})">
+            <summary>
+            根据主键更新指定直播优惠卷
+            </summary>
+            <param name="models">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveCouponService.ShelvesUp(System.Guid[])">
+            <summary>
+            上架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveCouponService.ShelvesDown(System.Guid[])">
+            <summary>
+            下架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Management.LiveMessageService">
+            <summary>
+            直播消息服务接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveMessageService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.LiveBroadcastService.Domain.Repositories.ILiveMessageRepository,HaoKao.LiveBroadcastService.Domain.Repositories.ILiveAdministratorRepository,Microsoft.AspNetCore.SignalR.IHubContext{HaoKao.LiveBroadcastService.Application.Hubs.LiveChatHub,HaoKao.LiveBroadcastService.Application.Hubs.ILiveChatHub})">
+            <summary>
+            直播消息服务接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveMessageService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveMessageService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.QueryLiveMessageViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveMessageService.GetPinedMessage(HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.PinTopMessageRequest)">
+            <summary>
+            获取直播间置顶的消息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveMessageService.ProductOnSell(System.Guid,System.Guid[])">
+            <summary>
+            产品上架通知
+            </summary>
+            <param name="liveId"></param>
+            <param name="ids"></param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveMessageService.ProductDownSell(System.Guid,System.Guid[])">
+            <summary>
+            产品上架通知
+            </summary>
+            <param name="liveId"></param>
+            <param name="ids"></param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveMessageService.CouponPickUp(System.Guid,System.Guid[])">
+            <summary>
+            优惠券上架通知
+            </summary>
+            <param name="liveId"></param>
+            <param name="ids"></param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveMessageService.CouponPickDown(System.Guid,System.Guid[])">
+            <summary>
+            优惠券下架通知
+            </summary>
+            <param name="liveId"></param>
+            <param name="ids"></param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveMessageService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.CreateLiveMessageViewModel)">
+            <summary>
+            创建直播消息
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveMessageService.Delete(System.Guid)">
+            <summary>
+            删除直播消息
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Management.LiveOnlineUserService">
+            <summary>
+            直播在线用户数据服务接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveOnlineUserService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.LiveBroadcastService.Domain.Repositories.ILiveOnlineUserRepository,HaoKao.LiveBroadcastService.Domain.Repositories.ILiveOnlineUserTrendRepository)">
+            <summary>
+            直播在线用户数据服务接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveOnlineUserService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveOnlineUser.QueryLiveOnlineUserViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveOnlineUserService.GetUserByLiveId(System.Guid)">
+            <summary>
+            根据直播Id获取用户
+            </summary>
+            <param name="liveId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveOnlineUserService.GetOnlineTrendStat(System.Guid,System.Int32)">
+            <summary>
+            在线人数走势统计
+            </summary>
+            <param name="liveId">直播Id</param>
+            <param name="interval">时间间隔(分钟)</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveOnlineUserService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.LiveOnlineUser.CreateLiveOnlineUserViewModel)">
+            <summary>
+            创建直播在线用户
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveOnlineUserService.Update(HaoKao.LiveBroadcastService.Application.ViewModels.LiveOnlineUser.UpdateLiveOnlineUserViewModel)">
+            <summary>
+            根据主键更新指定在线用户
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Management.LivePlayBackService">
+            <summary>
+            直播回放接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LivePlayBackService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.LiveBroadcastService.Domain.Repositories.ILivePlayBackRepository)">
+            <summary>
+            直播回放接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LivePlayBackService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LivePlayBackService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.LivePlayBackQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LivePlayBackService.Create(System.Collections.Generic.List{HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.CreateLivePlayBackViewModel})">
+            <summary>
+            创建直播回放
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LivePlayBackService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定直播回放
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LivePlayBackService.Update(System.Collections.Generic.List{HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.UpdateLivePlayBackViewModel})">
+            <summary>
+            根据主键更新指定直播回放
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Management.LiveProductPackageService">
+            <summary>
+            直播产品包接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveProductPackageService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.LiveBroadcastService.Domain.Repositories.ILiveProductPackageRepository,HaoKao.LiveBroadcastService.Application.Services.Management.ILiveMessageService)">
+            <summary>
+            直播产品包接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveProductPackageService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveProductPackageService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.LiveProductPackageQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveProductPackageService.Create(System.Collections.Generic.List{HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.CreateLiveProductPackageViewModel})">
+            <summary>
+            创建直播产品包
+            </summary>
+            <param name="models">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveProductPackageService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定直播产品包
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveProductPackageService.Update(System.Collections.Generic.List{HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.UpdateLiveProductPackageViewModel})">
+            <summary>
+            根据主键更新指定直播产品包
+            </summary>
+            <param name="models">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveProductPackageService.ShelvesUp(System.Guid[])">
+            <summary>
+            上架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveProductPackageService.ShelvesDown(System.Guid[])">
+            <summary>
+            下架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Management.LiveReservationService">
+            <summary>
+            直播预约服务接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveReservationService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.LiveBroadcastService.Domain.Repositories.ILiveReservationRepository)">
+            <summary>
+            直播预约服务接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveReservationService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveReservationService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveReservation.QueryLiveReservationViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveReservationService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.LiveReservation.CreateLiveReservationViewModel)">
+            <summary>
+            创建直播预约
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Management.LiveVideoCallBackService">
+            <summary>
+            视频直播接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveVideoCallBackService.#ctor(Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification})">
+            <summary>
+            视频直播接口服务
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Management.LiveVideoService">
+            <summary>
+            视频直播接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveVideoService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.LiveBroadcastService.Domain.Repositories.ILiveVideoRepository,HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.OnlineUserState)">
+            <summary>
+            视频直播接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveVideoService.GetLiveUrlType">
+            <summary>
+            获取直播播流视频格式类型
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveVideoService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveVideoService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveVideoService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.CreateLiveVideoViewModel)">
+            <summary>
+            创建视频直播
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveVideoService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定视频直播
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveVideoService.Update(HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.UpdateLiveVideoViewModel)">
+            <summary>
+            根据主键更新指定视频直播
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.LiveVideoService.SetLiveVideoStatus(HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.SetLiveVideoStatusViewModel)">
+            <summary>
+            根据主键修改直播状态
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Management.MutedUserService">
+            <summary>
+            禁言用户接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.MutedUserService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.LiveBroadcastService.Domain.Repositories.IMutedUserRepository,Microsoft.AspNetCore.SignalR.IHubContext{HaoKao.LiveBroadcastService.Application.Hubs.LiveChatHub,HaoKao.LiveBroadcastService.Application.Hubs.ILiveChatHub},HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.OnlineUserState,HaoKao.LiveBroadcastService.Domain.Repositories.ILiveOnlineUserRepository)">
+            <summary>
+            禁言用户接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.MutedUserService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.MutedUser.QueryMutedUserViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="viewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.MutedUserService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.MutedUser.CreateMutedUserViewModel)">
+            <summary>
+            创建禁言用户
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.MutedUserService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定禁言用户
+            </summary>
+            <param name="userId">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.MutedUserService.IsMuted">
+            <summary>
+            是否被禁言
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Management.SensitiveWordService">
+            <summary>
+            敏感词接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.SensitiveWordService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.LiveBroadcastService.Domain.Repositories.ISensitiveWordRepository)">
+            <summary>
+            敏感词接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.SensitiveWordService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.SensitiveWord.SensitiveWordQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.SensitiveWordService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.SensitiveWord.CreateSensitiveWordViewModel)">
+            <summary>
+            创建敏感词
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Management.SensitiveWordService.Update(HaoKao.LiveBroadcastService.Application.ViewModels.SensitiveWord.UpdateSensitiveWordViewModel)">
+            <summary>
+            根据主键更新指定敏感词
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveAdministratorWebService.IsLiveAdmin">
+            <summary>
+            是否是直播管理员
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveAnnouncementWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveAnnouncementWebService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveAnnouncement.LiveAnnouncementQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveCommentWebService">
+            <summary>
+            直播评论接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveCommentWebService.Get(System.Guid)">
+            <summary>
+            根据直播查询评论
+            </summary>
+            <param name="liveId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveCommentWebService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.LiveComment.CreateLiveCommentViewModel)">
+            <summary>
+            创建直播评论
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveCouponWebService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.LiveCouponQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveCouponWebService.ShelvesUp(System.Guid[])">
+            <summary>
+            上架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveCouponWebService.ShelvesDown(System.Guid[])">
+            <summary>
+            下架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveMessageWebService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.QueryLiveMessageViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveMessageWebService.GetPinedMessage(HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.PinTopMessageRequest)">
+            <summary>
+            获取直播间置顶的消息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveMessageWebService.Delete(System.Guid)">
+            <summary>
+            删除直播消息
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveMessageWebService.ProductOnSell(System.Guid,System.Guid[])">
+            <summary>
+            产品上架通知
+            </summary>
+            <param name="liveId"></param>
+            <param name="ids"></param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveMessageWebService.CouponPickUp(System.Guid,System.Guid[])">
+            <summary>
+            优惠券领取通知
+            </summary>
+            <param name="liveId"></param>
+            <param name="ids"></param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveOnlineUserWebService.GetOnlineUserList(System.Guid)">
+            <summary>
+            获取直播间在线用户
+            </summary>
+            <param name="liveId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILivePlayBackWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILivePlayBackWebService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.LivePlayBackQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveProductPackageWebService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.LiveProductPackageQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveProductPackageWebService.ShelvesUp(System.Guid[])">
+            <summary>
+            上架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveProductPackageWebService.ShelvesDown(System.Guid[])">
+            <summary>
+            下架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveReservationWebService">
+            <summary>
+            直播预约接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveReservationWebService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.LiveReservation.CreateLiveReservationViewModel)">
+            <summary>
+            创建直播预约
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveReservationWebService.MyLiveReservation">
+            <summary>
+            我的直播预约
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveReservationWebService.LiveReservationCount(System.Guid[])">
+            <summary>
+             预约人数统计
+            </summary>
+            <param name="productIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveVideoWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveVideoWebService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveVideoWebService.GetNewLive">
+            <summary>
+            查询最新直播
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.ILiveVideoWebService.SetLiveVideoStatus(HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.SetLiveVideoStatusViewModel)">
+            <summary>
+            根据主键修改直播状态
+            </summary>
+            <param name="model">模型</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Web.LiveAdministratorWebService">
+            <summary>
+            直播管理员接口服务-Web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveAdministratorWebService.#ctor(HaoKao.LiveBroadcastService.Domain.Repositories.ILiveAdministratorRepository,Girvs.Cache.Caching.IStaticCacheManager)">
+            <summary>
+            直播管理员接口服务-Web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveAdministratorWebService.IsLiveAdmin">
+            <summary>
+            是否是直播管理员
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Web.LiveAnnouncementWebService">
+            <summary>
+            直播公告接口服务-Web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveAnnouncementWebService.#ctor(HaoKao.LiveBroadcastService.Application.Services.Management.ILiveAnnouncementService)">
+            <summary>
+            直播公告接口服务-Web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveAnnouncementWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveAnnouncementWebService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveAnnouncement.LiveAnnouncementQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Web.LiveCommentWebService">
+            <summary>
+            直播评论接口服务-Web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveCommentWebService.#ctor(HaoKao.LiveBroadcastService.Application.Services.Management.ILiveCommentService)">
+            <summary>
+            直播评论接口服务-Web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveCommentWebService.Get(System.Guid)">
+            <summary>
+            根据直播查询评论
+            </summary>
+            <param name="liveId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveCommentWebService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.LiveComment.CreateLiveCommentViewModel)">
+            <summary>
+            创建直播评论
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveCouponWebService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.LiveCouponQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveCouponWebService.ShelvesUp(System.Guid[])">
+            <summary>
+            上架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveCouponWebService.ShelvesDown(System.Guid[])">
+            <summary>
+            下架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Web.LiveMessageWebService">
+            <summary>
+            直播消息接口-Web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveMessageWebService.#ctor(HaoKao.LiveBroadcastService.Application.Services.Management.ILiveMessageService)">
+            <summary>
+            直播消息接口-Web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveMessageWebService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.QueryLiveMessageViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveMessageWebService.GetPinedMessage(HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.PinTopMessageRequest)">
+            <summary>
+            获取直播间置顶的消息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveMessageWebService.Delete(System.Guid)">
+            <summary>
+            删除直播消息
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveMessageWebService.ProductOnSell(System.Guid,System.Guid[])">
+            <summary>
+            产品上架通知
+            </summary>
+            <param name="liveId"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveMessageWebService.CouponPickUp(System.Guid,System.Guid[])">
+            <summary>
+            优惠券领取通知
+            </summary>
+            <param name="liveId"></param>
+            <param name="ids"></param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveOnlineUserWebService.GetOnlineUserList(System.Guid)">
+            <summary>
+            获取直播间在线用户
+            </summary>
+            <param name="liveId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Web.LivePlayBackWebService">
+            <summary>
+            直播回放接口服务-Web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LivePlayBackWebService.#ctor(HaoKao.LiveBroadcastService.Application.Services.Management.ILivePlayBackService)">
+            <summary>
+            直播回放接口服务-Web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LivePlayBackWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LivePlayBackWebService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.LivePlayBackQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveProductPackageWebService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.LiveProductPackageQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveProductPackageWebService.ShelvesUp(System.Guid[])">
+            <summary>
+            上架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveProductPackageWebService.ShelvesDown(System.Guid[])">
+            <summary>
+            下架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Web.LiveReservationWebService">
+            <summary>
+            直播预约接口服务-Web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveReservationWebService.#ctor(HaoKao.LiveBroadcastService.Application.Services.Management.ILiveReservationService,HaoKao.LiveBroadcastService.Domain.Repositories.ILiveReservationRepository,Girvs.Cache.Caching.IStaticCacheManager)">
+            <summary>
+            直播预约接口服务-Web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveReservationWebService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.LiveReservation.CreateLiveReservationViewModel)">
+            <summary>
+            创建直播预约
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveReservationWebService.MyLiveReservation">
+            <summary>
+            我的直播预约
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveReservationWebService.LiveReservationCount(System.Guid[])">
+            <summary>
+            预约人数统计
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Web.LiveVideoWebService">
+            <summary>
+            视频直播接口服务-Web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveVideoWebService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,HaoKao.LiveBroadcastService.Domain.Repositories.ILiveVideoRepository,HaoKao.LiveBroadcastService.Application.Services.Management.ILiveVideoService,HaoKao.LiveBroadcastService.Application.Services.Web.ILiveAdministratorWebService,HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.OnlineUserState)">
+            <summary>
+            视频直播接口服务-Web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveVideoWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveVideoWebService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveVideoWebService.GetNewLive">
+            <summary>
+            查询最新直播
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.LiveVideoWebService.SetLiveVideoStatus(HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.SetLiveVideoStatusViewModel)">
+            <summary>
+            根据主键修改直播状态(助教才有权限使用)
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.Web.MutedUserWebService">
+            <summary>
+            禁言用户接口-Web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.MutedUserWebService.#ctor(HaoKao.LiveBroadcastService.Application.Services.Management.IMutedUserService)">
+            <summary>
+            禁言用户接口-Web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.MutedUserWebService.IsMuted">
+            <summary>
+            是否被禁言
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.Web.MutedUserWebService.Mute(HaoKao.LiveBroadcastService.Application.ViewModels.MutedUser.CreateMutedUserViewModel)">
+            <summary>
+            禁言用户
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILiveAdministratorWeChatService.IsLiveAdmin">
+            <summary>
+            是否是直播管理员
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILiveAnnouncementWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILiveAnnouncementWeChatService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveAnnouncement.LiveAnnouncementQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILiveCommentWeChatService">
+            <summary>
+            直播评论接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILiveCommentWeChatService.Get(System.Guid)">
+            <summary>
+            根据直播查询评论
+            </summary>
+            <param name="liveId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILiveCommentWeChatService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.LiveComment.CreateLiveCommentViewModel)">
+            <summary>
+            创建直播评论
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILiveCouponWeChatService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.LiveCouponQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILiveCouponWeChatService.ShelvesUp(System.Guid[])">
+            <summary>
+            上架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILiveCouponWeChatService.ShelvesDown(System.Guid[])">
+            <summary>
+            下架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILiveMessageWeChatService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.QueryLiveMessageViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILiveMessageWeChatService.GetPinedMessage(HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.PinTopMessageRequest)">
+            <summary>
+            获取直播间置顶的消息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILiveOnlineUserWeChatService.GetOnlineUserList(System.Guid)">
+            <summary>
+            获取直播间在线用户
+            </summary>
+            <param name="liveId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILivePlayBackWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILivePlayBackWeChatService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.LivePlayBackQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILiveProductPackageWeChatService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.LiveProductPackageQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILiveProductPackageWeChatService.ShelvesUp(System.Guid[])">
+            <summary>
+            上架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILiveProductPackageWeChatService.ShelvesDown(System.Guid[])">
+            <summary>
+            下架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILiveReservationWeChatService">
+            <summary>
+            直播预约接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILiveReservationWeChatService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.LiveReservation.CreateLiveReservationViewModel)">
+            <summary>
+            创建直播预约
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILiveReservationWeChatService.MyLiveReservation">
+            <summary>
+            我的直播预约
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILiveReservationWeChatService.LiveReservationCount(System.Guid[])">
+            <summary>
+             预约人数统计
+            </summary>
+            <param name="productIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILiveVideoWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILiveVideoWeChatService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILiveVideoWeChatService.GetNewLive">
+            <summary>
+            查询最新直播
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.ILiveVideoWeChatService.SetLiveVideoStatus(HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.SetLiveVideoStatusViewModel)">
+            <summary>
+            根据主键修改直播状态
+            </summary>
+            <param name="model">模型</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveAdministratorWeChatService">
+            <summary>
+            直播管理员接口服务-微信小程序端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveAdministratorWeChatService.#ctor(HaoKao.LiveBroadcastService.Application.Services.Web.ILiveAdministratorWebService)">
+            <summary>
+            直播管理员接口服务-微信小程序端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveAdministratorWeChatService.IsLiveAdmin">
+            <summary>
+            是否是直播管理员
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveAnnouncementWeChatService">
+            <summary>
+            直播公告接口服务-微信小程序端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveAnnouncementWeChatService.#ctor(HaoKao.LiveBroadcastService.Application.Services.Management.ILiveAnnouncementService)">
+            <summary>
+            直播公告接口服务-微信小程序端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveAnnouncementWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveAnnouncementWeChatService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveAnnouncement.LiveAnnouncementQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveCommentWeChatService">
+            <summary>
+            直播评论接口服务-微信小程序端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveCommentWeChatService.#ctor(HaoKao.LiveBroadcastService.Application.Services.Management.ILiveCommentService)">
+            <summary>
+            直播评论接口服务-微信小程序端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveCommentWeChatService.Get(System.Guid)">
+            <summary>
+            根据直播查询评论
+            </summary>
+            <param name="liveId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveCommentWeChatService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.LiveComment.CreateLiveCommentViewModel)">
+            <summary>
+            创建直播评论
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveCouponWeChatService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.LiveCouponQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveCouponWeChatService.ShelvesUp(System.Guid[])">
+            <summary>
+            上架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveCouponWeChatService.ShelvesDown(System.Guid[])">
+            <summary>
+            下架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveMessageWeChatService">
+            <summary>
+            直播消息接口-微信小程序端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveMessageWeChatService.#ctor(HaoKao.LiveBroadcastService.Application.Services.Management.ILiveMessageService)">
+            <summary>
+            直播消息接口-微信小程序端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveMessageWeChatService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.QueryLiveMessageViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveMessageWeChatService.GetPinedMessage(HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.PinTopMessageRequest)">
+            <summary>
+            获取直播间置顶的消息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveOnlineUserWeChatService.GetOnlineUserList(System.Guid)">
+            <summary>
+            获取直播间在线用户
+            </summary>
+            <param name="liveId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.WeChat.LivePlayBackWeChatService">
+            <summary>
+            直播回放接口服务-微信小程序端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LivePlayBackWeChatService.#ctor(HaoKao.LiveBroadcastService.Application.Services.Management.ILivePlayBackService)">
+            <summary>
+            直播回放接口服务-微信小程序端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LivePlayBackWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LivePlayBackWeChatService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.LivePlayBackQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveProductPackageWeChatService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.LiveProductPackageQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveProductPackageWeChatService.ShelvesUp(System.Guid[])">
+            <summary>
+            上架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveProductPackageWeChatService.ShelvesDown(System.Guid[])">
+            <summary>
+            下架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveReservationWeChatService">
+            <summary>
+            直播预约接口服务-微信小程序端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveReservationWeChatService.#ctor(HaoKao.LiveBroadcastService.Application.Services.Management.ILiveReservationService,HaoKao.LiveBroadcastService.Application.Services.Web.ILiveReservationWebService)">
+            <summary>
+            直播预约接口服务-微信小程序端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveReservationWeChatService.Create(HaoKao.LiveBroadcastService.Application.ViewModels.LiveReservation.CreateLiveReservationViewModel)">
+            <summary>
+            创建直播预约
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveReservationWeChatService.MyLiveReservation">
+            <summary>
+            我的直播预约
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveReservationWeChatService.LiveReservationCount(System.Guid[])">
+            <summary>
+            预约人数统计
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveVideoWeChatService">
+            <summary>
+            视频直播接口服务--微信小程序端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveVideoWeChatService.#ctor(HaoKao.LiveBroadcastService.Application.Services.Web.ILiveVideoWebService)">
+            <summary>
+            视频直播接口服务--微信小程序端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveVideoWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveVideoWeChatService.Get(HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveVideoWeChatService.GetNewLive">
+            <summary>
+            查询最新直播
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.LiveVideoWeChatService.SetLiveVideoStatus(HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.SetLiveVideoStatusViewModel)">
+            <summary>
+            根据主键修改直播状态(助教才有权限使用)
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.Services.WeChat.MutedUserWeChatService">
+            <summary>
+            禁言用户接口-微信小程序端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.MutedUserWeChatService.#ctor(HaoKao.LiveBroadcastService.Application.Services.Management.IMutedUserService)">
+            <summary>
+            禁言用户接口-微信小程序端
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.MutedUserWeChatService.IsMuted">
+            <summary>
+            是否被禁言
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Application.Services.WeChat.MutedUserWeChatService.Mute(HaoKao.LiveBroadcastService.Application.ViewModels.MutedUser.CreateMutedUserViewModel)">
+            <summary>
+            禁言用户
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveAdministrator.BrowseLiveAdministratorViewModel.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveAdministrator.BrowseLiveAdministratorViewModel.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveAdministrator.BrowseLiveAdministratorViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveAdministrator.CreateLiveAdministratorViewModel.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveAdministrator.CreateLiveAdministratorViewModel.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveAdministrator.CreateLiveAdministratorViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveAdministrator.LiveAdministratorQueryViewModel.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveAdministrator.LiveAdministratorQueryViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveAdministrator.LiveAdministratorQueryListViewModel.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveAdministrator.LiveAdministratorQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveAdministrator.LiveAdministratorQueryListViewModel.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveAdministrator.LiveAdministratorQueryListViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveAnnouncement.BrowseLiveAnnouncementViewModel.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveAnnouncement.BrowseLiveAnnouncementViewModel.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveAnnouncement.CreateLiveAnnouncementViewModel.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveAnnouncement.CreateLiveAnnouncementViewModel.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveAnnouncement.LiveAnnouncementQueryViewModel.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveAnnouncement.LiveAnnouncementQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveAnnouncement.LiveAnnouncementQueryListViewModel.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveAnnouncement.LiveAnnouncementQueryListViewModel.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveAnnouncement.UpdateLiveAnnouncementViewModel.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveAnnouncement.UpdateLiveAnnouncementViewModel.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveComment.BrowseLiveCommentViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveComment.BrowseLiveCommentViewModel.Rating">
+            <summary>
+            评分
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveComment.BrowseLiveCommentViewModel.Content">
+            <summary>
+            评价内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveComment.BrowseLiveCommentViewModel.CreateTime">
+            <summary>
+            评价时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveComment.BrowseLiveCommentViewModel.CreatorName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveComment.CreateLiveCommentViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveComment.CreateLiveCommentViewModel.Rating">
+            <summary>
+            评分
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveComment.CreateLiveCommentViewModel.Content">
+            <summary>
+            评价内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveComment.CreateLiveCommentViewModel.LiveId">
+            <summary>
+            直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveComment.QueryLiveCommentViewModel.LiveId">
+            <summary>
+            直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveComment.QueryLiveCommentViewModel.CreatorName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveComment.QueryLiveCommentViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveComment.QueryLiveCommentViewModel.Rating">
+            <summary>
+            评分
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.BrowseLiveCouponViewModel.LiveVideoId">
+            <summary>
+            所属视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.BrowseLiveCouponViewModel.LiveCouponId">
+            <summary>
+            优惠卷Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.BrowseLiveCouponViewModel.LiveCouponName">
+            <summary>
+            优惠卷名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.BrowseLiveCouponViewModel.Amount">
+            <summary>
+            金额/折扣--合并一个字段  折扣85折显示0.85
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.BrowseLiveCouponViewModel.CouponType">
+            <summary>
+            优惠券类型 1-抵用券 2-折扣券
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.BrowseLiveCouponViewModel.Scope">
+            <summary>
+            适用范围
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.BrowseLiveCouponViewModel.IsShelves">
+            <summary>
+            是否上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.BrowseLiveCouponViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.CreateLiveCouponViewModel.LiveVideoId">
+            <summary>
+            所属视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.CreateLiveCouponViewModel.LiveCouponId">
+            <summary>
+            优惠卷Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.CreateLiveCouponViewModel.LiveCouponName">
+            <summary>
+            优惠卷名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.CreateLiveCouponViewModel.Amount">
+            <summary>
+            金额/折扣--合并一个字段  折扣85折显示0.85
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.CreateLiveCouponViewModel.CouponType">
+            <summary>
+            优惠券类型 1-抵用券 2-折扣券
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.CreateLiveCouponViewModel.Scope">
+            <summary>
+            适用范围
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.CreateLiveCouponViewModel.IsShelves">
+            <summary>
+            是否上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.CreateLiveCouponViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.LiveCouponQueryViewModel.LiveVideoId">
+            <summary>
+            所属视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.LiveCouponQueryViewModel.IsShelves">
+            <summary>
+            是否上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.LiveCouponQueryListViewModel.LiveVideoId">
+            <summary>
+            所属视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.LiveCouponQueryListViewModel.LiveCouponId">
+            <summary>
+            优惠卷Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.LiveCouponQueryListViewModel.LiveCouponName">
+            <summary>
+            优惠卷名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.LiveCouponQueryListViewModel.Amount">
+            <summary>
+            金额/折扣--合并一个字段  折扣85折显示0.85
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.LiveCouponQueryListViewModel.CouponType">
+            <summary>
+            优惠券类型 1-抵用券 2-折扣券
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.LiveCouponQueryListViewModel.Scope">
+            <summary>
+            适用范围
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.LiveCouponQueryListViewModel.IsShelves">
+            <summary>
+            是否上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.LiveCouponQueryListViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.UpdateLiveCouponViewModel.LiveVideoId">
+            <summary>
+            所属视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.UpdateLiveCouponViewModel.LiveCouponId">
+            <summary>
+            优惠卷Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.UpdateLiveCouponViewModel.LiveCouponName">
+            <summary>
+            优惠卷名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.UpdateLiveCouponViewModel.Amount">
+            <summary>
+            金额/折扣--合并一个字段  折扣85折显示0.85
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.UpdateLiveCouponViewModel.CouponType">
+            <summary>
+            优惠券类型 1-抵用券 2-折扣券
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.UpdateLiveCouponViewModel.Scope">
+            <summary>
+            适用范围
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.UpdateLiveCouponViewModel.IsShelves">
+            <summary>
+            是否上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveCoupon.UpdateLiveCouponViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.BrowseLiveMessageViewModel.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.BrowseLiveMessageViewModel.Content">
+            <summary>
+            消息内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.BrowseLiveMessageViewModel.IsLiveAdmin">
+            <summary>
+            是否直播管理员
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.BrowseLiveMessageViewModel.LiveMessageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.BrowseLiveMessageViewModel.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.BrowseLiveMessageViewModel.CreatorName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.BrowseLiveMessageViewModel.CreateTime">
+            <summary>
+            发送时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.BrowseLiveMessageViewModel.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.CreateLiveMessageViewModel.Id">
+            <summary>
+            消息Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.CreateLiveMessageViewModel.LiveId">
+            <summary>
+            直播间Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.CreateLiveMessageViewModel.Content">
+            <summary>
+            消息内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.CreateLiveMessageViewModel.LiveMessageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.PinTopMessageOutput.Id">
+            <summary>
+            消息Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.PinTopMessageOutput.Content">
+            <summary>
+            消息内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.PinTopMessageOutput.LiveId">
+            <summary>
+            直播间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.PinTopMessageOutput.IsLiveAdmin">
+            <summary>
+            是否直播管理员
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.PinTopMessageOutput.Duration">
+            <summary>
+            置顶持续时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.PinTopMessageOutput.Countdown">
+            <summary>
+            置顶倒计时
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.PinTopMessageOutput.PinTopTime">
+            <summary>
+            置顶时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.PinTopMessageOutput.SystemTime">
+            <summary>
+            系统时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.PinTopMessageOutput.UserName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.LiveMessageOutput.Id">
+            <summary>
+            消息的Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.LiveMessageOutput.Content">
+            <summary>
+            消息内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.LiveMessageOutput.LiveId">
+            <summary>
+            直播间Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.LiveMessageOutput.MessageType">
+            <summary>
+            消息类型: 0 Chat, 1 Join, 2 Product, 3 Pin
+            MessagePack 不支持 Enum 类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.LiveMessageOutput.SendTime">
+            <summary>
+            发送时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.LiveChatMessageOutput.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.LiveChatMessageOutput.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.LiveChatMessageOutput.IsLiveAdmin">
+            <summary>
+            是否直播管理员
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.QueryLiveMessageViewModel.MessageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.QueryLiveMessageViewModel.LiveId">
+            <summary>
+            直播间Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveMessage.QueryLiveMessageViewModel.SendTime">
+            <summary>
+            发送时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveOnlineUser.BrowseLiveOnlineUserViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveOnlineUser.BrowseLiveOnlineUserViewModel.OnlineDuration">
+            <summary>
+            累计在线时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveOnlineUser.BrowseLiveOnlineUserViewModel.CreateTime">
+            <summary>
+            首次上线时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveOnlineUser.BrowseLiveOnlineUserViewModel.CreatorName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveOnlineUser.BrowseLiveOnlineUserViewModel.LastOnlineTime">
+            <summary>
+            最后上线时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveOnlineUser.BrowseLiveOnlineUserViewModel.SystemTime">
+            <summary>
+            系统时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveOnlineUser.CreateLiveOnlineUserViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveOnlineUser.CreateLiveOnlineUserViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveOnlineUser.CreateLiveOnlineUserViewModel.LiveId">
+            <summary>
+            直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveOnlineUser.QueryLiveOnlineUserViewModel.LiveId">
+            <summary>
+            直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveOnlineUser.QueryLiveOnlineUserViewModel.CreatorName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveOnlineUser.QueryLiveOnlineUserViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveOnlineUser.UpdateLiveOnlineUserViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveOnlineUser.UpdateLiveOnlineUserViewModel.IsOnline">
+            <summary>
+            是否在线
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveOnlineUser.UpdateLiveOnlineUserViewModel.CreatorName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.BrowseLivePlayBackViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.BrowseLivePlayBackViewModel.LiveVideoId">
+            <summary>
+            所属视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.BrowseLivePlayBackViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.BrowseLivePlayBackViewModel.VideoType">
+            <summary>
+            视频格式
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.BrowseLivePlayBackViewModel.Duration">
+            <summary>
+            视频时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.BrowseLivePlayBackViewModel.VideoNo">
+            <summary>
+            视频序号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.BrowseLivePlayBackViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.CreateLivePlayBackViewModel.LiveVideoId">
+            <summary>
+            所属视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.CreateLivePlayBackViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.CreateLivePlayBackViewModel.VideoType">
+            <summary>
+            视频格式
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.CreateLivePlayBackViewModel.Duration">
+            <summary>
+            视频时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.CreateLivePlayBackViewModel.VideoNo">
+            <summary>
+            视频序号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.CreateLivePlayBackViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.LivePlayBackQueryViewModel.LiveVideoId">
+            <summary>
+            所属视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.LivePlayBackQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.LivePlayBackQueryListViewModel.LiveVideoId">
+            <summary>
+            所属视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.LivePlayBackQueryListViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.LivePlayBackQueryListViewModel.VideoType">
+            <summary>
+            视频格式
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.LivePlayBackQueryListViewModel.Duration">
+            <summary>
+            视频时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.LivePlayBackQueryListViewModel.VideoNo">
+            <summary>
+            视频序号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.LivePlayBackQueryListViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.UpdateLivePlayBackViewModel.LiveVideoId">
+            <summary>
+            所属视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.UpdateLivePlayBackViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.UpdateLivePlayBackViewModel.VideoType">
+            <summary>
+            视频格式
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.UpdateLivePlayBackViewModel.Duration">
+            <summary>
+            视频时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.UpdateLivePlayBackViewModel.VideoNo">
+            <summary>
+            视频序号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LivePlayBack.UpdateLivePlayBackViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.BrowseLiveProductPackageViewModel.Id">
+            <summary>
+            所属视频直播
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.BrowseLiveProductPackageViewModel.LiveVideoId">
+            <summary>
+            所属视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.BrowseLiveProductPackageViewModel.ProductPackageId">
+            <summary>
+            产品包Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.BrowseLiveProductPackageViewModel.ProductPackageName">
+            <summary>
+            产品包名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.BrowseLiveProductPackageViewModel.ProductType">
+            <summary>
+            产品包类别
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.BrowseLiveProductPackageViewModel.IsShelves">
+            <summary>
+            是否上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.BrowseLiveProductPackageViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.CreateLiveProductPackageViewModel.LiveVideoId">
+            <summary>
+            所属视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.CreateLiveProductPackageViewModel.ProductPackageId">
+            <summary>
+            产品包Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.CreateLiveProductPackageViewModel.ProductPackageName">
+            <summary>
+            产品包名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.CreateLiveProductPackageViewModel.ProductType">
+            <summary>
+            产品包类别
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.CreateLiveProductPackageViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.LiveProductPackageQueryViewModel.LiveVideoId">
+            <summary>
+            所属视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.LiveProductPackageQueryViewModel.IsShelves">
+            <summary>
+            是否上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.LiveProductPackageQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.LiveProductPackageQueryListViewModel.LiveVideoId">
+            <summary>
+            所属视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.LiveProductPackageQueryListViewModel.ProductPackageId">
+            <summary>
+            产品包Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.LiveProductPackageQueryListViewModel.ProductPackageName">
+            <summary>
+            产品包名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.LiveProductPackageQueryListViewModel.ProductType">
+            <summary>
+            产品包类别
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.LiveProductPackageQueryListViewModel.IsShelves">
+            <summary>
+            是否上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.LiveProductPackageQueryListViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.UpdateLiveProductPackageViewModel.LiveVideoId">
+            <summary>
+            所属视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.UpdateLiveProductPackageViewModel.ProductPackageId">
+            <summary>
+            产品包Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.UpdateLiveProductPackageViewModel.ProductPackageName">
+            <summary>
+            产品包名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.UpdateLiveProductPackageViewModel.ProductType">
+            <summary>
+            产品包类别
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveProductPackage.UpdateLiveProductPackageViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveReservation.BrowseLiveReservationViewModel.ProductId">
+            <summary>
+            预约直播产品id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveReservation.BrowseLiveReservationViewModel.LiveVideoId">
+            <summary>
+            预约视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveReservation.BrowseLiveReservationViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveReservation.BrowseLiveReservationViewModel.ReservationSource">
+            <summary>
+            预约来源
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveReservation.BrowseLiveReservationViewModel.CreateTime">
+            <summary>
+            评价时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveReservation.BrowseLiveReservationViewModel.CreatorName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveReservation.CreateLiveReservationViewModel.ProductId">
+            <summary>
+            预约直播产品id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveReservation.CreateLiveReservationViewModel.LiveVideoId">
+            <summary>
+            预约视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveReservation.CreateLiveReservationViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveReservation.CreateLiveReservationViewModel.ReservationSource">
+            <summary>
+            预约来源
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveReservation.CreateLiveReservationViewModel.OpenId">
+            <summary>
+            OpenId
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveReservation.QueryLiveReservationViewModel.ProductId">
+            <summary>
+            预约直播产品id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveReservation.QueryLiveReservationViewModel.LiveVideoId">
+            <summary>
+            预约视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveReservation.QueryLiveReservationViewModel.CreatorName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveReservation.QueryLiveReservationViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveReservation.QueryLiveReservationViewModel.ReservationSource">
+            <summary>
+            预约来源
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.BrowseLiveVideoViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.BrowseLiveVideoViewModel.CardUrl">
+            <summary>
+            卡片Url
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.BrowseLiveVideoViewModel.LiveType">
+            <summary>
+            直播类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.BrowseLiveVideoViewModel.SubjectIds">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.BrowseLiveVideoViewModel.SubjectNames">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.BrowseLiveVideoViewModel.LecturerId">
+            <summary>
+            主讲老师Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.BrowseLiveVideoViewModel.LecturerName">
+            <summary>
+            主讲老师名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.BrowseLiveVideoViewModel.StartTime">
+            <summary>
+            直播开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.BrowseLiveVideoViewModel.EndTime">
+            <summary>
+            直播结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.BrowseLiveVideoViewModel.LiveStatus">
+            <summary>
+            直播状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.BrowseLiveVideoViewModel.TargetProductId">
+            <summary>
+            购买产品跳转对象Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.BrowseLiveVideoViewModel.Desc">
+            <summary>
+            详情介绍
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.BrowseLiveVideoViewModel.LiveAddress">
+            <summary>
+            播流地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.BrowseLiveVideoViewModel.StreamingAddress">
+            <summary>
+            推流地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.BrowseLiveVideoViewModel.LiveAnnouncementId">
+            <summary>
+            直播公告Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.BrowseLiveVideoViewModel.IsUploadPlayBack">
+            <summary>
+            是否上次回放视频
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.CreateLiveVideoUrlViewModel.appName">
+            <summary>
+            app名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.CreateLiveVideoUrlViewModel.streamName">
+            <summary>
+            流名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.CreateLiveVideoUrlViewModel.expireTime">
+            <summary>
+            过期时间（单位是秒)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.CreateLiveVideoUrlViewModel.LiveVideoId">
+            <summary>
+            直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.CreateLiveVideoViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.CreateLiveVideoViewModel.CardUrl">
+            <summary>
+            卡片Url
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.CreateLiveVideoViewModel.LiveType">
+            <summary>
+            直播类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.CreateLiveVideoViewModel.SubjectIds">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.CreateLiveVideoViewModel.SubjectNames">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.CreateLiveVideoViewModel.LecturerId">
+            <summary>
+            主讲老师Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.CreateLiveVideoViewModel.LecturerName">
+            <summary>
+            主讲老师名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.CreateLiveVideoViewModel.StartTime">
+            <summary>
+            直播开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.CreateLiveVideoViewModel.EndTime">
+            <summary>
+            直播结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.CreateLiveVideoViewModel.LiveStatus">
+            <summary>
+            直播状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.CreateLiveVideoViewModel.TargetProductId">
+            <summary>
+            购买产品跳转对象Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.CreateLiveVideoViewModel.Desc">
+            <summary>
+            详情介绍
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.CreateLiveVideoViewModel.LiveAddress">
+            <summary>
+            播流地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.CreateLiveVideoViewModel.StreamingAddress">
+            <summary>
+            推流地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.CreateLiveVideoViewModel.LiveAnnouncementId">
+            <summary>
+            直播公告Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryViewModel.SubjectIds">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryViewModel.LiveStatus">
+            <summary>
+            直播状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryViewModel.LiveType">
+            <summary>
+            直播类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryViewModel.DayCount">
+            <summary>
+            距离当日的天数
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryViewModel.QueryStartTime">
+            <summary>
+            查询该时间之后的直播
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryViewModel.QueryEndTime">
+            <summary>
+            查询该时间之前的直播
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryListViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryListViewModel.CardUrl">
+            <summary>
+            卡片Url
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryListViewModel.LiveType">
+            <summary>
+            直播类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryListViewModel.SubjectIds">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryListViewModel.SubjectNames">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryListViewModel.LecturerId">
+            <summary>
+            主讲老师Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryListViewModel.LecturerName">
+            <summary>
+            主讲老师名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryListViewModel.StartTime">
+            <summary>
+            直播开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryListViewModel.EndTime">
+            <summary>
+            直播结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryListViewModel.LiveStatus">
+            <summary>
+            直播状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryListViewModel.TargetProductId">
+            <summary>
+            购买产品跳转对象Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryListViewModel.Desc">
+            <summary>
+            详情介绍
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryListViewModel.LiveAddress">
+            <summary>
+            播流地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryListViewModel.StreamingAddress">
+            <summary>
+            推流地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryListViewModel.LiveAnnouncementId">
+            <summary>
+            直播公告Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryListViewModel.IsUploadPlayBack">
+            <summary>
+            是否上次回放视频
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.LiveVideoQueryListViewModel.ViewNumber">
+            <summary>
+            观看人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.SetLiveVideoStatusViewModel.LiveStatus">
+            <summary>
+            直播状态
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.TlCallBackViewModel">
+            <summary>
+            推流回调
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.TlCallBackViewModel.Action">
+            <summary>
+            事件名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.TlCallBackViewModel.Ip">
+            <summary>
+            推流的客户端IP
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.TlCallBackViewModel.Id">
+            <summary>
+            推流流名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.TlCallBackViewModel.App">
+            <summary>
+            推流域名。默认为自定义的推流域名，如果未绑定推流域名即为播流域名
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.TlCallBackViewModel.Appname">
+            <summary>
+            推流应用名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.TlCallBackViewModel.Time">
+            <summary>
+            Unix时间戳。单位：秒
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.TlCallBackViewModel.Usrargs">
+            <summary>
+            用户推流的参数(生成推流地址时配置)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.TlCallBackViewModel.Node">
+            <summary>
+            CDN接受流的节点或者机器名
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.TlCallBackViewModel.Height">
+            <summary>
+            分辨率的高。单位：像素
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.TlCallBackViewModel.Width">
+            <summary>
+            分辨率的宽。单位：像素
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.UpdateLiveVideoViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.UpdateLiveVideoViewModel.CardUrl">
+            <summary>
+            卡片Url
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.UpdateLiveVideoViewModel.LiveType">
+            <summary>
+            直播类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.UpdateLiveVideoViewModel.SubjectIds">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.UpdateLiveVideoViewModel.SubjectNames">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.UpdateLiveVideoViewModel.LecturerId">
+            <summary>
+            主讲老师Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.UpdateLiveVideoViewModel.LecturerName">
+            <summary>
+            主讲老师名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.UpdateLiveVideoViewModel.StartTime">
+            <summary>
+            直播开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.UpdateLiveVideoViewModel.EndTime">
+            <summary>
+            直播结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.UpdateLiveVideoViewModel.LiveStatus">
+            <summary>
+            直播状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.UpdateLiveVideoViewModel.TargetProductId">
+            <summary>
+            购买产品跳转对象Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.UpdateLiveVideoViewModel.Desc">
+            <summary>
+            详情介绍
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.UpdateLiveVideoViewModel.LiveAddress">
+            <summary>
+            播流地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.UpdateLiveVideoViewModel.StreamingAddress">
+            <summary>
+            推流地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.LiveVideo.UpdateLiveVideoViewModel.LiveAnnouncementId">
+            <summary>
+            直播公告Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.MutedUser.BrowseMutedUserViewModel.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.MutedUser.BrowseMutedUserViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.MutedUser.BrowseMutedUserViewModel.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.MutedUser.BrowseMutedUserViewModel.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.MutedUser.BrowseMutedUserViewModel.CreatorId">
+            <summary>
+            创建者Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.MutedUser.BrowseMutedUserViewModel.CreatorName">
+            <summary>
+            创建者名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.MutedUser.BrowseMutedUserViewModel.CreateTime">
+            <summary>
+            禁言时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.MutedUser.CreateMutedUserViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.MutedUser.CreateMutedUserViewModel.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.MutedUser.CreateMutedUserViewModel.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.MutedUser.QueryMutedUserViewModel.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.MutedUser.QueryMutedUserViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.SensitiveWord.BrowseSensitiveWordViewModel.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.SensitiveWord.CreateSensitiveWordViewModel.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.SensitiveWord.SensitiveWordQueryViewModel.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.SensitiveWord.SensitiveWordQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.SensitiveWord.SensitiveWordQueryListViewModel.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Application.ViewModels.SensitiveWord.UpdateSensitiveWordViewModel.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+    </members>
+</doc>

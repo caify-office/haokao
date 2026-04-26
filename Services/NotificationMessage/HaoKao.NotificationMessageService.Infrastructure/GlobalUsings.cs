@@ -1,0 +1,36 @@
+// Global using directives
+
+global using Girvs.AuthorizePermission;
+global using Girvs.AuthorizePermission.AuthorizeCompare;
+global using Girvs.Cache.Caching;
+global using Girvs.EntityFrameworkCore.Configuration;
+global using Girvs.EntityFrameworkCore.Context;
+global using Girvs.EntityFrameworkCore.DbContextExtensions;
+global using Girvs.EntityFrameworkCore.EntityConfigurations;
+global using Girvs.EntityFrameworkCore.Repositories;
+global using Girvs.Extensions;
+global using Girvs.Infrastructure;
+global using Girvs.Refit;
+global using Girvs.Refit.Extensions;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+global using Microsoft.Extensions.Logging;
+global using MySqlConnector;
+global using Newtonsoft.Json;
+global using Refit;
+global using System;
+global using System.Collections.Generic;
+global using System.Data;
+global using System.Linq;
+global using System.Threading.Tasks;
+global using HaoKao.Common.AuthorizeRepositories;
+global using HaoKao.NotificationMessageService.Domain.Enumerations;
+global using HaoKao.NotificationMessageService.Domain.Models;
+global using HaoKao.NotificationMessageService.Domain.Queries;
+global using HaoKao.NotificationMessageService.Domain.Repositories;
+global using TencentCloud.Common;
+global using TencentCloud.Common.Profile;
+global using TencentCloud.Sms.V20210111;
+global using TencentCloud.Sms.V20210111.Models;
+global using HaoKao.NotificationMessageService.Infrastructure.EntityConfigurations;

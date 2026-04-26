@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.TenantService.Application", "HaoKao.TenantService.Application\HaoKao.TenantService.Application.csproj", "{20307B4C-D6D5-419C-9902-5F764D0EAF73}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.TenantService.Infrastructure", "HaoKao.TenantService.Infrastructure\HaoKao.TenantService.Infrastructure.csproj", "{B3ADE581-1CD6-4C24-8627-E8D1240030D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.TenantService.WebApi", "HaoKao.TenantService.WebApi\HaoKao.TenantService.WebApi.csproj", "{6FE72411-AB76-4DF8-A6EA-56CAF390628E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.TenantService.Domain", "HaoKao.TenantService.Domain\HaoKao.TenantService.Domain.csproj", "{453F4912-71A8-408D-9C32-AC82A0350217}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20307B4C-D6D5-419C-9902-5F764D0EAF73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20307B4C-D6D5-419C-9902-5F764D0EAF73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20307B4C-D6D5-419C-9902-5F764D0EAF73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20307B4C-D6D5-419C-9902-5F764D0EAF73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3ADE581-1CD6-4C24-8627-E8D1240030D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3ADE581-1CD6-4C24-8627-E8D1240030D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3ADE581-1CD6-4C24-8627-E8D1240030D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3ADE581-1CD6-4C24-8627-E8D1240030D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FE72411-AB76-4DF8-A6EA-56CAF390628E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FE72411-AB76-4DF8-A6EA-56CAF390628E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FE72411-AB76-4DF8-A6EA-56CAF390628E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FE72411-AB76-4DF8-A6EA-56CAF390628E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{453F4912-71A8-408D-9C32-AC82A0350217}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{453F4912-71A8-408D-9C32-AC82A0350217}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{453F4912-71A8-408D-9C32-AC82A0350217}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{453F4912-71A8-408D-9C32-AC82A0350217}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6ADE926B-F73E-45FC-849C-6A7274EAD239}
+	EndGlobalSection
+EndGlobal

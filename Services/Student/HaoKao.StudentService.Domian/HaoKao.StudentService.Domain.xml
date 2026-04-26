@@ -1,0 +1,818 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.StudentService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.StudentService.Domain.Commands.UpdateAllocateToCommand">
+            <summary>
+            批量修改分配命令
+            </summary>
+            <param name="Ids"></param>
+            <param name="SalespersonId"></param>
+            <param name="SalespersonName"></param>
+        </member>
+        <member name="M:HaoKao.StudentService.Domain.Commands.UpdateAllocateToCommand.#ctor(System.Collections.Generic.IReadOnlyList{System.Guid},System.Guid,System.String)">
+            <summary>
+            批量修改分配命令
+            </summary>
+            <param name="Ids"></param>
+            <param name="SalespersonId"></param>
+            <param name="SalespersonName"></param>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.UpdateAllocateToCommand.Ids">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.UpdateAllocateToCommand.SalespersonId">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.UpdateAllocateToCommand.SalespersonName">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.StudentService.Domain.Commands.UpdateRemarkCommand">
+            <summary>
+            修改备注命令
+            </summary>
+            <param name="Id"></param>
+            <param name="Remark"></param>
+        </member>
+        <member name="M:HaoKao.StudentService.Domain.Commands.UpdateRemarkCommand.#ctor(System.Guid,System.String)">
+            <summary>
+            修改备注命令
+            </summary>
+            <param name="Id"></param>
+            <param name="Remark"></param>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.UpdateRemarkCommand.Id">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.UpdateRemarkCommand.Remark">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.StudentService.Domain.Commands.SaveStudentAllocationConfigCommand">
+            <summary>
+            保存学员分配配置命令
+            </summary>
+            <param name="Data">配置数据</param>
+            <param name="WaysOfAllocation">分配方式</param>
+            <param name="TenantId">租户Id</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Domain.Commands.SaveStudentAllocationConfigCommand.#ctor(System.Collections.Generic.HashSet{HaoKao.StudentService.Domain.Entities.PercentageAllocation},HaoKao.StudentService.Domain.Entities.WaysOfAllocation,System.Guid)">
+            <summary>
+            保存学员分配配置命令
+            </summary>
+            <param name="Data">配置数据</param>
+            <param name="WaysOfAllocation">分配方式</param>
+            <param name="TenantId">租户Id</param>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.SaveStudentAllocationConfigCommand.Data">
+            <summary>配置数据</summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.SaveStudentAllocationConfigCommand.WaysOfAllocation">
+            <summary>分配方式</summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.SaveStudentAllocationConfigCommand.TenantId">
+            <summary>租户Id</summary>
+        </member>
+        <member name="T:HaoKao.StudentService.Domain.Commands.CreateStudentCommand">
+            <summary>
+            创建学员命令
+            </summary>
+            <param name="RegisterUserId"></param>
+        </member>
+        <member name="M:HaoKao.StudentService.Domain.Commands.CreateStudentCommand.#ctor(System.Guid)">
+            <summary>
+            创建学员命令
+            </summary>
+            <param name="RegisterUserId"></param>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.CreateStudentCommand.RegisterUserId">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.StudentService.Domain.Commands.UpdateStudentCommand">
+            <summary>
+            更新学员命令
+            </summary>
+            <param name="RegisterUserId"></param>
+            <param name="IsPaidStudent"></param>
+        </member>
+        <member name="M:HaoKao.StudentService.Domain.Commands.UpdateStudentCommand.#ctor(System.Guid,System.Boolean)">
+            <summary>
+            更新学员命令
+            </summary>
+            <param name="RegisterUserId"></param>
+            <param name="IsPaidStudent"></param>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.UpdateStudentCommand.RegisterUserId">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.UpdateStudentCommand.IsPaidStudent">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.StudentService.Domain.Commands.CreateStudentParameterConfigCommand">
+            <summary>
+            创建学员参数设置命令
+            </summary>
+            <param name="UserId">用户Id</param>
+            <param name="NickName">昵称</param>
+            <param name="PropertyName">设置值字段名称</param>
+            <param name="PropertyType">设置值类型</param>
+            <param name="PropertyValue">设置值</param>
+            <param name="Desc">描述</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Domain.Commands.CreateStudentParameterConfigCommand.#ctor(System.Guid,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            创建学员参数设置命令
+            </summary>
+            <param name="UserId">用户Id</param>
+            <param name="NickName">昵称</param>
+            <param name="PropertyName">设置值字段名称</param>
+            <param name="PropertyType">设置值类型</param>
+            <param name="PropertyValue">设置值</param>
+            <param name="Desc">描述</param>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.CreateStudentParameterConfigCommand.UserId">
+            <summary>用户Id</summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.CreateStudentParameterConfigCommand.NickName">
+            <summary>昵称</summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.CreateStudentParameterConfigCommand.PropertyName">
+            <summary>设置值字段名称</summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.CreateStudentParameterConfigCommand.PropertyType">
+            <summary>设置值类型</summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.CreateStudentParameterConfigCommand.PropertyValue">
+            <summary>设置值</summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.CreateStudentParameterConfigCommand.Desc">
+            <summary>描述</summary>
+        </member>
+        <member name="T:HaoKao.StudentService.Domain.Commands.UpdateStudentParameterConfigCommand">
+            <summary>
+            更新学员参数设置命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="UserId">用户Id</param>
+            <param name="NickName">昵称</param>
+            <param name="PropertyName">设置值字段名称</param>
+            <param name="PropertyType">设置值类型</param>
+            <param name="PropertyValue">设置值</param>
+            <param name="Desc">描述</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Domain.Commands.UpdateStudentParameterConfigCommand.#ctor(System.Guid,System.Guid,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            更新学员参数设置命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="UserId">用户Id</param>
+            <param name="NickName">昵称</param>
+            <param name="PropertyName">设置值字段名称</param>
+            <param name="PropertyType">设置值类型</param>
+            <param name="PropertyValue">设置值</param>
+            <param name="Desc">描述</param>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.UpdateStudentParameterConfigCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.UpdateStudentParameterConfigCommand.UserId">
+            <summary>用户Id</summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.UpdateStudentParameterConfigCommand.NickName">
+            <summary>昵称</summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.UpdateStudentParameterConfigCommand.PropertyName">
+            <summary>设置值字段名称</summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.UpdateStudentParameterConfigCommand.PropertyType">
+            <summary>设置值类型</summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.UpdateStudentParameterConfigCommand.PropertyValue">
+            <summary>设置值</summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.UpdateStudentParameterConfigCommand.Desc">
+            <summary>描述</summary>
+        </member>
+        <member name="T:HaoKao.StudentService.Domain.Commands.SaveStudentParameterConfigCommand">
+            <summary>
+            保存学员参数设置命令
+            </summary>
+            <param name="UserId">用户Id</param>
+            <param name="NickName">昵称</param>
+            <param name="PropertyName">设置值字段名称</param>
+            <param name="PropertyType">设置值类型</param>
+            <param name="PropertyValue">设置值</param>
+            <param name="Desc">描述</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Domain.Commands.SaveStudentParameterConfigCommand.#ctor(System.Guid,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            保存学员参数设置命令
+            </summary>
+            <param name="UserId">用户Id</param>
+            <param name="NickName">昵称</param>
+            <param name="PropertyName">设置值字段名称</param>
+            <param name="PropertyType">设置值类型</param>
+            <param name="PropertyValue">设置值</param>
+            <param name="Desc">描述</param>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.SaveStudentParameterConfigCommand.UserId">
+            <summary>用户Id</summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.SaveStudentParameterConfigCommand.NickName">
+            <summary>昵称</summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.SaveStudentParameterConfigCommand.PropertyName">
+            <summary>设置值字段名称</summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.SaveStudentParameterConfigCommand.PropertyType">
+            <summary>设置值类型</summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.SaveStudentParameterConfigCommand.PropertyValue">
+            <summary>设置值</summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.SaveStudentParameterConfigCommand.Desc">
+            <summary>描述</summary>
+        </member>
+        <member name="T:HaoKao.StudentService.Domain.Commands.DeleteStudentParameterConfigCommand">
+            <summary>
+            删除学员参数设置命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Domain.Commands.DeleteStudentParameterConfigCommand.#ctor(System.Guid)">
+            <summary>
+            删除学员参数设置命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Commands.DeleteStudentParameterConfigCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.StudentService.Domain.Entities.Student">
+            <summary>
+            学员
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.Student.RegisterUserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.Student.IsPaidStudent">
+            <summary>
+            是否付费学员
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.Student.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.Student.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.Student.RegisterUser">
+            <summary>
+            注册用户
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.Student.StudentFollows">
+            <summary>
+            已加销售
+            </summary>
+        </member>
+        <member name="T:HaoKao.StudentService.Domain.Entities.StudentAllocation">
+            <summary>
+            学员分配
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentAllocation.StudentId">
+            <summary>
+            学员Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentAllocation.RegisterUserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentAllocation.UnionId">
+            <summary>
+            微信UnionId
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentAllocation.SalespersonId">
+            <summary>
+            分配销售Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentAllocation.SalespersonName">
+            <summary>
+            分配销售姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentAllocation.EnterpriseWeChatId">
+            <summary>
+            企业微信Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentAllocation.AllocationTime">
+            <summary>
+            分配时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentAllocation.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentAllocation.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentAllocation.Student">
+            <summary>
+            学员
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentAllocationConfig.Data">
+            <summary>
+            配置数据
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentAllocationConfig.WaysOfAllocation">
+            <summary>
+            分配方式
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentAllocationConfig.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentAllocationConfig.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="F:HaoKao.StudentService.Domain.Entities.WaysOfAllocation.Average">
+            <summary>
+            平均分配
+            </summary>
+        </member>
+        <member name="F:HaoKao.StudentService.Domain.Entities.WaysOfAllocation.Custom">
+            <summary>
+            自定义分配
+            </summary>
+        </member>
+        <member name="T:HaoKao.StudentService.Domain.Entities.PercentageAllocation">
+            <summary>
+            百分比分配
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.PercentageAllocation.SalespersonId">
+            <summary>
+            销售Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.PercentageAllocation.SalespersonName">
+            <summary>
+            销售名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.PercentageAllocation.EnterpriseWeChatId">
+            <summary>
+            销售企业微信Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.PercentageAllocation.Percentage">
+            <summary>
+            百分比
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentFollow.StudentId">
+            <summary>
+            学员Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentFollow.RegisterUserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentFollow.UnionId">
+            <summary>
+            微信UnionId
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentFollow.SalespersonId">
+            <summary>
+            销售Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentFollow.SalespersonName">
+            <summary>
+            销售名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentFollow.EnterpriseWeChatId">
+            <summary>
+            销售企业微信Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentFollow.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentFollow.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.StudentService.Domain.Entities.StudentParameterConfig">
+            <summary>
+            学员参数设置
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentParameterConfig.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentParameterConfig.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentParameterConfig.PropertyName">
+            <summary>
+            设置值字段名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentParameterConfig.PropertyType">
+            <summary>
+            设置值类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentParameterConfig.PropertyValue">
+            <summary>
+            设置值
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentParameterConfig.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentParameterConfig.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentParameterConfig.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.StudentParameterConfig.TenantName">
+            <summary>
+            租户名
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.UnionStudent.RegisterUserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.UnionStudent.IsPaidStudent">
+            <summary>
+            是否付费学员
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.UnionStudent.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Entities.UnionStudent.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.StudentService.Domain.Models.EnterpriseWeChatContact">
+            <summary>
+            企业微信联系人
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.EnterpriseWeChatContact.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.EnterpriseWeChatContact.FollowUserId">
+            <summary>
+            添加了此外部联系人的企业成员Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.EnterpriseWeChatContact.FollowUserName">
+            <summary>
+            添加了此外部联系人的企业成员名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.EnterpriseWeChatContact.Type">
+            <summary>
+            联系人的类型，1表示该外部联系人是微信用户，2表示该外部联系人是企业微信用户
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.EnterpriseWeChatContact.Name">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.EnterpriseWeChatContact.UserId">
+            <summary>
+            微信用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.EnterpriseWeChatContact.UnionId">
+            <summary>
+            微信unionid
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.EnterpriseWeChatContact.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:HaoKao.StudentService.Domain.Models.ExternalIdentity">
+            <summary>
+            其它平台唯一标识符
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.ExternalIdentity.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.ExternalIdentity.Scheme">
+            <summary>
+            其它平台名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.ExternalIdentity.UniqueIdentifier">
+            <summary>
+            唯一标识符
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.ExternalIdentity.RegisterUserId">
+            <summary>
+            注册用户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.StudentService.Domain.Models.RegisterUser">
+            <summary>
+            注册用户
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.RegisterUser.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.RegisterUser.Account">
+            <summary>
+            用户账号
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.RegisterUser.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.RegisterUser.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.RegisterUser.UserGender">
+            <summary>
+            用户性别
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.RegisterUser.NickName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.RegisterUser.UserState">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.RegisterUser.EmailAddress">
+            <summary>
+            邮箱地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.RegisterUser.HeadImage">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.RegisterUser.LastLoginIp">
+            <summary>
+            最后登录IP
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.RegisterUser.LastLoginTime">
+            <summary>
+            最后登录时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.RegisterUser.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.RegisterUser.ExternalIdentities">
+            <summary>
+            其它平台中的身份
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.RegisterUser.ClientId">
+            <summary>
+            客户端Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.StudentService.Domain.Models.UserGender">
+            <summary>
+            用户性别
+            </summary>
+        </member>
+        <member name="F:HaoKao.StudentService.Domain.Models.UserGender.Unknown">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:HaoKao.StudentService.Domain.Models.UserGender.Male">
+            <summary>
+            男
+            </summary>
+        </member>
+        <member name="F:HaoKao.StudentService.Domain.Models.UserGender.Female">
+            <summary>
+            女
+            </summary>
+        </member>
+        <member name="T:HaoKao.StudentService.Domain.Models.UserState">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="F:HaoKao.StudentService.Domain.Models.UserState.Disable">
+            <summary>
+            禁用
+            </summary>
+        </member>
+        <member name="F:HaoKao.StudentService.Domain.Models.UserState.Enable">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="T:HaoKao.StudentService.Domain.Models.Salesperson">
+            <summary>
+            销售人员
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.Salesperson.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.Salesperson.RealName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.Salesperson.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.Salesperson.EnterpriseWeChatUserId">
+            <summary>
+            企业微信用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.Salesperson.EnterpriseWeChatUserName">
+            <summary>
+            企业微信昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.Salesperson.EnterpriseWeChatConfigId">
+            <summary>
+            企业微信配置Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.Salesperson.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.Salesperson.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Models.Salesperson.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Queries.StudentAllocationQuery.SearchKey">
+            <summary>
+            手机号/昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Queries.StudentAllocationQuery.AllocateToSalesperson">
+            <summary>
+            分配销售
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Queries.StudentAllocationQuery.FollowedSalesperson">
+            <summary>
+            已加销售
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Queries.StudentAllocationQuery.StartAllocationTime">
+            <summary>
+            分配时间(开始)
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Queries.StudentAllocationQuery.EndAllocationTime">
+            <summary>
+            分配时间(结束)
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Queries.StudentAllocationQuery.IsFollowed">
+            <summary>
+            添加状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Queries.StudentParameterConfigQuery.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Queries.StudentParameterConfigQuery.PropertyName">
+            <summary>
+            设置值字段名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Queries.StudentParameterConfigQuery.PropertyType">
+            <summary>
+            设置值类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Queries.StudentParameterConfigQuery.PropertyValue">
+            <summary>
+            设置值
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Queries.StudentQuery.SearchKey">
+            <summary>
+            昵称/手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Queries.StudentQuery.IsPaidStudent">
+            <summary>
+            是否付费学员
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Queries.StudentQuery.IsFollowedSalesperson">
+            <summary>
+            是否加销售
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Queries.StudentQuery.SalespersonName">
+            <summary>
+            销售名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Queries.StudentQuery.StartTime">
+            <summary>
+            注册开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Domain.Queries.StudentQuery.EndTime">
+            <summary>
+            注册结束时间
+            </summary>
+        </member>
+    </members>
+</doc>

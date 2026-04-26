@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.CourseFeatureService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.CourseFeatureService.Domain.CourseFeature">
+            <summary>
+            课程特色服务
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Domain.CourseFeature.Name">
+             <summary>
+            服务名称
+             </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Domain.CourseFeature.Content">
+            <summary>
+            服务内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Domain.CourseFeature.IconUrl">
+            <summary>
+            图标地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Domain.CourseFeature.Enable">
+            <summary>
+            启用/禁用
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Domain.CourseFeature.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Domain.CourseFeature.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Domain.CourseFeature.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Domain.CourseFeature.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="T:HaoKao.CourseFeatureService.Domain.CreateCourseFeatureCommand">
+            <summary>
+            创建课程特色服务命令
+            </summary>
+            <param name="Name">服务名称</param>
+            <param name="Content">服务内容</param>
+            <param name="IconUrl">图标地址</param>
+            <param name="Enable">启用/禁用</param>
+        </member>
+        <member name="M:HaoKao.CourseFeatureService.Domain.CreateCourseFeatureCommand.#ctor(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            创建课程特色服务命令
+            </summary>
+            <param name="Name">服务名称</param>
+            <param name="Content">服务内容</param>
+            <param name="IconUrl">图标地址</param>
+            <param name="Enable">启用/禁用</param>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Domain.CreateCourseFeatureCommand.Name">
+            <summary>服务名称</summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Domain.CreateCourseFeatureCommand.Content">
+            <summary>服务内容</summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Domain.CreateCourseFeatureCommand.IconUrl">
+            <summary>图标地址</summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Domain.CreateCourseFeatureCommand.Enable">
+            <summary>启用/禁用</summary>
+        </member>
+        <member name="T:HaoKao.CourseFeatureService.Domain.UpdateCourseFeatureCommand">
+            <summary>
+            更新课程特色服务命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Name">服务名称</param>
+            <param name="Content">服务内容</param>
+            <param name="IconUrl">图标地址</param>
+            <param name="Enable">启用/禁用</param>
+        </member>
+        <member name="M:HaoKao.CourseFeatureService.Domain.UpdateCourseFeatureCommand.#ctor(System.Guid,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            更新课程特色服务命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Name">服务名称</param>
+            <param name="Content">服务内容</param>
+            <param name="IconUrl">图标地址</param>
+            <param name="Enable">启用/禁用</param>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Domain.UpdateCourseFeatureCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Domain.UpdateCourseFeatureCommand.Name">
+            <summary>服务名称</summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Domain.UpdateCourseFeatureCommand.Content">
+            <summary>服务内容</summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Domain.UpdateCourseFeatureCommand.IconUrl">
+            <summary>图标地址</summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Domain.UpdateCourseFeatureCommand.Enable">
+            <summary>启用/禁用</summary>
+        </member>
+        <member name="T:HaoKao.CourseFeatureService.Domain.EnableCourseFeatureCommand">
+            <summary>
+            批量启用/禁用课程特色服务
+            </summary>
+            <param name="Ids">Ids</param>
+            <param name="Enable">启用/禁用</param>
+        </member>
+        <member name="M:HaoKao.CourseFeatureService.Domain.EnableCourseFeatureCommand.#ctor(System.Collections.Generic.List{System.Guid},System.Boolean)">
+            <summary>
+            批量启用/禁用课程特色服务
+            </summary>
+            <param name="Ids">Ids</param>
+            <param name="Enable">启用/禁用</param>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Domain.EnableCourseFeatureCommand.Ids">
+            <summary>Ids</summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Domain.EnableCourseFeatureCommand.Enable">
+            <summary>启用/禁用</summary>
+        </member>
+        <member name="T:HaoKao.CourseFeatureService.Domain.DeleteCourseFeatureCommand">
+            <summary>
+            批量删除课程特色服务命令
+            </summary>
+            <param name="Ids">Ids</param>
+        </member>
+        <member name="M:HaoKao.CourseFeatureService.Domain.DeleteCourseFeatureCommand.#ctor(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            批量删除课程特色服务命令
+            </summary>
+            <param name="Ids">Ids</param>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Domain.DeleteCourseFeatureCommand.Ids">
+            <summary>Ids</summary>
+        </member>
+        <member name="M:HaoKao.CourseFeatureService.Domain.CourseFeatureProfile.#ctor">
+            <summary>
+            配置构造函数，用来创建关系映射
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Domain.CourseFeatureQuery.Name">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Domain.CourseFeatureQuery.Enable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+    </members>
+</doc>

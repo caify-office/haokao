@@ -1,0 +1,953 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.WebsiteConfigurationService.Application</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.WebsiteConfigurationService.Application.Profiles.ColumnProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Profiles.ColumnProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.Profiles.ColumnProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.WebsiteConfigurationService.Application.Profiles.TemplateStyleProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Profiles.TemplateStyleProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.Profiles.TemplateStyleProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.WebsiteConfigurationService.Application.Profiles.WebsiteTemplateProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Profiles.WebsiteTemplateProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.Profiles.WebsiteTemplateProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.WebsiteConfigurationService.Application.Services.Management.ColumnService">
+            <summary>
+            栏目接口服务-管理端
+            </summary>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.ColumnService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.WebsiteConfigurationService.Domain.Repositories.IColumnRepository)">
+            <summary>
+            栏目接口服务-管理端
+            </summary>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.ColumnService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.ColumnService.Tree(HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.QueryColumnByDomainNameAndParentIdViewModel)">
+            <summary>
+            根据域名/父Id获取指定栏目的直接子栏目
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.ColumnService.Get(HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.ColumnQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.ColumnService.Create(HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.CreateColumnViewModel)">
+            <summary>
+            创建栏目
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.ColumnService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定栏目
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.ColumnService.Update(System.Guid,HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.UpdateColumnViewModel)">
+            <summary>
+            根据主键更新指定栏目
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.IColumnService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.IColumnService.Get(HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.ColumnQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.IColumnService.Create(HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.CreateColumnViewModel)">
+            <summary>
+            创建栏目
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.IColumnService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定栏目
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.IColumnService.Update(System.Guid,HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.UpdateColumnViewModel)">
+            <summary>
+            根据主键更新指定栏目
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.IColumnService.Tree(HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.QueryColumnByDomainNameAndParentIdViewModel)">
+            <summary>
+            根据域名获取指定栏目的直接子栏目
+            </summary>
+            <param name="model">域名模型</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.ITemplateStyleService.Get(HaoKao.WebsiteConfigurationService.Application.ViewModels.TemplateStyle.TemplateStyleQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.ITemplateStyleService.Create(HaoKao.WebsiteConfigurationService.Application.ViewModels.TemplateStyle.CreateTemplateStyleViewModel)">
+            <summary>
+            创建模板
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.ITemplateStyleService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定模板
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.IWebsiteTemplateService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.IWebsiteTemplateService.GetByDomainName(HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.QueryByDomainNameViewModel)">
+            <summary>
+            根据域名获取符合条件得模板
+            </summary>
+            <param name="model">域名</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.IWebsiteTemplateService.Get(HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.WebsiteTemplateQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.IWebsiteTemplateService.Create(HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.CreateWebsiteTemplateViewModel)">
+            <summary>
+            创建模板
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.IWebsiteTemplateService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定模板
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.IWebsiteTemplateService.Update(System.Guid,HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.UpdateWebsiteTemplateViewModel)">
+            <summary>
+            根据主键更新指定模板
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.IWebsiteTemplateService.Content(System.Guid,HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.SetWebsiteTemplateContentViewModel)">
+            <summary>
+            设置模板内容
+            </summary>
+            <param name="id">主键</param>
+            <param name="content">模板内容</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.IWebsiteTemplateService.Enable(System.Guid)">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.IWebsiteTemplateService.DisEnable(System.Guid)">
+            <summary>
+            禁用
+            </summary>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.IWebsiteTemplateService.Default(System.Guid)">
+            <summary>
+            设置为默认
+            </summary>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.IWebsiteTemplateService.CancelDefault(System.Guid)">
+            <summary>
+            取消默认
+            </summary>
+        </member>
+        <member name="T:HaoKao.WebsiteConfigurationService.Application.Services.Management.TemplateStyleService">
+            <summary>
+            模板样式接口服务-管理端
+            </summary>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.TemplateStyleService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.WebsiteConfigurationService.Domain.Repositories.ITemplateStyleRepository)">
+            <summary>
+            模板样式接口服务-管理端
+            </summary>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.TemplateStyleService.Get(HaoKao.WebsiteConfigurationService.Application.ViewModels.TemplateStyle.TemplateStyleQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.TemplateStyleService.Create(HaoKao.WebsiteConfigurationService.Application.ViewModels.TemplateStyle.CreateTemplateStyleViewModel)">
+            <summary>
+            创建模板样式
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.TemplateStyleService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定模板样式
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="T:HaoKao.WebsiteConfigurationService.Application.Services.Management.WebsiteTemplateService">
+            <summary>
+            模板接口服务-管理端
+            </summary>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.WebsiteTemplateService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.WebsiteConfigurationService.Domain.Repositories.IWebsiteTemplateRepository)">
+            <summary>
+            模板接口服务-管理端
+            </summary>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.WebsiteTemplateService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.WebsiteTemplateService.GetByDomainName(HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.QueryByDomainNameViewModel)">
+            <summary>
+            根据域名获取符合条件得模板
+            </summary>
+            <param name="model">域名</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.WebsiteTemplateService.Get(HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.WebsiteTemplateQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.WebsiteTemplateService.Create(HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.CreateWebsiteTemplateViewModel)">
+            <summary>
+            创建模板
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.WebsiteTemplateService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定模板
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.WebsiteTemplateService.Update(System.Guid,HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.UpdateWebsiteTemplateViewModel)">
+            <summary>
+            根据主键更新指定模板
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.WebsiteTemplateService.Content(System.Guid,HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.SetWebsiteTemplateContentViewModel)">
+            <summary>
+            设置模板内容
+            </summary>
+            <param name="id">主键</param>
+            <param name="content">模板内容</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.WebsiteTemplateService.Enable(System.Guid)">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.WebsiteTemplateService.DisEnable(System.Guid)">
+            <summary>
+            禁用
+            </summary>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.WebsiteTemplateService.Default(System.Guid)">
+            <summary>
+            设置为默认
+            </summary>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Management.WebsiteTemplateService.CancelDefault(System.Guid)">
+            <summary>
+            取消默认
+            </summary>
+        </member>
+        <member name="T:HaoKao.WebsiteConfigurationService.Application.Services.Web.ColumnWebService">
+            <summary>
+             栏目接口服务-Web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Web.ColumnWebService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,HaoKao.WebsiteConfigurationService.Domain.Repositories.IColumnRepository,HaoKao.WebsiteConfigurationService.Application.Services.Management.IColumnService)">
+            <summary>
+             栏目接口服务-Web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Web.ColumnWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Web.ColumnWebService.Get(HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.ColumnQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Web.ColumnWebService.GetChildrenColumn(HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.GetChildrenColumnViewModel)">
+            <summary>
+            根据域名和英文名查询符合条件栏目下面的子栏目信息
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Web.IColumnWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Web.IColumnWebService.Get(HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.ColumnQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Web.IColumnWebService.GetChildrenColumn(HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.GetChildrenColumnViewModel)">
+            <summary>
+              /// <summary>
+            根据域名和英文名查询符合条件栏目下面的子栏目信息
+            </summary>
+            <param name="model"></param>
+            </summary>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Web.ITemplateStyleWebService.Get(HaoKao.WebsiteConfigurationService.Application.ViewModels.TemplateStyle.TemplateStyleQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Web.IWebsiteTemplateWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Web.IWebsiteTemplateWebService.GetByDomainName(HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.QueryByDomainNameViewModel)">
+            <summary>
+            根据域名获取符合条件得模板
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Web.IWebsiteTemplateWebService.GetByDominNameAneEnglishName(HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.GetWebsiteTemplateContentViewModel)">
+            <summary>
+            获取当前域名，当且英文名下的模板
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.WebsiteConfigurationService.Application.Services.Web.TemplateStyleWebService">
+            <summary>
+            ģ����ʽ�ӿڷ���-Web��
+            </summary>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Web.TemplateStyleWebService.#ctor(HaoKao.WebsiteConfigurationService.Application.Services.Management.ITemplateStyleService)">
+            <summary>
+            ģ����ʽ�ӿڷ���-Web��
+            </summary>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Web.TemplateStyleWebService.Get(HaoKao.WebsiteConfigurationService.Application.ViewModels.TemplateStyle.TemplateStyleQueryViewModel)">
+            <summary>
+            ���ݲ�ѯ��ȡ�б������ڷ�ҳ
+            </summary>
+            <param name="queryViewModel">��ѯ����</param>
+        </member>
+        <member name="T:HaoKao.WebsiteConfigurationService.Application.Services.Web.WebsiteTemplateWebService">
+            <summary>
+            模板接口服务-Web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Web.WebsiteTemplateWebService.#ctor(HaoKao.WebsiteConfigurationService.Domain.Repositories.IWebsiteTemplateRepository,HaoKao.WebsiteConfigurationService.Application.Services.Management.IWebsiteTemplateService)">
+            <summary>
+            模板接口服务-Web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Web.WebsiteTemplateWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Web.WebsiteTemplateWebService.GetByDomainName(HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.QueryByDomainNameViewModel)">
+            <summary>
+            根据域名获取符合条件得模板
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:HaoKao.WebsiteConfigurationService.Application.Services.Web.WebsiteTemplateWebService.GetByDominNameAneEnglishName(HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.GetWebsiteTemplateContentViewModel)">
+            <summary>
+            获取当前域名，当且英文名下的模板
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.BrowseColumnViewModel.DomainName">
+            <summary>
+            域名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.BrowseColumnViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.BrowseColumnViewModel.Alias">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.BrowseColumnViewModel.EnglishName">
+            <summary>
+            英文名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.BrowseColumnViewModel.ParentId">
+            <summary>
+            父节点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.BrowseColumnViewModel.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.BrowseColumnViewModel.ActiveIcon">
+            <summary>
+            当前图标
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.BrowseColumnViewModel.IsHomePage">
+            <summary>
+            是否首页
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.BrowseColumnViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.BrowseColumnViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.ColumnQueryViewModel.DomainName">
+            <summary>
+            域名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.ColumnQueryViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.ColumnQueryListViewModel.DomainName">
+            <summary>
+            域名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.ColumnQueryListViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.ColumnQueryListViewModel.Alias">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.ColumnQueryListViewModel.EnglishName">
+            <summary>
+            英文名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.ColumnQueryListViewModel.ParentId">
+            <summary>
+            父节点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.ColumnQueryListViewModel.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.ColumnQueryListViewModel.ActiveIcon">
+            <summary>
+            当前图标
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.ColumnQueryListViewModel.IsHomePage">
+            <summary>
+            是否首页
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.ColumnQueryListViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.ColumnQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.SimpleColumnQueryListViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.SimpleColumnQueryListViewModel.EnglishName">
+            <summary>
+            英文名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.SimpleColumnQueryListViewModel.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.SimpleColumnQueryListViewModel.ActiveIcon">
+            <summary>
+            当前图标
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.CreateColumnViewModel.DomainName">
+            <summary>
+            域名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.CreateColumnViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.CreateColumnViewModel.Alias">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.CreateColumnViewModel.EnglishName">
+            <summary>
+            英文名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.CreateColumnViewModel.ParentId">
+            <summary>
+            父节点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.CreateColumnViewModel.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.CreateColumnViewModel.ActiveIcon">
+            <summary>
+            当前图标
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.CreateColumnViewModel.IsHomePage">
+            <summary>
+            是否是首页
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.CreateColumnViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.GetChildrenColumnViewModel.DomainName">
+            <summary>
+            域名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.GetChildrenColumnViewModel.EnglishName">
+            <summary>
+            英文名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.QueryColumnByDomainNameAndParentIdViewModel.DomainName">
+            <summary>
+            域名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.QueryColumnByDomainNameAndParentIdViewModel.ParentId">
+            <summary>
+            父节点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.UpdateColumnViewModel.DomainName">
+            <summary>
+            域名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.UpdateColumnViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.UpdateColumnViewModel.Alias">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.UpdateColumnViewModel.EnglishName">
+            <summary>
+            英文名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.UpdateColumnViewModel.ParentId">
+            <summary>
+            父节点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.UpdateColumnViewModel.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.UpdateColumnViewModel.ActiveIcon">
+            <summary>
+            当前图标
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.Column.UpdateColumnViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.TemplateStyle.BrowseTemplateStyleViewModel.DomainName">
+            <summary>
+            域名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.TemplateStyle.BrowseTemplateStyleViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.TemplateStyle.BrowseTemplateStyleViewModel.Path">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.TemplateStyle.CreateTemplateStyleViewModel.DomainName">
+            <summary>
+            域名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.TemplateStyle.CreateTemplateStyleViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.TemplateStyle.CreateTemplateStyleViewModel.Path">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.TemplateStyle.TemplateStyleQueryViewModel.DomainName">
+            <summary>
+            域名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.TemplateStyle.TemplateStyleQueryListViewModel.DomainName">
+            <summary>
+            域名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.TemplateStyle.TemplateStyleQueryListViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.TemplateStyle.TemplateStyleQueryListViewModel.Path">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.TemplateStyle.TemplateStyleQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.TemplateStyle.UpdateTemplateStyleViewModel.DomainName">
+            <summary>
+            域名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.TemplateStyle.UpdateTemplateStyleViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.TemplateStyle.UpdateTemplateStyleViewModel.Path">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.BrowseWebsiteTemplateViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.BrowseWebsiteTemplateViewModel.WebsiteTemplateType">
+            <summary>
+            模板类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.BrowseWebsiteTemplateViewModel.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.BrowseWebsiteTemplateViewModel.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.BrowseWebsiteTemplateViewModel.ColumnId">
+            <summary>
+            所属栏目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.BrowseWebsiteTemplateViewModel.ColumnName">
+            <summary>
+            所属栏目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.BrowseWebsiteTemplateViewModel.IsDefault">
+            <summary>
+            是否默认
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.CreateWebsiteTemplateViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.CreateWebsiteTemplateViewModel.WebsiteTemplateType">
+            <summary>
+            网站模板类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.CreateWebsiteTemplateViewModel.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.CreateWebsiteTemplateViewModel.ColumnId">
+            <summary>
+            所属栏目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.CreateWebsiteTemplateViewModel.ColumnName">
+            <summary>
+            所属栏目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.CreateWebsiteTemplateViewModel.IsDefault">
+            <summary>
+            是否默认
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.GetWebsiteTemplateContentViewModel.DomainName">
+            <summary>
+            域名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.GetWebsiteTemplateContentViewModel.EnglishName">
+            <summary>
+            英文名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.QueryByDomainNameViewModel.DomainName">
+            <summary>
+            域名
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.SetWebsiteTemplateContentViewModel.Content">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.UpdateWebsiteTemplateViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.UpdateWebsiteTemplateViewModel.WebsiteTemplateType">
+            <summary>
+            网站模板类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.UpdateWebsiteTemplateViewModel.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.UpdateWebsiteTemplateViewModel.ColumnId">
+            <summary>
+            所属栏目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.UpdateWebsiteTemplateViewModel.ColumnName">
+            <summary>
+            所属栏目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.UpdateWebsiteTemplateViewModel.IsDefault">
+            <summary>
+            是否默认
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.WebsiteTemplateQueryViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.WebsiteTemplateQueryViewModel.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.WebsiteTemplateQueryViewModel.ColumnId">
+            <summary>
+            所属栏目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.WebsiteTemplateQueryViewModel.ColumnName">
+            <summary>
+            所属栏目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.WebsiteTemplateQueryViewModel.IsEnable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.WebsiteTemplateQueryViewModel.IsDefault">
+            <summary>
+            是否默认
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.WebsiteTemplateQueryListViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.WebsiteTemplateQueryListViewModel.WebsiteTemplateType">
+            <summary>
+            模板类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.WebsiteTemplateQueryListViewModel.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.WebsiteTemplateQueryListViewModel.ColumnId">
+            <summary>
+            所属栏目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.WebsiteTemplateQueryListViewModel.ColumnName">
+            <summary>
+            所属栏目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.WebsiteTemplateQueryListViewModel.IsDefault">
+            <summary>
+            是否默认
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.WebsiteTemplateQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.WebsiteTemplateQueryWebListViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.WebsiteTemplateQueryWebListViewModel.WebsiteTemplateType">
+            <summary>
+            模板类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.WebsiteTemplateQueryWebListViewModel.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.WebsiteTemplateQueryWebListViewModel.ColumnId">
+            <summary>
+            所属栏目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.WebsiteTemplateQueryWebListViewModel.ColumnName">
+            <summary>
+            所属栏目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.WebsiteConfigurationService.Application.ViewModels.WebsiteTemplate.WebsiteTemplateQueryWebListViewModel.IsDefault">
+            <summary>
+            是否默认
+            </summary>
+        </member>
+    </members>
+</doc>

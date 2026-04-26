@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <script src="js/signalr.js"></script>
+        <script src="js/signalr-protocol-msgpack.js"></script>
+        <script>
+            const tenantId = "08db5bf2-afae-4d40-8896-18e7e86b6b37";
+
+            // const currentRoom = "bc6604d7-784a-409c-baca-0b3c622240e8";
+            const currentRoom = "08dc4c6e-dca0-42fe-8ae1-f3dfdd7e6c60";
+
+            const token =
+                "eyJhbGciOiJSUzI1NiIsImtpZCI6IjYwMjVFODY5RUIyRUU5NUQzNkQ0Q0EzQTlEOEI4RTM1OEU3MjcwRThSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6IllDWG9hZXN1NlYwMjFNbzZuWXVPTlk1eWNPZyJ9.eyJuYmYiOjE3MTU2Nzg0OTksImV4cCI6MTcxODI3MDQ5OSwiaXNzIjoiaHR0cHM6Ly9hY2NvdW50cy5oYW9rYW8xMjMuY29tL29hdXRoIiwiYXVkIjpbImhhb2thby1zdHVkZW50c2VydmljZS13ZWJhcGkiLCJoYW9rYW8tdXNlcmFuc3dlcnJlY29yZHNlcnZpY2Utd2ViYXBpIiwiaGFva2FvLXVzZXJxdWVzdGlvbmNvbGxlY3Rpb25zZXJ2aWNlLXdlYmFwaSIsImhhb2thby1vcGVucGxhdGZvcm1zZXJ2aWNlLXdlYmFwaSIsImhhb2thby10ZW5hbnRzZXJ2aWNlLXdlYmFwaSIsImhhb2thby11c2Vyd3JvbmdhbnN3ZXJzZXJ2aWNlLXdlYmFwaSIsImhhb2thby1xdWVzdGlvbnNlcnZpY2Utd2ViYXBpIiwiaGFva2FvLW5vdGlmaWNhdGlvbm1lc3NhZ2VzZXJ2aWNlLXdlYmFwaSIsImhhb2thby1wYXBlcnNlcnZpY2Utd2ViYXBpIiwiaGFva2FvLWF1ZGl0bG9nc2VydmljZS13ZWJhcGkiLCJoYW9rYW8tcXVlc3Rpb25jYXRlZ29yeXNlcnZpY2Utd2ViYXBpIiwiaGFva2FvLWdyb3VwYm9va2luZ3NlcnZpY2Utd2ViYXBpIiwiaGFva2FvLWRhdGFkaWN0aW9uYXJ5c2VydmljZS13ZWJhcGkiLCJoYW9rYW8tYmFzaWNzZXJ2aWNlLXdlYmFwaSIsImhhb2thby1jaGFwdGVybm9kZXNlcnZpY2Utd2ViYXBpIiwiaGFva2FvLWtub3dsZWRnZXBvaW50c2VydmljZS13ZWJhcGkiLCJoYW9rYW8tcGFwZXJ0ZW1wbGV0ZXNlcnZpY2Utd2ViYXBpIiwiaGFva2FvLXN1YmplY3RzZXJ2aWNlLXdlYmFwaSIsImhhb2thby1lcnJvcmNvcnJlY3RpbmdzZXJ2aWNlLXdlYmFwaSIsImhhb2thby1xdWVzdGlvbmJhbmttZW1iZXJzZXJ2aWNlLXdlYmFwaSIsImhhb2thby1vcmRlcnNlcnZpY2Utd2ViYXBpIiwiaGFva2FvLWFuc3dlcmluZ3F1ZXN0aW9uc2VydmljZS13ZWJhcGkiLCJoYW9rYW8tbGVhcm5wcm9ncmVzc3NlcnZpY2Utd2ViYXBpIiwiaGFva2FvLXByb2R1Y3RzZXJ2aWNlLXdlYmFwaSIsImhhb2thby1jb3Vyc2VzZXJ2aWNlLXdlYmFwaSIsImhhb2thby1jb3Vyc2VyYXRpbmdzZXJ2aWNlLXdlYmFwaSIsImhhb2thby1jb3Vyc2VmZWF0dXJlc2VydmljZS13ZWJhcGkiLCJoYW9rYW8tYWdyZWVtZW50c2VydmljZS13ZWJhcGkiLCJoYW9rYW8tc3R1ZHltYXRlcmlhbHNlcnZpY2Utd2ViYXBpIiwiaGFva2FvLWNvbnRpbnVhdGlvbnNlcnZpY2Utd2ViYXBpIiwiaGFva2FvLWZlZWRiYWNrc2VydmljZS13ZWJhcGkiLCJoYW9rYW8tY291cG9uc2VydmljZS13ZWJhcGkiLCJoYW9rYW8tbm90aWNlc2VydmljZS13ZWJhcGkiLCJoYW9rYW8tbGl2ZWJyb2FkY2FzdHNlcnZpY2Utd2ViYXBpIl0sImNsaWVudF9pZCI6IjE2Ni53ZWIuY2xpZW50Iiwic3ViIjoiMDhkYjZiMWItMTAxMy00YTJmLTg0YjctMjMzNTIwNDU2MGI4IiwiYXV0aF90aW1lIjoxNzE1Njc4NDk5LCJpZHAiOiJsb2NhbCIsInpmX3NpYiI6IjA4ZGI2YjFiLTEwMTMtNGEyZi04NGI3LTIzMzUyMDQ1NjBiOCIsInpmX3NuYW1lIjoi5rGf5bGx5Li66IGYIiwiemZfaXR5cGUiOiJSZWdpc3RlclVzZXIiLCJ6Zl9jc20iOiJBbGwiLCJpYXQiOjE3MTU2Nzg0OTksInNjb3BlIjpbImFwaXNlcnZpY2UiLCJvcGVuaWQiLCJwaG9uZSIsInByb2ZpbGUiXSwiYW1yIjpbInB3ZCJdfQ.2TOdZn3jN8xW3-0xxIZRZZ2vMZMnjJWQA0Ocby_CYG7_UZQT5DXPZvCfns4QTAgOIFgSkA91knJpuMToO-rSftmUJ_ZFnz4qW1zlR0znXFYieIdakC9gGhp33RevNguCn-LEXkniYFYHOlu6IuWrbF6P3iuigxm9HwnridApaOSCHpTY-AliuhV-6CAVvmcCL2ETuMHUPHr4klhdI0hheaElP6h9895Q5OvwgPM9KZlQ97swt6nCOBXsYNzHfbRLzDEJd_9etHOWJ2aZexrG9NpxIxLAGh8L4yaO3BLyt3z_gjpq1-tzBIIRVpIghW1Ly4N1oduXYN63389lsQKHAA";
+
+            let connection = new signalR.HubConnectionBuilder()
+                .withHubProtocol(new signalR.protocols.msgpack.MessagePackHubProtocol())
+                // .withUrl(`http://192.168.51.166/HaoKao_LiveBroadcastService_WebApi/hubs/liveChatHub?tenantId=${tenantId}&liveId=${currentRoom}&phone=18810987762`,
+                .withUrl(`/hubs/liveChatHub?tenantId=${tenantId}&liveId=${currentRoom}&phone=18810987762`,
+                    {
+                        accessTokenFactory: () => token,
+                    }
+                )
+                .build();
+
+            connection.on("ChatMessage", msg => console.log(msg));
+
+            connection.on("MentionUser", msg => console.log(msg));
+
+            connection.on("OnlineCount", c => console.log(`当前在线人数: ${c}`));
+
+            connection.on("JoinRoom", msg => console.log(msg));
+
+            connection.on("PinTopMessage", data => console.log(data));
+
+            const start = () => connection.start().then(() => console.log("connection started"));
+
+            const send = msg =>
+                connection.send("ChatMessage", { LiveId: currentRoom, Content: msg }).catch(function (e) {
+                    console.error("Error message: ", e.message);
+                });
+
+            const mention = msg =>
+                connection.send("MentionMessage", { LiveId: currentRoom, Content: msg, MentionUserIds: ["08db6b1b-1013-4a2f-84b7-2335204560b8"] }).catch(function (e) {
+                    console.error("Error message: ", e.message);
+                });
+
+            const pin = () => connection.send("PinTopMessage", { LiveId: currentRoom, MessageId: "c690434a-12fe-47e4-a373-7d368baa221b", Countdown: 60 });
+
+            const count = () => connection.invoke("OnlineUserCount").then(data => console.log(data));
+
+            const comment = () => {
+                fetch("api/WebSite/LiveCommentWebService", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        TenantId: tenantId,
+                        Authorization: "Bearer " + token,
+                    },
+                    body: JSON.stringify({
+                        liveId: currentRoom,
+                        phone: "18810987762",
+                        rating: 5,
+                        content: "Great!",
+                    }),
+                }).then(res => console.log(res));
+            };
+        </script>
+    </body>
+</html>

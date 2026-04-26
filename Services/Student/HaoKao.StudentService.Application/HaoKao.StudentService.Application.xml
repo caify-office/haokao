@@ -1,0 +1,734 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.StudentService.Application</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.StudentService.Application.Interfaces.IStudentAllocationConfigService.Get">
+            <summary>
+            获取当前租户下的学员分配配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Interfaces.IStudentAllocationConfigService.Create(HaoKao.StudentService.Application.ViewModels.SaveStudentAllocationConfigViewModel)">
+            <summary>
+            保存学员分配配置
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Interfaces.IStudentAllocationService.Get(HaoKao.StudentService.Application.ViewModels.QueryStudentAllocationViewModel)">
+            <summary>
+            分页查询学员分配
+            </summary>
+            <param name="input">查询条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Interfaces.IStudentAllocationService.UpdateAllocateTo(HaoKao.StudentService.Application.ViewModels.UpdateAllocateToViewModel)">
+            <summary>
+            批量修改分配
+            </summary>
+            <param name="input">输入</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Interfaces.IStudentAllocationService.UpdateRemark(HaoKao.StudentService.Application.ViewModels.UpdateRemarkViewModel)">
+            <summary>
+            备注
+            </summary>
+            <param name="input">输入</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Interfaces.IStudentParameterConfigService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Interfaces.IStudentParameterConfigService.Get(HaoKao.StudentService.Application.ViewModels.QueryStudentParameterConfigViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="model">查询对象</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Interfaces.IStudentParameterConfigService.Create(HaoKao.StudentService.Application.ViewModels.CreateStudentParameterConfigViewModel)">
+            <summary>
+            创建学员参数设置
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Interfaces.IStudentParameterConfigService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定学员参数设置
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Interfaces.IStudentParameterConfigService.Update(HaoKao.StudentService.Application.ViewModels.UpdateStudentParameterConfigViewModel)">
+            <summary>
+            根据主键更新指定学员参数设置
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Interfaces.IStudentParameterConfigWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Interfaces.IStudentParameterConfigWebService.Get(HaoKao.StudentService.Application.ViewModels.QueryStudentParameterConfigViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="model">查询对象</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Interfaces.IStudentParameterConfigWebService.Save(HaoKao.StudentService.Application.ViewModels.CreateStudentParameterConfigViewModel)">
+            <summary>
+            保存学员参数设置
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Interfaces.IStudentParameterConfigWebService.GetEffectiveNextDay(HaoKao.StudentService.Application.ViewModels.StudentParameterConfigQueryEffectiveNextDayViewModel)">
+            <summary>
+            条件查询(隔日生效)
+            </summary>
+            <param name="model">查询对象</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Interfaces.IStudentParameterConfigWebService.SaveEffectiveNextDay(HaoKao.StudentService.Application.ViewModels.CreateStudentParameterConfigViewModel)">
+            <summary>
+            保存学员参数设置(隔日生效)
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Interfaces.IStudentParameterConfigWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Interfaces.IStudentParameterConfigWeChatService.Get(HaoKao.StudentService.Application.ViewModels.QueryStudentParameterConfigViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="model">查询对象</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Interfaces.IStudentParameterConfigWeChatService.Save(HaoKao.StudentService.Application.ViewModels.CreateStudentParameterConfigViewModel)">
+            <summary>
+            保存学员参数设置
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Interfaces.IStudentParameterConfigWeChatService.GetEffectiveNextDay(HaoKao.StudentService.Application.ViewModels.StudentParameterConfigQueryEffectiveNextDayViewModel)">
+            <summary>
+            条件查询(隔日生效)
+            </summary>
+            <param name="model">查询对象</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Interfaces.IStudentParameterConfigWeChatService.SaveEffectiveNextDay(HaoKao.StudentService.Application.ViewModels.CreateStudentParameterConfigViewModel)">
+            <summary>
+            保存学员参数设置(隔日生效)
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Interfaces.IStudentService.Get(HaoKao.StudentService.Application.ViewModels.QueryStudentViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="model">查询对象</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Interfaces.IStudentWebService.Get">
+            <summary>
+            获取当前租户下的学员信息
+            </summary>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Interfaces.IStudentWeChatService.Get">
+            <summary>
+            获取当前租户下的学员信息
+            </summary>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Profiles.AutoMapperProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.Profiles.AutoMapperProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.StudentService.Application.Services.StudentAllocationConfigService">
+            <summary>
+            学员分配设置服务--管理端
+            </summary>
+            <param name="bus"></param>
+            <param name="notifications"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentAllocationConfigService.#ctor(Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.StudentService.Domain.Repositories.IStudentAllocationConfigRepository)">
+            <summary>
+            学员分配设置服务--管理端
+            </summary>
+            <param name="bus"></param>
+            <param name="notifications"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentAllocationConfigService.Get">
+            <summary>
+            获取当前租户下的学员分配配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentAllocationConfigService.Create(HaoKao.StudentService.Application.ViewModels.SaveStudentAllocationConfigViewModel)">
+            <summary>
+            保存学员分配配置
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.StudentService.Application.Services.StudentAllocationService">
+            <summary>
+            学员分配服务--管理端
+            </summary>
+            <param name="cacheManager"></param>
+            <param name="bus"></param>
+            <param name="notifications"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentAllocationService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.StudentService.Domain.Repositories.IStudentAllocationRepository)">
+            <summary>
+            学员分配服务--管理端
+            </summary>
+            <param name="cacheManager"></param>
+            <param name="bus"></param>
+            <param name="notifications"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentAllocationService.Get(HaoKao.StudentService.Application.ViewModels.QueryStudentAllocationViewModel)">
+            <summary>
+            分页查询学员分配
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentAllocationService.UpdateAllocateTo(HaoKao.StudentService.Application.ViewModels.UpdateAllocateToViewModel)">
+            <summary>
+            批量修改分配
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentAllocationService.UpdateRemark(HaoKao.StudentService.Application.ViewModels.UpdateRemarkViewModel)">
+            <summary>
+            备注
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="T:HaoKao.StudentService.Application.Services.StudentParameterConfigService">
+            <summary>
+            学员参数设置接口服务-管理端
+            </summary>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentParameterConfigService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.StudentService.Domain.Repositories.IStudentParameterConfigRepository)">
+            <summary>
+            学员参数设置接口服务-管理端
+            </summary>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentParameterConfigService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentParameterConfigService.Get(HaoKao.StudentService.Application.ViewModels.QueryStudentParameterConfigViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentParameterConfigService.Create(HaoKao.StudentService.Application.ViewModels.CreateStudentParameterConfigViewModel)">
+            <summary>
+            创建学员参数设置
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentParameterConfigService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定学员参数设置
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentParameterConfigService.Update(HaoKao.StudentService.Application.ViewModels.UpdateStudentParameterConfigViewModel)">
+            <summary>
+            根据主键更新指定学员参数设置
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.StudentService.Application.Services.StudentParameterConfigWebService">
+            <summary>
+            学员参数设置接口服务-Web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentParameterConfigWebService.#ctor(Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},Girvs.Cache.Caching.IStaticCacheManager,HaoKao.StudentService.Domain.Repositories.IStudentParameterConfigRepository,HaoKao.StudentService.Application.Interfaces.IStudentParameterConfigService)">
+            <summary>
+            学员参数设置接口服务-Web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentParameterConfigWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentParameterConfigWebService.Get(HaoKao.StudentService.Application.ViewModels.QueryStudentParameterConfigViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentParameterConfigWebService.Save(HaoKao.StudentService.Application.ViewModels.CreateStudentParameterConfigViewModel)">
+            <summary>
+            保存学员参数设置
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentParameterConfigWebService.GetEffectiveNextDay(HaoKao.StudentService.Application.ViewModels.StudentParameterConfigQueryEffectiveNextDayViewModel)">
+            <summary>
+            条件查询(隔日生效)
+            </summary>
+            <param name="model">查询对象</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentParameterConfigWebService.SaveEffectiveNextDay(HaoKao.StudentService.Application.ViewModels.CreateStudentParameterConfigViewModel)">
+            <summary>
+            保存学员参数设置(隔日生效)
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.StudentService.Application.Services.StudentParameterConfigWeChatService">
+            <summary>
+            学员参数设置接口服务-WeChat端
+            </summary>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentParameterConfigWeChatService.#ctor(HaoKao.StudentService.Application.Interfaces.IStudentParameterConfigWebService)">
+            <summary>
+            学员参数设置接口服务-WeChat端
+            </summary>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentParameterConfigWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentParameterConfigWeChatService.Get(HaoKao.StudentService.Application.ViewModels.QueryStudentParameterConfigViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="model">查询对象</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentParameterConfigWeChatService.Save(HaoKao.StudentService.Application.ViewModels.CreateStudentParameterConfigViewModel)">
+            <summary>
+            保存学员参数设置
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentParameterConfigWeChatService.GetEffectiveNextDay(HaoKao.StudentService.Application.ViewModels.StudentParameterConfigQueryEffectiveNextDayViewModel)">
+            <summary>
+            条件查询(隔日生效)
+            </summary>
+            <param name="model">查询对象</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentParameterConfigWeChatService.SaveEffectiveNextDay(HaoKao.StudentService.Application.ViewModels.CreateStudentParameterConfigViewModel)">
+            <summary>
+            保存学员参数设置(隔日生效)
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.StudentService.Application.Services.StudentService">
+            <summary>
+            学员接口服务--管理端
+            </summary>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,HaoKao.StudentService.Domain.Repositories.IStudentRepository)">
+            <summary>
+            学员接口服务--管理端
+            </summary>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentService.Get(HaoKao.StudentService.Application.ViewModels.QueryStudentViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="model">查询对象</param>
+        </member>
+        <member name="T:HaoKao.StudentService.Application.Services.StudentWebService">
+            <summary>
+            学员接口服务--Web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentWebService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.StudentService.Domain.Repositories.IStudentRepository)">
+            <summary>
+            学员接口服务--Web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentWebService.Get">
+            <summary>
+            获取当前租户下的学员信息
+            </summary>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentWebService.Create">
+            <summary>
+            创建学员
+            </summary>
+        </member>
+        <member name="T:HaoKao.StudentService.Application.Services.StudentWeChatService">
+            <summary>
+            学员接口服务--WeChat端
+            </summary>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentWeChatService.#ctor(HaoKao.StudentService.Application.Interfaces.IStudentWebService)">
+            <summary>
+            学员接口服务--WeChat端
+            </summary>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.Services.StudentWeChatService.Get">
+            <summary>
+            获取当前租户下的学员信息
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentAllocationConfigViewModel.Data">
+            <summary>
+            配置数据
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentAllocationConfigViewModel.WaysOfAllocation">
+            <summary>
+            分配方式
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.SaveStudentAllocationConfigViewModel.Data">
+            <summary>
+            配置数据
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.SaveStudentAllocationConfigViewModel.WaysOfAllocation">
+            <summary>
+            分配方式
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.SaveStudentAllocationConfigViewModel.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.QueryStudentAllocationViewModel.SearchKey">
+            <summary>
+            手机号/昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.QueryStudentAllocationViewModel.AllocateToSalesperson">
+            <summary>
+            分配销售
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.QueryStudentAllocationViewModel.FollowedSalesperson">
+            <summary>
+            已加销售
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.QueryStudentAllocationViewModel.StartAllocationTime">
+            <summary>
+            分配时间(开始)
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.QueryStudentAllocationViewModel.EndAllocationTime">
+            <summary>
+            分配时间(结束)
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.QueryStudentAllocationViewModel.IsFollowed">
+            <summary>
+            添加状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentAllocationViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentAllocationViewModel.NickName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentAllocationViewModel.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentAllocationViewModel.RegisterTime">
+            <summary>
+            注册时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentAllocationViewModel.SalespersonName">
+            <summary>
+            分配销售
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentAllocationViewModel.FollowedSalesperson">
+            <summary>
+            已加销售
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentAllocationViewModel.AllocationTime">
+            <summary>
+            分配时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentAllocationViewModel.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentAllocationViewModel.Student">
+            <summary>
+            学员
+            </summary>
+        </member>
+        <member name="T:HaoKao.StudentService.Application.ViewModels.UpdateAllocateToViewModel">
+            <summary>
+            更新学员分配给销售视图模型
+            </summary>
+            <param name="Ids"></param>
+            <param name="SalespersonId"></param>
+            <param name="SalespersonName"></param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.ViewModels.UpdateAllocateToViewModel.#ctor(System.Collections.Generic.IReadOnlyList{System.Guid},System.Guid,System.String)">
+            <summary>
+            更新学员分配给销售视图模型
+            </summary>
+            <param name="Ids"></param>
+            <param name="SalespersonId"></param>
+            <param name="SalespersonName"></param>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.UpdateAllocateToViewModel.Ids">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.UpdateAllocateToViewModel.SalespersonId">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.UpdateAllocateToViewModel.SalespersonName">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.StudentService.Application.ViewModels.UpdateRemarkViewModel">
+            <summary>
+            更新备注视图模型
+            </summary>
+            <param name="Id">Id</param>
+            <param name="Remark">备注</param>
+        </member>
+        <member name="M:HaoKao.StudentService.Application.ViewModels.UpdateRemarkViewModel.#ctor(System.Guid,System.String)">
+            <summary>
+            更新备注视图模型
+            </summary>
+            <param name="Id">Id</param>
+            <param name="Remark">备注</param>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.UpdateRemarkViewModel.Id">
+            <summary>Id</summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.UpdateRemarkViewModel.Remark">
+            <summary>备注</summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.QueryStudentParameterConfigViewModel.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.QueryStudentParameterConfigViewModel.PropertyName">
+            <summary>
+            设置值字段名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.QueryStudentParameterConfigViewModel.PropertyType">
+            <summary>
+            设置值类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.QueryStudentParameterConfigViewModel.PropertyValue">
+            <summary>
+            设置值
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.StudentParameterConfigQueryEffectiveNextDayViewModel.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.StudentParameterConfigQueryEffectiveNextDayViewModel.PropertyName">
+            <summary>
+            设置值字段名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.StudentParameterConfigQueryEffectiveNextDayViewModel.PropertyType">
+            <summary>
+            设置值类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentParameterConfigViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentParameterConfigViewModel.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentParameterConfigViewModel.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentParameterConfigViewModel.PropertyName">
+            <summary>
+            设置值字段名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentParameterConfigViewModel.PropertyType">
+            <summary>
+            设置值类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentParameterConfigViewModel.PropertyValue">
+            <summary>
+            设置值
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentParameterConfigViewModel.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.CreateStudentParameterConfigViewModel.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.CreateStudentParameterConfigViewModel.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.CreateStudentParameterConfigViewModel.PropertyName">
+            <summary>
+            设置值字段名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.CreateStudentParameterConfigViewModel.PropertyType">
+            <summary>
+            设置值类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.CreateStudentParameterConfigViewModel.PropertyValue">
+            <summary>
+            设置值
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.CreateStudentParameterConfigViewModel.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.UpdateStudentParameterConfigViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.QueryStudentViewModel.SearchKey">
+            <summary>
+            昵称/手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.QueryStudentViewModel.IsPaidStudent">
+            <summary>
+            是否付费学员
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.QueryStudentViewModel.IsFollowedSalesperson">
+            <summary>
+            是否加销售
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.QueryStudentViewModel.SalespersonName">
+            <summary>
+            销售名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.QueryStudentViewModel.StartTime">
+            <summary>
+            注册开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.QueryStudentViewModel.EndTime">
+            <summary>
+            注册结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentViewModel.RegisterUserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentViewModel.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentViewModel.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentViewModel.EmailAddress">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentViewModel.IsPaidStudent">
+            <summary>
+            是否付费学员
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentViewModel.RegisterTime">
+            <summary>
+            注册时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentViewModel.FollowedSalesperson">
+            <summary>
+            已加销售
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentViewModel.TenantId">
+            <summary>
+            当前租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentViewModel.RegisterUser">
+            <summary>
+            注册用户
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudentService.Application.ViewModels.BrowseStudentViewModel.StudentFollows">
+            <summary>
+            已加销售
+            </summary>
+        </member>
+    </members>
+</doc>

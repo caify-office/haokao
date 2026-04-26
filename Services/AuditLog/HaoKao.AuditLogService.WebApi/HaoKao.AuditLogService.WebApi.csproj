@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <DockerfileContext>..\..\..</DockerfileContext>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Girvs.Swagger" Version="9.0.5.3"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\HaoKao.AuditLogService.Application\HaoKao.AuditLogService.Application.csproj"/>
+        <ProjectReference Include="..\HaoKao.AuditLogService.Infrastructure\HaoKao.AuditLogService.Infrastructure.csproj"/>
+    </ItemGroup>
+
+</Project>

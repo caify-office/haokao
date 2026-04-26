@@ -1,0 +1,1894 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.LiveBroadcastService.Domain</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.CommandHandlers.LiveVideoCommandHandler.CreatePullUrl(System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.String,System.Int64)">
+            <summary>
+            生成播流地址
+            </summary>
+            <param name="requestDic"></param>
+            <param name="appName">app名称</param>
+            <param name="streamName">流名称</param>
+            <param name="expireTime">过期时间（单位是秒）</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.CommandHandlers.LiveVideoCommandHandler.CreatePushUrl(HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.CreateLiveVideoUrlViewModel)">
+            <summary>
+            生成推流地址
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveAdministrator.CreateLiveAdministratorCommand">
+            <summary>
+            创建直播管理员命令
+            </summary>
+            <param name="UserId">用户Id</param>
+            <param name="Name">姓名</param>
+            <param name="Phone">手机号</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveAdministrator.CreateLiveAdministratorCommand.#ctor(System.Guid,System.String,System.String)">
+            <summary>
+            创建直播管理员命令
+            </summary>
+            <param name="UserId">用户Id</param>
+            <param name="Name">姓名</param>
+            <param name="Phone">手机号</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveAdministrator.CreateLiveAdministratorCommand.UserId">
+            <summary>用户Id</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveAdministrator.CreateLiveAdministratorCommand.Name">
+            <summary>姓名</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveAdministrator.CreateLiveAdministratorCommand.Phone">
+            <summary>手机号</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveAdministrator.DeleteLiveAdministratorCommand">
+            <summary>
+            删除直播管理员命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveAdministrator.DeleteLiveAdministratorCommand.#ctor(System.Guid)">
+            <summary>
+            删除直播管理员命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveAdministrator.DeleteLiveAdministratorCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveAnnouncement.CreateLiveAnnouncementCommand">
+            <summary>
+            创建直播公告命令
+            </summary>
+            <param name="Title">标题</param>
+            <param name="Content">内容</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveAnnouncement.CreateLiveAnnouncementCommand.#ctor(System.String,System.String)">
+            <summary>
+            创建直播公告命令
+            </summary>
+            <param name="Title">标题</param>
+            <param name="Content">内容</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveAnnouncement.CreateLiveAnnouncementCommand.Title">
+            <summary>标题</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveAnnouncement.CreateLiveAnnouncementCommand.Content">
+            <summary>内容</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveAnnouncement.DeleteLiveAnnouncementCommand">
+            <summary>
+            删除直播公告命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveAnnouncement.DeleteLiveAnnouncementCommand.#ctor(System.Guid)">
+            <summary>
+            删除直播公告命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveAnnouncement.DeleteLiveAnnouncementCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveAnnouncement.UpdateLiveAnnouncementCommand">
+            <summary>
+            更新直播公告命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Title">标题</param>
+            <param name="Content">内容</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveAnnouncement.UpdateLiveAnnouncementCommand.#ctor(System.Guid,System.String,System.String)">
+            <summary>
+            更新直播公告命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Title">标题</param>
+            <param name="Content">内容</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveAnnouncement.UpdateLiveAnnouncementCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveAnnouncement.UpdateLiveAnnouncementCommand.Title">
+            <summary>标题</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveAnnouncement.UpdateLiveAnnouncementCommand.Content">
+            <summary>内容</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveComment.CreateLiveCommentCommand">
+            <summary>
+            创建直播评论命令
+            </summary>
+            <param name="Phone">手机号</param>
+            <param name="Rating">评分</param>
+            <param name="Content">评价内容</param>
+            <param name="LiveId">直播Id</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveComment.CreateLiveCommentCommand.#ctor(System.String,System.Int32,System.String,System.Guid)">
+            <summary>
+            创建直播评论命令
+            </summary>
+            <param name="Phone">手机号</param>
+            <param name="Rating">评分</param>
+            <param name="Content">评价内容</param>
+            <param name="LiveId">直播Id</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveComment.CreateLiveCommentCommand.Phone">
+            <summary>手机号</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveComment.CreateLiveCommentCommand.Rating">
+            <summary>评分</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveComment.CreateLiveCommentCommand.Content">
+            <summary>评价内容</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveComment.CreateLiveCommentCommand.LiveId">
+            <summary>直播Id</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.CreateLiveCouponCommand">
+            <summary>
+            创建直播产品包命令
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.CreateLiveCouponCommand.#ctor(System.Collections.Generic.List{HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.CreateLiveCouponModel})">
+            <summary>
+            创建直播产品包命令
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.CreateLiveCouponModel">
+            <param name="LiveVideoId">所属视频直播Id</param>
+            <param name="LiveCouponId">优惠卷Id</param>
+            <param name="LiveCouponName">优惠卷名称</param>
+            <param name="Amount">金额/折扣--合并一个字段  折扣85折显示0.85</param>
+            <param name="CouponType">优惠券类型 1-抵用券 2-折扣券</param>
+            <param name="Scope">适用范围</param>
+            <param name="IsShelves">是否上架</param>
+            <param name="Sort">排序</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.CreateLiveCouponModel.#ctor(System.Guid,System.Guid,System.String,System.Decimal,HaoKao.LiveBroadcastService.Domain.Enumerations.CouponTypeEnum,HaoKao.LiveBroadcastService.Domain.Enumerations.ScopeEnum,System.Boolean,System.Int32)">
+            <param name="LiveVideoId">所属视频直播Id</param>
+            <param name="LiveCouponId">优惠卷Id</param>
+            <param name="LiveCouponName">优惠卷名称</param>
+            <param name="Amount">金额/折扣--合并一个字段  折扣85折显示0.85</param>
+            <param name="CouponType">优惠券类型 1-抵用券 2-折扣券</param>
+            <param name="Scope">适用范围</param>
+            <param name="IsShelves">是否上架</param>
+            <param name="Sort">排序</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.CreateLiveCouponModel.LiveVideoId">
+            <summary>所属视频直播Id</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.CreateLiveCouponModel.LiveCouponId">
+            <summary>优惠卷Id</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.CreateLiveCouponModel.LiveCouponName">
+            <summary>优惠卷名称</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.CreateLiveCouponModel.Amount">
+            <summary>金额/折扣--合并一个字段  折扣85折显示0.85</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.CreateLiveCouponModel.CouponType">
+            <summary>优惠券类型 1-抵用券 2-折扣券</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.CreateLiveCouponModel.Scope">
+            <summary>适用范围</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.CreateLiveCouponModel.IsShelves">
+            <summary>是否上架</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.CreateLiveCouponModel.Sort">
+            <summary>排序</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.DeleteLiveCouponCommand">
+            <summary>
+            删除直播优惠卷命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.DeleteLiveCouponCommand.#ctor(System.Guid)">
+            <summary>
+            删除直播优惠卷命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.DeleteLiveCouponCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.SetLiveCouponShelvesCommand">
+            <summary>
+            修改产品上下架
+            </summary>
+            <param name="Ids"></param>
+            <param name="IsShelves">产品上下架</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.SetLiveCouponShelvesCommand.#ctor(System.Collections.Generic.ICollection{System.Guid},System.Boolean)">
+            <summary>
+            修改产品上下架
+            </summary>
+            <param name="Ids"></param>
+            <param name="IsShelves">产品上下架</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.SetLiveCouponShelvesCommand.Ids">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.SetLiveCouponShelvesCommand.IsShelves">
+            <summary>产品上下架</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.UpdateLiveCouponCommand">
+            <summary>
+            批量更新直播优惠卷命令
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.UpdateLiveCouponCommand.#ctor(System.Collections.Generic.List{HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.UpdateLiveCouponModel})">
+            <summary>
+            批量更新直播优惠卷命令
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.UpdateLiveCouponModel">
+            <param name="Id"></param>
+            <param name="LiveVideoId">所属视频直播Id</param>
+            <param name="LiveCouponId">优惠卷Id</param>
+            <param name="LiveCouponName">优惠卷名称</param>
+            <param name="Amount">金额/折扣--合并一个字段  折扣85折显示0.85</param>
+            <param name="CouponType">优惠券类型 1-抵用券 2-折扣券</param>
+            <param name="Scope">适用范围</param>
+            <param name="IsShelves">是否上架</param>
+            <param name="Sort">排序</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.UpdateLiveCouponModel.#ctor(System.Guid,System.Guid,System.Guid,System.String,System.Decimal,HaoKao.LiveBroadcastService.Domain.Enumerations.CouponTypeEnum,HaoKao.LiveBroadcastService.Domain.Enumerations.ScopeEnum,System.Boolean,System.Int32)">
+            <param name="Id"></param>
+            <param name="LiveVideoId">所属视频直播Id</param>
+            <param name="LiveCouponId">优惠卷Id</param>
+            <param name="LiveCouponName">优惠卷名称</param>
+            <param name="Amount">金额/折扣--合并一个字段  折扣85折显示0.85</param>
+            <param name="CouponType">优惠券类型 1-抵用券 2-折扣券</param>
+            <param name="Scope">适用范围</param>
+            <param name="IsShelves">是否上架</param>
+            <param name="Sort">排序</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.UpdateLiveCouponModel.Id">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.UpdateLiveCouponModel.LiveVideoId">
+            <summary>所属视频直播Id</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.UpdateLiveCouponModel.LiveCouponId">
+            <summary>优惠卷Id</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.UpdateLiveCouponModel.LiveCouponName">
+            <summary>优惠卷名称</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.UpdateLiveCouponModel.Amount">
+            <summary>金额/折扣--合并一个字段  折扣85折显示0.85</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.UpdateLiveCouponModel.CouponType">
+            <summary>优惠券类型 1-抵用券 2-折扣券</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.UpdateLiveCouponModel.Scope">
+            <summary>适用范围</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.UpdateLiveCouponModel.IsShelves">
+            <summary>是否上架</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveCoupon.UpdateLiveCouponModel.Sort">
+            <summary>排序</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveMessage.CreateLiveMessageCommand">
+            <summary>
+            创建直播消息命令
+            </summary>
+            <param name="Id">消息Id</param>
+            <param name="Content">消息内容</param>
+            <param name="LiveMessageType">消息类型</param>
+            <param name="LiveId">直播间Id</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveMessage.CreateLiveMessageCommand.#ctor(System.Guid,System.String,HaoKao.LiveBroadcastService.Domain.Enumerations.LiveMessageType,System.Guid)">
+            <summary>
+            创建直播消息命令
+            </summary>
+            <param name="Id">消息Id</param>
+            <param name="Content">消息内容</param>
+            <param name="LiveMessageType">消息类型</param>
+            <param name="LiveId">直播间Id</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveMessage.CreateLiveMessageCommand.Id">
+            <summary>消息Id</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveMessage.CreateLiveMessageCommand.Content">
+            <summary>消息内容</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveMessage.CreateLiveMessageCommand.LiveMessageType">
+            <summary>消息类型</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveMessage.CreateLiveMessageCommand.LiveId">
+            <summary>直播间Id</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveMessage.DeleteLiveMessageCommand">
+            <summary>
+            删除聊天消息命令
+            </summary>
+            <param name="Id"></param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveMessage.DeleteLiveMessageCommand.#ctor(System.Guid)">
+            <summary>
+            删除聊天消息命令
+            </summary>
+            <param name="Id"></param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveMessage.DeleteLiveMessageCommand.Id">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveOnlineUser.CreateLiveOnlineUserCommand">
+            <summary>
+            创建直播在线用户命令
+            </summary>
+            <param name="LiveId">直播Id</param>
+            <param name="Phone">手机号</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveOnlineUser.CreateLiveOnlineUserCommand.#ctor(System.Guid,System.String)">
+            <summary>
+            创建直播在线用户命令
+            </summary>
+            <param name="LiveId">直播Id</param>
+            <param name="Phone">手机号</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveOnlineUser.CreateLiveOnlineUserCommand.LiveId">
+            <summary>直播Id</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveOnlineUser.CreateLiveOnlineUserCommand.Phone">
+            <summary>手机号</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveOnlineUser.UpdateLiveOnlineUserCommand">
+            <summary>
+            更新直播在线用户命令
+            </summary>
+            <param name="Id">主键Id</param>
+            <param name="IsOnline">是否在线</param>
+            <param name="CreatorName">用户昵称</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveOnlineUser.UpdateLiveOnlineUserCommand.#ctor(System.Guid,System.Boolean,System.String)">
+            <summary>
+            更新直播在线用户命令
+            </summary>
+            <param name="Id">主键Id</param>
+            <param name="IsOnline">是否在线</param>
+            <param name="CreatorName">用户昵称</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveOnlineUser.UpdateLiveOnlineUserCommand.Id">
+            <summary>主键Id</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveOnlineUser.UpdateLiveOnlineUserCommand.IsOnline">
+            <summary>是否在线</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveOnlineUser.UpdateLiveOnlineUserCommand.CreatorName">
+            <summary>用户昵称</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.CreateLivePlayBackCommand">
+            <summary>
+            创建直播回放命令
+            </summary>
+            <param name="models"></param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.CreateLivePlayBackCommand.#ctor(System.Collections.Generic.List{HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.CreateLivePlayBackModel})">
+            <summary>
+            创建直播回放命令
+            </summary>
+            <param name="models"></param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.CreateLivePlayBackCommand.models">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.CreateLivePlayBackModel">
+            <summary>
+            创建直播回放模型
+            </summary>
+            <param name="LiveVideoId">所属视频直播Id</param>
+            <param name="Name">名称</param>
+            <param name="VideoType">视频格式</param>
+            <param name="Duration">视频时长</param>
+            <param name="VideoNo">视频序号</param>
+            <param name="Sort">排序</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.CreateLivePlayBackModel.#ctor(System.Guid,System.String,HaoKao.LiveBroadcastService.Domain.Enumerations.VideoType,System.Decimal,System.String,System.Int32)">
+            <summary>
+            创建直播回放模型
+            </summary>
+            <param name="LiveVideoId">所属视频直播Id</param>
+            <param name="Name">名称</param>
+            <param name="VideoType">视频格式</param>
+            <param name="Duration">视频时长</param>
+            <param name="VideoNo">视频序号</param>
+            <param name="Sort">排序</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.CreateLivePlayBackModel.LiveVideoId">
+            <summary>所属视频直播Id</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.CreateLivePlayBackModel.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.CreateLivePlayBackModel.VideoType">
+            <summary>视频格式</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.CreateLivePlayBackModel.Duration">
+            <summary>视频时长</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.CreateLivePlayBackModel.VideoNo">
+            <summary>视频序号</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.CreateLivePlayBackModel.Sort">
+            <summary>排序</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.DeleteLivePlayBackCommand">
+            <summary>
+            删除直播回放命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.DeleteLivePlayBackCommand.#ctor(System.Guid)">
+            <summary>
+            删除直播回放命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.DeleteLivePlayBackCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.UpdateLivePlayBackCommand">
+            <summary>
+            更新直播回放命令
+            </summary>
+            <param name="models"></param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.UpdateLivePlayBackCommand.#ctor(System.Collections.Generic.List{HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.UpdateLivePlayBackModel})">
+            <summary>
+            更新直播回放命令
+            </summary>
+            <param name="models"></param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.UpdateLivePlayBackCommand.models">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.UpdateLivePlayBackModel">
+            <summary>
+            更新直播回放模型
+            </summary>
+            <param name="Id">主键</param>
+            <param name="LiveVideoId">所属视频直播Id</param>
+            <param name="Name">名称</param>
+            <param name="VideoType">视频格式</param>
+            <param name="Duration">视频时长</param>
+            <param name="VideoNo">视频序号</param>
+            <param name="Sort">排序</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.UpdateLivePlayBackModel.#ctor(System.Guid,System.Guid,System.String,HaoKao.LiveBroadcastService.Domain.Enumerations.VideoType,System.Decimal,System.String,System.Int32)">
+            <summary>
+            更新直播回放模型
+            </summary>
+            <param name="Id">主键</param>
+            <param name="LiveVideoId">所属视频直播Id</param>
+            <param name="Name">名称</param>
+            <param name="VideoType">视频格式</param>
+            <param name="Duration">视频时长</param>
+            <param name="VideoNo">视频序号</param>
+            <param name="Sort">排序</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.UpdateLivePlayBackModel.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.UpdateLivePlayBackModel.LiveVideoId">
+            <summary>所属视频直播Id</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.UpdateLivePlayBackModel.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.UpdateLivePlayBackModel.VideoType">
+            <summary>视频格式</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.UpdateLivePlayBackModel.Duration">
+            <summary>视频时长</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.UpdateLivePlayBackModel.VideoNo">
+            <summary>视频序号</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LivePlayBack.UpdateLivePlayBackModel.Sort">
+            <summary>排序</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.CreateLiveProductPackageCommand">
+            <summary>
+            创建直播产品包命令
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.CreateLiveProductPackageCommand.#ctor(System.Collections.Generic.List{HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.CreateLiveProductPackageModel})">
+            <summary>
+            创建直播产品包命令
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.CreateLiveProductPackageModel">
+            <param name="LiveVideoId">所属视频直播Id</param>
+            <param name="ProductPackageId">产品包Id</param>
+            <param name="ProductPackageName">产品包名称</param>
+            <param name="ProductType">产品包类别</param>
+            <param name="Sort">排序</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.CreateLiveProductPackageModel.#ctor(System.Guid,System.Guid,System.String,HaoKao.LiveBroadcastService.Domain.Enumerations.ProductType,System.Int32)">
+            <param name="LiveVideoId">所属视频直播Id</param>
+            <param name="ProductPackageId">产品包Id</param>
+            <param name="ProductPackageName">产品包名称</param>
+            <param name="ProductType">产品包类别</param>
+            <param name="Sort">排序</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.CreateLiveProductPackageModel.LiveVideoId">
+            <summary>所属视频直播Id</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.CreateLiveProductPackageModel.ProductPackageId">
+            <summary>产品包Id</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.CreateLiveProductPackageModel.ProductPackageName">
+            <summary>产品包名称</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.CreateLiveProductPackageModel.ProductType">
+            <summary>产品包类别</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.CreateLiveProductPackageModel.Sort">
+            <summary>排序</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.DeleteLiveProductPackageCommand">
+            <summary>
+            删除直播产品包命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.DeleteLiveProductPackageCommand.#ctor(System.Guid)">
+            <summary>
+            删除直播产品包命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.DeleteLiveProductPackageCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.SetLiveProductPackageShelvesCommand">
+            <summary>
+            修改产品上下架
+            </summary>
+            <param name="Ids"></param>
+            <param name="IsShelves">产品上下架</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.SetLiveProductPackageShelvesCommand.#ctor(System.Collections.Generic.ICollection{System.Guid},System.Boolean)">
+            <summary>
+            修改产品上下架
+            </summary>
+            <param name="Ids"></param>
+            <param name="IsShelves">产品上下架</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.SetLiveProductPackageShelvesCommand.Ids">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.SetLiveProductPackageShelvesCommand.IsShelves">
+            <summary>产品上下架</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.UpdateLiveProductPackageCommand">
+            <summary>
+            批量更新直播产品包命令
+            </summary>
+            <param name="models"></param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.UpdateLiveProductPackageCommand.#ctor(System.Collections.Generic.List{HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.UpdateLiveProductPackageModel})">
+            <summary>
+            批量更新直播产品包命令
+            </summary>
+            <param name="models"></param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.UpdateLiveProductPackageCommand.models">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.UpdateLiveProductPackageModel.LiveVideoId">
+            <summary>
+            所属视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.UpdateLiveProductPackageModel.ProductPackageId">
+            <summary>
+            产品包Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.UpdateLiveProductPackageModel.ProductPackageName">
+            <summary>
+            产品包名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.UpdateLiveProductPackageModel.ProductType">
+            <summary>
+            产品包类别
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveProductPackage.UpdateLiveProductPackageModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveReservation.CreateLiveReservationCommand">
+            <summary>
+            创建直播预约命令
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveReservation.CreateLiveReservationCommand.#ctor(System.Guid,System.Guid,System.String,HaoKao.LiveBroadcastService.Domain.Enumerations.ReservationSource,System.String)">
+            <summary>
+            创建直播预约命令
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.CreateLiveVideoCommand">
+            <summary>
+            创建视频直播命令
+            </summary>
+            <param name="Name">名称</param>
+            <param name="CardUrl">卡片Url</param>
+            <param name="LiveType">直播类型</param>
+            <param name="SubjectIds">科目Id</param>
+            <param name="SubjectNames">科目名称</param>
+            <param name="LecturerId">主讲老师Id</param>
+            <param name="LecturerName">主讲老师名称</param>
+            <param name="StartTime">直播开始时间</param>
+            <param name="EndTime">直播结束时间</param>
+            <param name="LiveStatus">直播状态</param>
+            <param name="TargetProductId">购买产品挑战对象</param>
+            <param name="Desc">详情介绍</param>
+            <param name="LiveAddress">播流地址</param>
+            <param name="StreamingAddress">推流地址</param>
+            <param name="LiveAnnouncementId">直播公告ID</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.CreateLiveVideoCommand.#ctor(System.String,System.String,HaoKao.LiveBroadcastService.Domain.Enumerations.LiveType,System.Collections.Generic.List{System.Guid},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Guid},System.Collections.Generic.List{System.String},System.DateTime,System.DateTime,HaoKao.LiveBroadcastService.Domain.Enumerations.LiveStatus,System.Nullable{System.Guid},System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.Nullable{System.Guid})">
+            <summary>
+            创建视频直播命令
+            </summary>
+            <param name="Name">名称</param>
+            <param name="CardUrl">卡片Url</param>
+            <param name="LiveType">直播类型</param>
+            <param name="SubjectIds">科目Id</param>
+            <param name="SubjectNames">科目名称</param>
+            <param name="LecturerId">主讲老师Id</param>
+            <param name="LecturerName">主讲老师名称</param>
+            <param name="StartTime">直播开始时间</param>
+            <param name="EndTime">直播结束时间</param>
+            <param name="LiveStatus">直播状态</param>
+            <param name="TargetProductId">购买产品挑战对象</param>
+            <param name="Desc">详情介绍</param>
+            <param name="LiveAddress">播流地址</param>
+            <param name="StreamingAddress">推流地址</param>
+            <param name="LiveAnnouncementId">直播公告ID</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.CreateLiveVideoCommand.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.CreateLiveVideoCommand.CardUrl">
+            <summary>卡片Url</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.CreateLiveVideoCommand.LiveType">
+            <summary>直播类型</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.CreateLiveVideoCommand.SubjectIds">
+            <summary>科目Id</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.CreateLiveVideoCommand.SubjectNames">
+            <summary>科目名称</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.CreateLiveVideoCommand.LecturerId">
+            <summary>主讲老师Id</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.CreateLiveVideoCommand.LecturerName">
+            <summary>主讲老师名称</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.CreateLiveVideoCommand.StartTime">
+            <summary>直播开始时间</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.CreateLiveVideoCommand.EndTime">
+            <summary>直播结束时间</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.CreateLiveVideoCommand.LiveStatus">
+            <summary>直播状态</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.CreateLiveVideoCommand.TargetProductId">
+            <summary>购买产品挑战对象</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.CreateLiveVideoCommand.Desc">
+            <summary>详情介绍</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.CreateLiveVideoCommand.LiveAddress">
+            <summary>播流地址</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.CreateLiveVideoCommand.StreamingAddress">
+            <summary>推流地址</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.CreateLiveVideoCommand.LiveAnnouncementId">
+            <summary>直播公告ID</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.CreateLiveVideoUrlViewModel.appName">
+            <summary>
+            app名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.CreateLiveVideoUrlViewModel.streamName">
+            <summary>
+            流名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.CreateLiveVideoUrlViewModel.expireTime">
+            <summary>
+            过期时间（单位是秒)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.CreateLiveVideoUrlViewModel.LiveVideoId">
+            <summary>
+            直播Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.DeleteLiveVideoCommand">
+            <summary>
+            删除视频直播命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.DeleteLiveVideoCommand.#ctor(System.Guid)">
+            <summary>
+            删除视频直播命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.DeleteLiveVideoCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.SetLiveVideoStatusCommand">
+            <summary>
+            更新视频直播命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="LiveStatus">直播状态</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.SetLiveVideoStatusCommand.#ctor(System.Guid,HaoKao.LiveBroadcastService.Domain.Enumerations.LiveStatus)">
+            <summary>
+            更新视频直播命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="LiveStatus">直播状态</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.SetLiveVideoStatusCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.SetLiveVideoStatusCommand.LiveStatus">
+            <summary>直播状态</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.UpdateLiveVideoCommand">
+            <summary>
+            更新视频直播命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Name">名称</param>
+            <param name="CardUrl">卡片</param>
+            <param name="LiveType">直播类型</param>
+            <param name="SubjectIds">科目Id</param>
+            <param name="SubjectNames">科目名称</param>
+            <param name="LecturerId">主讲老师Id</param>
+            <param name="LecturerName">主讲老师名称</param>
+            <param name="StartTime">直播开始时间</param>
+            <param name="EndTime">直播结束时间</param>
+            <param name="LiveStatus">直播状态</param>
+            <param name="TargetProductId">购买产品挑战对象</param>
+            <param name="Desc">详情介绍</param>
+            <param name="LiveAddress">播流地址</param>
+            <param name="StreamingAddress">推流地址</param>
+            <param name="LiveAnnouncementId">直播公告Id</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.UpdateLiveVideoCommand.#ctor(System.Guid,System.String,System.String,HaoKao.LiveBroadcastService.Domain.Enumerations.LiveType,System.Collections.Generic.List{System.Guid},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Guid},System.Collections.Generic.List{System.String},System.DateTime,System.DateTime,HaoKao.LiveBroadcastService.Domain.Enumerations.LiveStatus,System.Nullable{System.Guid},System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.Nullable{System.Guid})">
+            <summary>
+            更新视频直播命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Name">名称</param>
+            <param name="CardUrl">卡片</param>
+            <param name="LiveType">直播类型</param>
+            <param name="SubjectIds">科目Id</param>
+            <param name="SubjectNames">科目名称</param>
+            <param name="LecturerId">主讲老师Id</param>
+            <param name="LecturerName">主讲老师名称</param>
+            <param name="StartTime">直播开始时间</param>
+            <param name="EndTime">直播结束时间</param>
+            <param name="LiveStatus">直播状态</param>
+            <param name="TargetProductId">购买产品挑战对象</param>
+            <param name="Desc">详情介绍</param>
+            <param name="LiveAddress">播流地址</param>
+            <param name="StreamingAddress">推流地址</param>
+            <param name="LiveAnnouncementId">直播公告Id</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.UpdateLiveVideoCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.UpdateLiveVideoCommand.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.UpdateLiveVideoCommand.CardUrl">
+            <summary>卡片</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.UpdateLiveVideoCommand.LiveType">
+            <summary>直播类型</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.UpdateLiveVideoCommand.SubjectIds">
+            <summary>科目Id</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.UpdateLiveVideoCommand.SubjectNames">
+            <summary>科目名称</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.UpdateLiveVideoCommand.LecturerId">
+            <summary>主讲老师Id</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.UpdateLiveVideoCommand.LecturerName">
+            <summary>主讲老师名称</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.UpdateLiveVideoCommand.StartTime">
+            <summary>直播开始时间</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.UpdateLiveVideoCommand.EndTime">
+            <summary>直播结束时间</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.UpdateLiveVideoCommand.LiveStatus">
+            <summary>直播状态</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.UpdateLiveVideoCommand.TargetProductId">
+            <summary>购买产品挑战对象</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.UpdateLiveVideoCommand.Desc">
+            <summary>详情介绍</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.UpdateLiveVideoCommand.LiveAddress">
+            <summary>播流地址</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.UpdateLiveVideoCommand.StreamingAddress">
+            <summary>推流地址</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.LiveVideo.UpdateLiveVideoCommand.LiveAnnouncementId">
+            <summary>直播公告Id</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.MutedUser.CreateMutedUserCommand">
+            <summary>
+            创建禁言用户命令
+            </summary>
+            <param name="Phone">手机号</param>
+            <param name="UserId">用户Id</param>
+            <param name="UserName">用户名称</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.MutedUser.CreateMutedUserCommand.#ctor(System.String,System.Guid,System.String)">
+            <summary>
+            创建禁言用户命令
+            </summary>
+            <param name="Phone">手机号</param>
+            <param name="UserId">用户Id</param>
+            <param name="UserName">用户名称</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.MutedUser.CreateMutedUserCommand.Phone">
+            <summary>手机号</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.MutedUser.CreateMutedUserCommand.UserId">
+            <summary>用户Id</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.MutedUser.CreateMutedUserCommand.UserName">
+            <summary>用户名称</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.MutedUser.DeleteMutedUserCommand">
+            <summary>
+            删除禁言用户命令
+            </summary>
+            <param name="UserId">用户Id</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.MutedUser.DeleteMutedUserCommand.#ctor(System.Guid)">
+            <summary>
+            删除禁言用户命令
+            </summary>
+            <param name="UserId">用户Id</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.MutedUser.DeleteMutedUserCommand.UserId">
+            <summary>用户Id</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.SensitiveWord.CreateSensitiveWordCommand">
+            <summary>
+            创建敏感词命令
+            </summary>
+            <param name="Content">内容</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.SensitiveWord.CreateSensitiveWordCommand.#ctor(System.String)">
+            <summary>
+            创建敏感词命令
+            </summary>
+            <param name="Content">内容</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.SensitiveWord.CreateSensitiveWordCommand.Content">
+            <summary>内容</summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Commands.SensitiveWord.UpdateSensitiveWordCommand">
+            <summary>
+            更新敏感词命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Content">内容</param>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Commands.SensitiveWord.UpdateSensitiveWordCommand.#ctor(System.Guid,System.String)">
+            <summary>
+            更新敏感词命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Content">内容</param>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.SensitiveWord.UpdateSensitiveWordCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Commands.SensitiveWord.UpdateSensitiveWordCommand.Content">
+            <summary>内容</summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Config.AliLiveConfig.PushDomain">
+            <summary>
+            推流域名
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Config.AliLiveConfig.PushKey">
+            <summary>
+            推流域名配置的鉴权Key
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Config.AliLiveConfig.PullDomain">
+            <summary>
+            播放域名
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Config.AliLiveConfig.PullKey">
+            <summary>
+            播放鉴权Key
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Enumerations.CouponTypeEnum">
+            <summary>
+            优惠券类型
+            </summary>
+        </member>
+        <member name="F:HaoKao.LiveBroadcastService.Domain.Enumerations.CouponTypeEnum.DeductionVoucher">
+            <summary>
+            抵用券
+            </summary>
+        </member>
+        <member name="F:HaoKao.LiveBroadcastService.Domain.Enumerations.CouponTypeEnum.DisCount">
+            <summary>
+            折扣券
+            </summary>
+        </member>
+        <member name="F:HaoKao.LiveBroadcastService.Domain.Enumerations.CouponTypeEnum.SmCoupon">
+            <summary>
+            实名券
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Enumerations.LiveMessageType">
+            <summary>
+            直播消息类型
+            </summary>
+        </member>
+        <member name="F:HaoKao.LiveBroadcastService.Domain.Enumerations.LiveMessageType.Chat">
+            <summary>
+            聊天消息
+            </summary>
+        </member>
+        <member name="F:HaoKao.LiveBroadcastService.Domain.Enumerations.LiveMessageType.JoinRoom">
+            <summary>
+            进入直播间
+            </summary>
+        </member>
+        <member name="F:HaoKao.LiveBroadcastService.Domain.Enumerations.LiveMessageType.ProductOnSell">
+            <summary>
+            产品上架
+            </summary>
+        </member>
+        <member name="F:HaoKao.LiveBroadcastService.Domain.Enumerations.LiveMessageType.ShareLive">
+            <summary>
+            分享直播
+            </summary>
+        </member>
+        <member name="F:HaoKao.LiveBroadcastService.Domain.Enumerations.LiveStatus.NotStarted">
+            <summary>
+            未开始
+            </summary>
+        </member>
+        <member name="F:HaoKao.LiveBroadcastService.Domain.Enumerations.LiveStatus.LiveStreaming">
+            <summary>
+            直播中
+            </summary>
+        </member>
+        <member name="F:HaoKao.LiveBroadcastService.Domain.Enumerations.LiveStatus.Ended">
+            <summary>
+            已结束
+            </summary>
+        </member>
+        <member name="F:HaoKao.LiveBroadcastService.Domain.Enumerations.LiveType.Paid">
+            <summary>
+            付费
+            </summary>
+        </member>
+        <member name="F:HaoKao.LiveBroadcastService.Domain.Enumerations.LiveType.Free">
+            <summary>
+            免费
+            </summary>
+        </member>
+        <member name="F:HaoKao.LiveBroadcastService.Domain.Enumerations.LiveUrlType.RTMP">
+            <summary>
+            RTMP
+            </summary>
+        </member>
+        <member name="F:HaoKao.LiveBroadcastService.Domain.Enumerations.LiveUrlType.RTS">
+            <summary>
+            RTS
+            </summary>
+        </member>
+        <member name="F:HaoKao.LiveBroadcastService.Domain.Enumerations.ProductType.QuestionBlank">
+            <summary>
+            题库
+            </summary>
+        </member>
+        <member name="F:HaoKao.LiveBroadcastService.Domain.Enumerations.ProductType.Course">
+            <summary>
+            课程
+            </summary>
+        </member>
+        <member name="F:HaoKao.LiveBroadcastService.Domain.Enumerations.ProductType.Material">
+            <summary>
+            资料
+            </summary>
+        </member>
+        <member name="F:HaoKao.LiveBroadcastService.Domain.Enumerations.ProductType.Live">
+            <summary>
+            直播
+            </summary>
+        </member>
+        <member name="F:HaoKao.LiveBroadcastService.Domain.Enumerations.ReservationSource.WebSite">
+            <summary>
+            pc
+            </summary>
+        </member>
+        <member name="F:HaoKao.LiveBroadcastService.Domain.Enumerations.ReservationSource.WeChat">
+            <summary>
+            微信小程序
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Enumerations.ScopeEnum">
+            <summary>
+            使用范围
+            </summary>
+        </member>
+        <member name="F:HaoKao.LiveBroadcastService.Domain.Enumerations.ScopeEnum.All">
+            <summary>
+            全部
+            </summary>
+        </member>
+        <member name="F:HaoKao.LiveBroadcastService.Domain.Enumerations.ScopeEnum.QuestionBank">
+            <summary>
+            题库
+            </summary>
+        </member>
+        <member name="F:HaoKao.LiveBroadcastService.Domain.Enumerations.ScopeEnum.Course">
+            <summary>
+            课程
+            </summary>
+        </member>
+        <member name="F:HaoKao.LiveBroadcastService.Domain.Enumerations.ScopeEnum.custom">
+            <summary>
+            自定义 选择产品包ids
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Models.LiveAdministrator">
+            <summary>
+            直播管理员
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveAdministrator.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveAdministrator.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveAdministrator.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveAdministrator.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveAdministrator.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Models.LiveAnnouncement">
+            <summary>
+            直播公告
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveAnnouncement.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveAnnouncement.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveAnnouncement.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveAnnouncement.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveComment.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveComment.Rating">
+            <summary>
+            评分
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveComment.Content">
+            <summary>
+            评价内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveComment.LiveId">
+            <summary>
+            直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveComment.CreateTime">
+            <summary>
+            评价时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveComment.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveComment.CreatorName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveComment.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Models.LiveCoupon">
+            <summary>
+            直播优惠卷
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveCoupon.LiveVideo">
+            <summary>
+            所属视频直播
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveCoupon.LiveVideoId">
+            <summary>
+            所属视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveCoupon.LiveCouponId">
+            <summary>
+            优惠卷Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveCoupon.LiveCouponName">
+            <summary>
+            优惠卷名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveCoupon.Amount">
+            <summary>
+            金额/折扣--合并一个字段  折扣85折显示0.85
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveCoupon.CouponType">
+            <summary>
+            优惠券类型 1-抵用券 2-折扣券
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveCoupon.Scope">
+            <summary>
+            适用范围
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveCoupon.CreateTime">
+            <summary>
+            创建时间（上架时间）
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveCoupon.IsShelves">
+            <summary>
+            是否上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveCoupon.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveCoupon.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Models.LiveMessage">
+            <summary>
+            直播消息类
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveMessage.LiveId">
+            <summary>
+            直播间Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveMessage.Content">
+            <summary>
+            消息内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveMessage.LiveMessageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveMessage.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveMessage.CreatorName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveMessage.CreateTime">
+            <summary>
+            发送时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveMessage.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Models.LiveOnlineUser">
+            <summary>
+            直播在线用户表
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveOnlineUser.LiveId">
+            <summary>
+            直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveOnlineUser.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveOnlineUser.IsOnline">
+            <summary>
+            是否在线
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveOnlineUser.OnlineDuration">
+            <summary>
+            累计在线时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveOnlineUser.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveOnlineUser.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveOnlineUser.CreatorName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveOnlineUser.CreateTime">
+            <summary>
+            首次上线时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveOnlineUser.LastOnlineTime">
+            <summary>
+            最后上线时间
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Models.LiveOnlineUserTrend">
+            <summary>
+            在线用户走势图
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveOnlineUserTrend.LiveId">
+            <summary>
+            直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveOnlineUserTrend.Interval">
+            <summary>
+            统计间隔(分钟)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveOnlineUserTrend.TotalCount">
+            <summary>
+            累计在线人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveOnlineUserTrend.OnlineCount">
+            <summary>
+            当前在线人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveOnlineUserTrend.CreateTime">
+            <summary>
+            统计时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveOnlineUserTrend.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Models.LivePlayBack">
+            <summary>
+            直播回放
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LivePlayBack.LiveVideo">
+            <summary>
+            所属视频直播
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LivePlayBack.LiveVideoId">
+            <summary>
+            所属视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LivePlayBack.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LivePlayBack.VideoType">
+            <summary>
+            视频格式
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LivePlayBack.Duration">
+            <summary>
+            视频时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LivePlayBack.VideoNo">
+            <summary>
+            视频序号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LivePlayBack.CreateTime">
+            <summary>
+            创建时间（添加时间）
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LivePlayBack.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LivePlayBack.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Models.LiveProductPackage">
+            <summary>
+            直播产品包
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveProductPackage.LiveVideo">
+            <summary>
+            所属视频直播
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveProductPackage.LiveVideoId">
+            <summary>
+            所属视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveProductPackage.ProductPackageId">
+            <summary>
+            产品包Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveProductPackage.ProductPackageName">
+            <summary>
+            产品包名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveProductPackage.CreateTime">
+            <summary>
+            创建时间（上架时间）
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveProductPackage.ProductType">
+            <summary>
+            产品包类别
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveProductPackage.IsShelves">
+            <summary>
+            是否上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveProductPackage.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveProductPackage.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Models.LiveReservation">
+            <summary>
+            直播预约
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveReservation.ProductId">
+            <summary>
+            预约直播产品id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveReservation.LiveVideoId">
+            <summary>
+            预约视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveReservation.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveReservation.ReservationSource">
+            <summary>
+            预约来源
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveReservation.Notified">
+            <summary>
+            是否已通知
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveReservation.OpenId">
+            <summary>
+            微信用户的OpenId
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveReservation.CreateTime">
+            <summary>
+            预约时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveReservation.CreatorId">
+             <summary>
+            用户Id
+             </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveReservation.CreatorName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveReservation.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Models.LiveVideo">
+            <summary>
+            视频直播
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveVideo.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveVideo.CardUrl">
+            <summary>
+            卡片Url
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveVideo.LiveType">
+            <summary>
+            直播类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveVideo.SubjectIds">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveVideo.SubjectIdsStr">
+            <summary>
+            科目匹配字符串(冗余字段，科目Id多选时,条件匹配查询使用)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveVideo.SubjectNames">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveVideo.LecturerId">
+            <summary>
+            主讲老师Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveVideo.LecturerName">
+            <summary>
+            主讲老师名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveVideo.StartTime">
+            <summary>
+            直播开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveVideo.EndTime">
+            <summary>
+            直播结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveVideo.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveVideo.LiveStatus">
+            <summary>
+            直播状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveVideo.TargetProductId">
+            <summary>
+            购买产品跳转对象Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveVideo.Desc">
+            <summary>
+            详情介绍
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveVideo.LiveAddress">
+            <summary>
+            播流地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveVideo.StreamingAddress">
+            <summary>
+            推流地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveVideo.LiveAnnouncementId">
+            <summary>
+            直播公告Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveVideo.IsUploadPlayBack">
+            <summary>
+            是否上次回放视频
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.LiveVideo.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Models.MutedUser">
+            <summary>
+            禁言用户
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.MutedUser.UserId">
+            <summary>
+            禁言用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.MutedUser.UserName">
+            <summary>
+            禁言用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.MutedUser.Phone">
+            <summary>
+            禁言用户手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.MutedUser.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.MutedUser.CreatorId">
+            <summary>
+            创建者Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.MutedUser.CreatorName">
+            <summary>
+            创建者名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.MutedUser.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.LiveBroadcastService.Domain.Models.SensitiveWord">
+            <summary>
+            敏感词
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.SensitiveWord.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.SensitiveWord.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Models.SensitiveWord.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveAdministratorQuery.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveAdministratorQuery.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveAnnouncementQuery.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveCommentQuery.LiveId">
+            <summary>
+            直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveCommentQuery.CreatorName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveCommentQuery.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveCommentQuery.Rating">
+            <summary>
+            评分
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveCouponQuery.LiveVideoId">
+            <summary>
+            所属视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveCouponQuery.IsShelves">
+            <summary>
+            是否上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveMessageQuery.MessageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveMessageQuery.LiveId">
+            <summary>
+            直播间Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveMessageQuery.SendTime">
+            <summary>
+            发送时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveOnlineUserQuery.LiveId">
+            <summary>
+            直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveOnlineUserQuery.CreatorName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveOnlineUserQuery.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LivePlayBackQuery.LiveVideoId">
+            <summary>
+            所属视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveProductPackageQuery.LiveVideoId">
+            <summary>
+            所属视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveProductPackageQuery.IsShelves">
+            <summary>
+            是否上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveReservationQuery.ProductId">
+            <summary>
+            直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveReservationQuery.LiveVideoId">
+            <summary>
+            预约视频直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveReservationQuery.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveReservationQuery.CreatorName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveVideoQuery.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveVideoQuery.SubjectIds">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveVideoQuery.LiveStatus">
+            <summary>
+            直播状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveVideoQuery.LiveType">
+            <summary>
+            直播类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveVideoQuery.DayCount">
+            <summary>
+            距离当日的天数
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveVideoQuery.QueryStartTime">
+            <summary>
+            查询该时间之后的直播
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.LiveVideoQuery.QueryEndTime">
+            <summary>
+            查询该时间之前的直播
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.MutedUserQuery.UserName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.MutedUserQuery.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LiveBroadcastService.Domain.Queries.SensitiveWordQuery.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Repositories.ILiveCommentRepository.GetAverageRating(System.Guid)">
+            <summary>
+            综合评分
+            </summary>
+            <param name="liveId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Repositories.ILiveMessageRepository.AddMessage(HaoKao.LiveBroadcastService.Domain.Models.LiveMessage)">
+            <summary>
+            新增消息
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Repositories.ILiveOnlineUserTrendRepository.TrackOnlineUserTrend(System.Int32)">
+            <summary>
+            记录在线用户走势数据
+            </summary>
+            <param name="interval">记录间隔(分钟)</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Repositories.ILiveReservationRepository.QueryAllReservation">
+            <summary>
+            查询所有待通知的预约数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LiveBroadcastService.Domain.Repositories.ILiveReservationRepository.UpdateNotified(System.Guid,System.Collections.Generic.List{System.Guid})">
+            <summary>
+            按租户更新预约为已通知状态
+            </summary>
+            <param name="tenantId"></param>
+            <param name="ids"></param>
+        </member>
+    </members>
+</doc>

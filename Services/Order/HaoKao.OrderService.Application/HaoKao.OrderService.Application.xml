@@ -1,0 +1,2278 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.OrderService.Application</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.OrderService.Application.PayHandler.AliPay.App.AliPayAppHandlerConfig">
+            <summary>
+            支付宝App支付配置
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.AliPay.Base.AliPayCreateOrderReturn.OrderId">
+            <summary>
+            订单Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.AliPay.Base.AliPayCreateOrderReturn.OrderNumber">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.AliPay.Base.AliPayCreateOrderReturn.AppId">
+            <summary>
+            应用ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.AliPay.Base.AliPayCreateOrderReturn.Body">
+            <summary>
+            body
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.AliPay.Base.AliPayCreateOrderReturn.NonceStr">
+            <summary>
+            随机字符串
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.AliPay.Base.AliPayCreateOrderReturn.Timestamp">
+            <summary>
+            时间戳
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.AliPay.Base.AliPayHandlerConfig.AppId">
+            <summary>
+            APPID 相当于应用的身份证号，是支付宝分配给开发者的应用 ID，只有应用创建后才可以获取。
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.AliPay.Base.AliPayHandlerConfig.IconUrl">
+            <summary>
+            支付方式图标
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.AliPay.Base.AliPayHandlerConfig.OrderPrefix">
+            <summary>
+            订单号前缀
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.AliPay.Base.AliPayHandlerConfig.PublicKey">
+            <summary>
+            支付宝公钥，由支付宝生成
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.AliPay.Base.AliPayHandlerConfig.PrivateKey">
+            <summary>
+            开发者应用私钥，由开发者自己生成
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.AliPay.Base.AliPayHandlerConfig.NotifyUrl">
+            <summary>
+            支付通知地址
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Application.PayHandler.AliPay.Web.AliPayWebHandlerConfig">
+            <summary>
+            支付宝电脑网站支付配置
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.AliPay.Web.AliPayWebHandlerConfig.ReturnUrl">
+            <summary>
+            支付成功返回地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.AliPay.Web.HbPayWebHandlerConfig.InstallmentConfig">
+            <summary>
+            分期配置(json)
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.ApplePay.AppleInAppPurchaseCreateOrderReturn.OrderId">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.Config.AppleInAppPurchaseHanlderConfig.IconUrl">
+            <summary>
+            支付方式图标
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.Config.AppleInAppPurchaseHanlderConfig.OrderPrefix">
+            <summary>
+            订单号前缀
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Application.PayHandler.Config.ConfigType.String">
+            <summary>
+            字符串
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Application.PayHandler.Config.ConfigType.Int">
+            <summary>
+            整型
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Application.PayHandler.Config.ConfigType.FilePath">
+            <summary>
+            文件路径
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.Config.IPayHandlerConfig.IconUrl">
+            <summary>
+            支付方式的图标
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.Config.IPayHandlerConfig.OrderPrefix">
+            <summary>
+            订单号前缀 长度（2到10位 的字母和数字组成）
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.PayHandler.Config.IPayHandlerConfig.ReadFromDictionary(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            读取配置信息
+            </summary>
+            <param name="dictionary"></param>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.CurrentPayNotifyModel.Order">
+            <summary>
+            平台订单Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.CurrentPayNotifyModel.OrderSerialNumber">
+            <summary>
+            订单流水号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.CurrentPayNotifyModel.CurrentPayNotifySign">
+            <summary>
+            通知签名
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.CurrentPayNotifyModel.IosRestorePurchase">
+            <summary>
+            是否为恢复购买
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.IOrderReturn.CurrentPayNotifySign">
+            <summary>
+            当前通知回调签名
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.IOrderReturn.OrderId">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.IOrderReturn.OrderNumber">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.IPayHandler.PayHandlerName">
+            <summary>
+            支付者类型名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.IPayHandler.Scenes">
+            <summary>
+            使用场景
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.IPayHandler.PayHandlerId">
+            <summary>
+            支付者的标识
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.PayHandler.IPayHandler.GetPayerNeedParameterType">
+            <summary>
+            读取所需要的参数类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.PayHandler.IPayHandler.SetConfig(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            设置配置
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.PayHandler.IPayHandler.CreateOrder(HaoKao.OrderService.Domain.Entities.Order,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            创建订单，也就是通常所讲的下单,返回预支付交易会话ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.PayHandler.IPayHandler.ReceivePayNotifyMessage(System.Guid)">
+            <summary>
+            支付回调
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.PayHandler.IPayHandler.CurrentPayNotify(HaoKao.OrderService.Application.PayHandler.CurrentPayNotifyModel)">
+            <summary>
+            当前回调（如App支付后，在客户端就已经返回支付成功的消息，对订单进行修改），或者扫码支付成功，前端页面回调成功
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.PayHandler.IPayHandler.GenerateOrderNumber">
+            <summary>
+            创建订单号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.PayHandlerBase`1.Config">
+            <summary>
+            配置
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.PayHandler.PayHandlerBase`1.CreateOrder(HaoKao.OrderService.Domain.Entities.Order,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            创建订单
+            </summary>
+            <param name="order"></param>
+            <param name="extendParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.PayHandler.PayHandlerBase`1.ReceivePayNotifyMessage(System.Guid)">
+            <summary>
+            接收支付回调通知
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.PayHandler.PayHandlerBase`1.GenerateOrderNumber">
+            <summary>
+            生成订单号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.PayHandler.PayHandlerBase`1.BuildCurrentPayNotifySign(HaoKao.OrderService.Domain.Entities.Order)">
+            <summary>
+            根据订单生成当前返回的签名
+            </summary>
+            <param name="order"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.PayHandler.PayHandlerBase`1.VerifyCurrentPayNotifySign(HaoKao.OrderService.Domain.Entities.Order,System.String)">
+            <summary>
+            较验当前签名
+            </summary>
+            <param name="order"></param>
+            <param name="currentPaynotifySign"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.PayHandler.PayHandlerBase`1.PaySucceedUpdateLocalOrder(System.Guid,System.String,System.String)">
+            <summary>
+            支付回调成功后，修改本地订单
+            </summary>
+            <param name="orderId"></param>
+            <param name="orderSerialNumber">订单流水号</param>
+            <param name="orderNumber">订单号,主要是和第三方平台支付时产生的交易号</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.PayHandler.PayHandlerBase`1.CurrentPayNotify(HaoKao.OrderService.Application.PayHandler.CurrentPayNotifyModel)">
+            <summary>
+            当前回调（如App支付后，在客户端就已经返回支付成功的消息，对订单进行修改），或者扫码支付成功，前端页面回调成功
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.App.WechatAppCallPayCreateOrderReturn.AppId">
+            <summary>
+            应用ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.App.WechatAppCallPayCreateOrderReturn.PartnerId">
+            <summary>
+            商户ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.App.WechatAppCallPayCreateOrderReturn.PrepayId">
+            <summary>
+            预支付会话Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.App.WechatAppCallPayCreateOrderReturn.Package">
+            <summary>
+            订单详情扩展字符串
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.App.WechatAppCallPayCreateOrderReturn.NonceStr">
+            <summary>
+            随机字符串
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.App.WechatAppCallPayCreateOrderReturn.Timestamp">
+            <summary>
+            时间戳
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.App.WechatAppCallPayCreateOrderReturn.Sign">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Application.PayHandler.WechatPay.App.WechatAppCallPayHandler">
+            <summary>
+            微信App 调起支付者
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Application.PayHandler.WechatPay.App.WechatAppCallPayHandlerConfig">
+            <summary>
+            微信 App 调起支付配置
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.Base.WechatPayHandler`1.WechatTenpayClient">
+            <summary>
+            获取客户端
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.PayHandler.WechatPay.Base.WechatPayHandler`1.CreateClient">
+            <summary>
+            创建客户端
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.Base.WechatPayHandlerConfig.IconUrl">
+            <summary>
+            支付方式图标
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.Base.WechatPayHandlerConfig.OrderPrefix">
+            <summary>
+            订单号前缀
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.Base.WechatPayHandlerConfig.AppId">
+            <summary>
+            微信开放平台审核通过的移动应用appid string[1,32]
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.Base.WechatPayHandlerConfig.MerchantId">
+            <summary>
+            请填写商户号mchid对应的值 string[1,32]
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.Base.WechatPayHandlerConfig.SecretV3">
+            <summary>
+            Api V3 密钥
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.Base.WechatPayHandlerConfig.NotifyUrl">
+            <summary>
+            支付通知地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.Base.WechatPayHandlerConfig.CertificateSerialNumber">
+            <summary>
+            证书编码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.Base.WechatPayHandlerConfig.CertificatePrivateKey">
+            <summary>
+            证书私钥
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.H5.WechatH5PayCreateOrderReturn.H5Url">
+            <summary>
+            预支付会话Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.JSAPI.WechatJsapiPayCreateOrderReturn.AppId">
+            <summary>
+            小程序Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.JSAPI.WechatJsapiPayCreateOrderReturn.TimeStamp">
+            <summary>
+            获取微信应答时间戳。
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.JSAPI.WechatJsapiPayCreateOrderReturn.NonceStr">
+            <summary>
+            获取微信应答随机串。
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.JSAPI.WechatJsapiPayCreateOrderReturn.Package">
+            <summary>
+            订单详情扩展字符串
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.JSAPI.WechatJsapiPayCreateOrderReturn.SignType">
+            <summary>
+            签名方式
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.JSAPI.WechatJsapiPayCreateOrderReturn.PaySign">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.PayHandler.WechatPay.JSAPI.WechatJsapiPayHandler.GetOpenId(System.String)">
+            <summary>
+            读取openid
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.OrderService.Application.PayHandler.WechatPay.JSAPI.WechatJsapiPayHandlerConfig">
+            <summary>
+            微信 JSAPI 调起支付配置
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.JSAPI.WechatJsapiPayHandlerConfig.AppSecret">
+            <summary>
+            微信小程序密钥
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.PayHandler.WechatPay.Native.WechatNativePayCreateOrderReturn.QrcodeUrl">
+            <summary>
+            二维码链接
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Application.PayHandler.WechatPay.Native.WechatNativePayHandlerConfig">
+            <summary>
+            微信 Native 调起支付配置
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Application.Profiles.OrderInvoiceProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Profiles.OrderInvoiceProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.Profiles.OrderInvoiceProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.App.IOrderAppService.Create(HaoKao.OrderService.Application.ViewModels.Order.CreateOrderViewModel)">
+            <summary>
+            创建订单表
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.App.IOrderAppService.Get(HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel)">
+            <summary>
+            我的订单
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.App.IOrderAppService.Get(System.Guid)">
+            <summary>
+            根据Id获取订单详情
+            </summary>
+            <param name="orderId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.App.IPayAppService.CreateRemoteOrder(System.Guid,System.Guid)">
+            <summary>
+            创建对应支付平台的订单
+            </summary>
+            <param name="platformPayerId"></param>
+            <param name="orderId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.App.IPayAppService.CurrentPayNotify(HaoKao.OrderService.Application.ViewModels.Order.CurrentPayNotifyViewModel)">
+            <summary>
+            当前回调（如App支付后，在客户端就已经返回支付成功的消息，对订单进行修改）
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.App.IPlatformPayerAppService.Get(HaoKao.OrderService.Application.ViewModels.PlatformPayer.PlatformPayerQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="T:HaoKao.OrderService.Application.Services.App.OrderAppService">
+            <summary>
+            订单服务--App
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.App.OrderAppService.#ctor(HaoKao.OrderService.Application.Services.Management.IOrderService)">
+            <summary>
+            订单服务--App
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.App.OrderAppService.Create(HaoKao.OrderService.Application.ViewModels.Order.CreateOrderViewModel)">
+            <summary>
+            App 创建订单
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.App.OrderAppService.Get(HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel)">
+            <summary>
+            我的订单
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.App.OrderAppService.Get(System.Guid)">
+            <summary>
+            根据订单Id，获取订单详情
+            </summary>
+            <param name="orderId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.OrderService.Application.Services.App.PayAppService">
+            <summary>
+            发起支付服务--App
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.App.PayAppService.#ctor(HaoKao.OrderService.Application.Services.Management.IPayService)">
+            <summary>
+            发起支付服务--App
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.App.PayAppService.CreateRemoteOrder(System.Guid,System.Guid)">
+            <summary>
+            创建对应支付平台的订单
+            </summary>
+            <param name="platformPayerId"></param>
+            <param name="orderId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.App.PayAppService.CurrentPayNotify(HaoKao.OrderService.Application.ViewModels.Order.CurrentPayNotifyViewModel)">
+            <summary>
+            当前回调（如App支付后，在客户端就已经返回支付成功的消息，对订单进行修改），或者扫码支付成功，前端页面回调成功
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.OrderService.Application.Services.App.PlatformPayerAppService">
+            <summary>
+            获取平台支付者--App
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.App.PlatformPayerAppService.#ctor(HaoKao.OrderService.Application.Services.Management.IPlatformPayerService)">
+            <summary>
+            获取平台支付者--App
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.App.PlatformPayerAppService.Get(HaoKao.OrderService.Application.ViewModels.PlatformPayer.PlatformPayerQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IOrderInvoiceService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IOrderInvoiceService.Get(HaoKao.OrderService.Application.ViewModels.OrderInvoice.OrderInvoiceQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IOrderInvoiceService.Update(HaoKao.OrderService.Application.ViewModels.OrderInvoice.UpdateOrderInvoiceViewModel)">
+            <summary>
+            根据主键更新指定
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IOrderInvoiceService.Create(HaoKao.OrderService.Application.ViewModels.OrderInvoice.CreateOrderInvoiceViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IOrderService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IOrderService.Get(HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IOrderService.Create(HaoKao.OrderService.Application.ViewModels.Order.CreateOrderViewModel)">
+            <summary>
+            创建订单表
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IOrderService.ManualCreate(HaoKao.OrderService.Application.ViewModels.Order.ManualCreateOrderViewModel)">
+            <summary>
+            管理端手动录入订单
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IOrderService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定订单表
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IOrderService.Cancel(System.Guid)">
+            <summary>
+            取消订单
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IOrderService.ChangeOrderAmount(HaoKao.OrderService.Application.ViewModels.Order.ChangeOrderAmountViewModel)">
+            <summary>
+            修改订单价格
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IOrderService.FinishPayOrder(HaoKao.OrderService.Application.ViewModels.Order.FinishPayOrderViewModel)">
+            <summary>
+            完成支付，修改订单
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IOrderService.GetSalesStatList(HaoKao.OrderService.Application.ViewModels.Order.SalesStatQueryViewModel)">
+            <summary>
+            获取销售统计列表
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IOrderService.GetSalesStatDetailList(HaoKao.OrderService.Application.ViewModels.Order.SalesStatDetailQueryViewModel)">
+            <summary>
+            获取销售统计详情列表
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IOrderService.GetLiveTotalAmount(System.Guid)">
+            <summary>
+            获取本场直播间购物车入口购买产品的订单金额合计金额
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IOrderService.GetLiveTransactionPeopleNumber(System.Guid)">
+            <summary>
+            获取本场直播间成交人数
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IPayService.CreateRemoteOrder(System.Guid,System.Guid)">
+            <summary>
+            下单
+            </summary>
+            <param name="platformPayerId"></param>
+            <param name="orderId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IPayService.PayNotifyMessage(System.Guid,System.Guid)">
+            <summary>
+            远程服务器回调，防止掉单
+            </summary>
+            <param name="platformPayerId"></param>
+            <param name="orderId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IPayService.CurrentPayNotify(HaoKao.OrderService.Application.ViewModels.Order.CurrentPayNotifyViewModel)">
+            <summary>
+            当前回调（如App支付后，在客户端就已经返回支付成功的消息，对订单进行修改）
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IPlatformPayerService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IPlatformPayerService.Get(HaoKao.OrderService.Application.ViewModels.PlatformPayer.PlatformPayerQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IPlatformPayerService.Create(HaoKao.OrderService.Application.ViewModels.PlatformPayer.CreatePlatformPayerViewModel)">
+            <summary>
+            创建平台配置的支付列表
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IPlatformPayerService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定平台配置的支付列表
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IPlatformPayerService.Update(System.Guid,HaoKao.OrderService.Application.ViewModels.PlatformPayer.UpdatePlatformPayerViewModel)">
+            <summary>
+            根据主键更新指定平台配置的支付列表
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IPlatformPayerService.Enable(System.Guid)">
+            <summary>
+            启用
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.IPlatformPayerService.Disable(System.Guid)">
+            <summary>
+            禁用
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.ISystemStatisticsService.GetSalesStatList(HaoKao.OrderService.Application.ViewModels.Order.SalesStatQueryViewModel)">
+            <summary>
+            获取销售统计列表
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.ISystemStatisticsService.GetSalesStatDetailList(HaoKao.OrderService.Application.ViewModels.Order.SalesStatDetailQueryViewModel)">
+            <summary>
+            获取销售统计详情列表
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Application.Services.Management.OrderInvoiceService">
+            <summary>
+            发票管理
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.OrderInvoiceService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.OrderService.Domain.Repositories.IOrderInvoiceRepository,Microsoft.Extensions.Options.IOptions{System.Text.Json.JsonSerializerOptions})">
+            <summary>
+            发票管理
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.OrderInvoiceService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.OrderInvoiceService.Get(HaoKao.OrderService.Application.ViewModels.OrderInvoice.OrderInvoiceQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.OrderInvoiceService.Update(HaoKao.OrderService.Application.ViewModels.OrderInvoice.UpdateOrderInvoiceViewModel)">
+            <summary>
+            根据主键更新指定
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.OrderInvoiceService.Create(HaoKao.OrderService.Application.ViewModels.OrderInvoice.CreateOrderInvoiceViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.OrderService.Application.Services.Management.OrderService">
+            <summary>
+            订单表接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.OrderService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,Girvs.EventBus.IEventBus,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.OrderService.Domain.Repositories.IOrderRepository,HaoKao.OrderService.Domain.Statistics.ISalesStatisticsFactory,AutoMapper.IMapper,Microsoft.Extensions.Options.IOptions{System.Text.Json.JsonSerializerOptions})">
+            <summary>
+            订单表接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.OrderService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.OrderService.Get(HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.OrderService.Create(HaoKao.OrderService.Application.ViewModels.Order.CreateOrderViewModel)">
+            <summary>
+            创建订单表
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.OrderService.ManualCreate(HaoKao.OrderService.Application.ViewModels.Order.ManualCreateOrderViewModel)">
+            <summary>
+            管理端手动录入订单
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.OrderService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定订单表
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.OrderService.Cancel(System.Guid)">
+            <summary>
+            取消订单
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.OrderService.ChangeOrderAmount(HaoKao.OrderService.Application.ViewModels.Order.ChangeOrderAmountViewModel)">
+            <summary>
+            修改订单价格
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.OrderService.FinishPayOrder(HaoKao.OrderService.Application.ViewModels.Order.FinishPayOrderViewModel)">
+            <summary>
+            完成支付订单状态
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.OrderService.GetSalesStatList(HaoKao.OrderService.Application.ViewModels.Order.SalesStatQueryViewModel)">
+            <summary>
+            获取销售统计列表
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.OrderService.GetSalesStatDetailList(HaoKao.OrderService.Application.ViewModels.Order.SalesStatDetailQueryViewModel)">
+            <summary>
+            获取销售统计详情列表
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.OrderService.GetLiveTotalAmount(System.Guid)">
+            <summary>
+            获取本场直播间购物车入口购买产品的订单金额合计金额
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.OrderService.GetLiveTransactionPeopleNumber(System.Guid)">
+            <summary>
+            获取本场直播间成交人数
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Application.Services.Management.PayHandlerService">
+            <summary>
+            后台管理——平台支付者服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.PayHandlerService.#ctor(HaoKao.OrderService.Domain.Repositories.IPlatformPayerRepository)">
+            <summary>
+            后台管理——平台支付者服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.PayHandlerService.Get">
+            <summary>
+            获取支付者列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.PayHandlerService.GetPayerNeedParameterById(System.Guid)">
+            <summary>
+            根据Id获取支付者详情列表
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.OrderService.Application.Services.Management.PayService">
+            <summary>
+            支付服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.PayService.#ctor(HaoKao.OrderService.Application.Services.Management.IPayHandlerService,HaoKao.OrderService.Domain.Repositories.IOrderRepository)">
+            <summary>
+            支付服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.PayService.CreateRemoteOrder(System.Guid,System.Guid)">
+            <summary>
+            创建远程订单，也就所谓的下单
+            </summary>
+            <param name="platformPayerId"></param>
+            <param name="orderId">订单Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.PayService.PayNotifyMessage(System.Guid,System.Guid)">
+            <summary>
+            支付通知回调
+            </summary>
+            <param name="platformPayerId"></param>
+            <param name="orderId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.PayService.CurrentPayNotify(HaoKao.OrderService.Application.ViewModels.Order.CurrentPayNotifyViewModel)">
+            <summary>
+            当前回调（如App支付后，在客户端就已经返回支付成功的消息，对订单进行修改），或者扫码支付成功，前端页面回调成功
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.OrderService.Application.Services.Management.PlatformPayerService">
+            <summary>
+            平台配置的支付列表接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.PlatformPayerService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.OrderService.Domain.Repositories.IPlatformPayerRepository)">
+            <summary>
+            平台配置的支付列表接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.PlatformPayerService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.PlatformPayerService.Get(HaoKao.OrderService.Application.ViewModels.PlatformPayer.PlatformPayerQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.PlatformPayerService.Create(HaoKao.OrderService.Application.ViewModels.PlatformPayer.CreatePlatformPayerViewModel)">
+            <summary>
+            创建平台配置的支付列表
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.PlatformPayerService.Update(System.Guid,HaoKao.OrderService.Application.ViewModels.PlatformPayer.UpdatePlatformPayerViewModel)">
+            <summary>
+            根据主键更新指定平台配置的支付列表
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.PlatformPayerService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定平台配置的支付列表
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.PlatformPayerService.Enable(System.Guid)">
+            <summary>
+            启用
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.PlatformPayerService.Disable(System.Guid)">
+            <summary>
+            禁用
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="T:HaoKao.OrderService.Application.Services.Management.ProductSalesService">
+            <summary>
+            产品销售统计服务
+            </summary>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.ProductSalesService.#ctor(HaoKao.OrderService.Domain.Repositories.IProductSalesRepository)">
+            <summary>
+            产品销售统计服务
+            </summary>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.ProductSalesService.GetProductSalesStatListAsync(HaoKao.OrderService.Domain.Queries.ProducSalesQuery)">
+            <summary>
+            获取产品销售统计列表
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.OrderService.Application.Services.Management.SalesStatisticsService">
+            <summary>
+            订单表接口服务
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Application.Services.Management.SystemStatisticsService">
+            <summary>
+            销售统计接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.SystemStatisticsService.#ctor(HaoKao.OrderService.Application.Services.Management.IOrderService)">
+            <summary>
+            销售统计接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.SystemStatisticsService.GetSalesStatList(HaoKao.OrderService.Application.ViewModels.Order.SalesStatQueryViewModel)">
+            <summary>
+            获取销售统计列表
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Management.SystemStatisticsService.GetSalesStatDetailList(HaoKao.OrderService.Application.ViewModels.Order.SalesStatDetailQueryViewModel)">
+            <summary>
+            获取销售统计详情列表
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Web.IOrderInvoiceWebService.Create(HaoKao.OrderService.Application.ViewModels.OrderInvoice.CreateOrderInvoiceViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Web.IOrderWebService.Get(System.Guid)">
+            <summary>
+            根据Id获取订单详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Web.IOrderWebService.Get(HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel)">
+            <summary>
+            我的订单
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Web.IOrderWebService.IsPaidUser">
+            <summary>
+            是否付费用户
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Web.IOrderWebService.Create(HaoKao.OrderService.Application.ViewModels.Order.CreateOrderViewModel)">
+            <summary>
+            创建订单表
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Web.IOrderWebService.Cancel(System.Guid)">
+            <summary>
+            取消订单
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Web.IPayWebService.CreateRemoteOrder(System.Guid,System.Guid)">
+            <summary>
+            创建对应支付平台的订单
+            </summary>
+            <param name="platformPayerId"></param>
+            <param name="orderId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Web.IPlatformPayerWebService.Get(HaoKao.OrderService.Application.ViewModels.PlatformPayer.PlatformPayerQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="T:HaoKao.OrderService.Application.Services.Web.OrderWebService">
+            <summary>
+            订单服务--Web
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Web.OrderWebService.#ctor(Girvs.Cache.Caching.ILocker,Girvs.EventBus.IEventBus,HaoKao.OrderService.Application.Services.Management.IOrderService)">
+            <summary>
+            订单服务--Web
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Web.OrderWebService.Get(System.Guid)">
+            <summary>
+            根据Id获取订单详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Web.OrderWebService.Get(HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel)">
+            <summary>
+            我的订单
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Web.OrderWebService.IsPaidUser">
+            <summary>
+            是否付费用户
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Web.OrderWebService.Create(HaoKao.OrderService.Application.ViewModels.Order.CreateOrderViewModel)">
+            <summary>
+            创建订单
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Web.OrderWebService.Cancel(System.Guid)">
+            <summary>
+            取消订单
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Web.OrderWebService.PublishUpdateLocked(System.Guid)">
+            <summary>
+            发布解锁事件
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Web.OrderWebService.PublishUpdateOrderLocked(System.Guid,System.String)">
+            <summary>
+            创建订单更新优惠券订单id和锁定状态
+            </summary>
+            <param name="id">订单id</param>
+            <param name="couponIds">优惠券id</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.OrderService.Application.Services.Web.PayWebService">
+            <summary>
+            发起支付服务--Web
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Web.PayWebService.#ctor(HaoKao.OrderService.Application.Services.Management.IPayService)">
+            <summary>
+            发起支付服务--Web
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Web.PayWebService.CreateRemoteOrder(System.Guid,System.Guid)">
+            <summary>
+            创建对应支付平台的订单
+            </summary>
+            <param name="platformPayerId"></param>
+            <param name="orderId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.OrderService.Application.Services.Web.PlatformPayerWebService">
+            <summary>
+            支付方式服务--Web
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Web.PlatformPayerWebService.#ctor(HaoKao.OrderService.Application.Services.Management.IPlatformPayerService)">
+            <summary>
+            支付方式服务--Web
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.Web.PlatformPayerWebService.Get(HaoKao.OrderService.Application.ViewModels.PlatformPayer.PlatformPayerQueryViewModel)">
+            <summary>
+            获取当前租户指定的支付方式
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.WeChat.IOrderInvoiceWeChatService.Create(HaoKao.OrderService.Application.ViewModels.OrderInvoice.CreateOrderInvoiceViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.WeChat.IOrderWeChatService.Create(HaoKao.OrderService.Application.ViewModels.Order.CreateOrderViewModel)">
+            <summary>
+            创建订单表
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.WeChat.IOrderWeChatService.Get(HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel)">
+            <summary>
+            我的订单
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.WeChat.IOrderWeChatService.IsPaidUser">
+            <summary>
+            是否付费用户
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.WeChat.IOrderWeChatService.Get(System.Guid)">
+            <summary>
+            根据Id获取订单详情
+            </summary>
+            <param name="orderId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.WeChat.IPayWeChatService.CreateRemoteOrder(System.Guid,System.Guid)">
+            <summary>
+            创建对应支付平台的订单
+            </summary>
+            <param name="platformPayerId"></param>
+            <param name="orderId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.WeChat.IPayWeChatService.CurrentPayNotify(HaoKao.OrderService.Application.ViewModels.Order.CurrentPayNotifyViewModel)">
+            <summary>
+            当前回调（如App支付后，在客户端就已经返回支付成功的消息，对订单进行修改）
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.WeChat.IPlatformPayerWeChatService.Get(HaoKao.OrderService.Application.ViewModels.PlatformPayer.PlatformPayerQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="T:HaoKao.OrderService.Application.Services.WeChat.OrderWeChatService">
+            <summary>
+            订单服务--小程序
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.WeChat.OrderWeChatService.#ctor(HaoKao.OrderService.Application.Services.Web.IOrderWebService)">
+            <summary>
+            订单服务--小程序
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.WeChat.OrderWeChatService.Create(HaoKao.OrderService.Application.ViewModels.Order.CreateOrderViewModel)">
+            <summary>
+            创建订单
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.WeChat.OrderWeChatService.Get(HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel)">
+            <summary>
+            我的订单
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.WeChat.OrderWeChatService.IsPaidUser">
+            <summary>
+            是否付费用户
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.WeChat.OrderWeChatService.Get(System.Guid)">
+            <summary>
+            根据订单Id，获取订单详情
+            </summary>
+            <param name="orderId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.OrderService.Application.Services.WeChat.PayWeChatService">
+            <summary>
+            发起支付服务--小程序
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.WeChat.PayWeChatService.#ctor(HaoKao.OrderService.Application.Services.Management.IPayService)">
+            <summary>
+            发起支付服务--小程序
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.WeChat.PayWeChatService.CreateRemoteOrder(System.Guid,System.Guid)">
+            <summary>
+            创建远程订单
+            </summary>
+            <param name="platformPayerId"></param>
+            <param name="orderId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.WeChat.PayWeChatService.CurrentPayNotify(HaoKao.OrderService.Application.ViewModels.Order.CurrentPayNotifyViewModel)">
+            <summary>
+            当前回调（如App支付后，在客户端就已经返回支付成功的消息，对订单进行修改），或者扫码支付成功，前端页面回调成功
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.OrderService.Application.Services.WeChat.PlatformPayerWeChatService">
+            <summary>
+            获取平台支付者--小程序
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Application.Services.WeChat.PlatformPayerWeChatService.#ctor(HaoKao.OrderService.Application.Services.Management.IPlatformPayerService)">
+            <summary>
+            获取平台支付者--小程序
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.ChangeOrderAmountViewModel.OrderId">
+            <summary>
+            订单Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.ChangeOrderAmountViewModel.ProductContents">
+            <summary>
+            产品详细内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.CurrentPayNotifyViewModel.PlatformPayerId">
+            <summary>
+            平台支付者ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.CurrentPayNotifyViewModel.OrderId">
+            <summary>
+            平台订单Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.CurrentPayNotifyViewModel.OrderNumber">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.CurrentPayNotifyViewModel.CurrentPayNotifySign">
+            <summary>
+            通知签名
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.CurrentPayNotifyViewModel.IosRestorePurchase">
+            <summary>
+            是否为恢复购买
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.FinishPayOrderViewModel.PlatformPayerId">
+            <summary>
+            使用的平台配置的支付者的Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.FinishPayOrderViewModel.PlatformPayerName">
+            <summary>
+            使用的平台配置的支付者的名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.FinishPayOrderViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.FinishPayOrderViewModel.OrderSerialNumber">
+            <summary>
+            订单流水号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.FinishPayOrderViewModel.OrderNumber">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.FinishPayOrderViewModel.OrderState">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.BrowseOrderViewModel.PlatformPayerId">
+            <summary>
+            使用的平台配置的支付者的Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.BrowseOrderViewModel.PlatformPayerName">
+            <summary>
+            使用的平台配置的支付者的名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.BrowseOrderViewModel.OrderSerialNumber">
+            <summary>
+            订单流水号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.BrowseOrderViewModel.OrderNumber">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.BrowseOrderViewModel.PurchaseProductId">
+            <summary>
+            购买的产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.BrowseOrderViewModel.PurchaseName">
+            <summary>
+            购买产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.BrowseOrderViewModel.PurchaseProductType">
+            <summary>
+            产品类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.BrowseOrderViewModel.OrderAmount">
+            <summary>
+            订单金额
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.BrowseOrderViewModel.ActualAmount">
+            <summary>
+            实际金额
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.BrowseOrderViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.BrowseOrderViewModel.LiveId">
+            <summary>
+            直播id（可为空）
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.BrowseOrderViewModel.OrderState">
+            <summary>
+            订单状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.BrowseOrderViewModel.CreatorId">
+            <summary>
+            下单用户ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.BrowseOrderViewModel.CreatorName">
+            <summary>
+            下单用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.BrowseOrderViewModel.CreateTime">
+            <summary>
+            订单创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.BrowseOrderViewModel.UpdateTime">
+            <summary>
+            订单更新时间，完成支付时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.BrowseOrderViewModel.TenantName">
+            <summary>
+            租户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.BrowseOrderViewModel.PurchaseProductContents">
+            <summary>
+            购买的产品详细内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.CreateOrderViewModel.Sign">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.CreateOrderViewModel.OrderSerialNumber">
+            <summary>
+            订单流水号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.CreateOrderViewModel.PurchaseProductId">
+            <summary>
+            购买的产品包Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.CreateOrderViewModel.PurchaseName">
+            <summary>
+            购买产品包名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.CreateOrderViewModel.PurchaseProductType">
+            <summary>
+            产品包类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.CreateOrderViewModel.OrderAmount">
+            <summary>
+            订单金额
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.CreateOrderViewModel.ActualAmount">
+            <summary>
+            实际金额
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.CreateOrderViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.CreateOrderViewModel.LiveId">
+            <summary>
+            直播id（可为空）
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.CreateOrderViewModel.PurchaseProductContents">
+            <summary>
+            购买产品内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.CreateOrderViewModel.CreatorId">
+            <summary>
+            下单用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.CreateOrderViewModel.CreatorName">
+            <summary>
+            下单用户
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.CreateOrderViewModel.CreateTime">
+            <summary>
+            下单时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.CreateOrderViewModel.UpdateTime">
+            <summary>
+            支付时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.CreateOrderViewModel.ClientId">
+            <summary>
+            客户端Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.CreateOrderViewModel.ClientName">
+            <summary>
+            客户端名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel.PlatformPayerId">
+            <summary>
+            使用的平台配置的支付者的Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel.OrderNumber">
+            <summary>
+            订单号(模糊搜索)
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel.OrderNumber2">
+            <summary>
+            订单号(精确搜索)
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel.OrderSerialNumber">
+            <summary>
+            订单流水号(模糊搜索)
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel.OrderSerialNumber2">
+            <summary>
+            订单流水号(精确搜索)
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel.PurchaseName">
+            <summary>
+            购买产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel.CreatorName">
+            <summary>
+            下单用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel.OrderState">
+            <summary>
+            订单状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel.StartCreateTime">
+            <summary>
+            下单开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel.EndCreateTime">
+            <summary>
+            下单结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel.StartUpdateTime">
+            <summary>
+            支付开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel.EndUpdateTime">
+            <summary>
+            支付结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel.IosRestorePurchase">
+            <summary>
+            苹果内购恢复购买的
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel.LiveId">
+            <summary>
+            直播id（可为空）
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel.IsPaidOrder">
+            <summary>
+            是否付费订单（true:返回实缴金额大于0订单，false：返回实缴金额等于0订单，不传都返回）
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryListViewModel.PlatformPayerId">
+            <summary>
+            使用的平台配置的支付者的Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryListViewModel.PlatformPayerName">
+            <summary>
+            使用的平台配置的支付者的名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryListViewModel.PurchaseProductId">
+            <summary>
+            购买的产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryListViewModel.OrderNumber">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryListViewModel.OrderSerialNumber">
+            <summary>
+            订单流水号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryListViewModel.PurchaseName">
+            <summary>
+            购买产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryListViewModel.OrderAmount">
+            <summary>
+            订单金额
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryListViewModel.ActualAmount">
+            <summary>
+            实际金额
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryListViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryListViewModel.LiveId">
+            <summary>
+            直播id（可为空）
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryListViewModel.OrderState">
+            <summary>
+            订单状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryListViewModel.CreatorId">
+            <summary>
+            下单用户ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryListViewModel.CreatorName">
+            <summary>
+            下单用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryListViewModel.CreateTime">
+            <summary>
+            订单创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryListViewModel.UpdateTime">
+            <summary>
+            订单更新时间，完成支付时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryListViewModel.TenantName">
+            <summary>
+            租户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryListViewModel.IosRestorePurchase">
+            <summary>
+            苹果内购恢复购买的
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryListViewModel.PurchaseProductType">
+            <summary>
+            产品类别
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryListViewModel.VaildTime">
+            <summary>
+            订单过期失效时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryListViewModel.PurchaseProductContents">
+            <summary>
+            购买的产品详细内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryListViewModel.Coupons">
+            <summary>
+            实名优惠券集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.OrderQueryListViewModel.OrderInvoice">
+            <summary>
+            订单发票
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.MyOrderInvoiceViewModel.RequestState">
+            <summary>
+            申请状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.MyOrderInvoiceViewModel.InvoiceFormat">
+            <summary>
+            发票形式
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.MyOrderInvoiceViewModel.ShippingNumber">
+            <summary>
+            物流单号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.MyOrderInvoiceViewModel.LogisticsCompany">
+            <summary>
+            物流公司
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.SalesStatQueryViewModel.Dimension">
+            <summary>
+            统计维度
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.SalesStatQueryViewModel.StartTime">
+            <summary>
+            开始统计时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.SalesStatQueryViewModel.StartDate">
+            <summary>
+            开始统计时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.SalesStatQueryViewModel.EndTime">
+            <summary>
+            结束统计时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.SalesStatQueryViewModel.TenantIds">
+            <summary>
+            租户Ids
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.SalesStatListViewModel.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.SalesStatListViewModel.SumOrderCount">
+            <summary>
+            订单数
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.SalesStatListViewModel.SumOrderAmount">
+            <summary>
+            订单金额
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.SalesStatDetailQueryViewModel.Dimension">
+            <summary>
+            统计维度
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.SalesStatDetailQueryViewModel.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.SalesStatDetailQueryViewModel.TenantIds">
+            <summary>
+            租户Ids
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.SalesStatDetailListViewModel.PlatformPayerName">
+            <summary>
+            使用的平台配置的支付者的名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.SalesStatDetailListViewModel.OrderSerialNumber">
+            <summary>
+            订单流水号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.SalesStatDetailListViewModel.OrderNumber">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.SalesStatDetailListViewModel.PurchaseName">
+            <summary>
+            购买产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.SalesStatDetailListViewModel.OrderAmount">
+            <summary>
+            订单金额
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.SalesStatDetailListViewModel.ActualAmount">
+            <summary>
+            实际金额
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.SalesStatDetailListViewModel.CreatorId">
+            <summary>
+            下单用户ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.SalesStatDetailListViewModel.CreatorName">
+            <summary>
+            下单用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.SalesStatDetailListViewModel.CreateTime">
+            <summary>
+            订单创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.Order.SalesStatDetailListViewModel.UpdateTime">
+            <summary>
+            订单更新时间，完成支付时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.OrderId">
+            <summary>
+            订单Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.InvoiceType">
+            <summary>
+            发票类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.VatInvoiceType">
+            <summary>
+            增值税发票类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.InvoiceTitle">
+            <summary>
+            发票抬头
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.TaxNo">
+            <summary>
+            税号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.RegistryAddress">
+            <summary>
+            注册地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.RegistryTel">
+            <summary>
+            注册电话
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.BankName">
+            <summary>
+            开户银行
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.BankAccount">
+            <summary>
+            银行账号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.InvoiceFormat">
+            <summary>
+            发票形式(获取方式)
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.Email">
+            <summary>
+            电子邮箱
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.ShippingArea">
+            <summary>
+            所在地区
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.ShippingAddress">
+            <summary>
+            收件人地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.ReceiverName">
+            <summary>
+            收件人姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.ReceiverPhone">
+            <summary>
+            收件人联系电话
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.RequestState">
+            <summary>
+            申请状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.ShippingNumber">
+            <summary>
+            物流单号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.LogisticsCompany">
+            <summary>
+            物流公司
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.ShippingTime">
+            <summary>
+            发货时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.CreatorId">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.CreatorName">
+            <summary>
+            创建者名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.Remark">
+            <summary>
+            发票备注
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.BrowseOrderInvoiceViewModel.Order">
+            <summary>
+            订单
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.CreateOrderInvoiceViewModel.OrderId">
+            <summary>
+            订单Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.CreateOrderInvoiceViewModel.InvoiceType">
+            <summary>
+            发票类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.CreateOrderInvoiceViewModel.VatInvoiceType">
+            <summary>
+            增值税发票类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.CreateOrderInvoiceViewModel.InvoiceTitle">
+            <summary>
+            发票抬头
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.CreateOrderInvoiceViewModel.TaxNo">
+            <summary>
+            税号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.CreateOrderInvoiceViewModel.RegistryAddress">
+            <summary>
+            注册地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.CreateOrderInvoiceViewModel.RegistryTel">
+            <summary>
+            注册电话
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.CreateOrderInvoiceViewModel.BankName">
+            <summary>
+            开户银行
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.CreateOrderInvoiceViewModel.BankAccount">
+            <summary>
+            银行账号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.CreateOrderInvoiceViewModel.InvoiceFormat">
+            <summary>
+            发票形式(获取方式)
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.CreateOrderInvoiceViewModel.Email">
+            <summary>
+            电子邮箱
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.CreateOrderInvoiceViewModel.ShippingArea">
+            <summary>
+            所在地区
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.CreateOrderInvoiceViewModel.ShippingAddress">
+            <summary>
+            收件人地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.CreateOrderInvoiceViewModel.ReceiverName">
+            <summary>
+            收件人姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.CreateOrderInvoiceViewModel.ReceiverPhone">
+            <summary>
+            收件人联系电话
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.CreateOrderInvoiceViewModel.Remark">
+            <summary>
+            发票备注
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.OrderInvoiceQueryViewModel.OrderSerialNumber">
+            <summary>
+            订单编号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.OrderInvoiceQueryViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.OrderInvoiceQueryViewModel.CreatorName">
+            <summary>
+            下单人名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.OrderInvoiceQueryViewModel.InvoiceType">
+            <summary>
+            抬头类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.OrderInvoiceQueryViewModel.InvoiceFormat">
+            <summary>
+            获取方式
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.OrderInvoiceQueryViewModel.StartTime">
+            <summary>
+            申请开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.OrderInvoiceQueryViewModel.EndTime">
+            <summary>
+            申请结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.OrderInvoiceQueryViewModel.RequestState">
+            <summary>
+            申请状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.UpdateOrderInvoiceViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.UpdateOrderInvoiceViewModel.RequestState">
+            <summary>
+            申请状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.UpdateOrderInvoiceViewModel.LogisticsCompany">
+            <summary>
+            物流公司
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.OrderInvoice.UpdateOrderInvoiceViewModel.ShippingNumber">
+            <summary>
+            物流单号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.BrowsePlatformPayerViewModel.Name">
+            <summary>
+            支付名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.BrowsePlatformPayerViewModel.PayerId">
+            <summary>
+            对应支付处理者Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.BrowsePlatformPayerViewModel.PayerName">
+            <summary>
+            对应支付处理者名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.BrowsePlatformPayerViewModel.PlatformPayerScenes">
+            <summary>
+            使用场景
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.BrowsePlatformPayerViewModel.PaymentMethod">
+            <summary>
+            支付方式归类
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.BrowsePlatformPayerViewModel.IosIsOpen">
+            <summary>
+            Ios是否开启
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.BrowsePlatformPayerViewModel.Config">
+            <summary>
+            支付相关配置
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.CreatePlatformPayerViewModel.Name">
+            <summary>
+            支付名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.CreatePlatformPayerViewModel.PayerId">
+            <summary>
+            对应支付处理者Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.CreatePlatformPayerViewModel.PayerName">
+            <summary>
+            对应支付处理者名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.CreatePlatformPayerViewModel.PlatformPayerScenes">
+            <summary>
+            使用场景
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.CreatePlatformPayerViewModel.PaymentMethod">
+            <summary>
+            支付方式归类
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.CreatePlatformPayerViewModel.IosIsOpen">
+            <summary>
+            Ios是否开启
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.CreatePlatformPayerViewModel.Config">
+            <summary>
+            支付相关配置
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.PlatformPayerQueryViewModel.Name">
+            <summary>
+            支付名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.PlatformPayerQueryViewModel.PayerId">
+            <summary>
+            对应支付处理者Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.PlatformPayerQueryViewModel.UseState">
+            <summary>
+            启用/禁用
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.PlatformPayerQueryViewModel.PaymentMethod">
+            <summary>
+            支付归类
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.PlatformPayerQueryViewModel.PlatformPayerScenes">
+            <summary>
+            使用场景
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.PlatformPayerQueryViewModel.IosIsOpen">
+            <summary>
+            苹果端是否显示
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.PlatformPayerQueryViewModel.Ids">
+            <summary>
+            ID列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.PlatformPayerQueryListViewModel.Name">
+            <summary>
+            支付名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.PlatformPayerQueryListViewModel.PayerId">
+            <summary>
+            对应支付处理者Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.PlatformPayerQueryListViewModel.PayerName">
+            <summary>
+            对应支付处理者名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.PlatformPayerQueryListViewModel.PaymentMethod">
+            <summary>
+            支付方式归类
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.PlatformPayerQueryListViewModel.IosIsOpen">
+            <summary>
+            Ios是否开启
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.PlatformPayerQueryListViewModel.PlatformPayerScenes">
+            <summary>
+            使用场景
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.PlatformPayerQueryListViewModel.CreateTime">
+            <summary>
+            创建的时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.PlatformPayerQueryListViewModel.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.PlatformPayerQueryListViewModel.UseState">
+            <summary>
+            启用/禁用
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.PlatformPayerQueryListViewModel.ExtendParams">
+            <summary>
+            分期扩展字段
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.UpdatePlatformPayerViewModel.Name">
+            <summary>
+            支付名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.UpdatePlatformPayerViewModel.PayerId">
+            <summary>
+            对应支付处理者Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.UpdatePlatformPayerViewModel.PayerName">
+            <summary>
+            对应支付处理者名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.UpdatePlatformPayerViewModel.PlatformPayerScenes">
+            <summary>
+            使用场景
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.UpdatePlatformPayerViewModel.PaymentMethod">
+            <summary>
+            支付方式归类
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.UpdatePlatformPayerViewModel.IosIsOpen">
+            <summary>
+            Ios是否开启
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Application.ViewModels.PlatformPayer.UpdatePlatformPayerViewModel.Config">
+            <summary>
+            支付相关配置
+            </summary>
+        </member>
+    </members>
+</doc>

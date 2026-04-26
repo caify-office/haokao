@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.CourseRatingService.Application</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.CourseRatingService.Application.Services.Management.CourseRatingService">
+            <summary>
+            课程评价接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Application.Services.Management.CourseRatingService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},AutoMapper.IMapper,HaoKao.CourseRatingService.Domain.Repositories.ICourseRatingRepository)">
+            <summary>
+            课程评价接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Application.Services.Management.CourseRatingService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Application.Services.Management.CourseRatingService.Get(HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Application.Services.Management.CourseRatingService.Create(HaoKao.CourseRatingService.Application.ViewModels.CreateCourseRatingViewModel)">
+            <summary>
+            创建课程评价
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Application.Services.Management.CourseRatingService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定课程评价
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Application.Services.Management.CourseRatingService.Audit(System.Guid,HaoKao.CourseRatingService.Domain.Enums.AuditState)">
+            <summary>
+            审核课程评价
+            </summary>
+            <param name="id">主键</param>
+            <param name="state">审核状态</param>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Application.Services.Management.CourseRatingService.Sticky(System.Guid,System.Boolean)">
+            <summary>
+            置顶课程评价
+            </summary>
+            <param name="id">主键</param>
+            <param name="sticky">是否置顶</param>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Application.Services.Management.ICourseRatingService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Application.Services.Management.ICourseRatingService.Get(HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Application.Services.Management.ICourseRatingService.Create(HaoKao.CourseRatingService.Application.ViewModels.CreateCourseRatingViewModel)">
+            <summary>
+            创建课程评价
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Application.Services.Management.ICourseRatingService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定课程评价
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Application.Services.Management.ICourseRatingService.Audit(System.Guid,HaoKao.CourseRatingService.Domain.Enums.AuditState)">
+            <summary>
+            审核课程评价
+            </summary>
+            <param name="id">主键</param>
+            <param name="state">审核状态</param>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Application.Services.Management.ICourseRatingService.Sticky(System.Guid,System.Boolean)">
+            <summary>
+            置顶课程评价
+            </summary>
+            <param name="id">主键</param>
+            <param name="sticky">是否置顶</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CourseRatingService.Application.Services.Web.CourseRatingWebService">
+            <summary>
+            课程评价接口服务PC端
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Application.Services.Web.CourseRatingWebService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,HaoKao.CourseRatingService.Domain.Repositories.ICourseRatingRepository,HaoKao.CourseRatingService.Application.Services.Management.ICourseRatingService)">
+            <summary>
+            课程评价接口服务PC端
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Application.Services.Web.CourseRatingWebService.Get(HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingWebViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Application.Services.Web.CourseRatingWebService.Create(HaoKao.CourseRatingService.Application.ViewModels.CreateCourseRatingViewModel)">
+            <summary>
+            创建课程评价
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Application.Services.Web.ICourseRatingWebService.Get(HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingWebViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Application.Services.Web.ICourseRatingWebService.Create(HaoKao.CourseRatingService.Application.ViewModels.CreateCourseRatingViewModel)">
+            <summary>
+            创建课程评价
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.CourseRatingService.Application.Services.WeChat.CourseRatingWeChatService">
+            <summary>
+            课程评价接口服务微信端
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Application.Services.WeChat.CourseRatingWeChatService.#ctor(HaoKao.CourseRatingService.Application.Services.Web.ICourseRatingWebService)">
+            <summary>
+            课程评价接口服务微信端
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Application.Services.WeChat.CourseRatingWeChatService.Get(HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingWebViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Application.Services.WeChat.CourseRatingWeChatService.Create(HaoKao.CourseRatingService.Application.ViewModels.CreateCourseRatingViewModel)">
+            <summary>
+            创建课程评价
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Application.Services.WeChat.ICourseRatingWeChatService.Get(HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingWebViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseRatingService.Application.Services.WeChat.ICourseRatingWeChatService.Create(HaoKao.CourseRatingService.Application.ViewModels.CreateCourseRatingViewModel)">
+            <summary>
+            创建课程评价
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.BrowseCourseRatingViewModel.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.BrowseCourseRatingViewModel.CourseName">
+            <summary>
+            课程名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.BrowseCourseRatingViewModel.Comment">
+            <summary>
+            评价内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.BrowseCourseRatingViewModel.Rating">
+            <summary>
+            评价级别
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.BrowseCourseRatingViewModel.CreateTime">
+            <summary>
+            评价时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.BrowseCourseRatingViewModel.CreatorId">
+            <summary>
+            评价人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.CreateCourseRatingViewModel.CourseId">
+            <summary>
+            课程Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.CreateCourseRatingViewModel.CourseName">
+            <summary>
+            课程名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.CreateCourseRatingViewModel.Comment">
+            <summary>
+            评价内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.CreateCourseRatingViewModel.Rating">
+            <summary>
+            评价级别
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.CreateCourseRatingViewModel.NickName">
+            <summary>
+            昵称名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.CreateCourseRatingViewModel.Avatar">
+            <summary>
+            用户头像
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingViewModel.CourseId">
+            <summary>
+            课程Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingViewModel.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingViewModel.CourseName">
+            <summary>
+            课程名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingViewModel.StartTime">
+            <summary>
+            评价开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingViewModel.EndTime">
+            <summary>
+            评价结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingViewModel.Rating">
+            <summary>
+            评价级别
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingViewModel.AuditState">
+            <summary>
+            审核状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingListViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingListViewModel.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingListViewModel.CourseName">
+            <summary>
+            课程名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingListViewModel.Comment">
+            <summary>
+            评价内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingListViewModel.Rating">
+            <summary>
+            评价级别
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingListViewModel.CreateTime">
+            <summary>
+            评价时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingListViewModel.AuditState">
+            <summary>
+            审核状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingListViewModel.CreatorId">
+            <summary>
+            评价人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingListViewModel.Sticky">
+            <summary>
+            是否置顶
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingWebViewModel.CourseId">
+            <summary>
+            课程Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingListWebViewModel.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingListWebViewModel.Comment">
+            <summary>
+            评价内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingListWebViewModel.Rating">
+            <summary>
+            评价级别
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingListWebViewModel.Sticky">
+            <summary>
+            是否置顶
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingListWebViewModel.CreateTime">
+            <summary>
+            评价时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingListWebViewModel.CreatorId">
+            <summary>
+            评价人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseRatingService.Application.ViewModels.QueryCourseRatingListWebViewModel.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+    </members>
+</doc>

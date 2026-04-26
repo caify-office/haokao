@@ -1,0 +1,896 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.DrawPrizeService.Application</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.DrawPrizeService.Application.Profiles.DrawPrizeProfile">
+            <summary>
+            抽奖模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Profiles.DrawPrizeProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.Profiles.DrawPrizeProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Application.Services.Management.DrawPrizeRecordService">
+            <summary>
+            抽奖记录服务-管理端
+            </summary>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.DrawPrizeRecordService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,HaoKao.DrawPrizeService.Domain.Repositories.IDrawPrizeRecordRepository)">
+            <summary>
+            抽奖记录服务-管理端
+            </summary>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.DrawPrizeRecordService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.DrawPrizeRecordService.Get(HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.DrawPrizeRecordQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Application.Services.Management.DrawPrizeService">
+             <summary>
+            社区抽奖服务-管理端
+             </summary>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.DrawPrizeService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.DrawPrizeService.Domain.Repositories.IDrawPrizeRepository)">
+             <summary>
+            社区抽奖服务-管理端
+             </summary>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.DrawPrizeService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.DrawPrizeService.Get(HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.DrawPrizeQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.DrawPrizeService.Create(HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.CreateDrawPrizeViewModel)">
+            <summary>
+            创建抽奖
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.DrawPrizeService.Delete(System.Guid[])">
+            <summary>
+            根据主键删除指定抽奖
+            </summary>
+            <param name="ids">主键</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.DrawPrizeService.Update(HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.UpdateDrawPrizeViewModel)">
+            <summary>
+            根据主键更新指定抽奖
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.DrawPrizeService.SetDrawPrizeRule(HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.SetDrawPrizeRuleViewModel)">
+            <summary>
+            设置抽奖规则
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.DrawPrizeService.Enable(System.Guid[])">
+            <summary>
+            启用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.DrawPrizeService.Disable(System.Guid[])">
+            <summary>
+            禁用
+            </summary>
+            <param name="modelIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.IDrawPrizeRecordService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.IDrawPrizeRecordService.Get(HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.DrawPrizeRecordQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.IDrawPrizeService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.IDrawPrizeService.Get(HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.DrawPrizeQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.IDrawPrizeService.Create(HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.CreateDrawPrizeViewModel)">
+            <summary>
+            创建抽奖
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.IDrawPrizeService.Delete(System.Guid[])">
+            <summary>
+            根据主键删除指定抽奖
+            </summary>
+            <param name="ids">主键</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.IDrawPrizeService.Update(HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.UpdateDrawPrizeViewModel)">
+            <summary>
+            根据主键更新指定抽奖
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.IDrawPrizeService.SetDrawPrizeRule(HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.SetDrawPrizeRuleViewModel)">
+            <summary>
+            设置抽奖规则
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.IDrawPrizeService.Enable(System.Guid[])">
+            <summary>
+            启用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.IDrawPrizeService.Disable(System.Guid[])">
+            <summary>
+            禁用
+            </summary>
+            <param name="modelIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.IPrizeService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.IPrizeService.Get(HaoKao.DrawPrizeService.Application.ViewModels.Prize.PrizeQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.IPrizeService.Create(HaoKao.DrawPrizeService.Application.ViewModels.Prize.CreatePrizeViewModel)">
+            <summary>
+            创建奖品
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.IPrizeService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定奖品
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.IPrizeService.Update(HaoKao.DrawPrizeService.Application.ViewModels.Prize.UpdatePrizeViewModel)">
+            <summary>
+            根据主键更新指定奖品
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.IPrizeService.SetPrizeGuaranteed(HaoKao.DrawPrizeService.Application.ViewModels.Prize.SetPrizeGuaranteedPrizeViewModel)">
+            <summary>
+            根据主键更新指定奖品保底
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.IPrizeService.CancelPrizeGuaranteed(System.Guid)">
+            <summary>
+            根据主键取消指定奖品保底
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Application.Services.Management.PrizeService">
+             <summary>
+            奖品接口服务-管理端
+             </summary>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.PrizeService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.DrawPrizeService.Domain.Repositories.IPrizeRepository)">
+             <summary>
+            奖品接口服务-管理端
+             </summary>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.PrizeService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.PrizeService.Get(HaoKao.DrawPrizeService.Application.ViewModels.Prize.PrizeQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.PrizeService.Create(HaoKao.DrawPrizeService.Application.ViewModels.Prize.CreatePrizeViewModel)">
+            <summary>
+            创建奖品
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.PrizeService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定奖品
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.PrizeService.Update(HaoKao.DrawPrizeService.Application.ViewModels.Prize.UpdatePrizeViewModel)">
+            <summary>
+            根据主键更新指定奖品
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.PrizeService.SetPrizeGuaranteed(HaoKao.DrawPrizeService.Application.ViewModels.Prize.SetPrizeGuaranteedPrizeViewModel)">
+            <summary>
+            根据主键更新指定奖品保底
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.Management.PrizeService.CancelPrizeGuaranteed(System.Guid)">
+            <summary>
+            根据主键取消指定奖品保底
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Application.Services.WeChat.DrawPrizeRecordWeChatService">
+            <summary>
+            抽奖记录服务-Web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.WeChat.DrawPrizeRecordWeChatService.#ctor(HaoKao.DrawPrizeService.Application.Services.Management.IDrawPrizeRecordService)">
+            <summary>
+            抽奖记录服务-Web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.WeChat.DrawPrizeRecordWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.WeChat.DrawPrizeRecordWeChatService.Get(HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.DrawPrizeRecordQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Application.Services.WeChat.DrawPrizeWeChatService">
+            <summary>
+            社区抽奖服务-Web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.WeChat.DrawPrizeWeChatService.#ctor(HaoKao.DrawPrizeService.Application.Services.Management.IDrawPrizeService)">
+            <summary>
+            社区抽奖服务-Web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.WeChat.DrawPrizeWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.WeChat.DrawPrizeWeChatService.Get(HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.DrawPrizeQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.WeChat.IDrawPrizeRecordWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.WeChat.IDrawPrizeRecordWeChatService.Get(HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.DrawPrizeRecordQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.WeChat.IDrawPrizeWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.WeChat.IDrawPrizeWeChatService.Get(HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.DrawPrizeQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.WeChat.IPrizeWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.WeChat.IPrizeWeChatService.Get(HaoKao.DrawPrizeService.Application.ViewModels.Prize.PrizeQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.WeChat.IPrizeWeChatService.Draw(HaoKao.DrawPrizeService.Application.ViewModels.Prize.DrawPrizeViewModel)">
+            <summary>
+            抽奖
+            </summary>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Application.Services.WeChat.PrizeWeChatService">
+            <summary>
+            奖品服务-Web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.WeChat.PrizeWeChatService.#ctor(HaoKao.DrawPrizeService.Application.Services.Management.IPrizeService,HaoKao.DrawPrizeService.Application.Services.Management.IDrawPrizeService,HaoKao.DrawPrizeService.Application.Services.Management.IDrawPrizeRecordService,Girvs.Cache.Caching.ILocker,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.DrawPrizeService.Domain.Repositories.IDrawPrizeRecordRepository,AutoMapper.IMapper)">
+            <summary>
+            奖品服务-Web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.WeChat.PrizeWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.WeChat.PrizeWeChatService.Get(HaoKao.DrawPrizeService.Application.ViewModels.Prize.PrizeQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Application.Services.WeChat.PrizeWeChatService.Draw(HaoKao.DrawPrizeService.Application.ViewModels.Prize.DrawPrizeViewModel)">
+            <summary>
+            抽奖
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.BrowseDrawPrizeViewModel.Title">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.BrowseDrawPrizeViewModel.BackgroundImageUrl">
+            <summary>
+            活动背景图
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.BrowseDrawPrizeViewModel.DrawPrizeRange">
+            <summary>
+            抽奖范围
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.BrowseDrawPrizeViewModel.DrawPrizeType">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.BrowseDrawPrizeViewModel.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.BrowseDrawPrizeViewModel.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.BrowseDrawPrizeViewModel.Desc">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.BrowseDrawPrizeViewModel.Probability">
+            <summary>
+            中奖概率
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.BrowseDrawPrizeViewModel.PrizeCount">
+            <summary>
+            奖品数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.BrowseDrawPrizeViewModel.WinningPrizeRecordsCount">
+            <summary>
+            中奖人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.BrowseDrawPrizeViewModel.DrawPrizeRecordsCount">
+            <summary>
+            抽奖人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.BrowseDrawPrizeViewModel.DrawPrizeRecords">
+            <summary>
+            抽奖记录
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.BrowseDrawPrizeViewModel.Enable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.CreateDrawPrizeViewModel.Title">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.CreateDrawPrizeViewModel.BackgroundImageUrl">
+            <summary>
+            活动背景图
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.CreateDrawPrizeViewModel.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.CreateDrawPrizeViewModel.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.CreateDrawPrizeViewModel.Desc">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.DrawPrizeQueryViewModel.Title">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.DrawPrizeQueryViewModel.DrawPrizeType">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.DrawPrizeQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.DrawPrizeQueryListViewModel.Title">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.DrawPrizeQueryListViewModel.BackgroundImageUrl">
+            <summary>
+            活动背景图
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.DrawPrizeQueryListViewModel.DrawPrizeRange">
+            <summary>
+            抽奖范围
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.DrawPrizeQueryListViewModel.DrawPrizeType">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.DrawPrizeQueryListViewModel.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.DrawPrizeQueryListViewModel.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.DrawPrizeQueryListViewModel.Desc">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.DrawPrizeQueryListViewModel.Probability">
+            <summary>
+            中奖概率
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.DrawPrizeQueryListViewModel.PrizeCount">
+            <summary>
+            奖品数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.DrawPrizeQueryListViewModel.WinningPrizeRecordsCount">
+            <summary>
+            中奖人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.DrawPrizeQueryListViewModel.DrawPrizeRecordsCount">
+            <summary>
+            抽奖人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.DrawPrizeQueryListViewModel.DrawPrizeRecords">
+            <summary>
+            抽奖记录
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.DrawPrizeQueryListViewModel.Enable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.SetDrawPrizeRuleViewModel.DrawPrizeRange">
+            <summary>
+            抽奖范围
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.SetDrawPrizeRuleViewModel.DrawPrizeType">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.SetDrawPrizeRuleViewModel.Probability">
+            <summary>
+            中奖概率
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.UpdateDrawPrizeViewModel.Title">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.UpdateDrawPrizeViewModel.BackgroundImageUrl">
+            <summary>
+            活动背景图
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.UpdateDrawPrizeViewModel.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.UpdateDrawPrizeViewModel.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrize.UpdateDrawPrizeViewModel.Desc">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.BrowseDrawPrizeRecordViewModel.DrawPrizeId">
+            <summary>
+            所属抽奖活动Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.BrowseDrawPrizeRecordViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.BrowseDrawPrizeRecordViewModel.PrizeId">
+            <summary>
+            中奖奖品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.BrowseDrawPrizeRecordViewModel.PrizeName">
+            <summary>
+            奖品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.CreateDrawPrizeRecordViewModel.DrawPrizeId">
+            <summary>
+            所属抽奖活动Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.CreateDrawPrizeRecordViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.CreateDrawPrizeRecordViewModel.PrizeName">
+            <summary>
+            奖品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.DrawPrizeRecordQueryViewModel.CreatorId">
+            <summary>
+            创建者id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.DrawPrizeRecordQueryViewModel.DrawPrizeId">
+            <summary>
+            所属抽奖活动Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.DrawPrizeRecordQueryViewModel.CreatorName">
+            <summary>
+            创建者名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.DrawPrizeRecordQueryViewModel.PrizeName">
+            <summary>
+            奖品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.DrawPrizeRecordQueryViewModel.IsWinning">
+            <summary>
+            是否中奖（true：返回中奖记录，false：返回没中奖记录，不传：都返回）
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.DrawPrizeRecordQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.DrawPrizeRecordQueryListViewModel.CreatorName">
+            <summary>
+            创建者名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.DrawPrizeRecordQueryListViewModel.DrawPrizeId">
+            <summary>
+            所属抽奖活动Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.DrawPrizeRecordQueryListViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.DrawPrizeRecordQueryListViewModel.PrizeId">
+            <summary>
+            中奖奖品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.DrawPrizeRecordQueryListViewModel.PrizeName">
+            <summary>
+            奖品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.UpdateDrawPrizeRecordViewModel.DrawPrizeId">
+            <summary>
+            所属抽奖活动Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.UpdateDrawPrizeRecordViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.DrawPrizeRecord.UpdateDrawPrizeRecordViewModel.PrizeName">
+            <summary>
+            奖品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.BrowsePrizeViewModel.DrawPrizeId">
+            <summary>
+            所属抽奖活动Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.BrowsePrizeViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.BrowsePrizeViewModel.Count">
+            <summary>
+            奖品数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.BrowsePrizeViewModel.DisplayCount">
+            <summary>
+            显示数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.BrowsePrizeViewModel.WinningRange">
+            <summary>
+            中奖范围
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.BrowsePrizeViewModel.DesignatedStudents">
+            <summary>
+             指定学员
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.BrowsePrizeViewModel.IsGuaranteed">
+            <summary>
+            是否保底
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.BrowsePrizeViewModel.AwardedQuantity">
+            <summary>
+            已颁发的奖品数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.CreatePrizeViewModel.DrawPrizeId">
+            <summary>
+            所属抽奖活动Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.CreatePrizeViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.CreatePrizeViewModel.Count">
+            <summary>
+            奖品数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.CreatePrizeViewModel.DisplayCount">
+            <summary>
+            显示数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.CreatePrizeViewModel.WinningRange">
+            <summary>
+            中奖范围
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.CreatePrizeViewModel.DesignatedStudents">
+            <summary>
+             指定学员
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.CreatePrizeViewModel.IsGuaranteed">
+            <summary>
+            是否保底
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.DrawPrizeViewModel.DrawPrizeId">
+            <summary>
+            所属抽奖活动Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.DrawPrizeViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.DrawPrizeViewModel.IsPaidStudents">
+            <summary>
+            是否付费学员
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.DrawPrizeViewModel.DataKey">
+            <summary>
+            数据密钥
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.PrizeQueryViewModel.DrawPrizeId">
+            <summary>
+            所属抽奖活动Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.PrizeQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.PrizeQueryListViewModel.DrawPrizeId">
+            <summary>
+            所属抽奖活动Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.PrizeQueryListViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.PrizeQueryListViewModel.Count">
+            <summary>
+            奖品数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.PrizeQueryListViewModel.DisplayCount">
+            <summary>
+            显示数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.PrizeQueryListViewModel.WinningRange">
+            <summary>
+            中奖范围
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.PrizeQueryListViewModel.DesignatedStudents">
+            <summary>
+             指定学员
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.PrizeQueryListViewModel.IsGuaranteed">
+            <summary>
+            是否保底
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.PrizeQueryListViewModel.AwardedQuantity">
+            <summary>
+            已颁发的奖品数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.SetPrizeGuaranteedPrizeViewModel.DrawPrizeId">
+            <summary>
+            所属抽奖活动Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.UpdatePrizeViewModel.DrawPrizeId">
+            <summary>
+            所属抽奖活动Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.UpdatePrizeViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.UpdatePrizeViewModel.Count">
+            <summary>
+            奖品数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.UpdatePrizeViewModel.DisplayCount">
+            <summary>
+            显示数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.UpdatePrizeViewModel.WinningRange">
+            <summary>
+            中奖范围
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Application.ViewModels.Prize.UpdatePrizeViewModel.DesignatedStudents">
+            <summary>
+             指定学员
+            </summary>
+        </member>
+        <member name="T:HaoKao.DrawPrizeRecordService.Application.Profiles.DrawPrizeRecordProfile">
+            <summary>
+            抽奖记录映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.DrawPrizeRecordService.Application.Profiles.DrawPrizeRecordProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeRecordService.Application.Profiles.DrawPrizeRecordProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.PrizeService.Application.Profiles.PrizeProfile">
+            <summary>
+            奖品模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.PrizeService.Application.Profiles.PrizeProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.PrizeService.Application.Profiles.PrizeProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+    </members>
+</doc>

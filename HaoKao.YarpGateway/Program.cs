@@ -1,0 +1,41 @@
+using Girvs.Configuration;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
+using Serilog;
+
+namespace HaoKao.YarpGateway;
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        //GirvsHostBuilderManager.CreateGrivsHostBuilder<Startup>(args).Build().Run();
+            
+        Host.CreateDefaultBuilder(args)
+            .UseConsoleLifetime()
+            .UseSerilog((context, config) => { config.ReadFrom.Configuration(context.Configuration); })
+            .UseDefaultServiceProvider(options =>
+            {
+                //we don't validate the scopes, since at the app start and the initial configuration we need 
+                //to resolve some services (registered as "scoped") through the root container
+                options.ValidateScopes = false;
+                options.ValidateOnBuild = true;
+            })
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder
+                    .ConfigureAppConfiguration(config =>
+                    {
+                        config
+                            .AddJsonFile("Ocelot.json", true, true) 
+                            .AddJsonFile(ConfigurationDefaults.AppSettingsFilePath, true, true)
+                            .AddJsonFile(ConfigurationDefaults.SerilogSettingFilePath, true, true)
+                            .AddJsonFile("./config/appsettings.Development.json", true, true)
+                            .AddEnvironmentVariables()
+                            .AddCommandLine(args);
+                    })
+                    .UseStartup<Startup>();
+            }).Build().Run();
+    }
+}

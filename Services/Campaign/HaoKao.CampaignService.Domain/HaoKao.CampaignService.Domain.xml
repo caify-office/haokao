@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.CampaignService.Domain</name>
+    </assembly>
+    <members>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBag.CampaignName">
+            <summary>
+            活动名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBag.GiftType">
+            <summary>
+            礼包类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBag.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBag.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBag.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBag.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBag.IsPublished">
+            <summary>
+            是否发布
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBag.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBag.ReceiveCount">
+            <summary>
+            领取人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBag.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBag.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBag.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBag.WebSiteImageSet">
+            <summary>
+            PC网站图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBag.WeChatMiniProgramImageSet">
+            <summary>
+            微信小程序图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBag.ReceiveRules">
+            <summary>
+            领取规则
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBag.GiftBagReceiveLogs">
+            <summary>
+            礼品包领取记录
+            </summary>
+        </member>
+        <member name="T:HaoKao.CampaignService.Domain.Entities.GiftBagImageSet">
+            <summary>
+            礼包图片
+            </summary>
+        </member>
+        <member name="M:HaoKao.CampaignService.Domain.Entities.GiftBagImageSet.#ctor(System.Uri,System.Uri,System.Uri)">
+            <summary>
+            礼包图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBagImageSet.GiftIcon">
+            <summary>
+            礼包图标
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBagImageSet.PopupImage">
+            <summary>
+            弹窗图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBagImageSet.ReceivePage">
+            <summary>
+            领取页面
+            </summary>
+        </member>
+        <member name="T:HaoKao.CampaignService.Domain.Entities.GiftBagReceiveLog">
+            <summary>
+            礼品包领取记录
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBagReceiveLog.GiftBagId">
+            <summary>
+            礼品包Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBagReceiveLog.CampaignName">
+            <summary>
+            活动名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBagReceiveLog.GiftType">
+            <summary>
+            礼包类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBagReceiveLog.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBagReceiveLog.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBagReceiveLog.ReceiveTime">
+            <summary>
+            领取时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBagReceiveLog.ReceiverId">
+            <summary>
+            领取人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBagReceiveLog.ReceiverName">
+            <summary>
+            领取人名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBagReceiveLog.RegistrationTime">
+            <summary>
+            注册时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Entities.GiftBagReceiveLog.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="F:HaoKao.CampaignService.Domain.Enums.GiftType.Course">
+            <summary>
+            课程
+            </summary>
+        </member>
+        <member name="F:HaoKao.CampaignService.Domain.Enums.GiftType.QuestionBank">
+            <summary>
+            题库
+            </summary>
+        </member>
+        <member name="F:HaoKao.CampaignService.Domain.Enums.GiftType.Live">
+            <summary>
+            直播
+            </summary>
+        </member>
+        <member name="F:HaoKao.CampaignService.Domain.Enums.GiftType.Coupon">
+            <summary>
+            优惠券
+            </summary>
+        </member>
+        <member name="F:HaoKao.CampaignService.Domain.Enums.ReceivePlatform.WebSite">
+            <summary>
+            PC端网页
+            </summary>
+        </member>
+        <member name="F:HaoKao.CampaignService.Domain.Enums.ReceivePlatform.WeChatMiniProgram">
+            <summary>
+            微信小程序
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Queries.GiftBagQuery.CampaignName">
+            <summary>
+            活动名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Queries.GiftBagQuery.GiftType">
+            <summary>
+            礼包类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Queries.GiftBagReceiveLogQuery.GiftBagId">
+            <summary>
+            礼品包Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Queries.GiftBagReceiveLogQuery.ReceiverName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Queries.GiftBagReceiveLogQuery.StartTime">
+            <summary>
+            领取时间-开始
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.Queries.GiftBagReceiveLogQuery.EndTime">
+            <summary>
+            领取时间-结束
+            </summary>
+        </member>
+        <member name="T:HaoKao.CampaignService.Domain.ReceiveRules.CanOnlyReceiveOnceRule">
+            <summary>
+            只能领取一次
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.ReceiveRules.IReceiveRule.RuleId">
+            <summary>
+            规则Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.ReceiveRules.IReceiveRule.RuleName">
+            <summary>
+            规则名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.ReceiveRules.IReceiveRule.BrokenMessage">
+            <summary>
+            违反规则的消息
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.ReceiveRules.IReceiveRule.Internal">
+            <summary>
+            是否内置规则
+            </summary>
+        </member>
+        <member name="M:HaoKao.CampaignService.Domain.ReceiveRules.IReceiveRule.IsBroken(HaoKao.CampaignService.Domain.ReceiveRules.IReceiveRuleParam)">
+            <summary>
+            是否违反领取规则
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.ReceiveRules.IReceiveRuleParam.GiftBag">
+            <summary>
+            礼包
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.ReceiveRules.IReceiveRuleParam.ReceiverId">
+            <summary>
+            领取人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CampaignService.Domain.ReceiveRules.IReceiveRuleParam.RegistrationTime">
+            <summary>
+            注册时间
+            </summary>
+        </member>
+        <member name="T:HaoKao.CampaignService.Domain.ReceiveRules.Within7DaysOfRegistrationRule">
+            <summary>
+            注册7天日可领取
+            </summary>
+        </member>
+    </members>
+</doc>

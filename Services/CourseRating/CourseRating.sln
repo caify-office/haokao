@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.CourseRatingService.Infrastructure", "HaoKao.CourseRatingService.Infrastructure\HaoKao.CourseRatingService.Infrastructure.csproj", "{15EE679A-776C-4120-BDA9-3F1B38366916}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.CourseRatingService.Application", "HaoKao.CourseRatingService.Application\HaoKao.CourseRatingService.Application.csproj", "{79FFBF72-E2E3-404E-915A-5187CE1746CC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.CourseRatingService.Domain", "HaoKao.CourseRatingService.Domain\HaoKao.CourseRatingService.Domain.csproj", "{D412E003-1F57-453C-97D7-ADE8FA423895}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.CourseRatingService.WebApi", "HaoKao.CourseRatingService.WebApi\HaoKao.CourseRatingService.WebApi.csproj", "{37C891E5-7B4F-49F0-AECE-80CC3F51DD61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15EE679A-776C-4120-BDA9-3F1B38366916}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15EE679A-776C-4120-BDA9-3F1B38366916}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15EE679A-776C-4120-BDA9-3F1B38366916}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15EE679A-776C-4120-BDA9-3F1B38366916}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79FFBF72-E2E3-404E-915A-5187CE1746CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79FFBF72-E2E3-404E-915A-5187CE1746CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79FFBF72-E2E3-404E-915A-5187CE1746CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79FFBF72-E2E3-404E-915A-5187CE1746CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D412E003-1F57-453C-97D7-ADE8FA423895}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D412E003-1F57-453C-97D7-ADE8FA423895}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D412E003-1F57-453C-97D7-ADE8FA423895}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D412E003-1F57-453C-97D7-ADE8FA423895}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37C891E5-7B4F-49F0-AECE-80CC3F51DD61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37C891E5-7B4F-49F0-AECE-80CC3F51DD61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37C891E5-7B4F-49F0-AECE-80CC3F51DD61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37C891E5-7B4F-49F0-AECE-80CC3F51DD61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {438065E5-FB66-45C9-85CB-623AD8BB7994}
+	EndGlobalSection
+EndGlobal

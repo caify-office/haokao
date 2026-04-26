@@ -1,0 +1,308 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.SalespersonService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.SalespersonService.Domain.Commands.CreateEnterpriseWeChatConfigCommand">
+            <summary>
+            创建企业微信配置命令
+            </summary>
+            <param name="CorpId">企业Id</param>
+            <param name="CorpName">企业名称</param>
+            <param name="CorpSecret">应用密钥凭证</param>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Domain.Commands.CreateEnterpriseWeChatConfigCommand.#ctor(System.String,System.String,System.String)">
+            <summary>
+            创建企业微信配置命令
+            </summary>
+            <param name="CorpId">企业Id</param>
+            <param name="CorpName">企业名称</param>
+            <param name="CorpSecret">应用密钥凭证</param>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Commands.CreateEnterpriseWeChatConfigCommand.CorpId">
+            <summary>企业Id</summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Commands.CreateEnterpriseWeChatConfigCommand.CorpName">
+            <summary>企业名称</summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Commands.CreateEnterpriseWeChatConfigCommand.CorpSecret">
+            <summary>应用密钥凭证</summary>
+        </member>
+        <member name="T:HaoKao.SalespersonService.Domain.Commands.UpdateEnterpriseWeChatConfigCommand">
+            <summary>
+            更新企业微信配置命令
+            </summary>
+            <param name="Id"></param>
+            <param name="CorpId">企业Id</param>
+            <param name="CorpName">企业名称</param>
+            <param name="CorpSecret">应用密钥凭证</param>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Domain.Commands.UpdateEnterpriseWeChatConfigCommand.#ctor(System.Guid,System.String,System.String,System.String)">
+            <summary>
+            更新企业微信配置命令
+            </summary>
+            <param name="Id"></param>
+            <param name="CorpId">企业Id</param>
+            <param name="CorpName">企业名称</param>
+            <param name="CorpSecret">应用密钥凭证</param>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Commands.UpdateEnterpriseWeChatConfigCommand.Id">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Commands.UpdateEnterpriseWeChatConfigCommand.CorpId">
+            <summary>企业Id</summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Commands.UpdateEnterpriseWeChatConfigCommand.CorpName">
+            <summary>企业名称</summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Commands.UpdateEnterpriseWeChatConfigCommand.CorpSecret">
+            <summary>应用密钥凭证</summary>
+        </member>
+        <member name="T:HaoKao.SalespersonService.Domain.Commands.DeleteEnterpriseWeChatConfigCommand">
+            <summary>
+            删除企业微信配置命令
+            </summary>
+            <param name="Ids"></param>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Domain.Commands.DeleteEnterpriseWeChatConfigCommand.#ctor(System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            删除企业微信配置命令
+            </summary>
+            <param name="Ids"></param>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Commands.DeleteEnterpriseWeChatConfigCommand.Ids">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.SalespersonService.Domain.Commands.CreateSalespersonCommand">
+            <summary>
+            创建销售人员命令
+            </summary>
+            <param name="RealName">真实姓名</param>
+            <param name="Phone">手机号</param>
+            <param name="EnterpriseWeChatUserId">企业微信Id</param>
+            <param name="EnterpriseWeChatUserName">企业微信昵称</param>
+            <param name="EnterpriseWeChatConfigId">企业微信配置Id</param>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Domain.Commands.CreateSalespersonCommand.#ctor(System.String,System.String,System.String,System.String,System.Guid)">
+            <summary>
+            创建销售人员命令
+            </summary>
+            <param name="RealName">真实姓名</param>
+            <param name="Phone">手机号</param>
+            <param name="EnterpriseWeChatUserId">企业微信Id</param>
+            <param name="EnterpriseWeChatUserName">企业微信昵称</param>
+            <param name="EnterpriseWeChatConfigId">企业微信配置Id</param>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Commands.CreateSalespersonCommand.RealName">
+            <summary>真实姓名</summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Commands.CreateSalespersonCommand.Phone">
+            <summary>手机号</summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Commands.CreateSalespersonCommand.EnterpriseWeChatUserId">
+            <summary>企业微信Id</summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Commands.CreateSalespersonCommand.EnterpriseWeChatUserName">
+            <summary>企业微信昵称</summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Commands.CreateSalespersonCommand.EnterpriseWeChatConfigId">
+            <summary>企业微信配置Id</summary>
+        </member>
+        <member name="T:HaoKao.SalespersonService.Domain.Commands.UpdateSalespersonCommand">
+            <summary>
+            更新销售人员命令
+            </summary>
+            <param name="Id"></param>
+            <param name="RealName">真实姓名</param>
+            <param name="Phone">手机号</param>
+            <param name="EnterpriseWeChatUserId">企业微信用户Id</param>
+            <param name="EnterpriseWeChatUserName">企业微信昵称</param>
+            <param name="EnterpriseWeChatConfigId">企业微信配置Id</param>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Domain.Commands.UpdateSalespersonCommand.#ctor(System.Guid,System.String,System.String,System.String,System.String,System.Guid)">
+            <summary>
+            更新销售人员命令
+            </summary>
+            <param name="Id"></param>
+            <param name="RealName">真实姓名</param>
+            <param name="Phone">手机号</param>
+            <param name="EnterpriseWeChatUserId">企业微信用户Id</param>
+            <param name="EnterpriseWeChatUserName">企业微信昵称</param>
+            <param name="EnterpriseWeChatConfigId">企业微信配置Id</param>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Commands.UpdateSalespersonCommand.Id">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Commands.UpdateSalespersonCommand.RealName">
+            <summary>真实姓名</summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Commands.UpdateSalespersonCommand.Phone">
+            <summary>手机号</summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Commands.UpdateSalespersonCommand.EnterpriseWeChatUserId">
+            <summary>企业微信用户Id</summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Commands.UpdateSalespersonCommand.EnterpriseWeChatUserName">
+            <summary>企业微信昵称</summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Commands.UpdateSalespersonCommand.EnterpriseWeChatConfigId">
+            <summary>企业微信配置Id</summary>
+        </member>
+        <member name="T:HaoKao.SalespersonService.Domain.Commands.DeleteSalespersonCommand">
+            <summary>
+            删除销售人员命令
+            </summary>
+            <param name="Ids"></param>
+        </member>
+        <member name="M:HaoKao.SalespersonService.Domain.Commands.DeleteSalespersonCommand.#ctor(System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            删除销售人员命令
+            </summary>
+            <param name="Ids"></param>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Commands.DeleteSalespersonCommand.Ids">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.SalespersonService.Domain.Entities.EnterpriseWeChatConfig">
+            <summary>
+            企业微信配置实体类
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Entities.EnterpriseWeChatConfig.CorpId">
+            <summary>
+            企业Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Entities.EnterpriseWeChatConfig.CorpName">
+            <summary>
+            企业名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Entities.EnterpriseWeChatConfig.CorpSecret">
+            <summary>
+            应用的凭证密钥
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Entities.EnterpriseWeChatConfig.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Entities.EnterpriseWeChatConfig.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Entities.EnterpriseWeChatConfig.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.SalespersonService.Domain.Entities.EnterpriseWeChatContact">
+            <summary>
+            企业微信联系人
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Entities.EnterpriseWeChatContact.FollowUserId">
+            <summary>
+            添加了此外部联系人的企业成员Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Entities.EnterpriseWeChatContact.FollowUserName">
+            <summary>
+            添加了此外部联系人的企业成员名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Entities.EnterpriseWeChatContact.Type">
+            <summary>
+            联系人的类型，1表示该外部联系人是微信用户，2表示该外部联系人是企业微信用户
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Entities.EnterpriseWeChatContact.Name">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Entities.EnterpriseWeChatContact.UserId">
+            <summary>
+            微信用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Entities.EnterpriseWeChatContact.UnionId">
+            <summary>
+            微信unionid
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Entities.EnterpriseWeChatContact.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:HaoKao.SalespersonService.Domain.Entities.Salesperson">
+            <summary>
+            销售人员实体类
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Entities.Salesperson.RealName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Entities.Salesperson.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Entities.Salesperson.EnterpriseWeChatUserId">
+            <summary>
+            企业微信用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Entities.Salesperson.EnterpriseWeChatUserName">
+            <summary>
+            企业微信昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Entities.Salesperson.EnterpriseWeChatConfigId">
+            <summary>
+            企业微信配置Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Entities.Salesperson.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Entities.Salesperson.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Entities.Salesperson.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Entities.Salesperson.EnterpriseWeChatConfig">
+            <summary>
+            企业微信配置
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Queries.SalespersonQuery.RealName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Queries.SalespersonQuery.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.SalespersonService.Domain.Queries.SalespersonQuery.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+    </members>
+</doc>

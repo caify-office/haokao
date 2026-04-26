@@ -1,0 +1,556 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.CorrectionNotebookService.Application</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.CorrectionNotebookService.Application.Services.ExamLevelService">
+            <summary>
+            考试级别接口
+            </summary>
+            <param name="bus"></param>
+            <param name="cacheManager"></param>
+            <param name="notifications"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.ExamLevelService.#ctor(Girvs.Driven.Bus.IMediatorHandler,Girvs.Cache.Caching.IStaticCacheManager,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.CorrectionNotebookService.Domain.Repositories.IExamLevelRepository)">
+            <summary>
+            考试级别接口
+            </summary>
+            <param name="bus"></param>
+            <param name="cacheManager"></param>
+            <param name="notifications"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.ExamLevelService.Get">
+            <summary>
+            获取所有考试级别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.ExamLevelService.Create(HaoKao.CorrectionNotebookService.Application.ViewModels.CreateExamLevelViewModel)">
+            <summary>
+            创建考试级别
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.ExamLevelService.EditName(HaoKao.CorrectionNotebookService.Application.ViewModels.EditExamLevelNameViewModel)">
+            <summary>
+            编辑考试级别名称
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.ExamLevelService.Delete(System.Guid)">
+            <summary>
+            删除考试级别
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CorrectionNotebookService.Application.Services.ImageService">
+            <summary>
+            图片服务接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.ImageService.Process(HaoKao.CorrectionNotebookService.Application.Services.ImageProcessRequest)">
+            <summary>
+            图片处理接口
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.ImageService.ProcessFile(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            图片处理接口(文件上传)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.ImageService.DemoireImage(System.String)">
+            <summary>
+            图片去摩尔纹
+            </summary>
+            <param name="imageBase64"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.ImageService.DewarpImage(System.String)">
+            <summary>
+            图片畸变矫正
+            </summary>
+            <param name="imageBase64"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.ImageService.EnhanceImage(System.String)">
+            <summary>
+            图片增强接口
+            </summary>
+            <param name="imageBase64"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.ImageService.RecognizeImage(System.String)">
+            <summary>
+            图片识别接口
+            </summary>
+            <param name="imageBase64"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CorrectionNotebookService.Application.Services.QuestionService">
+            <summary>
+            题目服务接口
+            </summary>
+            <param name="bus"></param>
+            <param name="cacheManager"></param>
+            <param name="notifications"></param>
+            <param name="repository"></param>
+            <param name="queue"></param>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.QuestionService.#ctor(Girvs.Driven.Bus.IMediatorHandler,Girvs.Cache.Caching.IStaticCacheManager,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.CorrectionNotebookService.Domain.Repositories.IQuestionRepository,HaoKao.CorrectionNotebookService.Application.Workers.IQuestionQueue)">
+            <summary>
+            题目服务接口
+            </summary>
+            <param name="bus"></param>
+            <param name="cacheManager"></param>
+            <param name="notifications"></param>
+            <param name="repository"></param>
+            <param name="queue"></param>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.QuestionService.GetList(HaoKao.CorrectionNotebookService.Application.ViewModels.QueryQuestionViewModel)">
+            <summary>
+            获取题目列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.QuestionService.Get(System.Guid)">
+            <summary>
+            获取题目详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.QuestionService.Create(HaoKao.CorrectionNotebookService.Application.ViewModels.CreateQuestionViewModel)">
+            <summary>
+            保存录入题目
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.QuestionService.GetAnswerAndAnalysis(System.Guid)">
+            <summary>
+            生成题目答案与解析
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.QuestionService.GetAnswerAndAnalysisStream(System.Guid)">
+            <summary>
+            生成题目答案与解析stream
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.QuestionService.MasteryDegree(HaoKao.CorrectionNotebookService.Application.ViewModels.EditQuestionMasteryDegreeViewModel)">
+            <summary>
+            编辑掌握程度
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.QuestionService.QuestionTag(HaoKao.CorrectionNotebookService.Application.ViewModels.EditQuestionTagViewModel)">
+            <summary>
+            编辑题目标签
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.QuestionService.Delete(System.Guid,System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            删除题目
+            </summary>
+            <param name="subjectId"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.QuestionService.GetUserQuestionCountStatistics">
+            <summary>
+            获取用户题目统计
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CorrectionNotebookService.Application.Services.SubjectService">
+            <summary>
+            科目接口
+            </summary>
+            <param name="bus"></param>
+            <param name="cacheManager"></param>
+            <param name="notifications"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.SubjectService.#ctor(Girvs.Driven.Bus.IMediatorHandler,Girvs.Cache.Caching.IStaticCacheManager,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.CorrectionNotebookService.Domain.Repositories.IExamLevelRepository)">
+            <summary>
+            科目接口
+            </summary>
+            <param name="bus"></param>
+            <param name="cacheManager"></param>
+            <param name="notifications"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.SubjectService.Get(System.Guid)">
+            <summary>
+            根据考试级别ID获取科目列表
+            </summary>
+            <param name="examLevelId">考试级别ID</param>
+            <returns>科目列表</returns>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.SubjectService.Create(HaoKao.CorrectionNotebookService.Application.ViewModels.CreateSubjectViewModel)">
+            <summary>
+            创建科目
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.SubjectService.Resort(HaoKao.CorrectionNotebookService.Application.ViewModels.ResortSubjectViewModel)">
+            <summary>
+            重新排序科目
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.SubjectService.Delete(System.Guid)">
+            <summary>
+            删除科目
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CorrectionNotebookService.Application.Services.TagService">
+            <summary>
+            标签接口
+            </summary>
+            <param name="bus"></param>
+            <param name="cacheManager"></param>
+            <param name="notifications"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.TagService.#ctor(Girvs.Driven.Bus.IMediatorHandler,Girvs.Cache.Caching.IStaticCacheManager,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.CorrectionNotebookService.Domain.Repositories.ITagRepository)">
+            <summary>
+            标签接口
+            </summary>
+            <param name="bus"></param>
+            <param name="cacheManager"></param>
+            <param name="notifications"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.TagService.Get">
+            <summary>
+            获取标签列表
+            </summary>
+            <returns>标签列表</returns>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.TagService.Create(HaoKao.CorrectionNotebookService.Application.ViewModels.CreateTagViewModel)">
+            <summary>
+            创建标签
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.Services.TagService.Delete(System.Guid)">
+            <summary>
+            删除标签
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.CorrectionNotebookService.Application.ViewModels.QueryQuestionViewModel">
+            <summary>
+            题目列表查询条件
+            </summary>
+            <param name="SubjectId">科目Id</param>
+            <param name="MasteryDegree">掌握程度</param>
+            <param name="CreateTime">录入时间</param>
+            <param name="TagIds">筛选标签</param>
+            <param name="PageIndex"></param>
+            <param name="PageSize"></param>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.ViewModels.QueryQuestionViewModel.#ctor(System.Guid,System.Nullable{HaoKao.CorrectionNotebookService.Domain.Enums.MasteryDegree},System.Nullable{System.Int32},System.Collections.Generic.IReadOnlyList{System.Guid},System.Int32,System.Int32)">
+            <summary>
+            题目列表查询条件
+            </summary>
+            <param name="SubjectId">科目Id</param>
+            <param name="MasteryDegree">掌握程度</param>
+            <param name="CreateTime">录入时间</param>
+            <param name="TagIds">筛选标签</param>
+            <param name="PageIndex"></param>
+            <param name="PageSize"></param>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.QueryQuestionViewModel.SubjectId">
+            <summary>科目Id</summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.QueryQuestionViewModel.MasteryDegree">
+            <summary>掌握程度</summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.QueryQuestionViewModel.CreateTime">
+            <summary>录入时间</summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.QueryQuestionViewModel.TagIds">
+            <summary>筛选标签</summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.QueryQuestionViewModel.PageSize">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.QueryQuestionViewModel.PageIndex">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.CorrectionNotebookService.Application.ViewModels.QuestionListViewModel">
+            <summary>
+            题目列表
+            </summary>
+            <param name="RecordCount">总记录数</param>
+            <param name="Result">结果集</param>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.ViewModels.QuestionListViewModel.#ctor(System.Int32,System.Collections.Generic.IReadOnlyList{HaoKao.CorrectionNotebookService.Application.ViewModels.QuestionListItemViewModel})">
+            <summary>
+            题目列表
+            </summary>
+            <param name="RecordCount">总记录数</param>
+            <param name="Result">结果集</param>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.QuestionListViewModel.RecordCount">
+            <summary>总记录数</summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.QuestionListViewModel.Result">
+            <summary>结果集</summary>
+        </member>
+        <member name="T:HaoKao.CorrectionNotebookService.Application.ViewModels.QuestionListItemViewModel">
+            <summary>
+            题目列表项
+            </summary>
+            <param name="Id">Id</param>
+            <param name="ImageUrl">题目图片Url</param>
+            <param name="MasteryDegree">掌握程度</param>
+            <param name="CreateTime">创建时间</param>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.ViewModels.QuestionListItemViewModel.#ctor(System.Guid,System.Uri,HaoKao.CorrectionNotebookService.Domain.Enums.MasteryDegree,System.DateTime)">
+            <summary>
+            题目列表项
+            </summary>
+            <param name="Id">Id</param>
+            <param name="ImageUrl">题目图片Url</param>
+            <param name="MasteryDegree">掌握程度</param>
+            <param name="CreateTime">创建时间</param>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.QuestionListItemViewModel.Id">
+            <summary>Id</summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.QuestionListItemViewModel.ImageUrl">
+            <summary>题目图片Url</summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.QuestionListItemViewModel.MasteryDegree">
+            <summary>掌握程度</summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.QuestionListItemViewModel.CreateTime">
+            <summary>创建时间</summary>
+        </member>
+        <member name="T:HaoKao.CorrectionNotebookService.Application.ViewModels.QuestionViewModel">
+            <summary>
+            题目详情
+            </summary>
+            <param name="Id"></param>
+            <param name="SubjectId">科目Id</param>
+            <param name="ImageUrl">题目图片Url</param>
+            <param name="Answer">题目答案</param>
+            <param name="Analysis">题目解析</param>
+            <param name="MasteryDegree">掌握程度</param>
+            <param name="CreateTime">创建时间</param>
+            <param name="IsGenerated">是否使用过精准解析</param>
+            <param name="Tags">标签集</param>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.ViewModels.QuestionViewModel.#ctor(System.Guid,System.Guid,System.Uri,System.String,System.String,HaoKao.CorrectionNotebookService.Domain.Enums.MasteryDegree,System.DateTime,System.Boolean,System.Collections.Generic.IReadOnlyList{HaoKao.CorrectionNotebookService.Application.ViewModels.TagCategoryItemViewModel})">
+            <summary>
+            题目详情
+            </summary>
+            <param name="Id"></param>
+            <param name="SubjectId">科目Id</param>
+            <param name="ImageUrl">题目图片Url</param>
+            <param name="Answer">题目答案</param>
+            <param name="Analysis">题目解析</param>
+            <param name="MasteryDegree">掌握程度</param>
+            <param name="CreateTime">创建时间</param>
+            <param name="IsGenerated">是否使用过精准解析</param>
+            <param name="Tags">标签集</param>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.QuestionViewModel.Id">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.QuestionViewModel.SubjectId">
+            <summary>科目Id</summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.QuestionViewModel.ImageUrl">
+            <summary>题目图片Url</summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.QuestionViewModel.Answer">
+            <summary>题目答案</summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.QuestionViewModel.Analysis">
+            <summary>题目解析</summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.QuestionViewModel.MasteryDegree">
+            <summary>掌握程度</summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.QuestionViewModel.CreateTime">
+            <summary>创建时间</summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.QuestionViewModel.IsGenerated">
+            <summary>是否使用过精准解析</summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.QuestionViewModel.Tags">
+            <summary>标签集</summary>
+        </member>
+        <member name="T:HaoKao.CorrectionNotebookService.Application.ViewModels.CreateQuestionViewModel">
+            <summary>
+            创建题目
+            </summary>
+            <param name="SubjectId">科目Id</param>
+            <param name="ImageUrls">题目图片Url</param>
+            <param name="TagIds">标签Id集合</param>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.ViewModels.CreateQuestionViewModel.#ctor(System.Guid,System.Collections.Generic.IReadOnlyList{System.Uri},System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            创建题目
+            </summary>
+            <param name="SubjectId">科目Id</param>
+            <param name="ImageUrls">题目图片Url</param>
+            <param name="TagIds">标签Id集合</param>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.CreateQuestionViewModel.SubjectId">
+            <summary>科目Id</summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.CreateQuestionViewModel.ImageUrls">
+            <summary>题目图片Url</summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.CreateQuestionViewModel.TagIds">
+            <summary>标签Id集合</summary>
+        </member>
+        <member name="T:HaoKao.CorrectionNotebookService.Application.ViewModels.GetAnswerAndAnalysisViewModel">
+            <summary>
+            生成的答案与解析
+            </summary>
+            <param name="Answer"></param>
+            <param name="Analysis"></param>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.ViewModels.GetAnswerAndAnalysisViewModel.#ctor(System.String,System.String)">
+            <summary>
+            生成的答案与解析
+            </summary>
+            <param name="Answer"></param>
+            <param name="Analysis"></param>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.GetAnswerAndAnalysisViewModel.Answer">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.GetAnswerAndAnalysisViewModel.Analysis">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.CorrectionNotebookService.Application.ViewModels.EditQuestionMasteryDegreeViewModel">
+            <summary>
+            修改题目掌握程度
+            </summary>
+            <param name="Ids"></param>
+            <param name="MasteryDegree"></param>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.ViewModels.EditQuestionMasteryDegreeViewModel.#ctor(System.Collections.Generic.IReadOnlyList{System.Guid},HaoKao.CorrectionNotebookService.Domain.Enums.MasteryDegree)">
+            <summary>
+            修改题目掌握程度
+            </summary>
+            <param name="Ids"></param>
+            <param name="MasteryDegree"></param>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.EditQuestionMasteryDegreeViewModel.Ids">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.EditQuestionMasteryDegreeViewModel.MasteryDegree">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.CorrectionNotebookService.Application.ViewModels.EditQuestionTagViewModel">
+            <summary>
+            修改题目标签
+            </summary>
+            <param name="Id"></param>
+            <param name="TagIds"></param>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.ViewModels.EditQuestionTagViewModel.#ctor(System.Guid,System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            修改题目标签
+            </summary>
+            <param name="Id"></param>
+            <param name="TagIds"></param>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.EditQuestionTagViewModel.Id">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.EditQuestionTagViewModel.TagIds">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.CorrectionNotebookService.Application.ViewModels.TagCategoryViewModel">
+            <summary>
+            标签列表项
+            </summary>
+            <param name="Category"></param>
+            <param name="IsBuiltIn"></param>
+            <param name="CreateTime"></param>
+            <param name="Tags"></param>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.ViewModels.TagCategoryViewModel.#ctor(System.String,System.Boolean,System.DateTime,System.Collections.Generic.IReadOnlyList{HaoKao.CorrectionNotebookService.Application.ViewModels.TagCategoryItemViewModel})">
+            <summary>
+            标签列表项
+            </summary>
+            <param name="Category"></param>
+            <param name="IsBuiltIn"></param>
+            <param name="CreateTime"></param>
+            <param name="Tags"></param>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.TagCategoryViewModel.Category">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.TagCategoryViewModel.IsBuiltIn">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.TagCategoryViewModel.CreateTime">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.TagCategoryViewModel.Tags">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.CorrectionNotebookService.Application.ViewModels.TagCategoryItemViewModel">
+            <summary>
+            标签列表项
+            </summary>
+            <param name="Id"></param>
+            <param name="Name">名称</param>
+            <param name="IsBuiltIn">是否内置数据</param>
+            <param name="CreateTime"></param>
+        </member>
+        <member name="M:HaoKao.CorrectionNotebookService.Application.ViewModels.TagCategoryItemViewModel.#ctor(System.Guid,System.String,System.Boolean,System.DateTime)">
+            <summary>
+            标签列表项
+            </summary>
+            <param name="Id"></param>
+            <param name="Name">名称</param>
+            <param name="IsBuiltIn">是否内置数据</param>
+            <param name="CreateTime"></param>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.TagCategoryItemViewModel.Id">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.TagCategoryItemViewModel.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.TagCategoryItemViewModel.IsBuiltIn">
+            <summary>是否内置数据</summary>
+        </member>
+        <member name="P:HaoKao.CorrectionNotebookService.Application.ViewModels.TagCategoryItemViewModel.CreateTime">
+            <summary></summary>
+        </member>
+    </members>
+</doc>

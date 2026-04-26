@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.DataDictionaryService.Application", "HaoKao.DataDictionaryService.Application\HaoKao.DataDictionaryService.Application.csproj", "{309127B0-CA8C-4187-BF56-2668331D6022}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZhuoFan - Backup.Wb.DataDictionaryService.Domain", "HaoKao.DataDictionaryService.Domain\ZhuoFan - Backup.Wb.DataDictionaryService.Domain.csproj", "{B9491CA6-9CF5-4DDD-B3CE-619BCAA5D4D6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.DataDictionaryService.Domain", "HaoKao.DataDictionaryService.Domain\HaoKao.DataDictionaryService.Domain.csproj", "{77AE1374-E37C-4E98-9876-039E6ED872B5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.DataDictionaryService.WebApi", "HaoKao.DataDictionaryService.WebApi\HaoKao.DataDictionaryService.WebApi.csproj", "{A0A838C2-8C14-457B-8E55-CCE8303B203B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.DataDictionaryService.Infrastructure", "HaoKao.DataDictionaryService.Infrastructure\HaoKao.DataDictionaryService.Infrastructure.csproj", "{04E2E440-5C8D-474F-8AB7-91224FB96588}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{309127B0-CA8C-4187-BF56-2668331D6022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{309127B0-CA8C-4187-BF56-2668331D6022}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{309127B0-CA8C-4187-BF56-2668331D6022}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{309127B0-CA8C-4187-BF56-2668331D6022}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9491CA6-9CF5-4DDD-B3CE-619BCAA5D4D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9491CA6-9CF5-4DDD-B3CE-619BCAA5D4D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9491CA6-9CF5-4DDD-B3CE-619BCAA5D4D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9491CA6-9CF5-4DDD-B3CE-619BCAA5D4D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77AE1374-E37C-4E98-9876-039E6ED872B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77AE1374-E37C-4E98-9876-039E6ED872B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77AE1374-E37C-4E98-9876-039E6ED872B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77AE1374-E37C-4E98-9876-039E6ED872B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0A838C2-8C14-457B-8E55-CCE8303B203B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0A838C2-8C14-457B-8E55-CCE8303B203B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0A838C2-8C14-457B-8E55-CCE8303B203B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0A838C2-8C14-457B-8E55-CCE8303B203B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04E2E440-5C8D-474F-8AB7-91224FB96588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04E2E440-5C8D-474F-8AB7-91224FB96588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04E2E440-5C8D-474F-8AB7-91224FB96588}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04E2E440-5C8D-474F-8AB7-91224FB96588}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F9463DE-91D9-4379-9C60-86C26B54F06C}
+	EndGlobalSection
+EndGlobal

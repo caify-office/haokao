@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DocumentationFile>HaoKao.CourseService.Application.xml</DocumentationFile>
+        <WarningLevel>4</WarningLevel>
+        <NoWarn>1701;1702;1591</NoWarn>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <DocumentationFile>HaoKao.CourseService.Application.xml</DocumentationFile>
+        <WarningLevel>4</WarningLevel>
+        <NoWarn>1701;1702;1591</NoWarn>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\HaoKao.CourseService.Domain\HaoKao.CourseService.Domain.csproj"/>
+        <PackageReference Include="AlibabaCloud.SDK.Ocr-api20210707" Version="2.0.6"/>
+        <PackageReference Include="AlibabaCloud.SDK.Vod20170321" Version="2.20.1"/>
+        <PackageReference Include="aliyun-net-sdk-core" Version="1.5.11"/>
+        <PackageReference Include="aliyun-net-sdk-vod" Version="2.16.16"/>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Girvs.Quartz" Version="9.0.5.3"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Modules\"/>
+    </ItemGroup>
+</Project>

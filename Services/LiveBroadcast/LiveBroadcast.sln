@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.LiveBroadcastService.Domain", "HaoKao.LiveBroadcastService.Domain\HaoKao.LiveBroadcastService.Domain.csproj", "{3B62E54A-29E3-44E6-A5A8-E1D47501C879}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.LiveBroadcastService.Application", "HaoKao.LiveBroadcastService.Application\HaoKao.LiveBroadcastService.Application.csproj", "{F90D6A4C-564C-49F2-A9E1-998B881276A5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.LiveBroadcastService.WebApi", "HaoKao.LiveBroadcastService.WebApi\HaoKao.LiveBroadcastService.WebApi.csproj", "{CCF269B6-8571-4AF4-90DA-4829655000D5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.LiveBroadcastService.Infrastructure", "HaoKao.LiveBroadcastService.Infrastructure\HaoKao.LiveBroadcastService.Infrastructure.csproj", "{7AC1EAB4-9CE4-4B4B-9E97-CDCC5370DCF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B62E54A-29E3-44E6-A5A8-E1D47501C879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B62E54A-29E3-44E6-A5A8-E1D47501C879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B62E54A-29E3-44E6-A5A8-E1D47501C879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B62E54A-29E3-44E6-A5A8-E1D47501C879}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F90D6A4C-564C-49F2-A9E1-998B881276A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F90D6A4C-564C-49F2-A9E1-998B881276A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F90D6A4C-564C-49F2-A9E1-998B881276A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F90D6A4C-564C-49F2-A9E1-998B881276A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCF269B6-8571-4AF4-90DA-4829655000D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCF269B6-8571-4AF4-90DA-4829655000D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCF269B6-8571-4AF4-90DA-4829655000D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCF269B6-8571-4AF4-90DA-4829655000D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AC1EAB4-9CE4-4B4B-9E97-CDCC5370DCF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AC1EAB4-9CE4-4B4B-9E97-CDCC5370DCF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AC1EAB4-9CE4-4B4B-9E97-CDCC5370DCF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AC1EAB4-9CE4-4B4B-9E97-CDCC5370DCF1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F1E3BE2-0195-4676-8448-60BDE41797ED}
+	EndGlobalSection
+EndGlobal

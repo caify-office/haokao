@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.NoticeService.Application</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.NoticeService.Application.Services.Management.INoticeService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定公共
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.NoticeService.Application.Services.Management.INoticeService.Get(HaoKao.NoticeService.Application.ViewModels.QueryNoticeViewModel)">
+            <summary>
+            根据查询获取公告列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.NoticeService.Application.Services.Management.INoticeService.Create(HaoKao.NoticeService.Application.ViewModels.CreateNoticeViewModel)">
+            <summary>
+            创建公告
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.NoticeService.Application.Services.Management.INoticeService.Delete(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            删除公告
+            </summary>
+            <param name="ids">主键</param>
+        </member>
+        <member name="M:HaoKao.NoticeService.Application.Services.Management.INoticeService.Update(HaoKao.NoticeService.Application.ViewModels.UpdateNoticeViewModel)">
+            <summary>
+            更新公告
+            </summary>
+            <param name="model">更新模型</param>
+        </member>
+        <member name="M:HaoKao.NoticeService.Application.Services.Management.INoticeService.UpdatePopup(HaoKao.NoticeService.Application.ViewModels.UpdateNoticePopupViewModel)">
+            <summary>
+            修改公告是否弹出
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.NoticeService.Application.Services.Management.INoticeService.UpdatePublished(HaoKao.NoticeService.Application.ViewModels.UpdateNoticePublishedViewModel)">
+            <summary>
+            修改公告是否发布
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.NoticeService.Application.Services.Management.NoticeService">
+            <summary>
+            公告接口服务 - 管理端
+            </summary>
+        </member>
+        <member name="M:HaoKao.NoticeService.Application.Services.Management.NoticeService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.NoticeService.Domain.Repositories.INoticeRepository,AutoMapper.IMapper)">
+            <summary>
+            公告接口服务 - 管理端
+            </summary>
+        </member>
+        <member name="M:HaoKao.NoticeService.Application.Services.Management.NoticeService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定公告
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.NoticeService.Application.Services.Management.NoticeService.Get(HaoKao.NoticeService.Application.ViewModels.QueryNoticeViewModel)">
+            <summary>
+            根据查询获取公告列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.NoticeService.Application.Services.Management.NoticeService.Create(HaoKao.NoticeService.Application.ViewModels.CreateNoticeViewModel)">
+            <summary>
+            创建公告
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.NoticeService.Application.Services.Management.NoticeService.Delete(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            删除公告
+            </summary>
+            <param name="ids">主键</param>
+        </member>
+        <member name="M:HaoKao.NoticeService.Application.Services.Management.NoticeService.Update(HaoKao.NoticeService.Application.ViewModels.UpdateNoticeViewModel)">
+            <summary>
+            更新公告
+            </summary>
+            <param name="model">更新模型</param>
+        </member>
+        <member name="M:HaoKao.NoticeService.Application.Services.Management.NoticeService.UpdatePopup(HaoKao.NoticeService.Application.ViewModels.UpdateNoticePopupViewModel)">
+            <summary>
+            修改公告是否弹出
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.NoticeService.Application.Services.Management.NoticeService.UpdatePublished(HaoKao.NoticeService.Application.ViewModels.UpdateNoticePublishedViewModel)">
+            <summary>
+            修改公告是否发布
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.NoticeService.Application.Services.Web.INoticeWebService.Get(System.Nullable{System.Boolean})">
+            <summary>
+            获取公告列表
+            </summary>
+            <param name="popup">是否弹出</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.NoticeService.Application.Services.Web.NoticeWebService">
+            <summary>
+            公告接口服务 - 网页端
+            </summary>
+        </member>
+        <member name="M:HaoKao.NoticeService.Application.Services.Web.NoticeWebService.#ctor(HaoKao.NoticeService.Domain.Repositories.INoticeRepository,Girvs.Cache.Caching.IStaticCacheManager,AutoMapper.IMapper)">
+            <summary>
+            公告接口服务 - 网页端
+            </summary>
+        </member>
+        <member name="M:HaoKao.NoticeService.Application.Services.Web.NoticeWebService.Get(System.Nullable{System.Boolean})">
+            <summary>
+            获取公告列表
+            </summary>
+            <param name="popup">是否弹出</param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.NoticeService.Application.ViewModels.BrowseNoticeViewModel.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Application.ViewModels.BrowseNoticeViewModel.Title">
+            <summary>
+            公告名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Application.ViewModels.BrowseNoticeViewModel.Content">
+            <summary>
+            公告内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Application.ViewModels.BrowseNoticeViewModel.Published">
+            <summary>
+            是否发布
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Application.ViewModels.BrowseNoticeViewModel.Popup">
+            <summary>
+            是否弹出
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Application.ViewModels.BrowseNoticeViewModel.StartTime">
+            <summary>
+            弹出开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Application.ViewModels.BrowseNoticeViewModel.EndTime">
+            <summary>
+            弹出结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Application.ViewModels.BrowseNoticeViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Application.ViewModels.BrowseNoticeViewModel.CreatorName">
+            <summary>
+            创建人名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Application.ViewModels.BrowseNoticeViewModel.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Application.ViewModels.CreateNoticeViewModel.Title">
+            <summary>
+            公告名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Application.ViewModels.CreateNoticeViewModel.Content">
+            <summary>
+            公告内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Application.ViewModels.CreateNoticeViewModel.Published">
+            <summary>
+            是否发布
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Application.ViewModels.CreateNoticeViewModel.Popup">
+            <summary>
+            是否弹出
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Application.ViewModels.CreateNoticeViewModel.StartTime">
+            <summary>
+            弹出开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Application.ViewModels.CreateNoticeViewModel.EndTime">
+            <summary>
+            弹出结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Application.ViewModels.QueryNoticeViewModel.Title">
+            <summary>
+            公告名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Application.ViewModels.UpdateNoticeViewModel.Id">
+            <summary>
+            公告Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Application.ViewModels.UpdateNoticePopupViewModel.Ids">
+            <summary>
+            公告Ids
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Application.ViewModels.UpdateNoticePopupViewModel.Popup">
+            <summary>
+            是否弹出
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Application.ViewModels.UpdateNoticePopupViewModel.StartTime">
+            <summary>
+            弹出开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Application.ViewModels.UpdateNoticePopupViewModel.EndTime">
+            <summary>
+            弹出结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Application.ViewModels.UpdateNoticePublishedViewModel.Ids">
+            <summary>
+            公告Ids
+            </summary>
+        </member>
+        <member name="P:HaoKao.NoticeService.Application.ViewModels.UpdateNoticePublishedViewModel.Published">
+            <summary>
+            是否发布
+            </summary>
+        </member>
+    </members>
+</doc>

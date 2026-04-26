@@ -1,0 +1,3 @@
+namespace HaoKao.UserAnswerRecordService.Application.Modules.UserAnswerRecordModule.Interfaces;
+
+public interface IUserAnswerRecordService : IManager, IAppWebApiService;

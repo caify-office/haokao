@@ -1,0 +1,266 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.DataStatisticsService.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.DataStatisticsService.WebApi.Enums.PermissionExpiryType">
+            <summary>
+            权限状态
+            </summary>
+        </member>
+        <member name="F:HaoKao.DataStatisticsService.WebApi.Enums.PermissionExpiryType.NotExpired">
+            <summary>
+            未过期
+            </summary>
+        </member>
+        <member name="F:HaoKao.DataStatisticsService.WebApi.Enums.PermissionExpiryType.Expired">
+            <summary>
+            已过期
+            </summary>
+        </member>
+        <member name="F:HaoKao.DataStatisticsService.WebApi.Enums.PermissionExpiryType.All">
+            <summary>
+            全部
+            </summary>
+        </member>
+        <member name="T:HaoKao.DataStatisticsService.WebApi.Migrations.addView">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.DataStatisticsService.WebApi.Migrations.addView.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.DataStatisticsService.WebApi.Migrations.addView.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.DataStatisticsService.WebApi.Migrations.addView.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:HaoKao.DataStatisticsService.WebApi.Models.ProgressStatistics">
+            <summary>
+            学习情况
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Models.ProgressStatistics.RegisterUserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Models.ProgressStatistics.NickName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Models.ProgressStatistics.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Models.ProgressStatistics.IsPaidStudent">
+            <summary>
+            是否付费学员
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Models.ProgressStatistics.MaxProgress">
+            <summary>
+             最大听课时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Models.ProgressStatistics.CourseDuration">
+            <summary>
+            总时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Models.ProgressStatistics.CourseRatio">
+            <summary>
+            总学习进度
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Models.ProgressStatistics.CourseCount">
+            <summary>
+            课程数
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Models.ProgressStatistics.IsEndCourseCount">
+            <summary>
+            已学完课程数
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Models.ProgressStatistics.LastLearnCourseTime">
+            <summary>
+            最近学习课程时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Models.ProgressStatistics.PermissionExpiryType1">
+            <summary>
+            课程权限状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Models.ProgressStatistics.PermissionExpiryType2">
+            <summary>
+            题库权限状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Models.ProgressStatistics.QuestionCount">
+            <summary>
+            试题总数
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Models.ProgressStatistics.AnsweredCount">
+            <summary>
+            已答题数
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Models.ProgressStatistics.AnswerRadio">
+            <summary>
+            答题进度
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Models.ProgressStatistics.LastAnswerTime">
+            <summary>
+            最近答题时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Models.ProgressStatistics.LastLearnTime">
+            <summary>
+            最近学习时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Models.ProgressStatistics.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Models.ProgressStatistics.LastLearnIntervalDays">
+            <summary>
+            最近学习间隔天数
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Queries.ProgressStatisticsQuery.PhoneOrNickName">
+            <summary>
+            手机号/用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Queries.ProgressStatisticsQuery.MinLearnTime">
+            <summary>
+            上次学习开始时间最小值
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Queries.ProgressStatisticsQuery.MaxLearnTime">
+            <summary>
+            上次学习结束时间最大值
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Queries.ProgressStatisticsQuery.MinLearnIntervalDays">
+            <summary>
+            距上次时隔天数最小值
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Queries.ProgressStatisticsQuery.MaxLearnIntervalDays">
+            <summary>
+            距上次时隔天数最大值
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Queries.ProgressStatisticsQuery.MinCourseRatio">
+            <summary>
+            最小课程学习进度
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Queries.ProgressStatisticsQuery.MaxCourseRatio">
+            <summary>
+            最大课程学习进度
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Queries.ProgressStatisticsQuery.MinAnswerRatio">
+            <summary>
+            最小答题进度
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Queries.ProgressStatisticsQuery.MaxAnswerRatio">
+            <summary>
+            最大答题进度
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Queries.ProgressStatisticsQuery.PermissionExpiryType1">
+            <summary>
+            课程权限状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Queries.ProgressStatisticsQuery.PermissionExpiryType2">
+            <summary>
+            题库权限状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Queries.ProgressStatisticsQuery.IsPaidStudent">
+            <summary>
+            是否付费学员
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Queries.SendNotificationMessageQuery.EventReceivingChannel">
+            <summary>
+            接收渠道
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Queries.SendNotificationMessageQuery.EventNotificationMessageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Queries.SendNotificationMessageQuery.MinDays">
+            <summary>
+            距上次时隔天数最小值
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Queries.SendNotificationMessageQuery.MaxDays">
+            <summary>
+            距上次时隔天数最大值
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Queries.SendNotificationMessageQuery.MinCourseRatip">
+            <summary>
+            最小课程学习进度
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Queries.SendNotificationMessageQuery.MaxCourseRatip">
+            <summary>
+            最大课程学习进度
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Queries.SendNotificationMessageQuery.ExpiryType">
+            <summary>
+            权限状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.DataStatisticsService.WebApi.Queries.SendNotificationMessageQuery.Phones">
+            <summary>
+            接收者
+            </summary>
+        </member>
+        <member name="M:HaoKao.DataStatisticsService.WebApi.Services.ProgressStatisticsService.Get(HaoKao.DataStatisticsService.WebApi.Queries.ProgressStatisticsQuery)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="query">查询对象</param>
+        </member>
+        <member name="M:HaoKao.DataStatisticsService.WebApi.Services.ProgressStatisticsService.SendAssignNotificationMessage(HaoKao.DataStatisticsService.WebApi.Queries.SendNotificationMessageQuery,Girvs.EventBus.IEventBus)">
+            <summary>
+            发送指定消息
+            </summary>
+            <param name="query"></param>
+            <param name="eventBus"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataStatisticsService.WebApi.Services.ProgressStatisticsService.StatisticsToCache">
+            <summary>
+            重新统计学员学习情况并存入缓存
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.DataStatisticsService.WebApi.Services.ProgressStatisticsService.ExecuteStatisticsToCache">
+            <summary>
+            重新统计学员学习情况并存入缓存
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

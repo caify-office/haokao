@@ -1,0 +1,3 @@
+﻿namespace HaoKao.ChapterNodeService.Application.ChapterNodeModule.ViewModels;
+
+public record UpdateChapterNodeViewModel : CreateChapterNodeViewModel;

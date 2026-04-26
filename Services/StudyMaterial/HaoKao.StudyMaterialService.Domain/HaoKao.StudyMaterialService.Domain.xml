@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.StudyMaterialService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.StudyMaterialService.Domain.AutoMapper.AutoMapperConfig">
+            <summary>
+            静态全局 AutoMapper 配置文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.StudyMaterialService.Domain.AutoMapper.CommandToEntityMappingProfile.#ctor">
+            <summary>
+            配置构造函数，用来创建关系映射
+            </summary>
+        </member>
+        <member name="T:HaoKao.StudyMaterialService.Domain.Commands.CreateStudyMaterialCommand">
+            <summary>
+            创建学习资料命令
+            </summary>
+            <param name="Name">资料名称</param>
+            <param name="Year">年份</param>
+            <param name="Enable">启用/禁用</param>
+            <param name="Materials">资料内容</param>
+            <param name="Subjects">科目</param>
+        </member>
+        <member name="M:HaoKao.StudyMaterialService.Domain.Commands.CreateStudyMaterialCommand.#ctor(System.String,System.Int32,System.Boolean,System.Collections.Generic.List{HaoKao.StudyMaterialService.Domain.Entities.Material},System.String)">
+            <summary>
+            创建学习资料命令
+            </summary>
+            <param name="Name">资料名称</param>
+            <param name="Year">年份</param>
+            <param name="Enable">启用/禁用</param>
+            <param name="Materials">资料内容</param>
+            <param name="Subjects">科目</param>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Commands.CreateStudyMaterialCommand.Name">
+            <summary>资料名称</summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Commands.CreateStudyMaterialCommand.Year">
+            <summary>年份</summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Commands.CreateStudyMaterialCommand.Enable">
+            <summary>启用/禁用</summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Commands.CreateStudyMaterialCommand.Materials">
+            <summary>资料内容</summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Commands.CreateStudyMaterialCommand.Subjects">
+            <summary>科目</summary>
+        </member>
+        <member name="T:HaoKao.StudyMaterialService.Domain.Commands.UpdateStudyMaterialCommand">
+            <summary>
+            更新学习资料命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Name">资料名称</param>
+            <param name="Year">年份</param>
+            <param name="Enable">启用/禁用</param>
+            <param name="Materials">资料内容</param>
+            <param name="Subjects">科目</param>
+        </member>
+        <member name="M:HaoKao.StudyMaterialService.Domain.Commands.UpdateStudyMaterialCommand.#ctor(System.Guid,System.String,System.Int32,System.Boolean,System.Collections.Generic.List{HaoKao.StudyMaterialService.Domain.Entities.Material},System.String)">
+            <summary>
+            更新学习资料命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Name">资料名称</param>
+            <param name="Year">年份</param>
+            <param name="Enable">启用/禁用</param>
+            <param name="Materials">资料内容</param>
+            <param name="Subjects">科目</param>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Commands.UpdateStudyMaterialCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Commands.UpdateStudyMaterialCommand.Name">
+            <summary>资料名称</summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Commands.UpdateStudyMaterialCommand.Year">
+            <summary>年份</summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Commands.UpdateStudyMaterialCommand.Enable">
+            <summary>启用/禁用</summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Commands.UpdateStudyMaterialCommand.Materials">
+            <summary>资料内容</summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Commands.UpdateStudyMaterialCommand.Subjects">
+            <summary>科目</summary>
+        </member>
+        <member name="T:HaoKao.StudyMaterialService.Domain.Commands.EnableStudyMaterialCommand">
+            <summary>
+            批量启用/禁用学习资料服务
+            </summary>
+            <param name="Ids">Ids</param>
+            <param name="Enable">启用/禁用</param>
+        </member>
+        <member name="M:HaoKao.StudyMaterialService.Domain.Commands.EnableStudyMaterialCommand.#ctor(System.Collections.Generic.List{System.Guid},System.Boolean)">
+            <summary>
+            批量启用/禁用学习资料服务
+            </summary>
+            <param name="Ids">Ids</param>
+            <param name="Enable">启用/禁用</param>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Commands.EnableStudyMaterialCommand.Ids">
+            <summary>Ids</summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Commands.EnableStudyMaterialCommand.Enable">
+            <summary>启用/禁用</summary>
+        </member>
+        <member name="T:HaoKao.StudyMaterialService.Domain.Commands.DeleteStudyMaterialCommand">
+            <summary>
+            批量删除学习资料命令
+            </summary>
+            <param name="Ids">Ids</param>
+        </member>
+        <member name="M:HaoKao.StudyMaterialService.Domain.Commands.DeleteStudyMaterialCommand.#ctor(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            批量删除学习资料命令
+            </summary>
+            <param name="Ids">Ids</param>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Commands.DeleteStudyMaterialCommand.Ids">
+            <summary>Ids</summary>
+        </member>
+        <member name="T:HaoKao.StudyMaterialService.Domain.Entities.StudyMaterial">
+            <summary>
+            学习资料
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Entities.StudyMaterial.Name">
+            <summary>
+            资料名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Entities.StudyMaterial.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Entities.StudyMaterial.Enable">
+            <summary>
+            启用/禁用
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Entities.StudyMaterial.Materials">
+            <summary>
+            资料内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Entities.StudyMaterial.Subjects">
+            <summary>
+            科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Entities.StudyMaterial.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Entities.StudyMaterial.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Entities.StudyMaterial.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Entities.StudyMaterial.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Entities.Material.Url">
+            <summary>
+            资料地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Entities.Material.Name">
+            <summary>
+            资料名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Queries.StudyMaterialQuery.Name">
+            <summary>
+            资料名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Queries.StudyMaterialQuery.SubjectId">
+            <summary>
+            所属科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Domain.Queries.StudyMaterialQuery.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+    </members>
+</doc>

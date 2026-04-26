@@ -1,0 +1,685 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.AnsweringQuestionService.Application</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.AnsweringQuestionService.Application.AppService.ManageMent.AnsweringQuestionReplyService">
+            <summary>
+            答疑回复接口服务  
+            </summary>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.ManageMent.AnsweringQuestionReplyService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.AnsweringQuestionService.Domain.Repositories.IAnsweringQuestionReplyRepository)">
+            <summary>
+            答疑回复接口服务  
+            </summary>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.ManageMent.AnsweringQuestionReplyService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.ManageMent.AnsweringQuestionReplyService.Get(HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionReplyQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.ManageMent.AnsweringQuestionReplyService.Create(HaoKao.AnsweringQuestionService.Application.ViewModels.CreateAnsweringQuestionReplyViewModel)">
+            <summary>
+            创建答疑回复
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.ManageMent.AnsweringQuestionReplyService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定答疑回复
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.ManageMent.AnsweringQuestionReplyService.Update(System.Guid,HaoKao.AnsweringQuestionService.Application.ViewModels.UpdateAnsweringQuestionReplyViewModel)">
+            <summary>
+            根据主键更新指定答疑回复
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.AnsweringQuestionService.Application.AppService.ManageMent.AnsweringQuestionService">
+            <summary>
+            答疑接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.ManageMent.AnsweringQuestionService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.AnsweringQuestionService.Domain.Repositories.IAnsweringQuestionRepository,HaoKao.AnsweringQuestionService.Domain.Repositories.IAnsweringQuestionReplyRepository)">
+            <summary>
+            答疑接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.ManageMent.AnsweringQuestionService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.ManageMent.AnsweringQuestionService.Get(HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.ManageMent.AnsweringQuestionService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定答疑回复
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.ManageMent.IAnsweringQuestionReplyService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.ManageMent.IAnsweringQuestionReplyService.Get(HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionReplyQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.ManageMent.IAnsweringQuestionReplyService.Create(HaoKao.AnsweringQuestionService.Application.ViewModels.CreateAnsweringQuestionReplyViewModel)">
+            <summary>
+            创建答疑回复
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.ManageMent.IAnsweringQuestionReplyService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定答疑回复
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.ManageMent.IAnsweringQuestionReplyService.Update(System.Guid,HaoKao.AnsweringQuestionService.Application.ViewModels.UpdateAnsweringQuestionReplyViewModel)">
+            <summary>
+            根据主键更新指定答疑回复
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.ManageMent.IAnsweringQuestionService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.ManageMent.IAnsweringQuestionService.Get(HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="T:HaoKao.AnsweringQuestionService.Application.AppService.Web.AnsweringQuestionWebService">
+            <summary>
+            答疑接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.Web.AnsweringQuestionWebService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.AnsweringQuestionService.Domain.Repositories.IAnsweringQuestionRepository)">
+            <summary>
+            答疑接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.Web.AnsweringQuestionWebService.Get(System.Guid)">
+            <summary>
+            答题详情
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.Web.AnsweringQuestionWebService.GetList(HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryWebViewModel)">
+             <summary>
+            答疑列表（我的答疑和热门答疑）
+             </summary>
+             <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.Web.AnsweringQuestionWebService.GetUserCount(System.Guid,System.Guid)">
+            <summary>
+            读取用户在某个产品下的提问数量
+            </summary>
+            <param name="ProductId"></param>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.Web.AnsweringQuestionWebService.Create(HaoKao.AnsweringQuestionService.Application.ViewModels.CreateAnsweringQuestionViewModel)">
+            <summary>
+            创建答疑
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.Web.AnsweringQuestionWebService.UpdateWatchCount(HaoKao.AnsweringQuestionService.Application.ViewModels.UpdateWatchCountModel)">
+            <summary>
+            更新观看人数
+            </summary>
+            <param name="request">request</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.IAnsweringQuestionWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.IAnsweringQuestionWebService.GetList(HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryWebViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.IAnsweringQuestionWebService.Create(HaoKao.AnsweringQuestionService.Application.ViewModels.CreateAnsweringQuestionViewModel)">
+            <summary>
+            创建答疑
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.IAnsweringQuestionWebService.UpdateWatchCount(HaoKao.AnsweringQuestionService.Application.ViewModels.UpdateWatchCountModel)">
+            <summary>
+            根据主键更新指定答疑
+            </summary>
+            <param name="request">request</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.IAnsweringQuestionWebService.GetUserCount(System.Guid,System.Guid)">
+            <summary>
+            读取用户在某个产品下的提问数量
+            </summary>
+            <param name="ProductId"></param>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.AnsweringQuestionService.Application.AppService.WeChat.AnsweringQuestionWeChatService">
+            <summary>
+            答疑接口服务--wehcat
+            </summary>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.WeChat.AnsweringQuestionWeChatService.#ctor(HaoKao.AnsweringQuestionService.Application.AppService.IAnsweringQuestionWebService)">
+            <summary>
+            答疑接口服务--wehcat
+            </summary>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.WeChat.AnsweringQuestionWeChatService.Get(System.Guid)">
+            <summary>
+            答题详情
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.WeChat.AnsweringQuestionWeChatService.GetList(HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryWebViewModel)">
+             <summary>
+            答疑列表（我的答疑和热门答疑）
+             </summary>
+             <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.WeChat.AnsweringQuestionWeChatService.GetUserCount(System.Guid,System.Guid)">
+            <summary>
+            读取用户在某个产品下的提问数量
+            </summary>
+            <param name="ProductId"></param>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.WeChat.AnsweringQuestionWeChatService.Create(HaoKao.AnsweringQuestionService.Application.ViewModels.CreateAnsweringQuestionViewModel)">
+            <summary>
+            创建答疑
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.WeChat.AnsweringQuestionWeChatService.UpdateWatchCount(HaoKao.AnsweringQuestionService.Application.ViewModels.UpdateWatchCountModel)">
+            <summary>
+            更新观看人数
+            </summary>
+            <param name="request">request</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.IAnsweringQuestionWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.IAnsweringQuestionWeChatService.GetList(HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryWebViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.IAnsweringQuestionWeChatService.Create(HaoKao.AnsweringQuestionService.Application.ViewModels.CreateAnsweringQuestionViewModel)">
+            <summary>
+            创建答疑
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.AppService.IAnsweringQuestionWeChatService.UpdateWatchCount(HaoKao.AnsweringQuestionService.Application.ViewModels.UpdateWatchCountModel)">
+            <summary>
+            根据主键更新指定答疑
+            </summary>
+            <param name="request">request</param>
+        </member>
+        <member name="T:HaoKao.AnsweringQuestionService.Application.Profiles.AnsweringQuestionProfile">
+            <summary>
+            作答记录映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Application.Profiles.AnsweringQuestionProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.Profiles.AnsweringQuestionProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.BrowseAnsweringQuestionViewModel.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.BrowseAnsweringQuestionViewModel.SubjectName">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.BrowseAnsweringQuestionViewModel.CreateTime">
+            <summary>
+            提交时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.BrowseAnsweringQuestionViewModel.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.BrowseAnsweringQuestionViewModel.UserName">
+            <summary>
+            提交人名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.BrowseAnsweringQuestionViewModel.IsReply">
+            <summary>
+            是否回答
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.BrowseAnsweringQuestionViewModel.CourseId">
+            <summary>
+            课程id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.BrowseAnsweringQuestionViewModel.CourseName">
+            <summary>
+            课程名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.BrowseAnsweringQuestionViewModel.CourseChapterId">
+            <summary>
+            选择的课程章节id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.BrowseAnsweringQuestionViewModel.CourseChapterName">
+            <summary>
+            课程章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.BrowseAnsweringQuestionViewModel.CourseVideId">
+            <summary>
+            选择的课程视频id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.BrowseAnsweringQuestionViewModel.CourseVideName">
+            <summary>
+            课程视频名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.BrowseAnsweringQuestionViewModel.BookPageSize">
+            <summary>
+            书籍页码
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.BrowseAnsweringQuestionViewModel.BookName">
+            <summary>
+            书籍名称以及相关描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.BrowseAnsweringQuestionViewModel.Type">
+            <summary>
+            提问类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.BrowseAnsweringQuestionViewModel.Description">
+            <summary>
+            问题描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.BrowseAnsweringQuestionViewModel.Remark">
+            <summary>
+            详细描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.BrowseAnsweringQuestionViewModel.FileUrl">
+            <summary>
+            上传的图片路劲
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.CreateAnsweringQuestionViewModel.ParentId">
+            <summary>
+            父级id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.CreateAnsweringQuestionViewModel.SubjectId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.CreateAnsweringQuestionViewModel.SubjectName">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.CreateAnsweringQuestionViewModel.CourseId">
+            <summary>
+            课程id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.CreateAnsweringQuestionViewModel.CourseName">
+            <summary>
+            课程name
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.CreateAnsweringQuestionViewModel.CourseChapterName">
+            <summary>
+            课程章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.CreateAnsweringQuestionViewModel.CourseVideoName">
+            <summary>
+            课程视频名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.CreateAnsweringQuestionViewModel.CourseChapterId">
+            <summary>
+            选择的课程章节id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.CreateAnsweringQuestionViewModel.CourseVideId">
+            <summary>
+            选择的课程视频id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.CreateAnsweringQuestionViewModel.BookPageSize">
+            <summary>
+            书籍页码
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.CreateAnsweringQuestionViewModel.BookName">
+            <summary>
+            书籍名称以及相关描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.CreateAnsweringQuestionViewModel.Type">
+            <summary>
+            提问类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.CreateAnsweringQuestionViewModel.Description">
+            <summary>
+            问题描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.CreateAnsweringQuestionViewModel.Remark">
+            <summary>
+            详细描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.CreateAnsweringQuestionViewModel.FileUrl">
+            <summary>
+            上传的图片路劲
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryViewModel.SubjectId">
+            <summary>
+            科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryViewModel.Submitor">
+            <summary>
+            提交人
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryViewModel.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryViewModel.IsReply">
+            <summary>
+            是否回复
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryViewModel.IsNewReply">
+            <summary>
+            是否新回复
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryViewModel.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryViewModel.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryViewModel.Type">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListViewModel.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListViewModel.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListViewModel.SubjectId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListViewModel.SubjectName">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListViewModel.IsReply">
+            <summary>
+            是否回答
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListViewModel.CourseId">
+            <summary>
+            课程id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListViewModel.CourseChapterId">
+            <summary>
+            选择的课程章节id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListViewModel.CourseVideId">
+            <summary>
+            选择的课程视频id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListViewModel.BookPageSize">
+            <summary>
+            书籍页码
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListViewModel.BookName">
+            <summary>
+            书籍名称以及相关描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListViewModel.Type">
+            <summary>
+            提问类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListViewModel.Description">
+            <summary>
+            问题描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListViewModel.Remark">
+            <summary>
+            详细描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListViewModel.FileUrl">
+            <summary>
+            上传的图片路劲
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListViewModel.WatchCount">
+            <summary>
+            观看人数累加
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListViewModel.CreatorId">
+            <summary>
+            创建人id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListViewModel.IsNewRepley">
+            <summary>
+            true-新回复  false--没有新回复
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListViewModel.ReplyUserName">
+            <summary>
+            回复人
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListViewModel.ReplyDateTime">
+            <summary>
+            回复时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryWebViewModel.CourseId">
+            <summary>
+            课程id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryWebViewModel.SearchKey">
+            <summary>
+            关键词搜索
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryWebViewModel.Type">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListWebViewModel.IsReply">
+            <summary>
+            是否回答
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListWebViewModel.Type">
+            <summary>
+            提问类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListWebViewModel.Description">
+            <summary>
+            问题描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListWebViewModel.Remark">
+            <summary>
+            详细描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListWebViewModel.FileUrl">
+            <summary>
+            上传的图片路劲
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListWebViewModel.WatchCount">
+            <summary>
+            观看人数累加
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionQueryListWebViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.UpdateAnsweringQuestionViewModel.WatchCount">
+            <summary>
+            观看人数累加
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.BrowseAnsweringQuestionReplyViewModel.ReplyContent">
+            <summary>
+            答疑回复内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.BrowseAnsweringQuestionReplyViewModel.ReplyUserName">
+            <summary>
+            回复人用户名
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.BrowseAnsweringQuestionReplyViewModel.AnsweringQuestionId">
+            <summary>
+            关联的题目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.CreateAnsweringQuestionReplyViewModel.ReplyContent">
+            <summary>
+            答疑回复内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.CreateAnsweringQuestionReplyViewModel.AnsweringQuestionId">
+            <summary>
+            关联的题目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionReplyQueryListViewModel.ReplyContent">
+            <summary>
+            答疑回复内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionReplyQueryListViewModel.ReplyUserName">
+            <summary>
+            回复人用户名
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.AnsweringQuestionReplyQueryListViewModel.AnsweringQuestionId">
+            <summary>
+            关联的题目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.UpdateAnsweringQuestionReplyViewModel.ReplyContent">
+            <summary>
+            答疑回复内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Application.ViewModels.UpdateAnsweringQuestionReplyViewModel.AnsweringQuestionId">
+            <summary>
+            关联的题目id
+            </summary>
+        </member>
+    </members>
+</doc>

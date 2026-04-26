@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.LecturerService.Application", "HaoKao.LecturerService.Application\HaoKao.LecturerService.Application.csproj", "{5E0707E4-3D71-49E2-9DF8-46D2542CBBE0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.LecturerService.Infrastructure", "HaoKao.LecturerService.Infrastructure\HaoKao.LecturerService.Infrastructure.csproj", "{89984583-97A4-4833-9E70-DA9BB95843D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.LecturerService.WebApi", "HaoKao.LecturerService.WebApi\HaoKao.LecturerService.WebApi.csproj", "{E21DB302-7A43-4A0F-BE41-3DC933E729A1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaoKao.LecturerService.Domain", "HaoKao.LecturerService.Domain\HaoKao.LecturerService.Domain.csproj", "{3F7AFDC8-A324-428C-BD59-8554964572BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E0707E4-3D71-49E2-9DF8-46D2542CBBE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E0707E4-3D71-49E2-9DF8-46D2542CBBE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E0707E4-3D71-49E2-9DF8-46D2542CBBE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E0707E4-3D71-49E2-9DF8-46D2542CBBE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89984583-97A4-4833-9E70-DA9BB95843D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89984583-97A4-4833-9E70-DA9BB95843D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89984583-97A4-4833-9E70-DA9BB95843D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89984583-97A4-4833-9E70-DA9BB95843D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E21DB302-7A43-4A0F-BE41-3DC933E729A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E21DB302-7A43-4A0F-BE41-3DC933E729A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E21DB302-7A43-4A0F-BE41-3DC933E729A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E21DB302-7A43-4A0F-BE41-3DC933E729A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F7AFDC8-A324-428C-BD59-8554964572BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F7AFDC8-A324-428C-BD59-8554964572BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F7AFDC8-A324-428C-BD59-8554964572BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F7AFDC8-A324-428C-BD59-8554964572BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6AC23069-ECAB-4274-9E11-44CE015E929D}
+	EndGlobalSection
+EndGlobal

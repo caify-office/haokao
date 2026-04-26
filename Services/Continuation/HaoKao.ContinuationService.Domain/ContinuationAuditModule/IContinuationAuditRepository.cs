@@ -1,0 +1,3 @@
+﻿namespace HaoKao.ContinuationService.Domain.ContinuationAuditModule;
+
+public interface IContinuationAuditRepository : IRepository<ContinuationAudit>;

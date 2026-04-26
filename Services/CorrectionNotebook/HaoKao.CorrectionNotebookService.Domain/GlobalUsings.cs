@@ -1,0 +1,11 @@
+﻿global using FluentValidation;
+global using Girvs.BusinessBasis.Entities;
+global using Girvs.BusinessBasis.Repositories;
+global using Girvs.BusinessBasis.UoW;
+global using Girvs.Driven.Bus;
+global using Girvs.Driven.Commands;
+global using Girvs.Extensions;
+global using MediatR;
+global using Microsoft.AspNetCore.Http;
+global using System.Linq.Expressions;
+global using System.Text.Json.Serialization;

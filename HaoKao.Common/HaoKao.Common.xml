@@ -1,0 +1,666 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.Common</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.Common.Enums.ExamFrequency">
+            <summary>
+            考试频率
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Enums.ExamFrequency.High">
+            <summary>
+            高频
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Enums.ExamFrequency.Medium">
+            <summary>
+            中频
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Enums.ExamFrequency.Low">
+            <summary>
+            低频
+            </summary>
+        </member>
+        <member name="T:HaoKao.Common.Enums.ExpiryTimeTypeEnum">
+            <summary>
+            有效期类型
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Enums.ExpiryTimeTypeEnum.Date">
+            <summary>
+            按日期
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Enums.ExpiryTimeTypeEnum.Day">
+            <summary>
+            按天数
+            </summary>
+        </member>
+        <member name="T:HaoKao.Common.Enums.ScoringRuleType">
+            <summary>
+            评分规则
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Enums.ScoringRuleType.Correct">
+            <summary>
+            答对
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Enums.ScoringRuleType.Wrong">
+            <summary>
+            答错
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Enums.ScoringRuleType.Missing">
+            <summary>
+            不作答
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Enums.ScoringRuleType.Lack">
+            <summary>
+            少选
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Enums.ScoringRuleType.Excessive">
+            <summary>
+            多选
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Enums.ScoringRuleType.Vague">
+            <summary>
+            模糊词
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Enums.ScoringRuleType.Subjective">
+            <summary>
+            主观题(不评分)
+            </summary>
+        </member>
+        <member name="T:HaoKao.Common.Enums.SubmitAnswerType">
+            <summary>
+            提交的作答类型
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Enums.SubmitAnswerType.Chapter">
+            <summary>
+            章节
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Enums.SubmitAnswerType.Paper">
+            <summary>
+            试卷
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Enums.SubmitAnswerType.Daily">
+            <summary>
+            每日一题
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Enums.SubmitAnswerType.ClearError">
+            <summary>
+            消灭错题
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Enums.SubmitAnswerType.TodayTask">
+            <summary>
+            今日任务
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Enums.SubmitAnswerType.SpecialPromotion">
+            <summary>
+            专项提升
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Enums.SubmitAnswerType.Section">
+            <summary>
+            小节
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Enums.SubmitAnswerType.KnowledgePoint">
+            <summary>
+            知识点
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Enums.SubmitAnswerType.ProductChapter">
+            <summary>
+            智辅产品章节
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Enums.SubmitAnswerType.ProductPaper">
+            <summary>
+            智辅产品试卷
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Enums.SubmitAnswerType.ProductKnowledge">
+            <summary>
+            智辅产品知识点
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Events.AuditLogs.SourceType.Server">
+            <summary>
+            服务端
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Events.AuditLogs.SourceType.Register">
+            <summary>
+            考生端
+            </summary>
+        </member>
+        <member name="T:HaoKao.Common.Events.Coupon.UpdateIsLockedEvent">
+            <summary>
+            更新优惠券锁定状态
+            </summary>
+            <param name="OrderId"></param>
+        </member>
+        <member name="M:HaoKao.Common.Events.Coupon.UpdateIsLockedEvent.#ctor(System.Guid)">
+            <summary>
+            更新优惠券锁定状态
+            </summary>
+            <param name="OrderId"></param>
+        </member>
+        <member name="P:HaoKao.Common.Events.Coupon.UpdateIsLockedEvent.OrderId">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.Common.Events.Coupon.UpdateIsUseEvent">
+            <summary>
+            支付成功更新使用状态
+            </summary>
+            <param name="OrderId">订单id</param>
+            <param name="OrderNo">订单编号</param>
+            <param name="ProductName">产品名称</param>
+            <param name="ProductId">产品名称</param>
+            <param name="Amount">订单金额</param>
+            <param name="FactAmount">实际支付金额</param>
+            <param name="PayTime">支付时间</param>
+            <param name="ProductContent">产品内容</param>
+        </member>
+        <member name="M:HaoKao.Common.Events.Coupon.UpdateIsUseEvent.#ctor(System.Guid,System.String,System.String,System.Guid,System.Decimal,System.Decimal,System.DateTime,System.String)">
+            <summary>
+            支付成功更新使用状态
+            </summary>
+            <param name="OrderId">订单id</param>
+            <param name="OrderNo">订单编号</param>
+            <param name="ProductName">产品名称</param>
+            <param name="ProductId">产品名称</param>
+            <param name="Amount">订单金额</param>
+            <param name="FactAmount">实际支付金额</param>
+            <param name="PayTime">支付时间</param>
+            <param name="ProductContent">产品内容</param>
+        </member>
+        <member name="P:HaoKao.Common.Events.Coupon.UpdateIsUseEvent.OrderId">
+            <summary>订单id</summary>
+        </member>
+        <member name="P:HaoKao.Common.Events.Coupon.UpdateIsUseEvent.OrderNo">
+            <summary>订单编号</summary>
+        </member>
+        <member name="P:HaoKao.Common.Events.Coupon.UpdateIsUseEvent.ProductName">
+            <summary>产品名称</summary>
+        </member>
+        <member name="P:HaoKao.Common.Events.Coupon.UpdateIsUseEvent.ProductId">
+            <summary>产品名称</summary>
+        </member>
+        <member name="P:HaoKao.Common.Events.Coupon.UpdateIsUseEvent.Amount">
+            <summary>订单金额</summary>
+        </member>
+        <member name="P:HaoKao.Common.Events.Coupon.UpdateIsUseEvent.FactAmount">
+            <summary>实际支付金额</summary>
+        </member>
+        <member name="P:HaoKao.Common.Events.Coupon.UpdateIsUseEvent.PayTime">
+            <summary>支付时间</summary>
+        </member>
+        <member name="P:HaoKao.Common.Events.Coupon.UpdateIsUseEvent.ProductContent">
+            <summary>产品内容</summary>
+        </member>
+        <member name="T:HaoKao.Common.Events.Coupon.UpdateOrderIdEvent">
+            <summary>
+            添加订单更改用户优惠券orderId
+            </summary>
+            <param name="CouponIds">优惠券id</param>
+            <param name="OrderId">订单id</param>
+        </member>
+        <member name="M:HaoKao.Common.Events.Coupon.UpdateOrderIdEvent.#ctor(System.String,System.Guid)">
+            <summary>
+            添加订单更改用户优惠券orderId
+            </summary>
+            <param name="CouponIds">优惠券id</param>
+            <param name="OrderId">订单id</param>
+        </member>
+        <member name="P:HaoKao.Common.Events.Coupon.UpdateOrderIdEvent.CouponIds">
+            <summary>优惠券id</summary>
+        </member>
+        <member name="P:HaoKao.Common.Events.Coupon.UpdateOrderIdEvent.OrderId">
+            <summary>订单id</summary>
+        </member>
+        <member name="F:HaoKao.Common.Events.NotificationMessage.EventReceivingChannel.WebChat">
+            <summary>
+            微信公众号接收
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Events.NotificationMessage.EventReceivingChannel.InSite">
+            <summary>
+            站内消息
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Events.NotificationMessage.EventReceivingChannel.Mobile">
+            <summary>
+            手机接收
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Events.NotificationMessage.EventNotificationMessageType.Register">
+            <summary>
+            用户注册
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Events.NotificationMessage.EventNotificationMessageType.Login">
+            <summary>
+            验证码登陆
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Events.NotificationMessage.EventNotificationMessageType.RetrievePassword">
+            <summary>
+            找回密码
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Events.NotificationMessage.EventNotificationMessageType.ChangePhoneNumber">
+            <summary>
+            更换手机号码
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Events.NotificationMessage.EventNotificationMessageType.CourseUpdate">
+            <summary>
+            课程更新消息
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Events.NotificationMessage.EventNotificationMessageType.ProgressReminder">
+            <summary>
+            进度提醒消息
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.Events.NotificationMessage.EventNotificationMessageType.Customize_1">
+            <summary>
+            自定义1
+            </summary>
+        </member>
+        <member name="T:HaoKao.Common.Events.StudentPermission.UpdateStudentPermissionExpiryTimeEvent">
+            <summary>
+            更新学员权限的过期时间
+            </summary>
+            <param name="StudentId">学员Id</param>
+            <param name="ProductId">产品Id</param>
+            <param name="ExpiryTime">过期时间</param>
+        </member>
+        <member name="M:HaoKao.Common.Events.StudentPermission.UpdateStudentPermissionExpiryTimeEvent.#ctor(System.Guid,System.Guid,System.DateTime)">
+            <summary>
+            更新学员权限的过期时间
+            </summary>
+            <param name="StudentId">学员Id</param>
+            <param name="ProductId">产品Id</param>
+            <param name="ExpiryTime">过期时间</param>
+        </member>
+        <member name="P:HaoKao.Common.Events.StudentPermission.UpdateStudentPermissionExpiryTimeEvent.StudentId">
+            <summary>学员Id</summary>
+        </member>
+        <member name="P:HaoKao.Common.Events.StudentPermission.UpdateStudentPermissionExpiryTimeEvent.ProductId">
+            <summary>产品Id</summary>
+        </member>
+        <member name="P:HaoKao.Common.Events.StudentPermission.UpdateStudentPermissionExpiryTimeEvent.ExpiryTime">
+            <summary>过期时间</summary>
+        </member>
+        <member name="M:HaoKao.Common.Extensions.StringExtensions.SanitizeForUrl(System.String,System.String)">
+            <summary>
+            过滤URL不支持的特殊字符
+            </summary>
+            <param name="input">原始字符串</param>
+            <param name="replacement">替换字符（默认为空字符串）</param>
+            <returns>符合URL规范的字符串</returns>
+        </member>
+        <member name="M:HaoKao.Common.Extensions.StringExtensions.ConvertToLocalTime(System.String)">
+            <summary>
+            将零时区时间字符串转为本地时间字符串
+            </summary>
+            <param name="utcTimeString"></param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCourseVideoInfo.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCourseVideoInfo.CourseChapterId">
+            <summary>
+            关联的课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCourseVideoInfo.KnowledgePointId">
+            <summary>
+            关联的知识点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCourseVideoInfo.KnowledgePointIds">
+            <summary>
+            关联的知识点id(阶段学习保存多个知识点id拼接数组使用)
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCourseVideoInfo.Suffix">
+            <summary>
+            后缀
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCourseVideoInfo.Duration">
+            <summary>
+            时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCourseVideoInfo.IsTry">
+            <summary>
+            是否试听  ture--试听 false --不可试听
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCourseVideoInfo.VideoName">
+            <summary>
+            视频名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCourseVideoInfo.SourceName">
+            <summary>
+            视频源名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCourseVideoInfo.VideoUrl">
+            <summary>
+            播放url-冗余
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCourseVideoInfo.VideoId">
+            <summary>
+            视频id
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCourseVideoInfo.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCourseVideoInfo.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCourseVideoInfo.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCourseVideoInfo.CateId">
+            <summary>
+            视频分类id
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCourseVideoInfo.CateName">
+            <summary>
+            视频分类名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCourseVideoInfo.Tags">
+            <summary>
+            视频标签
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.CourseVideoQueryListInfo.CourseChapterName">
+            <summary>
+            章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.CourseVideoQueryListInfo.CourseChapterSort">
+            <summary>
+            章节排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.CourseVideoQueryListInfo.QzName">
+            <summary>
+            前缀name
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.CourseVideoQueryListInfo.CreateTime">
+            <summary>
+            上传时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.CourseVideoQueryListInfo.IsNew">
+            <summary>
+            是否最新的
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.QueryCourseVideoInfo.KnowledgePointId">
+            <summary>
+            关联的知识点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.QueryCourseVideoInfo.CourseChapterId">
+            <summary>
+            关联的课程章节id（阶段学习为课程章节id,智慧辅助学习为课程Id）
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.QueryCourseVideoInfo.CourseId">
+            <summary>
+            课程id（阶段学习专用）
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCoursePracticeInfo.SubjectId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCoursePracticeInfo.CourseId">
+            <summary>
+            课程id
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCoursePracticeInfo.CourseChapterId">
+            <summary>
+            关联的课程章节id
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCoursePracticeInfo.CourseChapterName">
+            <summary>
+             关联的课程章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCoursePracticeInfo.KnowledgePointId">
+            <summary>
+            关联的知识点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCoursePracticeInfo.ChapterNodeId">
+            <summary>
+            关联的试题章节id
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCoursePracticeInfo.ChapterNodeName">
+            <summary>
+            关联的试题章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCoursePracticeInfo.QuestionCategoryId">
+            <summary>
+            关联的试题分类Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCoursePracticeInfo.QuestionCategoryName">
+            <summary>
+            关联的试题分类名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCoursePracticeInfo.QuestionIds">
+            <summary>
+            试题id集合(智辅学习课程，添加课后练习使用)
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCourseChapterViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCourseChapterViewModel.ParentId">
+            <summary>
+            父id
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowseCourseChapterViewModel.CourseId">
+            <summary>
+            关联的课程id
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BrowsePaperInfo.QuestionTypes">
+            <summary>
+            返回题型列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BaseBrowsePaperInfo.Id">
+            <summary>
+            试卷id
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BaseBrowsePaperInfo.Name">
+            <summary>
+            试卷名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BaseBrowsePaperInfo.SubjectId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BaseBrowsePaperInfo.SubjectName">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BaseBrowsePaperInfo.CategoryId">
+            <summary>
+            所属分类
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BaseBrowsePaperInfo.CategoryName">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BaseBrowsePaperInfo.Time">
+            <summary>
+            考试时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BaseBrowsePaperInfo.Score">
+            <summary>
+            及格分数
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BaseBrowsePaperInfo.IsFree">
+            <summary>
+            是否限免  1--不限免 2--限免
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BaseBrowsePaperInfo.State">
+            <summary>
+            发布状态 1-未发布 2-已发布
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BaseBrowsePaperInfo.QuestionCount">
+            <summary>
+            总题数
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BaseBrowsePaperInfo.TotalScore">
+            <summary>
+            总分数
+            </summary>
+        </member>
+        <member name="P:HaoKao.Common.RemoteModel.BaseBrowsePaperInfo.StructJson">
+            <summary>
+            试卷结构json
+            </summary>
+        </member>
+        <member name="T:HaoKao.Common.RemoteModel.AssistanPermissionType">
+            <summary>
+            权限类别
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.RemoteModel.AssistanPermissionType.Course">
+            <summary>
+            阶段课程
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.RemoteModel.AssistanPermissionType.Paper">
+            <summary>
+            试卷
+            </summary>
+        </member>
+        <member name="F:HaoKao.Common.RemoteModel.AssistanPermissionType.AssistanCourse">
+            <summary>
+            智辅课程
+            </summary>
+        </member>
+        <member name="M:HaoKao.Common.Services.CacheService.GetKeys">
+            <summary>
+            获取所有的键Key
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.Common.Services.CacheService.GetKeyValue(System.String)">
+            <summary>
+            根据Key获取缓存
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.Common.Services.CacheService.DeleteByKey(System.String)">
+            <summary>
+            根据Key删除缓存
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.Common.Services.CacheService.GetEntityKeys">
+            <summary>
+            获取所有的实体缓存
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.Common.Services.CacheService.DeleteList(System.String)">
+            <summary>
+            根据实体清除列表缓存
+            </summary>
+            <param name="entityFullName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.Common.Services.CacheService.DeleteEntity(System.String)">
+            <summary>
+            根据实体清除与当前实体相关的缓存
+            </summary>
+            <param name="entityFullName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Refit.Implementation.Generated">
+            <inheritdoc />
+        </member>
+        <member name="T:Refit.Implementation.Generated.HaoKaoCommonAuthorizeRepositoriesIAuthorityNetWorkRepository">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.HaoKaoCommonAuthorizeRepositoriesIAuthorityNetWorkRepository.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.HaoKaoCommonAuthorizeRepositoriesIAuthorityNetWorkRepository.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.HaoKaoCommonAuthorizeRepositoriesIAuthorityNetWorkRepository.GetUserAuthorization">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.HaoKaoCommonAuthorizeRepositoriesIAuthorityNetWorkRepository.HaoKao#Common#AuthorizeRepositories#IAuthorityNetWorkRepository#GetUserAuthorization">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,715 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.PaperService.Application</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.PaperService.Application.Interfaces.IPaperService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Interfaces.IPaperService.Get(HaoKao.PaperService.Application.ViewModels.PaperQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Interfaces.IPaperService.GetPaperDetailInfo(System.Guid)">
+            <summary>
+            根据主键获取基本信息以及题型介绍
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Interfaces.IPaperService.Create(HaoKao.PaperService.Application.ViewModels.CreatePaperViewModel)">
+            <summary>
+            创建试卷
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Interfaces.IPaperService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定试卷
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Interfaces.IPaperService.Update(HaoKao.PaperService.Application.ViewModels.UpdatePaperViewModel)">
+            <summary>
+            根据主键更新指定试卷
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Interfaces.IPaperWebService.Get(System.Guid)">
+            <summary>
+            根据Id获取试卷
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Interfaces.IPaperWebService.Get(System.Guid,System.Guid)">
+            <summary>
+            根据查询获取列表，不带分页
+            </summary>
+            <param name="subjectId"></param>
+            <param name="categoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Interfaces.IPaperWebService.Get(HaoKao.PaperService.Application.ViewModels.PaperQueryViewModel)">
+            <summary>
+            App获取试卷列表
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Interfaces.IPaperWebService.GetPaperInfo(System.Guid)">
+            <summary>
+            根据主键获取基本信息以及题型介绍
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Interfaces.IPaperWebService.GetPaperDetailInfo(System.Guid)">
+            <summary>
+            根据主键获取基本信息以及题型介绍
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Interfaces.IPaperWebService.GetPaperStructInfo(System.Guid)">
+            <summary>
+            根据主键获取试卷试题结构信息
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Interfaces.IPaperWebService.GetQuestionTotalBySubject(System.Guid)">
+            <summary>
+            根据科目获取所有试卷总题数
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Interfaces.IPaperWebService.GetSubjectPaperQuestionCount(System.Guid)">
+            <summary>
+             根据科目Id查询所有试卷题目总数
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Interfaces.IPaperWeChatService.Get(System.Guid)">
+            <summary>
+            根据Id获取试卷
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Interfaces.IPaperWeChatService.Get(System.Guid,System.Guid)">
+            <summary>
+            根据查询获取列表，不带分页
+            </summary>
+            <param name="subjectId"></param>
+            <param name="categoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Interfaces.IPaperWeChatService.Get(HaoKao.PaperService.Application.ViewModels.PaperQueryViewModel)">
+            <summary>
+            App获取试卷列表
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Interfaces.IPaperWeChatService.GetPaperInfo(System.Guid)">
+            <summary>
+            根据主键获取基本信息以及题型介绍
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Interfaces.IPaperWeChatService.GetPaperDetailInfo(System.Guid)">
+            <summary>
+            根据主键获取基本信息以及题型介绍
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Interfaces.IPaperWeChatService.GetPaperStructInfo(System.Guid)">
+            <summary>
+            根据主键获取试卷试题结构信息
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Interfaces.IPaperWeChatService.GetQuestionTotalBySubject(System.Guid)">
+            <summary>
+            根据科目获取所有试卷总题数
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Interfaces.IPaperWeChatService.GetSubjectPaperQuestionCount(System.Guid)">
+            <summary>
+             根据科目Id查询所有试卷题目总数
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.PaperService.Application.Services.PaperService">
+            <summary>
+            试卷管理
+            </summary>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.PaperService.Domain.Repositories.IPaperRepository)">
+            <summary>
+            试卷管理
+            </summary>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperService.Get(HaoKao.PaperService.Application.ViewModels.PaperQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperService.Create(HaoKao.PaperService.Application.ViewModels.CreatePaperViewModel)">
+            <summary>
+            创建试卷
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定试卷
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperService.Update(HaoKao.PaperService.Application.ViewModels.UpdatePaperViewModel)">
+            <summary>
+            根据主键更新指定试卷
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperService.SetStructJson(System.Guid,HaoKao.PaperService.Application.ViewModels.UpdatePaperStructViewModel)">
+            <summary>
+            设置试题
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperService.UpdateIsFree(HaoKao.PaperService.Application.ViewModels.UpdateIsFreeViewModel)">
+            <summary>
+            批量修改是否限免
+            </summary>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperService.UpdatePublishState(HaoKao.PaperService.Application.ViewModels.UpdatePublishStateViewModel)">
+            <summary>
+            批量修改发布状态
+            </summary>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperService.GetPaperList(System.Guid,System.Guid,System.Guid,HaoKao.PaperService.Application.Interfaces.IPaperWebService)">
+            <summary>
+            根据科目和分类获取试卷列表(Id和名称)
+            </summary>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperWebService.Get(System.Guid,System.Guid)">
+            <summary>
+            根据查询获取列表，不带分页
+            </summary>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperWebService.GetPaperList(System.Guid,System.Guid)">
+            <summary>
+            根据科目和分类获取试卷列表(Id和名称)
+            </summary>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperWebService.Get(HaoKao.PaperService.Application.ViewModels.PaperQueryViewModel)">
+            <summary>
+            App获取试卷列表
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperWebService.GetPaperInfo(System.Guid)">
+            <summary>
+            根据主键获取指定
+            返回基本信息以及题型介绍
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperWebService.GetPaperStructInfo(System.Guid)">
+            <summary>
+            根据主键获取指定
+            返回试卷试题结构信息
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperWebService.GetQuestionTotalBySubject(System.Guid)">
+            <summary>
+            根据科目获取所有试卷总题数
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperWebService.GetSubjectPaperQuestionCount(System.Guid)">
+            <summary>
+            根据科目Id查询所有试卷题目总数
+            </summary>
+        </member>
+        <member name="T:HaoKao.PaperService.Application.Services.PaperWeChatService">
+            <summary>
+            试卷 -wechat
+            </summary>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperWeChatService.#ctor(HaoKao.PaperService.Application.Interfaces.IPaperWebService)">
+            <summary>
+            试卷 -wechat
+            </summary>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperWeChatService.Get(System.Guid)">
+            <summary>
+            根据Id获取试卷
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperWeChatService.Get(System.Guid,System.Guid)">
+            <summary>
+            根据查询获取列表，不带分页
+            </summary>
+            <param name="subjectId"></param>
+            <param name="categoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperWeChatService.Get(HaoKao.PaperService.Application.ViewModels.PaperQueryViewModel)">
+            <summary>
+            App获取试卷列表
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperWeChatService.GetPaperInfo(System.Guid)">
+            <summary>
+            根据主键获取基本信息以及题型介绍
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperWeChatService.GetPaperDetailInfo(System.Guid)">
+            <summary>
+            根据主键获取基本信息以及题型介绍
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperWeChatService.GetPaperStructInfo(System.Guid)">
+            <summary>
+            根据主键获取试卷试题结构信息
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperWeChatService.GetQuestionTotalBySubject(System.Guid)">
+            <summary>
+            根据科目获取所有试卷总题数
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.Services.PaperWeChatService.GetSubjectPaperQuestionCount(System.Guid)">
+            <summary>
+            根据科目Id查询所有试卷题目总数
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BrowsePaperQuestionInfoViewModel.Typename">
+            <summary>
+            题型名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BrowsePaperQuestionInfoViewModel.TypeId">
+            <summary>
+            题型Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BrowsePaperQuestionInfoViewModel.QuestionCount">
+            <summary>
+            题目总数
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BrowsePaperQuestionInfoViewModel.Score">
+            <summary>
+            每题分数
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BrowsePaperQuestionInfoViewModel.ScoringRules">
+            <summary>
+            判题规则
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BrowsePaperQuestionViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BrowsePaperQuestionViewModel.Questions">
+            <summary>
+            试题
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BrowsePaperStructViewModel.Id">
+            <summary>
+            试卷id
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BrowsePaperStructViewModel.Name">
+            <summary>
+            试卷名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BrowsePaperStructViewModel.SubjectId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BrowsePaperStructViewModel.SubjectName">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BrowsePaperStructViewModel.CategoryId">
+            <summary>
+            所属分类
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BrowsePaperStructViewModel.CategoryName">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BrowsePaperStructViewModel.Score">
+            <summary>
+            及格分数
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BrowsePaperStructViewModel.TotalScore">
+            <summary>
+            总分
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BrowsePaperStructViewModel.StructJson">
+            <summary>
+            试卷结构json
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BrowsePaperStructViewModel.StructJsonViewModel">
+            <summary>
+            试卷结构
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BaseBrowsePaperViewModel.Id">
+            <summary>
+            试卷id
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BaseBrowsePaperViewModel.Name">
+            <summary>
+            试卷名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BaseBrowsePaperViewModel.SubjectId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BaseBrowsePaperViewModel.SubjectName">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BaseBrowsePaperViewModel.CategoryId">
+            <summary>
+            所属分类
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BaseBrowsePaperViewModel.CategoryName">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BaseBrowsePaperViewModel.Time">
+            <summary>
+            考试时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BaseBrowsePaperViewModel.Score">
+            <summary>
+            及格分数
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BaseBrowsePaperViewModel.IsFree">
+            <summary>
+            是否限免  1--不限免 2--限免
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BaseBrowsePaperViewModel.State">
+            <summary>
+            发布状态 1-未发布 2-已发布
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BaseBrowsePaperViewModel.QuestionCount">
+            <summary>
+            总题数
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BaseBrowsePaperViewModel.TotalScore">
+            <summary>
+            总分数
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BaseBrowsePaperViewModel.StructJson">
+            <summary>
+            试卷结构json
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BrowsePaperViewModel.QuestionTypes">
+            <summary>
+            返回题型列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BrowsePaperWebViewModel.QuestionIds">
+            <summary>
+            平铺所有的题目
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.BrowsePaperWebViewModel.QuestionTypes">
+            <summary>
+            返回题型列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.CreatePaperViewModel.Name">
+            <summary>
+            试卷名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.CreatePaperViewModel.SubjectId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.CreatePaperViewModel.SubjectName">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.CreatePaperViewModel.CategoryId">
+            <summary>
+            所属分类
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.CreatePaperViewModel.CategoryName">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.CreatePaperViewModel.Time">
+            <summary>
+            考试时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.CreatePaperViewModel.Score">
+            <summary>
+            及格分数
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.CreatePaperViewModel.IsFree">
+            <summary>
+            是否限免  1--不限免 2--限免
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.CreatePaperViewModel.State">
+            <summary>
+            发布状态 1-未发布 2-已发布
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.CreatePaperViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.CreatePaperViewModel.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.PaperQueryViewModel.Name">
+            <summary>
+            试卷名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.PaperQueryViewModel.SubjectId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.PaperQueryViewModel.CategoryId">
+            <summary>
+            类别id
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.PaperQueryViewModel.State">
+            <summary>
+            发布状态 1--未发布 2--已发布
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.PaperQueryViewModel.IsFree">
+            <summary>
+            是否限免 1-不限免 2-限免
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.PaperQueryViewModel.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.PaperQueryListViewModel.Name">
+            <summary>
+            试卷名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.PaperQueryListViewModel.SubjectId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.PaperQueryListViewModel.SubjectName">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.PaperQueryListViewModel.CategoryId">
+            <summary>
+            所属分类
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.PaperQueryListViewModel.CategoryName">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.PaperQueryListViewModel.Time">
+            <summary>
+            考试时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.PaperQueryListViewModel.Score">
+            <summary>
+            及格分数
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.PaperQueryListViewModel.IsFree">
+            <summary>
+            是否限免  1--不限免 2--限免
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.PaperQueryListViewModel.State">
+            <summary>
+            发布状态 1-未发布 2-已发布
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.PaperQueryListViewModel.StructJson">
+            <summary>
+            模板json--存储模板--模板明细json
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.PaperQueryListViewModel.QuestionCount">
+            <summary>
+            题目总数
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.PaperQueryListViewModel.TotalScore">
+            <summary>
+            总分
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.PaperQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.PaperQueryListViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.PaperQueryListViewModel.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.UpdatePaperViewModel.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="T:HaoKao.PaperService.Application.ViewModels.UpdateIsFreeViewModel">
+            <summary>
+            更新试卷是否限免请求
+            </summary>
+            <param name="Ids">需要更新的ids</param>
+            <param name="IsFree">是否限免</param>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.ViewModels.UpdateIsFreeViewModel.#ctor(System.Collections.Generic.IReadOnlyList{System.Guid},HaoKao.PaperService.Domain.Enumerations.FreeEnum)">
+            <summary>
+            更新试卷是否限免请求
+            </summary>
+            <param name="Ids">需要更新的ids</param>
+            <param name="IsFree">是否限免</param>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.UpdateIsFreeViewModel.Ids">
+            <summary>需要更新的ids</summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.UpdateIsFreeViewModel.IsFree">
+            <summary>是否限免</summary>
+        </member>
+        <member name="T:HaoKao.PaperService.Application.ViewModels.UpdatePublishStateViewModel">
+            <summary>
+            更新发布状态请求
+            </summary>
+            <param name="Ids">需要更新的ids</param>
+            <param name="State">发布状态</param>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.ViewModels.UpdatePublishStateViewModel.#ctor(System.Collections.Generic.IReadOnlyList{System.Guid},HaoKao.PaperService.Domain.Enumerations.StateEnum)">
+            <summary>
+            更新发布状态请求
+            </summary>
+            <param name="Ids">需要更新的ids</param>
+            <param name="State">发布状态</param>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.UpdatePublishStateViewModel.Ids">
+            <summary>需要更新的ids</summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.UpdatePublishStateViewModel.State">
+            <summary>发布状态</summary>
+        </member>
+        <member name="T:HaoKao.PaperService.Application.ViewModels.UpdatePaperStructViewModel">
+            <summary>
+            更新试卷结构
+            </summary>
+            <param name="Id"></param>
+            <param name="StructJson"></param>
+        </member>
+        <member name="M:HaoKao.PaperService.Application.ViewModels.UpdatePaperStructViewModel.#ctor(System.Guid,HaoKao.PaperService.Application.ViewModels.PaperStructViewModel)">
+            <summary>
+            更新试卷结构
+            </summary>
+            <param name="Id"></param>
+            <param name="StructJson"></param>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.UpdatePaperStructViewModel.Id">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.PaperService.Application.ViewModels.UpdatePaperStructViewModel.StructJson">
+            <summary></summary>
+        </member>
+    </members>
+</doc>

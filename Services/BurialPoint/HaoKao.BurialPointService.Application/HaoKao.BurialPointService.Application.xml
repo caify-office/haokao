@@ -1,0 +1,338 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.BurialPointService.Application</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.BurialPointService.Application.Services.Management.BrowseRecordService">
+            <summary>
+            浏览记录接口服务-管理端
+            </summary>
+            <summary>
+            数据埋点分析服务-管理端
+            </summary>
+        </member>
+        <member name="M:HaoKao.BurialPointService.Application.Services.Management.BrowseRecordService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.BurialPointService.Domain.Repositories.IBrowseRecordRepository)">
+            <summary>
+            浏览记录接口服务-管理端
+            </summary>
+            <summary>
+            数据埋点分析服务-管理端
+            </summary>
+        </member>
+        <member name="M:HaoKao.BurialPointService.Application.Services.Management.BrowseRecordService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.BurialPointService.Application.Services.Management.BrowseRecordService.Get(HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.BrowseRecordQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.BurialPointService.Application.Services.Management.BrowseRecordService.Create(HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.CreateBrowseRecordViewModel)">
+            <summary>
+            创建浏览记录
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.BurialPointService.Application.Services.Management.BurialPointService">
+            <summary>
+            数据埋点分析服务-管理端
+            </summary>
+        </member>
+        <member name="M:HaoKao.BurialPointService.Application.Services.Management.BurialPointService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.BurialPointService.Domain.Repositories.IBurialPointRepository)">
+            <summary>
+            数据埋点分析服务-管理端
+            </summary>
+        </member>
+        <member name="M:HaoKao.BurialPointService.Application.Services.Management.BurialPointService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.BurialPointService.Application.Services.Management.BurialPointService.Get(HaoKao.BurialPointService.Application.ViewModels.BurialPoint.BurialPointQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.BurialPointService.Application.Services.Management.IBrowseRecordService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.BurialPointService.Application.Services.Management.IBrowseRecordService.Get(HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.BrowseRecordQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.BurialPointService.Application.Services.Management.IBrowseRecordService.Create(HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.CreateBrowseRecordViewModel)">
+            <summary>
+            创建浏览记录
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.BurialPointService.Application.Services.Management.IBurialPointService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.BurialPointService.Application.Services.Management.IBurialPointService.Get(HaoKao.BurialPointService.Application.ViewModels.BurialPoint.BurialPointQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="T:HaoKao.BurialPointService.Application.Services.Web.BrowseRecordWebService">
+            <summary>
+            数据埋点服务-Web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.BurialPointService.Application.Services.Web.BrowseRecordWebService.#ctor(HaoKao.BurialPointService.Application.Services.Management.IBrowseRecordService)">
+            <summary>
+            数据埋点服务-Web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.BurialPointService.Application.Services.Web.BrowseRecordWebService.Create(HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.CreateBrowseRecordViewModel)">
+            <summary>
+            创建浏览记录
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.BurialPointService.Application.Services.Web.IBrowseRecordWebService.Create(HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.CreateBrowseRecordViewModel)">
+            <summary>
+            创建浏览记录
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.BurialPointService.Application.Services.WeChat.BrowseRecordWeChatService">
+            <summary>
+            数据埋点服务-微信端
+            </summary>
+        </member>
+        <member name="M:HaoKao.BurialPointService.Application.Services.WeChat.BrowseRecordWeChatService.#ctor(HaoKao.BurialPointService.Application.Services.Management.IBrowseRecordService)">
+            <summary>
+            数据埋点服务-微信端
+            </summary>
+        </member>
+        <member name="M:HaoKao.BurialPointService.Application.Services.WeChat.BrowseRecordWeChatService.Create(HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.CreateBrowseRecordViewModel)">
+            <summary>
+            创建浏览记录
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.BurialPointService.Application.Services.WeChat.IBrowseRecordWeChatService.Create(HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.CreateBrowseRecordViewModel)">
+            <summary>
+            创建浏览记录
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.BrowseBrowseRecordViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.BrowseBrowseRecordViewModel.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.BrowseBrowseRecordViewModel.BurialPointId">
+            <summary>
+            埋点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.BrowseBrowseRecordViewModel.UserName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.BrowseBrowseRecordViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.BrowseBrowseRecordViewModel.BrowseData">
+            <summary>
+            浏览信息
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.BrowseBrowseRecordViewModel.IsPaidUser">
+            <summary>
+            是否付费用户
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.BrowseRecordQueryViewModel.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.BrowseRecordQueryViewModel.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.BrowseRecordQueryViewModel.BurialPointId">
+            <summary>
+            埋点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.BrowseRecordQueryViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.BrowseRecordQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.BrowseRecordQueryListViewModel.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.BrowseRecordQueryListViewModel.BurialPointId">
+            <summary>
+            埋点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.BrowseRecordQueryListViewModel.UserName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.BrowseRecordQueryListViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.BrowseRecordQueryListViewModel.BrowseData">
+            <summary>
+            浏览信息
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.BrowseRecordQueryListViewModel.IsPaidUser">
+            <summary>
+            是否付费用户
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.CreateBrowseRecordViewModel.BurialPointName">
+            <summary>
+            埋点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.CreateBrowseRecordViewModel.BelongingPortType">
+            <summary>
+            所属端
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.CreateBrowseRecordViewModel.BrowseData">
+            <summary>
+            浏览信息
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BrowseRecord.CreateBrowseRecordViewModel.IsPaidUser">
+            <summary>
+            是否付费用户
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BurialPoint.BrowseBurialPointViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BurialPoint.BrowseBurialPointViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BurialPoint.BrowseBurialPointViewModel.BelongingPortType">
+            <summary>
+            所属端
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BurialPoint.BrowseBurialPointViewModel.BrowseRecords">
+            <summary>
+            浏览记录
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BurialPoint.BrowseBurialPointViewModel.TotalViews">
+            <summary>
+            总浏览量
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BurialPoint.BrowseBurialPointViewModel.TotalPeoples">
+            <summary>
+            总浏览人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BurialPoint.BrowseBurialPointViewModel.TodayTotalViews">
+            <summary>
+            今日浏览量
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BurialPoint.BrowseBurialPointViewModel.TodayTotalPeoples">
+            <summary>
+            今日浏览人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BurialPoint.BurialPointQueryViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BurialPoint.BurialPointQueryViewModel.BelongingPortType">
+            <summary>
+            所属端
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BurialPoint.BurialPointQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BurialPoint.BurialPointQueryListViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BurialPoint.BurialPointQueryListViewModel.BelongingPortType">
+            <summary>
+            所属端
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BurialPoint.BurialPointQueryListViewModel.BrowseRecords">
+            <summary>
+            浏览记录
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BurialPoint.BurialPointQueryListViewModel.TotalViews">
+            <summary>
+            总浏览量
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BurialPoint.BurialPointQueryListViewModel.TotalPeoples">
+            <summary>
+            总浏览人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BurialPoint.BurialPointQueryListViewModel.TodayTotalViews">
+            <summary>
+            今日浏览量
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Application.ViewModels.BurialPoint.BurialPointQueryListViewModel.TodayTotalPeoples">
+            <summary>
+            今日浏览人数
+            </summary>
+        </member>
+    </members>
+</doc>

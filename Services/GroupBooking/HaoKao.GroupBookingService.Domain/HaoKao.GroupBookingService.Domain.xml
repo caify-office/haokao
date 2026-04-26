@@ -1,0 +1,429 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.GroupBookingService.Domain</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.GroupBookingService.Domain.CommandHandlers.GroupSituationCommandHandler.Handle(HaoKao.GroupBookingService.Domain.Commands.GroupSituation.CreateGroupSituationCommand,System.Threading.CancellationToken)">
+            <summary>
+            发起拼团
+            </summary>
+            <param name="request"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Domain.CommandHandlers.GroupSituationCommandHandler.Handle(HaoKao.GroupBookingService.Domain.Commands.GroupSituation.JoinGroupSituationCommand,System.Threading.CancellationToken)">
+            <summary>
+            加入拼团
+            </summary>
+            <param name="request"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.GroupBookingService.Domain.Commands.GroupData.CreateGroupDataCommand">
+            <summary>
+            创建命令
+            </summary>
+            <param name="DataName"></param>
+            <param name="SuitableSubjects"></param>
+            <param name="PeopleNumber"></param>
+            <param name="BasePeopleNumber"></param>
+            <param name="LimitTime"></param>
+            <param name="Document"></param>
+            <param name="State"></param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Domain.Commands.GroupData.CreateGroupDataCommand.#ctor(System.String,System.Collections.Generic.List{System.Guid},System.Int32,System.Int32,System.Int32,System.String,System.Boolean)">
+            <summary>
+            创建命令
+            </summary>
+            <param name="DataName"></param>
+            <param name="SuitableSubjects"></param>
+            <param name="PeopleNumber"></param>
+            <param name="BasePeopleNumber"></param>
+            <param name="LimitTime"></param>
+            <param name="Document"></param>
+            <param name="State"></param>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupData.CreateGroupDataCommand.DataName">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupData.CreateGroupDataCommand.SuitableSubjects">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupData.CreateGroupDataCommand.PeopleNumber">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupData.CreateGroupDataCommand.BasePeopleNumber">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupData.CreateGroupDataCommand.LimitTime">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupData.CreateGroupDataCommand.Document">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupData.CreateGroupDataCommand.State">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.GroupBookingService.Domain.Commands.GroupData.DeleteGroupDataCommand">
+            <summary>
+            删除命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Domain.Commands.GroupData.DeleteGroupDataCommand.#ctor(System.Guid)">
+            <summary>
+            删除命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupData.DeleteGroupDataCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.GroupBookingService.Domain.Commands.GroupData.UpdateGroupDataCommand">
+            <summary>
+            更新命令
+            </summary>
+            <param name="Id"></param>
+            <param name="DataName"></param>
+            <param name="SuitableSubjects"></param>
+            <param name="PeopleNumber"></param>
+            <param name="BasePeopleNumber"></param>
+            <param name="LimitTime"></param>
+            <param name="Document"></param>
+            <param name="State"></param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Domain.Commands.GroupData.UpdateGroupDataCommand.#ctor(System.Guid,System.String,System.Collections.Generic.List{System.Guid},System.Int32,System.Int32,System.Int32,System.String,System.Boolean)">
+            <summary>
+            更新命令
+            </summary>
+            <param name="Id"></param>
+            <param name="DataName"></param>
+            <param name="SuitableSubjects"></param>
+            <param name="PeopleNumber"></param>
+            <param name="BasePeopleNumber"></param>
+            <param name="LimitTime"></param>
+            <param name="Document"></param>
+            <param name="State"></param>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupData.UpdateGroupDataCommand.Id">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupData.UpdateGroupDataCommand.DataName">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupData.UpdateGroupDataCommand.SuitableSubjects">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupData.UpdateGroupDataCommand.PeopleNumber">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupData.UpdateGroupDataCommand.BasePeopleNumber">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupData.UpdateGroupDataCommand.LimitTime">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupData.UpdateGroupDataCommand.Document">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupData.UpdateGroupDataCommand.State">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.GroupBookingService.Domain.Commands.GroupSituation.CreateGroupSituationCommand">
+            <summary>
+            发起拼团命令
+            </summary>
+            <param name="GroupDataId"></param>
+            <param name="DataName"></param>
+            <param name="SuitableSubjects"></param>
+            <param name="PeopleNumber"></param>
+            <param name="LimitTime"></param>
+            <param name="Document"></param>
+            <param name="Name"></param>
+            <param name="ImageUrl"></param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Domain.Commands.GroupSituation.CreateGroupSituationCommand.#ctor(System.Guid,System.String,System.Collections.Generic.List{System.Guid},System.Int32,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            发起拼团命令
+            </summary>
+            <param name="GroupDataId"></param>
+            <param name="DataName"></param>
+            <param name="SuitableSubjects"></param>
+            <param name="PeopleNumber"></param>
+            <param name="LimitTime"></param>
+            <param name="Document"></param>
+            <param name="Name"></param>
+            <param name="ImageUrl"></param>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupSituation.CreateGroupSituationCommand.GroupDataId">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupSituation.CreateGroupSituationCommand.DataName">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupSituation.CreateGroupSituationCommand.SuitableSubjects">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupSituation.CreateGroupSituationCommand.PeopleNumber">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupSituation.CreateGroupSituationCommand.LimitTime">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupSituation.CreateGroupSituationCommand.Document">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupSituation.CreateGroupSituationCommand.Name">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupSituation.CreateGroupSituationCommand.ImageUrl">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.GroupBookingService.Domain.Commands.GroupSituation.JoinGroupSituationCommand">
+            <summary>
+            参与拼团命令
+            </summary>
+            <param name="GroupDataId"></param>
+            <param name="GroupSituationId"></param>
+            <param name="Name"></param>
+            <param name="ImageUrl"></param>
+        </member>
+        <member name="M:HaoKao.GroupBookingService.Domain.Commands.GroupSituation.JoinGroupSituationCommand.#ctor(System.Guid,System.Guid,System.String,System.String)">
+            <summary>
+            参与拼团命令
+            </summary>
+            <param name="GroupDataId"></param>
+            <param name="GroupSituationId"></param>
+            <param name="Name"></param>
+            <param name="ImageUrl"></param>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupSituation.JoinGroupSituationCommand.GroupDataId">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupSituation.JoinGroupSituationCommand.GroupSituationId">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupSituation.JoinGroupSituationCommand.Name">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Commands.GroupSituation.JoinGroupSituationCommand.ImageUrl">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.GroupBookingService.Domain.Entities.GroupData">
+            <summary>
+            拼团资料
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupData.DataName">
+            <summary>
+            资料名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupData.SuitableSubjects">
+            <summary>
+            适用科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupData.PeopleNumber">
+            <summary>
+            成团人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupData.BasePeopleNumber">
+            <summary>
+            基础拼团成功人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupData.LimitTime">
+            <summary>
+            限制时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupData.Document">
+            <summary>
+            拼团资料
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupData.State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupData.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupData.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupData.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.GroupBookingService.Domain.Entities.GroupMember">
+            <summary>
+            组团成员
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupMember.GroupSituationId">
+            <summary>
+            拼团情况Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupMember.GroupDataId">
+            <summary>
+            拼团资料Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupMember.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupMember.Name">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupMember.ImageUrl">
+            <summary>
+            用户头像Url
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupMember.IsLeader">
+            <summary>
+            是否团长
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupMember.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupMember.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupMember.GroupSituation">
+            <summary>
+            拼团情况
+            </summary>
+        </member>
+        <member name="F:HaoKao.GroupBookingService.Domain.Entities.GroupMember.SuccessTime">
+            <summary>
+            成功时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupMember.ExpirationTime">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="T:HaoKao.GroupBookingService.Domain.Entities.GroupSituation">
+            <summary>
+            拼团情况
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupSituation.GroupDataId">
+            <summary>
+            拼团资料Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupSituation.DataName">
+            <summary>
+            组团资料名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupSituation.SuitableSubjects">
+            <summary>
+            适用科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupSituation.PeopleNumber">
+            <summary>
+            成团人数
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupSituation.LimitTime">
+            <summary>
+            限制时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupSituation.Document">
+            <summary>
+            拼团资料
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupSituation.GroupMembers">
+            <summary>
+            组团成员
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupSituation.SuccessTime">
+            <summary>
+            拼团成功时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupSituation.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupSituation.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Entities.GroupSituation.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.GroupBookingService.Domain.Enumerations.GroupSituationStatus">
+            <summary>
+            拼团状态
+            </summary>
+        </member>
+        <member name="F:HaoKao.GroupBookingService.Domain.Enumerations.GroupSituationStatus.UnKnow">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:HaoKao.GroupBookingService.Domain.Enumerations.GroupSituationStatus.Success">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="F:HaoKao.GroupBookingService.Domain.Enumerations.GroupSituationStatus.Faild">
+            <summary>
+            失败
+            </summary>
+        </member>
+        <member name="F:HaoKao.GroupBookingService.Domain.Enumerations.GroupSituationStatus.InGroup">
+            <summary>
+            拼团中
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Extensions.GroupDataCacheManager.EntityTypeName">
+            <summary>
+            获取缓存键中使用的实体类型名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Extensions.GroupSituationCacheManager.EntityTypeName">
+            <summary>
+            获取缓存键中使用的实体类型名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.GroupBookingService.Domain.Queries.EntityQuery.GroupSituationQuery.GroupDataId">
+            <summary>
+            拼团资料Id
+            </summary>
+        </member>
+    </members>
+</doc>

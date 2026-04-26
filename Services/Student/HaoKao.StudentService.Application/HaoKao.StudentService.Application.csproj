@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DocumentationFile>HaoKao.StudentService.Application.xml</DocumentationFile>
+        <WarningLevel>4</WarningLevel>
+        <NoWarn>1701;1702;1591</NoWarn>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <DocumentationFile>HaoKao.StudentService.Application.xml</DocumentationFile>
+        <WarningLevel>4</WarningLevel>
+        <NoWarn>1701;1702;1591</NoWarn>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\HaoKao.StudentService.Domian\HaoKao.StudentService.Domain.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Girvs.Quartz" Version="9.0.5.3"/>
+    </ItemGroup>
+
+</Project>

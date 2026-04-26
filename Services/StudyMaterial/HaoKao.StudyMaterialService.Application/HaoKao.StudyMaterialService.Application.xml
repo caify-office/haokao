@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.StudyMaterialService.Application</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.StudyMaterialService.Application.Interfaces.IStudyMaterialService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.StudyMaterialService.Application.Interfaces.IStudyMaterialService.Get(HaoKao.StudyMaterialService.Application.ViewModels.QueryStudyMaterialViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.StudyMaterialService.Application.Interfaces.IStudyMaterialService.Create(HaoKao.StudyMaterialService.Application.ViewModels.CreateStudyMaterialViewModel)">
+            <summary>
+            创建学习资料
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.StudyMaterialService.Application.Interfaces.IStudyMaterialService.Delete(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            批量删除指定学习资料
+            </summary>
+            <param name="ids">ids</param>
+        </member>
+        <member name="M:HaoKao.StudyMaterialService.Application.Interfaces.IStudyMaterialService.Update(HaoKao.StudyMaterialService.Application.ViewModels.UpdateStudyMaterialViewModel)">
+            <summary>
+            根据主键更新指定学习资料
+            </summary>
+            <param name="model">更新模型</param>
+        </member>
+        <member name="M:HaoKao.StudyMaterialService.Application.Interfaces.IStudyMaterialService.Enable(HaoKao.StudyMaterialService.Application.ViewModels.EnableStudyMaterialViewModel)">
+            <summary>
+            批量启用/禁用学习资料
+            </summary>
+            <param name="model">启用/禁用模型</param>
+        </member>
+        <member name="M:HaoKao.StudyMaterialService.Application.Interfaces.IStudyMaterialWebService.Get(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            根据ids获取资料列表
+            </summary>
+            <param name="ids">ids</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.StudyMaterialService.Application.Interfaces.IStudyMaterialWeChatService.Get(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            根据ids获取资料列表
+            </summary>
+            <param name="ids">ids</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.StudyMaterialService.Application.Services.StudyMaterialService">
+            <summary>
+            学习资料接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.StudyMaterialService.Application.Services.StudyMaterialService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.StudyMaterialService.Domain.Repositories.IStudyMaterialRepository,AutoMapper.IMapper)">
+            <summary>
+            学习资料接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.StudyMaterialService.Application.Services.StudyMaterialService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.StudyMaterialService.Application.Services.StudyMaterialService.Get(HaoKao.StudyMaterialService.Application.ViewModels.QueryStudyMaterialViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.StudyMaterialService.Application.Services.StudyMaterialService.Create(HaoKao.StudyMaterialService.Application.ViewModels.CreateStudyMaterialViewModel)">
+            <summary>
+            创建学习资料
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.StudyMaterialService.Application.Services.StudyMaterialService.Delete(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            批量删除指定学习资料
+            </summary>
+            <param name="ids">ids</param>
+        </member>
+        <member name="M:HaoKao.StudyMaterialService.Application.Services.StudyMaterialService.Update(HaoKao.StudyMaterialService.Application.ViewModels.UpdateStudyMaterialViewModel)">
+            <summary>
+            根据主键更新指定学习资料
+            </summary>
+            <param name="model">更新模型</param>
+        </member>
+        <member name="M:HaoKao.StudyMaterialService.Application.Services.StudyMaterialService.Enable(HaoKao.StudyMaterialService.Application.ViewModels.EnableStudyMaterialViewModel)">
+            <summary>
+            批量启用/禁用学习资料
+            </summary>
+            <param name="model">启用/禁用模型</param>
+        </member>
+        <member name="T:HaoKao.StudyMaterialService.Application.Services.StudyMaterialWebService">
+            <summary>
+            学习资料接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.StudyMaterialService.Application.Services.StudyMaterialWebService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,HaoKao.StudyMaterialService.Domain.Repositories.IStudyMaterialRepository)">
+            <summary>
+            学习资料接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.StudyMaterialService.Application.Services.StudyMaterialWebService.Get(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            根据ids获取资料列表
+            </summary>
+            <param name="ids">ids</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.StudyMaterialService.Application.Services.StudyMaterialWeChatService">
+            <summary>
+            学习资料接口服务-小程序端
+            </summary>
+        </member>
+        <member name="M:HaoKao.StudyMaterialService.Application.Services.StudyMaterialWeChatService.#ctor(HaoKao.StudyMaterialService.Application.Interfaces.IStudyMaterialWebService)">
+            <summary>
+            学习资料接口服务-小程序端
+            </summary>
+        </member>
+        <member name="M:HaoKao.StudyMaterialService.Application.Services.StudyMaterialWeChatService.Get(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            根据ids获取资料列表
+            </summary>
+            <param name="ids">ids</param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Application.ViewModels.QueryStudyMaterialViewModel.Name">
+            <summary>
+            资料名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Application.ViewModels.QueryStudyMaterialViewModel.SubjectId">
+            <summary>
+            所属科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Application.ViewModels.QueryStudyMaterialViewModel.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Application.ViewModels.BrowseStudyMaterialViewModel.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Application.ViewModels.BrowseStudyMaterialViewModel.Name">
+            <summary>
+            资料名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Application.ViewModels.BrowseStudyMaterialViewModel.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Application.ViewModels.BrowseStudyMaterialViewModel.Enable">
+            <summary>
+            启用/禁用
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Application.ViewModels.BrowseStudyMaterialViewModel.Materials">
+            <summary>
+            资料内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Application.ViewModels.BrowseStudyMaterialViewModel.Subjects">
+            <summary>
+            科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Application.ViewModels.BrowseStudyMaterialViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Application.ViewModels.CreateStudyMaterialViewModel.Name">
+            <summary>
+            资料名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Application.ViewModels.CreateStudyMaterialViewModel.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Application.ViewModels.CreateStudyMaterialViewModel.Enable">
+            <summary>
+            启用/禁用
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Application.ViewModels.CreateStudyMaterialViewModel.Materials">
+            <summary>
+            资料内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Application.ViewModels.CreateStudyMaterialViewModel.Subjects">
+            <summary>
+            科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Application.ViewModels.UpdateStudyMaterialViewModel.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Application.ViewModels.EnableStudyMaterialViewModel.Ids">
+            <summary>
+            Ids
+            </summary>
+        </member>
+        <member name="P:HaoKao.StudyMaterialService.Application.ViewModels.EnableStudyMaterialViewModel.Enable">
+            <summary>
+            启用/禁用
+            </summary>
+        </member>
+    </members>
+</doc>

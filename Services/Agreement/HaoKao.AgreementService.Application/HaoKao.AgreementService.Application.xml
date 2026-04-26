@@ -1,0 +1,695 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.AgreementService.Application</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.AgreementService.Application.Services.Management.CourseAgreementService">
+            <summary>
+            课程协议接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Management.CourseAgreementService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.AgreementService.Domain.Repositories.ICourseAgreementRepository,AutoMapper.IMapper)">
+            <summary>
+            课程协议接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Management.CourseAgreementService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Management.CourseAgreementService.Get(HaoKao.AgreementService.Application.ViewModels.CourseAgreement.QueryCourseAgreementViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="viewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Management.CourseAgreementService.GetByIds(System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            根据ids获取列表
+            </summary>
+            <param name="ids">查询对象</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Management.CourseAgreementService.Create(HaoKao.AgreementService.Application.ViewModels.CourseAgreement.CreateCourseAgreementViewModel)">
+            <summary>
+            创建课程协议
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Management.CourseAgreementService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定课程协议
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Management.CourseAgreementService.Update(System.Guid,HaoKao.AgreementService.Application.ViewModels.CourseAgreement.UpdateCourseAgreementViewModel)">
+            <summary>
+            根据主键更新指定课程协议
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Management.ICourseAgreementService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Management.ICourseAgreementService.Get(HaoKao.AgreementService.Application.ViewModels.CourseAgreement.QueryCourseAgreementViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="viewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Management.ICourseAgreementService.GetByIds(System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            根据ids获取列表
+            </summary>
+            <param name="ids">查询对象</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Management.ICourseAgreementService.Create(HaoKao.AgreementService.Application.ViewModels.CourseAgreement.CreateCourseAgreementViewModel)">
+            <summary>
+            创建课程协议
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Management.ICourseAgreementService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定课程协议
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Management.ICourseAgreementService.Update(System.Guid,HaoKao.AgreementService.Application.ViewModels.CourseAgreement.UpdateCourseAgreementViewModel)">
+            <summary>
+            根据主键更新指定课程协议
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Management.IStudentAgreementService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定学员协议
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Management.IStudentAgreementService.GetEntity(System.Guid)">
+            <summary>
+            根据主键获取指定学员协议
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Management.IStudentAgreementService.Get(HaoKao.AgreementService.Application.ViewModels.StudentAgreement.QueryStudentAgreementViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Management.IStudentAgreementService.Create(HaoKao.AgreementService.Application.ViewModels.StudentAgreement.CreateStudentAgreementViewModel)">
+            <summary>
+            创建学员协议
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Management.IStudentAgreementService.Update(System.Guid,HaoKao.AgreementService.Application.ViewModels.StudentAgreement.UpdateStudentAgreementViewModel)">
+            <summary>
+            根据主键更新指定学员协议
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.AgreementService.Application.Services.Management.StudentAgreementService">
+            <summary>
+            学员协议接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Management.StudentAgreementService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.AgreementService.Domain.Repositories.IStudentAgreementRepository,AutoMapper.IMapper)">
+            <summary>
+            学员协议接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Management.StudentAgreementService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定学员协议
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Management.StudentAgreementService.GetEntity(System.Guid)">
+            <summary>
+            根据主键获取指定学员协议
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Management.StudentAgreementService.Get(HaoKao.AgreementService.Application.ViewModels.StudentAgreement.QueryStudentAgreementViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Management.StudentAgreementService.Create(HaoKao.AgreementService.Application.ViewModels.StudentAgreement.CreateStudentAgreementViewModel)">
+            <summary>
+            创建学员协议
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Management.StudentAgreementService.Update(System.Guid,HaoKao.AgreementService.Application.ViewModels.StudentAgreement.UpdateStudentAgreementViewModel)">
+            <summary>
+            根据主键更新指定学员协议
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.AgreementService.Application.Services.Web.CourseAgreementWebService">
+            <summary>
+            课程协议接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Web.CourseAgreementWebService.#ctor(HaoKao.AgreementService.Application.Services.Management.ICourseAgreementService,HaoKao.AgreementService.Domain.Repositories.ICourseAgreementRepository,Girvs.Cache.Caching.IStaticCacheManager,AutoMapper.IMapper)">
+            <summary>
+            课程协议接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Web.CourseAgreementWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Web.CourseAgreementWebService.Get(System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            根据ids获取列表
+            </summary>
+            <param name="ids">查询对象</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Web.CourseAgreementWebService.GetWithCommonAgreement(System.Nullable{System.Guid})">
+            <summary>
+            获取公共协议Id和名称
+            </summary>
+            <param name="id">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Web.ICourseAgreementWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Web.ICourseAgreementWebService.Get(System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            根据ids获取列表
+            </summary>
+            <param name="ids">查询对象</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Web.ICourseAgreementWebService.GetWithCommonAgreement(System.Nullable{System.Guid})">
+            <summary>
+            获取公共协议Id和名称
+            </summary>
+            <param name="id">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Web.IStudentAgreementWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Web.IStudentAgreementWebService.GetMyAgreement(System.Collections.Generic.List{HaoKao.AgreementService.Application.ViewModels.StudentAgreement.QueryMyAgreementViewModel})">
+            <summary>
+            获取用户已签署的记录
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Web.IStudentAgreementWebService.HasBeenSigned(System.Guid)">
+            <summary>
+            产品是否签署协议
+            </summary>
+            <param name="productId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Web.IStudentAgreementWebService.Create(HaoKao.AgreementService.Application.ViewModels.StudentAgreement.CreateStudentAgreementViewModel)">
+            <summary>
+            创建学员协议
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.AgreementService.Application.Services.Web.StudentAgreementWebService">
+            <summary>
+            学员协议接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Web.StudentAgreementWebService.#ctor(HaoKao.AgreementService.Application.Services.Management.IStudentAgreementService,HaoKao.AgreementService.Domain.Repositories.IStudentAgreementRepository,HaoKao.AgreementService.Application.Services.Management.ICourseAgreementService,HaoKao.AgreementService.Domain.Repositories.ICourseAgreementRepository,Girvs.Cache.Caching.IStaticCacheManager)">
+            <summary>
+            学员协议接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Web.StudentAgreementWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Web.StudentAgreementWebService.GetMyAgreement(System.Collections.Generic.List{HaoKao.AgreementService.Application.ViewModels.StudentAgreement.QueryMyAgreementViewModel})">
+            <summary>
+            获取用户已签署的记录(我的协议)
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Web.StudentAgreementWebService.HasBeenSigned(System.Guid)">
+            <summary>
+            产品是否签署协议
+            </summary>
+            <param name="productId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.Web.StudentAgreementWebService.Create(HaoKao.AgreementService.Application.ViewModels.StudentAgreement.CreateStudentAgreementViewModel)">
+            <summary>
+            创建学员协议
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.AgreementService.Application.Services.WeChat.CourseAgreementWeChatService">
+            <summary>
+            课程协议接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.WeChat.CourseAgreementWeChatService.#ctor(HaoKao.AgreementService.Application.Services.Web.ICourseAgreementWebService,HaoKao.AgreementService.Domain.Repositories.ICourseAgreementRepository,Girvs.Cache.Caching.IStaticCacheManager,AutoMapper.IMapper)">
+            <summary>
+            课程协议接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.WeChat.CourseAgreementWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.WeChat.CourseAgreementWeChatService.GetListWithCommonAgreement(System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            根据ids获取列表(包含公共协议)
+            </summary>
+            <param name="ids">查询对象</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.WeChat.CourseAgreementWeChatService.GetWithCommonAgreement(System.Nullable{System.Guid})">
+            <summary>
+            获取公共协议Id和名称
+            </summary>
+            <param name="id">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.WeChat.ICourseAgreementWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.WeChat.ICourseAgreementWeChatService.GetListWithCommonAgreement(System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            根据ids获取列表(包含公共协议)
+            </summary>
+            <param name="ids">查询对象</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.WeChat.ICourseAgreementWeChatService.GetWithCommonAgreement(System.Nullable{System.Guid})">
+            <summary>
+            获取公共协议Id和名称
+            </summary>
+            <param name="id">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.WeChat.IStudentAgreementWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.WeChat.IStudentAgreementWeChatService.GetMyAgreement(System.Collections.Generic.List{HaoKao.AgreementService.Application.ViewModels.StudentAgreement.QueryMyAgreementViewModel})">
+            <summary>
+            获取用户已签署的记录
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.WeChat.IStudentAgreementWeChatService.HasBeenSigned(System.Guid)">
+            <summary>
+            产品是否签署协议
+            </summary>
+            <param name="productId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.WeChat.IStudentAgreementWeChatService.Create(HaoKao.AgreementService.Application.ViewModels.StudentAgreement.CreateStudentAgreementViewModel)">
+            <summary>
+            创建学员协议
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.AgreementService.Application.Services.WeChat.StudentAgreementWeChatService">
+            <summary>
+            学员协议接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.WeChat.StudentAgreementWeChatService.#ctor(HaoKao.AgreementService.Application.Services.Web.IStudentAgreementWebService)">
+            <summary>
+            学员协议接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.WeChat.StudentAgreementWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.WeChat.StudentAgreementWeChatService.GetMyAgreement(System.Collections.Generic.List{HaoKao.AgreementService.Application.ViewModels.StudentAgreement.QueryMyAgreementViewModel})">
+            <summary>
+            获取用户已签署的记录(我的协议)
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.WeChat.StudentAgreementWeChatService.HasBeenSigned(System.Guid)">
+            <summary>
+            产品是否签署协议
+            </summary>
+            <param name="productId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.AgreementService.Application.Services.WeChat.StudentAgreementWeChatService.Create(HaoKao.AgreementService.Application.ViewModels.StudentAgreement.CreateStudentAgreementViewModel)">
+            <summary>
+            创建学员协议
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.CourseAgreement.BrowseCourseAgreementViewModel.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.CourseAgreement.BrowseCourseAgreementViewModel.Name">
+            <summary>
+            协议名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.CourseAgreement.BrowseCourseAgreementViewModel.Content">
+            <summary>
+            协议内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.CourseAgreement.BrowseCourseAgreementViewModel.Continuation">
+            <summary>
+            续读次数
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.CourseAgreement.BrowseCourseAgreementViewModel.AgreementType">
+            <summary>
+            协议类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.CourseAgreement.BrowseCourseAgreementViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.CourseAgreement.CreateCourseAgreementViewModel.Name">
+            <summary>
+            协议名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.CourseAgreement.CreateCourseAgreementViewModel.Content">
+            <summary>
+            协议内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.CourseAgreement.CreateCourseAgreementViewModel.Continuation">
+            <summary>
+            续读次数
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.CourseAgreement.CreateCourseAgreementViewModel.AgreementType">
+            <summary>
+            协议类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.CourseAgreement.QueryCourseAgreementViewModel.Name">
+            <summary>
+            协议名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.CourseAgreement.QueryCourseAgreementViewModel.AgreementType">
+            <summary>
+            协议类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.CourseAgreement.UpdateCourseAgreementViewModel.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.BrowseStudentAgreementViewModel.AgreementId">
+            <summary>
+            协议Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.BrowseStudentAgreementViewModel.AgreementName">
+            <summary>
+            协议名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.BrowseStudentAgreementViewModel.StudentName">
+            <summary>
+            学员名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.BrowseStudentAgreementViewModel.IdCard">
+            <summary>
+            身份证号
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.BrowseStudentAgreementViewModel.Contact">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.BrowseStudentAgreementViewModel.Address">
+            <summary>
+            联系地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.BrowseStudentAgreementViewModel.Email">
+            <summary>
+            电子邮箱
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.BrowseStudentAgreementViewModel.CreatorId">
+            <summary>
+            签署人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.CreateStudentAgreementViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.CreateStudentAgreementViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.CreateStudentAgreementViewModel.AgreementId">
+            <summary>
+            协议Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.CreateStudentAgreementViewModel.AgreementName">
+            <summary>
+            协议名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.CreateStudentAgreementViewModel.StudentName">
+            <summary>
+            学员名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.CreateStudentAgreementViewModel.IdCard">
+            <summary>
+            身份证号
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.CreateStudentAgreementViewModel.Contact">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.CreateStudentAgreementViewModel.Address">
+            <summary>
+            联系地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.CreateStudentAgreementViewModel.Email">
+            <summary>
+            电子邮箱
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.QueryStudentAgreementViewModel.AgreementName">
+            <summary>
+            协议名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.QueryStudentAgreementViewModel.StudentName">
+            <summary>
+            学员名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.QueryStudentAgreementListViewModel.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.QueryStudentAgreementListViewModel.AgreementName">
+            <summary>
+            协议名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.QueryStudentAgreementListViewModel.StudentName">
+            <summary>
+            学员名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.QueryStudentAgreementListViewModel.IdCard">
+            <summary>
+            身份证号
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.QueryStudentAgreementListViewModel.Contact">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.QueryStudentAgreementListViewModel.Address">
+            <summary>
+            联系地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.QueryStudentAgreementListViewModel.Email">
+            <summary>
+            电子邮箱
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.QueryStudentAgreementListViewModel.CreateTime">
+            <summary>
+            签署时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.QueryStudentAgreementListViewModel.CreatorId">
+            <summary>
+            签署人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.SignedStudentAgreementViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.SignedStudentAgreementViewModel.AgreementName">
+            <summary>
+            协议名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.SignedStudentAgreementViewModel.AgreementContent">
+            <summary>
+            协议内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.SignedStudentAgreementViewModel.StudentName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.SignedStudentAgreementViewModel.IdCard">
+            <summary>
+            身份证号
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.SignedStudentAgreementViewModel.Contact">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.SignedStudentAgreementViewModel.Address">
+            <summary>
+            联系地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.SignedStudentAgreementViewModel.Email">
+            <summary>
+            电子邮箱
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.QueryMyAgreementViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.QueryMyAgreementViewModel.AgreementId">
+            <summary>
+            协议Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.MyAgreementListViewModel.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.MyAgreementListViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.MyAgreementListViewModel.AgreementId">
+            <summary>
+            协议Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.MyAgreementListViewModel.AgreementName">
+            <summary>
+            协议名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.MyAgreementListViewModel.CreateTime">
+            <summary>
+            签署日期
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.UpdateStudentAgreementViewModel.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.UpdateStudentAgreementViewModel.StudentName">
+            <summary>
+            学员名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.UpdateStudentAgreementViewModel.IdCard">
+            <summary>
+            身份证号
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.UpdateStudentAgreementViewModel.Contact">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.UpdateStudentAgreementViewModel.Address">
+            <summary>
+            联系地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Application.ViewModels.StudentAgreement.UpdateStudentAgreementViewModel.Email">
+            <summary>
+            电子邮箱
+            </summary>
+        </member>
+    </members>
+</doc>

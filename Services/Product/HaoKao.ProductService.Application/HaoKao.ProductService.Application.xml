@@ -1,0 +1,3913 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.ProductService.Application</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.ProductService.Application.Profiles.ProductProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Profiles.ProductProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.Profiles.ProductProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.ProductService.Application.Profiles.RelatedProductProfile">
+            <summary>
+            文书模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Profiles.RelatedProductProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.Profiles.RelatedProductProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.ProductService.Application.Profiles.SupervisorClassProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Profiles.SupervisorClassProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.Profiles.SupervisorClassProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.ProductService.Application.Profiles.SupervisorStudentProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Profiles.SupervisorStudentProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.Profiles.SupervisorStudentProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.App.IProductAppService.Get(System.Guid)">
+            <summary>
+            根据Id 获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.App.IProductAppService.GetMyProduct(System.Nullable{HaoKao.ProductService.Domain.Enums.ProductType})">
+            <summary>
+             获取我的产品
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.App.IProductAppService.GetByIds(System.Guid[])">
+            <summary>
+            通过产品id数组获取产品列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.App.IProductAppService.GetFreeProductsByIds(System.Guid[])">
+            <summary>
+            通过产品id数组获取其中免费产品列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.App.IProductAppService.GetPriceByIds(System.Guid,System.Guid[])">
+            <summary>
+            通过产品包id和产品id数组获取产品价格列表
+            </summary>
+            <param name="productPackageId"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.App.IProductPackageAppService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.App.IProductPackageAppService.Get(HaoKao.ProductService.Application.ViewModels.ProductPackage.QueryProductPackageViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.App.IProductPackageAppService.GetByIds(System.Guid[])">
+            <summary>
+            通过产品id数组获取产品列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.App.IProductPackageAppService.GetProductPackageByIds(System.Guid[])">
+            <summary>
+            通过产品包id数组获取产品包列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.App.IProductPackageAppService.GetProductPermissionId(System.Guid[])">
+            <summary>
+            通过产品包id拿这些产品包下面所有产品的权限id
+            </summary>
+            <param name="ids">产品包ids</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.App.IProductPackageAppService.HasAuthority(System.Guid,System.Guid)">
+            <summary>
+            验证当前用户在当前科目下是否具有有产品的权限
+            </summary>
+            <param name="Subjectid"></param>
+            <param name="Categoryid"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.ProductService.Application.Services.App.ProductAppService">
+            <summary>
+            产品App端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.App.ProductAppService.#ctor(HaoKao.ProductService.Application.Services.Management.IProductService,HaoKao.ProductService.Application.Services.Web.IProductWebService)">
+            <summary>
+            产品App端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.App.ProductAppService.Get(System.Guid)">
+            <summary>
+            根据Id获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.App.ProductAppService.GetByIds(System.Guid[])">
+            <summary>
+            通过产品id数组获取产品列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.App.ProductAppService.GetFreeProductsByIds(System.Guid[])">
+            <summary>
+            通过产品id数组获取其中免费产品列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.App.ProductAppService.GetPriceByIds(System.Guid,System.Guid[])">
+            <summary>
+            通过产品包id和产品id数组获取产品价格列表
+            </summary>
+            <param name="productPackageId"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.App.ProductAppService.GetMyProduct(System.Nullable{HaoKao.ProductService.Domain.Enums.ProductType})">
+            <summary>
+            获取我的产品
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.ProductService.Application.Services.App.ProductPackageAppService">
+            <summary>
+            产品包接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.App.ProductPackageAppService.#ctor(HaoKao.ProductService.Application.Services.Management.IProductService,HaoKao.ProductService.Domain.Repositories.IStudentPermissionRepository,HaoKao.ProductService.Application.Services.Web.IProductWebService,Girvs.Cache.Caching.IStaticCacheManager,HaoKao.ProductService.Application.Services.Web.IProductPackageWebService)">
+            <summary>
+            产品包接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.App.ProductPackageAppService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.App.ProductPackageAppService.Get(HaoKao.ProductService.Application.ViewModels.ProductPackage.QueryProductPackageViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.App.ProductPackageAppService.GetProductPackageByIds(System.Guid[])">
+            <summary>
+            通过产品包id数组获取产品包列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.App.ProductPackageAppService.GetProductPermissionId(System.Guid[])">
+            <summary>
+             通过产品包id拿这些产品包下面所有产品的权限id
+            </summary>
+            <param name="ids">产品包ids</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.App.ProductPackageAppService.GetByIds(System.Guid[])">
+            <summary>
+            通过产品id数组获取产品列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.App.ProductPackageAppService.HasAuthority(System.Guid,System.Guid)">
+            <summary>
+            验证当前用户在当前科目下是否具有有产品的权限
+            </summary>
+            <param name="Subjectid"></param>
+            <param name="Categoryid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IProductPackageService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IProductPackageService.GetProducts(System.Guid)">
+            <summary>
+            通过产品包id数组获取产品列表
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IProductPackageService.Get(HaoKao.ProductService.Application.ViewModels.ProductPackage.QueryProductPackageViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IProductPackageService.GetProductPackageByIds(System.Guid[])">
+            <summary>
+            通过产品包id数组获取产品包列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IProductPackageService.GetProductPermissionId(System.Guid[])">
+            <summary>
+            通过产品包id拿这些产品包下面所有产品的权限id
+            </summary>
+            <param name="ids">产品包ids</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IProductPackageService.Create(HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel)">
+            <summary>
+            创建产品包
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IProductPackageService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定产品包
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IProductPackageService.Update(System.Guid,HaoKao.ProductService.Application.ViewModels.ProductPackage.UpdateProductPackageViewModel)">
+            <summary>
+            根据主键更新指定产品包
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IProductPackageService.Enable(System.Guid)">
+            <summary>
+            启用
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IProductPackageService.DisEnable(System.Guid)">
+            <summary>
+            禁用
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IProductPackageService.ShelvesUp(System.Guid)">
+            <summary>
+            上架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IProductPackageService.ShelvesDown(System.Guid)">
+            <summary>
+            下架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IProductPackageService.ProductList(System.Guid,HaoKao.ProductService.Application.ViewModels.ProductPackage.SetProductPackageProductListViewModel)">
+            <summary>
+            设置产品
+            </summary>
+            <param name="id">主键</param>
+            <param name="model"></param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IProductService.GetByIds(System.Guid[])">
+            <summary>
+            通过产品id数组获取产品列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IProductService.GetFreeProductsByIds(System.Guid[])">
+            <summary>
+            通过产品id数组获取其中免费产品列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IProductService.GetByLiveIds(System.Collections.Generic.List{HaoKao.ProductService.Application.ViewModels.Product.QueryProductByLiveIdViewModel})">
+            <summary>
+            通过直播id数组获取产品列表
+            </summary>
+            <param name="models"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IProductService.GetMyProduct(System.Nullable{HaoKao.ProductService.Domain.Enums.ProductType},System.Nullable{System.Guid})">
+            <summary>
+            获取我的产品
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IProductService.GetMyAllProduct(System.Nullable{HaoKao.ProductService.Domain.Enums.ProductType},System.Nullable{System.Guid},HaoKao.ProductService.Domain.Enums.PermissionExpiryType)">
+            <summary>
+            获取我的过期产品，未过期产品，所有产品
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IProductService.OpenAnswering(System.Guid[])">
+            <summary>
+            批量开启答疑授权
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IProductService.CloseAnswering(System.Guid[])">
+            <summary>
+            批量关闭答疑授权
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IProductService.GetProductIds(System.Nullable{System.Guid},System.Nullable{System.Guid})">
+            <summary>
+            查询复合条件的产品id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IRelatedProductService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IRelatedProductService.Get(HaoKao.ProductService.Application.ViewModels.RelatedProduct.RelatedProductQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IRelatedProductService.Create(System.Collections.Generic.IList{HaoKao.ProductService.Application.ViewModels.RelatedProduct.CreateRelatedProductViewModel})">
+            <summary>
+            创建关联产品
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IRelatedProductService.Delete(System.Guid[])">
+            <summary>
+            根据主键删除指定关联产品
+            </summary>
+            <param name="ids">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IStudentPermissionService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IStudentPermissionService.Get(HaoKao.ProductService.Application.ViewModels.StudentPermission.StudentPermissionQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IStudentPermissionService.Create(HaoKao.ProductService.Application.ViewModels.StudentPermission.CreateStudentPermissionViewModel)">
+            <summary>
+            创建学员权限表
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IStudentPermissionService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定学员权限表
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.IStudentPermissionService.ChangeState(System.Guid,HaoKao.ProductService.Application.ViewModels.StudentPermission.UpdateStudentPermissionStateViewModel)">
+            <summary>
+            根据主键更新指定学员权限表
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ISupervisorClassService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ISupervisorClassService.Get(HaoKao.ProductService.Application.ViewModels.SupervisorClass.SupervisorClassQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ISupervisorClassService.Create(HaoKao.ProductService.Application.ViewModels.SupervisorClass.CreateSupervisorClassViewModel)">
+            <summary>
+            创建班级督学
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ISupervisorClassService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定班级督学
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ISupervisorClassService.Update(HaoKao.ProductService.Application.ViewModels.SupervisorClass.UpdateSupervisorClassViewModel)">
+            <summary>
+            根据主键更新指定班级督学
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ISupervisorStudentService.Get(HaoKao.ProductService.Application.ViewModels.SupervisorStudent.SupervisorStudentQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ISupervisorStudentService.Create(HaoKao.ProductService.Application.ViewModels.SupervisorStudent.CreateSupervisorStudentViewModel)">
+            <summary>
+            创建督学学员
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ISupervisorStudentService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定督学学员
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ISupervisorStudentService.Update(HaoKao.ProductService.Application.ViewModels.SupervisorStudent.UpdateSupervisorStudentViewModel)">
+            <summary>
+            根据主键更新指定督学学员
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ISupervisorStudentService.UpdateStatisticsData(System.Guid)">
+            <summary>
+            更新督学学员统计数据
+            </summary>
+        </member>
+        <member name="T:HaoKao.ProductService.Application.Services.Management.ProductPackageService">
+            <summary>
+            产品包接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductPackageService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.ProductService.Domain.Repositories.IProductPackageRepository,HaoKao.ProductService.Domain.Repositories.IProductRepository,HaoKao.ProductService.Application.Services.Management.IProductService)">
+            <summary>
+            产品包接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductPackageService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductPackageService.GetProducts(System.Guid)">
+            <summary>
+            通过产品包id数组获取产品列表
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductPackageService.Get(HaoKao.ProductService.Application.ViewModels.ProductPackage.QueryProductPackageViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductPackageService.GetProductPackageByIds(System.Guid[])">
+            <summary>
+            通过产品包id数组获取产品包列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductPackageService.GetProductPermissionId(System.Guid[])">
+            <summary>
+             通过产品包id拿这些产品包下面所有产品的权限id
+            </summary>
+            <param name="ids">产品包ids</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductPackageService.Create(HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel)">
+            <summary>
+            创建产品包
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductPackageService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定产品包
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductPackageService.Update(System.Guid,HaoKao.ProductService.Application.ViewModels.ProductPackage.UpdateProductPackageViewModel)">
+            <summary>
+            根据主键更新指定产品包
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductPackageService.Enable(System.Guid)">
+            <summary>
+            启用
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductPackageService.DisEnable(System.Guid)">
+            <summary>
+            禁用
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductPackageService.ShelvesUp(System.Guid)">
+            <summary>
+            上架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductPackageService.ShelvesDown(System.Guid)">
+            <summary>
+            下架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductPackageService.ProductList(System.Guid,HaoKao.ProductService.Application.ViewModels.ProductPackage.SetProductPackageProductListViewModel)">
+            <summary>
+            设置产品
+            </summary>
+            <param name="id">主键</param>
+            <param name="model"></param>
+        </member>
+        <member name="T:HaoKao.ProductService.Application.Services.Management.ProductService">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.ProductService.Domain.Repositories.IProductRepository,HaoKao.ProductService.Domain.Repositories.IProductPermissionRepository)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductService.Get(System.Guid)">
+            <summary>
+            根据Id 获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductService.Get(HaoKao.ProductService.Application.ViewModels.Product.QueryProductViewModel)">
+            <summary>
+            根据查询条件获取
+            </summary>
+            <param name="queryModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductService.GetByIds(System.Guid[])">
+            <summary>
+            通过产品id数组获取产品列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductService.GetFreeProductsByIds(System.Guid[])">
+            <summary>
+            通过产品id数组获取其中免费产品列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductService.GetByLiveIds(System.Collections.Generic.List{HaoKao.ProductService.Application.ViewModels.Product.QueryProductByLiveIdViewModel})">
+            <summary>
+            通过直播id数组获取产品列表
+            </summary>
+            <param name="models"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductService.GetMyProduct(System.Nullable{HaoKao.ProductService.Domain.Enums.ProductType},System.Nullable{System.Guid})">
+            <summary>
+            获取我的产品
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductService.GetMyAllProduct(System.Nullable{HaoKao.ProductService.Domain.Enums.ProductType},System.Nullable{System.Guid},HaoKao.ProductService.Domain.Enums.PermissionExpiryType)">
+            <summary>
+            获取我的过期产品，未过期产品，所有产品
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductService.Create(HaoKao.ProductService.Application.ViewModels.Product.CreateProductViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductService.Update(HaoKao.ProductService.Application.ViewModels.Product.UpdateProductViewModel)">
+            <summary>
+            更新
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductService.OpenAnswering(System.Guid[])">
+            <summary>
+            批量开启答疑授权
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductService.CloseAnswering(System.Guid[])">
+            <summary>
+            批量关闭答疑授权
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductService.Delete(HaoKao.ProductService.Application.ViewModels.Product.DeleteProductViewModel)">
+            <summary>
+            删除
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductService.Enable(HaoKao.ProductService.Application.ViewModels.Product.ChangeProductStateViewModel)">
+            <summary>
+            启用
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductService.Disable(HaoKao.ProductService.Application.ViewModels.Product.ChangeProductStateViewModel)">
+            <summary>
+            禁用
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductService.ShelvesUp(System.Guid[])">
+            <summary>
+            上架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductService.ShelvesDown(System.Guid[])">
+            <summary>
+            下架
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.ProductService.GetProductIds(System.Nullable{System.Guid},System.Nullable{System.Guid})">
+            <summary>
+            查询复合条件的产品id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.ProductService.Application.Services.Management.RelatedProductService">
+            <summary>
+            关联产品接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.RelatedProductService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.ProductService.Domain.Repositories.IRelatedProductRepository)">
+            <summary>
+            关联产品接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.RelatedProductService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.RelatedProductService.Get(HaoKao.ProductService.Application.ViewModels.RelatedProduct.RelatedProductQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.RelatedProductService.Create(System.Collections.Generic.IList{HaoKao.ProductService.Application.ViewModels.RelatedProduct.CreateRelatedProductViewModel})">
+            <summary>
+            批量创建关联产品
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.RelatedProductService.Delete(System.Guid[])">
+            <summary>
+            根据主键删除指定关联产品
+            </summary>
+            <param name="ids">主键</param>
+        </member>
+        <member name="T:HaoKao.ProductService.Application.Services.Management.StudentPermissionService">
+            <summary>
+            学员权限表接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.StudentPermissionService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.ProductService.Domain.Repositories.IStudentPermissionRepository,Girvs.EventBus.IEventBus)">
+            <summary>
+            学员权限表接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.StudentPermissionService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.StudentPermissionService.Get(HaoKao.ProductService.Application.ViewModels.StudentPermission.StudentPermissionQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.StudentPermissionService.Create(HaoKao.ProductService.Application.ViewModels.StudentPermission.CreateStudentPermissionViewModel)">
+            <summary>
+            创建学员权限表
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.StudentPermissionService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定学员权限表
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.StudentPermissionService.ChangeState(System.Guid,HaoKao.ProductService.Application.ViewModels.StudentPermission.UpdateStudentPermissionStateViewModel)">
+            <summary>
+            根据主键更新指定学员权限状态
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.StudentPermissionService.ChangeExpiryTime(System.Guid,HaoKao.ProductService.Application.ViewModels.StudentPermission.UpdateStudentPermissionExpiryTimeViewModel)">
+            <summary>
+            根据主键更新指定学员权限到期时间
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.StudentPermissionService.GetOperateLog(HaoKao.ProductService.Application.ViewModels.StudentPermission.QueryStudentPermissionOperateLogViewModel,HaoKao.ProductService.Domain.Repositories.IStudentPermissionOperateLogRepository)">
+            <summary>
+            获取学员权限操作日志
+            </summary>
+            <param name="model"></param>
+            <param name="operateLogRepository"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.StudentPermissionService.SynchronizeStudents">
+            <summary>
+            学员权限表向学员表同步数据(前端不需要调用)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.StudentPermissionService.SplitDataToShareTable">
+            <summary>
+            将学员权限表数据移入分表中(前端不需要调用)
+            执行当前接口前的准备工作：
+            第一步：StudentPermission实体实现ITenantShardingTable 接口
+            第二步:将所有迁移文件删除重新生成一个迁移文件
+            第三步:将新生成迁移文件名称复制到__EFMigrationsHistory表中
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.ProductService.Application.Services.Management.SupervisorClassService">
+            <summary>
+            班级督学接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.SupervisorClassService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.ProductService.Domain.Repositories.ISupervisorClassRepository)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.SupervisorClassService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.SupervisorClassService.Get(HaoKao.ProductService.Application.ViewModels.SupervisorClass.SupervisorClassQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.SupervisorClassService.Create(HaoKao.ProductService.Application.ViewModels.SupervisorClass.CreateSupervisorClassViewModel)">
+            <summary>
+            创建班级督学
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.SupervisorClassService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定班级督学
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.SupervisorClassService.Update(HaoKao.ProductService.Application.ViewModels.SupervisorClass.UpdateSupervisorClassViewModel)">
+            <summary>
+            根据主键更新指定班级督学
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.ProductService.Application.Services.Management.SupervisorStudentService">
+            <summary>
+            督学学员接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.SupervisorStudentService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.ProductService.Domain.Repositories.ISupervisorStudentRepository,HaoKao.ProductService.Application.Services.Management.ISupervisorClassService,HaoKao.ProductService.Application.Services.Management.IProductService)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.SupervisorStudentService.Get(HaoKao.ProductService.Application.ViewModels.SupervisorStudent.SupervisorStudentQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.SupervisorStudentService.Create(HaoKao.ProductService.Application.ViewModels.SupervisorStudent.CreateSupervisorStudentViewModel)">
+            <summary>
+            创建督学学员
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.SupervisorStudentService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定督学学员
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.SupervisorStudentService.Update(HaoKao.ProductService.Application.ViewModels.SupervisorStudent.UpdateSupervisorStudentViewModel)">
+            <summary>
+            根据主键更新指定督学学员
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Management.SupervisorStudentService.UpdateStatisticsData(System.Guid)">
+            <summary>
+            更新督学学员统计数据
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.IProductPackageWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.IProductPackageWebService.Get(HaoKao.ProductService.Application.ViewModels.ProductPackage.QueryProductPackageViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.IProductPackageWebService.GetProductPackageByIds(System.Guid[])">
+            <summary>
+            通过产品包id数组获取产品包列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.IProductPackageWebService.GetProductPermissionId(System.Guid[])">
+            <summary>
+            通过产品包id拿这些产品包下面所有产品的权限id
+            </summary>
+            <param name="ids">产品包ids</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.IProductPackageWebService.GetCompositeAttributeByIds(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            通过产品包id数组获取每个产品包的复合数据
+            </summary>
+            <param name="ids"></param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.IProductWebService.Get(System.Guid)">
+            <summary>
+            根据Id 获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.IProductWebService.GetMyProduct(System.Nullable{HaoKao.ProductService.Domain.Enums.ProductType})">
+            <summary>
+             获取我的产品
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.IProductWebService.GetMyAllProduct(System.Nullable{HaoKao.ProductService.Domain.Enums.ProductType},HaoKao.ProductService.Domain.Enums.PermissionExpiryType)">
+            <summary>
+            获取我的过期产品，未过期产品，所有产品
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.IProductWebService.GetMyProductPermisson(System.Nullable{HaoKao.ProductService.Domain.Enums.ProductType},System.Nullable{System.Guid})">
+            <summary>
+            获取我的产品权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.IProductWebService.GetMyProductSubject(System.Nullable{HaoKao.ProductService.Domain.Enums.ProductType})">
+            <summary>
+            获取我的产品所属科目
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.IProductWebService.GetByIds(System.Guid[])">
+            <summary>
+            通过产品id数组获取产品列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.IProductWebService.GetFreeProductsByIds(System.Guid[])">
+            <summary>
+            通过产品id数组获取其中免费产品列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.IProductWebService.GetPriceByIds(System.Guid,System.Guid[])">
+            <summary>
+            通过产品包id和产品id数组获取产品价格列表
+            </summary>
+            <param name="productPackageId"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.IProductWebService.GetByLiveIds(System.Collections.Generic.List{HaoKao.ProductService.Application.ViewModels.Product.QueryProductByLiveIdViewModel})">
+            <summary>
+            通过直播id数组获取产品列表
+            </summary>
+            <param name="models"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.IRelatedProductWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.IRelatedProductWebService.Get(HaoKao.ProductService.Application.ViewModels.RelatedProduct.RelatedProductQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.IRelatedProductWebService.GetRelatedProductByIds(System.Guid[])">
+            <summary>
+            通过产品id数组获取关联了这些产品的产品信息
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.IStudentPermissionWebService.GetAllAgreement">
+            <summary>
+             获取当前用户买过的产品id,名称和对应的协议id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.IStudentPermissionWebService.GetByProductId(System.Guid)">
+            <summary>
+            根据产品Id获取用户权限
+            </summary>
+            <param name="productId">产品Id</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.IStudentPermissionWebService.HasAuthority(HaoKao.ProductService.Domain.Enums.ProductType,System.Nullable{System.Guid},System.Nullable{System.Guid})">
+            <summary>
+            验证当前用户在当前科目下是否具有有产品的权限
+            </summary>
+            <param name="productType">产品类型</param>
+            <param name="subjectId">科目id</param>
+            <param name="premissionId">权限id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.IStudentPermissionWebService.GetProductIds(System.Nullable{System.Guid},System.Nullable{System.Guid})">
+            <summary>
+            获取关联当前权限Id的产品Id
+            </summary>
+            <param name="subjectId">科目id</param>
+            <param name="premissionId">权限id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.IStudentPermissionWebService.HasProductAuthority(HaoKao.ProductService.Domain.Enums.ProductType,System.Guid)">
+            <summary>
+            判断是否有当前产品的权限
+            </summary>
+            <param name="productType">产品类别</param>
+            <param name="productId">产品Id</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.IStudentPermissionWebService.HasLiveAuthority(System.Guid)">
+            <summary>
+            判断是否有当前直播的权限
+            </summary>
+            <param name="liveId">直播Id</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.IStudentPermissionWebService.Create(HaoKao.ProductService.Application.ViewModels.StudentPermission.CreateStudentPermissionWebViewModel)">
+            <summary>
+            创建学员权限
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.ISupervisorClassWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.ISupervisorClassWebService.Get(HaoKao.ProductService.Application.ViewModels.SupervisorClass.SupervisorClassQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.ISupervisorStudentWebService.Create(HaoKao.ProductService.Application.ViewModels.SupervisorStudent.CreateSupervisorStudentViewModel)">
+            <summary>
+            创建督学学员
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.ProductService.Application.Services.Web.ProductPackageWebService">
+            <summary>
+            产品包web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.ProductPackageWebService.#ctor(HaoKao.ProductService.Application.Services.Management.IProductService,HaoKao.ProductService.Application.Services.Management.IProductPackageService,HaoKao.ProductService.Domain.Repositories.IProductPackageRepository,Girvs.Cache.Caching.IStaticCacheManager,HaoKao.ProductService.Domain.Repositories.IProductRepository,HaoKao.ProductService.Domain.Repositories.IStudentPermissionRepository)">
+            <summary>
+            产品包web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.ProductPackageWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定产品包
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.ProductPackageWebService.Get(HaoKao.ProductService.Application.ViewModels.ProductPackage.QueryProductPackageViewModel)">
+            <summary>
+            根据查询获取列表，用于分页（产品包列表和产品包对比使用）
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.ProductPackageWebService.GetProductPackageByIds(System.Guid[])">
+            <summary>
+            通过产品包id数组获取产品包列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.ProductPackageWebService.GetProductPermissionId(System.Guid[])">
+            <summary>
+             通过产品包id拿这些产品包下面所有产品的权限id
+            </summary>
+            <param name="ids">产品包ids</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.ProductPackageWebService.GetCompositeAttributeByIds(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            通过产品包id数组获取每个产品包的复合数据
+            </summary>
+            <param name="ids"></param>
+        </member>
+        <member name="T:HaoKao.ProductService.Application.Services.Web.ProductWebService">
+            <summary>
+            产品web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.ProductWebService.#ctor(HaoKao.ProductService.Domain.Repositories.IProductRepository,HaoKao.ProductService.Application.Services.Management.IProductService,HaoKao.ProductService.Application.Services.Management.IProductPackageService)">
+            <summary>
+            产品web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.ProductWebService.Get(System.Guid)">
+            <summary>
+            根据Id获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.ProductWebService.GetByIds(System.Guid[])">
+            <summary>
+            通过产品id数组获取产品列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.ProductWebService.GetFreeProductsByIds(System.Guid[])">
+            <summary>
+            通过产品id数组获取其中免费产品列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.ProductWebService.GetPriceByIds(System.Guid,System.Guid[])">
+            <summary>
+            通过产品包id和产品id数组获取产品价格列表
+            </summary>
+            <param name="productPackageId"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.ProductWebService.GetMyProduct(System.Nullable{HaoKao.ProductService.Domain.Enums.ProductType})">
+            <summary>
+            获取我的产品(包含过期时间和最早购买时间)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.ProductWebService.GetMyAllProduct(System.Nullable{HaoKao.ProductService.Domain.Enums.ProductType},HaoKao.ProductService.Domain.Enums.PermissionExpiryType)">
+            <summary>
+            获取我的过期产品，未过期产品，所有产品(包含过期时间和最早购买时间)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.ProductWebService.GetMyProductPermisson(System.Nullable{HaoKao.ProductService.Domain.Enums.ProductType},System.Nullable{System.Guid})">
+            <summary>
+            获取我的产品权限
+            </summary>
+            <param name="productType">产品类型</param>
+            <param name="subjectId">科目id（不传取所有科目）</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.ProductWebService.GetMyProductSubject(System.Nullable{HaoKao.ProductService.Domain.Enums.ProductType})">
+            <summary>
+            获取我的产品所属科目
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.ProductWebService.GetByLiveIds(System.Collections.Generic.List{HaoKao.ProductService.Application.ViewModels.Product.QueryProductByLiveIdViewModel})">
+            <summary>
+            通过直播id数组获取产品列表
+            </summary>
+            <param name="models"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.ProductService.Application.Services.Web.RelatedProductWebService">
+            <summary>
+            关联产品接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.RelatedProductWebService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.ProductService.Domain.Repositories.IRelatedProductRepository,HaoKao.ProductService.Application.Services.Management.IRelatedProductService)">
+            <summary>
+            关联产品接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.RelatedProductWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.RelatedProductWebService.Get(HaoKao.ProductService.Application.ViewModels.RelatedProduct.RelatedProductQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.RelatedProductWebService.GetRelatedProductByIds(System.Guid[])">
+            <summary>
+            通过产品id数组获取关联了这些产品的产品信息
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.ProductService.Application.Services.Web.StudentPermissionWebService">
+            <summary>
+            学生权限web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.StudentPermissionWebService.#ctor(HaoKao.ProductService.Domain.Repositories.IStudentPermissionRepository,Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.ProductService.Application.Services.Web.IProductWebService,HaoKao.ProductService.Application.Services.Management.IProductService,HaoKao.ProductService.Domain.Repositories.IProductRepository)">
+            <summary>
+            学生权限web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.StudentPermissionWebService.GetAllAgreement">
+            <summary>
+            获取当前用户买过的产品id,名称和对应的协议id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.StudentPermissionWebService.GetByProductId(System.Guid)">
+            <summary>
+            根据产品Id获取用户权限
+            </summary>
+            <param name="productId">产品Id</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.StudentPermissionWebService.HasAuthority(HaoKao.ProductService.Domain.Enums.ProductType,System.Nullable{System.Guid},System.Nullable{System.Guid})">
+            <summary>
+            验证当前用户在当前科目下是否具有有产品的权限
+            </summary>
+            <param name="productType">产品类型</param>
+            <param name="subjectId">科目id</param>
+            <param name="premissionId">权限id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.StudentPermissionWebService.GetProductIds(System.Nullable{System.Guid},System.Nullable{System.Guid})">
+            <summary>
+            获取关联当前权限Id的产品Id
+            </summary>
+            <param name="subjectId">科目id</param>
+            <param name="premissionId">权限id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.StudentPermissionWebService.HasProductAuthority(HaoKao.ProductService.Domain.Enums.ProductType,System.Guid)">
+            <summary>
+            判断是否有当前产品的权限
+            </summary>
+            <param name="productType">产品类别</param>
+            <param name="productId">产品Id</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.StudentPermissionWebService.HasLiveAuthority(System.Guid)">
+            <summary>
+            判断是否有当前直播的权限
+            </summary>
+            <param name="liveId">直播Id</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.StudentPermissionWebService.Create(HaoKao.ProductService.Application.ViewModels.StudentPermission.CreateStudentPermissionWebViewModel)">
+            <summary>
+            创建学员权限
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="T:HaoKao.ProductService.Application.Services.Web.SupervisorClassWebService">
+            <summary>
+            班级督学接口服务-web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.SupervisorClassWebService.#ctor(HaoKao.ProductService.Application.Services.Management.ISupervisorClassService)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.SupervisorClassWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.SupervisorClassWebService.Get(HaoKao.ProductService.Application.ViewModels.SupervisorClass.SupervisorClassQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="T:HaoKao.ProductService.Application.Services.Web.SupervisorStudentWebService">
+            <summary>
+            督学学员接口服务-web端
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.SupervisorStudentWebService.#ctor(HaoKao.ProductService.Application.Services.Management.ISupervisorStudentService)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.Web.SupervisorStudentWebService.Create(HaoKao.ProductService.Application.ViewModels.SupervisorStudent.CreateSupervisorStudentViewModel)">
+            <summary>
+            创建督学学员
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.IProductPackageWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.IProductPackageWeChatService.Get(HaoKao.ProductService.Application.ViewModels.ProductPackage.QueryProductPackageViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.IProductPackageWeChatService.GetProductPackageByIds(System.Guid[])">
+            <summary>
+            通过产品包id数组获取产品包列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.IProductPackageWeChatService.GetProductPermissionId(System.Guid[])">
+            <summary>
+            通过产品包id拿这些产品包下面所有产品的权限id
+            </summary>
+            <param name="ids">产品包ids</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.IProductPackageWeChatService.GetCompositeAttributeByIds(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            通过产品包id数组获取每个产品包的复合数据
+            </summary>
+            <param name="ids"></param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.IProductWeChatService.Get(System.Guid)">
+            <summary>
+            根据Id 获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.IProductWeChatService.GetMyProduct(System.Nullable{HaoKao.ProductService.Domain.Enums.ProductType})">
+            <summary>
+             获取我的产品
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.IProductWeChatService.GetMyAllProduct(System.Nullable{HaoKao.ProductService.Domain.Enums.ProductType},HaoKao.ProductService.Domain.Enums.PermissionExpiryType)">
+            <summary>
+            获取我的过期产品，未过期产品，所有产品
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.IProductWeChatService.GetMyProductPermisson(System.Nullable{HaoKao.ProductService.Domain.Enums.ProductType},System.Nullable{System.Guid})">
+            <summary>
+            获取我的产品权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.IProductWeChatService.GetMyProductSubject(System.Nullable{HaoKao.ProductService.Domain.Enums.ProductType})">
+            <summary>
+            获取我的产品所属科目
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.IProductWeChatService.GetByIds(System.Guid[])">
+            <summary>
+            通过产品id数组获取产品列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.IProductWeChatService.GetFreeProductsByIds(System.Guid[])">
+            <summary>
+            通过产品id数组获取其中免费产品列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.IProductWeChatService.GetPriceByIds(System.Guid,System.Guid[])">
+            <summary>
+            通过产品包id和产品id数组获取产品价格列表
+            </summary>
+            <param name="productPackageId"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.IProductWeChatService.GetByLiveIds(System.Collections.Generic.List{HaoKao.ProductService.Application.ViewModels.Product.QueryProductByLiveIdViewModel})">
+            <summary>
+            通过直播id数组获取产品列表
+            </summary>
+            <param name="models"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.IStudentPermissionWeChatService.GetAllAgreement">
+            <summary>
+             获取当前用户买过的产品id,名称和对应的协议id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.IStudentPermissionWeChatService.GetByProductId(System.Guid)">
+            <summary>
+            根据产品Id获取用户权限
+            </summary>
+            <param name="productId">产品Id</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.IStudentPermissionWeChatService.HasAuthority(HaoKao.ProductService.Domain.Enums.ProductType,System.Nullable{System.Guid},System.Nullable{System.Guid})">
+            <summary>
+            验证当前用户在当前科目下是否具有有产品的权限
+            </summary>
+            <param name="productType">产品类型</param>
+            <param name="subjectId">科目id</param>
+            <param name="premissionId">权限id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.IStudentPermissionWeChatService.GetProductIds(System.Nullable{System.Guid},System.Nullable{System.Guid})">
+            <summary>
+            获取关联当前权限Id的产品Id
+            </summary>
+            <param name="subjectId">科目id</param>
+            <param name="premissionId">权限id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.IStudentPermissionWeChatService.HasProductAuthority(HaoKao.ProductService.Domain.Enums.ProductType,System.Guid)">
+            <summary>
+            判断是否有当前产品的权限
+            </summary>
+            <param name="productType">产品类别</param>
+            <param name="productId">产品Id</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.IStudentPermissionWeChatService.HasLiveAuthority(System.Guid)">
+            <summary>
+            判断是否有当前直播的权限
+            </summary>
+            <param name="liveId">直播Id</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.IStudentPermissionWeChatService.Create(HaoKao.ProductService.Application.ViewModels.StudentPermission.CreateStudentPermissionWebViewModel)">
+            <summary>
+            创建学员权限
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.ISupervisorClassWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.ISupervisorClassWeChatService.Get(HaoKao.ProductService.Application.ViewModels.SupervisorClass.SupervisorClassQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.ISupervisorStudentWeChatService.Create(HaoKao.ProductService.Application.ViewModels.SupervisorStudent.CreateSupervisorStudentViewModel)">
+            <summary>
+            创建督学学员
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.ProductService.Application.Services.WeChat.ProductPackageWeChatService">
+            <summary>
+            产品包WeChat端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.ProductPackageWeChatService.#ctor(HaoKao.ProductService.Application.Services.Web.IProductPackageWebService,HaoKao.ProductService.Application.Services.App.IProductPackageAppService)">
+            <summary>
+            产品包WeChat端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.ProductPackageWeChatService.GetCompositeAttributeByIds(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            通过产品包id数组获取每个产品包的复合数据
+            </summary>
+            <param name="ids"></param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.ProductPackageWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.ProductPackageWeChatService.Get(HaoKao.ProductService.Application.ViewModels.ProductPackage.QueryProductPackageViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.ProductPackageWeChatService.GetProductPackageByIds(System.Guid[])">
+            <summary>
+            通过产品包id数组获取产品包列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.ProductPackageWeChatService.GetProductPermissionId(System.Guid[])">
+            <summary>
+             通过产品包id拿这些产品包下面所有产品的权限id
+            </summary>
+            <param name="ids">产品包ids</param>
+        </member>
+        <member name="T:HaoKao.ProductService.Application.Services.WeChat.ProductWeChatService">
+            <summary>
+            产品WeChat端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.ProductWeChatService.#ctor(HaoKao.ProductService.Application.Services.Web.IProductWebService,HaoKao.ProductService.Application.Services.App.IProductPackageAppService)">
+            <summary>
+            产品WeChat端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.ProductWeChatService.Get(System.Guid)">
+            <summary>
+            根据Id获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.ProductWeChatService.GetPriceByIds(System.Guid,System.Guid[])">
+            <summary>
+            通过产品包id和产品id数组获取产品价格列表
+            </summary>
+            <param name="productPackageId"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.ProductWeChatService.GetByIds(System.Guid[])">
+            <summary>
+            通过产品id数组获取产品列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.ProductWeChatService.GetFreeProductsByIds(System.Guid[])">
+            <summary>
+            通过产品id数组获取其中免费产品列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.ProductWeChatService.GetMyProduct(System.Nullable{HaoKao.ProductService.Domain.Enums.ProductType})">
+            <summary>
+            获取我的产品(包含过期时间和最早购买时间)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.ProductWeChatService.GetMyAllProduct(System.Nullable{HaoKao.ProductService.Domain.Enums.ProductType},HaoKao.ProductService.Domain.Enums.PermissionExpiryType)">
+            <summary>
+            获取我的过期产品，未过期产品，所有产品(包含过期时间和最早购买时间)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.ProductWeChatService.GetMyProductPermisson(System.Nullable{HaoKao.ProductService.Domain.Enums.ProductType},System.Nullable{System.Guid})">
+            <summary>
+            获取我的产品权限
+            </summary>
+            <param name="productType">产品类型</param>
+            <param name="subjectId">科目id（不传取所有科目）</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.ProductWeChatService.GetMyProductSubject(System.Nullable{HaoKao.ProductService.Domain.Enums.ProductType})">
+            <summary>
+            获取我的产品所属科目
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.ProductWeChatService.GetByLiveIds(System.Collections.Generic.List{HaoKao.ProductService.Application.ViewModels.Product.QueryProductByLiveIdViewModel})">
+            <summary>
+            通过直播id数组获取产品列表
+            </summary>
+            <param name="models"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.ProductService.Application.Services.WeChat.StudentPermissionWeChatService">
+            <summary>
+            学生权限WeChat端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.StudentPermissionWeChatService.#ctor(HaoKao.ProductService.Application.Services.Web.IStudentPermissionWebService)">
+            <summary>
+            学生权限WeChat端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.StudentPermissionWeChatService.GetAllAgreement">
+            <summary>
+            获取当前用户买过的产品id,名称和对应的协议id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.StudentPermissionWeChatService.GetByProductId(System.Guid)">
+            <summary>
+            根据产品Id获取用户权限
+            </summary>
+            <param name="productId">产品Id</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.StudentPermissionWeChatService.HasAuthority(HaoKao.ProductService.Domain.Enums.ProductType,System.Nullable{System.Guid},System.Nullable{System.Guid})">
+            <summary>
+            验证当前用户在当前科目下是否具有有产品的权限
+            </summary>
+            <param name="productType">产品类型</param>
+            <param name="subjectId">科目id</param>
+            <param name="premissionId">权限id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.StudentPermissionWeChatService.GetProductIds(System.Nullable{System.Guid},System.Nullable{System.Guid})">
+            <summary>
+            获取关联当前权限Id的产品Id
+            </summary>
+            <param name="subjectId">科目id</param>
+            <param name="premissionId">权限id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.StudentPermissionWeChatService.HasProductAuthority(HaoKao.ProductService.Domain.Enums.ProductType,System.Guid)">
+            <summary>
+            判断是否有当前产品的权限
+            </summary>
+            <param name="productType">产品类别</param>
+            <param name="productId">产品Id</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.StudentPermissionWeChatService.HasLiveAuthority(System.Guid)">
+            <summary>
+            判断是否有当前直播的权限
+            </summary>
+            <param name="liveId">直播Id</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.StudentPermissionWeChatService.Create(HaoKao.ProductService.Application.ViewModels.StudentPermission.CreateStudentPermissionWebViewModel)">
+            <summary>
+            创建学员权限
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="T:HaoKao.ProductService.Application.Services.WeChat.SupervisorClassWeChatService">
+            <summary>
+            班级督学接口服务-微信小程序端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.SupervisorClassWeChatService.#ctor(HaoKao.ProductService.Application.Services.Web.ISupervisorClassWebService)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.SupervisorClassWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.SupervisorClassWeChatService.Get(HaoKao.ProductService.Application.ViewModels.SupervisorClass.SupervisorClassQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="T:HaoKao.ProductService.Application.Services.WeChat.SupervisorStudentWeChatService">
+            <summary>
+            督学学员接口服务-微信小程序端
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.SupervisorStudentWeChatService.#ctor(HaoKao.ProductService.Application.Services.Web.ISupervisorStudentWebService)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.Services.WeChat.SupervisorStudentWeChatService.Create(HaoKao.ProductService.Application.ViewModels.SupervisorStudent.CreateSupervisorStudentViewModel)">
+            <summary>
+            创建督学学员
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseMyAllProductViewModel.Name">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseMyAllProductViewModel.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseMyAllProductViewModel.ProductType">
+            <summary>
+            产品类别
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseMyAllProductViewModel.Enable">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseMyAllProductViewModel.IsShelves">
+            <summary>
+            是否上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseMyAllProductViewModel.Description">
+            <summary>
+            产品描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseMyAllProductViewModel.Icon">
+            <summary>
+            产品图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseMyAllProductViewModel.DetailImage">
+            <summary>
+            产品详情图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseMyAllProductViewModel.ExpiryTimeTypeEnum">
+            <summary>
+            0-按日期 1-按天数
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseMyAllProductViewModel.Days">
+            <summary>
+            按天数
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseMyAllProductViewModel.ExpiryTime">
+            <summary>
+            到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseMyAllProductViewModel.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseMyAllProductViewModel.Price">
+            <summary>
+            价格
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseMyAllProductViewModel.DiscountedPrice">
+            <summary>
+            优惠价格
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseMyAllProductViewModel.AppleProductId">
+            <summary>
+            苹果内购产品ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseMyAllProductViewModel.Answering">
+            <summary>
+            答疑
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseMyAllProductViewModel.ProductPermissions">
+            <summary>
+            对应的权限列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseMyAllProductViewModel.AssistantProductPermissions">
+            <summary>
+            对应的智辅权限列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseMyAllProductViewModel.Agreement">
+            <summary>
+            产品协议
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseMyAllProductViewModel.GiveAwayAList">
+            <summary>
+            赠送列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseMyAllProductViewModel.IsExperience">
+            <summary>
+            是否体验产品
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductLiveViewModel.LiveStatus">
+            <summary>
+            直播状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductLiveViewModel.LiveId">
+            <summary>
+            直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductPriceViewModel.IsExpire">
+            <summary>
+            是否过期
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductPriceViewModel.Price">
+            <summary>
+            价格
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductPriceViewModel.DiscountedPrice">
+            <summary>
+            优惠价格
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductPriceViewModel.DisplayPrice">
+            <summary>
+            显示价格
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductViewModel.IsBuy">
+            <summary>
+            验证当前用户是否买过这个产品
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductViewModel.Name">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductViewModel.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductViewModel.ReservationBaseNumber">
+            <summary>
+            预约起始人数（只有直播类型的产品需要用到）
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductViewModel.ProductType">
+            <summary>
+            产品类别
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductViewModel.Enable">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductViewModel.IsShelves">
+            <summary>
+            是否上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductViewModel.Description">
+            <summary>
+            产品描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductViewModel.Icon">
+            <summary>
+            产品图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductViewModel.DetailImage">
+            <summary>
+            产品详情图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductViewModel.ExpiryTimeTypeEnum">
+            <summary>
+            0-按日期 1-按天数
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductViewModel.Days">
+            <summary>
+            按天数
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductViewModel.ExpiryTime">
+            <summary>
+            到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductViewModel.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductViewModel.Price">
+            <summary>
+            价格
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductViewModel.DiscountedPrice">
+            <summary>
+            优惠价格
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductViewModel.AppleProductId">
+            <summary>
+            苹果内购产品ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductViewModel.Answering">
+            <summary>
+            答疑
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductViewModel.ProductPermissions">
+            <summary>
+            对应的权限列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductViewModel.AssistantProductPermissions">
+            <summary>
+            对应的智辅权限列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductViewModel.Agreement">
+            <summary>
+            产品协议
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductViewModel.GiveAwayAList">
+            <summary>
+            赠送列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductViewModel.IsExperience">
+            <summary>
+            是否体验产品
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductPermissionViewModel.SubjectId">
+            <summary>
+            对应的科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductPermissionViewModel.SubjectName">
+            <summary>
+            对应科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductPermissionViewModel.PermissionName">
+            <summary>
+            权限名称(课程名称、题库分类名称、资料名称)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductPermissionViewModel.PermissionId">
+            <summary>
+            权限Id(课程ID、题库分类ID、资料ID)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseProductPermissionViewModel.Category">
+            <summary>
+            所属分类(为课程时是阶段分类)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseAssistantProductPermissionViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseAssistantProductPermissionViewModel.SubjectId">
+            <summary>
+            对应的科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseAssistantProductPermissionViewModel.SubjectName">
+            <summary>
+            对应科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseAssistantProductPermissionViewModel.CourseStageId">
+            <summary>
+            课程阶段Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseAssistantProductPermissionViewModel.CourseStageName">
+            <summary>
+            课程阶段名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseAssistantProductPermissionViewModel.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseAssistantProductPermissionViewModel.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseAssistantProductPermissionViewModel.AssistantProductPermissionContents">
+            <summary>
+            智辅产品权限内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.BrowseAssistantProductPermissionViewModel.TenantId">
+            <summary>
+            租户
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.CreateProductViewModel.Name">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.CreateProductViewModel.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.CreateProductViewModel.ProductType">
+            <summary>
+            产品类别
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.CreateProductViewModel.IsShelves">
+            <summary>
+            是否上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.CreateProductViewModel.Description">
+            <summary>
+            产品描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.CreateProductViewModel.Icon">
+            <summary>
+            产品图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.CreateProductViewModel.DetailImage">
+            <summary>
+            产品详情图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.CreateProductViewModel.ExpiryTimeTypeEnum">
+            <summary>
+            0-按日期 1-按天数
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.CreateProductViewModel.Days">
+            <summary>
+            按天数
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.CreateProductViewModel.ExpiryTime">
+            <summary>
+            到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.CreateProductViewModel.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.CreateProductViewModel.Price">
+            <summary>
+            价格
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.CreateProductViewModel.DiscountedPrice">
+            <summary>
+            优惠价格
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.CreateProductViewModel.AppleProductId">
+            <summary>
+            苹果内购产品ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.CreateProductViewModel.Answering">
+            <summary>
+            答疑
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.CreateProductViewModel.ProductPermissions">
+            <summary>
+            对应的权限列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.CreateProductViewModel.AssistantProductPermissions">
+            <summary>
+            对应的智辅权限列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.CreateProductViewModel.Agreement">
+            <summary>
+            产品协议
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.CreateProductViewModel.GiveAwayAList">
+            <summary>
+            赠送列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.CreateProductViewModel.IsExperience">
+            <summary>
+            是否体验产品
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.ProductPermissionViewModel.SubjectId">
+            <summary>
+            对应的科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.ProductPermissionViewModel.SubjectName">
+            <summary>
+            对应科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.ProductPermissionViewModel.PermissionName">
+            <summary>
+            权限名称(课程名称、题库分类名称、资料名称)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.ProductPermissionViewModel.PermissionId">
+            <summary>
+            权限Id(课程ID、题库分类ID、资料ID)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.ProductPermissionViewModel.Category">
+            <summary>
+            所属分类(为课程时是阶段分类)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.AssistantProductPermissionViewModel.SubjectId">
+            <summary>
+            对应的科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.AssistantProductPermissionViewModel.SubjectName">
+            <summary>
+            对应科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.AssistantProductPermissionViewModel.CourseStageId">
+            <summary>
+            课程阶段Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.AssistantProductPermissionViewModel.CourseStageName">
+            <summary>
+            课程阶段名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.AssistantProductPermissionViewModel.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.AssistantProductPermissionViewModel.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.AssistantProductPermissionViewModel.AssistantProductPermissionContents">
+            <summary>
+            智辅产品权限内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.AssistantProductPermissionContentViewModel.SubjectId">
+            <summary>
+            对应的科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.AssistantProductPermissionContentViewModel.SubjectName">
+            <summary>
+            对应科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.AssistantProductPermissionContentViewModel.CourseStageId">
+            <summary>
+            课程阶段Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.AssistantProductPermissionContentViewModel.CourseStageName">
+            <summary>
+            课程阶段名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.AssistantProductPermissionContentViewModel.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.AssistantProductPermissionContentViewModel.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.AssistantProductPermissionContentViewModel.AssistantProductPermissionContents">
+            <summary>
+            智辅产品权限内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.MyProductSubjectViewModel.SubjectId">
+            <summary>
+            对应的科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.MyProductSubjectViewModel.SubjectName">
+            <summary>
+            对应科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.MyProductViewModel.Name">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.MyProductViewModel.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.MyProductViewModel.ReservationBaseNumber">
+            <summary>
+            预约起始人数（只有直播类型的产品需要用到）
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.MyProductViewModel.ProductType">
+            <summary>
+            产品类别
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.MyProductViewModel.Enable">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.MyProductViewModel.IsShelves">
+            <summary>
+            是否上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.MyProductViewModel.Description">
+            <summary>
+            产品描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.MyProductViewModel.Icon">
+            <summary>
+            产品图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.MyProductViewModel.DetailImage">
+            <summary>
+            产品详情图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.MyProductViewModel.ExpiryTime">
+            <summary>
+            到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.MyProductViewModel.Price">
+            <summary>
+            价格
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.MyProductViewModel.DiscountedPrice">
+            <summary>
+            优惠价格
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.MyProductViewModel.AppleProductId">
+            <summary>
+            苹果内购产品ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.MyProductViewModel.Answering">
+            <summary>
+            答疑
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.MyProductViewModel.ProductPermissions">
+            <summary>
+            对应的权限列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.MyProductViewModel.AssistantProductPermissions">
+            <summary>
+            对应的智辅权限列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.MyProductViewModel.Agreement">
+            <summary>
+            产品协议
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.MyProductViewModel.GiveAwayAList">
+            <summary>
+            赠送列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.MyProductViewModel.IsExperience">
+            <summary>
+            是否体验产品
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.MyProductViewModel.MyExpireTime">
+            <summary>
+            我的过期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.MyProductViewModel.MyEarliestBuyTime">
+            <summary>
+            我的最早购买时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.MyProductViewModel.IsExpire">
+            <summary>
+            当前产品是否过期
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.QueryProductByLiveIdViewModel.LiveId">
+            <summary>
+            直播Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.QueryProductByLiveIdViewModel.LiveStatus">
+            <summary>
+            直播状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.QueryProductViewModel.Name">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.QueryProductViewModel.ProductType">
+            <summary>
+            产品类别
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.QueryProductViewModel.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.QueryProductViewModel.Enable">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.QueryProductViewModel.IsShelves">
+            <summary>
+            是否上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.QueryProductViewModel.ExcludeIds">
+            <summary>
+            过滤id数组
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.QueryProductViewModel.IsNeedAgreement">
+            <summary>
+            是否需要签署协议
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.QueryProductViewModel.IsExpired">
+            <summary>
+            是否过期 (true:返回已过期优惠卷，false：返回未过期优惠卷，不传：过期和未过期的都返回)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.QueryProductViewModel.IsExperience">
+            <summary>
+            是否体验产品
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.ProductListViewModel.Name">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.ProductListViewModel.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.ProductListViewModel.ReservationBaseNumber">
+            <summary>
+            预约起始人数（只有直播类型的产品需要用到）
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.ProductListViewModel.ProductType">
+            <summary>
+            产品类别
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.ProductListViewModel.Enable">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.ProductListViewModel.IsShelves">
+            <summary>
+            是否上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.ProductListViewModel.Description">
+            <summary>
+            产品描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.ProductListViewModel.Icon">
+            <summary>
+            产品图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.ProductListViewModel.DetailImage">
+            <summary>
+            产品详情图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.ProductListViewModel.ExpiryTime">
+            <summary>
+            到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.ProductListViewModel.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.ProductListViewModel.Price">
+            <summary>
+            价格
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.ProductListViewModel.DiscountedPrice">
+            <summary>
+            优惠价格
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.ProductListViewModel.AppleProductId">
+            <summary>
+            苹果内购产品ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.ProductListViewModel.Answering">
+            <summary>
+            答疑
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.ProductListViewModel.Agreement">
+            <summary>
+            产品协议
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.ProductListViewModel.GiveAwayAList">
+            <summary>
+            赠送列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.ProductListViewModel.IsExperience">
+            <summary>
+            是否体验产品
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.SimpleProductListViewModel.Price">
+            <summary>
+            价格
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.SimpleProductListViewModel.DiscountedPrice">
+            <summary>
+            优惠价格
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.RelatedProductListViewModel.Name">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.RelatedProductListViewModel.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.UpdateProductViewModel.Name">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.UpdateProductViewModel.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.UpdateProductViewModel.ProductType">
+            <summary>
+            产品类别
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.UpdateProductViewModel.IsShelves">
+            <summary>
+            是否上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.UpdateProductViewModel.Description">
+            <summary>
+            产品描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.UpdateProductViewModel.Icon">
+            <summary>
+            产品图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.UpdateProductViewModel.DetailImage">
+            <summary>
+            产品详情图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.UpdateProductViewModel.ExpiryTimeTypeEnum">
+            <summary>
+            0-按日期 1-按天数
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.UpdateProductViewModel.Days">
+            <summary>
+            按天数
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.UpdateProductViewModel.ExpiryTime">
+            <summary>
+            到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.UpdateProductViewModel.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.UpdateProductViewModel.Price">
+            <summary>
+            价格
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.UpdateProductViewModel.DiscountedPrice">
+            <summary>
+            优惠价格
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.UpdateProductViewModel.AppleProductId">
+            <summary>
+            苹果内购产品ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.UpdateProductViewModel.ProductPermissions">
+            <summary>
+            对应的权限列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.UpdateProductViewModel.AssistantProductPermissions">
+            <summary>
+            对应的智辅权限列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.UpdateProductViewModel.Agreement">
+            <summary>
+            产品协议
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.UpdateProductViewModel.GiveAwayAList">
+            <summary>
+            赠送列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.Product.UpdateProductViewModel.IsExperience">
+            <summary>
+            是否体验产品
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.IsOpen">
+            <summary>
+            是否开通
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.OpenTime">
+            <summary>
+            开通时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.SimpleName">
+            <summary>
+            简称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.SalesRemind">
+            <summary>
+            售后提醒
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.ProductType">
+            <summary>
+            产品包类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.CardImage">
+            <summary>
+            产品卡片图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.DetailImage">
+            <summary>
+            详细介绍图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.NumberOfBuyers">
+            <summary>
+            购买人数配置
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.Selling">
+            <summary>
+            卖点
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.ExpiryTime">
+            <summary>
+            到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.PreferentialExpiryTime">
+            <summary>
+            优惠到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.Year">
+            <summary>
+            所属年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.FeaturedService">
+            <summary>
+            特色服务
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.Hot">
+            <summary>
+            热门推荐
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.Contrast">
+            <summary>
+            对比
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.Enable">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.Shelves">
+            <summary>
+            上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.Detail">
+            <summary>
+            对比详细介绍
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.ProductList">
+            <summary>
+            对应的产品列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.LecturerList">
+            <summary>
+            讲师列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.ComparisonDictionaryId">
+            <summary>
+            对比字典Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.SimpleDesc">
+            <summary>
+            简单描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.IsExperience">
+            <summary>
+            是否体验产品包
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.IsSupportInstallmentPayment">
+            <summary>
+            是否支持花呗分期
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.BrowseProductPackageViewModel.Sort">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.SimpleName">
+            <summary>
+            简称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.SalesRemind">
+            <summary>
+            售后提醒
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.ProductType">
+            <summary>
+            产品包类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.CardImage">
+            <summary>
+            产品卡片图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.DetailImage">
+            <summary>
+            详细介绍图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.NumberOfBuyers">
+            <summary>
+            购买人数配置
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.Selling">
+            <summary>
+            卖点
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.ExpiryTime">
+            <summary>
+            到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.PreferentialExpiryTime">
+            <summary>
+            优惠到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.Year">
+            <summary>
+            所属年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.FeaturedService">
+            <summary>
+            特色服务
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.Hot">
+            <summary>
+            热门推荐
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.Contrast">
+            <summary>
+            对比
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.Enable">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.Shelves">
+            <summary>
+            上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.Detail">
+            <summary>
+            对比详细介绍
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.ProductList">
+            <summary>
+            对应的产品列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.LecturerList">
+            <summary>
+            讲师列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.ComparisonDictionaryId">
+            <summary>
+            对比字典Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.SimpleDesc">
+            <summary>
+            简单描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.IsExperience">
+            <summary>
+            是否体验产品包
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.IsSupportInstallmentPayment">
+            <summary>
+            是否支持花呗分期
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.CreateProductPackageViewModel.Sort">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.QueryProductPackageViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.QueryProductPackageViewModel.ProductType">
+            <summary>
+            产品包类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.QueryProductPackageViewModel.ProductId">
+            <summary>
+            产品Id(返回包含这个产品id的产品包)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.QueryProductPackageViewModel.Year">
+            <summary>
+            所属年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.QueryProductPackageViewModel.Enable">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.QueryProductPackageViewModel.Shelves">
+            <summary>
+            上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.QueryProductPackageViewModel.IsRemoveExpiry">
+            <summary>
+            是否排除过期
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.QueryProductPackageViewModel.ExcludeIds">
+            <summary>
+            过滤id数组
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.QueryProductPackageViewModel.Contrast">
+            <summary>
+            对比
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.QueryProductPackageViewModel.IsExperience">
+            <summary>
+            是否体验产品包
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.IsOpen">
+            <summary>
+            是否开通
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.OpenTime">
+            <summary>
+            开通时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.SimpleName">
+            <summary>
+            简称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.SalesRemind">
+            <summary>
+            售后提醒
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.ProductType">
+            <summary>
+            产品包类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.CardImage">
+            <summary>
+            产品卡片图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.DetailImage">
+            <summary>
+            详细介绍图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.NumberOfBuyers">
+            <summary>
+            购买人数配置
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.Selling">
+            <summary>
+            卖点
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.ExpiryTime">
+            <summary>
+            到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.PreferentialExpiryTime">
+            <summary>
+            优惠到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.Year">
+            <summary>
+            所属年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.FeaturedService">
+            <summary>
+            特色服务
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.Hot">
+            <summary>
+            热门推荐
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.Contrast">
+            <summary>
+            对比
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.Enable">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.Shelves">
+            <summary>
+            上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.Detail">
+            <summary>
+            对比详细介绍
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.ProductList">
+            <summary>
+            对应的产品列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.LecturerList">
+            <summary>
+            讲师列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.ComparisonDictionaryId">
+            <summary>
+            对比字典Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.SimpleDesc">
+            <summary>
+            简单描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.IsExperience">
+            <summary>
+            是否体验产品包
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.IsSupportInstallmentPayment">
+            <summary>
+            是否支持花呗分期
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.ProductPackageQueryListViewModel.Sort">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.SetProductPackageProductListViewModel.ProductList">
+            <summary>
+            对应的产品列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.UpdateProductPackageViewModel.SimpleName">
+            <summary>
+            简称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.UpdateProductPackageViewModel.SalesRemind">
+            <summary>
+            售后提醒
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.UpdateProductPackageViewModel.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.UpdateProductPackageViewModel.ProductType">
+            <summary>
+            产品包类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.UpdateProductPackageViewModel.CardImage">
+            <summary>
+            产品卡片图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.UpdateProductPackageViewModel.DetailImage">
+            <summary>
+            详细介绍图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.UpdateProductPackageViewModel.NumberOfBuyers">
+            <summary>
+            购买人数配置
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.UpdateProductPackageViewModel.Selling">
+            <summary>
+            卖点
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.UpdateProductPackageViewModel.ExpiryTime">
+            <summary>
+            到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.UpdateProductPackageViewModel.PreferentialExpiryTime">
+            <summary>
+            优惠到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.UpdateProductPackageViewModel.Year">
+            <summary>
+            所属年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.UpdateProductPackageViewModel.FeaturedService">
+            <summary>
+            特色服务
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.UpdateProductPackageViewModel.Hot">
+            <summary>
+            热门推荐
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.UpdateProductPackageViewModel.Contrast">
+            <summary>
+            对比
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.UpdateProductPackageViewModel.Detail">
+            <summary>
+            对比详细介绍
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.UpdateProductPackageViewModel.LecturerList">
+            <summary>
+            讲师列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.UpdateProductPackageViewModel.ComparisonDictionaryId">
+            <summary>
+            对比字典Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.UpdateProductPackageViewModel.SimpleDesc">
+            <summary>
+            简单描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.UpdateProductPackageViewModel.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.UpdateProductPackageViewModel.IsExperience">
+            <summary>
+            是否体验产品包
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.UpdateProductPackageViewModel.IsSupportInstallmentPayment">
+            <summary>
+            是否支持花呗分期
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.ProductPackage.UpdateProductPackageViewModel.Sort">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.RelatedProduct.BrowseRelatedProductViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.RelatedProduct.BrowseRelatedProductViewModel.ProductId">
+            <summary>
+            产品id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.RelatedProduct.BrowseRelatedProductViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.RelatedProduct.BrowseRelatedProductViewModel.RelatedTargetProductId">
+            <summary>
+            关联对象产品id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.RelatedProduct.BrowseRelatedProductViewModel.RelatedTargetProducName">
+            <summary>
+            关联对象产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.RelatedProduct.CreateRelatedProductViewModel.ProductId">
+            <summary>
+            产品id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.RelatedProduct.CreateRelatedProductViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.RelatedProduct.CreateRelatedProductViewModel.RelatedTargetProductId">
+            <summary>
+            关联对象产品id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.RelatedProduct.CreateRelatedProductViewModel.RelatedTargetProducName">
+            <summary>
+            关联对象产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.RelatedProduct.RelatedProductQueryViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.RelatedProduct.RelatedProductQueryViewModel.RelatedTargetProductId">
+            <summary>
+            关联对象产品id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.RelatedProduct.RelatedProductQueryViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.RelatedProduct.RelatedProductQueryViewModel.RelatedTargetProducName">
+            <summary>
+            关联对象产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.RelatedProduct.RelatedProductQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.RelatedProduct.RelatedProductQueryListViewModel.ProductId">
+            <summary>
+            产品id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.RelatedProduct.RelatedProductQueryListViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.RelatedProduct.RelatedProductQueryListViewModel.RelatedTargetProductId">
+            <summary>
+            关联对象产品id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.RelatedProduct.RelatedProductQueryListViewModel.RelatedTargetProducName">
+            <summary>
+            关联对象产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.RelatedProduct.RelatedProductQueryListViewModel.CreatorName">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.AgreementListViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.AgreementListViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.AgreementListViewModel.AgreementId">
+            <summary>
+            协议Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.ProductService.Application.ViewModels.StudentPermission.CreateStudentPermissionWebViewModel">
+            <summary>
+            创建学员权限
+            </summary>
+            <param name="SourceMode">来源</param>
+            <param name="StudentName">学员昵称(即用户昵称)</param>
+            <param name="PurchaseProductContents">购买的产品内容</param>
+        </member>
+        <member name="M:HaoKao.ProductService.Application.ViewModels.StudentPermission.CreateStudentPermissionWebViewModel.#ctor(HaoKao.ProductService.Domain.Enums.SourceMode,System.String,System.String)">
+            <summary>
+            创建学员权限
+            </summary>
+            <param name="SourceMode">来源</param>
+            <param name="StudentName">学员昵称(即用户昵称)</param>
+            <param name="PurchaseProductContents">购买的产品内容</param>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.CreateStudentPermissionWebViewModel.SourceMode">
+            <summary>来源</summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.CreateStudentPermissionWebViewModel.StudentName">
+            <summary>学员昵称(即用户昵称)</summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.CreateStudentPermissionWebViewModel.PurchaseProductContents">
+            <summary>购买的产品内容</summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.BrowseStudentPermissionViewModel.StudentName">
+            <summary>
+            学员昵称(即用户昵称)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.BrowseStudentPermissionViewModel.StudentId">
+            <summary>
+            学员ID（即用户ID）
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.BrowseStudentPermissionViewModel.OrderNumber">
+            <summary>
+            对应的订单号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.BrowseStudentPermissionViewModel.SourceMode">
+            <summary>
+            来源方式
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.BrowseStudentPermissionViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.BrowseStudentPermissionViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.BrowseStudentPermissionViewModel.ProductType">
+            <summary>
+            产品类别
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.BrowseStudentPermissionViewModel.ExpiryTime">
+            <summary>
+            到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.BrowseStudentPermissionViewModel.Enable">
+            <summary>
+            启用/禁用
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.CreateStudentPermissionViewModel.StudentName">
+            <summary>
+            学员昵称(即用户昵称)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.CreateStudentPermissionViewModel.StudentId">
+            <summary>
+            学员ID（即用户ID）
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.CreateStudentPermissionViewModel.OrderNumber">
+            <summary>
+            对应的订单号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.CreateStudentPermissionViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.CreateStudentPermissionViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.CreateStudentPermissionViewModel.ExpiryTime">
+            <summary>
+            到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.CreateStudentPermissionViewModel.Enable">
+            <summary>
+            启用/禁用
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.QueryStudentPermissionOperateLogViewModel.StudentName">
+            <summary>
+            昵称/手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.QueryStudentPermissionOperateLogViewModel.StartOperateTime">
+            <summary>
+            开始操作时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.QueryStudentPermissionOperateLogViewModel.EndOperateTime">
+            <summary>
+            结束操作时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.BrowseStudentPermissionOperateLogViewModel.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.BrowseStudentPermissionOperateLogViewModel.StudentPermissionId">
+            <summary>
+            学员权限Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.BrowseStudentPermissionOperateLogViewModel.StudentName">
+            <summary>
+            学员昵称(即用户昵称)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.BrowseStudentPermissionOperateLogViewModel.StudentId">
+            <summary>
+            学员ID（即用户ID）
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.BrowseStudentPermissionOperateLogViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.BrowseStudentPermissionOperateLogViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.BrowseStudentPermissionOperateLogViewModel.ProductType">
+            <summary>
+            产品类别
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.BrowseStudentPermissionOperateLogViewModel.OldExpiredTime">
+            <summary>
+            原到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.BrowseStudentPermissionOperateLogViewModel.NewExpiredTime">
+            <summary>
+            现到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.BrowseStudentPermissionOperateLogViewModel.CreatorId">
+            <summary>
+            创建者Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.BrowseStudentPermissionOperateLogViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.StudentPermissionQueryViewModel.StudentName">
+            <summary>
+            学员昵称(即用户昵称)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.StudentPermissionQueryViewModel.OrderNumber">
+            <summary>
+            对应的订单号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.StudentPermissionQueryViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.StudentPermissionQueryViewModel.Enable">
+            <summary>
+            启用/禁用
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.StudentPermissionQueryViewModel.SourceMode">
+            <summary>
+            来源
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.StudentPermissionQueryViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.StudentPermissionQueryListViewModel.StudentName">
+            <summary>
+            学员昵称(即用户昵称)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.StudentPermissionQueryListViewModel.StudentId">
+            <summary>
+            学员ID（即用户ID）
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.StudentPermissionQueryListViewModel.OrderNumber">
+            <summary>
+            对应的订单号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.StudentPermissionQueryListViewModel.SourceMode">
+            <summary>
+            来源方式
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.StudentPermissionQueryListViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.StudentPermissionQueryListViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.StudentPermissionQueryListViewModel.ProductType">
+            <summary>
+            产品类别
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.StudentPermissionQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.StudentPermissionQueryListViewModel.ExpiryTime">
+            <summary>
+            到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.StudentPermissionQueryListViewModel.Enable">
+            <summary>
+            启用/禁用
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.UpdateStudentPermissionExpiryTimeViewModel.ExpiryTime">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.StudentPermission.UpdateStudentPermissionStateViewModel.Enable">
+            <summary>
+            启用/禁用
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.BrowseSupervisorClassViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.BrowseSupervisorClassViewModel.Name">
+            <summary>
+            班级名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.BrowseSupervisorClassViewModel.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.BrowseSupervisorClassViewModel.ProductPackageId">
+            <summary>
+            产品包id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.BrowseSupervisorClassViewModel.ProductPackageName">
+            <summary>
+            产品包名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.BrowseSupervisorClassViewModel.ProductId">
+            <summary>
+            产品id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.BrowseSupervisorClassViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.BrowseSupervisorClassViewModel.SalespersonId">
+            <summary>
+            营销人员Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.BrowseSupervisorClassViewModel.SalespersonName">
+            <summary>
+            营销人员名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.BrowseSupervisorClassViewModel.SupervisorStudents">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.CreateSupervisorClassViewModel.Name">
+            <summary>
+            班级名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.CreateSupervisorClassViewModel.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.CreateSupervisorClassViewModel.ProductPackageId">
+            <summary>
+            产品包id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.CreateSupervisorClassViewModel.ProductPackageName">
+            <summary>
+            产品包名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.CreateSupervisorClassViewModel.ProductId">
+            <summary>
+            产品id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.CreateSupervisorClassViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.CreateSupervisorClassViewModel.SalespersonId">
+            <summary>
+            营销人员Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.CreateSupervisorClassViewModel.SalespersonName">
+            <summary>
+            营销人员名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.SupervisorClassQueryViewModel.Name">
+            <summary>
+            班级名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.SupervisorClassQueryViewModel.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.SupervisorClassQueryViewModel.ProductId">
+            <summary>
+            产品id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.SupervisorClassQueryViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.SupervisorClassQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.SupervisorClassQueryListViewModel.Name">
+            <summary>
+            班级名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.SupervisorClassQueryListViewModel.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.SupervisorClassQueryListViewModel.ProductPackageId">
+            <summary>
+            产品包id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.SupervisorClassQueryListViewModel.ProductPackageName">
+            <summary>
+            产品包名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.SupervisorClassQueryListViewModel.ProductId">
+            <summary>
+            产品id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.SupervisorClassQueryListViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.SupervisorClassQueryListViewModel.SalespersonId">
+            <summary>
+            营销人员Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.SupervisorClassQueryListViewModel.SalespersonName">
+            <summary>
+            营销人员名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.SupervisorClassQueryListViewModel.SupervisorStudents">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.UpdateSupervisorClassViewModel.Name">
+            <summary>
+            班级名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.UpdateSupervisorClassViewModel.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.UpdateSupervisorClassViewModel.ProductPackageId">
+            <summary>
+            产品包id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.UpdateSupervisorClassViewModel.ProductPackageName">
+            <summary>
+            产品包名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.UpdateSupervisorClassViewModel.ProductId">
+            <summary>
+            产品id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.UpdateSupervisorClassViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.UpdateSupervisorClassViewModel.SalespersonId">
+            <summary>
+            营销人员Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorClass.UpdateSupervisorClassViewModel.SalespersonName">
+            <summary>
+            营销人员名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.BrowseSupervisorStudentViewModel.SupervisorClassId">
+            <summary>
+            督学班级id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.BrowseSupervisorStudentViewModel.RegisterUserId">
+            <summary>
+            注册用户id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.BrowseSupervisorStudentViewModel.Name">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.BrowseSupervisorStudentViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.BrowseSupervisorStudentViewModel.MaxProgress">
+            <summary>
+            最大听课时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.BrowseSupervisorStudentViewModel.CourseDuration">
+            <summary>
+            总时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.BrowseSupervisorStudentViewModel.IsEndCourseCount">
+            <summary>
+            已学完课程数
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.BrowseSupervisorStudentViewModel.CourseCount">
+            <summary>
+            课程数
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.BrowseSupervisorStudentViewModel.LastLearnTime">
+            <summary>
+            最近学习时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.BrowseSupervisorStudentViewModel.StatisticsTime">
+            <summary>
+            统计时间 （每一天只统计一次）
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.CreateSupervisorStudentViewModel.SupervisorClassId">
+            <summary>
+            督学班级id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.CreateSupervisorStudentViewModel.RegisterUserId">
+            <summary>
+            注册用户id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.CreateSupervisorStudentViewModel.Name">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.CreateSupervisorStudentViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.SupervisorStudentQueryViewModel.SupervisorClassId">
+            <summary>
+            督学班级id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.SupervisorStudentQueryViewModel.PhoneOrNickName">
+            <summary>
+            手机号/用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.SupervisorStudentQueryViewModel.MinLearnTime">
+            <summary>
+            上次学习开始时间最小值
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.SupervisorStudentQueryViewModel.MaxLearnTime">
+            <summary>
+            上次学习结束时间最大值
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.SupervisorStudentQueryViewModel.MinLearnIntervalDays">
+            <summary>
+            距上次时隔天数最小值
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.SupervisorStudentQueryViewModel.MaxLearnIntervalDays">
+            <summary>
+            距上次时隔天数最大值
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.SupervisorStudentQueryViewModel.MinCourseRatio">
+            <summary>
+            最小课程学习进度
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.SupervisorStudentQueryViewModel.MaxCourseRatio">
+            <summary>
+            最大课程学习进度
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.SupervisorStudentQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.SupervisorStudentQueryListViewModel.SupervisorClassId">
+            <summary>
+            督学班级id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.SupervisorStudentQueryListViewModel.RegisterUserId">
+            <summary>
+            注册用户id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.SupervisorStudentQueryListViewModel.Name">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.SupervisorStudentQueryListViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.SupervisorStudentQueryListViewModel.MaxProgress">
+            <summary>
+            最大听课时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.SupervisorStudentQueryListViewModel.CourseDuration">
+            <summary>
+            总时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.SupervisorStudentQueryListViewModel.CourseRatio">
+            <summary>
+            总学习进度
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.SupervisorStudentQueryListViewModel.IsEndCourseCount">
+            <summary>
+            已学完课程数
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.SupervisorStudentQueryListViewModel.CourseCount">
+            <summary>
+            课程数
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.SupervisorStudentQueryListViewModel.LastLearnTime">
+            <summary>
+            最近学习时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.SupervisorStudentQueryListViewModel.LastLearnIntervalDays">
+            <summary>
+            最近学习间隔天数
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.UpdateSupervisorStudentViewModel.SupervisorClassId">
+            <summary>
+            督学班级id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.UpdateSupervisorStudentViewModel.RegisterUserId">
+            <summary>
+            注册用户id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.UpdateSupervisorStudentViewModel.Name">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.ProductService.Application.ViewModels.SupervisorStudent.UpdateSupervisorStudentViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="T:HaoKao.PackageService.Application.Profiles.PackageProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.PackageService.Application.Profiles.PackageProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.PackageService.Application.Profiles.PackageProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\HaoKao.SalespersonService.Infrastructure\HaoKao.SalespersonService.Infrastructure.csproj" />
+    <ProjectReference Include="..\HaoKao.SalespersonService.Application\HaoKao.SalespersonService.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Girvs.Swagger" Version="9.0.5.3" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+</Project>

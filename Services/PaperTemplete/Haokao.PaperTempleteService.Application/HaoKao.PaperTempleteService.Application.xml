@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.PaperTempleteService.Application</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.PaperTempleteService.Application.Services.IPaperTempleteService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.PaperTempleteService.Application.Services.IPaperTempleteService.Get(HaoKao.PaperTempleteService.Application.ViewModels.PaperTempleteQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.PaperTempleteService.Application.Services.IPaperTempleteService.GetListBySubjectId(System.String)">
+            <summary>
+            根据查询获取列表
+            </summary>
+            <param name="subjectId">科目Id</param>
+        </member>
+        <member name="M:HaoKao.PaperTempleteService.Application.Services.IPaperTempleteService.Create(HaoKao.PaperTempleteService.Application.ViewModels.CreatePaperTempleteViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.PaperTempleteService.Application.Services.IPaperTempleteService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.PaperTempleteService.Application.Services.IPaperTempleteService.Update(System.Guid,HaoKao.PaperTempleteService.Application.ViewModels.UpdatePaperTempleteViewModel)">
+            <summary>
+            根据主键更新指定
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.PaperTempleteService.Application.Services.PaperTempleteService">
+            <summary>
+            接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.PaperTempleteService.Application.Services.PaperTempleteService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.PaperTempleteService.Domain.Repositories.IPaperTempleteRepository)">
+            <summary>
+            接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.PaperTempleteService.Application.Services.PaperTempleteService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.PaperTempleteService.Application.Services.PaperTempleteService.Get(HaoKao.PaperTempleteService.Application.ViewModels.PaperTempleteQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.PaperTempleteService.Application.Services.PaperTempleteService.GetListBySubjectId(System.String)">
+            <summary>
+            根据查询获取列表
+            </summary>
+            <param name="subjectId">科目Id</param>
+        </member>
+        <member name="M:HaoKao.PaperTempleteService.Application.Services.PaperTempleteService.Create(HaoKao.PaperTempleteService.Application.ViewModels.CreatePaperTempleteViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.PaperTempleteService.Application.Services.PaperTempleteService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.PaperTempleteService.Application.Services.PaperTempleteService.Update(System.Guid,HaoKao.PaperTempleteService.Application.ViewModels.UpdatePaperTempleteViewModel)">
+            <summary>
+            根据主键更新指定
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.PaperTempleteService.Application.Services.PaperTempleteService.UpdateStruct(System.Guid,HaoKao.PaperTempleteService.Application.ViewModels.UpdateTempleteStructViewModel)">
+            <summary>
+            根据主键更新模板结构
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Application.ViewModels.BrowsePaperTempleteViewModel.TempleteStructDatas">
+            <summary>
+            试卷模板名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Application.ViewModels.CreatePaperTempleteViewModel.Id">
+            <summary>
+            试卷模板Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Application.ViewModels.CreatePaperTempleteViewModel.TempleteName">
+            <summary>
+            试卷模板名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Application.ViewModels.CreatePaperTempleteViewModel.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Application.ViewModels.CreatePaperTempleteViewModel.SuitableSubjects">
+            <summary>
+            模板适用科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Application.ViewModels.PaperTempleteQueryViewModel.TempleteName">
+            <summary>
+            试卷模板名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Application.ViewModels.PaperTempleteQueryListViewModel.Id">
+            <summary>
+            试卷模板Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Application.ViewModels.PaperTempleteQueryListViewModel.TempleteName">
+            <summary>
+            试卷模板名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Application.ViewModels.PaperTempleteQueryListViewModel.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Application.ViewModels.PaperTempleteQueryListViewModel.SuitableSubjects">
+            <summary>
+            模板适用科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Application.ViewModels.UpdatePaperTempleteViewModel.TempleteName">
+            <summary>
+            试卷模板名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Application.ViewModels.UpdatePaperTempleteViewModel.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Application.ViewModels.UpdatePaperTempleteViewModel.SuitableSubjects">
+            <summary>
+            模板适用科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.PaperTempleteService.Application.ViewModels.UpdateTempleteStructViewModel.TempleteStructDatas">
+            <summary>
+            模板结构
+            </summary>
+        </member>
+    </members>
+</doc>

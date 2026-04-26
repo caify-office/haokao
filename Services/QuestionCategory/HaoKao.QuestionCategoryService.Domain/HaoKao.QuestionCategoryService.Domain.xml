@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.QuestionCategoryService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.QuestionCategoryService.Domain.Commands.CreateQuestionCategoryCommand">
+            <summary>
+            创建题库类别命令
+            </summary>
+            <param name="Name">类名名称</param>
+            <param name="Code">类别代码</param>
+            <param name="AdaptPlace">适应场景</param>
+            <param name="DisplayCondition">显示条件</param>
+            <param name="ProductPackageId">产品包Id(购买跳转对象)</param>
+            <param name="ProductPackageType">产品包类型</param>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Domain.Commands.CreateQuestionCategoryCommand.#ctor(System.String,System.String,HaoKao.QuestionCategoryService.Domain.Enums.AdaptPlace,HaoKao.QuestionCategoryService.Domain.Enums.DisplayConditionEnum,System.Guid,System.Nullable{HaoKao.QuestionCategoryService.Domain.Enums.ProductPackageType})">
+            <summary>
+            创建题库类别命令
+            </summary>
+            <param name="Name">类名名称</param>
+            <param name="Code">类别代码</param>
+            <param name="AdaptPlace">适应场景</param>
+            <param name="DisplayCondition">显示条件</param>
+            <param name="ProductPackageId">产品包Id(购买跳转对象)</param>
+            <param name="ProductPackageType">产品包类型</param>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Domain.Commands.CreateQuestionCategoryCommand.Name">
+            <summary>类名名称</summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Domain.Commands.CreateQuestionCategoryCommand.Code">
+            <summary>类别代码</summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Domain.Commands.CreateQuestionCategoryCommand.AdaptPlace">
+            <summary>适应场景</summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Domain.Commands.CreateQuestionCategoryCommand.DisplayCondition">
+            <summary>显示条件</summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Domain.Commands.CreateQuestionCategoryCommand.ProductPackageId">
+            <summary>产品包Id(购买跳转对象)</summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Domain.Commands.CreateQuestionCategoryCommand.ProductPackageType">
+            <summary>产品包类型</summary>
+        </member>
+        <member name="T:HaoKao.QuestionCategoryService.Domain.Commands.UpdateQuestionCategoryCommand">
+            <summary>
+            更新题库类别命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Name">类名名称</param>
+            <param name="Code">类别代码</param>
+            <param name="AdaptPlace">适应场景</param>
+            <param name="DisplayCondition">显示条件</param>
+            <param name="ProductPackageId">产品包Id(购买跳转对象)</param>
+            <param name="ProductPackageType">产品包类型</param>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Domain.Commands.UpdateQuestionCategoryCommand.#ctor(System.Guid,System.String,System.String,HaoKao.QuestionCategoryService.Domain.Enums.AdaptPlace,HaoKao.QuestionCategoryService.Domain.Enums.DisplayConditionEnum,System.Guid,System.Nullable{HaoKao.QuestionCategoryService.Domain.Enums.ProductPackageType})">
+            <summary>
+            更新题库类别命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Name">类名名称</param>
+            <param name="Code">类别代码</param>
+            <param name="AdaptPlace">适应场景</param>
+            <param name="DisplayCondition">显示条件</param>
+            <param name="ProductPackageId">产品包Id(购买跳转对象)</param>
+            <param name="ProductPackageType">产品包类型</param>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Domain.Commands.UpdateQuestionCategoryCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Domain.Commands.UpdateQuestionCategoryCommand.Name">
+            <summary>类名名称</summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Domain.Commands.UpdateQuestionCategoryCommand.Code">
+            <summary>类别代码</summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Domain.Commands.UpdateQuestionCategoryCommand.AdaptPlace">
+            <summary>适应场景</summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Domain.Commands.UpdateQuestionCategoryCommand.DisplayCondition">
+            <summary>显示条件</summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Domain.Commands.UpdateQuestionCategoryCommand.ProductPackageId">
+            <summary>产品包Id(购买跳转对象)</summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Domain.Commands.UpdateQuestionCategoryCommand.ProductPackageType">
+            <summary>产品包类型</summary>
+        </member>
+        <member name="T:HaoKao.QuestionCategoryService.Domain.Commands.DeleteQuestionCategoryCommand">
+            <summary>
+            删除题库类别命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Domain.Commands.DeleteQuestionCategoryCommand.#ctor(System.Guid)">
+            <summary>
+            删除题库类别命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Domain.Commands.DeleteQuestionCategoryCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.QuestionCategoryService.Domain.Entities.QuestionCategory">
+            <summary>
+            题库类别
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Domain.Entities.QuestionCategory.Name">
+            <summary>
+            类名名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Domain.Entities.QuestionCategory.AdaptPlace">
+            <summary>
+            适应场景
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Domain.Entities.QuestionCategory.Code">
+            <summary>
+            类别代码
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Domain.Entities.QuestionCategory.DisplayCondition">
+            <summary>
+            显示条件
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Domain.Entities.QuestionCategory.ProductPackageId">
+            <summary>
+            产品包Id(购买跳转对象)
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Domain.Entities.QuestionCategory.ProductPackageType">
+            <summary>
+            产品包类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Domain.Entities.QuestionCategory.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Domain.Entities.QuestionCategory.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.QuestionCategoryService.Domain.Enums.AdaptPlace">
+            <summary>
+            适应场景
+            </summary>
+        </member>
+        <member name="F:HaoKao.QuestionCategoryService.Domain.Enums.AdaptPlace.Question">
+            <summary>
+            试题
+            </summary>
+        </member>
+        <member name="F:HaoKao.QuestionCategoryService.Domain.Enums.AdaptPlace.Paper">
+            <summary>
+            试卷
+            </summary>
+        </member>
+        <member name="F:HaoKao.QuestionCategoryService.Domain.Enums.AdaptPlace.All">
+            <summary>
+            所有
+            </summary>
+        </member>
+        <member name="T:HaoKao.QuestionCategoryService.Domain.Enums.DisplayConditionEnum">
+            <summary>
+            显示条件
+            </summary>
+        </member>
+        <member name="F:HaoKao.QuestionCategoryService.Domain.Enums.DisplayConditionEnum.AlwaysShow">
+            <summary>
+            总是显示
+            </summary>
+        </member>
+        <member name="F:HaoKao.QuestionCategoryService.Domain.Enums.DisplayConditionEnum.AlwaysHide">
+            <summary>
+            总是隐藏
+            </summary>
+        </member>
+        <member name="F:HaoKao.QuestionCategoryService.Domain.Enums.DisplayConditionEnum.WhenHasPermission">
+            <summary>
+            有权限时显示
+            </summary>
+        </member>
+        <member name="F:HaoKao.QuestionCategoryService.Domain.Enums.ProductPackageType.QuestionBank">
+            <summary>
+            题库
+            </summary>
+        </member>
+        <member name="F:HaoKao.QuestionCategoryService.Domain.Enums.ProductPackageType.Course">
+            <summary>
+            课程
+            </summary>
+        </member>
+        <member name="F:HaoKao.QuestionCategoryService.Domain.Enums.ProductPackageType.Material">
+            <summary>
+            资料
+            </summary>
+        </member>
+        <member name="F:HaoKao.QuestionCategoryService.Domain.Enums.ProductPackageType.Live">
+            <summary>
+            直播
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Domain.Queries.QuestionCategoryQuery.AdaptPlace">
+            <summary>
+            适应场景
+            </summary>
+        </member>
+    </members>
+</doc>

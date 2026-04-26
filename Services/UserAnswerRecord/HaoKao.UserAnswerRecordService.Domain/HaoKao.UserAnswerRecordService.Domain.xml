@@ -1,0 +1,1799 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.UserAnswerRecordService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.UserAnswerRecordService.Domain.AutoMapper.UserAnswerRecordProfile">
+            <summary>
+            作答记录映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.AutoMapper.UserAnswerRecordProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.AutoMapper.UserAnswerRecordProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateChapterAnswerRecordCommand">
+            <summary>
+            创建章节答题记录命令
+            </summary>
+            <param name="SubjectId">科目Id</param>
+            <param name="CategoryId">类别Id</param>
+            <param name="ChapterId">章节Id</param>
+            <param name="SectionId">小节Id</param>
+            <param name="KnowledgePointId">知识点Id</param>
+            <param name="CreatorId">用户Id</param>
+            <param name="CreateTime">提交时间</param>
+            <param name="AnswerRecord">作答记录</param>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateChapterAnswerRecordCommand.#ctor(System.Guid,System.Guid,System.Guid,System.Guid,System.Guid,System.Guid,System.DateTime,HaoKao.UserAnswerRecordService.Domain.Entities.AnswerRecord)">
+            <summary>
+            创建章节答题记录命令
+            </summary>
+            <param name="SubjectId">科目Id</param>
+            <param name="CategoryId">类别Id</param>
+            <param name="ChapterId">章节Id</param>
+            <param name="SectionId">小节Id</param>
+            <param name="KnowledgePointId">知识点Id</param>
+            <param name="CreatorId">用户Id</param>
+            <param name="CreateTime">提交时间</param>
+            <param name="AnswerRecord">作答记录</param>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateChapterAnswerRecordCommand.SubjectId">
+            <summary>科目Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateChapterAnswerRecordCommand.CategoryId">
+            <summary>类别Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateChapterAnswerRecordCommand.ChapterId">
+            <summary>章节Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateChapterAnswerRecordCommand.SectionId">
+            <summary>小节Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateChapterAnswerRecordCommand.KnowledgePointId">
+            <summary>知识点Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateChapterAnswerRecordCommand.CreatorId">
+            <summary>用户Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateChapterAnswerRecordCommand.CreateTime">
+            <summary>提交时间</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateChapterAnswerRecordCommand.AnswerRecord">
+            <summary>作答记录</summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreatePaperAnswerRecordCommand">
+            <summary>
+            创建试卷作答记录命令
+            </summary>
+            <param name="SubjectId">科目Id</param>
+            <param name="CategoryId">类别Id</param>
+            <param name="PaperId">试卷Id</param>
+            <param name="UserScore">用户得分</param>
+            <param name="PassingScore">及格分</param>
+            <param name="TotalScore">总分</param>
+            <param name="CreatorId">用户Id</param>
+            <param name="CreateTime">提交时间</param>
+            <param name="ElapsedTime">耗时(秒)</param>
+            <param name="AnswerRecord">作答记录</param>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreatePaperAnswerRecordCommand.#ctor(System.Guid,System.Guid,System.Guid,System.Guid,System.DateTime,System.Decimal,System.Decimal,System.Decimal,System.Int64,HaoKao.UserAnswerRecordService.Domain.Entities.AnswerRecord)">
+            <summary>
+            创建试卷作答记录命令
+            </summary>
+            <param name="SubjectId">科目Id</param>
+            <param name="CategoryId">类别Id</param>
+            <param name="PaperId">试卷Id</param>
+            <param name="UserScore">用户得分</param>
+            <param name="PassingScore">及格分</param>
+            <param name="TotalScore">总分</param>
+            <param name="CreatorId">用户Id</param>
+            <param name="CreateTime">提交时间</param>
+            <param name="ElapsedTime">耗时(秒)</param>
+            <param name="AnswerRecord">作答记录</param>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreatePaperAnswerRecordCommand.SubjectId">
+            <summary>科目Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreatePaperAnswerRecordCommand.CategoryId">
+            <summary>类别Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreatePaperAnswerRecordCommand.PaperId">
+            <summary>试卷Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreatePaperAnswerRecordCommand.CreatorId">
+            <summary>用户Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreatePaperAnswerRecordCommand.CreateTime">
+            <summary>提交时间</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreatePaperAnswerRecordCommand.UserScore">
+            <summary>用户得分</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreatePaperAnswerRecordCommand.PassingScore">
+            <summary>及格分</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreatePaperAnswerRecordCommand.TotalScore">
+            <summary>总分</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreatePaperAnswerRecordCommand.ElapsedTime">
+            <summary>耗时(秒)</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreatePaperAnswerRecordCommand.AnswerRecord">
+            <summary>作答记录</summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateDateAnswerRecordCommand">
+            <summary>
+            创建日期相关作答记录命令
+            </summary>
+            <param name="SubjectId">科目Id</param>
+            <param name="Type">类别</param>
+            <param name="Date">日期</param>
+            <param name="CreatorId">用户Id</param>
+            <param name="CreateTime">提交时间</param>
+            <param name="AnswerRecord">作答记录</param>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateDateAnswerRecordCommand.#ctor(System.Guid,System.Guid,System.DateTime,System.DateOnly,HaoKao.Common.Enums.SubmitAnswerType,HaoKao.UserAnswerRecordService.Domain.Entities.AnswerRecord)">
+            <summary>
+            创建日期相关作答记录命令
+            </summary>
+            <param name="SubjectId">科目Id</param>
+            <param name="Type">类别</param>
+            <param name="Date">日期</param>
+            <param name="CreatorId">用户Id</param>
+            <param name="CreateTime">提交时间</param>
+            <param name="AnswerRecord">作答记录</param>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateDateAnswerRecordCommand.SubjectId">
+            <summary>科目Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateDateAnswerRecordCommand.CreatorId">
+            <summary>用户Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateDateAnswerRecordCommand.CreateTime">
+            <summary>提交时间</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateDateAnswerRecordCommand.Date">
+            <summary>日期</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateDateAnswerRecordCommand.Type">
+            <summary>类别</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateDateAnswerRecordCommand.AnswerRecord">
+            <summary>作答记录</summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateElapsedTimeRecordCommand">
+            <summary>
+            创建做题耗时记录
+            </summary>
+            <param name="SubjectId">科目Id</param>
+            <param name="TargetId">目标Id</param>
+            <param name="ProductId">产品Id</param>
+            <param name="Type">作答类型</param>
+            <param name="QuestionCount">总题数</param>
+            <param name="AnswerCount">答题数</param>
+            <param name="CorrectCount">正确数</param>
+            <param name="ElapsedSeconds">耗时(秒)</param>
+            <param name="CreatorId">用户Id</param>
+            <param name="CreateTime">做题时间</param>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateElapsedTimeRecordCommand.#ctor(System.Guid,System.Guid,System.Guid,HaoKao.Common.Enums.SubmitAnswerType,System.Int32,System.Int32,System.Int32,System.Int64,System.Guid,System.DateTime)">
+            <summary>
+            创建做题耗时记录
+            </summary>
+            <param name="SubjectId">科目Id</param>
+            <param name="TargetId">目标Id</param>
+            <param name="ProductId">产品Id</param>
+            <param name="Type">作答类型</param>
+            <param name="QuestionCount">总题数</param>
+            <param name="AnswerCount">答题数</param>
+            <param name="CorrectCount">正确数</param>
+            <param name="ElapsedSeconds">耗时(秒)</param>
+            <param name="CreatorId">用户Id</param>
+            <param name="CreateTime">做题时间</param>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateElapsedTimeRecordCommand.SubjectId">
+            <summary>科目Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateElapsedTimeRecordCommand.TargetId">
+            <summary>目标Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateElapsedTimeRecordCommand.ProductId">
+            <summary>产品Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateElapsedTimeRecordCommand.Type">
+            <summary>作答类型</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateElapsedTimeRecordCommand.QuestionCount">
+            <summary>总题数</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateElapsedTimeRecordCommand.AnswerCount">
+            <summary>答题数</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateElapsedTimeRecordCommand.CorrectCount">
+            <summary>正确数</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateElapsedTimeRecordCommand.ElapsedSeconds">
+            <summary>耗时(秒)</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateElapsedTimeRecordCommand.CreatorId">
+            <summary>用户Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateElapsedTimeRecordCommand.CreateTime">
+            <summary>做题时间</summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductChapterAnswerRecordCommand">
+            <summary>
+            创建产品章节作答记录
+            </summary>
+            <param name="ProductId">产品Id</param>
+            <param name="SubjectId">科目Id</param>
+            <param name="ChapterId">章节Id</param>
+            <param name="SectionId">小节Id</param>
+            <param name="KnowledgePointId">知识点Id</param>
+            <param name="CreatorId">用户Id</param>
+            <param name="CreateTime">提交时间</param>
+            <param name="AnswerRecord">作答记录</param>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductChapterAnswerRecordCommand.#ctor(System.Guid,System.Guid,System.Guid,System.Guid,System.Guid,System.Guid,System.DateTime,HaoKao.UserAnswerRecordService.Domain.Entities.AnswerRecord)">
+            <summary>
+            创建产品章节作答记录
+            </summary>
+            <param name="ProductId">产品Id</param>
+            <param name="SubjectId">科目Id</param>
+            <param name="ChapterId">章节Id</param>
+            <param name="SectionId">小节Id</param>
+            <param name="KnowledgePointId">知识点Id</param>
+            <param name="CreatorId">用户Id</param>
+            <param name="CreateTime">提交时间</param>
+            <param name="AnswerRecord">作答记录</param>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductChapterAnswerRecordCommand.ProductId">
+            <summary>产品Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductChapterAnswerRecordCommand.SubjectId">
+            <summary>科目Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductChapterAnswerRecordCommand.ChapterId">
+            <summary>章节Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductChapterAnswerRecordCommand.SectionId">
+            <summary>小节Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductChapterAnswerRecordCommand.KnowledgePointId">
+            <summary>知识点Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductChapterAnswerRecordCommand.CreatorId">
+            <summary>用户Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductChapterAnswerRecordCommand.CreateTime">
+            <summary>提交时间</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductChapterAnswerRecordCommand.AnswerRecord">
+            <summary>作答记录</summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductPaperAnswerRecordCommand">
+            <summary>
+            创建产品试卷作答记录
+            </summary>
+            <param name="ProductId">产品Id</param>
+            <param name="SubjectId">科目Id</param>
+            <param name="PaperId">试卷Id</param>
+            <param name="UserScore">用户得分</param>
+            <param name="PassingScore">及格分数</param>
+            <param name="TotalScore">试卷总分</param>
+            <param name="CreatorId">用户Id</param>
+            <param name="CreateTime">提交时间</param>
+            <param name="AnswerRecord">作答记录</param>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductPaperAnswerRecordCommand.#ctor(System.Guid,System.Guid,System.Guid,System.Decimal,System.Decimal,System.Decimal,System.Guid,System.DateTime,HaoKao.UserAnswerRecordService.Domain.Entities.AnswerRecord)">
+            <summary>
+            创建产品试卷作答记录
+            </summary>
+            <param name="ProductId">产品Id</param>
+            <param name="SubjectId">科目Id</param>
+            <param name="PaperId">试卷Id</param>
+            <param name="UserScore">用户得分</param>
+            <param name="PassingScore">及格分数</param>
+            <param name="TotalScore">试卷总分</param>
+            <param name="CreatorId">用户Id</param>
+            <param name="CreateTime">提交时间</param>
+            <param name="AnswerRecord">作答记录</param>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductPaperAnswerRecordCommand.ProductId">
+            <summary>产品Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductPaperAnswerRecordCommand.SubjectId">
+            <summary>科目Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductPaperAnswerRecordCommand.PaperId">
+            <summary>试卷Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductPaperAnswerRecordCommand.UserScore">
+            <summary>用户得分</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductPaperAnswerRecordCommand.PassingScore">
+            <summary>及格分数</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductPaperAnswerRecordCommand.TotalScore">
+            <summary>试卷总分</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductPaperAnswerRecordCommand.CreatorId">
+            <summary>用户Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductPaperAnswerRecordCommand.CreateTime">
+            <summary>提交时间</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductPaperAnswerRecordCommand.AnswerRecord">
+            <summary>作答记录</summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductKnowledgeAnswerRecordCommand">
+            <summary>
+            创建产品知识点作答记录
+            </summary>
+            <param name="ProductId">产品Id</param>
+            <param name="SubjectId">科目Id</param>
+            <param name="ChapterId">章节Id</param>
+            <param name="SectionId">小节Id</param>
+            <param name="KnowledgePointId">知识点Id</param>
+            <param name="CreatorId">用户Id</param>
+            <param name="CreateTime">提交时间</param>
+            <param name="ExamFrequency">考试频率</param>
+            <param name="AnswerRecord">作答记录</param>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductKnowledgeAnswerRecordCommand.#ctor(System.Guid,System.Guid,System.Guid,System.Guid,System.Guid,System.Guid,System.DateTime,HaoKao.Common.Enums.ExamFrequency,HaoKao.UserAnswerRecordService.Domain.Entities.AnswerRecord)">
+            <summary>
+            创建产品知识点作答记录
+            </summary>
+            <param name="ProductId">产品Id</param>
+            <param name="SubjectId">科目Id</param>
+            <param name="ChapterId">章节Id</param>
+            <param name="SectionId">小节Id</param>
+            <param name="KnowledgePointId">知识点Id</param>
+            <param name="CreatorId">用户Id</param>
+            <param name="CreateTime">提交时间</param>
+            <param name="ExamFrequency">考试频率</param>
+            <param name="AnswerRecord">作答记录</param>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductKnowledgeAnswerRecordCommand.ProductId">
+            <summary>产品Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductKnowledgeAnswerRecordCommand.SubjectId">
+            <summary>科目Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductKnowledgeAnswerRecordCommand.ChapterId">
+            <summary>章节Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductKnowledgeAnswerRecordCommand.SectionId">
+            <summary>小节Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductKnowledgeAnswerRecordCommand.KnowledgePointId">
+            <summary>知识点Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductKnowledgeAnswerRecordCommand.CreatorId">
+            <summary>用户Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductKnowledgeAnswerRecordCommand.CreateTime">
+            <summary>提交时间</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductKnowledgeAnswerRecordCommand.ExamFrequency">
+            <summary>考试频率</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateProductKnowledgeAnswerRecordCommand.AnswerRecord">
+            <summary>作答记录</summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateUserAnswerRecordCommand">
+            <summary>
+            创建用户答题记录命令
+            </summary>
+            <param name="SubjectId">科目Id</param>
+            <param name="CategoryId">分类Id</param>
+            <param name="RecordIdentifier">章节或试卷的Id</param>
+            <param name="RecordIdentifierName">章节或试卷的名称</param>
+            <param name="ElapsedTime">耗时</param>
+            <param name="PassingScore">及格分数</param>
+            <param name="TotalScore">试题总分</param>
+            <param name="AnswerCount">作答数</param>
+            <param name="CorrectCount">正确数</param>
+            <param name="AnswerType">答题类型</param>
+            <param name="CreateTime">作答时间</param>
+            <param name="CreatorId">学员Id</param>
+            <param name="RecordQuestions">试题作答记录</param>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateUserAnswerRecordCommand.#ctor(System.Guid,System.Guid,System.Guid,System.String,System.Int64,System.Decimal,System.Decimal,System.Int32,System.Int32,HaoKao.Common.Enums.SubmitAnswerType,System.DateTime,System.Guid,System.Collections.Generic.List{HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerQuestion})">
+            <summary>
+            创建用户答题记录命令
+            </summary>
+            <param name="SubjectId">科目Id</param>
+            <param name="CategoryId">分类Id</param>
+            <param name="RecordIdentifier">章节或试卷的Id</param>
+            <param name="RecordIdentifierName">章节或试卷的名称</param>
+            <param name="ElapsedTime">耗时</param>
+            <param name="PassingScore">及格分数</param>
+            <param name="TotalScore">试题总分</param>
+            <param name="AnswerCount">作答数</param>
+            <param name="CorrectCount">正确数</param>
+            <param name="AnswerType">答题类型</param>
+            <param name="CreateTime">作答时间</param>
+            <param name="CreatorId">学员Id</param>
+            <param name="RecordQuestions">试题作答记录</param>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateUserAnswerRecordCommand.SubjectId">
+            <summary>科目Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateUserAnswerRecordCommand.CategoryId">
+            <summary>分类Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateUserAnswerRecordCommand.RecordIdentifier">
+            <summary>章节或试卷的Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateUserAnswerRecordCommand.RecordIdentifierName">
+            <summary>章节或试卷的名称</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateUserAnswerRecordCommand.ElapsedTime">
+            <summary>耗时</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateUserAnswerRecordCommand.PassingScore">
+            <summary>及格分数</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateUserAnswerRecordCommand.TotalScore">
+            <summary>试题总分</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateUserAnswerRecordCommand.AnswerCount">
+            <summary>作答数</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateUserAnswerRecordCommand.CorrectCount">
+            <summary>正确数</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateUserAnswerRecordCommand.AnswerType">
+            <summary>答题类型</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateUserAnswerRecordCommand.CreateTime">
+            <summary>作答时间</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateUserAnswerRecordCommand.CreatorId">
+            <summary>学员Id</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Commands.EventCreateUserAnswerRecordCommand.RecordQuestions">
+            <summary>试题作答记录</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.AnswerRecord.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.AnswerRecord.QuestionCount">
+            <summary>
+            总题数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.AnswerRecord.AnswerCount">
+            <summary>
+            作答数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.AnswerRecord.CorrectCount">
+            <summary>
+            正确数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.AnswerRecord.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.AnswerRecord.CreateTime">
+            <summary>
+            答题时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.AnswerRecord.AnswerType">
+            <summary>
+            答题类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.AnswerRecord.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.AnswerRecord.Questions">
+            <summary>
+            作答试题
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.AnswerQuestion.RecordId">
+            <summary>
+            作答记录Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.AnswerQuestion.QuestionId">
+            <summary>
+            试题Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.AnswerQuestion.QuestionTypeId">
+            <summary>
+            试题类型Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.AnswerQuestion.UserAnswers">
+            <summary>
+            用户作答
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.AnswerQuestion.JudgeResult">
+            <summary>
+            判题结果
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.AnswerQuestion.WhetherMark">
+            <summary>
+            是否标记
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.AnswerQuestion.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.AnswerQuestion.CreateTime">
+            <summary>
+            答题时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.AnswerQuestion.ParentId">
+            <summary>
+            试题父Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.AnswerQuestion.TenantId">
+            <summary>
+            租户ID
+            </summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswer">
+            <summary>
+            用户作答
+            </summary>
+            <param name="Content">回答内容</param>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswer.#ctor(System.String)">
+            <summary>
+            用户作答
+            </summary>
+            <param name="Content">回答内容</param>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswer.Content">
+            <summary>回答内容</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ChapterAnswerRecord.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ChapterAnswerRecord.CategoryId">
+            <summary>
+            分类Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ChapterAnswerRecord.ChapterId">
+            <summary>
+            章节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ChapterAnswerRecord.SectionId">
+            <summary>
+            小节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ChapterAnswerRecord.KnowledgePointId">
+            <summary>
+            知识点Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ChapterAnswerRecord.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ChapterAnswerRecord.CreateTime">
+            <summary>
+            答题时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ChapterAnswerRecord.AnswerRecordId">
+            <summary>
+            作答记录Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ChapterAnswerRecord.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ChapterAnswerRecord.AnswerRecord">
+            <summary>
+            答题记录
+            </summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Domain.Entities.ChapterRecordStat">
+            <summary>
+            章节答题统计
+            </summary>
+            <param name="ChapterCount">已练章节</param>
+            <param name="AnswerCount">答题数</param>
+            <param name="CorrectCount">正确题数</param>
+            <param name="QuestionCount">总题数</param>
+            <param name="ElapsedTime">总耗时</param>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Entities.ChapterRecordStat.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            章节答题统计
+            </summary>
+            <param name="ChapterCount">已练章节</param>
+            <param name="AnswerCount">答题数</param>
+            <param name="CorrectCount">正确题数</param>
+            <param name="QuestionCount">总题数</param>
+            <param name="ElapsedTime">总耗时</param>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ChapterRecordStat.ChapterCount">
+            <summary>已练章节</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ChapterRecordStat.AnswerCount">
+            <summary>答题数</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ChapterRecordStat.CorrectCount">
+            <summary>正确题数</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ChapterRecordStat.QuestionCount">
+            <summary>总题数</summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ChapterRecordStat.QuestionTime">
+            <summary>
+            每道题耗时
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ChapterRecordStat.CorrectRate">
+            <summary>
+            正确率
+            </summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Domain.Entities.DateAnswerRecord">
+            <summary>
+            日期相关答题记录
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.DateAnswerRecord.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.DateAnswerRecord.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.DateAnswerRecord.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.DateAnswerRecord.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.DateAnswerRecord.CreateTime">
+            <summary>
+            答题时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.DateAnswerRecord.AnswerRecordId">
+            <summary>
+            作答记录Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.DateAnswerRecord.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.DateAnswerRecord.AnswerRecord">
+            <summary>
+            答题记录
+            </summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Domain.Entities.ElapsedTimeRecord">
+            <summary>
+            记录用户做题时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ElapsedTimeRecord.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ElapsedTimeRecord.TargetId">
+            <summary>
+            目标Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ElapsedTimeRecord.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ElapsedTimeRecord.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ElapsedTimeRecord.QuestionCount">
+            <summary>
+            总题数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ElapsedTimeRecord.AnswerCount">
+            <summary>
+            作答数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ElapsedTimeRecord.CorrectCount">
+            <summary>
+            正确数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ElapsedTimeRecord.ElapsedSeconds">
+            <summary>
+            耗时(秒)
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ElapsedTimeRecord.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ElapsedTimeRecord.CreateTime">
+            <summary>
+            做题时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ElapsedTimeRecord.CreateDate">
+            <summary>
+            做题日期
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ElapsedTimeRecord.TenantId">
+            <summary>
+            租户ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.PaperAnswerRecord.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.PaperAnswerRecord.CategoryId">
+            <summary>
+            分类Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.PaperAnswerRecord.PaperId">
+            <summary>
+            试卷Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.PaperAnswerRecord.UserScore">
+            <summary>
+            用户得分
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.PaperAnswerRecord.PassingScore">
+            <summary>
+            及格分数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.PaperAnswerRecord.TotalScore">
+            <summary>
+            试题总分
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.PaperAnswerRecord.ElapsedTime">
+            <summary>
+            作答时长(秒)
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.PaperAnswerRecord.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.PaperAnswerRecord.CreateTime">
+            <summary>
+            答题时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.PaperAnswerRecord.AnswerRecordId">
+            <summary>
+            作答记录Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.PaperAnswerRecord.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.PaperAnswerRecord.AnswerRecord">
+            <summary>
+            答题记录
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductChapterAnswerRecord.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductChapterAnswerRecord.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductChapterAnswerRecord.ChapterId">
+            <summary>
+            章节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductChapterAnswerRecord.SectionId">
+            <summary>
+            小节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductChapterAnswerRecord.KnowledgePointId">
+            <summary>
+            知识点Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductChapterAnswerRecord.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductChapterAnswerRecord.CreateTime">
+            <summary>
+            答题时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductChapterAnswerRecord.CreateDate">
+            <summary>
+            答题日期
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductChapterAnswerRecord.AnswerRecordId">
+            <summary>
+            作答记录Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductChapterAnswerRecord.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductChapterAnswerRecord.AnswerRecord">
+            <summary>
+            答题记录
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductPaperAnswerRecord.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductPaperAnswerRecord.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductPaperAnswerRecord.PaperId">
+            <summary>
+            试卷Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductPaperAnswerRecord.UserScore">
+            <summary>
+            用户得分
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductPaperAnswerRecord.PassingScore">
+            <summary>
+            及格分数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductPaperAnswerRecord.TotalScore">
+            <summary>
+            试卷总分
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductPaperAnswerRecord.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductPaperAnswerRecord.CreateTime">
+            <summary>
+            答题时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductPaperAnswerRecord.CreateDate">
+            <summary>
+            答题日期
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductPaperAnswerRecord.AnswerRecordId">
+            <summary>
+            作答记录Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductPaperAnswerRecord.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductPaperAnswerRecord.AnswerRecord">
+            <summary>
+            答题记录
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductKnowledgeAnswerRecord.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductKnowledgeAnswerRecord.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductKnowledgeAnswerRecord.ChapterId">
+            <summary>
+            章节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductKnowledgeAnswerRecord.SectionId">
+            <summary>
+            小节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductKnowledgeAnswerRecord.KnowledgePointId">
+            <summary>
+            知识点Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductKnowledgeAnswerRecord.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductKnowledgeAnswerRecord.CreateTime">
+            <summary>
+            答题时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductKnowledgeAnswerRecord.CreateDate">
+            <summary>
+            答题日期
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductKnowledgeAnswerRecord.CorrectRate">
+            <summary>
+            正确率
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductKnowledgeAnswerRecord.MasteryLevel">
+            <summary>
+            掌握程度
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductKnowledgeAnswerRecord.ExamFrequency">
+            <summary>
+            考试频率
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductKnowledgeAnswerRecord.AnswerRecordId">
+            <summary>
+            作答记录Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductKnowledgeAnswerRecord.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.ProductKnowledgeAnswerRecord.AnswerRecord">
+            <summary>
+            答题记录
+            </summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Domain.Entities.MasteryLevel">
+            <summary>
+            掌握程度
+            </summary>
+        </member>
+        <member name="F:HaoKao.UserAnswerRecordService.Domain.Entities.MasteryLevel.NotMastered">
+            <summary>
+            未掌握
+            </summary>
+        </member>
+        <member name="F:HaoKao.UserAnswerRecordService.Domain.Entities.MasteryLevel.NeedsImprovement">
+            <summary>
+            待加强
+            </summary>
+        </member>
+        <member name="F:HaoKao.UserAnswerRecordService.Domain.Entities.MasteryLevel.Mastered">
+            <summary>
+            已掌握
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UnionAnswerRecord.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UnionAnswerRecord.RecordIdentifier">
+            <summary>
+            答题标识符 章节Id，或试卷Id，每日一练和消灭错题 为Guid.Empty
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UnionAnswerRecord.QuestionCategoryId">
+            <summary>
+            试题分类Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UnionAnswerRecord.CreateTime">
+            <summary>
+            答题时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UnionAnswerRecord.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UnionAnswerRecord.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UnionAnswerQuestion.UnionAnswerRecordId">
+            <summary>
+            答题记录Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UnionAnswerQuestion.QuestionId">
+            <summary>
+            试题Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UnionAnswerQuestion.QuestionTypeId">
+            <summary>
+            试题类型Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UnionAnswerQuestion.ParentId">
+            <summary>
+            试题父Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UnionAnswerQuestion.JudgeResult">
+            <summary>
+            判题结果
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UnionAnswerQuestion.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerQuestion">
+            <summary>
+            答题记录试题表
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerQuestion.UserAnswerRecordId">
+            <summary>
+            答题记录Id(外键)
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerQuestion.QuestionId">
+            <summary>
+            试题Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerQuestion.ParentId">
+            <summary>
+            试题父Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerQuestion.QuestionTypeId">
+            <summary>
+            试题类型Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerQuestion.UserScore">
+            <summary>
+            用户得分
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerQuestion.JudgeResult">
+            <summary>
+            判题结果
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerQuestion.WhetherMark">
+            <summary>
+            是否标记
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerQuestion.TenantId">
+            <summary>
+            租户ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerQuestion.QuestionOptions">
+            <summary>
+            用户作答
+            </summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerRecord">
+            <summary>
+            答题记录
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerRecord.AnswerType">
+            <summary>
+            答题类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerRecord.RecordIdentifier">
+            <summary>
+            答题标识符 章节Id，或试卷Id，每日一练和消灭错题 为Guid.Empty
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerRecord.RecordIdentifierName">
+            <summary>
+            标识符名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerRecord.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerRecord.QuestionCategoryId">
+            <summary>
+            试题分类Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerRecord.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerRecord.UserScore">
+            <summary>
+            用户得分
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerRecord.PassingScore">
+            <summary>
+            及格分数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerRecord.TotalScore">
+            <summary>
+            试题总分
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerRecord.ElapsedTime">
+            <summary>
+            耗时
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerRecord.QuestionCount">
+            <summary>
+            总题数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerRecord.AnswerCount">
+            <summary>
+            作答数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerRecord.CorrectCount">
+            <summary>
+            正确数
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerRecord.CreateTime">
+            <summary>
+            答题时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerRecord.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerRecord.RecordQuestions">
+            <summary>
+            答题记录明细
+            </summary>
+        </member>
+        <member name="T:HaoKao.UserAnswerRecordService.Domain.Entities.UserQuestionOption">
+            <summary>
+            用户答题的选项或内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserQuestionOption.OptionId">
+            <summary>
+            选项Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserQuestionOption.OptionContent">
+            <summary>
+            回答内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Entities.UserQuestionOption.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Extensions.UserAnswerCacheDefaults.EntityTypeName">
+            <summary>
+            获取缓存键中使用的实体类型名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Extensions.UserAnswerCacheDefaults.RefreshPrefix">
+            <summary>
+            统计刷新相关前缀
+            </summary>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Extensions.UserAnswerCacheDefaults.Refresh(System.Guid)">
+            <summary>
+            统计刷新相关缓存键
+            </summary>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Extensions.UserAnswerCacheDefaults.Statistics(System.Guid)">
+            <summary>
+            统计结果相关缓存键
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Extensions.UserAnswerCacheDefaults.ById">
+            <summary>
+            通过租户标识符获取缓存实体的键
+            </summary>
+            <remarks>
+            {0} : entity id
+            </remarks>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Extensions.UserAnswerCacheDefaults.Prefix">
+            <summary>
+            通过租户标识符获取缓存实体的键
+            </summary>
+            <remarks>
+            {0} : entity id
+            </remarks>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Extensions.UserAnswerCacheDefaults.ListPrefix">
+            <summary>
+            通过租户标识符获取缓存实体的键
+            </summary>
+            <remarks>
+            {0} : entity id
+            </remarks>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Extensions.UserAnswerCacheDefaults.ListOther">
+            <summary>
+            通过租户标识符获取缓存实体的键
+            </summary>
+            <remarks>
+            {0} : entity id
+            </remarks>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Extensions.UserAnswerCacheDefaults.ListQuery">
+            <summary>
+            通过租户标识符获取缓存实体的键
+            </summary>
+            <remarks>
+            {0} : entity id
+            </remarks>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Extensions.UserAnswerCacheDefaults.BuideCustomize(System.String)">
+            <summary>
+            创建自定义的缓存键
+            </summary>
+            <param name="key">自定义缓存键</param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Queries.ProductKnowledgeAnswerRecordQuery.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Queries.ProductKnowledgeAnswerRecordQuery.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Queries.ProductKnowledgeAnswerRecordQuery.ChapterId">
+            <summary>
+            章节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Queries.ProductKnowledgeAnswerRecordQuery.SectionId">
+            <summary>
+            小节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Queries.ProductKnowledgeAnswerRecordQuery.MasteryLevel">
+            <summary>
+            掌握程度
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Queries.ProductKnowledgeAnswerRecordQuery.KnowledgePointIds">
+            <summary>
+            知识点Ids
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Queries.ProductKnowledgeAnswerRecordQuery.KnowledgePointIdsCacheKey">
+            <summary>
+            知识点Ids缓存Key
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Queries.ProductKnowledgeAnswerRecordQuery.CreatorId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Queries.UserAnswerRecordQuery.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Queries.UserAnswerRecordQuery.QuestionCategoryId">
+            <summary>
+            试题分类Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Queries.UserAnswerRecordQuery.AnswerType">
+            <summary>
+            答题类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Queries.UserAnswerRecordQuery.RecordIdentifier">
+            <summary>
+            答题标识符 章节Id，或试卷Id，每日一练和消灭错题 为Guid.Empty
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Queries.UserAnswerRecordQuery.RecordIdentifierMd5">
+            <summary>
+            解决List对象的缓存问题
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Queries.UserAnswerRecordQuery.StartDateTime">
+            <summary>
+            答题开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Queries.UserAnswerRecordQuery.EndDateTime">
+            <summary>
+            答题结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.UserAnswerRecordService.Domain.Queries.UserAnswerRecordQuery.UserId">
+            <summary>
+            创建者Id
+            </summary>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IChapterAnswerRecordRepository.GetById(System.Guid)">
+            <summary>
+            按Id获取记录详情
+            </summary>
+            <param name="id">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IChapterAnswerRecordRepository.GetByChapterId(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            获取章节记录
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="categoryId">分类Id</param>
+            <param name="chapterId">章节Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IChapterAnswerRecordRepository.GetBySectionId(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            获取小节记录
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="categoryId">分类Id</param>
+            <param name="sectionId">小节Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IChapterAnswerRecordRepository.GetByKnowledgePointId(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            获取知识点记录
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="categoryId">分类Id</param>
+            <param name="knowledgePointId">知识点Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IChapterAnswerRecordRepository.GetChapterList(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            获取章节列表
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="categoryId">类别Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IChapterAnswerRecordRepository.GetSectionList(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            获取小节列表
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="categoryId">类别Id</param>
+            <param name="chapterId">章节Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IChapterAnswerRecordRepository.GetKnowledgePointList(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            获取知识点列表
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="categoryId">类别Id</param>
+            <param name="sectionId">小节Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IChapterAnswerRecordRepository.GetChapterRecordStat(System.Guid,System.Guid)">
+            <summary>
+            查询用户在当前科目下的章节练习统计信息
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IDateAnswerRecordRepository.GetById(System.Guid)">
+            <summary>
+            按Id获取记录详情
+            </summary>
+            <param name="id">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IDateAnswerRecordRepository.GetTodayTaskRecord(System.Guid,System.Guid)">
+            <summary>
+            获取今日任务记录
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IDateAnswerRecordRepository.GetDailyRecord(System.Guid,System.Guid)">
+            <summary>
+            获取每日打卡记录
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IDateAnswerRecordRepository.GetDailyRecordList(System.Guid,System.Guid,System.DateOnly)">
+            <summary>
+            获取每日打卡记录(月)
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="subjectId">科目Id</param>
+            <param name="date">日期</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IDateAnswerRecordRepository.GetDailyRankingRatio(System.Guid,System.Guid,System.DateOnly)">
+            <summary>
+            获取每日打卡排名占比(月)
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="subjectId">科目Id</param>
+            <param name="date">日期</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IDateAnswerRecordRepository.GetDailyUserCount(System.Guid)">
+            <summary>
+            每日一题打卡人数统计
+            </summary>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IDateAnswerRecordRepository.Exist(System.Guid,System.Guid,System.DateOnly,HaoKao.Common.Enums.SubmitAnswerType)">
+            <summary>
+            判断用户是否已打卡
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="subjectId">科目Id</param>
+            <param name="date">日期</param>
+            <param name="type">类别</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IElapsedTimeRecordRepository.GetChapterElapsedTime(System.Guid,System.Guid)">
+            <summary>
+            获取用户章节做题时间
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IElapsedTimeRecordRepository.GetDateElaspedTime(System.Guid,System.Guid,System.Guid,System.DateOnly,System.DateOnly)">
+            <summary>
+            按日期统计做题时长
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="productId">产品Id</param>
+            <param name="subjectId">科目Id</param>
+            <param name="startDate">开始日期</param>
+            <param name="endDate">结束日期</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IPaperAnswerRecordRepository.GetById(System.Guid)">
+            <summary>
+            按Id获取记录详情
+            </summary>
+            <param name="id">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IPaperAnswerRecordRepository.GetPaperList(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            获取试卷列表
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="subjectId">科目Id</param>
+            <param name="categoryId">类别Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IPaperAnswerRecordRepository.GetPaperList(System.Guid,System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            获取试卷列表
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="paperIds">试卷Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IPaperAnswerRecordRepository.GetPaperUserCount(System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            查询每份试卷有多少用户作答过
+            </summary>
+            <param name="paperIds">试卷Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IProductChapterAnswerRecordRepository.GetById(System.Guid)">
+            <summary>
+            按Id获取记录详情
+            </summary>
+            <param name="id">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IProductChapterAnswerRecordRepository.GetChapterRecordIds(System.Guid,System.Guid,System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            获取章节作答记录Ids
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="productId">产品Id</param>
+            <param name="chapterIds">试卷Ids</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IProductChapterAnswerRecordRepository.GetSubjectAnswerStat(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            获取科目作答统计(做题数,正确数和总数)
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="productId">产品Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IProductPaperAnswerRecordRepository.GetById(System.Guid)">
+            <summary>
+            按Id获取记录详情
+            </summary>
+            <param name="id">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IProductPaperAnswerRecordRepository.GetPaperRecordIds(System.Guid,System.Guid,System.Collections.Generic.IReadOnlyList{System.Guid})">
+            <summary>
+            获取试卷作答记录Ids
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="productId">产品Id</param>
+            <param name="paperIds">试卷Ids</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IProductPaperAnswerRecordRepository.GetSubjectAnswerStat(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            获取科目作答统计(做题数,正确数和总数)
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="productId">产品Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IProductKnowledgeAnswerRecordRepository.GetById(System.Guid)">
+            <summary>
+            按Id获取记录详情
+            </summary>
+            <param name="id">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IProductKnowledgeAnswerRecordRepository.GetKnowledgePointList(HaoKao.UserAnswerRecordService.Domain.Queries.ProductKnowledgeAnswerRecordQuery)">
+            <summary>
+            获取章节知识点作答记录
+            </summary>
+            <param name="query">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IProductKnowledgeAnswerRecordRepository.GetKnowledgeMasteryStat(HaoKao.UserAnswerRecordService.Domain.Queries.ProductKnowledgeAnswerRecordQuery)">
+            <summary>
+            获取知识点掌握情况
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IProductKnowledgeAnswerRecordRepository.GetSubjectAnswerStat(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            获取科目作答统计(做题数,正确数和总数)
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="productId">产品Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IProductKnowledgeAnswerRecordRepository.GetExamFrequencyMastery(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            获取考试频率掌握情况
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="productId">产品Id</param>
+            <param name="subjectId">科目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IUserAnswerRecordRepository.GetPaperAnswerCountDict(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            查询试卷作答参与人数
+            </summary>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IUserAnswerRecordRepository.GetUserLatestRecordId(System.Guid)">
+            <summary>
+            读取当前用户的最新作答记录
+            </summary>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IUserAnswerRecordRepository.GetByIdIncludeDetail(System.Guid)">
+            <summary>
+            按Id查询记录和详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IUserAnswerRecordRepository.GetPunchInRecordList(System.Guid,System.DateOnly)">
+            <summary>
+            查询用户本月打卡记录
+            </summary>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IUserAnswerRecordRepository.GetPunchInRankingRatio(System.Linq.Expressions.Expression{System.Func{HaoKao.UserAnswerRecordService.Domain.Entities.UserAnswerRecord,System.Boolean}})">
+            <summary>
+            查询用户每日打卡超过比例
+            </summary>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IUserAnswerRecordRepository.GetJoinPunchInPeopleNumber(System.Guid)">
+            <summary>
+            每日一题打卡人数统计
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IUserAnswerRecordRepository.GetPaperUserAnswerRecordCount(System.Guid[])">
+            <summary>
+            获取试卷的答题总人数
+            </summary>
+            <param name="paperIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IUserAnswerRecordRepository.GetCurrentUserPaperScore(System.Guid[])">
+            <summary>
+            获取当前用户的试卷得分
+            </summary>
+            <param name="paperIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IUserAnswerRecordRepository.GetChapterRecordStat(System.Guid)">
+            <summary>
+            查询App首页章节试题统计
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IUserAnswerRecordRepository.GetTodayTaskRecordId(System.Guid)">
+            <summary>
+            按科目查询今日任务的练习记录Id
+            </summary>
+            <param name="subject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IUserAnswerRecordRepository.QueryPracticeAbility(System.Guid)">
+            <summary>
+            按科目统计练习的能力维度(存储过程实现)
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IUserAnswerRecordRepository.QueryPracticeSpeed(System.Guid)">
+            <summary>
+            按科目统计练习速度(存储过程实现)
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IUserAnswerRecordRepository.QueryPracticeSituation(System.Guid)">
+            <summary>
+            按科目统计练习状况(存储过程实现)
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IUserAnswerRecordRepository.QueryAccuracyRank(System.Guid)">
+            <summary>
+            按科目查询准确率排名(存储过程实现)
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.UserAnswerRecordService.Domain.Repositories.IUserAnswerRecordRepository.QueryQuestionTypeAccuracy(System.Guid)">
+            <summary>
+            按科目统计用户不同题型的准确率(存储过程实现)
+            </summary>
+            <param name="subjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="F:HaoKao.UserAnswerRecordService.Domain.Repositories.PracticeAbilityDimension.CorrectNumeracy">
+            <summary>
+            计算能力
+            </summary>
+        </member>
+        <member name="F:HaoKao.UserAnswerRecordService.Domain.Repositories.PracticeAbilityDimension.CorrectMemory">
+            <summary>
+            记忆能力
+            </summary>
+        </member>
+        <member name="F:HaoKao.UserAnswerRecordService.Domain.Repositories.PracticeAbilityDimension.CorrectUnderstanding">
+            <summary>
+            理解能力
+            </summary>
+        </member>
+        <member name="F:HaoKao.UserAnswerRecordService.Domain.Repositories.PracticeAbilityDimension.CorrectJudgment">
+            <summary>
+            判断能力
+            </summary>
+        </member>
+        <member name="F:HaoKao.UserAnswerRecordService.Domain.Repositories.PracticeAbilityDimension.CorrectAnalytical">
+            <summary>
+            分析能力
+            </summary>
+        </member>
+        <member name="F:HaoKao.UserAnswerRecordService.Domain.Repositories.PracticeAbilityDimension.PracticeSpeed">
+            <summary>
+            练习速度
+            </summary>
+        </member>
+    </members>
+</doc>

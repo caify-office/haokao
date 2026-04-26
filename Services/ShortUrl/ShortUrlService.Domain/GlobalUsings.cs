@@ -1,0 +1,10 @@
+﻿global using FluentValidation;
+global using Girvs;
+global using Girvs.BusinessBasis;
+global using Girvs.BusinessBasis.UoW;
+global using Girvs.Cache.Caching;
+global using Girvs.Driven.Bus;
+global using Girvs.Driven.Commands;
+global using Girvs.Extensions;
+global using MediatR;
+global using Microsoft.AspNetCore.Http;

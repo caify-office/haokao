@@ -1,0 +1,2599 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.OpenPlatformService.Application</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.OpenPlatformService.Application.Hubs.IOnlineDeviceHub.NotifyMultiDeviceLogin">
+            <summary>
+            登出设备
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Hubs.OnlineDeviceHub.OnConnectedAsync">
+            <summary>
+            开始连接
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.Hubs.OnlineDeviceState.Connections">
+            <summary>
+            按 sessionId 分组
+            key: sessionId, value: 连接Id集合
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.IdentityServerExtensions.LoginType">
+            <summary>
+            登录的方式
+            </summary>
+        </member>
+        <member name="F:HaoKao.OpenPlatformService.Application.IdentityServerExtensions.LoginType.LocalPhoneLogin">
+            <summary>
+            本机号码一键登录
+            </summary>
+        </member>
+        <member name="F:HaoKao.OpenPlatformService.Application.IdentityServerExtensions.LoginType.PhonePasswordLogin">
+            <summary>
+            手机号码加密码登录
+            </summary>
+        </member>
+        <member name="F:HaoKao.OpenPlatformService.Application.IdentityServerExtensions.LoginType.PhoneCodeLogin">
+            <summary>
+            手机号加验证码登录
+            </summary>
+        </member>
+        <member name="F:HaoKao.OpenPlatformService.Application.IdentityServerExtensions.LoginType.ExternalIdentityLogin">
+            <summary>
+            外部认证登录，提前绑定了用户注册
+            </summary>
+        </member>
+        <member name="F:HaoKao.OpenPlatformService.Application.IdentityServerExtensions.LoginType.ExternalIdentityPhoneCodeLogin">
+            <summary>
+            外部认证后，绑定用户手机号并登录
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.IdentityServerExtensions.OAuth.ExternalCodeAuthenticationOptions.Scheme">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.IdentityServerExtensions.OAuth.ExternalCodeAuthenticationOptions.SchemeType">
+            <summary>
+            Mini Program、App或者 其它
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.IdentityServerExtensions.OAuth.ExternalCodeAuthenticationOptions.Code">
+            <summary>
+            临时登录凭证code
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.IdentityServerExtensions.OAuth.ExternalCodeAuthenticationOptions.ClientId">
+            <summary>
+            Gets or sets the provider-assigned client id.
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.IdentityServerExtensions.OAuth.ExternalCodeAuthenticationOptions.ClientSecret">
+            <summary>
+            Gets or sets the provider-assigned client secret.
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.IdentityServerExtensions.OAuth.ExternalUser">
+            <summary>
+            外部认证用户信息
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.IdentityServerExtensions.OAuth.ExternalUser.Schemem">
+            <summary>
+            外部认证程序名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.IdentityServerExtensions.OAuth.ExternalUser.NikeName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.IdentityServerExtensions.OAuth.ExternalUser.UserGender">
+            <summary>
+            用户性别
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.IdentityServerExtensions.OAuth.ExternalUser.EmailAddress">
+            <summary>
+            邮箱地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.IdentityServerExtensions.OAuth.ExternalUser.HeadImage">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.IdentityServerExtensions.OAuth.ExternalUser.UniqueIdentifier">
+            <summary>
+            唯一标识符
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.IdentityServerExtensions.OAuth.ExternalUser.OtherInformation">
+            <summary>
+            其它信息
+            </summary>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.IdentityServerExtensions.Store.HaoKaoResourcesStore.FindIdentityResourcesByScopeNameAsync(System.Collections.Generic.IEnumerable{System.String})">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.IdentityServerExtensions.Store.HaoKaoResourcesStore.FindApiResourcesByScopeNameAsync(System.Collections.Generic.IEnumerable{System.String})">
+            <inheritdoc />
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.IdentityServerExtensions.Store.HaoKaoResourcesStore.FindApiScopesByNameAsync(System.Collections.Generic.IEnumerable{System.String})">
+            <inheritdoc />
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.Services.Management.ClientService">
+            <summary>
+            客户端管理接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.ClientService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.OpenPlatformService.Domain.Repositories.IAccessClientRepository)">
+            <summary>
+            客户端管理接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.ClientService.Get(HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.ClientQueryListViewModel)">
+            <summary>
+            根据查询条件获取对应的客户端
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.ClientService.Get(System.Guid)">
+            <summary>
+            根据主键获取详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.ClientService.GetByClientId(System.String)">
+            <summary>
+            根据ClientId获取详情
+            </summary>
+            <param name="clientId"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.ClientService.Create(HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel)">
+            <summary>
+            创建客户端
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.ClientService.Update(HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel)">
+            <summary>
+            更新客户端
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.ClientService.Delete(System.Guid)">
+            <summary>
+            删除客户端
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.DomainProxyService.GetCurrentDomainProxy">
+            <summary>
+            获取当前租户下的所有代理域名
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.IProductMetricsService.QueryRegisteredCountAndActiveCount">
+            <summary>
+            获取总注册用户数, 今日注册用户数, 今日活跃用户数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.IProductMetricsService.GetDailyRegisteredUserTrend(HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.DailyTrendQueryViewModel)">
+            <summary>
+            每日注册用户走势
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.IProductMetricsService.QueryRegisteredUserClientGrouping(HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.ProductMetricsQueryViewModel)">
+            <summary>
+            查询用户注册客户端分组数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.IRegisterUserService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.IRegisterUserService.Get(HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.IRegisterUserService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定注册用户
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.IRegisterUserService.Disable(System.Guid)">
+            <summary>
+            禁用用户
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.IRegisterUserService.Enable(System.Guid)">
+            <summary>
+            启用用户
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.IRegisterUserService.ResetPassword(System.Guid,System.String)">
+            <summary>
+            重置用户密码
+            </summary>
+            <param name="id"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.IRegisterUserService.ModifyPhone(System.Guid,System.String)">
+            <summary>
+            修改用户手机号码
+            </summary>
+            <param name="id"></param>
+            <param name="phone"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.Services.Management.ProductMetricsService">
+            <summary>
+            产品指标接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.ProductMetricsService.#ctor(HaoKao.OpenPlatformService.Domain.Repositories.IRegisterUserRepository,HaoKao.OpenPlatformService.Domain.Repositories.IDailyActiveUserLogRepository)">
+            <summary>
+            产品指标接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.ProductMetricsService.QueryRegisteredCountAndActiveCount">
+            <summary>
+            获取总注册用户数, 今日注册用户数, 今日活跃用户数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.ProductMetricsService.GetDailyRegisteredUserTrend(HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.DailyTrendQueryViewModel)">
+            <summary>
+            查询每日注册用户走势
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.ProductMetricsService.QueryRegisteredUserClientGrouping(HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.ProductMetricsQueryViewModel)">
+            <summary>
+            查询用户注册客户端分组数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.ProductMetricsService.GetDailyActiveUserTrend(HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.DailyTrendQueryViewModel)">
+            <summary>
+            查询每日活跃用户走势
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.ProductMetricsService.QueryDailyActiveUserClientGrouping(HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.ProductMetricsQueryViewModel)">
+            <summary>
+            查询每日活跃用户客户端分组数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.Services.Management.RegisterUserService">
+            <summary>
+            注册用户接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.RegisterUserService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.OpenPlatformService.Domain.Repositories.IRegisterUserRepository)">
+            <summary>
+            注册用户接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.RegisterUserService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.RegisterUserService.GetByPhone(System.String)">
+            <summary>
+            根据手机号码获取用户信息
+            </summary>
+            <param name="phone"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.RegisterUserService.Get(HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.RegisterUserService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定注册用户
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.RegisterUserService.Disable(System.Guid)">
+            <summary>
+            禁用用户
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.RegisterUserService.Enable(System.Guid)">
+            <summary>
+            启用用户
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.RegisterUserService.ResetPassword(System.Guid,System.String)">
+            <summary>
+            重置用户密码
+            </summary>
+            <param name="id"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Management.RegisterUserService.ModifyPhone(System.Guid,System.String)">
+            <summary>
+            修改用户手机号码
+            </summary>
+            <param name="id"></param>
+            <param name="phone"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.Services.Management.ScopeService">
+            <summary>
+            请求资源服务
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.Services.ValidateCodeHelper">
+            <summary>
+            Summary description for ValidateCode.
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.Services.Web.AccountService">
+            <summary>
+            外部平台登陆相关接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.#ctor(HaoKao.OpenPlatformService.Domain.Repositories.IRegisterUserRepository,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.OpenPlatformService.Application.Services.Web.IPhoneCodeService,IdentityServer4.Services.IIdentityServerInteractionService,IdentityServer4.Services.IEventService,IdentityServer4.Stores.IClientStore,Microsoft.AspNetCore.Authentication.IAuthenticationSchemeProvider,HaoKao.OpenPlatformService.Application.Services.Web.ILoginHelpService,Girvs.Cache.Caching.IStaticCacheManager,HaoKao.OpenPlatformService.Application.Services.Refit.IWeiXinRemoteService)">
+            <summary>
+            外部平台登陆相关接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.GetUserInfo">
+            <summary>
+            获取当前用户的用户信息
+            </summary>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.GetUserInfoByToken">
+            <summary>
+            按token获取当前用户的用户信息
+            </summary>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.ChangePhone(HaoKao.OpenPlatformService.Application.ViewModels.Account.ChangePhoneViewModel)">
+            <summary>
+            用户换绑手机号码
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.ModifyPasswordByCode(HaoKao.OpenPlatformService.Application.ViewModels.Account.ModifyPasswordByCodeViewModel)">
+            <summary>
+            根据手机验证码，修改密码
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.CheckModifyPasswordPhoneCode(System.String,System.String)">
+            <summary>
+            校验修改密码的手机号码和短信验证码
+            </summary>
+            <param name="phone"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.ModifyPassword(HaoKao.OpenPlatformService.Application.ViewModels.Account.ModifyPasswordViewModel)">
+            <summary>
+            修改密码
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.UpdateRegisterInformation(HaoKao.OpenPlatformService.Application.ViewModels.Account.UpdateRegisterViewModel)">
+            <summary>
+            修改用户信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.GetLoginInfo(System.String)">
+            <summary>
+            获取当前的登陆信息
+            </summary>
+            <param name="returnUrl">回跳的地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.Login(HaoKao.OpenPlatformService.Application.ViewModels.Account.LoginInput)">
+            <summary>
+            用户登录
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.Logout(HaoKao.OpenPlatformService.Application.ViewModels.Account.LogoutInput)">
+            <summary>
+            用户退出登录
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.IsMultipleDeviceLogin(System.String,System.String,System.String)">
+            <summary>
+            是否多设备登录
+            </summary>
+            <param name="clientId"></param>
+            <param name="userId"></param>
+            <param name="sessionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.Error(System.String)">
+            <summary>
+            获取相关的错误信息
+            </summary>
+            <param name="errorId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.GetConsentContent(System.String)">
+            <summary>
+            获取同意条款
+            </summary>
+            <param name="returnUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.Consent(HaoKao.OpenPlatformService.Application.ViewModels.Account.ConsentInputModel)">
+            <summary>
+            用户点击相关的同意条款
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.UserCodeCapture(System.String)">
+            <summary>
+            设备相关的页面，暂时不做实现
+            </summary>
+            <param name="userCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.IsRegister(HaoKao.OpenPlatformService.Application.ViewModels.Account.IsRegisterInput)">
+            <summary>
+            判断当前手机号码是否已经注册
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.CancelAccount">
+            <summary>
+            用户注册、销户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.GetRegisterUser(System.Guid)">
+            <summary>
+            根据UserId获取用户信息
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.GetWeiXinUserPhone(System.Guid,System.String)">
+            <summary>
+            根据code换取手机号码
+            </summary>
+            <param name="id"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.GetWeiXinOpenId(System.Guid,System.String)">
+            <summary>
+            获取微信用户OpenId
+            </summary>
+            <param name="id"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.GenerateScheme(System.Guid,HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinGenerateSchemeJumpWxa)">
+            <summary>
+            获取加密scheme码
+            该接口用于获取小程序 scheme 码，适用于短信、邮件、外部网页、微信内等拉起小程序的业务场景
+            </summary>
+            <param name="id"></param>
+            <param name="jumpWxa"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.QueryScheme(System.Guid,HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinQuerySchemeBody)">
+            <summary>
+            查询scheme码
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.BindWeiXin(System.Guid,System.String)">
+            <param name="id"></param>
+            <param name="code"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.GetWeiXinOffiAccountQrCode">
+            <summary>
+            获取微信公众号二维码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.WeiXinOffiAccountReceiveMessage(HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinOffiAccountQrCodeSubscribeEvent)">
+            <summary>
+            微信公众号接收事件推送
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.AccountService.ScanQrCodeLoop(System.String)">
+            <summary>
+            微信公众号扫描二维码轮询
+            </summary>
+            <param name="scene_str"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.Services.Web.ClientWebService">
+            <summary>
+            客户端接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.ClientWebService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,HaoKao.OpenPlatformService.Domain.Repositories.IAccessClientRepository)">
+            <summary>
+            客户端接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.ClientWebService.Get(System.String)">
+            <summary>
+            根据clientId获取详情
+            </summary>
+            <param name="clientId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.Services.Web.DomainProxyWebService">
+            <summary>
+            域名服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.DomainProxyWebService.#ctor(HaoKao.OpenPlatformService.Domain.Repositories.IDomainProxyRepository,Girvs.Cache.Caching.IStaticCacheManager)">
+            <summary>
+            域名服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.DomainProxyWebService.GetCurrentDomainProxy(System.String)">
+            <summary>
+            获取指定域名的租户相关设置
+            </summary>
+            <param name="domain"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.Services.Web.ExternalIdentityService">
+            <summary>
+            外部平台登陆相关接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.ExternalIdentityService.#ctor(Microsoft.AspNetCore.Authentication.IAuthenticationSchemeProvider,IdentityServer4.Services.IIdentityServerInteractionService,HaoKao.OpenPlatformService.Domain.Repositories.IRegisterUserRepository)">
+            <summary>
+            外部平台登陆相关接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.ExternalIdentityService.GetExternalSchemeAsync">
+            <summary>
+            获取所有第三方的认证平台列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.ExternalIdentityService.GetOAuthUrlByScheme(HaoKao.OpenPlatformService.Application.ViewModels.Identity.OAuthContextViewModel)">
+            <summary>
+            根据Scheme获取第三方的认证平台列表的Url地址
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.ExternalIdentityService.OAuthCallBack">
+            <summary>
+            后台回调地址
+            </summary>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.ExternalIdentityService.GetExternalUserInfoIsRegister">
+            <summary>
+            根据当前第三方登陆的信息，获取注册用户相关信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.ExternalIdentityService.WechatAppMiniProgramUserIsRegister(System.String)">
+            <summary>
+            微信小程序以及App 获取到微信相关的用户信息后，根据unionId判断当前用户是否已经注册
+            </summary>
+            <param name="unionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.ExternalIdentityService.CreateExternalTicketByCodeAsync(HaoKao.OpenPlatformService.Application.IdentityServerExtensions.OAuth.ExternalCodeAuthenticationOptions)">
+            <summary>
+            通过Code 完成外部认证等
+            </summary>
+            <param name="options"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.LoginHelpService.PhonePasswordLogin(HaoKao.OpenPlatformService.Application.ViewModels.Account.LoginInput)">
+            <summary>
+            手机号码加密码登录
+            </summary>
+            <param name="loginInput"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.LoginHelpService.PhoneCodeLogin(HaoKao.OpenPlatformService.Application.ViewModels.Account.LoginInput)">
+            <summary>
+            手机号加短信验证登录或注册登录
+            </summary>
+            <param name="loginInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.LoginHelpService.ExternalIdentityLogin(HaoKao.OpenPlatformService.Application.ViewModels.Account.LoginInput)">
+            <summary>
+            外部认证登录，提前绑定了用户注册
+            </summary>
+            <param name="loginInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.LoginHelpService.ExternalIdentityPhoneCodeLogin(HaoKao.OpenPlatformService.Application.ViewModels.Account.LoginInput)">
+            <summary>
+            外部认证后，注册绑定用户手机号并登录
+            </summary>
+            <param name="loginInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.LoginHelpService.GetExternalUserInfo(HaoKao.OpenPlatformService.Application.ViewModels.Account.LoginInput)">
+            <summary>
+            获取外部用户
+            </summary>
+            <param name="loginInput"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.LoginHelpService.CurrentUserIsBindExternalUser(System.String,System.String)">
+            <summary>
+            指定用户当前是否绑定了对应的外部用户
+            </summary>
+            <param name="scheme">外部用户认证方式</param>
+            <param name="phone">手机号码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.LoginHelpService.GetRegisterUserByPhone(System.String)">
+            <summary>
+            根据手机号码获取注册用户
+            </summary>
+            <param name="phone"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.LoginHelpService.VerifyCommand">
+            <summary>
+            较验事件相关的执行情况
+            </summary>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.LoginHelpService.CheckPhoneCode(HaoKao.Common.Events.NotificationMessage.EventNotificationMessageType,System.String,System.String)">
+            <summary>
+            校验手机号码和短信验证码
+            </summary>
+            <param name="eventNotificationMessageType"></param>
+            <param name="phone"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.Services.Web.PhoneCodeService">
+            <summary>
+            用户端发送验证服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.PhoneCodeService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.EventBus.IEventBus,HaoKao.OpenPlatformService.Application.Services.Web.IRandomVerificationCodeService)">
+            <summary>
+            用户端发送验证服务
+            </summary>
+        </member>
+        <member name="F:HaoKao.OpenPlatformService.Application.Services.Web.PhoneCodeService.PhoneCodeExpiredTime">
+            <summary>
+            设置过期时间为30分钟
+            </summary>
+        </member>
+        <member name="F:HaoKao.OpenPlatformService.Application.Services.Web.PhoneCodeService.RepeatSendingLimitTime">
+            <summary>
+            设置重复发送限制时间为300秒
+            </summary>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.PhoneCodeService.SendPhoneCode(HaoKao.OpenPlatformService.Application.ViewModels.PhoneCode.SendPhoneCodeViewModel)">
+            <summary>
+            发送验证码
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.RandomVerificationCodeService.GetRandomVerificationCode(System.String)">
+            <summary>
+            获取随机码图片
+            </summary>
+            <param name="randomMark"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.Services.Web.RandomVerificationCodeService.GetRandomVerification(System.String)">
+            <summary>
+            获取随机码图片和较验Md5密文
+            </summary>
+            <param name="randomMark"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.ViewModels.Account.ChangePhoneViewModel">
+            <summary>
+            更换绑定手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.ChangePhoneViewModel.OldPhone">
+            <summary>
+            旧的手机号码 BASE64加密
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.ChangePhoneViewModel.NewPhone">
+            <summary>
+            新的手机号码 BASE64加密
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.ChangePhoneViewModel.NewPhoneCode">
+            <summary>
+            新的手机号码验证码 BASE64加密
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.ViewModels.Account.LoginInput">
+            <summary>
+            用户登陆模型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.LoginInput.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.LoginInput.PasswordCode">
+            <summary>
+            登陆密码或者手机验证码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.LoginInput.RememberLogin">
+            <summary>
+            是否记住用户名
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.LoginInput.ReturnUrl">
+            <summary>
+            返回Url
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.LoginInput.Cancel">
+            <summary>
+            用户取消
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.LoginInput.ClientId">
+            <summary>
+            客户端Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.LoginInput.UnionId">
+            <summary>
+            微信UnionId
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.ViewModels.Account.LoginRegisterViewModel">
+            <summary>
+            用户登陆注册
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.LoginRegisterViewModel.Phone">
+            <summary>
+            新的手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.LoginRegisterViewModel.PhoneCode">
+            <summary>
+            新的手机号码验证码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.LoginRegisterViewModel.NikeName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.LoginRegisterViewModel.UserGender">
+            <summary>
+            用户性别
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.LoginRegisterViewModel.Email">
+            <summary>
+            用户邮箱
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.LoginRegisterViewModel.HeadImage">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.ViewModels.Account.ExternalUserViewModel">
+            <summary>
+            注册时外部平台信息
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.ExternalUserViewModel.Scheme">
+            <summary>
+            其它平台名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.ExternalUserViewModel.UniqueIdentifier">
+            <summary>
+            唯一标识符
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.ExternalUserViewModel.OtherIdentifier">
+            <summary>
+            其它标识符
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.ExternalUserViewModel.OtherInformation">
+            <summary>
+            其它信息
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.ModifyPasswordByCodeViewModel.Phone">
+            <summary>
+            新的手机号码 Base64加密
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.ModifyPasswordByCodeViewModel.PhoneCode">
+            <summary>
+            新的手机号码验证码 Base64加密
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.ModifyPasswordByCodeViewModel.NewPassword">
+            <summary>
+             新的密码 Base64加密
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.ModifyPasswordViewModel.OldPassword">
+            <summary>
+            旧密码  Base64加密
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.ModifyPasswordViewModel.NewPassword">
+            <summary>
+            新密码  Base64加密
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.UpdateRegisterViewModel.UserGender">
+            <summary>
+            用户性别
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.UpdateRegisterViewModel.NickName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.UpdateRegisterViewModel.EmailAddress">
+            <summary>
+            邮箱地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.UpdateRegisterViewModel.HeadImage">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinGenerateSchemeBody.jump_wxa">
+            <summary>
+            跳转到的目标小程序信息
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinGenerateSchemeBody.is_expire">
+            <summary>
+            默认值false，是否生成到期失效的 scheme 码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinGenerateSchemeBody.expire_type">
+            <summary>
+            默认值0，到期失效的 scheme 码失效类型，失效时间：0，失效间隔天数：1
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinGenerateSchemeBody.expire_time">
+            <summary>
+            到期失效的 scheme 码的失效时间，为 Unix 时间戳。生成的到期失效 scheme 码在该时间前有效。最长有效期为30天。is_expire 为 true 且 expire_type 为 0 时必填
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinGenerateSchemeBody.expire_interval">
+            <summary>
+            到期失效的 scheme 码的失效间隔天数。生成的到期失效 scheme 码在该间隔时间到达前有效。最长间隔天数为30天。is_expire 为 true 且 expire_type 为 1 时必填
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinGenerateSchemeJumpWxa.path">
+            <summary>
+            通过 scheme 码进入的小程序页面路径，必须是已经发布的小程序存在的页面，不可携带 query。path 为空时会跳转小程序主页。
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinGenerateSchemeJumpWxa.query">
+            <summary>
+            通过 scheme 码进入小程序时的 query，最大1024个字符，只支持数字，大小写英文以及部分特殊字符：!#$'()*+,/:;=?@-._~%`
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinGenerateSchemeJumpWxa.env_version">
+            <summary>
+            默认值"release"。要打开的小程序版本。正式版为"release"，体验版为"trial"，开发版为"develop"，仅在微信外打开时生效。
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinGenerateSchemeResponse.errcode">
+            <summary>
+            错误码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinGenerateSchemeResponse.errmsg">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinGenerateSchemeResponse.openlink">
+            <summary>
+            生成的小程序 scheme 码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinCode2SessionResponse.session_key">
+            <summary>
+            会话密钥
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinCode2SessionResponse.unionid">
+            <summary>
+            用户在开放平台的唯一标识符，若当前小程序已绑定到微信开放平台账号下会返回，详见 UnionID 机制说明。
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinCode2SessionResponse.errmsg">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinCode2SessionResponse.openid">
+            <summary>
+            用户唯一标识
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinCode2SessionResponse.errcode">
+            <summary>
+            错误码
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinQuerySchemeBody">
+            <summary>
+            查询小程序 scheme 码
+            </summary>
+            <param name="scheme">小程序 scheme 码。支持加密 scheme 和明文 scheme</param>
+            <param name="query_type">查询类型。默认值0，查询 scheme 码信息：0， 查询每天剩余访问次数：1</param>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinQuerySchemeBody.#ctor(System.String,System.Int32)">
+            <summary>
+            查询小程序 scheme 码
+            </summary>
+            <param name="scheme">小程序 scheme 码。支持加密 scheme 和明文 scheme</param>
+            <param name="query_type">查询类型。默认值0，查询 scheme 码信息：0， 查询每天剩余访问次数：1</param>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinQuerySchemeBody.scheme">
+            <summary>小程序 scheme 码。支持加密 scheme 和明文 scheme</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinQuerySchemeBody.query_type">
+            <summary>查询类型。默认值0，查询 scheme 码信息：0， 查询每天剩余访问次数：1</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinQuerySchemeResponse.errcode">
+            <summary>
+            错误码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinQuerySchemeResponse.errmsg">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinQuerySchemeResponse.scheme_info">
+            <summary>
+            信息
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinQuerySchemeResponse.quota_info">
+            <summary>
+            quota 配置
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinQuerySchemeInfo.appid">
+            <summary>
+            小程序 appid
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinQuerySchemeInfo.path">
+            <summary>
+            小程序页面路径
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinQuerySchemeInfo.query">
+            <summary>
+            小程序页面query
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinQuerySchemeInfo.create_time">
+            <summary>
+            创建时间，为 Unix 时间戳
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinQuerySchemeInfo.expire_time">
+            <summary>
+            到期失效时间，为 Unix 时间戳，0 表示永久生效
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinQuerySchemeInfo.env_version">
+            <summary>
+            要打开的小程序版本。正式版为"release"，体验版为"trial"，开发版为"develop"
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinQuerySchemeQuotaInfo">
+            <summary>
+            URL Scheme
+            </summary>
+            <param name="remain_visit_quota">URL Scheme（加密+明文）/加密 URL Link 单天剩余访问次数</param>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinQuerySchemeQuotaInfo.#ctor(System.String)">
+            <summary>
+            URL Scheme
+            </summary>
+            <param name="remain_visit_quota">URL Scheme（加密+明文）/加密 URL Link 单天剩余访问次数</param>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinQuerySchemeQuotaInfo.remain_visit_quota">
+            <summary>URL Scheme（加密+明文）/加密 URL Link 单天剩余访问次数</summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinOffiAccountQrCodeBody">
+            <summary>
+            生成公众号二维码
+            <see cref="!:https://developers.weixin.qq.com/doc/offiaccount/Account_Management/Generating_a_Parametric_QR_Code.html"/>
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinOffiAccountQrCodeBody.expire_seconds">
+            <summary>
+            该二维码有效时间，以秒为单位。 最大不超过2592000（即30天），此字段如果不填，则默认有效期为60秒。
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinOffiAccountQrCodeBody.action_name">
+            <summary>
+            二维码类型，QR_SCENE为临时的整型参数值，QR_STR_SCENE为临时的字符串参数值，QR_LIMIT_SCENE为永久的整型参数值，QR_LIMIT_STR_SCENE为永久的字符串参数值
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinOffiAccountQrCodeBody.action_info">
+            <summary>
+            二维码详细信息   
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinOffiAccountQrCodeBody.WeiXinOffiAccountQrCodeActionInfo">
+            <summary>
+            二维码详细信息
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinOffiAccountQrCodeBody.WeiXinOffiAccountQrCodeActionInfo.WeiXinOffiAccountQrCodeScene">
+            <summary>
+            二维码场景
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinOffiAccountQrCodeBody.WeiXinOffiAccountQrCodeActionInfo.WeiXinOffiAccountQrCodeScene.scene_id">
+            <summary>
+            场景值ID，临时二维码时为32位非0整型，永久二维码时最大值为100000（目前参数只支持1--100000）
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinOffiAccountQrCodeBody.WeiXinOffiAccountQrCodeActionInfo.WeiXinOffiAccountQrCodeScene.scene_str">
+            <summary>
+            场景值ID（字符串形式的ID），字符串类型，长度限制为1到64
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinOffiAccountQrCodeResponse">
+            <summary>
+            生成公众号二维码返回
+            </summary>
+            <param name="ticket">获取的二维码ticket，凭借此ticket可以在有效时间内换取二维码。</param>
+            <param name="expire_seconds">该二维码有效时间，以秒为单位。 最大不超过2592000（即30天）。</param>
+            <param name="url">二维码图片解析后的地址，开发者可根据该地址自行生成需要的二维码图片</param>
+        </member>
+        <member name="M:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinOffiAccountQrCodeResponse.#ctor(System.String,System.Int32,System.String)">
+            <summary>
+            生成公众号二维码返回
+            </summary>
+            <param name="ticket">获取的二维码ticket，凭借此ticket可以在有效时间内换取二维码。</param>
+            <param name="expire_seconds">该二维码有效时间，以秒为单位。 最大不超过2592000（即30天）。</param>
+            <param name="url">二维码图片解析后的地址，开发者可根据该地址自行生成需要的二维码图片</param>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinOffiAccountQrCodeResponse.ticket">
+            <summary>获取的二维码ticket，凭借此ticket可以在有效时间内换取二维码。</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinOffiAccountQrCodeResponse.expire_seconds">
+            <summary>该二维码有效时间，以秒为单位。 最大不超过2592000（即30天）。</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinOffiAccountQrCodeResponse.url">
+            <summary>二维码图片解析后的地址，开发者可根据该地址自行生成需要的二维码图片</summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinUserInfoResponse.subscribe">
+            <summary>
+            用户是否订阅该公众号标识，值为0时，代表此用户没有关注该公众号，拉取不到其余信息。
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinUserInfoResponse.openid">
+            <summary>
+            用户的标识，对当前公众号唯一
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinUserInfoResponse.language">
+            <summary>
+            用户的语言，简体中文为zh_CN
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinUserInfoResponse.subscribe_time">
+            <summary>
+            用户关注时间，为时间戳。如果用户曾多次关注，则取最后关注时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinUserInfoResponse.unionid">
+            <summary>
+            用户将公众号绑定到微信开放平台账号后，才会出现该字段。
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinUserInfoResponse.remark">
+            <summary>
+            公众号运营者对粉丝的备注，公众号运营者可在微信公众平台用户管理界面对粉丝添加备注
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinUserInfoResponse.groupid">
+            <summary>
+            用户所在的分组ID（兼容旧的用户分组接口）
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinUserInfoResponse.tagid_list">
+            <summary>
+            用户被打上的标签ID列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinUserInfoResponse.subscribe_scene">
+            <summary>
+            返回用户关注的渠道来源，
+            ADD_SCENE_SEARCH 公众号搜索，
+            ADD_SCENE_ACCOUNT_MIGRATION 公众号迁移，
+            ADD_SCENE_PROFILE_CARD 名片分享，
+            ADD_SCENE_QR_CODE 扫描二维码，
+            ADD_SCENE_PROFILE_LINK 图文页内名称点击，
+            ADD_SCENE_PROFILE_ITEM 图文页右上角菜单，
+            ADD_SCENE_PAID 支付后关注，
+            ADD_SCENE_WECHAT_ADVERTISEMENT 微信广告，
+            ADD_SCENE_REPRINT 他人转载，
+            ADD_SCENE_LIVESTREAM 视频号直播，
+            ADD_SCENE_CHANNELS 视频号，
+            ADD_SCENE_WXA 小程序关注，
+            ADD_SCENE_OTHERS 其他
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinUserInfoResponse.qr_scene">
+            <summary>
+            二维码扫码场景（开发者自定义）
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinUserInfoResponse.qr_scene_str">
+            <summary>
+            二维码扫码场景描述（开发者自定义）
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinOffiAccountQrCodeSubscribeEvent">
+            <summary>
+            微信公众号 通过扫二维码 关注/取消事件
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinOffiAccountQrCodeSubscribeEvent.ToUserName">
+            <summary>
+            开发者微信号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinOffiAccountQrCodeSubscribeEvent.FromUserName">
+            <summary>
+            发送方账号（一个OpenID）
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinOffiAccountQrCodeSubscribeEvent.CreateTime">
+            <summary>
+            消息创建时间 （整型）
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinOffiAccountQrCodeSubscribeEvent.MsgType">
+            <summary>
+            消息类型，event
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinOffiAccountQrCodeSubscribeEvent.Event">
+            <summary>
+            事件类型，subscribe(订阅)、unsubscribe(取消订阅)
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinOffiAccountQrCodeSubscribeEvent.EventKey">
+            <summary>
+            事件KEY值，qrscene_为前缀，后面为二维码的参数值
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinOffiAccountQrCodeSubscribeEvent.Ticket">
+            <summary>
+            二维码的ticket，可用来换取二维码图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.AccessClientSecretViewModel.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.AccessClientSecretViewModel.Value">
+            <summary>
+            密钥值 
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.AccessClientSecretViewModel.Expiration">
+            <summary>
+            到期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.AccessClientSecretViewModel.Type">
+            <summary>
+            密钥类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.AccessClientSecretViewModel.HashType">
+             <summary>
+            哈希类型 
+             </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.ClientQueryListViewModel.ClientId">
+            <summary>
+            客户端标识
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.ClientQueryListViewModel.ClientName">
+            <summary>
+            客户端名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientListViewModel.ClientName">
+            <summary>
+            客户端名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientListViewModel.ClientUri">
+            <summary>
+            客户端 Uri 
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientListViewModel.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientListViewModel.LogoUri">
+            <summary>
+            微标 Uri 
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientListViewModel.ClientId">
+            <summary>
+            客户端标识
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientListViewModel.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.ClientId">
+            <summary>
+            客户端标识
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.ProtocolType">
+            <summary>
+            协议类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.ClientSecrets">
+            <summary>
+            客户端密钥
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.RequireClientSecret">
+            <summary>
+            需要客户端密钥
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.ClientName">
+            <summary>
+            客户端名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.ClientUri">
+            <summary>
+            客户端 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.LogoUri">
+            <summary>
+            微标 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.RequireConsent">
+            <summary>
+            需要同意
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.AllowRememberConsent">
+            <summary>
+            允许记住同意
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.AlwaysIncludeUserClaimsInIdToken">
+            <summary>
+            始终在身份令牌中包含用户声明
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.AllowedGrantTypes">
+            <summary>
+            允许的授权类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.RequirePkce">
+            <summary>
+            需要 Pkce
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.AllowPlainTextPkce">
+            <summary>
+            允许纯文本 Pkce
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.RequireRequestObject">
+            <summary>
+            需要请求对象
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.AllowAccessTokensViaBrowser">
+            <summary>
+            允许通过浏览器访问令牌
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.RedirectUris">
+            <summary>
+            重定向 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.PostLogoutRedirectUris">
+            <summary>
+            注销重定向 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.FrontChannelLogoutUri">
+            <summary>
+            前端通道注销 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.FrontChannelLogoutSessionRequired">
+            <summary>
+            需要前端通道注销会话
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.BackChannelLogoutUri">
+            <summary>
+            后端通道退出 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.BackChannelLogoutSessionRequired">
+            <summary>
+            需要后端通道注销会话
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.AllowOfflineAccess">
+            <summary>
+            允许离线访问 
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.AllowedScopes">
+            <summary>
+            允许的作用域
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.IdentityTokenLifetime">
+            <summary>
+            身份令牌生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.AllowedIdentityTokenSigningAlgorithms">
+            <summary>
+            允许的身份令牌签名算法
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.AccessTokenLifetime">
+            <summary>
+            访问令牌生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.AuthorizationCodeLifetime">
+            <summary>
+            授权码生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.ConsentLifetime">
+            <summary>
+            同意生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.AbsoluteRefreshTokenLifetime">
+            <summary>
+            绝对刷新令牌生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.SlidingRefreshTokenLifetime">
+            <summary>
+            滚动刷新令牌生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.RefreshTokenUsage">
+            <summary>
+            刷新令牌使用情况
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.UpdateAccessTokenClaimsOnRefresh">
+            <summary>
+            刷新时更新访问令牌声明
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.RefreshTokenExpiration">
+            <summary>
+            刷新令牌过期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.AccessTokenType">
+            <summary>
+            访问令牌类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.EnableLocalLogin">
+            <summary>
+            启用本地登录
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.IdentityProviderRestrictions">
+            <summary>
+            身份提供程序限制
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.IncludeJwtId">
+            <summary>
+            包括 Jwt 标识
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.Claims">
+            <summary>
+            声明
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.AlwaysSendClientClaims">
+            <summary>
+            始终发送客户端声明
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.ClientClaimsPrefix">
+            <summary>
+            客户端声明前缀
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.PairWiseSubjectSalt">
+            <summary>
+            配对主体盐
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.AllowedCorsOrigins">
+            <summary>
+            允许跨域来源
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.Properties">
+            <summary>
+            属性
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.UserSsoLifetime">
+            <summary>
+            用户 SSO 生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.UserCodeType">
+            <summary>
+            用户代码类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.DeviceCodeLifetime">
+            <summary>
+            设备代码生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.BrowseClientViewModel.DomainProxies">
+            <summary>
+            域名代理
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.ClientId">
+            <summary>
+            客户端标识
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.ProtocolType">
+            <summary>
+            协议类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.ClientSecrets">
+            <summary>
+            客户端密钥
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.RequireClientSecret">
+            <summary>
+            需要客户端密钥
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.ClientName">
+            <summary>
+            客户端名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.ClientUri">
+            <summary>
+            客户端 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.LogoUri">
+            <summary>
+            微标 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.RequireConsent">
+            <summary>
+            需要同意
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.AllowRememberConsent">
+            <summary>
+            允许记住同意
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.AlwaysIncludeUserClaimsInIdToken">
+            <summary>
+            始终在身份令牌中包含用户声明
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.AllowedGrantTypes">
+            <summary>
+            允许的授权类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.RequirePkce">
+            <summary>
+            需要 Pkce
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.AllowPlainTextPkce">
+            <summary>
+            允许纯文本 Pkce
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.RequireRequestObject">
+            <summary>
+            需要请求对象
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.AllowAccessTokensViaBrowser">
+            <summary>
+            允许通过浏览器访问令牌
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.RedirectUris">
+            <summary>
+            重定向 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.PostLogoutRedirectUris">
+            <summary>
+            注销重定向 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.FrontChannelLogoutUri">
+            <summary>
+            前端通道注销 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.FrontChannelLogoutSessionRequired">
+            <summary>
+            需要前端通道注销会话
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.BackChannelLogoutUri">
+            <summary>
+            后端通道退出 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.BackChannelLogoutSessionRequired">
+            <summary>
+            需要后端通道注销会话
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.AllowOfflineAccess">
+            <summary>
+            允许离线访问 
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.AllowedScopes">
+            <summary>
+            允许的作用域
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.IdentityTokenLifetime">
+            <summary>
+            身份令牌生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.AllowedIdentityTokenSigningAlgorithms">
+            <summary>
+            允许的身份令牌签名算法
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.AccessTokenLifetime">
+            <summary>
+            访问令牌生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.AuthorizationCodeLifetime">
+            <summary>
+            授权码生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.ConsentLifetime">
+            <summary>
+            同意生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.AbsoluteRefreshTokenLifetime">
+            <summary>
+            绝对刷新令牌生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.SlidingRefreshTokenLifetime">
+            <summary>
+            滚动刷新令牌生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.RefreshTokenUsage">
+            <summary>
+            刷新令牌使用情况
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.UpdateAccessTokenClaimsOnRefresh">
+            <summary>
+            刷新时更新访问令牌声明
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.RefreshTokenExpiration">
+            <summary>
+            刷新令牌过期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.AccessTokenType">
+            <summary>
+            访问令牌类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.EnableLocalLogin">
+            <summary>
+            启用本地登录
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.IdentityProviderRestrictions">
+            <summary>
+            身份提供程序限制
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.IncludeJwtId">
+            <summary>
+            包括 Jwt 标识
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.Claims">
+            <summary>
+            声明
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.AlwaysSendClientClaims">
+            <summary>
+            始终发送客户端声明
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.ClientClaimsPrefix">
+            <summary>
+            客户端声明前缀
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.PairWiseSubjectSalt">
+            <summary>
+            配对主体盐
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.AllowedCorsOrigins">
+            <summary>
+            允许跨域来源
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.Properties">
+            <summary>
+            属性
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.UserSsoLifetime">
+            <summary>
+            用户 SSO 生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.UserCodeType">
+            <summary>
+            用户代码类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.DeviceCodeLifetime">
+            <summary>
+            设备代码生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.CreateClientViewModel.DomainProxies">
+            <summary>
+            域名代理
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.DomainProxyViewModel">
+            <summary>
+            域名代理设置
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.DomainProxyViewModel.Domain">
+            <summary>
+            域名
+            </summary>  
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.DomainProxyViewModel.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.DomainProxyViewModel.TenantName">
+            <summary>
+            租户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.ClientId">
+            <summary>
+            客户端标识
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.ProtocolType">
+            <summary>
+            协议类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.ClientSecrets">
+            <summary>
+            客户端密钥
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.RequireClientSecret">
+            <summary>
+            需要客户端密钥
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.ClientName">
+            <summary>
+            客户端名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.ClientUri">
+            <summary>
+            客户端 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.LogoUri">
+            <summary>
+            微标 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.RequireConsent">
+            <summary>
+            需要同意
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.AllowRememberConsent">
+            <summary>
+            允许记住同意
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.AlwaysIncludeUserClaimsInIdToken">
+            <summary>
+            始终在身份令牌中包含用户声明
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.AllowedGrantTypes">
+            <summary>
+            允许的授权类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.RequirePkce">
+            <summary>
+            需要 Pkce
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.AllowPlainTextPkce">
+            <summary>
+            允许纯文本 Pkce
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.RequireRequestObject">
+            <summary>
+            需要请求对象
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.AllowAccessTokensViaBrowser">
+            <summary>
+            允许通过浏览器访问令牌
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.RedirectUris">
+            <summary>
+            重定向 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.PostLogoutRedirectUris">
+            <summary>
+            注销重定向 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.FrontChannelLogoutUri">
+            <summary>
+            前端通道注销 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.FrontChannelLogoutSessionRequired">
+            <summary>
+            需要前端通道注销会话
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.BackChannelLogoutUri">
+            <summary>
+            后端通道退出 Uri
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.BackChannelLogoutSessionRequired">
+            <summary>
+            需要后端通道注销会话
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.AllowOfflineAccess">
+            <summary>
+            允许离线访问 
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.AllowedScopes">
+            <summary>
+            允许的作用域
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.IdentityTokenLifetime">
+            <summary>
+            身份令牌生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.AllowedIdentityTokenSigningAlgorithms">
+            <summary>
+            允许的身份令牌签名算法
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.AccessTokenLifetime">
+            <summary>
+            访问令牌生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.AuthorizationCodeLifetime">
+            <summary>
+            授权码生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.ConsentLifetime">
+            <summary>
+            同意生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.AbsoluteRefreshTokenLifetime">
+            <summary>
+            绝对刷新令牌生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.SlidingRefreshTokenLifetime">
+            <summary>
+            滚动刷新令牌生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.RefreshTokenUsage">
+            <summary>
+            刷新令牌使用情况
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.UpdateAccessTokenClaimsOnRefresh">
+            <summary>
+            刷新时更新访问令牌声明
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.RefreshTokenExpiration">
+            <summary>
+            刷新令牌过期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.AccessTokenType">
+            <summary>
+            访问令牌类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.EnableLocalLogin">
+            <summary>
+            启用本地登录
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.IdentityProviderRestrictions">
+            <summary>
+            身份提供程序限制
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.IncludeJwtId">
+            <summary>
+            包括 Jwt 标识
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.Claims">
+            <summary>
+            声明
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.AlwaysSendClientClaims">
+            <summary>
+            始终发送客户端声明
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.ClientClaimsPrefix">
+            <summary>
+            客户端声明前缀
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.PairWiseSubjectSalt">
+            <summary>
+            配对主体盐
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.AllowedCorsOrigins">
+            <summary>
+            允许跨域来源
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.Properties">
+            <summary>
+            属性
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.UserSsoLifetime">
+            <summary>
+            用户 SSO 生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.UserCodeType">
+            <summary>
+            用户代码类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.DeviceCodeLifetime">
+            <summary>
+            设备代码生命周期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.ClientViewModel.UpdateClientViewModel.DomainProxies">
+            <summary>
+            域名代理
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.DomainProxy.BrowseDomainProxyViewModel.Domain">
+            <summary>
+            域名
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.DomainProxy.BrowseDomainProxyViewModel.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.DomainProxy.BrowseDomainProxyViewModel.TenantName">
+            <summary>
+            租户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.DomainProxy.BrowseDomainProxyViewModel.ClientId">
+            <summary>
+            客户端标识
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.DomainProxy.BrowseDomainProxyViewModel.ClientName">
+            <summary>
+            客户端名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.DomainProxy.BrowseDomainProxyViewModel.Description">
+            <summary>
+            客户端描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.DomainProxy.BrowseDomainProxyViewModel.LogoUri">
+            <summary>
+            客户端Logo
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Identity.ExternalAuthenticationViewModel.IsRegister">
+            <summary>
+            是否已注册
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Identity.ExternalAuthenticationViewModel.Scheme">
+            <summary>
+            外部程序名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Identity.ExternalAuthenticationViewModel.ExternalUser">
+            <summary>
+            外部程序获取的用户信息
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.ViewModels.Identity.OAuthContextViewModel">
+            <summary>
+            OAuth访问详细内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Identity.OAuthContextViewModel.Scheme">
+            <summary>
+            Scheme名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Identity.OAuthContextViewModel.CallBackServerUrl">
+            <summary>
+            回调的服务地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Identity.OAuthContextViewModel.ReturnUrl">
+            <summary>
+            认证结束后，自动返回的地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Identity.RgeisterUserViewModel.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Identity.RgeisterUserViewModel.UserGender">
+            <summary>
+            用户性别
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Identity.RgeisterUserViewModel.NickName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Identity.RgeisterUserViewModel.UserState">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Identity.RgeisterUserViewModel.EmailAddress">
+            <summary>
+            邮箱地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.Identity.RgeisterUserViewModel.HeadImage">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.PhoneCode.SendPhoneCodeViewModel.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.PhoneCode.SendPhoneCodeViewModel.RandomMark">
+            <summary>
+            获取验证码的随机标识
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.PhoneCode.SendPhoneCodeViewModel.RandomVerificationCode">
+            <summary>
+            随机验证码
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.DailyTrendQueryViewModel">
+            <summary>
+            每日趋势查询
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.DailyTrendQueryViewModel.PrevDate">
+            <summary>
+            上一个7天的起始日期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.DailyTrendQueryViewModel.NextDate">
+            <summary>
+            下一个7天的起始日期
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.DailyTrendListViewModel">
+            <summary>
+            每日趋势
+            </summary>
+        </member>
+        <member name="T:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.ClientGroupingListViewModel">
+            <summary>
+            各端占比
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.BrowseRegisterUserViewModel.Account">
+            <summary>
+            用户账号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.BrowseRegisterUserViewModel.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.BrowseRegisterUserViewModel.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.BrowseRegisterUserViewModel.UserGender">
+            <summary>
+            用户性别
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.BrowseRegisterUserViewModel.NickName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.BrowseRegisterUserViewModel.UserState">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.BrowseRegisterUserViewModel.EmailAddress">
+            <summary>
+            邮箱地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.BrowseRegisterUserViewModel.HeadImage">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.BrowseRegisterUserViewModel.LastLoginIp">
+            <summary>
+            最后登录IP
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.BrowseRegisterUserViewModel.LastLoginTime">
+            <summary>
+            最后登录时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.BrowseRegisterUserViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.BrowseRegisterUserViewModel.ExternalIdentities">
+            <summary>
+            其它平台中的身份
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.CreateRegisterUserViewModel.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.CreateRegisterUserViewModel.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.CreateRegisterUserViewModel.OpenId">
+            <summary>
+            公众Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.CreateRegisterUserViewModel.UserGender">
+            <summary>
+            用户性别
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.CreateRegisterUserViewModel.NickName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.CreateRegisterUserViewModel.UserState">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.CreateRegisterUserViewModel.LastLoginIp">
+            <summary>
+            最后登录IP
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.CreateRegisterUserViewModel.LastLoginTime">
+            <summary>
+            最后登录时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.CreateRegisterUserViewModel.RegisterIp">
+            <summary>
+            注册IP
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.CreateRegisterUserViewModel.RegisterTime">
+            <summary>
+            注册时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserDetailViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserDetailViewModel.Account">
+            <summary>
+            用户账号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserDetailViewModel.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserDetailViewModel.UserGender">
+            <summary>
+            用户性别
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserDetailViewModel.NickName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserDetailViewModel.UserState">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserDetailViewModel.EmailAddress">
+            <summary>
+            邮箱地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserDetailViewModel.HeadImage">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserDetailViewModel.LastLoginIp">
+            <summary>
+            最后登录IP
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserDetailViewModel.LastLoginTime">
+            <summary>
+            最后登录时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserDetailViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserDetailViewModel.ExternalIdentities">
+            <summary>
+            其它平台中的身份
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserQueryViewModel.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserQueryViewModel.NickName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserQueryViewModel.UserState">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserQueryViewModel.StartRegisterDateTime">
+            <summary>
+            开始注册时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserQueryViewModel.EndRegisterDateTime">
+            <summary>
+            结束注册时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserQueryListViewModel.Account">
+            <summary>
+            用户账号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserQueryListViewModel.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserQueryListViewModel.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserQueryListViewModel.UserGender">
+            <summary>
+            用户性别
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserQueryListViewModel.NickName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserQueryListViewModel.UserState">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserQueryListViewModel.EmailAddress">
+            <summary>
+            邮箱地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserQueryListViewModel.HeadImage">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserQueryListViewModel.LastLoginIp">
+            <summary>
+            最后登录IP
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserQueryListViewModel.LastLoginTime">
+            <summary>
+            最后登录时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.RegisterUserQueryListViewModel.ClientId">
+            <summary>
+            注册客户端Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.UpdateRegisterUserViewModel.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.UpdateRegisterUserViewModel.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.UpdateRegisterUserViewModel.OpenId">
+            <summary>
+            公众Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.UpdateRegisterUserViewModel.UserGender">
+            <summary>
+            用户性别
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.UpdateRegisterUserViewModel.NickName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.UpdateRegisterUserViewModel.UserState">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.UpdateRegisterUserViewModel.LastLoginIp">
+            <summary>
+            最后登录IP
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.UpdateRegisterUserViewModel.LastLoginTime">
+            <summary>
+            最后登录时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.UpdateRegisterUserViewModel.RegisterIp">
+            <summary>
+            注册IP
+            </summary>
+        </member>
+        <member name="P:HaoKao.OpenPlatformService.Application.ViewModels.RegisterUser.UpdateRegisterUserViewModel.RegisterTime">
+            <summary>
+            注册时间
+            </summary>
+        </member>
+        <member name="T:Refit.Implementation.Generated">
+            <inheritdoc />
+        </member>
+        <member name="T:Refit.Implementation.Generated.HaoKaoOpenPlatformServiceApplicationServicesRefitIWeiXinRemoteService">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.HaoKaoOpenPlatformServiceApplicationServicesRefitIWeiXinRemoteService.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.HaoKaoOpenPlatformServiceApplicationServicesRefitIWeiXinRemoteService.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.HaoKaoOpenPlatformServiceApplicationServicesRefitIWeiXinRemoteService.Code2Session(System.String,System.String,System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.HaoKaoOpenPlatformServiceApplicationServicesRefitIWeiXinRemoteService.GetAccessTokenAsync(HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinAccessTokenBody)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.HaoKaoOpenPlatformServiceApplicationServicesRefitIWeiXinRemoteService.GetUserPhoneNumber(System.String,HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinUserPhoneNumberBody)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.HaoKaoOpenPlatformServiceApplicationServicesRefitIWeiXinRemoteService.GenerateScheme(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.HaoKaoOpenPlatformServiceApplicationServicesRefitIWeiXinRemoteService.QueryScheme(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.HaoKaoOpenPlatformServiceApplicationServicesRefitIWeiXinRemoteService.GetOffiAccountQrCode(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.HaoKaoOpenPlatformServiceApplicationServicesRefitIWeiXinRemoteService.UserInfo(System.String,System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.HaoKaoOpenPlatformServiceApplicationServicesRefitIWeiXinRemoteService.UserGet(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.HaoKaoOpenPlatformServiceApplicationServicesRefitIWeiXinRemoteService.HaoKao#OpenPlatformService#Application#Services#Refit#IWeiXinRemoteService#Code2Session(System.String,System.String,System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.HaoKaoOpenPlatformServiceApplicationServicesRefitIWeiXinRemoteService.HaoKao#OpenPlatformService#Application#Services#Refit#IWeiXinRemoteService#GetAccessTokenAsync(HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinAccessTokenBody)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.HaoKaoOpenPlatformServiceApplicationServicesRefitIWeiXinRemoteService.HaoKao#OpenPlatformService#Application#Services#Refit#IWeiXinRemoteService#GetUserPhoneNumber(System.String,HaoKao.OpenPlatformService.Application.ViewModels.Account.WeiXinUserPhoneNumberBody)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.HaoKaoOpenPlatformServiceApplicationServicesRefitIWeiXinRemoteService.HaoKao#OpenPlatformService#Application#Services#Refit#IWeiXinRemoteService#GenerateScheme(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.HaoKaoOpenPlatformServiceApplicationServicesRefitIWeiXinRemoteService.HaoKao#OpenPlatformService#Application#Services#Refit#IWeiXinRemoteService#QueryScheme(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.HaoKaoOpenPlatformServiceApplicationServicesRefitIWeiXinRemoteService.HaoKao#OpenPlatformService#Application#Services#Refit#IWeiXinRemoteService#GetOffiAccountQrCode(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.HaoKaoOpenPlatformServiceApplicationServicesRefitIWeiXinRemoteService.HaoKao#OpenPlatformService#Application#Services#Refit#IWeiXinRemoteService#UserInfo(System.String,System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.HaoKaoOpenPlatformServiceApplicationServicesRefitIWeiXinRemoteService.HaoKao#OpenPlatformService#Application#Services#Refit#IWeiXinRemoteService#UserGet(System.String,System.String)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

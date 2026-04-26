@@ -1,0 +1,1506 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.OrderService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.OrderService.Domain.Commands.Order.CancelOrderCommand">
+            <summary>
+            取消订单
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Domain.Commands.Order.CancelOrderCommand.#ctor(System.Guid)">
+            <summary>
+            取消订单
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.CancelOrderCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Commands.Order.CreateOrderCommand">
+            <summary>
+            创建订单表命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="OrderSerialNumber">订单流水号</param>
+            <param name="PurchaseProductId">购买产品ID</param>
+            <param name="PurchaseName">购买产品名称</param>
+            <param name="PurchaseProductType">产品类型</param>
+            <param name="OrderAmount">订单金额</param>
+            <param name="ActualAmount">实际金额</param>
+            <param name="Phone">手机号</param>
+            <param name="LiveId">直播Id</param>
+            <param name="ProductContents">购买产品内容详情</param>
+            <param name="CreatorId">下单用户Id</param>
+            <param name="CreatorName">下单用户名称</param>
+            <param name="CreateTime">下单时间</param>
+            <param name="UpdateTime">支付时间</param>
+            <param name="ClientId">客户Id</param>
+            <param name="ClientName">客户名称</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Domain.Commands.Order.CreateOrderCommand.#ctor(System.Guid,System.String,System.Guid,System.String,HaoKao.OrderService.Domain.Enums.PurchaseProductType,System.Decimal,System.Decimal,System.String,System.Nullable{System.Guid},System.Collections.Generic.List{HaoKao.OrderService.Domain.Entities.PurchaseProductContent},System.Guid,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.String)">
+            <summary>
+            创建订单表命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="OrderSerialNumber">订单流水号</param>
+            <param name="PurchaseProductId">购买产品ID</param>
+            <param name="PurchaseName">购买产品名称</param>
+            <param name="PurchaseProductType">产品类型</param>
+            <param name="OrderAmount">订单金额</param>
+            <param name="ActualAmount">实际金额</param>
+            <param name="Phone">手机号</param>
+            <param name="LiveId">直播Id</param>
+            <param name="ProductContents">购买产品内容详情</param>
+            <param name="CreatorId">下单用户Id</param>
+            <param name="CreatorName">下单用户名称</param>
+            <param name="CreateTime">下单时间</param>
+            <param name="UpdateTime">支付时间</param>
+            <param name="ClientId">客户Id</param>
+            <param name="ClientName">客户名称</param>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.CreateOrderCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.CreateOrderCommand.OrderSerialNumber">
+            <summary>订单流水号</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.CreateOrderCommand.PurchaseProductId">
+            <summary>购买产品ID</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.CreateOrderCommand.PurchaseName">
+            <summary>购买产品名称</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.CreateOrderCommand.PurchaseProductType">
+            <summary>产品类型</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.CreateOrderCommand.OrderAmount">
+            <summary>订单金额</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.CreateOrderCommand.ActualAmount">
+            <summary>实际金额</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.CreateOrderCommand.Phone">
+            <summary>手机号</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.CreateOrderCommand.LiveId">
+            <summary>直播Id</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.CreateOrderCommand.ProductContents">
+            <summary>购买产品内容详情</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.CreateOrderCommand.CreatorId">
+            <summary>下单用户Id</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.CreateOrderCommand.CreatorName">
+            <summary>下单用户名称</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.CreateOrderCommand.CreateTime">
+            <summary>下单时间</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.CreateOrderCommand.UpdateTime">
+            <summary>支付时间</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.CreateOrderCommand.ClientId">
+            <summary>客户Id</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.CreateOrderCommand.ClientName">
+            <summary>客户名称</summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Commands.Order.DeleteOrderCommand">
+            <summary>
+            删除订单表命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Domain.Commands.Order.DeleteOrderCommand.#ctor(System.Guid)">
+            <summary>
+            删除订单表命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.DeleteOrderCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Commands.Order.FinishPayOrderCommand">
+            <summary>
+            完成支付订单命令
+            </summary>
+            <param name="Id">主键Id</param>
+            <param name="PlatformPayerId">使用的平台配置的支付者的Id</param>
+            <param name="PlatformPayerName">使用的平台配置的支付者的名称</param>
+            <param name="OrderSerialNumber">订单流水号</param>
+            <param name="OrderNumber">订单号</param>
+            <param name="OrderState">订单状态</param>
+            <param name="IosRestorePurchase">苹果内购是否恢复购买过来的</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Domain.Commands.Order.FinishPayOrderCommand.#ctor(System.Guid,System.Guid,System.String,System.String,System.String,HaoKao.OrderService.Domain.Enums.OrderState,System.Boolean)">
+            <summary>
+            完成支付订单命令
+            </summary>
+            <param name="Id">主键Id</param>
+            <param name="PlatformPayerId">使用的平台配置的支付者的Id</param>
+            <param name="PlatformPayerName">使用的平台配置的支付者的名称</param>
+            <param name="OrderSerialNumber">订单流水号</param>
+            <param name="OrderNumber">订单号</param>
+            <param name="OrderState">订单状态</param>
+            <param name="IosRestorePurchase">苹果内购是否恢复购买过来的</param>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.FinishPayOrderCommand.Id">
+            <summary>主键Id</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.FinishPayOrderCommand.PlatformPayerId">
+            <summary>使用的平台配置的支付者的Id</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.FinishPayOrderCommand.PlatformPayerName">
+            <summary>使用的平台配置的支付者的名称</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.FinishPayOrderCommand.OrderSerialNumber">
+            <summary>订单流水号</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.FinishPayOrderCommand.OrderNumber">
+            <summary>订单号</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.FinishPayOrderCommand.OrderState">
+            <summary>订单状态</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.Order.FinishPayOrderCommand.IosRestorePurchase">
+            <summary>苹果内购是否恢复购买过来的</summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Commands.OrderSqInvoice.CreateOrderInvoiceCommand">
+            <summary>
+            创建订单发票申请命令
+            </summary>
+            <param name="OrderId">订单Id</param>
+            <param name="InvoiceType">发票类型</param>
+            <param name="VatInvoiceType">增值税发票类型</param>
+            <param name="InvoiceTitle">发票抬头</param>
+            <param name="TaxNo">税号</param>
+            <param name="RegistryAddress">注册地址</param>
+            <param name="RegistryTel">注册电话</param>
+            <param name="BankName">开户银行</param>
+            <param name="BankAccount">银行账号</param>
+            <param name="InvoiceFormat">发票形式(获取方式)</param>
+            <param name="Email">电子邮箱</param>
+            <param name="ShippingArea">所在地区</param>
+            <param name="ShippingAddress">收件人地址</param>
+            <param name="ReceiverName">收件人姓名</param>
+            <param name="ReceiverPhone">收件人联系电话</param>
+            <param name="Remark">发票备注</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Domain.Commands.OrderSqInvoice.CreateOrderInvoiceCommand.#ctor(System.Guid,HaoKao.OrderService.Domain.Enums.InvoiceType,HaoKao.OrderService.Domain.Enums.VatInvoiceType,System.String,System.String,System.String,System.String,System.String,System.String,HaoKao.OrderService.Domain.Enums.InvoiceFormat,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            创建订单发票申请命令
+            </summary>
+            <param name="OrderId">订单Id</param>
+            <param name="InvoiceType">发票类型</param>
+            <param name="VatInvoiceType">增值税发票类型</param>
+            <param name="InvoiceTitle">发票抬头</param>
+            <param name="TaxNo">税号</param>
+            <param name="RegistryAddress">注册地址</param>
+            <param name="RegistryTel">注册电话</param>
+            <param name="BankName">开户银行</param>
+            <param name="BankAccount">银行账号</param>
+            <param name="InvoiceFormat">发票形式(获取方式)</param>
+            <param name="Email">电子邮箱</param>
+            <param name="ShippingArea">所在地区</param>
+            <param name="ShippingAddress">收件人地址</param>
+            <param name="ReceiverName">收件人姓名</param>
+            <param name="ReceiverPhone">收件人联系电话</param>
+            <param name="Remark">发票备注</param>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.OrderSqInvoice.CreateOrderInvoiceCommand.OrderId">
+            <summary>订单Id</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.OrderSqInvoice.CreateOrderInvoiceCommand.InvoiceType">
+            <summary>发票类型</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.OrderSqInvoice.CreateOrderInvoiceCommand.VatInvoiceType">
+            <summary>增值税发票类型</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.OrderSqInvoice.CreateOrderInvoiceCommand.InvoiceTitle">
+            <summary>发票抬头</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.OrderSqInvoice.CreateOrderInvoiceCommand.TaxNo">
+            <summary>税号</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.OrderSqInvoice.CreateOrderInvoiceCommand.RegistryAddress">
+            <summary>注册地址</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.OrderSqInvoice.CreateOrderInvoiceCommand.RegistryTel">
+            <summary>注册电话</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.OrderSqInvoice.CreateOrderInvoiceCommand.BankName">
+            <summary>开户银行</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.OrderSqInvoice.CreateOrderInvoiceCommand.BankAccount">
+            <summary>银行账号</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.OrderSqInvoice.CreateOrderInvoiceCommand.InvoiceFormat">
+            <summary>发票形式(获取方式)</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.OrderSqInvoice.CreateOrderInvoiceCommand.Email">
+            <summary>电子邮箱</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.OrderSqInvoice.CreateOrderInvoiceCommand.ShippingArea">
+            <summary>所在地区</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.OrderSqInvoice.CreateOrderInvoiceCommand.ShippingAddress">
+            <summary>收件人地址</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.OrderSqInvoice.CreateOrderInvoiceCommand.ReceiverName">
+            <summary>收件人姓名</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.OrderSqInvoice.CreateOrderInvoiceCommand.ReceiverPhone">
+            <summary>收件人联系电话</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.OrderSqInvoice.CreateOrderInvoiceCommand.Remark">
+            <summary>发票备注</summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Commands.OrderSqInvoice.UpdateOrderInvoiceCommand">
+            <summary>
+            更新订单发票申请命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="RequestState">申请状态</param>
+            <param name="LogisticsCompany">物流公司</param>
+            <param name="ShippingNumber">物流单号</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Domain.Commands.OrderSqInvoice.UpdateOrderInvoiceCommand.#ctor(System.Guid,HaoKao.OrderService.Domain.Enums.RequestState,System.String,System.String)">
+            <summary>
+            更新订单发票申请命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="RequestState">申请状态</param>
+            <param name="LogisticsCompany">物流公司</param>
+            <param name="ShippingNumber">物流单号</param>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.OrderSqInvoice.UpdateOrderInvoiceCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.OrderSqInvoice.UpdateOrderInvoiceCommand.RequestState">
+            <summary>申请状态</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.OrderSqInvoice.UpdateOrderInvoiceCommand.LogisticsCompany">
+            <summary>物流公司</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.OrderSqInvoice.UpdateOrderInvoiceCommand.ShippingNumber">
+            <summary>物流单号</summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Commands.PlatformPayer.CreatePlatformPayerCommand">
+            <summary>
+            创建平台配置的支付列表命令
+            </summary>
+            <param name="Name">支付名称</param>
+            <param name="PayerId">对应支付处理者Id</param>
+            <param name="PayerName">对应支付处理者名称</param>
+            <param name="PaymentMethod">支付方式</param>
+            <param name="IosIsOpen">Ios是否开启</param>
+            <param name="PlatformPayerScenes">使用场景</param>
+            <param name="Config">支付相关配置</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Domain.Commands.PlatformPayer.CreatePlatformPayerCommand.#ctor(System.String,System.Guid,System.String,HaoKao.OrderService.Domain.Enums.PlatformPayerScenes,HaoKao.OrderService.Domain.Enums.PaymentMethod,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            创建平台配置的支付列表命令
+            </summary>
+            <param name="Name">支付名称</param>
+            <param name="PayerId">对应支付处理者Id</param>
+            <param name="PayerName">对应支付处理者名称</param>
+            <param name="PaymentMethod">支付方式</param>
+            <param name="IosIsOpen">Ios是否开启</param>
+            <param name="PlatformPayerScenes">使用场景</param>
+            <param name="Config">支付相关配置</param>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.PlatformPayer.CreatePlatformPayerCommand.Name">
+            <summary>支付名称</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.PlatformPayer.CreatePlatformPayerCommand.PayerId">
+            <summary>对应支付处理者Id</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.PlatformPayer.CreatePlatformPayerCommand.PayerName">
+            <summary>对应支付处理者名称</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.PlatformPayer.CreatePlatformPayerCommand.PlatformPayerScenes">
+            <summary>使用场景</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.PlatformPayer.CreatePlatformPayerCommand.PaymentMethod">
+            <summary>支付方式</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.PlatformPayer.CreatePlatformPayerCommand.IosIsOpen">
+            <summary>Ios是否开启</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.PlatformPayer.CreatePlatformPayerCommand.Config">
+            <summary>支付相关配置</summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Commands.PlatformPayer.DeletePlatformPayerCommand">
+            <summary>
+            删除平台配置的支付列表命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Domain.Commands.PlatformPayer.DeletePlatformPayerCommand.#ctor(System.Guid)">
+            <summary>
+            删除平台配置的支付列表命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.PlatformPayer.DeletePlatformPayerCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Commands.PlatformPayer.SetPlatformPayerUseStateCommand">
+            <summary>
+            设置启用禁用
+            </summary>
+            <param name="Id"></param>
+            <param name="UseState"></param>
+        </member>
+        <member name="M:HaoKao.OrderService.Domain.Commands.PlatformPayer.SetPlatformPayerUseStateCommand.#ctor(System.Guid,System.Boolean)">
+            <summary>
+            设置启用禁用
+            </summary>
+            <param name="Id"></param>
+            <param name="UseState"></param>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.PlatformPayer.SetPlatformPayerUseStateCommand.Id">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.PlatformPayer.SetPlatformPayerUseStateCommand.UseState">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Commands.PlatformPayer.UpdatePlatformPayerCommand">
+            <summary>
+            更新平台配置的支付列表命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Name">支付名称</param>
+            <param name="PayerId">对应支付处理者Id</param>
+            <param name="PayerName">对应支付处理者名称</param>
+            <param name="PaymentMethod">支付方式</param>
+            <param name="IosIsOpen">Ios是否开启</param>
+            <param name="PlatformPayerScenes">使用场景</param>
+            <param name="Config">支付相关配置</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Domain.Commands.PlatformPayer.UpdatePlatformPayerCommand.#ctor(System.Guid,System.String,System.Guid,System.String,HaoKao.OrderService.Domain.Enums.PaymentMethod,System.Boolean,HaoKao.OrderService.Domain.Enums.PlatformPayerScenes,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            更新平台配置的支付列表命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Name">支付名称</param>
+            <param name="PayerId">对应支付处理者Id</param>
+            <param name="PayerName">对应支付处理者名称</param>
+            <param name="PaymentMethod">支付方式</param>
+            <param name="IosIsOpen">Ios是否开启</param>
+            <param name="PlatformPayerScenes">使用场景</param>
+            <param name="Config">支付相关配置</param>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.PlatformPayer.UpdatePlatformPayerCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.PlatformPayer.UpdatePlatformPayerCommand.Name">
+            <summary>支付名称</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.PlatformPayer.UpdatePlatformPayerCommand.PayerId">
+            <summary>对应支付处理者Id</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.PlatformPayer.UpdatePlatformPayerCommand.PayerName">
+            <summary>对应支付处理者名称</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.PlatformPayer.UpdatePlatformPayerCommand.PaymentMethod">
+            <summary>支付方式</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.PlatformPayer.UpdatePlatformPayerCommand.IosIsOpen">
+            <summary>Ios是否开启</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.PlatformPayer.UpdatePlatformPayerCommand.PlatformPayerScenes">
+            <summary>使用场景</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Commands.PlatformPayer.UpdatePlatformPayerCommand.Config">
+            <summary>支付相关配置</summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Entities.Order">
+            <summary>
+            订单表
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.Order.PlatformPayerId">
+            <summary>
+            使用的平台配置的支付者的Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.Order.PlatformPayerName">
+            <summary>
+            使用的平台配置的支付者的名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.Order.OrderSerialNumber">
+            <summary>
+            订单流水号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.Order.OrderNumber">
+            <summary>
+            订单号,主要是和第三方平交易时产生的商户交易号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.Order.PurchaseProductId">
+            <summary>
+            购买的产品Id(购买产品包下面的产品,这里传产品包id，购买单个产品，这个传产品id)
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.Order.PurchaseName">
+            <summary>
+            购买产品名称(购买产品包下面的产品,这里传产品包名称，购买单个产品，这个传产品名称)
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.Order.PurchaseProductType">
+            <summary>
+            产品类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.Order.OrderAmount">
+            <summary>
+            订单金额
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.Order.ActualAmount">
+            <summary>
+            实际金额
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.Order.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.Order.LiveId">
+            <summary>
+            直播id（可为空）
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.Order.OrderState">
+            <summary>
+            订单状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.Order.IosRestorePurchase">
+            <summary>
+            苹果内购是否恢复购买过来的
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.Order.CreatorId">
+            <summary>
+            下单用户ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.Order.CreatorName">
+            <summary>
+            下单用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.Order.CreateTime">
+            <summary>
+            订单创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.Order.UpdateTime">
+            <summary>
+            订单更新时间，完成支付时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.Order.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.Order.TenantName">
+            <summary>
+            租户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.Order.ClientId">
+            <summary>
+            客户端Id ，后续备用
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.Order.ClientName">
+            <summary>
+            客户端名称，后续备用
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.Order.PurchaseProductContents">
+            <summary>
+            购买的产品详细内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.Order.OrderInvoice">
+            <summary>
+            订单发票
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Entities.PurchaseProductContent">
+            <summary>
+            购买的产品内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PurchaseProductContent.ContentId">
+            <summary>
+            内容Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PurchaseProductContent.ContentName">
+            <summary>
+            内容名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PurchaseProductContent.ContentType">
+            <summary>
+            产品类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PurchaseProductContent.ContentAmount">
+            <summary>
+            原价
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PurchaseProductContent.DiscountAmount">
+            <summary>
+            优惠价
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PurchaseProductContent.CouponAmount">
+            <summary>
+            优惠券减免价格
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PurchaseProductContent.ActualAmount">
+            <summary>
+            成交价格
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PurchaseProductContent.AppleInPurchaseProductId">
+            <summary>
+            苹果内购产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PurchaseProductContent.ExpiryTimeTypeEnum">
+            <summary>
+            0-按日期 1-按天数
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PurchaseProductContent.Days">
+            <summary>
+            按天数
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PurchaseProductContent.ExpiryTime">
+            <summary>
+            到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PurchaseProductContent.Coupons">
+            <summary>
+            优惠券集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.CouponViewModel.Id">
+            <summary>
+            优惠券id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.CouponViewModel.CouponName">
+            <summary>
+            优惠券名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.CouponViewModel.CouponType">
+            <summary>
+            优惠券类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.CouponViewModel.Amount">
+            <summary>
+            折扣/金额
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.CouponViewModel.AmountEncryption">
+            <summary>
+            金额加密
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Entities.OrderInvoice">
+            <summary>
+            订单发票申请记录
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.OrderId">
+            <summary>
+            订单Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.InvoiceType">
+            <summary>
+            发票类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.VatInvoiceType">
+            <summary>
+            增值税发票类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.InvoiceTitle">
+            <summary>
+            发票抬头
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.TaxNo">
+            <summary>
+            税号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.RegistryAddress">
+            <summary>
+            注册地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.RegistryTel">
+            <summary>
+            注册电话
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.BankName">
+            <summary>
+            开户银行
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.BankAccount">
+            <summary>
+            银行账号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.InvoiceFormat">
+            <summary>
+            发票形式(获取方式)
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.Email">
+            <summary>
+            电子邮箱
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.ShippingArea">
+            <summary>
+            所在地区
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.ShippingAddress">
+            <summary>
+            收件人地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.ReceiverName">
+            <summary>
+            收件人姓名
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.ReceiverPhone">
+            <summary>
+            收件人联系电话
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.RequestState">
+            <summary>
+            申请状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.ShippingNumber">
+            <summary>
+            物流单号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.LogisticsCompany">
+            <summary>
+            物流公司
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.ShippingTime">
+            <summary>
+            发货时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.CreatorId">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.CreatorName">
+            <summary>
+            创建者名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.Remark">
+            <summary>
+            发票备注
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.OrderInvoice.Order">
+            <summary>
+            订单实体
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Entities.PlatformPayer">
+            <summary>
+            平台配置的支付列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PlatformPayer.Name">
+            <summary>
+            支付名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PlatformPayer.PayerId">
+            <summary>
+            对应支付处理者Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PlatformPayer.PayerName">
+            <summary>
+            对应支付处理者名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PlatformPayer.PlatformPayerScenes">
+            <summary>
+            使用场景
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PlatformPayer.PaymentMethod">
+            <summary>
+            支付方式归类
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PlatformPayer.IosIsOpen">
+            <summary>
+            Ios是否开启
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PlatformPayer.Config">
+            <summary>
+            支付相关配置
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PlatformPayer.CreateTime">
+            <summary>
+            创建的时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PlatformPayer.CreatorId">
+            <summary>
+            创建者Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PlatformPayer.CreatorName">
+            <summary>
+            创建者名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PlatformPayer.SecurityCode">
+            <summary>
+            数据安全码
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PlatformPayer.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.PlatformPayer.UseState">
+            <summary>
+            启用/禁用
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Domain.Entities.PlatformPayer.BuildSecurityCode">
+            <summary>
+            生成数据安全码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Domain.Entities.PlatformPayer.VerificationDataSecurity">
+            <summary>
+            校验数据的合法性，有没有通过数据直接对数据进行修改
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.ProductSales.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.ProductSales.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.ProductSales.ActualPrice">
+            <summary>
+            价格
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.ProductSales.CreateTime">
+            <summary>
+            交易时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Entities.ProductSales.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.ContentType.Purchase">
+            <summary>
+            购买
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.ContentType.Gift">
+            <summary>
+            赠品
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Enums.InvoiceType">
+            <summary>
+            发票类型(企业发票/个人发票)
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.InvoiceType.Business">
+            <summary>
+            企业发票
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.InvoiceType.Personal">
+            <summary>
+            个人发票
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Enums.VatInvoiceType">
+            <summary>
+            增值票类型(普通发票/专用发票）
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.VatInvoiceType.General">
+            <summary>
+            增值税普通发票
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.VatInvoiceType.Special">
+            <summary>
+            增值税专项发票
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Enums.InvoiceFormat">
+            <summary>
+            发票形式(电子发票/纸质发票)
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.InvoiceFormat.Electronic">
+            <summary>
+            电子发票
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.InvoiceFormat.Paper">
+            <summary>
+            纸质发票
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Enums.RequestState">
+            <summary>
+            申请状态(待开票/已开票)
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.RequestState.Waiting">
+            <summary>
+            待开票
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.RequestState.Success">
+            <summary>
+            已开票
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Enums.OrderState">
+            <summary>
+            订单状态
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.OrderState.Paying">
+            <summary>
+            支付中
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.OrderState.PaymentFailed">
+            <summary>
+            支付失败
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.OrderState.PaymentSuccessful">
+            <summary>
+            支付成功
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.OrderState.Cancel">
+            <summary>
+            订单取消
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.OrderState.Expired">
+            <summary>
+            失效订单
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Enums.PaymentChannel">
+            <summary>
+            订单支付通道
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.PaymentChannel.HaoHuiKaoQuestionBlank">
+            <summary>
+            好慧考题库App
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Enums.PaymentMethod">
+            <summary>
+            支付方式
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.PaymentMethod.Wechat">
+            <summary>
+            微信支付
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.PaymentMethod.Alipay">
+            <summary>
+            支付宝支付
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.PaymentMethod.AppleInPay">
+            <summary>
+            苹果内购
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.PaymentMethod.Huabei">
+            <summary>
+            花呗支付
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Enums.PlatformPayerScenes">
+            <summary>
+            支付场景
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.PlatformPayerScenes.App">
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.PlatformPayerScenes.WebSite">
+            <summary>
+            网站
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.PlatformPayerScenes.WechatMiniProgram">
+            <summary>
+            小程序
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Enums.PurchaseProductType">
+            <summary>
+            产品类型
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.PurchaseProductType.QuestionBlank">
+            <summary>
+            题库
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.PurchaseProductType.Course">
+            <summary>
+            课程
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.PurchaseProductType.Material">
+            <summary>
+            资料
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.PurchaseProductType.Live">
+            <summary>
+            直播
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Enums.SalesStatDimension">
+            <summary>
+            销售统计维度
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.SalesStatDimension.Daily">
+            <summary>
+            按日
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.SalesStatDimension.Monthly">
+            <summary>
+            按月
+            </summary>
+        </member>
+        <member name="F:HaoKao.OrderService.Domain.Enums.SalesStatDimension.Yearly">
+            <summary>
+            按年
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.OrderInvoiceQuery.OrderSerialNumber">
+            <summary>
+            订单编号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.OrderInvoiceQuery.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.OrderInvoiceQuery.CreatorName">
+            <summary>
+            下单人名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.OrderInvoiceQuery.InvoiceType">
+            <summary>
+            抬头类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.OrderInvoiceQuery.InvoiceFormat">
+            <summary>
+            获取方式
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.OrderInvoiceQuery.StartTime">
+            <summary>
+            申请开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.OrderInvoiceQuery.EndTime">
+            <summary>
+            申请结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.OrderInvoiceQuery.RequestState">
+            <summary>
+            申请状态
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Queries.OrderQuery">
+            <inheritdoc />
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.OrderQuery.PlatformPayerId">
+            <summary>
+            使用的平台配置的支付者的Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.OrderQuery.OrderNumber">
+            <summary>
+            订单号(模糊搜索)
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.OrderQuery.OrderNumber2">
+            <summary>
+            订单号(精确搜索)
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.OrderQuery.OrderSerialNumber">
+            <summary>
+            订单流水号(模糊搜索)
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.OrderQuery.OrderSerialNumber2">
+            <summary>
+            订单流水号(精确搜索)
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.OrderQuery.PurchaseName">
+            <summary>
+            购买产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.OrderQuery.CreatorName">
+            <summary>
+            下单用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.OrderQuery.OrderState">
+            <summary>
+            订单状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.OrderQuery.StartCreateTime">
+            <summary>
+            下单开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.OrderQuery.EndCreateTime">
+            <summary>
+            下单结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.OrderQuery.StartUpdateTime">
+            <summary>
+            支付开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.OrderQuery.EndUpdateTime">
+            <summary>
+            支付结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.OrderQuery.LiveId">
+            <summary>
+            直播id（可为空）
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.OrderQuery.IosRestorePurchase">
+            <summary>
+            苹果内购恢复购买的
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.OrderQuery.IsPaidOrder">
+            <summary>
+            是否付费订单（true:返回实缴金额大于0订单，false：返回实缴金额等于0订单，不传都返回）
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.OrderQuery.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Domain.Queries.OrderQuery.GetQueryWhere">
+            <inheritdoc />
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.PlatformPayerQuery.Name">
+            <summary>
+            支付名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.PlatformPayerQuery.PayerId">
+            <summary>
+            对应支付处理者Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.PlatformPayerQuery.UseState">
+            <summary>
+            启用/禁用
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.PlatformPayerQuery.PaymentMethod">
+            <summary>
+            支付归类
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.PlatformPayerQuery.PlatformPayerScenes">
+            <summary>
+            支付场景
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.PlatformPayerQuery.Ids">
+            <summary>
+            ID列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.Queries.PlatformPayerQuery.IosIsOpen">
+            <summary>
+            苹果端是否显示
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.Repositories.IOrderRepository">
+            <summary>
+            订单仓储
+            </summary>
+        </member>
+        <member name="M:HaoKao.OrderService.Domain.Repositories.IOrderRepository.Update(HaoKao.OrderService.Domain.Entities.Order)">
+            <summary>
+            更新订单
+            </summary>
+            <param name="order"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Domain.Repositories.IOrderRepository.QueryAllExpiredOrderList">
+            <summary>
+            查询出所有租户下的过期订单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Domain.Repositories.IOrderRepository.SetOrderExpired(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            根据订单Ids更新为失效订单
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.OrderService.Domain.Repositories.IOrderRepository.GetLiveTotalAmount(System.Guid)">
+            <summary>
+            获取本场直播间购物车入口购买产品的订单金额合计金额
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.ValueObjects.Product">
+            <summary>
+            平台产品
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.Product.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.Product.Name">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.Product.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.Product.ProductType">
+            <summary>
+            产品类别
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.Product.Enable">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.Product.IsShelves">
+            <summary>
+            是否上架
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.Product.Description">
+            <summary>
+            产品描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.Product.Icon">
+            <summary>
+            产品图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.Product.DetailImage">
+            <summary>
+            产品详情图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.Product.ExpiryTimeTypeEnum">
+            <summary>
+            0-按日期 1-按天数
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.Product.Days">
+            <summary>
+            按天数
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.Product.ExpiryTime">
+            <summary>
+            到期时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.Product.Year">
+            <summary>
+            所属年份
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.Product.Price">
+            <summary>
+            价格
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.Product.DiscountedPrice">
+            <summary>
+            优惠价格
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.Product.AppleProductId">
+            <summary>
+            苹果内购产品ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.Product.Answering">
+            <summary>
+            答疑
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.Product.Agreement">
+            <summary>
+            产品协议
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.Product.GiveAwayAList">
+            <summary>
+            赠送列表
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.Product.IsExperience">
+            <summary>
+            是否体验产品
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.Product.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.Product.CreatorName">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.Product.CreatorId">
+            <summary>
+            创建者Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.Product.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.ValueObjects.ProductSalesStat">
+            <summary>
+            产品销售统计
+            </summary>
+            <param name="ProductId">产品Id</param>
+            <param name="ProductName">产品名称</param>
+            <param name="SalesCount">销售量</param>
+            <param name="SalesRevenue">销售金额(元)</param>
+            <param name="TenantId"></param>
+        </member>
+        <member name="M:HaoKao.OrderService.Domain.ValueObjects.ProductSalesStat.#ctor(System.Guid,System.String,System.Int32,System.Decimal,System.Guid)">
+            <summary>
+            产品销售统计
+            </summary>
+            <param name="ProductId">产品Id</param>
+            <param name="ProductName">产品名称</param>
+            <param name="SalesCount">销售量</param>
+            <param name="SalesRevenue">销售金额(元)</param>
+            <param name="TenantId"></param>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.ProductSalesStat.ProductId">
+            <summary>产品Id</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.ProductSalesStat.ProductName">
+            <summary>产品名称</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.ProductSalesStat.SalesCount">
+            <summary>销售量</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.ProductSalesStat.SalesRevenue">
+            <summary>销售金额(元)</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.ProductSalesStat.TenantId">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.OrderService.Domain.ValueObjects.ProductSalesStatList">
+            <summary>
+            产品销售统计列表
+            </summary>
+            <param name="RecordCount">记录数</param>
+            <param name="Result">数据</param>
+        </member>
+        <member name="M:HaoKao.OrderService.Domain.ValueObjects.ProductSalesStatList.#ctor(System.Int32,System.Collections.Generic.IReadOnlyList{HaoKao.OrderService.Domain.ValueObjects.ProductSalesStat})">
+            <summary>
+            产品销售统计列表
+            </summary>
+            <param name="RecordCount">记录数</param>
+            <param name="Result">数据</param>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.ProductSalesStatList.RecordCount">
+            <summary>记录数</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.ProductSalesStatList.Result">
+            <summary>数据</summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.SalesStatisticsItem.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.SalesStatisticsItem.SumOrderCount">
+            <summary>
+            订单数
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.SalesStatisticsItem.SumOrderAmount">
+            <summary>
+            订单金额
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.SalesStatisticsItemDetail.PlatformPayerName">
+            <summary>
+            使用的平台配置的支付者的名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.SalesStatisticsItemDetail.OrderSerialNumber">
+            <summary>
+            订单流水号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.SalesStatisticsItemDetail.OrderNumber">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.SalesStatisticsItemDetail.PurchaseName">
+            <summary>
+            购买产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.SalesStatisticsItemDetail.OrderAmount">
+            <summary>
+            订单金额
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.SalesStatisticsItemDetail.ActualAmount">
+            <summary>
+            实际金额
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.SalesStatisticsItemDetail.CreatorId">
+            <summary>
+            下单用户ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.SalesStatisticsItemDetail.CreatorName">
+            <summary>
+            下单用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.SalesStatisticsItemDetail.CreateTime">
+            <summary>
+            订单创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.OrderService.Domain.ValueObjects.SalesStatisticsItemDetail.UpdateTime">
+            <summary>
+            订单更新时间，完成支付时间
+            </summary>
+        </member>
+    </members>
+</doc>

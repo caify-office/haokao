@@ -1,0 +1,498 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.ArticleService.Application</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.ArticleService.Application.Profiles.ArticleProfile">
+            <summary>
+            文书模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Profiles.ArticleProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.Profiles.ArticleProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.ArticleService.Application.Services.Management.ArticleService">
+            <summary>
+            文章接口服务-管理端
+            </summary>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Management.ArticleService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.ArticleService.Domain.Repositories.IArticleRepository)">
+            <summary>
+            文章接口服务-管理端
+            </summary>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Management.ArticleService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Management.ArticleService.Get(HaoKao.ArticleService.Application.ViewModels.Article.ArticleQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Management.ArticleService.GetThisWeekHotArticle">
+            <summary>
+            获取本周热门文章
+            </summary>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Management.ArticleService.Create(HaoKao.ArticleService.Application.ViewModels.Article.CreateArticleViewModel)">
+            <summary>
+            创建文章
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Management.ArticleService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定文章
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Management.ArticleService.Update(HaoKao.ArticleService.Application.ViewModels.Article.UpdateArticleViewModel)">
+            <summary>
+            根据主键更新指定文章
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Management.ArticleService.SetTopping(System.Guid)">
+            <summary>
+            置顶
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Management.ArticleService.CancelTopping(System.Guid)">
+            <summary>
+            取消置顶
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Management.IArticleService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Management.IArticleService.Get(HaoKao.ArticleService.Application.ViewModels.Article.ArticleQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Management.IArticleService.Create(HaoKao.ArticleService.Application.ViewModels.Article.CreateArticleViewModel)">
+            <summary>
+            创建文章
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Management.IArticleService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定文章
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Management.IArticleService.Update(HaoKao.ArticleService.Application.ViewModels.Article.UpdateArticleViewModel)">
+            <summary>
+            根据主键更新指定文章
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Management.IArticleService.SetTopping(System.Guid)">
+            <summary>
+            置顶
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Management.IArticleService.CancelTopping(System.Guid)">
+            <summary>
+            取消置顶
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Management.IArticleService.GetThisWeekHotArticle">
+            <summary>
+            获取本周热门文章
+            </summary>
+        </member>
+        <member name="T:HaoKao.ArticleService.Application.Services.Web.ArticleWebService">
+            <summary>
+            文章服务-Web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Web.ArticleWebService.#ctor(HaoKao.ArticleService.Application.Services.Management.IArticleService)">
+            <summary>
+            文章服务-Web端接口
+            </summary>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Web.ArticleWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Web.ArticleWebService.Get(HaoKao.ArticleService.Application.ViewModels.Article.ArticleQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Web.ArticleWebService.Get(System.Guid,System.Guid[])">
+            <summary>
+            获取当前栏目具体类别是否有更新
+            </summary>
+            <param name="ColumnId">栏目Id</param>
+            <param name="CategoryIds">类别Ids</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Web.ArticleWebService.GetThisWeekHotArticle">
+            <summary>
+            获取本周热门文章
+            </summary>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Web.IArticleWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Web.IArticleWebService.Get(HaoKao.ArticleService.Application.ViewModels.Article.ArticleQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Web.IArticleWebService.Get(System.Guid,System.Guid[])">
+            <summary>
+            获取当前栏目具体类别是否有更新
+            </summary>
+            <param name="ColumnId">栏目Id</param>
+            <param name="CategoryIds">类别Ids</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.Services.Web.IArticleWebService.GetThisWeekHotArticle">
+            <summary>
+            获取本周热门文章
+            </summary>
+        </member>
+        <member name="T:HaoKao.ArticleService.Application.AppService.ArticleBrowseRecordWebService">
+            <summary>
+            文章浏览记录接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.AppService.ArticleBrowseRecordWebService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.ArticleService.Domain.Repositories.IArticleBrowseRecordRepository)">
+            <summary>
+            文章浏览记录接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.AppService.ArticleBrowseRecordWebService.Create(HaoKao.ArticleService.Application.ViewModels.CreateArticleBrowseRecordViewModel)">
+            <summary>
+            创建文章浏览记录
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.AppService.ArticleBrowseRecordWebService.GetViewCount(System.Guid[])">
+            <summary>
+            获取文章浏览量
+            </summary>
+            <param name="articleIds">文章Ids</param>
+        </member>
+        <member name="M:HaoKao.ArticleService.Application.AppService.IArticleBrowseRecordWebService.Create(HaoKao.ArticleService.Application.ViewModels.CreateArticleBrowseRecordViewModel)">
+            <summary>
+            创建文章浏览记录
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.ArticleQueryViewModel.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.ArticleQueryViewModel.Column">
+            <summary>
+            所属栏目(字典Id)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.ArticleQueryViewModel.Category">
+            <summary>
+            所属类别
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.ArticleQueryViewModel.IsDisplayedOnHomepage">
+            <summary>
+            是否首页展示
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.ArticleQueryViewModel.IsPublish">
+            <summary>
+            是否发布
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.ArticleQueryListViewModel.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.ArticleQueryListViewModel.Column">
+            <summary>
+            所属栏目(字典Id)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.ArticleQueryListViewModel.Category">
+            <summary>
+            所属类别(字典Id)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.ArticleQueryListViewModel.IsTopping">
+            <summary>
+            是否置顶
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.ArticleQueryListViewModel.Sort">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.ArticleQueryListViewModel.IsDisplayedOnHomepage">
+            <summary>
+            是否首页展示
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.ArticleQueryListViewModel.IsPublish">
+            <summary>
+            是否发布
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.ArticleQueryListViewModel.PreviewUrl">
+            <summary>
+            预览图
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.ArticleQueryListViewModel.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.ArticleQueryListViewModel.IsExternalURL">
+            <summary>
+            是否外部链接
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.ArticleQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.ArticleQueryListViewModel.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.BrowseArticleViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.BrowseArticleViewModel.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.BrowseArticleViewModel.Column">
+            <summary>
+            所属栏目(字典Id)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.BrowseArticleViewModel.Category">
+            <summary>
+            所属类别(字典Id)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.BrowseArticleViewModel.IsTopping">
+            <summary>
+            是否置顶
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.BrowseArticleViewModel.Sort">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.BrowseArticleViewModel.IsDisplayedOnHomepage">
+            <summary>
+            是否首页展示
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.BrowseArticleViewModel.IsPublish">
+            <summary>
+            是否发布
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.BrowseArticleViewModel.PreviewUrl">
+            <summary>
+            预览图
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.BrowseArticleViewModel.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.BrowseArticleViewModel.IsExternalURL">
+            <summary>
+            是否外部链接
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.BrowseArticleViewModel.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.CreateArticleViewModel.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.CreateArticleViewModel.Column">
+            <summary>
+            所属栏目(字典Id)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.CreateArticleViewModel.Category">
+            <summary>
+            所属类别(字典Id)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.CreateArticleViewModel.IsTopping">
+            <summary>
+            是否置顶
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.CreateArticleViewModel.Sort">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.CreateArticleViewModel.IsDisplayedOnHomepage">
+            <summary>
+            是否首页展示
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.CreateArticleViewModel.IsPublish">
+            <summary>
+            是否发布
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.CreateArticleViewModel.PreviewUrl">
+            <summary>
+            预览图
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.CreateArticleViewModel.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.CreateArticleViewModel.IsExternalURL">
+            <summary>
+            是否外部链接
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.ThisWeekHotArticleViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.ThisWeekHotArticleViewModel.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.ThisWeekHotArticleViewModel.Category">
+            <summary>
+            所属类别(字典Id)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.ThisWeekHotArticleViewModel.IsDisplayedOnHomepage">
+            <summary>
+            是否首页展示
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.ThisWeekHotArticleViewModel.IsPublish">
+            <summary>
+            是否发布
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.ThisWeekHotArticleViewModel.PreviewUrl">
+            <summary>
+            预览图
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.UpdateArticleViewModel.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.UpdateArticleViewModel.Column">
+            <summary>
+            所属栏目(字典Id)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.UpdateArticleViewModel.Category">
+            <summary>
+            所属类别(字典Id)
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.UpdateArticleViewModel.IsTopping">
+            <summary>
+            是否置顶
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.UpdateArticleViewModel.Sort">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.UpdateArticleViewModel.IsDisplayedOnHomepage">
+            <summary>
+            是否首页展示
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.UpdateArticleViewModel.IsPublish">
+            <summary>
+            是否发布
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.UpdateArticleViewModel.PreviewUrl">
+            <summary>
+            预览图
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.UpdateArticleViewModel.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.Article.UpdateArticleViewModel.IsExternalURL">
+            <summary>
+            是否外部链接
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.CreateArticleBrowseRecordViewModel.ClientUniqueId">
+            <summary>
+            客户端唯一识别号
+            </summary>
+        </member>
+        <member name="P:HaoKao.ArticleService.Application.ViewModels.CreateArticleBrowseRecordViewModel.ArticleId">
+            <summary>
+            文章Id
+            </summary>
+        </member>
+    </members>
+</doc>

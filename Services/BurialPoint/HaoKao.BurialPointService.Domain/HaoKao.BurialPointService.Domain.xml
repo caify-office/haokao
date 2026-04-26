@@ -1,0 +1,258 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.BurialPointService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.BurialPointService.Domain.Commands.BrowseRecord.CreateBrowseRecordCommand">
+            <summary>
+            创建浏览记录命令
+            </summary>
+            <param name="BurialPointName">埋点名称</param>
+            <param name="BelongingPortType">所属端</param>
+            <param name="BrowseData">浏览信息</param>
+            <param name="IsPaidUser">是否付费用户</param>
+        </member>
+        <member name="M:HaoKao.BurialPointService.Domain.Commands.BrowseRecord.CreateBrowseRecordCommand.#ctor(System.String,HaoKao.BurialPointService.Domain.Enums.BelongingPortType,System.String,System.Boolean)">
+            <summary>
+            创建浏览记录命令
+            </summary>
+            <param name="BurialPointName">埋点名称</param>
+            <param name="BelongingPortType">所属端</param>
+            <param name="BrowseData">浏览信息</param>
+            <param name="IsPaidUser">是否付费用户</param>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Commands.BrowseRecord.CreateBrowseRecordCommand.BurialPointName">
+            <summary>埋点名称</summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Commands.BrowseRecord.CreateBrowseRecordCommand.BelongingPortType">
+            <summary>所属端</summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Commands.BrowseRecord.CreateBrowseRecordCommand.BrowseData">
+            <summary>浏览信息</summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Commands.BrowseRecord.CreateBrowseRecordCommand.IsPaidUser">
+            <summary>是否付费用户</summary>
+        </member>
+        <member name="T:HaoKao.BurialPointService.Domain.MappingModel.RegisterUser">
+            <summary>
+            注册用户
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.MappingModel.RegisterUser.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.MappingModel.RegisterUser.Account">
+            <summary>
+            用户账号
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.MappingModel.RegisterUser.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.MappingModel.RegisterUser.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.MappingModel.RegisterUser.UserGender">
+            <summary>
+            用户性别
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.MappingModel.RegisterUser.NickName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.MappingModel.RegisterUser.UserState">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.MappingModel.RegisterUser.EmailAddress">
+            <summary>
+            邮箱地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.MappingModel.RegisterUser.HeadImage">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.MappingModel.RegisterUser.LastLoginIp">
+            <summary>
+            最后登录IP
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.MappingModel.RegisterUser.LastLoginTime">
+            <summary>
+            最后登录时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.MappingModel.RegisterUser.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.MappingModel.RegisterUser.ClientId">
+            <summary>
+            客户端Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.BurialPointService.Domain.MappingModel.UserGender">
+            <summary>
+            用户性别
+            </summary>
+        </member>
+        <member name="F:HaoKao.BurialPointService.Domain.MappingModel.UserGender.Unknown">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:HaoKao.BurialPointService.Domain.MappingModel.UserGender.Male">
+            <summary>
+            男
+            </summary>
+        </member>
+        <member name="F:HaoKao.BurialPointService.Domain.MappingModel.UserGender.Female">
+            <summary>
+            女
+            </summary>
+        </member>
+        <member name="T:HaoKao.BurialPointService.Domain.MappingModel.UserState">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="F:HaoKao.BurialPointService.Domain.MappingModel.UserState.Disable">
+            <summary>
+            禁用
+            </summary>
+        </member>
+        <member name="F:HaoKao.BurialPointService.Domain.MappingModel.UserState.Enable">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="T:HaoKao.BurialPointService.Domain.Models.BrowseRecord">
+            <summary>
+            浏览记录
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Models.BrowseRecord.BurialPointId">
+            <summary>
+            埋点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Models.BrowseRecord.UserName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Models.BrowseRecord.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Models.BrowseRecord.BrowseData">
+            <summary>
+            浏览信息
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Models.BrowseRecord.IsPaidUser">
+            <summary>
+            是否付费用户
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Models.BrowseRecord.CreateTime">
+            <summary>
+            浏览时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Models.BrowseRecord.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Models.BrowseRecord.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Models.BrowseRecord.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="T:HaoKao.BurialPointService.Domain.Models.BurialPoint">
+            <summary>
+            埋点
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Models.BurialPoint.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Models.BurialPoint.BelongingPortType">
+            <summary>
+            所属端
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Models.BurialPoint.BrowseRecords">
+            <summary>
+            浏览记录
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Models.BurialPoint.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Models.BurialPoint.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Models.BurialPoint.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Queries.BrowseRecordQuery.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Queries.BrowseRecordQuery.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Queries.BrowseRecordQuery.BurialPointId">
+            <summary>
+            埋点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Queries.BrowseRecordQuery.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Queries.BurialPointQuery.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.BurialPointService.Domain.Queries.BurialPointQuery.BelongingPortType">
+            <summary>
+            所属端
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,838 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.LearnProgressService.Application</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.ILearnProgressService.GetLearnDurations(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            分产品分科目获取学习时长(单位小时)
+            </summary>
+            <param name="productId"></param>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.ILearnProgressService.GetList(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.LearnProgressQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.ILearnProgressService.QueryCourseLearningProgress(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryCourseLearningProgressViewModel)">
+            <summary>
+            查询单一租户下特定用户特定产品特定科目下特定章节的听课进度数据
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.ILearnProgressService.CourseLearningProgressStatistics(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CourseLearningProgressStatisticsViewModel)">
+            <summary>
+            统计学员学习进度
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.ILearnProgressService.MergeLearnProgress">
+            <summary>
+            执行半夜任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.LearnProgressService.Application.AppService.Web.DailyStudyDurationWebService">
+            <summary>
+            接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.Web.DailyStudyDurationWebService.#ctor(Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.LearnProgressService.Domain.Repositories.IDailyStudyDurationRepository)">
+            <summary>
+            接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.Web.DailyStudyDurationWebService.GetLearnDayCount(System.Guid,System.Guid)">
+            <summary>
+            按产品,科目id获取当前用户学习天数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.Web.DailyStudyDurationWebService.GetDailyLearnData(HaoKao.LearnProgressService.Application.ViewModels.QueryDailyLearnDataViewModel)">
+            <summary>
+            按产品id,科目id,时间段获取当前学习时长
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.Web.DailyStudyDurationWebService.Create(HaoKao.LearnProgressService.Application.ViewModels.CreateDailyStudyDurationViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.Web.IDailyStudyDurationWebService.GetLearnDayCount(System.Guid,System.Guid)">
+            <summary>
+            获取当前用户学习天数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.Web.IDailyStudyDurationWebService.GetDailyLearnData(HaoKao.LearnProgressService.Application.ViewModels.QueryDailyLearnDataViewModel)">
+            <summary>
+            按时间段获取学习时长
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.Web.IDailyStudyDurationWebService.Create(HaoKao.LearnProgressService.Application.ViewModels.CreateDailyStudyDurationViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.Web.ILearnProgressWebService.GetLearnDurations(System.Guid,System.Guid)">
+            <summary>
+            分产品分科目获取学习时长(单位小时)
+            </summary>
+            <param name="productId"></param>
+            <param name="subjectId"></param>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.Web.ILearnProgressWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.Web.ILearnProgressWebService.GetList(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.LearnProgressQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.Web.ILearnProgressWebService.Create(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CreateLearnProgressViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.Web.ILearnProgressWebService.GetListByDate(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryByVideoIds)">
+            <summary>
+            听课记录按日期排序
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.Web.ILearnProgressWebService.GetLearnRcordStaticAsync(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryByVideoIds)">
+            <summary>
+            读取用户的听课数据统计(左侧)
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.Web.ILearnProgressWebService.GetLearnRcordByWeekStaticAsync(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryLearnRcordByWeekStatic)">
+            <summary>
+            读取用户的听课数据统计(右侧)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.Web.ILearnProgressWebService.UpdateIsEnd(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.UpdateIsEndModel)">
+            <summary>
+            视频是否学完(更新)
+            </summary>
+            <param name="Input"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="T:HaoKao.LearnProgressService.Application.AppService.Web.LearnProgressService">
+            <summary>
+            接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.Web.LearnProgressService.#ctor(Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.LearnProgressService.Domain.Repositories.ILearnProgressRepository,HaoKao.LearnProgressService.Application.AppService.ILearnProgressService)">
+            <summary>
+            接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.Web.LearnProgressService.GetLearnDurations(System.Guid,System.Guid)">
+            <summary>
+            分产品分科目获取学习时长(单位小时)
+            </summary>
+            <param name="productId"></param>
+            <param name="subjectId"></param>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.Web.LearnProgressService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定,这里应该是传的videoid查询当前视频的播放进度
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.Web.LearnProgressService.GetList(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.LearnProgressQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.Web.LearnProgressService.GetListByDate(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryByVideoIds)">
+            <summary>
+            听课记录按日期排序
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.Web.LearnProgressService.GetLearnRcordStaticAsync(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryByVideoIds)">
+            <summary>
+            读取用户的听课数据统计(左侧)
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.Web.LearnProgressService.GetLearnRcordByWeekStaticAsync(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryLearnRcordByWeekStatic)">
+            <summary>
+            读取用户的听课数据统计(右侧)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.Web.LearnProgressService.Create(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CreateLearnProgressViewModel)">
+            <summary>
+            创建(完善这里的逻辑)
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.Web.LearnProgressService.UpdateIsEnd(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.UpdateIsEndModel)">
+            <summary>
+            视频是否学完(更新)
+            </summary>
+            <param name="Input"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="T:HaoKao.LearnProgressService.Application.AppService.WeChat.DailyStudyDurationWeChatService">
+            <summary>
+            接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.WeChat.DailyStudyDurationWeChatService.#ctor(HaoKao.LearnProgressService.Application.AppService.Web.IDailyStudyDurationWebService)">
+            <summary>
+            接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.WeChat.DailyStudyDurationWeChatService.GetLearnDayCount(System.Guid,System.Guid)">
+            <summary>
+            按产品id,科目id获取当前用户学习天数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.WeChat.DailyStudyDurationWeChatService.GetDailyLearnData(HaoKao.LearnProgressService.Application.ViewModels.QueryDailyLearnDataViewModel)">
+            <summary>
+            按产品id,科目id,时间段获取当前学习时长
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.WeChat.DailyStudyDurationWeChatService.Create(HaoKao.LearnProgressService.Application.ViewModels.CreateDailyStudyDurationViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.WeChat.IDailyStudyDurationWeChatService.GetLearnDayCount(System.Guid,System.Guid)">
+            <summary>
+            获取当前用户学习天数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.WeChat.IDailyStudyDurationWeChatService.GetDailyLearnData(HaoKao.LearnProgressService.Application.ViewModels.QueryDailyLearnDataViewModel)">
+            <summary>
+            按时间段获取学习时长
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.WeChat.IDailyStudyDurationWeChatService.Create(HaoKao.LearnProgressService.Application.ViewModels.CreateDailyStudyDurationViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.WeChat.ILearnProgressWeChatService.GetLearnDurations(System.Guid,System.Guid)">
+            <summary>
+            分产品分科目获取学习时长(单位小时)
+            </summary>
+            <param name="productId"></param>
+            <param name="subjectId"></param>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.WeChat.ILearnProgressWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.WeChat.ILearnProgressWeChatService.GetList(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.LearnProgressQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.WeChat.ILearnProgressWeChatService.Create(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CreateLearnProgressViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.WeChat.ILearnProgressWeChatService.GetListByDate(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryByVideoIds)">
+            <summary>
+            听课记录按日期排序
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.WeChat.ILearnProgressWeChatService.GetLearnRcordStaticAsync(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryByVideoIds)">
+            <summary>
+            读取用户的听课数据统计(左侧)
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.WeChat.ILearnProgressWeChatService.GetLearnRcordByWeekStaticAsync(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryLearnRcordByWeekStatic)">
+            <summary>
+            读取用户的听课数据统计(右侧)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.WeChat.ILearnProgressWeChatService.UpdateIsEnd(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.UpdateIsEndModel)">
+            <summary>
+            视频是否学完(更新)
+            </summary>
+            <param name="Input"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="T:HaoKao.LearnProgressService.Application.AppService.WeChat.LearnProgressWeChatService">
+            <summary>
+            接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.WeChat.LearnProgressWeChatService.#ctor(HaoKao.LearnProgressService.Application.AppService.Web.ILearnProgressWebService,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.LearnProgressService.Domain.Repositories.ILearnProgressRepository)">
+            <summary>
+            接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.WeChat.LearnProgressWeChatService.GetLearnDurations(System.Guid,System.Guid)">
+            <summary>
+            分产品分科目获取学习时长(单位小时)
+            </summary>
+            <param name="productId"></param>
+            <param name="subjectId"></param>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.WeChat.LearnProgressWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定,这里应该是传的videoid查询当前视频的播放进度
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.WeChat.LearnProgressWeChatService.GetList(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.LearnProgressQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.WeChat.LearnProgressWeChatService.GetListByDate(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryByVideoIds)">
+            <summary>
+            听课记录按日期排序
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.WeChat.LearnProgressWeChatService.GetLearnRcordStaticAsync(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryByVideoIds)">
+            <summary>
+            读取用户的听课数据统计(左侧)
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.WeChat.LearnProgressWeChatService.GetLearnRcordByWeekStaticAsync(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryLearnRcordByWeekStatic)">
+            <summary>
+            读取用户的听课数据统计(右侧)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.WeChat.LearnProgressWeChatService.Create(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CreateLearnProgressViewModel)">
+            <summary>
+            创建(完善这里的逻辑)
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.AppService.WeChat.LearnProgressWeChatService.UpdateIsEnd(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.UpdateIsEndModel)">
+            <summary>
+            视频是否学完(更新)
+            </summary>
+            <param name="Input"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="T:HaoKao.LearnProgressService.Application.Profiles.DailyStudyDurationProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearnProgressService.Application.Profiles.DailyStudyDurationProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.Profiles.DailyStudyDurationProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.BrowseDailyStudyDurationViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.BrowseDailyStudyDurationViewModel.SubjectId">
+            <summary>
+            对应的科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.BrowseDailyStudyDurationViewModel.DailyVideoStudyDuration">
+            <summary>
+            今日视频学习时长(小时)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.BrowseDailyStudyDurationViewModel.LearnTime">
+            <summary>
+            学习时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.CreateDailyStudyDurationViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.CreateDailyStudyDurationViewModel.SubjectId">
+            <summary>
+            对应的科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.CreateDailyStudyDurationViewModel.StudyDuration">
+            <summary>
+            学习时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.QueryDailyLearnDataViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.QueryDailyLearnDataViewModel.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.QueryDailyLearnDataViewModel.StartDate">
+            <summary>
+            开始日期
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.QueryDailyLearnDataViewModel.EndDate">
+            <summary>
+            结束日期
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.DateStudyDurationViewModel.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.DateStudyDurationViewModel.Duration">
+            <summary>
+            时长 (小时)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CourseLearningProgressStatisticsViewModel.StudentId">
+            <summary>
+            学员id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CourseLearningProgressStatisticsViewModel.ProductId">
+            <summary>
+            产品id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CourseLearningProgressStatisticsViewModel.SubjectId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CourseLearningProgressStatisticsViewModel.CouseCount">
+            <summary>
+            课程数
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CourseLearningProgressStatisticsViewModel.CouseIsEndCount">
+            <summary>
+            已学完课程数
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CourseLearningProgressStatisticsViewModel.TotalCompletionDegree">
+            <summary>
+            总完成度
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CouseCategoryStaticsViewModel.Category">
+            <summary>
+            阶段id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CouseCategoryStaticsViewModel.Duration">
+            <summary>
+            阶段总课程时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CouseCategoryStaticsViewModel.MaxProgress">
+            <summary>
+            阶段已学时长
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CouseCategoryStaticsViewModel.CompletionDegree">
+            <summary>
+            完成度
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.BrowseLearnProgressViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.BrowseLearnProgressViewModel.SubjectId">
+            <summary>
+            对应的科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.BrowseLearnProgressViewModel.ChapterId">
+            <summary>
+            章节id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.BrowseLearnProgressViewModel.CourseId">
+            <summary>
+            课程id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.BrowseLearnProgressViewModel.VideoId">
+            <summary>
+            视频id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.BrowseLearnProgressViewModel.Identifier">
+            <summary>
+            当前视频标识符,
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.BrowseLearnProgressViewModel.Progress">
+            <summary>
+            学习时长(单位:s)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.BrowseLearnProgressViewModel.TotalProgress">
+            <summary>
+            视频总长度(单位:s)--冗余,用于进度百分比计算
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.BrowseLearnProgressViewModel.MaxProgress">
+            <summary>
+            观看视频最大长度(单位:s)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CreateLearnProgressViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CreateLearnProgressViewModel.SubjectId">
+            <summary>
+            对应的科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CreateLearnProgressViewModel.ChapterId">
+            <summary>
+            章节id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CreateLearnProgressViewModel.CourseId">
+            <summary>
+            课程id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CreateLearnProgressViewModel.VideoId">
+            <summary>
+            视频id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CreateLearnProgressViewModel.Identifier">
+            <summary>
+            当前视频标识符,
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CreateLearnProgressViewModel.Progress">
+            <summary>
+            学习时长(单位:s)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CreateLearnProgressViewModel.TotalProgress">
+            <summary>
+            视频总长度(单位:s)--冗余,用于进度百分比计算(百分比计算前端处理)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CreateLearnProgressViewModel.MaxProgress">
+            <summary>
+            观看视频最大长度(单位:s)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.LearnProgressQueryViewModel.CreatorId">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.LearnProgressQueryViewModel.VideoIds">
+            <summary>
+            需要查询的视频集合
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.LearnProgressQueryListViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.LearnProgressQueryListViewModel.SubjectId">
+            <summary>
+            对应的科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.LearnProgressQueryListViewModel.ChapterId">
+            <summary>
+            章节id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.LearnProgressQueryListViewModel.CourseId">
+            <summary>
+            课程id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.LearnProgressQueryListViewModel.VideoId">
+            <summary>
+            视频id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.LearnProgressQueryListViewModel.Identifier">
+            <summary>
+            当前视频标识符,
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.LearnProgressQueryListViewModel.Progress">
+            <summary>
+            学习时长(单位:s)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.LearnProgressQueryListViewModel.TotalProgress">
+            <summary>
+            视频总长度(单位:s)--冗余,用于进度百分比计算
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.LearnProgressQueryListViewModel.MaxProgress">
+            <summary>
+            观看视频最大长度(单位:s)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.LearnProgressQueryListViewModel.IsEnd">
+            <summary>
+            true-已完成  false--待完成
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.LearnProgressQueryListViewModel.SortDate">
+            <summary>
+            用来分组的排序时间-年月日
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.LearnProgressQueryListViewModel.PlayDate">
+            <summary>
+            播放的时间--时分
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.LearnRcordByWeekStaticViewModel.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.LearnRcordByWeekStaticViewModel.Progress">
+            <summary>
+            进度--注意这里是总的进度
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.LearnRcordStaticViewModel.LearnTotalTime">
+            <summary>
+            已学习的进度统计--注意这里取得最大的学习进度
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.LearnRcordStaticViewModel.VideoTotalTime">
+            <summary>
+            视频总的市场统计
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryByVideoIds.VideoIds">
+            <summary>
+            视频ids
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryCourseLearningProgressViewModel.StudentId">
+            <summary>
+            学员id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryCourseLearningProgressViewModel.ProductId">
+            <summary>
+            产品id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryCourseLearningProgressViewModel.SubjectId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryCourseLearningProgressViewModel.PageIndex">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryCourseLearningProgressViewModel.PageSize">
+            <summary>
+            页容积
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryCourseLearningProgressViewModel.RecordCount">
+            <summary>
+            总行数
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryCourseLearningProgressListViewModel.CourseChapterId">
+            <summary>
+            章节id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryCourseLearningProgressListViewModel.CourseChapterName">
+            <summary>
+            章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryCourseLearningProgressListViewModel.Duration">
+            <summary>
+            总进度
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryCourseLearningProgressListViewModel.MaxProgress">
+            <summary>
+            最大学习进度
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryCourseLearningProgressListViewModel.Progress">
+            <summary>
+            进度
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryCourseLearningProgressListViewModel.CreateTime">
+            <summary>
+            最后一次听课时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryLearnDurations.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryLearnDurations.SubjectId">
+            <summary>
+            科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryLearnDurations.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryLearnRcordByWeekStatic.VideoIds">
+            <summary>
+            视频ids
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryLearnRcordByWeekStatic.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryLearnRcordByWeekStatic.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.UpdateIsEndModel.VideoId">
+            <summary>
+            视频id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.UpdateThVideoProgressModel.VideoId">
+            <summary>
+            视频id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.UpdateThVideoProgressModel.Duration">
+            <summary>
+            时长
+            </summary>
+        </member>
+        <member name="T:HaoKao.LearnProgressManageService.Application.AppService.Management.LearnProgressService">
+            <summary>
+            接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearnProgressManageService.Application.AppService.Management.LearnProgressService.#ctor(Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.LearnProgressService.Domain.Repositories.ILearnProgressRepository)">
+            <summary>
+            接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearnProgressManageService.Application.AppService.Management.LearnProgressService.GetLearnDurations(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            分产品分科目获取学习时长(单位小时)
+            </summary>
+            <param name="productId"></param>
+            <param name="subjectId"></param>
+            <param name="userId"></param>
+        </member>
+        <member name="M:HaoKao.LearnProgressManageService.Application.AppService.Management.LearnProgressService.GetList(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.LearnProgressQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LearnProgressManageService.Application.AppService.Management.LearnProgressService.QueryCourseLearningProgress(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.QueryCourseLearningProgressViewModel)">
+            <summary>
+            查询单一租户下特定用户特定产品特定科目下特定章节的听课进度数据
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LearnProgressManageService.Application.AppService.Management.LearnProgressService.CourseLearningProgressStatistics(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.CourseLearningProgressStatisticsViewModel)">
+            <summary>
+            统计学员学习进度
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LearnProgressManageService.Application.AppService.Management.LearnProgressService.UpdateThVideoProgress(HaoKao.LearnProgressService.Application.ViewModels.LearnProgress.UpdateThVideoProgressModel)">
+            <summary>
+            批量更新替换视频的学习进度
+            </summary>
+            <param name="Input"></param>
+            <returns></returns>
+            <exception cref="T:Girvs.GirvsException"></exception>
+        </member>
+        <member name="M:HaoKao.LearnProgressManageService.Application.AppService.Management.LearnProgressService.MergeLearnProgress">
+            <summary>
+            合并学习进度表
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

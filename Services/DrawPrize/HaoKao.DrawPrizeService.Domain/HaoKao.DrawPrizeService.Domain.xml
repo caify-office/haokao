@@ -1,0 +1,673 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.DrawPrizeService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.CreateDrawPrizeCommand">
+            <summary>
+            创建抽奖命令
+            </summary>
+            <param name="Title">名称</param>
+            <param name="BackgroundImageUrl">活动背景图</param>
+            <param name="StartTime">开始时间</param>
+            <param name="EndTime">结束时间</param>
+            <param name="Desc">说明</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.CreateDrawPrizeCommand.#ctor(System.String,System.String,System.DateTime,System.DateTime,System.String)">
+            <summary>
+            创建抽奖命令
+            </summary>
+            <param name="Title">名称</param>
+            <param name="BackgroundImageUrl">活动背景图</param>
+            <param name="StartTime">开始时间</param>
+            <param name="EndTime">结束时间</param>
+            <param name="Desc">说明</param>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.CreateDrawPrizeCommand.Title">
+            <summary>名称</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.CreateDrawPrizeCommand.BackgroundImageUrl">
+            <summary>活动背景图</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.CreateDrawPrizeCommand.StartTime">
+            <summary>开始时间</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.CreateDrawPrizeCommand.EndTime">
+            <summary>结束时间</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.CreateDrawPrizeCommand.Desc">
+            <summary>说明</summary>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.DeleteDrawPrizeCommand">
+            <summary>
+            删除抽奖命令
+            </summary>
+            <param name="Ids">主键</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.DeleteDrawPrizeCommand.#ctor(System.Guid[])">
+            <summary>
+            删除抽奖命令
+            </summary>
+            <param name="Ids">主键</param>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.DeleteDrawPrizeCommand.Ids">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.SetDrawPrizeEnableCommand">
+            <summary>
+            修改抽奖禁用启用
+            </summary>
+            <param name="Ids"></param>
+            <param name="Enable">禁用启用</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.SetDrawPrizeEnableCommand.#ctor(System.Collections.Generic.ICollection{System.Guid},System.Boolean)">
+            <summary>
+            修改抽奖禁用启用
+            </summary>
+            <param name="Ids"></param>
+            <param name="Enable">禁用启用</param>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.SetDrawPrizeEnableCommand.Ids">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.SetDrawPrizeEnableCommand.Enable">
+            <summary>禁用启用</summary>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.SetDrawPrizeRuleCommand">
+            <summary>
+            设置抽奖规则
+            </summary>
+            <param name="Id">主键</param>
+            <param name="DrawPrizeRange">抽奖范围</param>
+            <param name="DrawPrizeType">类型</param>
+            <param name="Probability">中奖概率</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.SetDrawPrizeRuleCommand.#ctor(System.Guid,HaoKao.DrawPrizeService.Domain.Enums.DrawPrizeRange,HaoKao.DrawPrizeService.Domain.Enums.DrawPrizeType,System.Double)">
+            <summary>
+            设置抽奖规则
+            </summary>
+            <param name="Id">主键</param>
+            <param name="DrawPrizeRange">抽奖范围</param>
+            <param name="DrawPrizeType">类型</param>
+            <param name="Probability">中奖概率</param>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.SetDrawPrizeRuleCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.SetDrawPrizeRuleCommand.DrawPrizeRange">
+            <summary>抽奖范围</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.SetDrawPrizeRuleCommand.DrawPrizeType">
+            <summary>类型</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.SetDrawPrizeRuleCommand.Probability">
+            <summary>中奖概率</summary>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.UpdateDrawPrizeCommand">
+            <summary>
+            更新抽奖命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Title">名称</param>
+            <param name="BackgroundImageUrl">活动背景图</param>
+            <param name="StartTime">开始时间</param>
+            <param name="EndTime">结束时间</param>
+            <param name="Desc">说明</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.UpdateDrawPrizeCommand.#ctor(System.Guid,System.String,System.String,System.DateTime,System.DateTime,System.String)">
+            <summary>
+            更新抽奖命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Title">名称</param>
+            <param name="BackgroundImageUrl">活动背景图</param>
+            <param name="StartTime">开始时间</param>
+            <param name="EndTime">结束时间</param>
+            <param name="Desc">说明</param>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.UpdateDrawPrizeCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.UpdateDrawPrizeCommand.Title">
+            <summary>名称</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.UpdateDrawPrizeCommand.BackgroundImageUrl">
+            <summary>活动背景图</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.UpdateDrawPrizeCommand.StartTime">
+            <summary>开始时间</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.UpdateDrawPrizeCommand.EndTime">
+            <summary>结束时间</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrize.UpdateDrawPrizeCommand.Desc">
+            <summary>说明</summary>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Domain.Commands.DrawPrizeRecord.CreateDrawPrizeRecordCommand">
+            <summary>
+            创建抽奖记录命令
+            </summary>
+            <param name="DrawPrizeId">所属抽奖活动Id</param>
+            <param name="Phone">手机号</param>
+            <param name="PrizeName">奖品名称</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Domain.Commands.DrawPrizeRecord.CreateDrawPrizeRecordCommand.#ctor(System.Guid,System.String,System.String)">
+            <summary>
+            创建抽奖记录命令
+            </summary>
+            <param name="DrawPrizeId">所属抽奖活动Id</param>
+            <param name="Phone">手机号</param>
+            <param name="PrizeName">奖品名称</param>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrizeRecord.CreateDrawPrizeRecordCommand.DrawPrizeId">
+            <summary>所属抽奖活动Id</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrizeRecord.CreateDrawPrizeRecordCommand.Phone">
+            <summary>手机号</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrizeRecord.CreateDrawPrizeRecordCommand.PrizeName">
+            <summary>奖品名称</summary>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Domain.Commands.DrawPrizeRecord.DeleteDrawPrizeRecordCommand">
+            <summary>
+            删除抽奖记录命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Domain.Commands.DrawPrizeRecord.DeleteDrawPrizeRecordCommand.#ctor(System.Guid)">
+            <summary>
+            删除抽奖记录命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrizeRecord.DeleteDrawPrizeRecordCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Domain.Commands.DrawPrizeRecord.UpdateDrawPrizeRecordCommand">
+            <summary>
+            更新抽奖记录命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="DrawPrizeId">所属抽奖活动Id</param>
+            <param name="Phone">手机号</param>
+            <param name="PrizeName">奖品名称</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Domain.Commands.DrawPrizeRecord.UpdateDrawPrizeRecordCommand.#ctor(System.Guid,System.Guid,System.String,System.String)">
+            <summary>
+            更新抽奖记录命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="DrawPrizeId">所属抽奖活动Id</param>
+            <param name="Phone">手机号</param>
+            <param name="PrizeName">奖品名称</param>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrizeRecord.UpdateDrawPrizeRecordCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrizeRecord.UpdateDrawPrizeRecordCommand.DrawPrizeId">
+            <summary>所属抽奖活动Id</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrizeRecord.UpdateDrawPrizeRecordCommand.Phone">
+            <summary>手机号</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.DrawPrizeRecord.UpdateDrawPrizeRecordCommand.PrizeName">
+            <summary>奖品名称</summary>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Domain.Commands.Prize.CancelPrizeGuaranteedCommand">
+            <summary>
+            取消奖品保底
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Domain.Commands.Prize.CancelPrizeGuaranteedCommand.#ctor(System.Guid)">
+            <summary>
+            取消奖品保底
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.Prize.CancelPrizeGuaranteedCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Domain.Commands.Prize.CreatePrizeCommand">
+            <summary>
+            创建奖品命令
+            </summary>
+            <param name="DrawPrizeId">所属抽奖活动Id</param>
+            <param name="Name">名称</param>
+            <param name="Count">奖品数量</param>
+            <param name="DisplayCount">显示数量</param>
+            <param name="WinningRange">中奖范围</param>
+            <param name="DesignatedStudents"></param>
+            <param name="IsGuaranteed">是否保底</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Domain.Commands.Prize.CreatePrizeCommand.#ctor(System.Guid,System.String,System.Int32,System.Int32,HaoKao.DrawPrizeService.Domain.Enums.WinningRange,System.Collections.Generic.List{HaoKao.DrawPrizeService.Domain.Models.DesignatedStudent},System.Boolean)">
+            <summary>
+            创建奖品命令
+            </summary>
+            <param name="DrawPrizeId">所属抽奖活动Id</param>
+            <param name="Name">名称</param>
+            <param name="Count">奖品数量</param>
+            <param name="DisplayCount">显示数量</param>
+            <param name="WinningRange">中奖范围</param>
+            <param name="DesignatedStudents"></param>
+            <param name="IsGuaranteed">是否保底</param>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.Prize.CreatePrizeCommand.DrawPrizeId">
+            <summary>所属抽奖活动Id</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.Prize.CreatePrizeCommand.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.Prize.CreatePrizeCommand.Count">
+            <summary>奖品数量</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.Prize.CreatePrizeCommand.DisplayCount">
+            <summary>显示数量</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.Prize.CreatePrizeCommand.WinningRange">
+            <summary>中奖范围</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.Prize.CreatePrizeCommand.DesignatedStudents">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.Prize.CreatePrizeCommand.IsGuaranteed">
+            <summary>是否保底</summary>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Domain.Commands.Prize.DeletePrizeCommand">
+            <summary>
+            删除奖品命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Domain.Commands.Prize.DeletePrizeCommand.#ctor(System.Guid)">
+            <summary>
+            删除奖品命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.Prize.DeletePrizeCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Domain.Commands.Prize.DrawPrizeCommand">
+            <summary>
+            抽取奖品命令
+            </summary>
+            <param name="DrawPrizeId">所属抽奖活动Id</param>
+            <param name="Phone"></param>
+            <param name="IsPaidStudents"></param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Domain.Commands.Prize.DrawPrizeCommand.#ctor(System.Guid,System.String,System.Boolean)">
+            <summary>
+            抽取奖品命令
+            </summary>
+            <param name="DrawPrizeId">所属抽奖活动Id</param>
+            <param name="Phone"></param>
+            <param name="IsPaidStudents"></param>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.Prize.DrawPrizeCommand.DrawPrizeId">
+            <summary>所属抽奖活动Id</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.Prize.DrawPrizeCommand.Phone">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.Prize.DrawPrizeCommand.IsPaidStudents">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Domain.Commands.Prize.SetPrizeGuaranteedCommand">
+            <summary>
+            设置奖品是否保底
+            </summary>
+            <param name="Id">主键</param>
+            <param name="DrawPrizeId">所属抽奖活动Id</param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Domain.Commands.Prize.SetPrizeGuaranteedCommand.#ctor(System.Guid,System.Guid)">
+            <summary>
+            设置奖品是否保底
+            </summary>
+            <param name="Id">主键</param>
+            <param name="DrawPrizeId">所属抽奖活动Id</param>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.Prize.SetPrizeGuaranteedCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.Prize.SetPrizeGuaranteedCommand.DrawPrizeId">
+            <summary>所属抽奖活动Id</summary>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Domain.Commands.Prize.UpdatePrizeCommand">
+            <summary>
+            更新奖品命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="DrawPrizeId">所属抽奖活动Id</param>
+            <param name="Name">名称</param>
+            <param name="Count">奖品数量</param>
+            <param name="DisplayCount">显示数量</param>
+            <param name="WinningRange">中奖范围</param>
+            <param name="DesignatedStudents"></param>
+        </member>
+        <member name="M:HaoKao.DrawPrizeService.Domain.Commands.Prize.UpdatePrizeCommand.#ctor(System.Guid,System.Guid,System.String,System.Int32,System.Int32,HaoKao.DrawPrizeService.Domain.Enums.WinningRange,System.Collections.Generic.List{HaoKao.DrawPrizeService.Domain.Models.DesignatedStudent})">
+            <summary>
+            更新奖品命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="DrawPrizeId">所属抽奖活动Id</param>
+            <param name="Name">名称</param>
+            <param name="Count">奖品数量</param>
+            <param name="DisplayCount">显示数量</param>
+            <param name="WinningRange">中奖范围</param>
+            <param name="DesignatedStudents"></param>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.Prize.UpdatePrizeCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.Prize.UpdatePrizeCommand.DrawPrizeId">
+            <summary>所属抽奖活动Id</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.Prize.UpdatePrizeCommand.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.Prize.UpdatePrizeCommand.Count">
+            <summary>奖品数量</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.Prize.UpdatePrizeCommand.DisplayCount">
+            <summary>显示数量</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.Prize.UpdatePrizeCommand.WinningRange">
+            <summary>中奖范围</summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Commands.Prize.UpdatePrizeCommand.DesignatedStudents">
+            <summary></summary>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Domain.Enums.DrawPrizeRange">
+            <summary>
+            抽奖范围
+            </summary>
+        </member>
+        <member name="F:HaoKao.DrawPrizeService.Domain.Enums.DrawPrizeRange.All">
+            <summary>
+            全部
+            </summary>
+        </member>
+        <member name="F:HaoKao.DrawPrizeService.Domain.Enums.DrawPrizeRange.PaidStudents">
+            <summary>
+            付费学员
+            </summary>
+        </member>
+        <member name="F:HaoKao.DrawPrizeService.Domain.Enums.DrawPrizeRange.NonPaidStudents">
+            <summary>
+            非付费学员
+            </summary>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Domain.Enums.DrawPrizeType">
+            <summary>
+            抽奖类型
+            </summary>
+        </member>
+        <member name="F:HaoKao.DrawPrizeService.Domain.Enums.DrawPrizeType.Turntable">
+            <summary>
+            转盘
+            </summary>
+        </member>
+        <member name="F:HaoKao.DrawPrizeService.Domain.Enums.DrawPrizeType.Flip">
+            <summary>
+            翻牌
+            </summary>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Domain.Enums.WinningRange">
+            <summary>
+            中奖范围
+            </summary>
+        </member>
+        <member name="F:HaoKao.DrawPrizeService.Domain.Enums.WinningRange.All">
+            <summary>
+            全部
+            </summary>
+        </member>
+        <member name="F:HaoKao.DrawPrizeService.Domain.Enums.WinningRange.PaidStudents">
+            <summary>
+            付费学员
+            </summary>
+        </member>
+        <member name="F:HaoKao.DrawPrizeService.Domain.Enums.WinningRange.NonPaidStudents">
+            <summary>
+            非付费学员
+            </summary>
+        </member>
+        <member name="F:HaoKao.DrawPrizeService.Domain.Enums.WinningRange.DesignatedStudent">
+            <summary>
+            指定学员
+            </summary>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Domain.Models.DrawPrize">
+            <summary>
+            抽奖
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.DrawPrize.Title">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.DrawPrize.BackgroundImageUrl">
+            <summary>
+            活动背景图
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.DrawPrize.DrawPrizeRange">
+            <summary>
+            抽奖范围
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.DrawPrize.DrawPrizeType">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.DrawPrize.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.DrawPrize.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.DrawPrize.Desc">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.DrawPrize.Probability">
+            <summary>
+            中奖概率
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.DrawPrize.Prizes">
+            <summary>
+            奖品池
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.DrawPrize.DrawPrizeRecords">
+            <summary>
+            抽奖记录
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.DrawPrize.Enable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.DrawPrize.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.DrawPrize.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.DrawPrize.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Domain.Models.DrawPrizeRecord">
+            <summary>
+            抽奖记录
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.DrawPrizeRecord.DrawPrize">
+            <summary>
+            所属抽奖活动
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.DrawPrizeRecord.DrawPrizeId">
+            <summary>
+            所属抽奖活动Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.DrawPrizeRecord.CreatorName">
+            <summary>
+            创建者名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.DrawPrizeRecord.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.DrawPrizeRecord.PrizeId">
+            <summary>
+            中奖奖品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.DrawPrizeRecord.PrizeName">
+            <summary>
+            奖品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.DrawPrizeRecord.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.DrawPrizeRecord.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.DrawPrizeRecord.CreatorId">
+            <summary>
+            创建者id
+            </summary>
+        </member>
+        <member name="T:HaoKao.DrawPrizeService.Domain.Models.Prize">
+            <summary>
+            奖品
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.Prize.DrawPrize">
+            <summary>
+            所属抽奖活动
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.Prize.DrawPrizeId">
+            <summary>
+            所属抽奖活动Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.Prize.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.Prize.Count">
+            <summary>
+            奖品数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.Prize.DisplayCount">
+            <summary>
+            显示数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.Prize.WinningRange">
+            <summary>
+            中奖范围
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.Prize.DesignatedStudents">
+            <summary>
+            指定学员
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.Prize.IsGuaranteed">
+            <summary>
+            是否保底
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.Prize.AwardedQuantity">
+            <summary>
+            已颁发的奖品数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.Prize.Version">
+            <summary>
+            乐观锁版本标记
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.Prize.TenantId">
+            <summary>
+            租户id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Models.Prize.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Queries.DrawPrizeQuery.Title">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Queries.DrawPrizeQuery.DrawPrizeType">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Queries.DrawPrizeRecordQuery.CreatorId">
+            <summary>
+            创建者id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Queries.DrawPrizeRecordQuery.DrawPrizeId">
+            <summary>
+            所属抽奖活动Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Queries.DrawPrizeRecordQuery.CreatorName">
+            <summary>
+            创建者名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Queries.DrawPrizeRecordQuery.PrizeName">
+            <summary>
+            奖品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Queries.DrawPrizeRecordQuery.IsWinning">
+            <summary>
+            是否中奖（true：返回中奖记录，false：返回没中奖记录，不传：都返回）
+            </summary>
+        </member>
+        <member name="P:HaoKao.DrawPrizeService.Domain.Queries.PrizeQuery.DrawPrizeId">
+            <summary>
+            所属抽奖活动Id
+            </summary>
+        </member>
+    </members>
+</doc>

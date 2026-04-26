@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.CourseFeatureService.Application</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.CourseFeatureService.Application.Interfaces.ICourseFeatureService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseFeatureService.Application.Interfaces.ICourseFeatureService.Get(HaoKao.CourseFeatureService.Application.ViewModels.QueryCourseFeatureViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseFeatureService.Application.Interfaces.ICourseFeatureService.Create(HaoKao.CourseFeatureService.Application.ViewModels.CreateCourseFeatureViewModel)">
+            <summary>
+            创建课程特色服务
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseFeatureService.Application.Interfaces.ICourseFeatureService.Delete(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            批量删除课程特色服务
+            </summary>
+            <param name="ids">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseFeatureService.Application.Interfaces.ICourseFeatureService.Update(HaoKao.CourseFeatureService.Application.ViewModels.UpdateCourseFeatureViewModel)">
+            <summary>
+            根据主键更新指定课程特色服务
+            </summary>
+            <param name="model">更新模型</param>
+        </member>
+        <member name="M:HaoKao.CourseFeatureService.Application.Interfaces.ICourseFeatureService.Enable(HaoKao.CourseFeatureService.Application.ViewModels.EnableCourseFeatureViewModel)">
+            <summary>
+            批量启用/禁用课程特色服务
+            </summary>
+            <param name="model">启用/禁用模型</param>
+        </member>
+        <member name="M:HaoKao.CourseFeatureService.Application.Interfaces.ICourseFeatureWebService.Get(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            根据ids获取列表
+            </summary>
+            <param name="ids"></param>
+        </member>
+        <member name="M:HaoKao.CourseFeatureService.Application.Interfaces.ICourseFeatureWeChatService.Get(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            根据ids获取列表
+            </summary>
+            <param name="ids"></param>
+        </member>
+        <member name="T:HaoKao.CourseFeatureService.Application.Services.CourseFeatureService">
+            <summary>
+            课程特色服务接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseFeatureService.Application.Services.CourseFeatureService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.CourseFeatureService.Domain.ICourseFeatureRepository,AutoMapper.IMapper)">
+            <summary>
+            课程特色服务接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseFeatureService.Application.Services.CourseFeatureService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseFeatureService.Application.Services.CourseFeatureService.Get(HaoKao.CourseFeatureService.Application.ViewModels.QueryCourseFeatureViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.CourseFeatureService.Application.Services.CourseFeatureService.Create(HaoKao.CourseFeatureService.Application.ViewModels.CreateCourseFeatureViewModel)">
+            <summary>
+            创建课程特色服务
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.CourseFeatureService.Application.Services.CourseFeatureService.Delete(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            批量删除课程特色服务
+            </summary>
+            <param name="ids">主键</param>
+        </member>
+        <member name="M:HaoKao.CourseFeatureService.Application.Services.CourseFeatureService.Update(HaoKao.CourseFeatureService.Application.ViewModels.UpdateCourseFeatureViewModel)">
+            <summary>
+            根据主键更新指定课程特色服务
+            </summary>
+            <param name="model">更新模型</param>
+        </member>
+        <member name="M:HaoKao.CourseFeatureService.Application.Services.CourseFeatureService.Enable(HaoKao.CourseFeatureService.Application.ViewModels.EnableCourseFeatureViewModel)">
+            <summary>
+            批量启用/禁用课程特色服务
+            </summary>
+            <param name="model">启用/禁用模型</param>
+        </member>
+        <member name="T:HaoKao.CourseFeatureService.Application.Services.CourseFeatureWebService">
+            <summary>
+            课程特色服务接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseFeatureService.Application.Services.CourseFeatureWebService.#ctor(HaoKao.CourseFeatureService.Domain.ICourseFeatureRepository,Girvs.Cache.Caching.IStaticCacheManager,AutoMapper.IMapper)">
+            <summary>
+            课程特色服务接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseFeatureService.Application.Services.CourseFeatureWebService.Get(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            根据ids获取列表
+            </summary>
+            <param name="ids"></param>
+        </member>
+        <member name="T:HaoKao.CourseFeatureService.Application.Services.CourseFeatureWeChatService">
+            <summary>
+            课程特色服务接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseFeatureService.Application.Services.CourseFeatureWeChatService.#ctor(HaoKao.CourseFeatureService.Application.Interfaces.ICourseFeatureWebService)">
+            <summary>
+            课程特色服务接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.CourseFeatureService.Application.Services.CourseFeatureWeChatService.Get(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            根据ids获取列表
+            </summary>
+            <param name="ids"></param>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Application.ViewModels.QueryCourseFeatureViewModel.Name">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Application.ViewModels.QueryCourseFeatureViewModel.Enable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Application.ViewModels.BrowseCourseFeatureViewModel.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Application.ViewModels.BrowseCourseFeatureViewModel.Name">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Application.ViewModels.BrowseCourseFeatureViewModel.Content">
+            <summary>
+            服务内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Application.ViewModels.BrowseCourseFeatureViewModel.IconUrl">
+            <summary>
+            图标地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Application.ViewModels.BrowseCourseFeatureViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Application.ViewModels.BrowseCourseFeatureViewModel.Enable">
+            <summary>
+            启用/禁用
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Application.ViewModels.CreateCourseFeatureViewModel.Name">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Application.ViewModels.CreateCourseFeatureViewModel.Content">
+            <summary>
+            服务内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Application.ViewModels.CreateCourseFeatureViewModel.IconUrl">
+            <summary>
+            图标地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Application.ViewModels.CreateCourseFeatureViewModel.Enable">
+            <summary>
+            启用/禁用
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Application.ViewModels.UpdateCourseFeatureViewModel.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Application.ViewModels.EnableCourseFeatureViewModel.Ids">
+            <summary>
+            Ids
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Application.ViewModels.EnableCourseFeatureViewModel.Enable">
+            <summary>
+            启用/禁用
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Application.ViewModels.BrowseCourseFeatureWebViewModel.Name">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Application.ViewModels.BrowseCourseFeatureWebViewModel.Content">
+            <summary>
+            服务内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Application.ViewModels.BrowseCourseFeatureWebViewModel.IconUrl">
+            <summary>
+            图标地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.CourseFeatureService.Application.ViewModels.BrowseCourseFeatureWebViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+    </members>
+</doc>

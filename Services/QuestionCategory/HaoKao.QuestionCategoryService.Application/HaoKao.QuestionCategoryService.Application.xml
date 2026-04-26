@@ -1,0 +1,257 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.QuestionCategoryService.Application</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Interfaces.IQuestionCategoryService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Interfaces.IQuestionCategoryService.Get(HaoKao.QuestionCategoryService.Application.ViewModels.QuestionCategoryQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Interfaces.IQuestionCategoryService.GetCategoryList">
+            <summary>
+            获取类别列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Interfaces.IQuestionCategoryService.Create(HaoKao.QuestionCategoryService.Application.ViewModels.CreateQuestionCategoryViewModel)">
+            <summary>
+            创建题库类别
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Interfaces.IQuestionCategoryService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定题库类别
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Interfaces.IQuestionCategoryService.Update(HaoKao.QuestionCategoryService.Application.ViewModels.UpdateQuestionCategoryViewModel)">
+            <summary>
+            根据主键更新指定题库类别
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Interfaces.IQuestionCategoryWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Interfaces.IQuestionCategoryWebService.GetCategoryDict">
+            <summary>
+            获取类别字典
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Interfaces.IQuestionCategoryWebService.GetCategoryList">
+            <summary>
+            获取类别列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Interfaces.IQuestionCategoryWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Interfaces.IQuestionCategoryWeChatService.GetCategoryDict">
+            <summary>
+            获取类别字典
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Interfaces.IQuestionCategoryWeChatService.GetCategoryList">
+            <summary>
+            获取类别列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.QuestionCategoryService.Application.Services.QuestionCategoryService">
+            <summary>
+            题库类别接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Services.QuestionCategoryService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,AutoMapper.IMapper,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.QuestionCategoryService.Domain.Repositories.IQuestionCategoryRepository)">
+            <summary>
+            题库类别接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Services.QuestionCategoryService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Services.QuestionCategoryService.Get(HaoKao.QuestionCategoryService.Application.ViewModels.QuestionCategoryQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Services.QuestionCategoryService.GetCategoryList">
+            <summary>
+            获取类别列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Services.QuestionCategoryService.Create(HaoKao.QuestionCategoryService.Application.ViewModels.CreateQuestionCategoryViewModel)">
+            <summary>
+            创建题库类别
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Services.QuestionCategoryService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定题库类别
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Services.QuestionCategoryService.Update(HaoKao.QuestionCategoryService.Application.ViewModels.UpdateQuestionCategoryViewModel)">
+            <summary>
+            根据主键更新指定题库类别
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Services.QuestionCategoryWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Services.QuestionCategoryWebService.GetCategoryDict">
+            <summary>
+            获取类别字典
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Services.QuestionCategoryWebService.GetCategoryList">
+            <summary>
+            获取类别列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.QuestionCategoryService.Application.Services.QuestionCategoryWeChatService">
+            <summary>
+            题库类别App 接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Services.QuestionCategoryWeChatService.#ctor(HaoKao.QuestionCategoryService.Application.Interfaces.IQuestionCategoryWebService)">
+            <summary>
+            题库类别App 接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Services.QuestionCategoryWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Services.QuestionCategoryWeChatService.GetCategoryDict">
+            <summary>
+            获取类别字典
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.QuestionCategoryService.Application.Services.QuestionCategoryWeChatService.GetCategoryList">
+            <summary>
+            获取类别列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Application.ViewModels.QuestionCategoryQueryViewModel.Name">
+            <summary>
+            题库类别名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Application.ViewModels.QuestionCategoryQueryViewModel.AdaptPlace">
+            <summary>
+            适应场景
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Application.ViewModels.BrowseQuestionCategoryViewModel.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Application.ViewModels.BrowseQuestionCategoryViewModel.Name">
+            <summary>
+            类名名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Application.ViewModels.BrowseQuestionCategoryViewModel.Code">
+            <summary>
+            类别代码
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Application.ViewModels.BrowseQuestionCategoryViewModel.AdaptPlace">
+            <summary>
+            适应场景
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Application.ViewModels.BrowseQuestionCategoryViewModel.DisplayCondition">
+            <summary>
+            显示条件
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Application.ViewModels.BrowseQuestionCategoryViewModel.ProductPackageId">
+            <summary>
+            产品包Id(购买跳转对象)
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Application.ViewModels.BrowseQuestionCategoryViewModel.ProductPackageType">
+            <summary>
+            产品包类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Application.ViewModels.BrowseQuestionCategoryViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Application.ViewModels.BrowseQuestionCategoryViewModel.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Application.ViewModels.CreateQuestionCategoryViewModel.Name">
+            <summary>
+            类名名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Application.ViewModels.CreateQuestionCategoryViewModel.Code">
+            <summary>
+            类别代码
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Application.ViewModels.CreateQuestionCategoryViewModel.AdaptPlace">
+            <summary>
+            适应场景
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Application.ViewModels.CreateQuestionCategoryViewModel.DisplayCondition">
+            <summary>
+            是否显示
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Application.ViewModels.CreateQuestionCategoryViewModel.ProductPackageId">
+            <summary>
+            产品包Id(购买跳转对象)
+            </summary>
+        </member>
+        <member name="P:HaoKao.QuestionCategoryService.Application.ViewModels.CreateQuestionCategoryViewModel.ProductPackageType">
+            <summary>
+            产品包类型
+            </summary>
+        </member>
+    </members>
+</doc>

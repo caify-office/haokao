@@ -1,0 +1,798 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.FeedBackService.Application</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.FeedBackService.Application.Profiles.FeedBackProfile">
+            <summary>
+            用户答疑映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Profiles.FeedBackProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.Profiles.FeedBackProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.FeedBackService.Application.Profiles.SuggestionProfile">
+            <summary>
+            意见反馈映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Profiles.SuggestionProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.Profiles.SuggestionProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:HaoKao.FeedBackService.Application.Services.App.FeedBackAppService">
+            <summary>
+            接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.App.FeedBackAppService.#ctor(HaoKao.FeedBackService.Application.Services.Management.IFeedBackService)">
+            <summary>
+            接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.App.FeedBackAppService.GetUserCount">
+            <summary>
+            读取当前用户的提交次数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.App.FeedBackAppService.Create(HaoKao.FeedBackService.Application.ViewModels.FeedBack.CreateFeedBackViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.App.FeedBackAppService.Get(HaoKao.FeedBackService.Application.ViewModels.FeedBack.FeedBackQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.App.FeedBackAppService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.App.IFeedBackAppService.Create(HaoKao.FeedBackService.Application.ViewModels.FeedBack.CreateFeedBackViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.FeedBackService.Application.Services.Management.FeedBackReplyService">
+            <summary>
+            反馈建议回复服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.FeedBackReplyService.#ctor(Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification})">
+            <summary>
+            反馈建议回复服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.FeedBackReplyService.Create(HaoKao.FeedBackService.Application.ViewModels.FeedBackReply.CreateFeedBackReplyViewModel)">
+            <summary>
+            创建答疑回复
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.FeedBackService.Application.Services.Management.FeedBackService">
+            <summary>
+            接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.FeedBackService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.FeedBackService.Domain.Repositories.IFeedBackRepository)">
+            <summary>
+            接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.FeedBackService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.FeedBackService.GetUserCount">
+            <summary>
+            读取当前用户的提交次数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.FeedBackService.Get(HaoKao.FeedBackService.Application.ViewModels.FeedBack.FeedBackQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.FeedBackService.Create(HaoKao.FeedBackService.Application.ViewModels.FeedBack.CreateFeedBackViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.FeedBackService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.FeedBackService.Update(System.Guid,HaoKao.FeedBackService.Application.ViewModels.FeedBack.UpdateFeedBackViewModel)">
+            <summary>
+            根据主键更新指定
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.IFeedBackReplyService.Create(HaoKao.FeedBackService.Application.ViewModels.FeedBackReply.CreateFeedBackReplyViewModel)">
+            <summary>
+            创建答疑回复
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.IFeedBackService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.IFeedBackService.Get(HaoKao.FeedBackService.Application.ViewModels.FeedBack.FeedBackQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.IFeedBackService.GetUserCount">
+            <summary>
+            读取用户提交次数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.IFeedBackService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.IFeedBackService.Update(System.Guid,HaoKao.FeedBackService.Application.ViewModels.FeedBack.UpdateFeedBackViewModel)">
+            <summary>
+            根据主键更新指定
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.IFeedBackService.Create(HaoKao.FeedBackService.Application.ViewModels.FeedBack.CreateFeedBackViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.ISuggestionService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.ISuggestionService.Get(HaoKao.FeedBackService.Application.ViewModels.Suggestion.QuerySuggestionViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="vm">查询对象</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.ISuggestionService.Create(HaoKao.FeedBackService.Application.ViewModels.Suggestion.CreateSuggestionViewModel)">
+            <summary>
+            创建意见反馈
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.ISuggestionService.Reply(HaoKao.FeedBackService.Application.ViewModels.Suggestion.ReplySuggestionViewModel)">
+            <summary>
+            回复意见反馈
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.ISuggestionService.Close(System.Guid)">
+            <summary>
+            将意见反馈变更为完结
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:HaoKao.FeedBackService.Application.Services.Management.SuggestionService">
+            <summary>
+            意见反馈接口服务 - Management
+            </summary>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.SuggestionService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.FeedBackService.Domain.Repositories.ISuggestionRepository)">
+            <summary>
+            意见反馈接口服务 - Management
+            </summary>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.SuggestionService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.SuggestionService.Get(HaoKao.FeedBackService.Application.ViewModels.Suggestion.QuerySuggestionViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="vm">查询对象</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.SuggestionService.Create(HaoKao.FeedBackService.Application.ViewModels.Suggestion.CreateSuggestionViewModel)">
+            <summary>
+            创建意见反馈
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.SuggestionService.Reply(HaoKao.FeedBackService.Application.ViewModels.Suggestion.ReplySuggestionViewModel)">
+            <summary>
+            回复意见反馈
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Management.SuggestionService.Close(System.Guid)">
+            <summary>
+            将意见反馈变更为完结
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Web.ISuggestionWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Web.ISuggestionWebService.Get(System.Int32,System.Int32)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Web.ISuggestionWebService.Create(HaoKao.FeedBackService.Application.ViewModels.Suggestion.CreateSuggestionViewModel)">
+            <summary>
+            创建意见反馈
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.FeedBackService.Application.Services.Web.SuggestionWebService">
+            <summary>
+            意见反馈接口服务 - Web
+            </summary>
+            <param name="service"></param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Web.SuggestionWebService.#ctor(HaoKao.FeedBackService.Application.Services.Management.ISuggestionService)">
+            <summary>
+            意见反馈接口服务 - Web
+            </summary>
+            <param name="service"></param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Web.SuggestionWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Web.SuggestionWebService.Get(System.Int32,System.Int32)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.Web.SuggestionWebService.Create(HaoKao.FeedBackService.Application.ViewModels.Suggestion.CreateSuggestionViewModel)">
+            <summary>
+            创建意见反馈
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.FeedBackService.Application.Services.WeChat.FeedBackWeChatService">
+            <summary>
+            接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.WeChat.FeedBackWeChatService.#ctor(HaoKao.FeedBackService.Application.Services.Management.IFeedBackService)">
+            <summary>
+            接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.WeChat.FeedBackWeChatService.GetUserCount">
+            <summary>
+            读取当前用户的提交次数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.WeChat.FeedBackWeChatService.Create(HaoKao.FeedBackService.Application.ViewModels.FeedBack.CreateFeedBackViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.WeChat.FeedBackWeChatService.Get(HaoKao.FeedBackService.Application.ViewModels.FeedBack.FeedBackQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.WeChat.FeedBackWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.WeChat.IFeedBackWeChatService.Create(HaoKao.FeedBackService.Application.ViewModels.FeedBack.CreateFeedBackViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.WeChat.ISuggestionWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.WeChat.ISuggestionWeChatService.Get(System.Int32,System.Int32)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.WeChat.ISuggestionWeChatService.Create(HaoKao.FeedBackService.Application.ViewModels.Suggestion.CreateSuggestionViewModel)">
+            <summary>
+            创建意见反馈
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.FeedBackService.Application.Services.WeChat.SuggestionWeChatService">
+            <summary>
+            意见反馈接口服务 - WeChat
+            </summary>
+            <param name="service"></param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.WeChat.SuggestionWeChatService.#ctor(HaoKao.FeedBackService.Application.Services.Management.ISuggestionService)">
+            <summary>
+            意见反馈接口服务 - WeChat
+            </summary>
+            <param name="service"></param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.WeChat.SuggestionWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.WeChat.SuggestionWeChatService.Get(System.Int32,System.Int32)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.FeedBackService.Application.Services.WeChat.SuggestionWeChatService.Create(HaoKao.FeedBackService.Application.ViewModels.Suggestion.CreateSuggestionViewModel)">
+            <summary>
+            创建意见反馈
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.BrowseFeedBackViewModel.Type">
+            <summary>
+            反馈类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.BrowseFeedBackViewModel.SourceType">
+            <summary>
+            反馈来源
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.BrowseFeedBackViewModel.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.BrowseFeedBackViewModel.Contract">
+            <summary>
+            联系人
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.BrowseFeedBackViewModel.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.BrowseFeedBackViewModel.FileUrls">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.CreateFeedBackViewModel.ParentId">
+            <summary>
+            父id
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.CreateFeedBackViewModel.Type">
+            <summary>
+            反馈类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.CreateFeedBackViewModel.SourceType">
+            <summary>
+            反馈来源
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.CreateFeedBackViewModel.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.CreateFeedBackViewModel.Contract">
+            <summary>
+            联系人
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.CreateFeedBackViewModel.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.CreateFeedBackViewModel.FileUrls">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.FeedBackQueryViewModel.Type">
+            <summary>
+            反馈类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.FeedBackQueryViewModel.SourceType">
+            <summary>
+            来源
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.FeedBackQueryViewModel.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.FeedBackQueryViewModel.StartTime">
+            <summary>
+            反馈开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.FeedBackQueryViewModel.EndTime">
+            <summary>
+            反馈结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.FeedBackQueryViewModel.HanldUserName">
+            <summary>
+            处理人
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.FeedBackQueryViewModel.FeedBackUserName">
+            <summary>
+            处理人
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.FeedBackQueryViewModel.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.FeedBackQueryListViewModel.Type">
+            <summary>
+            反馈类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.FeedBackQueryListViewModel.SourceType">
+            <summary>
+            反馈来源
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.FeedBackQueryListViewModel.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.FeedBackQueryListViewModel.Contract">
+            <summary>
+            联系人
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.FeedBackQueryListViewModel.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.FeedBackQueryListViewModel.FileUrls">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.FeedBackQueryListViewModel.CreateTime">
+            <summary>
+            反馈时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.FeedBackQueryListViewModel.CreatorName">
+            <summary>
+            反馈人
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBack.UpdateFeedBackViewModel.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBackReply.BrowseFeedBackReplyViewModel.ReplyContent">
+            <summary>
+            答疑回复内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBackReply.BrowseFeedBackReplyViewModel.ReplyUserName">
+            <summary>
+            回复人用户名
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBackReply.BrowseFeedBackReplyViewModel.FeedBackId">
+            <summary>
+            关联的题目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBackReply.BrowseFeedBackReplyViewModel.FileUrl">
+            <summary>
+            文件地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBackReply.CreateFeedBackReplyViewModel.ReplyContent">
+            <summary>
+            答疑回复内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBackReply.CreateFeedBackReplyViewModel.ReplyUserName">
+            <summary>
+            回复人用户名
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBackReply.CreateFeedBackReplyViewModel.FeedBackId">
+            <summary>
+            关联的题目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBackReply.CreateFeedBackReplyViewModel.FileUrl">
+            <summary>
+            上传的文件地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBackReply.FeedBackReplyQueryListViewModel.ReplyContent">
+            <summary>
+            答疑回复内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBackReply.FeedBackReplyQueryListViewModel.ReplyUserName">
+            <summary>
+            回复人用户名
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBackReply.FeedBackReplyQueryListViewModel.FeedBackId">
+            <summary>
+            关联的题目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBackReply.FeedBackReplyQueryListViewModel.FileUrl">
+            <summary>
+            文件地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBackReply.UpdateFeedBackReplyViewModel.ReplyContent">
+            <summary>
+            答疑回复内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBackReply.UpdateFeedBackReplyViewModel.ReplyUserName">
+            <summary>
+            回复人用户名
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.FeedBackReply.UpdateFeedBackReplyViewModel.FeedBackId">
+            <summary>
+            关联的题目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.BrowseSuggestionViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.BrowseSuggestionViewModel.SuggestionType">
+            <summary>
+            反馈类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.BrowseSuggestionViewModel.SuggestionFrom">
+            <summary>
+            反馈来源
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.BrowseSuggestionViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.BrowseSuggestionViewModel.Description">
+            <summary>
+            问题描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.BrowseSuggestionViewModel.Screenshots">
+            <summary>
+            相关截图
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.BrowseSuggestionViewModel.CreatorId">
+            <summary>
+            反馈人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.BrowseSuggestionViewModel.CreatorName">
+            <summary>
+            反馈人名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.BrowseSuggestionViewModel.CreateTime">
+            <summary>
+            反馈时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.BrowseSuggestionViewModel.ReplyState">
+            <summary>
+            处理状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.BrowseSuggestionViewModel.ReplyUserId">
+            <summary>
+            处理人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.BrowseSuggestionViewModel.ReplyUserName">
+            <summary>
+            处理人名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.BrowseSuggestionViewModel.ReplyTime">
+            <summary>
+            回复时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.BrowseSuggestionViewModel.ReplyContent">
+            <summary>
+            回复内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.BrowseSuggestionViewModel.ReplyScreenshots">
+            <summary>
+            回复截图
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.BrowseSuggestionViewModel.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.CreateSuggestionViewModel.SuggestionType">
+            <summary>
+            反馈类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.CreateSuggestionViewModel.SuggestionFrom">
+            <summary>
+            反馈来源
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.CreateSuggestionViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.CreateSuggestionViewModel.Description">
+            <summary>
+            问题描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.CreateSuggestionViewModel.Screenshots">
+            <summary>
+            相关截图
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.QuerySuggestionViewModel.SuggestionType">
+            <summary>
+            反馈类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.QuerySuggestionViewModel.SuggestionFrom">
+            <summary>
+            反馈来源
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.QuerySuggestionViewModel.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.QuerySuggestionViewModel.CreatorName">
+            <summary>
+            反馈人名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.QuerySuggestionViewModel.StartCreateTime">
+            <summary>
+            开始反馈时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.QuerySuggestionViewModel.EndCreateTime">
+            <summary>
+            结束反馈时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.QuerySuggestionViewModel.ReplyState">
+            <summary>
+            处理状态
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.QuerySuggestionViewModel.ReplyUserName">
+            <summary>
+            处理人名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.QuerySuggestionViewModel.StartReplyTime">
+            <summary>
+            开始回复时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.QuerySuggestionViewModel.EndReplyTime">
+            <summary>
+            结束回复时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.QuerySuggestionViewModel.CreatorId">
+            <summary>
+            反馈人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.ReplySuggestionViewModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.ReplySuggestionViewModel.ReplyContent">
+            <summary>
+            回复内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.FeedBackService.Application.ViewModels.Suggestion.ReplySuggestionViewModel.ReplyScreenshots">
+            <summary>
+            回复截图
+            </summary>
+        </member>
+    </members>
+</doc>

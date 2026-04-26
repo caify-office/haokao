@@ -1,0 +1,400 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.AnsweringQuestionService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestion.CreateAnsweringQuestionCommand">
+            <summary>
+            创建答疑命令
+            </summary>
+            <param name="ParentId">用户名称</param>
+            <param name="SubjectId">科目id</param>
+            <param name="SubjectName">科目名称</param>
+            <param name="CourseId">课程id</param>
+            <param name="CourseChapterId">选择的课程章节id</param>
+            <param name="CourseVideId">选择的课程视频id</param>
+            <param name="BookPageSize">书籍页码</param>
+            <param name="BookName">书籍名称以及相关描述</param>
+            <param name="Type">提问类型</param>
+            <param name="Description">问题描述</param>
+            <param name="Remark">详细描述</param>
+            <param name="FileUrl">上传的图片路劲</param>
+            <param name="CourseName">课程名称</param>
+            <param name="CourseChapterName">课程章节名称</param>
+            <param name="CourseVideoName">课程视频名称</param>
+            <param name="ProductId">产品id</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestion.CreateAnsweringQuestionCommand.#ctor(System.Nullable{System.Guid},System.Guid,System.String,System.Guid,System.Guid,System.Guid,System.String,System.String,HaoKao.QuestionBankMemberService.Domain.Enumerations.AnsweringQuestionEnum,System.String,System.String,System.String,System.String,System.String,System.String,System.Guid)">
+            <summary>
+            创建答疑命令
+            </summary>
+            <param name="ParentId">用户名称</param>
+            <param name="SubjectId">科目id</param>
+            <param name="SubjectName">科目名称</param>
+            <param name="CourseId">课程id</param>
+            <param name="CourseChapterId">选择的课程章节id</param>
+            <param name="CourseVideId">选择的课程视频id</param>
+            <param name="BookPageSize">书籍页码</param>
+            <param name="BookName">书籍名称以及相关描述</param>
+            <param name="Type">提问类型</param>
+            <param name="Description">问题描述</param>
+            <param name="Remark">详细描述</param>
+            <param name="FileUrl">上传的图片路劲</param>
+            <param name="CourseName">课程名称</param>
+            <param name="CourseChapterName">课程章节名称</param>
+            <param name="CourseVideoName">课程视频名称</param>
+            <param name="ProductId">产品id</param>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestion.CreateAnsweringQuestionCommand.ParentId">
+            <summary>用户名称</summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestion.CreateAnsweringQuestionCommand.SubjectId">
+            <summary>科目id</summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestion.CreateAnsweringQuestionCommand.SubjectName">
+            <summary>科目名称</summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestion.CreateAnsweringQuestionCommand.CourseId">
+            <summary>课程id</summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestion.CreateAnsweringQuestionCommand.CourseChapterId">
+            <summary>选择的课程章节id</summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestion.CreateAnsweringQuestionCommand.CourseVideId">
+            <summary>选择的课程视频id</summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestion.CreateAnsweringQuestionCommand.BookPageSize">
+            <summary>书籍页码</summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestion.CreateAnsweringQuestionCommand.BookName">
+            <summary>书籍名称以及相关描述</summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestion.CreateAnsweringQuestionCommand.Type">
+            <summary>提问类型</summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestion.CreateAnsweringQuestionCommand.Description">
+            <summary>问题描述</summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestion.CreateAnsweringQuestionCommand.Remark">
+            <summary>详细描述</summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestion.CreateAnsweringQuestionCommand.FileUrl">
+            <summary>上传的图片路劲</summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestion.CreateAnsweringQuestionCommand.CourseName">
+            <summary>课程名称</summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestion.CreateAnsweringQuestionCommand.CourseChapterName">
+            <summary>课程章节名称</summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestion.CreateAnsweringQuestionCommand.CourseVideoName">
+            <summary>课程视频名称</summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestion.CreateAnsweringQuestionCommand.ProductId">
+            <summary>产品id</summary>
+        </member>
+        <member name="T:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestion.DeleteAnsweringQuestionCommand">
+            <summary>
+            删除答疑命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestion.DeleteAnsweringQuestionCommand.#ctor(System.Guid)">
+            <summary>
+            删除答疑命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestion.DeleteAnsweringQuestionCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestion.UpdateAnsweringQuestionCommand">
+            <summary>
+            更新答疑命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestion.UpdateAnsweringQuestionCommand.#ctor(System.Guid)">
+            <summary>
+            更新答疑命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestion.UpdateAnsweringQuestionCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestionReply.CreateAnsweringQuestionReplyCommand">
+            <summary>
+            创建答疑回复命令
+            </summary>
+            <param name="ReplyContent">答疑回复内容</param>
+            <param name="AnsweringQuestionId">关联的题目id</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestionReply.CreateAnsweringQuestionReplyCommand.#ctor(System.String,System.Guid)">
+            <summary>
+            创建答疑回复命令
+            </summary>
+            <param name="ReplyContent">答疑回复内容</param>
+            <param name="AnsweringQuestionId">关联的题目id</param>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestionReply.CreateAnsweringQuestionReplyCommand.ReplyContent">
+            <summary>答疑回复内容</summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestionReply.CreateAnsweringQuestionReplyCommand.AnsweringQuestionId">
+            <summary>关联的题目id</summary>
+        </member>
+        <member name="T:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestionReply.DeleteAnsweringQuestionReplyCommand">
+            <summary>
+            删除答疑回复命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestionReply.DeleteAnsweringQuestionReplyCommand.#ctor(System.Guid)">
+            <summary>
+            删除答疑回复命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestionReply.DeleteAnsweringQuestionReplyCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestionReply.UpdateAnsweringQuestionReplyCommand">
+            <summary>
+            更新答疑回复命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="ReplyContent">答疑回复内容</param>
+            <param name="AnsweringQuestionId">关联的题目id</param>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestionReply.UpdateAnsweringQuestionReplyCommand.#ctor(System.Guid,System.String,System.Guid)">
+            <summary>
+            更新答疑回复命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="ReplyContent">答疑回复内容</param>
+            <param name="AnsweringQuestionId">关联的题目id</param>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestionReply.UpdateAnsweringQuestionReplyCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestionReply.UpdateAnsweringQuestionReplyCommand.ReplyContent">
+            <summary>答疑回复内容</summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Commands.AnsweringQuestionReply.UpdateAnsweringQuestionReplyCommand.AnsweringQuestionId">
+            <summary>关联的题目id</summary>
+        </member>
+        <member name="T:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestion">
+            <summary>
+            答疑
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestion.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestion.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestion.SubjectId">
+            <summary>
+            科目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestion.SubjectName">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestion.IsReply">
+            <summary>
+            是否回答
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestion.CourseId">
+            <summary>
+            课程id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestion.CourseName">
+            <summary>
+            课程名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestion.CourseChapterId">
+            <summary>
+            选择的课程章节id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestion.CourseChapterName">
+            <summary>
+            课程章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestion.CourseVideId">
+            <summary>
+            选择的课程视频id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestion.CourseVideName">
+            <summary>
+            课程视频名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestion.BookPageSize">
+            <summary>
+            书籍页码
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestion.BookName">
+            <summary>
+            书籍名称以及相关描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestion.Type">
+            <summary>
+            提问类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestion.Description">
+            <summary>
+            问题描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestion.Remark">
+            <summary>
+            详细描述
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestion.FileUrl">
+            <summary>
+            上传的图片路劲
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestion.WatchCount">
+            <summary>
+            观看人数累加
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestion.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestion.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="T:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestionReply">
+            <summary>
+            答疑回复
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestionReply.ReplyContent">
+            <summary>
+            答疑回复内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestionReply.ReplyUserName">
+            <summary>
+            回复人用户名
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestionReply.AnsweringQuestionId">
+            <summary>
+            关联的题目id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestionReply.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Models.AnsweringQuestionReply.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Queries.EntityQuery.AnsweringQuestionQuery.SubjectId">
+            <summary>
+            科目
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Queries.EntityQuery.AnsweringQuestionQuery.Submitor">
+            <summary>
+            提交人
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Queries.EntityQuery.AnsweringQuestionQuery.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Queries.EntityQuery.AnsweringQuestionQuery.IsReply">
+            <summary>
+            是否回复
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Queries.EntityQuery.AnsweringQuestionQuery.IsNewReply">
+            <summary>
+            是否新回复
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Queries.EntityQuery.AnsweringQuestionQuery.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Queries.EntityQuery.AnsweringQuestionQuery.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Queries.EntityQuery.AnsweringQuestionQuery.Type">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Queries.EntityQuery.AnsweringQuestionWebQuery.CourseId">
+            <summary>
+            课程id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Queries.EntityQuery.AnsweringQuestionWebQuery.SearchKey">
+            <summary>
+            关键词搜索
+            </summary>
+        </member>
+        <member name="P:HaoKao.AnsweringQuestionService.Domain.Queries.EntityQuery.AnsweringQuestionWebQuery.Type">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="M:HaoKao.AnsweringQuestionService.Domain.Repositories.IAnsweringQuestionRepository.GetChildQuestion(System.Guid)">
+            <summary>
+            查询当前答疑是否存在追问
+            </summary>
+            <param name="AnswerQuestionId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaoKao.QuestionBankMemberService.Domain.Enumerations.AnsweringQuestionEnum">
+            <summary>
+            状态枚举
+            </summary>
+        </member>
+        <member name="F:HaoKao.QuestionBankMemberService.Domain.Enumerations.AnsweringQuestionEnum.Course">
+            <summary>
+            课程
+            </summary>
+        </member>
+        <member name="F:HaoKao.QuestionBankMemberService.Domain.Enumerations.AnsweringQuestionEnum.Book">
+            <summary>
+            书籍
+            </summary>
+        </member>
+    </members>
+</doc>

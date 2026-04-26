@@ -1,0 +1,552 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.LearningPlanService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.LearningPlanService.Domain.Commands.LearningPlan.CreateLearningPlanCommand">
+            <summary>
+            创建学习计划主类，用于组织和管理一系列学习任务命令
+            </summary>
+            <param name="Id"></param>
+            <param name="ProductId">产品Id</param>
+            <param name="ProductName">产品名称</param>
+            <param name="SubjectId">对应的科目Id</param>
+            <param name="SubjectName">对应科目名称</param>
+            <param name="EndDate">学习计划结束日期</param>
+            <param name="DayLearningTimes">每周学习时长配置(分钟)</param>
+            <param name="NeedReminder">需要提醒</param>
+            <param name="ReminderHours">提醒时间(小时)</param>
+            <param name="ReminderMinutes">提醒时间(分钟)</param>
+            <param name="ReminderPhone">提醒的手机号</param>
+            <param name="KnowledgePointTasks">选择的知识点任务</param>
+            <param name="StateTasks">系统配置的阶段任务</param>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Domain.Commands.LearningPlan.CreateLearningPlanCommand.#ctor(System.Nullable{System.Guid},System.Guid,System.String,System.Guid,System.String,System.DateOnly,System.Collections.Generic.List{System.Int32},System.Boolean,System.Int32,System.Int32,System.String,System.Collections.Generic.ICollection{HaoKao.LearningPlanService.Domain.Records.KnowledgePointTask},System.Collections.Generic.ICollection{HaoKao.Common.RemoteModel.AssistantProductPermissionContent})">
+            <summary>
+            创建学习计划主类，用于组织和管理一系列学习任务命令
+            </summary>
+            <param name="Id"></param>
+            <param name="ProductId">产品Id</param>
+            <param name="ProductName">产品名称</param>
+            <param name="SubjectId">对应的科目Id</param>
+            <param name="SubjectName">对应科目名称</param>
+            <param name="EndDate">学习计划结束日期</param>
+            <param name="DayLearningTimes">每周学习时长配置(分钟)</param>
+            <param name="NeedReminder">需要提醒</param>
+            <param name="ReminderHours">提醒时间(小时)</param>
+            <param name="ReminderMinutes">提醒时间(分钟)</param>
+            <param name="ReminderPhone">提醒的手机号</param>
+            <param name="KnowledgePointTasks">选择的知识点任务</param>
+            <param name="StateTasks">系统配置的阶段任务</param>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Commands.LearningPlan.CreateLearningPlanCommand.Id">
+            <summary></summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Commands.LearningPlan.CreateLearningPlanCommand.ProductId">
+            <summary>产品Id</summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Commands.LearningPlan.CreateLearningPlanCommand.ProductName">
+            <summary>产品名称</summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Commands.LearningPlan.CreateLearningPlanCommand.SubjectId">
+            <summary>对应的科目Id</summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Commands.LearningPlan.CreateLearningPlanCommand.SubjectName">
+            <summary>对应科目名称</summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Commands.LearningPlan.CreateLearningPlanCommand.EndDate">
+            <summary>学习计划结束日期</summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Commands.LearningPlan.CreateLearningPlanCommand.DayLearningTimes">
+            <summary>每周学习时长配置(分钟)</summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Commands.LearningPlan.CreateLearningPlanCommand.NeedReminder">
+            <summary>需要提醒</summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Commands.LearningPlan.CreateLearningPlanCommand.ReminderHours">
+            <summary>提醒时间(小时)</summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Commands.LearningPlan.CreateLearningPlanCommand.ReminderMinutes">
+            <summary>提醒时间(分钟)</summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Commands.LearningPlan.CreateLearningPlanCommand.ReminderPhone">
+            <summary>提醒的手机号</summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Commands.LearningPlan.CreateLearningPlanCommand.KnowledgePointTasks">
+            <summary>选择的知识点任务</summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Commands.LearningPlan.CreateLearningPlanCommand.StateTasks">
+            <summary>系统配置的阶段任务</summary>
+        </member>
+        <member name="T:HaoKao.LearningPlanService.Domain.Commands.LearningPlan.DeleteLearningPlanCommand">
+            <summary>
+            删除学习计划主类，用于组织和管理一系列学习任务命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Domain.Commands.LearningPlan.DeleteLearningPlanCommand.#ctor(System.Guid)">
+            <summary>
+            删除学习计划主类，用于组织和管理一系列学习任务命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Commands.LearningPlan.DeleteLearningPlanCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.LearningPlanService.Domain.Entities.LearningPlan">
+            <summary>
+            学习计划主类，用于组织和管理一系列学习任务
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningPlan.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningPlan.SubjectId">
+            <summary>
+            对应的科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningPlan.SubjectName">
+            <summary>
+            对应科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningPlan.EndDate">
+            <summary>
+            学习计划结束日期
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningPlan.LearningTasks">
+            <summary>
+            该学习计划包含的所有任务
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningPlan.DayLearningTimes">
+            <summary>
+            每周学习时长配置(分钟)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningPlan.NeedReminder">
+            <summary>
+            需要提醒
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningPlan.ReminderHours">
+            <summary>
+            提醒时间(小时)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningPlan.ReminderMinutes">
+            <summary>
+            提醒时间(分钟)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningPlan.ReminderPhone">
+            <summary>
+            提醒手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningPlan.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningPlan.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningPlan.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningPlan.CreatorId">
+            <summary>
+            创建者Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningPlan.CreatorName">
+            <summary>
+            创建者名称
+            </summary>
+        </member>
+        <member name="T:HaoKao.LearningPlanService.Domain.Entities.LearningTask">
+            <summary>
+            学习任务主类
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningTask.TaskName">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningTask.ScheduledTime">
+            <summary>
+            计划开始该任务的时间点
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningTask.DurationSeconds">
+            <summary>
+            完成该任务预计需要的时长（秒），支持小数表示
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningTask.TaskType">
+            <summary>
+            任务类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningTask.TaskIdentity">
+            <summary>
+            任务标识（用于重新制作学习计划时判定当前任务内容是否已是过期任务内容）
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningTask.TaskContent">
+            <summary>
+            任务内容（存视频任务，章节任务任务，试卷任务详情）
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningTask.LearningPlanId">
+            <summary>
+            关联的学习计划ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningTask.LearningPlan">
+            <summary>
+            导航属性，指向关联的学习计划
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningTask.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningTask.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningTask.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningTask.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningTask.CreatorId">
+            <summary>
+            创建者Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Entities.LearningTask.CreatorName">
+            <summary>
+            创建者名称
+            </summary>
+        </member>
+        <member name="T:HaoKao.LearningPlanService.Domain.Enumerations.CourseType">
+            <summary>
+            课程类型
+            </summary>
+        </member>
+        <member name="F:HaoKao.LearningPlanService.Domain.Enumerations.CourseType.StageCourse">
+            <summary>
+            阶段课程
+            </summary>
+        </member>
+        <member name="F:HaoKao.LearningPlanService.Domain.Enumerations.CourseType.IntelligenceCourse">
+            <summary>
+            智辅课程
+            </summary>
+        </member>
+        <member name="F:HaoKao.LearningPlanService.Domain.Enumerations.ExamFrequency.High">
+            <summary>
+            高频
+            </summary>
+        </member>
+        <member name="F:HaoKao.LearningPlanService.Domain.Enumerations.ExamFrequency.Medium">
+            <summary>
+            中频
+            </summary>
+        </member>
+        <member name="F:HaoKao.LearningPlanService.Domain.Enumerations.ExamFrequency.Low">
+            <summary>
+            低频
+            </summary>
+        </member>
+        <member name="T:HaoKao.LearningPlanService.Domain.Enumerations.TaskType">
+            <summary>
+            任务类型
+            </summary>
+        </member>
+        <member name="F:HaoKao.LearningPlanService.Domain.Enumerations.TaskType.VideoTask">
+            <summary>
+            视频任务
+            </summary>
+        </member>
+        <member name="F:HaoKao.LearningPlanService.Domain.Enumerations.TaskType.ExerciseTask">
+            <summary>
+            章节练习任务
+            </summary>
+        </member>
+        <member name="F:HaoKao.LearningPlanService.Domain.Enumerations.TaskType.PaperTask">
+            <summary>
+            考试任务
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Queries.LearningTaskQuery.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Queries.LearningTaskQuery.SubjectId">
+            <summary>
+            对应的科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Queries.LearningTaskQuery.ScheduledTime">
+            <summary>
+            计划开始该任务的时间点
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Queries.LearningTaskQuery.CreatorId">
+            <summary>
+            创建者Id
+            </summary>
+        </member>
+        <member name="T:HaoKao.LearningPlanService.Domain.Records.ExerciseTaskContent">
+            <summary>
+            章节练习任务，对应课后习题或章节测试
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.ExerciseTaskContent.CourseId">
+            <summary>
+            课程ID，关联到具体课程
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.ExerciseTaskContent.CourseType">
+            <summary>
+            课程类型（0:阶段课程 1：智辅课程）
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.ExerciseTaskContent.ChapterId">
+            <summary>
+            章节ID，标识练习所属章节
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.ExerciseTaskContent.ChapterName">
+            <summary>
+            章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.ExerciseTaskContent.QuestionChapterId">
+            <summary>
+            试题章节ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.ExerciseTaskContent.QuestionChapterName">
+            <summary>
+            试题章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.ExerciseTaskContent.QuestionCategoryId">
+            <summary>
+            试题分类ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.ExerciseTaskContent.QuestionCategoryName">
+            <summary>
+            试题分类名称，如"章节练习"、"章节强化"
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.ExerciseTaskContent.QuestionCount">
+            <summary>
+            练习包含的题目数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.KnowledgePointTask.CourseId">
+            <summary>
+            课程ID，关联到具体课程
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.KnowledgePointTask.CourseName">
+            <summary>
+            课程名称，关联到具体课程
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.KnowledgePointTask.ChapterId">
+            <summary>
+            章节ID，标识所属章节（最外层的章用于获取章节练习）
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.KnowledgePointTask.ChapterName">
+            <summary>
+            章节名称（最外层的章用于获取章节练习）
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.KnowledgePointTask.VideoInfoViewModels">
+            <summary>
+            视频信息
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.VideoInfoViewModel.KnowledgePointId">
+            <summary>
+            知识点id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.VideoInfoViewModel.KnowledgePointName">
+            <summary>
+            知识点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.VideoInfoViewModel.KnowledgePointExamFrequency">
+            <summary>
+            知识点考试频率
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.VideoInfoViewModel.VideoId">
+            <summary>
+            视频资源ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.VideoInfoViewModel.VideoName">
+            <summary>
+            视频名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.VideoInfoViewModel.VideoDurationSeconds">
+            <summary>
+            视频原始时长（秒），支持小数表示
+            </summary>
+        </member>
+        <member name="T:HaoKao.LearningPlanService.Domain.Records.PaperTaskContent">
+            <summary>
+            试卷任务，对应完整的测试或考试
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.PaperTaskContent.PaperId">
+            <summary>
+            试卷ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.PaperTaskContent.PaperName">
+            <summary>
+            试卷名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.StateTask.AssistantProductPermissionContents">
+            <summary>
+            智辅产品权限内容
+            </summary>
+        </member>
+        <member name="T:HaoKao.LearningPlanService.Domain.Records.VideoTaskContent">
+            <summary>
+            视频学习任务，对应在线视频课程学习
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.VideoTaskContent.CourseId">
+            <summary>
+            课程ID，关联到具体课程
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.VideoTaskContent.CourseName">
+            <summary>
+            课程名称，关联到具体课程
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.VideoTaskContent.CourseType">
+            <summary>
+            课程类型（0:阶段课程 1：智辅课程）
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.VideoTaskContent.ChapterId">
+            <summary>
+            章节ID，标识视频所属章节
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.VideoTaskContent.ChapterName">
+            <summary>
+            章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.VideoTaskContent.KnowledgePointId">
+            <summary>
+            知识点id(智辅课程专用)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.VideoTaskContent.KnowledgePointName">
+            <summary>
+            知识点名称(智辅课程专用)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.VideoTaskContent.KnowledgePointExamFrequency">
+            <summary>
+            知识点考试频率(智辅课程专用)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.VideoTaskContent.VideoId">
+            <summary>
+            视频资源ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Domain.Records.VideoTaskContent.VideoName">
+            <summary>
+            视频名称
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Domain.RemoteRepositories.IRemoteCourseRepository.GetVideoIdsByCourseIds(System.String)">
+            <summary>
+            测试根据课程ids拿到多个课程下面所有的课程视频信息
+            </summary>
+            <param name="courseIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Domain.RemoteRepositories.IRemoteCourseRepository.GetCourseVideoList(HaoKao.Common.RemoteModel.QueryCourseVideoInfo)">
+            <summary>
+            测试根据课程ids拿到多个课程下面所有的课程视频信息
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Domain.RemoteRepositories.IRemoteCourseRepository.GetCoursePractice(System.Guid)">
+            <summary>
+            根据课程章节id获取指定
+            </summary>
+            <param name="courseChapterId">课程章节id</param>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Domain.RemoteRepositories.IRemoteCourseRepository.GetChapterPractice(System.Guid,System.Guid)">
+            <summary>
+            根据课程id和章节id获取指定章节练习(智辅课程专用)
+            </summary>
+            <param name="courseId">课程id</param>
+            <param name="courseChapterId">Id</param>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Domain.RemoteRepositories.IRemoteCourseRepository.GetAllCourseChapterAsync(System.Guid)">
+            <summary>
+            按照课程id获取所有课程章节
+            </summary>
+            <param name="courseId">课程id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Domain.RemoteRepositories.IRemotePaperRepository.GetPaperDetailInfo(System.Guid)">
+            <summary>
+            获取试卷基本信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Domain.RemoteRepositories.IRemoteQuestionRepository.GetChapterCategorieQuestionCount(System.Guid,System.Guid)">
+            <summary>
+            获取试卷基本信息
+            </summary>
+            <param name="chaperId"></param>
+            <param name="questionCategoryId"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,533 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.LearningPlanService.Application</name>
+    </assembly>
+    <members>
+        <member name="P:HaoKao.LearningPlanService.Application.ISortableTask.Sort">
+            <summary>
+            任务排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ISortableTask.TaskType">
+            <summary>
+            任务类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ISortableTask.DurationSeconds">
+            <summary>
+            完成该任务预计需要的时长（秒），支持小数表示
+            </summary>
+        </member>
+        <member name="T:HaoKao.LearningPlanService.Application.Profiles.LearningPlanProfile">
+            <summary>
+            模型映射文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Profiles.LearningPlanProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.Profiles.LearningPlanProfile.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.Web.ILearningPlanWebService.GetCurrentLearningPlan(System.Guid,System.Guid)">
+            <summary>
+            获取当前用户学习计划
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.Web.ILearningPlanWebService.Create(HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.CreateLearningPlanViewModel)">
+            <summary>
+            创建学习计划主类，用于组织和管理一系列学习任务
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.Web.ILearningPlanWebService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定学习计划主类，用于组织和管理一系列学习任务
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.Web.ILearningPlanWebService.Get(HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.QueryTaskCountAndDurationsViewModel)">
+            <summary>
+            获取任务总数和总时长
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.Web.ILearningTaskWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.Web.ILearningTaskWebService.Get(HaoKao.LearningPlanService.Application.ViewModels.LearningTask.LearningTaskQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="T:HaoKao.LearningPlanService.Application.Services.Web.LearningPlanWebService">
+            <summary>
+            学习计划主类，用于组织和管理一系列学习任务接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.Web.LearningPlanWebService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.LearningPlanService.Domain.Repositories.ILearningPlanRepository,HaoKao.LearningPlanService.Domain.RemoteRepositories.IRemoteCourseRepository,HaoKao.LearningPlanService.Domain.RemoteRepositories.IRemoteQuestionRepository)">
+            <summary>
+            学习计划主类，用于组织和管理一系列学习任务接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.Web.LearningPlanWebService.GetCurrentLearningPlan(System.Guid,System.Guid)">
+            <summary>
+            获取当前用户学习计划
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.Web.LearningPlanWebService.Get(HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.QueryTaskCountAndDurationsViewModel)">
+            <summary>
+            获取任务总数和总时长
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.Web.LearningPlanWebService.Create(HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.CreateLearningPlanViewModel)">
+            <summary>
+            创建学习计划主类，用于组织和管理一系列学习任务
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.Web.LearningPlanWebService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定学习计划主类，用于组织和管理一系列学习任务
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="T:HaoKao.LearningPlanService.Application.Services.Web.LearningTaskWebService">
+            <summary>
+            学习任务主类接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.Web.LearningTaskWebService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.LearningPlanService.Domain.Repositories.ILearningTaskRepository)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.Web.LearningTaskWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.Web.LearningTaskWebService.Get(HaoKao.LearningPlanService.Application.ViewModels.LearningTask.LearningTaskQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.WeChat.ILearningPlanWeChatService.GetCurrentLearningPlan(System.Guid,System.Guid)">
+            <summary>
+            获取当前用户学习计划
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.WeChat.ILearningPlanWeChatService.Create(HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.CreateLearningPlanViewModel)">
+            <summary>
+            创建学习计划主类，用于组织和管理一系列学习任务
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.WeChat.ILearningPlanWeChatService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定学习计划主类，用于组织和管理一系列学习任务
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.WeChat.ILearningPlanWeChatService.Get(HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.QueryTaskCountAndDurationsViewModel)">
+            <summary>
+            获取任务总数和总时长
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.WeChat.ILearningTaskWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.WeChat.ILearningTaskWeChatService.Get(HaoKao.LearningPlanService.Application.ViewModels.LearningTask.LearningTaskQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="T:HaoKao.LearningPlanService.Application.Services.WeChat.LearningPlanWeChatService">
+            <summary>
+            学习计划主类，用于组织和管理一系列学习任务接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.WeChat.LearningPlanWeChatService.#ctor(HaoKao.LearningPlanService.Application.Services.Web.ILearningPlanWebService)">
+            <summary>
+            学习计划主类，用于组织和管理一系列学习任务接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.WeChat.LearningPlanWeChatService.GetCurrentLearningPlan(System.Guid,System.Guid)">
+            <summary>
+            获取当前用户学习计划
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.WeChat.LearningPlanWeChatService.Create(HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.CreateLearningPlanViewModel)">
+            <summary>
+            创建学习计划主类，用于组织和管理一系列学习任务
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.WeChat.LearningPlanWeChatService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定学习计划主类，用于组织和管理一系列学习任务
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.WeChat.LearningPlanWeChatService.Get(HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.QueryTaskCountAndDurationsViewModel)">
+            <summary>
+            获取任务总数和总时长
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.LearningPlanService.Application.Services.WeChat.LearningTaskWeChatService">
+            <summary>
+            学习任务主类接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.WeChat.LearningTaskWeChatService.#ctor(HaoKao.LearningPlanService.Application.Services.Web.ILearningTaskWebService)">
+            <summary>
+            学习任务主类接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.WeChat.LearningTaskWeChatService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.LearningPlanService.Application.Services.WeChat.LearningTaskWeChatService.Get(HaoKao.LearningPlanService.Application.ViewModels.LearningTask.LearningTaskQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.BrowseLearningPlanViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.BrowseLearningPlanViewModel.SubjectId">
+            <summary>
+            对应的科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.BrowseLearningPlanViewModel.SubjectName">
+            <summary>
+            对应科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.BrowseLearningPlanViewModel.EndDate">
+            <summary>
+            学习计划结束日期
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.BrowseLearningPlanViewModel.LearningTasks">
+            <summary>
+            该学习计划包含的所有任务
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.BrowseLearningPlanViewModel.DayLearningTimes">
+            <summary>
+            每周学习时长配置(分钟)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.BrowseLearningPlanViewModel.NeedReminder">
+            <summary>
+            需要提醒
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.BrowseLearningPlanViewModel.ReminderHours">
+            <summary>
+            提醒时间(小时)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.BrowseLearningPlanViewModel.ReminderMinutes">
+            <summary>
+            提醒时间(分钟)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.BrowseLearningPlanViewModel.ReminderPhone">
+            <summary>
+            提醒手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.CreateLearningPlanViewModel.Id">
+            <summary>
+            id有值则更新之前的学习计划，无值则创建新的学习计划
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.CreateLearningPlanViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.CreateLearningPlanViewModel.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.CreateLearningPlanViewModel.SubjectId">
+            <summary>
+            对应的科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.CreateLearningPlanViewModel.SubjectName">
+            <summary>
+            对应科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.CreateLearningPlanViewModel.EndDate">
+            <summary>
+            学习计划结束日期
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.CreateLearningPlanViewModel.DayLearningTimes">
+            <summary>
+            每周学习时长配置
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.CreateLearningPlanViewModel.NeedReminder">
+            <summary>
+            需要提醒
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.CreateLearningPlanViewModel.ReminderHour">
+            <summary>
+            提醒时间(小时)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.CreateLearningPlanViewModel.ReminderMinute">
+            <summary>
+            提醒时间(分钟)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.CreateLearningPlanViewModel.ReminderPhone">
+            <summary>
+            提醒手机号
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.CreateLearningPlanViewModel.KnowledgePointTasks">
+            <summary>
+            选择的知识点任务
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.CreateLearningPlanViewModel.StateTasks">
+            <summary>
+            系统配置的阶段任务
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.LearningPlanQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.LearningPlanQueryListViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.LearningPlanQueryListViewModel.SubjectId">
+            <summary>
+            对应的科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.LearningPlanQueryListViewModel.SubjectName">
+            <summary>
+            对应科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.LearningPlanQueryListViewModel.EndDate">
+            <summary>
+            学习计划结束日期
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.LearningPlanQueryListViewModel.LearningTasks">
+            <summary>
+            该学习计划包含的所有任务
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.LearningPlanQueryListViewModel.DayLearningTimes">
+            <summary>
+            每周学习时长配置(分钟)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.LearningPlanQueryListViewModel.NeedReminder">
+            <summary>
+            需要提醒
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.LearningPlanQueryListViewModel.ReminderHours">
+            <summary>
+            提醒时间(小时)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.LearningPlanQueryListViewModel.ReminderMinutes">
+            <summary>
+            提醒时间(分钟)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.QueryTaskCountAndDurationsViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.QueryTaskCountAndDurationsViewModel.SubjectId">
+            <summary>
+            对应的科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.QueryTaskCountAndDurationsViewModel.KnowledgePointTasks">
+            <summary>
+            选择的知识点任务
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.StatisticsTaskCountDurationsViewModel.TaskCount">
+            <summary>
+            任务数量
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningPlan.StatisticsTaskCountDurationsViewModel.TaskTotalDurations">
+            <summary>
+            任务总时长(分钟)
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningTask.BrowseLearningTaskViewModel.TaskName">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningTask.BrowseLearningTaskViewModel.ScheduledTime">
+            <summary>
+            计划开始该任务的时间点
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningTask.BrowseLearningTaskViewModel.DurationSeconds">
+            <summary>
+            完成该任务预计需要的时长（秒），支持小数表示
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningTask.BrowseLearningTaskViewModel.TaskType">
+            <summary>
+            任务类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningTask.BrowseLearningTaskViewModel.TaskIdentity">
+            <summary>
+            任务标识（用于重新制作学习计划时判定当前任务内容是否已是过期任务内容）
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningTask.BrowseLearningTaskViewModel.TaskContent">
+            <summary>
+            任务内容（存视频任务，章节任务任务，试卷任务详情）
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningTask.BrowseLearningTaskViewModel.LearningPlanId">
+            <summary>
+            关联的学习计划ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningTask.BrowseLearningTaskViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningTask.LearningTaskQueryViewModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningTask.LearningTaskQueryViewModel.SubjectId">
+            <summary>
+            对应的科目Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningTask.LearningTaskQueryViewModel.ScheduledTime">
+            <summary>
+            计划开始该任务的时间点
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningTask.LearningTaskQueryViewModel.CreatorId">
+            <summary>
+            创建者Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningTask.LearningTaskQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningTask.LearningTaskQueryListViewModel.TaskName">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningTask.LearningTaskQueryListViewModel.ScheduledTime">
+            <summary>
+            计划开始该任务的时间点
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningTask.LearningTaskQueryListViewModel.DurationSeconds">
+            <summary>
+            完成该任务预计需要的时长（秒），支持小数表示
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningTask.LearningTaskQueryListViewModel.TaskType">
+            <summary>
+            任务类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningTask.LearningTaskQueryListViewModel.TaskIdentity">
+            <summary>
+            任务标识（用于重新制作学习计划时判定当前任务内容是否已是过期任务内容）
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningTask.LearningTaskQueryListViewModel.TaskContent">
+            <summary>
+            任务内容（存视频任务，章节任务任务，试卷任务详情）
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningTask.LearningTaskQueryListViewModel.LearningPlanId">
+            <summary>
+            关联的学习计划ID
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.LearningTask.LearningTaskQueryListViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.SortableTaskViewModel.DurationSeconds">
+            <summary>
+            完成该任务预计需要的时长（秒），支持小数表示
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.SortableTaskViewModel.TaskType">
+            <summary>
+            任务类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.SortableTaskViewModel.TaskIdentity">
+            <summary>
+            任务身份认证,用于除去已排并且已过期的任务（视频任务为VideoId,章节练习任务为ChapterId,试卷任务为PaperId）
+            </summary>
+        </member>
+        <member name="P:HaoKao.LearningPlanService.Application.ViewModels.SortableTaskViewModel.TaskContent">
+            <summary>
+            任务内容(可根据任务类型转为具体的任务)
+            </summary>
+        </member>
+    </members>
+</doc>

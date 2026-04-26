@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.KnowledgePointService.Application</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.KnowledgePointService.Application.Services.App.IKnowledgePointAppService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.KnowledgePointService.Application.Services.App.KnowledgePointAppService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.KnowledgePointService.Application.Services.Management.IKnowledgePointService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.KnowledgePointService.Application.Services.Management.IKnowledgePointService.Get(HaoKao.KnowledgePointService.Application.ViewModels.KnowledgePoint.KnowledgePointQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.KnowledgePointService.Application.Services.Management.IKnowledgePointService.Create(HaoKao.KnowledgePointService.Application.ViewModels.KnowledgePoint.KnowledgePointCreateViewModel)">
+            <summary>
+            创建注册用户
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.KnowledgePointService.Application.Services.Management.IKnowledgePointService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定知识点
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.KnowledgePointService.Application.Services.Management.IKnowledgePointService.Update(System.Guid,HaoKao.KnowledgePointService.Application.ViewModels.KnowledgePoint.KnowledgePointUpdateViewModel)">
+            <summary>
+            根据主键更新指定知识点
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="T:HaoKao.KnowledgePointService.Application.Services.Management.KnowledgePointService">
+            <summary>
+            知识点接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.KnowledgePointService.Application.Services.Management.KnowledgePointService.#ctor(Girvs.Cache.Caching.IStaticCacheManager,Girvs.Driven.Bus.IMediatorHandler,MediatR.INotificationHandler{Girvs.Driven.Notifications.DomainNotification},HaoKao.KnowledgePointService.Domain.Repositories.IKnowledgePointRepository)">
+            <summary>
+            知识点接口服务
+            </summary>
+        </member>
+        <member name="M:HaoKao.KnowledgePointService.Application.Services.Management.KnowledgePointService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.KnowledgePointService.Application.Services.Management.KnowledgePointService.Get(HaoKao.KnowledgePointService.Application.ViewModels.KnowledgePoint.KnowledgePointQueryViewModel)">
+            <summary>
+            根据查询获取列表，用于分页
+            </summary>
+            <param name="queryViewModel">查询对象</param>
+        </member>
+        <member name="M:HaoKao.KnowledgePointService.Application.Services.Management.KnowledgePointService.Create(HaoKao.KnowledgePointService.Application.ViewModels.KnowledgePoint.KnowledgePointCreateViewModel)">
+            <summary>
+            创建知识点
+            </summary>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.KnowledgePointService.Application.Services.Management.KnowledgePointService.Delete(System.Guid)">
+            <summary>
+            根据主键删除指定知识点
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.KnowledgePointService.Application.Services.Management.KnowledgePointService.Update(System.Guid,HaoKao.KnowledgePointService.Application.ViewModels.KnowledgePoint.KnowledgePointUpdateViewModel)">
+            <summary>
+            根据主键更新指定知识点
+            </summary>
+            <param name="id">主键</param>
+            <param name="model">新增模型</param>
+        </member>
+        <member name="M:HaoKao.KnowledgePointService.Application.Services.Web.IKnowledgePointWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="M:HaoKao.KnowledgePointService.Application.Services.Web.KnowledgePointWebService.Get(System.Guid)">
+            <summary>
+            根据主键获取指定
+            </summary>
+            <param name="id">主键</param>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Application.ViewModels.KnowledgePoint.KnowledgePointBrowseViewModel.Name">
+            <summary>
+            知识点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Application.ViewModels.KnowledgePoint.KnowledgePointBrowseViewModel.ChpaterNodeName">
+            <summary>
+            章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Application.ViewModels.KnowledgePoint.KnowledgePointBrowseViewModel.ChpaterNodeId">
+            <summary>
+            章节id
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Application.ViewModels.KnowledgePoint.KnowledgePointBrowseViewModel.Remark">
+            <summary>
+            知识点备注
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Application.ViewModels.KnowledgePoint.KnowledgePointCreateViewModel.Name">
+            <summary>
+            知识点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Application.ViewModels.KnowledgePoint.KnowledgePointCreateViewModel.SubjectName">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Application.ViewModels.KnowledgePoint.KnowledgePointCreateViewModel.ChpaterNodeId">
+            <summary>
+            章节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Application.ViewModels.KnowledgePoint.KnowledgePointCreateViewModel.ChpaterNodeName">
+            <summary>
+            章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Application.ViewModels.KnowledgePoint.KnowledgePointCreateViewModel.Remark">
+            <summary>
+            知识点备注
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Application.ViewModels.KnowledgePoint.KnowledgePointQueryListViewModel.Name">
+            <summary>
+            知识点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Application.ViewModels.KnowledgePoint.KnowledgePointQueryListViewModel.SubjectName">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Application.ViewModels.KnowledgePoint.KnowledgePointQueryListViewModel.ChpaterNodeId">
+            <summary>
+            章节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Application.ViewModels.KnowledgePoint.KnowledgePointQueryListViewModel.ChpaterNodeName">
+            <summary>
+            章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Application.ViewModels.KnowledgePoint.KnowledgePointQueryListViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Application.ViewModels.KnowledgePoint.KnowledgePointUpdateViewModel.Name">
+            <summary>
+            知识点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Application.ViewModels.KnowledgePoint.KnowledgePointUpdateViewModel.ChpaterNodeId">
+            <summary>
+            章节Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Application.ViewModels.KnowledgePoint.KnowledgePointUpdateViewModel.ChpaterNodeName">
+            <summary>
+            章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Application.ViewModels.KnowledgePoint.KnowledgePointUpdateViewModel.Remark">
+            <summary>
+            知识点备注
+            </summary>
+        </member>
+    </members>
+</doc>

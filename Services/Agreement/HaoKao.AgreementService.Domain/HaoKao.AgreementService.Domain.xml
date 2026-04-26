@@ -1,0 +1,363 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.AgreementService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.AgreementService.Domain.AutoMapper.AutoMapperConfig">
+            <summary>
+            静态全局 AutoMapper 配置文件
+            </summary>
+        </member>
+        <member name="M:HaoKao.AgreementService.Domain.AutoMapper.CommandToEntityMappingProfile.#ctor">
+            <summary>
+            配置构造函数，用来创建关系映射
+            </summary>
+        </member>
+        <member name="T:HaoKao.AgreementService.Domain.Commands.CreateCourseAgreementCommand">
+            <summary>
+            创建课程协议命令
+            </summary>
+            <param name="Name">协议名称</param>
+            <param name="Content">协议内容</param>
+            <param name="Continuation">续读次数</param>
+            <param name="AgreementType">协议类型</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Domain.Commands.CreateCourseAgreementCommand.#ctor(System.String,System.String,System.Int32,HaoKao.AgreementService.Domain.Entities.AgreementType)">
+            <summary>
+            创建课程协议命令
+            </summary>
+            <param name="Name">协议名称</param>
+            <param name="Content">协议内容</param>
+            <param name="Continuation">续读次数</param>
+            <param name="AgreementType">协议类型</param>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.CreateCourseAgreementCommand.Name">
+            <summary>协议名称</summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.CreateCourseAgreementCommand.Content">
+            <summary>协议内容</summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.CreateCourseAgreementCommand.Continuation">
+            <summary>续读次数</summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.CreateCourseAgreementCommand.AgreementType">
+            <summary>协议类型</summary>
+        </member>
+        <member name="T:HaoKao.AgreementService.Domain.Commands.UpdateCourseAgreementCommand">
+            <summary>
+            更新课程协议命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Name">协议名称</param>
+            <param name="Content">协议内容</param>
+            <param name="Continuation">续读次数</param>
+            <param name="AgreementType">协议类型</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Domain.Commands.UpdateCourseAgreementCommand.#ctor(System.Guid,System.String,System.String,System.Int32,HaoKao.AgreementService.Domain.Entities.AgreementType)">
+            <summary>
+            更新课程协议命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="Name">协议名称</param>
+            <param name="Content">协议内容</param>
+            <param name="Continuation">续读次数</param>
+            <param name="AgreementType">协议类型</param>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.UpdateCourseAgreementCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.UpdateCourseAgreementCommand.Name">
+            <summary>协议名称</summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.UpdateCourseAgreementCommand.Content">
+            <summary>协议内容</summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.UpdateCourseAgreementCommand.Continuation">
+            <summary>续读次数</summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.UpdateCourseAgreementCommand.AgreementType">
+            <summary>协议类型</summary>
+        </member>
+        <member name="T:HaoKao.AgreementService.Domain.Commands.DeleteCourseAgreementCommand">
+            <summary>
+            删除课程协议命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Domain.Commands.DeleteCourseAgreementCommand.#ctor(System.Guid)">
+            <summary>
+            删除课程协议命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.DeleteCourseAgreementCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.AgreementService.Domain.Commands.CreateStudentAgreementCommand">
+            <summary>
+            创建学员协议命令
+            </summary>
+            <param name="ProductId">产品Id</param>
+            <param name="ProductName">产品名称</param>
+            <param name="AgreementId">协议Id</param>
+            <param name="AgreementName">协议名称</param>
+            <param name="StudentName">学员名称</param>
+            <param name="IdCard">身份证号</param>
+            <param name="Contact">联系电话</param>
+            <param name="Address">联系地址</param>
+            <param name="Email">电子邮箱</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Domain.Commands.CreateStudentAgreementCommand.#ctor(System.Guid,System.String,System.Guid,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            创建学员协议命令
+            </summary>
+            <param name="ProductId">产品Id</param>
+            <param name="ProductName">产品名称</param>
+            <param name="AgreementId">协议Id</param>
+            <param name="AgreementName">协议名称</param>
+            <param name="StudentName">学员名称</param>
+            <param name="IdCard">身份证号</param>
+            <param name="Contact">联系电话</param>
+            <param name="Address">联系地址</param>
+            <param name="Email">电子邮箱</param>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.CreateStudentAgreementCommand.ProductId">
+            <summary>产品Id</summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.CreateStudentAgreementCommand.ProductName">
+            <summary>产品名称</summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.CreateStudentAgreementCommand.AgreementId">
+            <summary>协议Id</summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.CreateStudentAgreementCommand.AgreementName">
+            <summary>协议名称</summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.CreateStudentAgreementCommand.StudentName">
+            <summary>学员名称</summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.CreateStudentAgreementCommand.IdCard">
+            <summary>身份证号</summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.CreateStudentAgreementCommand.Contact">
+            <summary>联系电话</summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.CreateStudentAgreementCommand.Address">
+            <summary>联系地址</summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.CreateStudentAgreementCommand.Email">
+            <summary>电子邮箱</summary>
+        </member>
+        <member name="T:HaoKao.AgreementService.Domain.Commands.UpdateStudentAgreementCommand">
+            <summary>
+            更新学员协议命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="StudentName">学员名称</param>
+            <param name="IdCard">身份证号</param>
+            <param name="Contact">联系电话</param>
+            <param name="Address">联系地址</param>
+            <param name="Email">电子邮箱</param>
+        </member>
+        <member name="M:HaoKao.AgreementService.Domain.Commands.UpdateStudentAgreementCommand.#ctor(System.Guid,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            更新学员协议命令
+            </summary>
+            <param name="Id">主键</param>
+            <param name="StudentName">学员名称</param>
+            <param name="IdCard">身份证号</param>
+            <param name="Contact">联系电话</param>
+            <param name="Address">联系地址</param>
+            <param name="Email">电子邮箱</param>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.UpdateStudentAgreementCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.UpdateStudentAgreementCommand.StudentName">
+            <summary>学员名称</summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.UpdateStudentAgreementCommand.IdCard">
+            <summary>身份证号</summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.UpdateStudentAgreementCommand.Contact">
+            <summary>联系电话</summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.UpdateStudentAgreementCommand.Address">
+            <summary>联系地址</summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Commands.UpdateStudentAgreementCommand.Email">
+            <summary>电子邮箱</summary>
+        </member>
+        <member name="T:HaoKao.AgreementService.Domain.Entities.CourseAgreement">
+            <summary>
+            课程协议
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Entities.CourseAgreement.Name">
+            <summary>
+            协议名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Entities.CourseAgreement.Content">
+            <summary>
+            协议内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Entities.CourseAgreement.Continuation">
+            <summary>
+            续读次数
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Entities.CourseAgreement.AgreementType">
+            <summary>
+            协议类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Entities.CourseAgreement.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Entities.CourseAgreement.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Entities.CourseAgreement.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Entities.CourseAgreement.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="T:HaoKao.AgreementService.Domain.Entities.AgreementType">
+            <summary>
+            协议类型
+            </summary>
+        </member>
+        <member name="F:HaoKao.AgreementService.Domain.Entities.AgreementType.Common">
+            <summary>
+            公共协议
+            </summary>
+        </member>
+        <member name="F:HaoKao.AgreementService.Domain.Entities.AgreementType.Contiuation">
+            <summary>
+            续读协议
+            </summary>
+        </member>
+        <member name="T:HaoKao.AgreementService.Domain.Entities.StudentAgreement">
+            <summary>
+            学员协议
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Entities.StudentAgreement.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Entities.StudentAgreement.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Entities.StudentAgreement.AgreementId">
+            <summary>
+            协议Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Entities.StudentAgreement.AgreementName">
+            <summary>
+            协议名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Entities.StudentAgreement.StudentName">
+            <summary>
+            学员名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Entities.StudentAgreement.IdCard">
+            <summary>
+            身份证号
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Entities.StudentAgreement.Contact">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Entities.StudentAgreement.Address">
+            <summary>
+            联系地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Entities.StudentAgreement.Email">
+            <summary>
+            电子邮箱
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Entities.StudentAgreement.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Entities.StudentAgreement.CreateTime">
+            <summary>
+            签署时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Entities.StudentAgreement.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Entities.StudentAgreement.CreatorId">
+            <summary>
+            签署人Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Queries.CourseAgreementQuery.Name">
+            <summary>
+            协议名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Queries.CourseAgreementQuery.AgreementType">
+            <summary>
+            协议类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Queries.CourseAgreementQuery.Ids">
+            <summary>
+            Ids
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Queries.StudentAgreementQuery.AgreementId">
+            <summary>
+            协议Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Queries.StudentAgreementQuery.AgreementName">
+            <summary>
+            协议名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Queries.StudentAgreementQuery.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Queries.StudentAgreementQuery.StudentName">
+            <summary>
+            学员名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AgreementService.Domain.Queries.StudentAgreementQuery.CreatorId">
+            <summary>
+            签署人Id
+            </summary>
+        </member>
+    </members>
+</doc>

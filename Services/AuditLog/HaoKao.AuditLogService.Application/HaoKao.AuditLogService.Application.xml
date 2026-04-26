@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.AuditLogService.Application</name>
+    </assembly>
+    <members>
+        <member name="M:HaoKao.AuditLogService.Application.Services.Management.AuditLogService.Get(System.Guid)">
+            <summary>
+            根据Id获取对应的操作日志详细信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaoKao.AuditLogService.Application.Services.Management.AuditLogService.Get(HaoKao.AuditLogService.Application.ViewModels.AuditLogQueryViewModel)">
+            <summary>
+            根据查询列表获取日志列表
+            </summary>
+            <param name="queryViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.AuditLogQueryViewModel.StartDateTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.AuditLogQueryViewModel.EndDateTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.AuditLogQueryViewModel.ServiceModuleName">
+            <summary>
+            服务模块名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.AuditLogQueryViewModel.Message">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.AuditLogQueryViewModel.CreatorName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.AuditLogQueryViewModel.MessageContent">
+            <summary>
+            具体消息内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.AuditLogQueryViewModel.AddressIp">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.AuditLogQueryViewModel.SourceType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.DetailAuditLogViewModel.ServiceModuleName">
+            <summary>
+            服务模块名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.DetailAuditLogViewModel.Message">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.DetailAuditLogViewModel.MessageContent">
+            <summary>
+            具体消息内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.DetailAuditLogViewModel.CreatorName">
+            <summary>
+            操作者名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.DetailAuditLogViewModel.CreatorId">
+            <summary>
+            操作者Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.DetailAuditLogViewModel.TenantId">
+            <summary>
+            操作者所属租户Id
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.DetailAuditLogViewModel.TenantName">
+            <summary>
+            操作者所属租户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.DetailAuditLogViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.DetailAuditLogViewModel.AddressIp">
+            <summary>
+            操作者IP地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.DetailAuditLogViewModel.SourceType">
+            <summary>
+            消息来源
+            </summary>
+        </member>
+        <member name="T:HaoKao.AuditLogService.Application.ViewModels.ListAuditLogViewModel">
+            <summary>
+            列表审计日志
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.ListAuditLogViewModel.ServiceModuleName">
+            <summary>
+            服务模块名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.ListAuditLogViewModel.Message">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.ListAuditLogViewModel.MessageContent">
+            <summary>
+            具体消息内容
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.ListAuditLogViewModel.CreatorName">
+            <summary>
+            操作者名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.ListAuditLogViewModel.TenantName">
+            <summary>
+            操作者所属租户名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.ListAuditLogViewModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.ListAuditLogViewModel.AddressIp">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="P:HaoKao.AuditLogService.Application.ViewModels.ListAuditLogViewModel.SourceType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+    </members>
+</doc>

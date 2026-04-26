@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DocumentationFile>HaoKao.OpenPlatformService.Application.xml</DocumentationFile>
+        <WarningLevel>4</WarningLevel>
+        <NoWarn>1701;1702;1591</NoWarn>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <DocumentationFile>HaoKao.OpenPlatformService.Application.xml</DocumentationFile>
+        <WarningLevel>4</WarningLevel>
+        <NoWarn>1701;1702;1591</NoWarn>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AspNet.Security.OAuth.Gitee" Version="8.0.0"/>
+        <PackageReference Include="AspNet.Security.OAuth.Apple" Version="8.0.0"/>
+        <PackageReference Include="AspNet.Security.OAuth.GitHub" Version="8.0.0"/>
+        <PackageReference Include="AspNet.Security.OAuth.Weixin" Version="8.0.0"/>
+        <PackageReference Include="Girvs.Quartz" Version="9.0.5.3"/>
+        <PackageReference Include="IdentityServer4" Version="4.1.2"/>
+        <PackageReference Include="SixLabors.Fonts" Version="1.0.0-beta17"/>
+        <PackageReference Include="SixLabors.ImageSharp.Drawing" Version="1.0.0-beta14"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\HaoKao.OpenPlatformService.Domain\HaoKao.OpenPlatformService.Domain.csproj"/>
+    </ItemGroup>
+
+</Project>

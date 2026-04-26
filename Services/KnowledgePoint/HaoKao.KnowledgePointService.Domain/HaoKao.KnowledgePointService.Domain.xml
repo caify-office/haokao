@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaoKao.KnowledgePointService.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HaoKao.KnowledgePointService.Domain.Commands.KnowledgePoint.CreateKnowledgePointCommand">
+            <summary>
+            创建知识点命令
+            </summary>
+            <param name="Name">名称</param>
+            <param name="ChapterNodeId">章节id</param>
+            <param name="ChapterNodeName">章节名称</param>
+            <param name="Remark">备注</param>
+            <param name="SubjectName">科目名称</param>
+        </member>
+        <member name="M:HaoKao.KnowledgePointService.Domain.Commands.KnowledgePoint.CreateKnowledgePointCommand.#ctor(System.String,System.Nullable{System.Guid},System.String,System.String,System.String)">
+            <summary>
+            创建知识点命令
+            </summary>
+            <param name="Name">名称</param>
+            <param name="ChapterNodeId">章节id</param>
+            <param name="ChapterNodeName">章节名称</param>
+            <param name="Remark">备注</param>
+            <param name="SubjectName">科目名称</param>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Domain.Commands.KnowledgePoint.CreateKnowledgePointCommand.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Domain.Commands.KnowledgePoint.CreateKnowledgePointCommand.ChapterNodeId">
+            <summary>章节id</summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Domain.Commands.KnowledgePoint.CreateKnowledgePointCommand.ChapterNodeName">
+            <summary>章节名称</summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Domain.Commands.KnowledgePoint.CreateKnowledgePointCommand.Remark">
+            <summary>备注</summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Domain.Commands.KnowledgePoint.CreateKnowledgePointCommand.SubjectName">
+            <summary>科目名称</summary>
+        </member>
+        <member name="T:HaoKao.KnowledgePointService.Domain.Commands.KnowledgePoint.DeleteKnowledgePointCommand">
+            <summary>
+            删除知识点命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="M:HaoKao.KnowledgePointService.Domain.Commands.KnowledgePoint.DeleteKnowledgePointCommand.#ctor(System.Guid)">
+            <summary>
+            删除知识点命令
+            </summary>
+            <param name="Id">主键</param>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Domain.Commands.KnowledgePoint.DeleteKnowledgePointCommand.Id">
+            <summary>主键</summary>
+        </member>
+        <member name="T:HaoKao.KnowledgePointService.Domain.Commands.KnowledgePoint.UpdateKnowledgePointCommand">
+            <summary>
+            更新知识点命令
+            </summary>
+            <param name="Id">主键id</param>
+            <param name="Name">名称</param>
+            <param name="ChapterNodeId">章节Id</param>
+            <param name="ChapterNodeName">章节名称</param>
+            <param name="Remark">备注</param>
+        </member>
+        <member name="M:HaoKao.KnowledgePointService.Domain.Commands.KnowledgePoint.UpdateKnowledgePointCommand.#ctor(System.Guid,System.String,System.Nullable{System.Guid},System.String,System.String)">
+            <summary>
+            更新知识点命令
+            </summary>
+            <param name="Id">主键id</param>
+            <param name="Name">名称</param>
+            <param name="ChapterNodeId">章节Id</param>
+            <param name="ChapterNodeName">章节名称</param>
+            <param name="Remark">备注</param>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Domain.Commands.KnowledgePoint.UpdateKnowledgePointCommand.Id">
+            <summary>主键id</summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Domain.Commands.KnowledgePoint.UpdateKnowledgePointCommand.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Domain.Commands.KnowledgePoint.UpdateKnowledgePointCommand.ChapterNodeId">
+            <summary>章节Id</summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Domain.Commands.KnowledgePoint.UpdateKnowledgePointCommand.ChapterNodeName">
+            <summary>章节名称</summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Domain.Commands.KnowledgePoint.UpdateKnowledgePointCommand.Remark">
+            <summary>备注</summary>
+        </member>
+        <member name="T:HaoKao.KnowledgePointService.Domain.Entities.KnowledgePoint">
+            <summary>
+            知识点
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Domain.Entities.KnowledgePoint.Name">
+            <summary>
+            知识点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Domain.Entities.KnowledgePoint.SubjectName">
+            <summary>
+            科目名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Domain.Entities.KnowledgePoint.ChapterNodeId">
+            <summary>
+            章节id
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Domain.Entities.KnowledgePoint.ChapterNodeName">
+            <summary>
+            章节名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Domain.Entities.KnowledgePoint.Remark">
+            <summary>
+            知识点备注信息
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Domain.Entities.KnowledgePoint.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Domain.Queries.KnowledgePointQuery.Name">
+            <summary>
+            知识点名称
+            </summary>
+        </member>
+        <member name="P:HaoKao.KnowledgePointService.Domain.Queries.KnowledgePointQuery.ChapterNodeId">
+            <summary>
+            章节id
+            </summary>
+        </member>
+    </members>
+</doc>
